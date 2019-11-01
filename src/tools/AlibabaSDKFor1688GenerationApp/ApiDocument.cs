@@ -1,4 +1,5 @@
 ﻿using ConsoleApp2.sss;
+using NJsonSchema;
 using NSwag;
 using NSwag.CodeGeneration.CSharp;
 using NSwag.CodeGeneration.TypeScript;
@@ -50,7 +51,7 @@ namespace ConsoleApp2
                 {
                     Summary = description,
                     //Description = item.Description,
-                    OperationId = apiDetail.Name?.转换驼峰命名方式()
+                    OperationId = apiDetail.Name?.ToPascalCase()
                 };
 
                 //if (openApiOperation.OperationId == "AlibabaTradeGetLogisticsInfosBuyerView") { }
@@ -92,7 +93,8 @@ namespace ConsoleApp2
                             Description = item?.Description?.过滤特殊字符()
                         };
                         if (item != null)
-                            openApiResponse.Content.Add("application/json", new OpenApiMediaType { Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description) });
+                            //openApiResponse.Content.Add("application/json", new OpenApiMediaType { Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description) });
+                            openApiResponse.Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description);
                         openApiOperation.Responses.Add("200", openApiResponse);
                     }
                     else
@@ -105,7 +107,7 @@ namespace ConsoleApp2
                             document.Definitions.Add(typeName, jsonSchema);
                         else
                         {
-                            document.Definitions.Add(apiDetail.Namespace?.转换驼峰命名方式() + typeName, jsonSchema);
+                            document.Definitions.Add(apiDetail.Namespace?.ToPascalCase() + typeName, jsonSchema);
 
                             //var dfsdfsd = document.Definitions[jjjjj];
                         }
@@ -117,6 +119,7 @@ namespace ConsoleApp2
                         //openApiResponse.Content.Add("application/json", new OpenApiMediaType { Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema } });
                         openApiOperation.Responses.Add("200", openApiResponse);
                     }
+
                     if (apiDetail.ApiErrorCodeVOList.Any())
                     {
                         //var dfsfsd = NJsonSchema.JsonSchema.FromType<rrr>();
@@ -146,6 +149,7 @@ namespace ConsoleApp2
 
                     }
 
+
                     document.Paths.Add($"/openapi/param2/{apiDetail.Version}/{apiDetail.Namespace}/{apiDetail.Name}/{{AppKey}}", new OpenApiPathItem
                     {
                         { OpenApiOperationMethod.Post,openApiOperation}
@@ -170,9 +174,12 @@ namespace ConsoleApp2
         private System.Collections.Generic.List<string> keyValuePairs____ = new System.Collections.Generic.List<string>();
         private NJsonSchema.JsonSchema getSchema(OpenApiDocument document, string @namespace, string apiname, int version, string type, string description)
         {
+            ///////////////////
             var jsonSchema = keyValuePairs.GetOrAdd(@namespace + apiname + type, t =>
              {
-                 return getMessageTypeToSchema(document, @namespace, apiname, version, type) ?? getSystemTypeToSchema(type);
+                 var jsonSchema = getMessageTypeToSchema(document, @namespace, apiname, version, type) ?? getSystemTypeToSchema(type);
+
+                 return jsonSchema;
              });
 
             if (jsonSchema == null)
@@ -257,12 +264,12 @@ namespace ConsoleApp2
                 createJsonSchema(jsonSchema, document, @namespace, apiname, version, modelInfoResult);
                 jsonSchema.Description = $"{modelInfo.ErrMsg}\r\n namespace:{@namespace},apiname:{apiname},version:{version},typeName:{_type.type}";
 
-                var _typeName = _type.type?.转换驼峰命名方式();
+                var _typeName = _type.type?.ToPascalCase();
                 if (!document.Definitions.ContainsKey(_typeName))
                     document.Definitions.Add(_typeName, jsonSchema);
                 else
                 {
-                    document.Definitions.Add((@namespace + "." + apiname)?.转换驼峰命名方式() + _typeName, jsonSchema);
+                    document.Definitions.Add((@namespace + "." + apiname)?.ToPascalCase() + _typeName, jsonSchema);
                     //var dfsdfsd = document.Definitions[_typeName];
                 }
                 return makeArraySchemaType(new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema }, _type.arrLength);
@@ -420,6 +427,9 @@ namespace ConsoleApp2
                 },
                 GenerateSyncMethods = true
             };
+            //settings.CodeGeneratorSettings.TemplateDirectory = "";
+            settings.CodeGeneratorSettings.GenerateDefaultValues = true;
+            settings.CodeGeneratorSettings.PropertyNameGenerator = new MyCSharpPropertyNameGenerator();
 
             var generator = new CSharpClientGenerator(document, settings);
             var code = generator.GenerateFile();
@@ -443,6 +453,9 @@ namespace ConsoleApp2
                 GenerateClientInterfaces = true,
                 AdditionalNamespaceUsages = new[] { "AlibabaSDK.Models" }
             };
+            //settings.CodeGeneratorSettings.TemplateDirectory = "";
+            settings.CodeGeneratorSettings.GenerateDefaultValues = true;
+            settings.CodeGeneratorSettings.PropertyNameGenerator = new MyCSharpPropertyNameGenerator();
 
             var generator = new CSharpClientGenerator(document, settings);
             var code = generator.GenerateFile();
@@ -462,6 +475,9 @@ namespace ConsoleApp2
                 },
                 GenerateClientClasses = false
             };
+            //settings.CodeGeneratorSettings.TemplateDirectory = "";
+            settings.CodeGeneratorSettings.GenerateDefaultValues = true;
+            settings.CodeGeneratorSettings.PropertyNameGenerator = new MyCSharpPropertyNameGenerator();
 
             var generator = new CSharpClientGenerator(document, settings);
             var code = generator.GenerateFile();
@@ -481,5 +497,14 @@ namespace ConsoleApp2
             return code;
         }
         #endregion ToCode
+    }
+
+    public class MyCSharpPropertyNameGenerator : NJsonSchema.CodeGeneration.CSharp.CSharpPropertyNameGenerator
+    {
+        public override string Generate(JsonSchemaProperty property)
+        {
+            var name = base.Generate(property);
+            return name;//.ToPascalCase();
+        }
     }
 }

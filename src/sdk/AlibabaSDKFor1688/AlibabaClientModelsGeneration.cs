@@ -21,8 +21,8 @@ namespace AlibabaSDK.Models
     public partial class ErrorResponse 
     {
         /// <summary>错误信息</summary>
-        [Newtonsoft.Json.JsonProperty("errorMessage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ErrorMessage { get; set; }
+        [Newtonsoft.Json.JsonProperty("error_message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Error_message { get; set; }
     
         /// <summary>异常描述</summary>
         [Newtonsoft.Json.JsonProperty("exception", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -17810,7 +17810,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.budgetVerification,version:1,typeName:baiyaoMallBudgetVerification_checkMallBudget_invoker_Result</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class BaiyaoMallBudgetVerification_checkMallBudget_invoker_Result 
+    public partial class BaiyaoMallBudgetVerificationCheckMallBudgetInvokerResult 
     {
         /// <summary>错误信息</summary>
         [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42823,7 +42823,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.basic.BASIC_MANAGER</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleBasicBASIC_MANAGER 
+    public partial class AlibabaBizcreditReportModuleModuleBasicBASICMANAGER 
     {
         /// <summary>人员姓名</summary>
         [Newtonsoft.Json.JsonProperty("PER_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42859,7 +42859,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.basic.BASIC_SHAREHOLDER</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleBasicBASIC_SHAREHOLDER 
+    public partial class AlibabaBizcreditReportModuleModuleBasicBASICSHAREHOLDER 
     {
         /// <summary>股东名称</summary>
         [Newtonsoft.Json.JsonProperty("SHA_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42915,7 +42915,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.basic.BASIC_BRANCH</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleBasicBASIC_BRANCH 
+    public partial class AlibabaBizcreditReportModuleModuleBasicBASICBRANCH 
     {
         /// <summary>分支机构</summary>
         [Newtonsoft.Json.JsonProperty("BR_REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42963,15 +42963,15 @@ namespace AlibabaSDK.Models
     
         /// <summary>A2主要管理人员</summary>
         [Newtonsoft.Json.JsonProperty("BASIC_MANAGER", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASIC_MANAGER> BASIC_MANAGER { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASICMANAGER> BASIC_MANAGER { get; set; }
     
         /// <summary>A3股东信息</summary>
         [Newtonsoft.Json.JsonProperty("BASIC_SHAREHOLDER", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASIC_SHAREHOLDER> BASIC_SHAREHOLDER { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASICSHAREHOLDER> BASIC_SHAREHOLDER { get; set; }
     
         /// <summary>A4分支机构</summary>
         [Newtonsoft.Json.JsonProperty("BASIC_BRANCH", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASIC_BRANCH> BASIC_BRANCH { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASICBRANCH> BASIC_BRANCH { get; set; }
     
     
     }
@@ -42979,7 +42979,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.inv.INV_ENTERPRISE</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleInvINV_ENTERPRISE 
+    public partial class AlibabaBizcreditReportModuleModuleInvINVENTERPRISE 
     {
         /// <summary>企业(机构)名称</summary>
         [Newtonsoft.Json.JsonProperty("ENT_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43055,7 +43055,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.inv.INV_LEGAL_PERSON</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleInvINV_LEGAL_PERSON 
+    public partial class AlibabaBizcreditReportModuleModuleInvINVLEGALPERSON 
     {
         /// <summary>法定代表人姓名</summary>
         [Newtonsoft.Json.JsonProperty("NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43127,11 +43127,11 @@ namespace AlibabaSDK.Models
     {
         /// <summary>B1企业对外投资</summary>
         [Newtonsoft.Json.JsonProperty("INV_ENTERPRISE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleInvINV_ENTERPRISE> INV_ENTERPRISE { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleInvINVENTERPRISE> INV_ENTERPRISE { get; set; }
     
         /// <summary>B2法定代表人对外投资</summary>
         [Newtonsoft.Json.JsonProperty("INV_LEGAL_PERSON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleInvINV_LEGAL_PERSON> INV_LEGAL_PERSON { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleInvINVLEGALPERSON> INV_LEGAL_PERSON { get; set; }
     
     
     }
@@ -43139,7 +43139,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.risk.RISK_EXECUTION_ANNOUNCEMENT</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleRiskRISK_EXECUTION_ANNOUNCEMENT 
+    public partial class AlibabaBizcreditReportModuleModuleRiskRISKEXECUTIONANNOUNCEMENT 
     {
         /// <summary>案号</summary>
         [Newtonsoft.Json.JsonProperty("CASE_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43187,7 +43187,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.risk.RISK_PUNISH_BREAK</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleRiskRISK_PUNISH_BREAK 
+    public partial class AlibabaBizcreditReportModuleModuleRiskRISKPUNISHBREAK 
     {
         /// <summary>地域名称</summary>
         [Newtonsoft.Json.JsonProperty("AREA_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43259,7 +43259,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.risk.RISK_CHANGE_DETAIL</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleRiskRISK_CHANGE_DETAIL 
+    public partial class AlibabaBizcreditReportModuleModuleRiskRISKCHANGEDETAIL 
     {
         /// <summary>变更日期</summary>
         [Newtonsoft.Json.JsonProperty("ALT_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43287,7 +43287,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.risk.RISK_PUNISHMENT</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleRiskRISK_PUNISHMENT 
+    public partial class AlibabaBizcreditReportModuleModuleRiskRISKPUNISHMENT 
     {
         /// <summary>案发时间</summary>
         [Newtonsoft.Json.JsonProperty("CASE_TIME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43359,7 +43359,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.risk.RISK_OPERATION_EXCEPTION</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleRiskRISK_OPERATION_EXCEPTION 
+    public partial class AlibabaBizcreditReportModuleModuleRiskRISKOPERATIONEXCEPTION 
     {
         /// <summary>注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43415,7 +43415,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.risk.RISK_SCAN</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleRiskRISK_SCAN 
+    public partial class AlibabaBizcreditReportModuleModuleRiskRISKSCAN 
     {
         /// <summary>是否工商注销/吊销</summary>
         [Newtonsoft.Json.JsonProperty("IS_LICENSE_CANCELLED", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43475,7 +43475,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.risk.RISK_PUNISH_BREAK_PERSON</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleRiskRISK_PUNISH_BREAK_PERSON 
+    public partial class AlibabaBizcreditReportModuleModuleRiskRISKPUNISHBREAKPERSON 
     {
         /// <summary>地域名称</summary>
         [Newtonsoft.Json.JsonProperty("AREA_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43551,31 +43551,31 @@ namespace AlibabaSDK.Models
     {
         /// <summary>D1司法风险-执行公告</summary>
         [Newtonsoft.Json.JsonProperty("RISK_EXECUTION_ANNOUNCEMENT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISK_EXECUTION_ANNOUNCEMENT> RISK_EXECUTION_ANNOUNCEMENT { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKEXECUTIONANNOUNCEMENT> RISK_EXECUTION_ANNOUNCEMENT { get; set; }
     
         /// <summary>D2司法风险-失信公告</summary>
         [Newtonsoft.Json.JsonProperty("RISK_PUNISH_BREAK", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISK_PUNISH_BREAK> RISK_PUNISH_BREAK { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKPUNISHBREAK> RISK_PUNISH_BREAK { get; set; }
     
         /// <summary>D7变更信息</summary>
         [Newtonsoft.Json.JsonProperty("RISK_CHANGE_DETAIL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISK_CHANGE_DETAIL> RISK_CHANGE_DETAIL { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKCHANGEDETAIL> RISK_CHANGE_DETAIL { get; set; }
     
         /// <summary>D8行政处罚</summary>
         [Newtonsoft.Json.JsonProperty("RISK_PUNISHMENT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISK_PUNISHMENT> RISK_PUNISHMENT { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKPUNISHMENT> RISK_PUNISHMENT { get; set; }
     
         /// <summary>D9经营异常</summary>
         [Newtonsoft.Json.JsonProperty("RISK_OPERATION_EXCEPTION", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISK_OPERATION_EXCEPTION> RISK_OPERATION_EXCEPTION { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKOPERATIONEXCEPTION> RISK_OPERATION_EXCEPTION { get; set; }
     
         /// <summary>D11风险扫描</summary>
         [Newtonsoft.Json.JsonProperty("RISK_SCAN", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISK_SCAN> RISK_SCAN { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKSCAN> RISK_SCAN { get; set; }
     
         /// <summary>D12司法风险-法定代表人失信公告</summary>
         [Newtonsoft.Json.JsonProperty("RISK_PUNISH_BREAK_PERSON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISK_PUNISH_BREAK_PERSON> RISK_PUNISH_BREAK_PERSON { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKPUNISHBREAKPERSON> RISK_PUNISH_BREAK_PERSON { get; set; }
     
     
     }
@@ -43583,7 +43583,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.enterpriseOperation.ENTERPRISE_OPERATION_SHOP_INFO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_SHOP_INFO 
+    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONSHOPINFO 
     {
         /// <summary>店铺名称</summary>
         [Newtonsoft.Json.JsonProperty("SHOP_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43611,7 +43611,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.enterpriseOperation.ENTERPRISE_OPERATION_TRADE_SERVICE</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_TRADE_SERVICE 
+    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONTRADESERVICE 
     {
         /// <summary>货描相符</summary>
         [Newtonsoft.Json.JsonProperty("WX_SCORE_HM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43643,7 +43643,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.enterpriseOperation.ENTERPRISE_OPERATION_TRADE_OPERATION</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_TRADE_OPERATION 
+    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONTRADEOPERATION 
     {
         /// <summary>近90天重复采购率</summary>
         [Newtonsoft.Json.JsonProperty("REPEAT_PURCHASE_RATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43663,7 +43663,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.enterpriseOperation.ENTERPRISE_OPERATION_DOMESTIC_SHOP_DETAIL</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_DOMESTIC_SHOP_DETAIL 
+    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONDOMESTICSHOPDETAIL 
     {
         /// <summary>店铺名称</summary>
         [Newtonsoft.Json.JsonProperty("SHOP_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43695,7 +43695,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.enterpriseOperation.ENTERPRISE_OPERATION_DOMESTIC_PROCUREMENT</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_DOMESTIC_PROCUREMENT 
+    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONDOMESTICPROCUREMENT 
     {
         /// <summary>近2年采购金额（按月）</summary>
         [Newtonsoft.Json.JsonProperty("PURCHASE_CNT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43715,7 +43715,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.enterpriseOperation.ENTERPRISE_OPERATION_ALI_FINANCE_BEHAVIOR</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_ALI_FINANCE_BEHAVIOR 
+    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONALIFINANCEBEHAVIOR 
     {
         /// <summary>诚e赊当前额度</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_AMT_CYS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43771,7 +43771,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.enterpriseOperation.ENTERPRISE_OPERATION_BUY_SERVICE_INFO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_BUY_SERVICE_INFO 
+    public partial class AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONBUYSERVICEINFO 
     {
         /// <summary>网销宝会员等级</summary>
         [Newtonsoft.Json.JsonProperty("WXB_LEVEL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43803,31 +43803,31 @@ namespace AlibabaSDK.Models
     {
         /// <summary>J1店铺情况天猫/淘宝店铺情况</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_SHOP_INFO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_SHOP_INFO> ENTERPRISE_OPERATION_SHOP_INFO { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONSHOPINFO> ENTERPRISE_OPERATION_SHOP_INFO { get; set; }
     
         /// <summary>J2贸易服务能力</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_TRADE_SERVICE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_TRADE_SERVICE> ENTERPRISE_OPERATION_TRADE_SERVICE { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONTRADESERVICE> ENTERPRISE_OPERATION_TRADE_SERVICE { get; set; }
     
         /// <summary>J3贸易经营状况</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_TRADE_OPERATION", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_TRADE_OPERATION> ENTERPRISE_OPERATION_TRADE_OPERATION { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONTRADEOPERATION> ENTERPRISE_OPERATION_TRADE_OPERATION { get; set; }
     
         /// <summary>J4内贸店铺明细（店铺维度）</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_DOMESTIC_SHOP_DETAIL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_DOMESTIC_SHOP_DETAIL> ENTERPRISE_OPERATION_DOMESTIC_SHOP_DETAIL { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONDOMESTICSHOPDETAIL> ENTERPRISE_OPERATION_DOMESTIC_SHOP_DETAIL { get; set; }
     
         /// <summary>J5内贸采购及阿里服务</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_DOMESTIC_PROCUREMENT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_DOMESTIC_PROCUREMENT> ENTERPRISE_OPERATION_DOMESTIC_PROCUREMENT { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONDOMESTICPROCUREMENT> ENTERPRISE_OPERATION_DOMESTIC_PROCUREMENT { get; set; }
     
         /// <summary>J6阿里金融行为</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_ALI_FINANCE_BEHAVIOR", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_ALI_FINANCE_BEHAVIOR> ENTERPRISE_OPERATION_ALI_FINANCE_BEHAVIOR { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONALIFINANCEBEHAVIOR> ENTERPRISE_OPERATION_ALI_FINANCE_BEHAVIOR { get; set; }
     
         /// <summary>J7阿里服务购买情况</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_BUY_SERVICE_INFO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISE_OPERATION_BUY_SERVICE_INFO> ENTERPRISE_OPERATION_BUY_SERVICE_INFO { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONBUYSERVICEINFO> ENTERPRISE_OPERATION_BUY_SERVICE_INFO { get; set; }
     
     
     }
@@ -43835,7 +43835,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.onsite.ONSITE_FACTORY_AUDIT</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleOnsiteONSITE_FACTORY_AUDIT 
+    public partial class AlibabaBizcreditReportModuleModuleOnsiteONSITEFACTORYAUDIT 
     {
         /// <summary>认证类型</summary>
         [Newtonsoft.Json.JsonProperty("AUTH_TYPE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43859,7 +43859,7 @@ namespace AlibabaSDK.Models
     {
         /// <summary>K1验厂/验商</summary>
         [Newtonsoft.Json.JsonProperty("ONSITE_FACTORY_AUDIT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleOnsiteONSITE_FACTORY_AUDIT> ONSITE_FACTORY_AUDIT { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleOnsiteONSITEFACTORYAUDIT> ONSITE_FACTORY_AUDIT { get; set; }
     
     
     }
@@ -43867,7 +43867,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.credit.CREDIT_RATE</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleCreditCREDIT_RATE 
+    public partial class AlibabaBizcreditReportModuleModuleCreditCREDITRATE 
     {
         /// <summary>诚信评分</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_SCORE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43883,7 +43883,7 @@ namespace AlibabaSDK.Models
     /// <summary>
     ///  namespace:com.alibaba.bizcredit,apiname:alibaba.bizcredit.report.reportModule,version:1,typeName:alibaba.bizcredit.reportModule.module.credit.CREDIT_RATE_BRACH</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaBizcreditReportModuleModuleCreditCREDIT_RATE_BRACH 
+    public partial class AlibabaBizcreditReportModuleModuleCreditCREDITRATEBRACH 
     {
         /// <summary>基本行为评分</summary>
         [Newtonsoft.Json.JsonProperty("BASIC_SCORE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43915,11 +43915,11 @@ namespace AlibabaSDK.Models
     {
         /// <summary>L1诚信等级</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_RATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleCreditCREDIT_RATE> CREDIT_RATE { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleCreditCREDITRATE> CREDIT_RATE { get; set; }
     
         /// <summary>L2诚信评分子项</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_RATE_BRACH", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleCreditCREDIT_RATE_BRACH> CREDIT_RATE_BRACH { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleCreditCREDITRATEBRACH> CREDIT_RATE_BRACH { get; set; }
     
     
     }

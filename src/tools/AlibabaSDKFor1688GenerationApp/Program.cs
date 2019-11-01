@@ -15,8 +15,10 @@ namespace ConsoleApp2
         {
             var apiDocument = new ApiDocument();
 
+
+
             //var rrr = new OpenApiDocument();
-            //rrr.Definitions["tt"] = new NJsonSchema.JsonSchema() { AllowAdditionalProperties =false};
+            //rrr.Definitions["tt"] = new NJsonSchema.JsonSchema() { AllowAdditionalProperties = false };
 
             //rrr.Definitions["tt"].Properties["aa0"] = NJsonSchema.JsonSchema.FromType<int[,,,,,]>().ToJsonSchemaProperty();
             //rrr.Definitions["tt"].Properties["aa1"] = NJsonSchema.JsonSchema.FromType<int[][][]>().ToJsonSchemaProperty();
@@ -30,31 +32,17 @@ namespace ConsoleApp2
             //rrr.Definitions["tt"].Properties["aa9"] = NJsonSchema.JsonSchema.FromType<string[][][]>().ToJsonSchemaProperty();
             //rrr.Definitions["tt"].Properties["aa10"] = NJsonSchema.JsonSchema.FromType<object[][][]>().ToJsonSchemaProperty();
 
-
-
-
-
-
-
             //rrr.Definitions["ee1"] = new NJsonSchema.JsonSchema { };
             //rrr.Definitions["ee2"] = new NJsonSchema.JsonSchema { };
             //rrr.Definitions["ee1"].Definitions.Add("aaa", new NJsonSchema.JsonSchema());
             //rrr.Definitions["ee2"].Definitions.Add("aaa", new NJsonSchema.JsonSchema());
 
-
-
-
-
-
-
             //rrr.Definitions["tt"].Properties["a3"] = NJsonSchema.JsonSchema.FromType<System.Collections.Generic.Dictionary<string, string>>().ToJsonSchemaProperty();
             //rrr.Definitions["tt"].Properties["a4"] = new NJsonSchema.JsonSchemaProperty { Type = NJsonSchema.JsonObjectType.Object };
-            //rrr.Definitions["tt"].Properties["a4"].AdditionalPropertiesSchema= NJsonSchema.JsonSchema.FromType<decimal>();
-
+            //rrr.Definitions["tt"].Properties["a4"].AdditionalPropertiesSchema = NJsonSchema.JsonSchema.FromType<decimal>();
 
             //var dddddd = rrr.ToJson();
             //var sdfdf = apiDocument.ToCSharpCode(rrr);
-
 
 
             var document = apiDocument.创建文档();
