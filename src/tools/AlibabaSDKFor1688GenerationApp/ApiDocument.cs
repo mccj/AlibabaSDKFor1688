@@ -504,7 +504,7 @@ namespace ConsoleApp2
         public override string Generate(JsonSchemaProperty property)
         {
             var name = base.Generate(property);
-            return name;//.ToPascalCase();
+            return name.ToPascalCase();
         }
     }
 }

@@ -22,18 +22,18 @@ namespace AlibabaSDK.Models
     {
         /// <summary>错误信息</summary>
         [Newtonsoft.Json.JsonProperty("error_message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Error_message { get; set; }
+        public string ErrorMessage { get; set; }
     
         /// <summary>异常描述</summary>
         [Newtonsoft.Json.JsonProperty("exception", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Exception { get; set; }
     
         [Newtonsoft.Json.JsonProperty("error_code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Error_code { get; set; }
+        public string ErrorCode { get; set; }
     
         /// <summary>请求标识</summary>
         [Newtonsoft.Json.JsonProperty("request_id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Request_id { get; set; }
+        public string RequestId { get; set; }
     
     
     }
@@ -42731,47 +42731,47 @@ namespace AlibabaSDK.Models
     {
         /// <summary>企业名称</summary>
         [Newtonsoft.Json.JsonProperty("ENT_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_NAME { get; set; }
+        public string ENTNAME { get; set; }
     
         /// <summary>法定代表人/负责人/执行事务合伙人</summary>
         [Newtonsoft.Json.JsonProperty("FR_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FR_NAME { get; set; }
+        public string FRNAME { get; set; }
     
         /// <summary>注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_NO { get; set; }
+        public string REGNO { get; set; }
     
         /// <summary>注册资本(万元)</summary>
         [Newtonsoft.Json.JsonProperty("REG_CAP", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_CAP { get; set; }
+        public string REGCAP { get; set; }
     
         /// <summary>实收资本(万元)</summary>
         [Newtonsoft.Json.JsonProperty("REC_CAP", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REC_CAP { get; set; }
+        public string RECCAP { get; set; }
     
         /// <summary>注册资本币种</summary>
         [Newtonsoft.Json.JsonProperty("REG_CAP_CUR", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_CAP_CUR { get; set; }
+        public string REGCAPCUR { get; set; }
     
         /// <summary>成立日期</summary>
         [Newtonsoft.Json.JsonProperty("ES_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ES_DATE { get; set; }
+        public string ESDATE { get; set; }
     
         /// <summary>经营期限自</summary>
         [Newtonsoft.Json.JsonProperty("OP_FROM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string OP_FROM { get; set; }
+        public string OPFROM { get; set; }
     
         /// <summary>经营期限至</summary>
         [Newtonsoft.Json.JsonProperty("OP_TO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string OP_TO { get; set; }
+        public string OPTO { get; set; }
     
         /// <summary>企业(机构)类型</summary>
         [Newtonsoft.Json.JsonProperty("ENT_TYPE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_TYPE { get; set; }
+        public string ENTTYPE { get; set; }
     
         /// <summary>经营状态</summary>
         [Newtonsoft.Json.JsonProperty("ENT_STATUS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_STATUS { get; set; }
+        public string ENTSTATUS { get; set; }
     
         /// <summary>住址</summary>
         [Newtonsoft.Json.JsonProperty("DOM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42779,43 +42779,43 @@ namespace AlibabaSDK.Models
     
         /// <summary>经营(业务)范围</summary>
         [Newtonsoft.Json.JsonProperty("OP_SCOPE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string OP_SCOPE { get; set; }
+        public string OPSCOPE { get; set; }
     
         /// <summary>登记机关</summary>
         [Newtonsoft.Json.JsonProperty("REG_ORG", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_ORG { get; set; }
+        public string REGORG { get; set; }
     
         /// <summary>行业门类名称</summary>
         [Newtonsoft.Json.JsonProperty("INDUSTRY_PHY", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string INDUSTRY_PHY { get; set; }
+        public string INDUSTRYPHY { get; set; }
     
         /// <summary>行业代码名称</summary>
         [Newtonsoft.Json.JsonProperty("INDUSTRY_CO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string INDUSTRY_CO { get; set; }
+        public string INDUSTRYCO { get; set; }
     
         /// <summary>国民经济行业代码</summary>
         [Newtonsoft.Json.JsonProperty("INDUSTRY_CO_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string INDUSTRY_CO_CODE { get; set; }
+        public string INDUSTRYCOCODE { get; set; }
     
         /// <summary>国民经济行业名称</summary>
         [Newtonsoft.Json.JsonProperty("INDUSTRY_CO_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string INDUSTRY_CO_NAME { get; set; }
+        public string INDUSTRYCONAME { get; set; }
     
         /// <summary>经营场所</summary>
         [Newtonsoft.Json.JsonProperty("OP_LOC", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string OP_LOC { get; set; }
+        public string OPLOC { get; set; }
     
         /// <summary>组织机构代码</summary>
         [Newtonsoft.Json.JsonProperty("ORG_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ORG_CODE { get; set; }
+        public string ORGCODE { get; set; }
     
         /// <summary>统一社会信用代码</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CREDIT_CODE { get; set; }
+        public string CREDITCODE { get; set; }
     
         /// <summary>法人身份证（加密</summary>
         [Newtonsoft.Json.JsonProperty("PERSON_ID_BOCOM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PERSON_ID_BOCOM { get; set; }
+        public string PERSONIDBOCOM { get; set; }
     
     
     }
@@ -42827,7 +42827,7 @@ namespace AlibabaSDK.Models
     {
         /// <summary>人员姓名</summary>
         [Newtonsoft.Json.JsonProperty("PER_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PER_NAME { get; set; }
+        public string PERNAME { get; set; }
     
         /// <summary>职务</summary>
         [Newtonsoft.Json.JsonProperty("POSITION", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42839,19 +42839,19 @@ namespace AlibabaSDK.Models
     
         /// <summary>出生年份</summary>
         [Newtonsoft.Json.JsonProperty("NAT_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string NAT_DATE { get; set; }
+        public string NATDATE { get; set; }
     
         /// <summary>人员总人数</summary>
         [Newtonsoft.Json.JsonProperty("PERSON_AMOUNT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PERSON_AMOUNT { get; set; }
+        public string PERSONAMOUNT { get; set; }
     
         /// <summary>性别编码</summary>
         [Newtonsoft.Json.JsonProperty("SEX_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SEX_CODE { get; set; }
+        public string SEXCODE { get; set; }
     
         /// <summary>职务编码</summary>
         [Newtonsoft.Json.JsonProperty("POSITION_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string POSITION_CODE { get; set; }
+        public string POSITIONCODE { get; set; }
     
     
     }
@@ -42863,27 +42863,27 @@ namespace AlibabaSDK.Models
     {
         /// <summary>股东名称</summary>
         [Newtonsoft.Json.JsonProperty("SHA_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SHA_NAME { get; set; }
+        public string SHANAME { get; set; }
     
         /// <summary>认缴出资额(万元)</summary>
         [Newtonsoft.Json.JsonProperty("SUB_CONAM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SUB_CONAM { get; set; }
+        public string SUBCONAM { get; set; }
     
         /// <summary>认缴出资币种</summary>
         [Newtonsoft.Json.JsonProperty("REG_CAP_CUR", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_CAP_CUR { get; set; }
+        public string REGCAPCUR { get; set; }
     
         /// <summary>出资方式</summary>
         [Newtonsoft.Json.JsonProperty("CON_FORM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CON_FORM { get; set; }
+        public string CONFORM { get; set; }
     
         /// <summary>出资比例</summary>
         [Newtonsoft.Json.JsonProperty("FUNDED_RATIO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FUNDED_RATIO { get; set; }
+        public string FUNDEDRATIO { get; set; }
     
         /// <summary>出资日期</summary>
         [Newtonsoft.Json.JsonProperty("CON_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CON_DATE { get; set; }
+        public string CONDATE { get; set; }
     
         /// <summary>国别</summary>
         [Newtonsoft.Json.JsonProperty("COUNTRY", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42891,23 +42891,23 @@ namespace AlibabaSDK.Models
     
         /// <summary>股东总数量</summary>
         [Newtonsoft.Json.JsonProperty("INVA_MOUNT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string INVA_MOUNT { get; set; }
+        public string INVAMOUNT { get; set; }
     
         /// <summary>股东出资总和（万元）</summary>
         [Newtonsoft.Json.JsonProperty("SUM_CONAM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SUM_CONAM { get; set; }
+        public string SUMCONAM { get; set; }
     
         /// <summary>股东出资比例总和</summary>
         [Newtonsoft.Json.JsonProperty("INV_SUM_FUNDED_RATIO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string INV_SUM_FUNDED_RATIO { get; set; }
+        public string INVSUMFUNDEDRATIO { get; set; }
     
         /// <summary>股东注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_NO { get; set; }
+        public string REGNO { get; set; }
     
         /// <summary>股东身份证</summary>
         [Newtonsoft.Json.JsonProperty("PERSION_ID_BOCOM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PERSION_ID_BOCOM { get; set; }
+        public string PERSIONIDBOCOM { get; set; }
     
     
     }
@@ -42919,35 +42919,35 @@ namespace AlibabaSDK.Models
     {
         /// <summary>分支机构</summary>
         [Newtonsoft.Json.JsonProperty("BR_REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BR_REG_NO { get; set; }
+        public string BRREGNO { get; set; }
     
         /// <summary>分支机构名称</summary>
         [Newtonsoft.Json.JsonProperty("BR_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BR_NAME { get; set; }
+        public string BRNAME { get; set; }
     
         /// <summary>一般经营项目</summary>
         [Newtonsoft.Json.JsonProperty("CBU_ITEM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CBU_ITEM { get; set; }
+        public string CBUITEM { get; set; }
     
         /// <summary>分支机构地址</summary>
         [Newtonsoft.Json.JsonProperty("BR_ADDR", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BR_ADDR { get; set; }
+        public string BRADDR { get; set; }
     
         /// <summary>分支机构负责人</summary>
         [Newtonsoft.Json.JsonProperty("BR_PRINCIPAL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BR_PRINCIPAL { get; set; }
+        public string BRPRINCIPAL { get; set; }
     
         /// <summary>工商注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_NO { get; set; }
+        public string REGNO { get; set; }
     
         /// <summary>社会统一代码</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CREDIT_CODE { get; set; }
+        public string CREDITCODE { get; set; }
     
         /// <summary>社会组织机构代码</summary>
         [Newtonsoft.Json.JsonProperty("ORG_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ORG_CODE { get; set; }
+        public string ORGCODE { get; set; }
     
     
     }
@@ -42963,15 +42963,15 @@ namespace AlibabaSDK.Models
     
         /// <summary>A2主要管理人员</summary>
         [Newtonsoft.Json.JsonProperty("BASIC_MANAGER", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASICMANAGER> BASIC_MANAGER { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASICMANAGER> BASICMANAGER { get; set; }
     
         /// <summary>A3股东信息</summary>
         [Newtonsoft.Json.JsonProperty("BASIC_SHAREHOLDER", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASICSHAREHOLDER> BASIC_SHAREHOLDER { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASICSHAREHOLDER> BASICSHAREHOLDER { get; set; }
     
         /// <summary>A4分支机构</summary>
         [Newtonsoft.Json.JsonProperty("BASIC_BRANCH", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASICBRANCH> BASIC_BRANCH { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleBasicBASICBRANCH> BASICBRANCH { get; set; }
     
     
     }
@@ -42983,59 +42983,59 @@ namespace AlibabaSDK.Models
     {
         /// <summary>企业(机构)名称</summary>
         [Newtonsoft.Json.JsonProperty("ENT_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_NAME { get; set; }
+        public string ENTNAME { get; set; }
     
         /// <summary>注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_NO { get; set; }
+        public string REGNO { get; set; }
     
         /// <summary>企业(机构)类型</summary>
         [Newtonsoft.Json.JsonProperty("ENT_TYPE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_TYPE { get; set; }
+        public string ENTTYPE { get; set; }
     
         /// <summary>注册资本(万元)</summary>
         [Newtonsoft.Json.JsonProperty("REG_CAP", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_CAP { get; set; }
+        public string REGCAP { get; set; }
     
         /// <summary>注册资本币种</summary>
         [Newtonsoft.Json.JsonProperty("REG_CAP_CUR", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_CAP_CUR { get; set; }
+        public string REGCAPCUR { get; set; }
     
         /// <summary>企业状态</summary>
         [Newtonsoft.Json.JsonProperty("ENT_STATUS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_STATUS { get; set; }
+        public string ENTSTATUS { get; set; }
     
         /// <summary>注销日期</summary>
         [Newtonsoft.Json.JsonProperty("CAN_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CAN_DATE { get; set; }
+        public string CANDATE { get; set; }
     
         /// <summary>吊销日期</summary>
         [Newtonsoft.Json.JsonProperty("REV_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REV_DATE { get; set; }
+        public string REVDATE { get; set; }
     
         /// <summary>登记机关</summary>
         [Newtonsoft.Json.JsonProperty("REG_ORG", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_ORG { get; set; }
+        public string REGORG { get; set; }
     
         /// <summary>认缴出资额(万元)</summary>
         [Newtonsoft.Json.JsonProperty("SUB_CONAM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SUB_CONAM { get; set; }
+        public string SUBCONAM { get; set; }
     
         /// <summary>认缴出资币种</summary>
         [Newtonsoft.Json.JsonProperty("CON_GRO_CUR", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CON_GRO_CUR { get; set; }
+        public string CONGROCUR { get; set; }
     
         /// <summary>出资方式</summary>
         [Newtonsoft.Json.JsonProperty("CON_FORM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CON_FORM { get; set; }
+        public string CONFORM { get; set; }
     
         /// <summary>出资比例</summary>
         [Newtonsoft.Json.JsonProperty("FUNDED_RATIO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FUNDED_RATIO { get; set; }
+        public string FUNDEDRATIO { get; set; }
     
         /// <summary>开业日期</summary>
         [Newtonsoft.Json.JsonProperty("ES_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ES_DATE { get; set; }
+        public string ESDATE { get; set; }
     
         /// <summary>法定代表人姓名</summary>
         [Newtonsoft.Json.JsonProperty("NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43043,11 +43043,11 @@ namespace AlibabaSDK.Models
     
         /// <summary>企业总数量</summary>
         [Newtonsoft.Json.JsonProperty("BINVV_AMOUNT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BINVV_AMOUNT { get; set; }
+        public string BINVVAMOUNT { get; set; }
     
         /// <summary>企业对外投资信息注册号</summary>
         [Newtonsoft.Json.JsonProperty("ENT_INV_REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_INV_REG_NO { get; set; }
+        public string ENTINVREGNO { get; set; }
     
     
     }
@@ -43063,47 +43063,47 @@ namespace AlibabaSDK.Models
     
         /// <summary>企业总数量</summary>
         [Newtonsoft.Json.JsonProperty("PINV_AMOUNT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PINV_AMOUNT { get; set; }
+        public string PINVAMOUNT { get; set; }
     
         /// <summary>企业(机构)名称</summary>
         [Newtonsoft.Json.JsonProperty("ENT_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_NAME { get; set; }
+        public string ENTNAME { get; set; }
     
         /// <summary>注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_NO { get; set; }
+        public string REGNO { get; set; }
     
         /// <summary>企业(机构)类</summary>
         [Newtonsoft.Json.JsonProperty("ENT_TYPE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_TYPE { get; set; }
+        public string ENTTYPE { get; set; }
     
         /// <summary>注册资本(万元)</summary>
         [Newtonsoft.Json.JsonProperty("REG_CAP", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_CAP { get; set; }
+        public string REGCAP { get; set; }
     
         /// <summary>注册资本币种</summary>
         [Newtonsoft.Json.JsonProperty("REG_CAP_CUR", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_CAP_CUR { get; set; }
+        public string REGCAPCUR { get; set; }
     
         /// <summary>企业状态</summary>
         [Newtonsoft.Json.JsonProperty("ENT_STATUS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_STATUS { get; set; }
+        public string ENTSTATUS { get; set; }
     
         /// <summary>注销日期</summary>
         [Newtonsoft.Json.JsonProperty("CAN_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CAN_DATE { get; set; }
+        public string CANDATE { get; set; }
     
         /// <summary>吊销日期</summary>
         [Newtonsoft.Json.JsonProperty("REV_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REV_DATE { get; set; }
+        public string REVDATE { get; set; }
     
         /// <summary>登记机关</summary>
         [Newtonsoft.Json.JsonProperty("REG_ORG", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_ORG { get; set; }
+        public string REGORG { get; set; }
     
         /// <summary>认缴出资额(万元)</summary>
         [Newtonsoft.Json.JsonProperty("SUB_CONAM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SUB_CONAM { get; set; }
+        public string SUBCONAM { get; set; }
     
         /// <summary>认缴出资币种</summary>
         [Newtonsoft.Json.JsonProperty("CURRENCY", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43111,11 +43111,11 @@ namespace AlibabaSDK.Models
     
         /// <summary>出资方式</summary>
         [Newtonsoft.Json.JsonProperty("CON_FORM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CON_FORM { get; set; }
+        public string CONFORM { get; set; }
     
         /// <summary>出资比例</summary>
         [Newtonsoft.Json.JsonProperty("FUNDED_RATIO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FUNDED_RATIO { get; set; }
+        public string FUNDEDRATIO { get; set; }
     
     
     }
@@ -43127,11 +43127,11 @@ namespace AlibabaSDK.Models
     {
         /// <summary>B1企业对外投资</summary>
         [Newtonsoft.Json.JsonProperty("INV_ENTERPRISE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleInvINVENTERPRISE> INV_ENTERPRISE { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleInvINVENTERPRISE> INVENTERPRISE { get; set; }
     
         /// <summary>B2法定代表人对外投资</summary>
         [Newtonsoft.Json.JsonProperty("INV_LEGAL_PERSON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleInvINVLEGALPERSON> INV_LEGAL_PERSON { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleInvINVLEGALPERSON> INVLEGALPERSON { get; set; }
     
     
     }
@@ -43143,27 +43143,27 @@ namespace AlibabaSDK.Models
     {
         /// <summary>案号</summary>
         [Newtonsoft.Json.JsonProperty("CASE_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CASE_CODE { get; set; }
+        public string CASECODE { get; set; }
     
         /// <summary>被执行人姓名/名称</summary>
         [Newtonsoft.Json.JsonProperty("INAME_CLEAN", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string INAME_CLEAN { get; set; }
+        public string INAMECLEAN { get; set; }
     
         /// <summary>身份证号码/企业注册号</summary>
         [Newtonsoft.Json.JsonProperty("CARD_NUM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CARD_NUM { get; set; }
+        public string CARDNUM { get; set; }
     
         /// <summary>性别</summary>
         [Newtonsoft.Json.JsonProperty("SEXY_CLEAN", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SEXY_CLEAN { get; set; }
+        public string SEXYCLEAN { get; set; }
     
         /// <summary>年龄</summary>
         [Newtonsoft.Json.JsonProperty("AGE_CLEAN", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AGE_CLEAN { get; set; }
+        public string AGECLEAN { get; set; }
     
         /// <summary>省份</summary>
         [Newtonsoft.Json.JsonProperty("AREA_NAME_CLEAN", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AREA_NAME_CLEAN { get; set; }
+        public string AREANAMECLEAN { get; set; }
     
         /// <summary>身份证原始发证</summary>
         [Newtonsoft.Json.JsonProperty("YSFZD", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43171,15 +43171,15 @@ namespace AlibabaSDK.Models
     
         /// <summary>执行法</summary>
         [Newtonsoft.Json.JsonProperty("COURT_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string COURT_NAME { get; set; }
+        public string COURTNAME { get; set; }
     
         /// <summary>立案时间</summary>
         [Newtonsoft.Json.JsonProperty("REG_DATE_CLEAN", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_DATE_CLEAN { get; set; }
+        public string REGDATECLEAN { get; set; }
     
         /// <summary>注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_NO { get; set; }
+        public string REGNO { get; set; }
     
     
     }
@@ -43191,23 +43191,23 @@ namespace AlibabaSDK.Models
     {
         /// <summary>地域名称</summary>
         [Newtonsoft.Json.JsonProperty("AREA_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AREA_NAME { get; set; }
+        public string AREANAME { get; set; }
     
         /// <summary>失信被执行人具体情形</summary>
         [Newtonsoft.Json.JsonProperty("DISREPUT_TYPE_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string DISREPUT_TYPE_NAME { get; set; }
+        public string DISREPUTTYPENAME { get; set; }
     
         /// <summary>案号</summary>
         [Newtonsoft.Json.JsonProperty("CASE_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CASE_CODE { get; set; }
+        public string CASECODE { get; set; }
     
         /// <summary>企业法人姓名</summary>
         [Newtonsoft.Json.JsonProperty("BUESINESS_ENTITY", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BUESINESS_ENTITY { get; set; }
+        public string BUESINESSENTITY { get; set; }
     
         /// <summary>地域ID</summary>
         [Newtonsoft.Json.JsonProperty("AREA_ID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AREA_ID { get; set; }
+        public string AREAID { get; set; }
     
         /// <summary>失信被执行人姓名/机构名称</summary>
         [Newtonsoft.Json.JsonProperty("INAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43215,11 +43215,11 @@ namespace AlibabaSDK.Models
     
         /// <summary>立案时间</summary>
         [Newtonsoft.Json.JsonProperty("REG_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_DATE { get; set; }
+        public string REGDATE { get; set; }
     
         /// <summary>身份证号码/组织机构代码</summary>
         [Newtonsoft.Json.JsonProperty("CARD_NUM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CARD_NUM { get; set; }
+        public string CARDNUM { get; set; }
     
         /// <summary>被执行人的履行情况</summary>
         [Newtonsoft.Json.JsonProperty("PERFORMANCE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43227,11 +43227,11 @@ namespace AlibabaSDK.Models
     
         /// <summary>作出执行依据单位</summary>
         [Newtonsoft.Json.JsonProperty("GIST_UNIT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string GIST_UNIT { get; set; }
+        public string GISTUNIT { get; set; }
     
         /// <summary>执行依据文号</summary>
         [Newtonsoft.Json.JsonProperty("GIST_CID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string GIST_CID { get; set; }
+        public string GISTCID { get; set; }
     
         /// <summary>法律生效文书确定的义务</summary>
         [Newtonsoft.Json.JsonProperty("DUTY", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43239,15 +43239,15 @@ namespace AlibabaSDK.Models
     
         /// <summary>执行法院</summary>
         [Newtonsoft.Json.JsonProperty("COURT_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string COURT_NAME { get; set; }
+        public string COURTNAME { get; set; }
     
         /// <summary>标识自然人或企业</summary>
         [Newtonsoft.Json.JsonProperty("PARTY_TYPE_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PARTY_TYPE_NAME { get; set; }
+        public string PARTYTYPENAME { get; set; }
     
         /// <summary>发布时间</summary>
         [Newtonsoft.Json.JsonProperty("PUBLISH_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PUBLISH_DATE { get; set; }
+        public string PUBLISHDATE { get; set; }
     
         /// <summary>年龄</summary>
         [Newtonsoft.Json.JsonProperty("AGE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43263,23 +43263,23 @@ namespace AlibabaSDK.Models
     {
         /// <summary>变更日期</summary>
         [Newtonsoft.Json.JsonProperty("ALT_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ALT_DATE { get; set; }
+        public string ALTDATE { get; set; }
     
         /// <summary>变更事项</summary>
         [Newtonsoft.Json.JsonProperty("ALT_ITEM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ALT_ITEM { get; set; }
+        public string ALTITEM { get; set; }
     
         /// <summary>变更前内容</summary>
         [Newtonsoft.Json.JsonProperty("ALT_BE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ALT_BE { get; set; }
+        public string ALTBE { get; set; }
     
         /// <summary>变更后内容</summary>
         [Newtonsoft.Json.JsonProperty("ALT_AF", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ALT_AF { get; set; }
+        public string ALTAF { get; set; }
     
         /// <summary>工商注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_NO { get; set; }
+        public string REGNO { get; set; }
     
     
     }
@@ -43291,67 +43291,67 @@ namespace AlibabaSDK.Models
     {
         /// <summary>案发时间</summary>
         [Newtonsoft.Json.JsonProperty("CASE_TIME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CASE_TIME { get; set; }
+        public string CASETIME { get; set; }
     
         /// <summary>案由</summary>
         [Newtonsoft.Json.JsonProperty("CASE_REASON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CASE_REASON { get; set; }
+        public string CASEREASON { get; set; }
     
         /// <summary>案值</summary>
         [Newtonsoft.Json.JsonProperty("CASE_VAL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CASE_VAL { get; set; }
+        public string CASEVAL { get; set; }
     
         /// <summary>案件类型</summary>
         [Newtonsoft.Json.JsonProperty("CASE_TYPE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CASE_TYPE { get; set; }
+        public string CASETYPE { get; set; }
     
         /// <summary>执行类别</summary>
         [Newtonsoft.Json.JsonProperty("EXE_SORT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string EXE_SORT { get; set; }
+        public string EXESORT { get; set; }
     
         /// <summary>案件结果</summary>
         [Newtonsoft.Json.JsonProperty("CASE_RESULT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CASE_RESULT { get; set; }
+        public string CASERESULT { get; set; }
     
         /// <summary>处罚决定文书</summary>
         [Newtonsoft.Json.JsonProperty("PENDEC_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PENDEC_NO { get; set; }
+        public string PENDECNO { get; set; }
     
         /// <summary>处罚决定书签发日期</summary>
         [Newtonsoft.Json.JsonProperty("PENDECISS_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PENDECISS_DATE { get; set; }
+        public string PENDECISSDATE { get; set; }
     
         /// <summary>处罚机关</summary>
         [Newtonsoft.Json.JsonProperty("PEN_AUTH", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PEN_AUTH { get; set; }
+        public string PENAUTH { get; set; }
     
         /// <summary>主要违法事实</summary>
         [Newtonsoft.Json.JsonProperty("ILLEG_FACT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ILLEG_FACT { get; set; }
+        public string ILLEGFACT { get; set; }
     
         /// <summary>处罚依据</summary>
         [Newtonsoft.Json.JsonProperty("PEN_BASIS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PEN_BASIS { get; set; }
+        public string PENBASIS { get; set; }
     
         /// <summary>处罚种类</summary>
         [Newtonsoft.Json.JsonProperty("PEN_TYPE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PEN_TYPE { get; set; }
+        public string PENTYPE { get; set; }
     
         /// <summary>案发时间</summary>
         [Newtonsoft.Json.JsonProperty("PEN_RESULT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PEN_RESULT { get; set; }
+        public string PENRESULT { get; set; }
     
         /// <summary>处罚金额(万元)</summary>
         [Newtonsoft.Json.JsonProperty("PEN_AM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PEN_AM { get; set; }
+        public string PENAM { get; set; }
     
         /// <summary>处罚执行情况</summary>
         [Newtonsoft.Json.JsonProperty("PEN_EXE_ST", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PEN_EXE_ST { get; set; }
+        public string PENEXEST { get; set; }
     
         /// <summary>注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_NO { get; set; }
+        public string REGNO { get; set; }
     
     
     }
@@ -43363,11 +43363,11 @@ namespace AlibabaSDK.Models
     {
         /// <summary>注册号</summary>
         [Newtonsoft.Json.JsonProperty("REG_NO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_NO { get; set; }
+        public string REGNO { get; set; }
     
         /// <summary>企业名称</summary>
         [Newtonsoft.Json.JsonProperty("ENT_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENT_NAME { get; set; }
+        public string ENTNAME { get; set; }
     
         /// <summary>状态</summary>
         [Newtonsoft.Json.JsonProperty("STATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43375,39 +43375,39 @@ namespace AlibabaSDK.Models
     
         /// <summary>统一社会信用代码</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CREDIT_CODE { get; set; }
+        public string CREDITCODE { get; set; }
     
         /// <summary>详情</summary>
         [Newtonsoft.Json.JsonProperty("DETAILS_TEXT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string DETAILS_TEXT { get; set; }
+        public string DETAILSTEXT { get; set; }
     
         /// <summary>列入时间</summary>
         [Newtonsoft.Json.JsonProperty("IN_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IN_DATE { get; set; }
+        public string INDATE { get; set; }
     
         /// <summary>列出时间</summary>
         [Newtonsoft.Json.JsonProperty("OUT_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string OUT_DATE { get; set; }
+        public string OUTDATE { get; set; }
     
         /// <summary>组织机构代码</summary>
         [Newtonsoft.Json.JsonProperty("ORG_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ORG_CODE { get; set; }
+        public string ORGCODE { get; set; }
     
         /// <summary>移除机关名称</summary>
         [Newtonsoft.Json.JsonProperty("YC_REGORG", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string YC_REGORG { get; set; }
+        public string YCREGORG { get; set; }
     
         /// <summary>移出原因</summary>
         [Newtonsoft.Json.JsonProperty("OUT_REASON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string OUT_REASON { get; set; }
+        public string OUTREASON { get; set; }
     
         /// <summary>列入原因</summary>
         [Newtonsoft.Json.JsonProperty("IN_REASON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IN_REASON { get; set; }
+        public string INREASON { get; set; }
     
         /// <summary>列入机关名称</summary>
         [Newtonsoft.Json.JsonProperty("YR_REGORG", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string YR_REGORG { get; set; }
+        public string YRREGORG { get; set; }
     
     
     }
@@ -43419,55 +43419,55 @@ namespace AlibabaSDK.Models
     {
         /// <summary>是否工商注销/吊销</summary>
         [Newtonsoft.Json.JsonProperty("IS_LICENSE_CANCELLED", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_LICENSE_CANCELLED { get; set; }
+        public string ISLICENSECANCELLED { get; set; }
     
         /// <summary>是否公司或法人是否失信</summary>
         [Newtonsoft.Json.JsonProperty("IS_DISHONESTY", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_DISHONESTY { get; set; }
+        public string ISDISHONESTY { get; set; }
     
         /// <summary>公司/法人在法院失信是否退出</summary>
         [Newtonsoft.Json.JsonProperty("IS_DISHONESTY_QUIT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_DISHONESTY_QUIT { get; set; }
+        public string ISDISHONESTYQUIT { get; set; }
     
         /// <summary>是否5年内被法院执行两次或以上</summary>
         [Newtonsoft.Json.JsonProperty("IS_ENFORCED", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_ENFORCED { get; set; }
+        public string ISENFORCED { get; set; }
     
         /// <summary>是否阿里系业务清退</summary>
         [Newtonsoft.Json.JsonProperty("IS_CLEAROUT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_CLEAROUT { get; set; }
+        public string ISCLEAROUT { get; set; }
     
         /// <summary>是否阿里系业务违规过多</summary>
         [Newtonsoft.Json.JsonProperty("IS_PENALITY", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_PENALITY { get; set; }
+        public string ISPENALITY { get; set; }
     
         /// <summary>是否阿里系业务严重金融逾期</summary>
         [Newtonsoft.Json.JsonProperty("IS_OVERDUE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_OVERDUE { get; set; }
+        public string ISOVERDUE { get; set; }
     
         /// <summary>是否其他关注名单</summary>
         [Newtonsoft.Json.JsonProperty("IS_BLACKLIST", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_BLACKLIST { get; set; }
+        public string ISBLACKLIST { get; set; }
     
         /// <summary>是否有阿里系业务严重知识产权侵权</summary>
         [Newtonsoft.Json.JsonProperty("IS_IP_CASE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_IP_CASE { get; set; }
+        public string ISIPCASE { get; set; }
     
         /// <summary>是否强关联人法院失信</summary>
         [Newtonsoft.Json.JsonProperty("IS_DISHONESTY_RELA", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_DISHONESTY_RELA { get; set; }
+        public string ISDISHONESTYRELA { get; set; }
     
         /// <summary>是否强关联人阿里系业务清退</summary>
         [Newtonsoft.Json.JsonProperty("IS_CLEAROUT_RELA", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_CLEAROUT_RELA { get; set; }
+        public string ISCLEAROUTRELA { get; set; }
     
         /// <summary>是否强关联人严重金融逾期</summary>
         [Newtonsoft.Json.JsonProperty("IS_OVERDUE_RELA", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_OVERDUE_RELA { get; set; }
+        public string ISOVERDUERELA { get; set; }
     
         /// <summary>是否强关联人在被关注名单</summary>
         [Newtonsoft.Json.JsonProperty("IS_BLACKLIST_RELA", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string IS_BLACKLIST_RELA { get; set; }
+        public string ISBLACKLISTRELA { get; set; }
     
     
     }
@@ -43479,23 +43479,23 @@ namespace AlibabaSDK.Models
     {
         /// <summary>地域名称</summary>
         [Newtonsoft.Json.JsonProperty("AREA_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AREA_NAME { get; set; }
+        public string AREANAME { get; set; }
     
         /// <summary>失信被执行人具体情形</summary>
         [Newtonsoft.Json.JsonProperty("DISREPUT_TYPE_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string DISREPUT_TYPE_NAME { get; set; }
+        public string DISREPUTTYPENAME { get; set; }
     
         /// <summary>案号</summary>
         [Newtonsoft.Json.JsonProperty("CASE_CODE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CASE_CODE { get; set; }
+        public string CASECODE { get; set; }
     
         /// <summary>企业法人姓名</summary>
         [Newtonsoft.Json.JsonProperty("BUESINESS_ENTITY", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BUESINESS_ENTITY { get; set; }
+        public string BUESINESSENTITY { get; set; }
     
         /// <summary>地域ID</summary>
         [Newtonsoft.Json.JsonProperty("AREA_ID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AREA_ID { get; set; }
+        public string AREAID { get; set; }
     
         /// <summary>失信被执行人姓名/机构名称</summary>
         [Newtonsoft.Json.JsonProperty("INAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43503,11 +43503,11 @@ namespace AlibabaSDK.Models
     
         /// <summary>立案时间</summary>
         [Newtonsoft.Json.JsonProperty("REG_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REG_DATE { get; set; }
+        public string REGDATE { get; set; }
     
         /// <summary>身份证号码/组织机构代码</summary>
         [Newtonsoft.Json.JsonProperty("CARD_NUM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CARD_NUM { get; set; }
+        public string CARDNUM { get; set; }
     
         /// <summary>被执行人的履行情况</summary>
         [Newtonsoft.Json.JsonProperty("PERFORMANCE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43515,11 +43515,11 @@ namespace AlibabaSDK.Models
     
         /// <summary>作出执行依据单位</summary>
         [Newtonsoft.Json.JsonProperty("GIST_UNIT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string GIST_UNIT { get; set; }
+        public string GISTUNIT { get; set; }
     
         /// <summary>执行依据文号</summary>
         [Newtonsoft.Json.JsonProperty("GIST_CID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string GIST_CID { get; set; }
+        public string GISTCID { get; set; }
     
         /// <summary>法律生效文书确定的义务</summary>
         [Newtonsoft.Json.JsonProperty("DUTY", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43527,15 +43527,15 @@ namespace AlibabaSDK.Models
     
         /// <summary>执行法院</summary>
         [Newtonsoft.Json.JsonProperty("COURT_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string COURT_NAME { get; set; }
+        public string COURTNAME { get; set; }
     
         /// <summary>标识自然人或企业</summary>
         [Newtonsoft.Json.JsonProperty("PARTY_TYPE_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PARTY_TYPE_NAME { get; set; }
+        public string PARTYTYPENAME { get; set; }
     
         /// <summary>发布时间</summary>
         [Newtonsoft.Json.JsonProperty("PUBLISH_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PUBLISH_DATE { get; set; }
+        public string PUBLISHDATE { get; set; }
     
         /// <summary>年龄</summary>
         [Newtonsoft.Json.JsonProperty("AGE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -43551,31 +43551,31 @@ namespace AlibabaSDK.Models
     {
         /// <summary>D1司法风险-执行公告</summary>
         [Newtonsoft.Json.JsonProperty("RISK_EXECUTION_ANNOUNCEMENT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKEXECUTIONANNOUNCEMENT> RISK_EXECUTION_ANNOUNCEMENT { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKEXECUTIONANNOUNCEMENT> RISKEXECUTIONANNOUNCEMENT { get; set; }
     
         /// <summary>D2司法风险-失信公告</summary>
         [Newtonsoft.Json.JsonProperty("RISK_PUNISH_BREAK", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKPUNISHBREAK> RISK_PUNISH_BREAK { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKPUNISHBREAK> RISKPUNISHBREAK { get; set; }
     
         /// <summary>D7变更信息</summary>
         [Newtonsoft.Json.JsonProperty("RISK_CHANGE_DETAIL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKCHANGEDETAIL> RISK_CHANGE_DETAIL { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKCHANGEDETAIL> RISKCHANGEDETAIL { get; set; }
     
         /// <summary>D8行政处罚</summary>
         [Newtonsoft.Json.JsonProperty("RISK_PUNISHMENT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKPUNISHMENT> RISK_PUNISHMENT { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKPUNISHMENT> RISKPUNISHMENT { get; set; }
     
         /// <summary>D9经营异常</summary>
         [Newtonsoft.Json.JsonProperty("RISK_OPERATION_EXCEPTION", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKOPERATIONEXCEPTION> RISK_OPERATION_EXCEPTION { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKOPERATIONEXCEPTION> RISKOPERATIONEXCEPTION { get; set; }
     
         /// <summary>D11风险扫描</summary>
         [Newtonsoft.Json.JsonProperty("RISK_SCAN", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKSCAN> RISK_SCAN { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKSCAN> RISKSCAN { get; set; }
     
         /// <summary>D12司法风险-法定代表人失信公告</summary>
         [Newtonsoft.Json.JsonProperty("RISK_PUNISH_BREAK_PERSON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKPUNISHBREAKPERSON> RISK_PUNISH_BREAK_PERSON { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleRiskRISKPUNISHBREAKPERSON> RISKPUNISHBREAKPERSON { get; set; }
     
     
     }
@@ -43587,23 +43587,23 @@ namespace AlibabaSDK.Models
     {
         /// <summary>店铺名称</summary>
         [Newtonsoft.Json.JsonProperty("SHOP_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SHOP_NAME { get; set; }
+        public string SHOPNAME { get; set; }
     
         /// <summary>店铺地址</summary>
         [Newtonsoft.Json.JsonProperty("SHOP_URL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SHOP_URL { get; set; }
+        public string SHOPURL { get; set; }
     
         /// <summary>店铺等级</summary>
         [Newtonsoft.Json.JsonProperty("SHOP_LEVEL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SHOP_LEVEL { get; set; }
+        public string SHOPLEVEL { get; set; }
     
         /// <summary>店铺主营类目</summary>
         [Newtonsoft.Json.JsonProperty("SHOP_CATE_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SHOP_CATE_NAME { get; set; }
+        public string SHOPCATENAME { get; set; }
     
         /// <summary>近两年销售情况</summary>
         [Newtonsoft.Json.JsonProperty("MONTH_DETAIL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> MONTH_DETAIL { get; set; }
+        public System.Collections.Generic.ICollection<object> MONTHDETAIL { get; set; }
     
     
     }
@@ -43615,27 +43615,27 @@ namespace AlibabaSDK.Models
     {
         /// <summary>货描相符</summary>
         [Newtonsoft.Json.JsonProperty("WX_SCORE_HM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WX_SCORE_HM { get; set; }
+        public string WXSCOREHM { get; set; }
     
         /// <summary>响应速度</summary>
         [Newtonsoft.Json.JsonProperty("XY_SCORE_HM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string XY_SCORE_HM { get; set; }
+        public string XYSCOREHM { get; set; }
     
         /// <summary>发货速度</summary>
         [Newtonsoft.Json.JsonProperty("FH_SCORE_HM", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FH_SCORE_HM { get; set; }
+        public string FHSCOREHM { get; set; }
     
         /// <summary>货描相符同行比较值</summary>
         [Newtonsoft.Json.JsonProperty("SCORE_HM_RATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SCORE_HM_RATE { get; set; }
+        public string SCOREHMRATE { get; set; }
     
         /// <summary>响应速度同行比较值</summary>
         [Newtonsoft.Json.JsonProperty("SCORE_XY_RATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SCORE_XY_RATE { get; set; }
+        public string SCOREXYRATE { get; set; }
     
         /// <summary>发货速度同行比较值</summary>
         [Newtonsoft.Json.JsonProperty("SCORE_FH_RATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SCORE_FH_RATE { get; set; }
+        public string SCOREFHRATE { get; set; }
     
     
     }
@@ -43647,15 +43647,15 @@ namespace AlibabaSDK.Models
     {
         /// <summary>近90天重复采购率</summary>
         [Newtonsoft.Json.JsonProperty("REPEAT_PURCHASE_RATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string REPEAT_PURCHASE_RATE { get; set; }
+        public string REPEATPURCHASERATE { get; set; }
     
         /// <summary>近90天退款率</summary>
         [Newtonsoft.Json.JsonProperty("SUC_RFD_MORD_RATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SUC_RFD_MORD_RATE { get; set; }
+        public string SUCRFDMORDRATE { get; set; }
     
         /// <summary>近90天纠纷率</summary>
         [Newtonsoft.Json.JsonProperty("DISPUTE_RATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string DISPUTE_RATE { get; set; }
+        public string DISPUTERATE { get; set; }
     
     
     }
@@ -43667,27 +43667,27 @@ namespace AlibabaSDK.Models
     {
         /// <summary>店铺名称</summary>
         [Newtonsoft.Json.JsonProperty("SHOP_NAME", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SHOP_NAME { get; set; }
+        public string SHOPNAME { get; set; }
     
         /// <summary>店铺地址</summary>
         [Newtonsoft.Json.JsonProperty("SHOP_URL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SHOP_URL { get; set; }
+        public string SHOPURL { get; set; }
     
         /// <summary>诚信通服务年限</summary>
         [Newtonsoft.Json.JsonProperty("TP_SERVICES_YEARS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string TP_SERVICES_YEARS { get; set; }
+        public string TPSERVICESYEARS { get; set; }
     
         /// <summary>店铺网站大类</summary>
         [Newtonsoft.Json.JsonProperty("MAIN_PROD_STR", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string MAIN_PROD_STR { get; set; }
+        public string MAINPRODSTR { get; set; }
     
         /// <summary>近一年销量前五产品名称</summary>
         [Newtonsoft.Json.JsonProperty("PROD_SALE_TOP5_12M", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PROD_SALE_TOP5_12M { get; set; }
+        public string PRODSALETOP512M { get; set; }
     
         /// <summary>近两年销售情况</summary>
         [Newtonsoft.Json.JsonProperty("MONTH_DETAIL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> MONTH_DETAIL { get; set; }
+        public System.Collections.Generic.ICollection<object> MONTHDETAIL { get; set; }
     
     
     }
@@ -43699,15 +43699,15 @@ namespace AlibabaSDK.Models
     {
         /// <summary>近2年采购金额（按月）</summary>
         [Newtonsoft.Json.JsonProperty("PURCHASE_CNT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PURCHASE_CNT { get; set; }
+        public string PURCHASECNT { get; set; }
     
         /// <summary>近2年采购笔数（按月）</summary>
         [Newtonsoft.Json.JsonProperty("PURCHASE_AMOUNT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PURCHASE_AMOUNT { get; set; }
+        public string PURCHASEAMOUNT { get; set; }
     
         /// <summary>最近12个月采购前五商品</summary>
         [Newtonsoft.Json.JsonProperty("PROD_PURCHASE_TOP5_12M", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PROD_PURCHASE_TOP5_12M { get; set; }
+        public string PRODPURCHASETOP512M { get; set; }
     
     
     }
@@ -43719,51 +43719,51 @@ namespace AlibabaSDK.Models
     {
         /// <summary>诚e赊当前额度</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_AMT_CYS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CREDIT_AMT_CYS { get; set; }
+        public string CREDITAMTCYS { get; set; }
     
         /// <summary>诚e赊当前使用中额度</summary>
         [Newtonsoft.Json.JsonProperty("USED_AMT_CYS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string USED_AMT_CYS { get; set; }
+        public string USEDAMTCYS { get; set; }
     
         /// <summary>诚e赊当前使用中订单数</summary>
         [Newtonsoft.Json.JsonProperty("USED_CYS_ORD_CNT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string USED_CYS_ORD_CNT { get; set; }
+        public string USEDCYSORDCNT { get; set; }
     
         /// <summary>诚e赊当前可用额度</summary>
         [Newtonsoft.Json.JsonProperty("ENABLE_BAL_AMT_CYS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENABLE_BAL_AMT_CYS { get; set; }
+        public string ENABLEBALAMTCYS { get; set; }
     
         /// <summary>诚e赊当前逾期30天以上未归还金额</summary>
         [Newtonsoft.Json.JsonProperty("CUR_OVD30D_ORD_AMT_CYS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CUR_OVD30D_ORD_AMT_CYS { get; set; }
+        public string CUROVD30DORDAMTCYS { get; set; }
     
         /// <summary>诚e赊当前逾期30天以上未归还笔数</summary>
         [Newtonsoft.Json.JsonProperty("CUR_OVD30D_ORD_CNT_CYS", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CUR_OVD30D_ORD_CNT_CYS { get; set; }
+        public string CUROVD30DORDCNTCYS { get; set; }
     
         /// <summary>诚e赊近一年累计逾期30天以上未归还金额</summary>
         [Newtonsoft.Json.JsonProperty("OVD30D_ORD_AMT_CYS1Y", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string OVD30D_ORD_AMT_CYS1Y { get; set; }
+        public string OVD30DORDAMTCYS1Y { get; set; }
     
         /// <summary>诚e赊近一年累计逾期30天以上未归还笔数</summary>
         [Newtonsoft.Json.JsonProperty("OVD30D_ORD_CNT_CYS1Y", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string OVD30D_ORD_CNT_CYS1Y { get; set; }
+        public string OVD30DORDCNTCYS1Y { get; set; }
     
         /// <summary>信保当前额度（美元）</summary>
         [Newtonsoft.Json.JsonProperty("CRD_FCLTY_AMT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CRD_FCLTY_AMT { get; set; }
+        public string CRDFCLTYAMT { get; set; }
     
         /// <summary>信保当前使用中额度（美元）</summary>
         [Newtonsoft.Json.JsonProperty("USED_CRD_FCLTY_AMT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string USED_CRD_FCLTY_AMT { get; set; }
+        public string USEDCRDFCLTYAMT { get; set; }
     
         /// <summary>信保当前使用中订单数</summary>
         [Newtonsoft.Json.JsonProperty("USED_CRD_FCLTY_ORD_CNT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string USED_CRD_FCLTY_ORD_CNT { get; set; }
+        public string USEDCRDFCLTYORDCNT { get; set; }
     
         /// <summary>信保当前可用额度（美元）</summary>
         [Newtonsoft.Json.JsonProperty("ENABLE_BAL_AMT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ENABLE_BAL_AMT { get; set; }
+        public string ENABLEBALAMT { get; set; }
     
     
     }
@@ -43775,23 +43775,23 @@ namespace AlibabaSDK.Models
     {
         /// <summary>网销宝会员等级</summary>
         [Newtonsoft.Json.JsonProperty("WXB_LEVEL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WXB_LEVEL { get; set; }
+        public string WXBLEVEL { get; set; }
     
         /// <summary>网销宝近两年消费金额（按半年统计）最近半年统计</summary>
         [Newtonsoft.Json.JsonProperty("WXB_AMOUNT_LAST_6_MON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WXB_AMOUNT_LAST_6_MON { get; set; }
+        public string WXBAMOUNTLAST6MON { get; set; }
     
         /// <summary>网销宝近两年消费金额（按半年统计）最近7到12个月统计</summary>
         [Newtonsoft.Json.JsonProperty("WXB_AMOUNT_LAST_7_12_MON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WXB_AMOUNT_LAST_7_12_MON { get; set; }
+        public string WXBAMOUNTLAST712MON { get; set; }
     
         /// <summary>网销宝近两年消费金额（按半年统计）最近13到18个月统计</summary>
         [Newtonsoft.Json.JsonProperty("WXB_AMOUNT_LAST_13_18_MON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WXB_AMOUNT_LAST_13_18_MON { get; set; }
+        public string WXBAMOUNTLAST1318MON { get; set; }
     
         /// <summary>网销宝近两年消费金额（按半年统计）最近19到24个月统计</summary>
         [Newtonsoft.Json.JsonProperty("WXB_AMOUNT_LAST_19_24_MON", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WXB_AMOUNT_LAST_19_24_MON { get; set; }
+        public string WXBAMOUNTLAST1924MON { get; set; }
     
     
     }
@@ -43803,31 +43803,31 @@ namespace AlibabaSDK.Models
     {
         /// <summary>J1店铺情况天猫/淘宝店铺情况</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_SHOP_INFO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONSHOPINFO> ENTERPRISE_OPERATION_SHOP_INFO { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONSHOPINFO> ENTERPRISEOPERATIONSHOPINFO { get; set; }
     
         /// <summary>J2贸易服务能力</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_TRADE_SERVICE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONTRADESERVICE> ENTERPRISE_OPERATION_TRADE_SERVICE { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONTRADESERVICE> ENTERPRISEOPERATIONTRADESERVICE { get; set; }
     
         /// <summary>J3贸易经营状况</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_TRADE_OPERATION", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONTRADEOPERATION> ENTERPRISE_OPERATION_TRADE_OPERATION { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONTRADEOPERATION> ENTERPRISEOPERATIONTRADEOPERATION { get; set; }
     
         /// <summary>J4内贸店铺明细（店铺维度）</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_DOMESTIC_SHOP_DETAIL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONDOMESTICSHOPDETAIL> ENTERPRISE_OPERATION_DOMESTIC_SHOP_DETAIL { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONDOMESTICSHOPDETAIL> ENTERPRISEOPERATIONDOMESTICSHOPDETAIL { get; set; }
     
         /// <summary>J5内贸采购及阿里服务</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_DOMESTIC_PROCUREMENT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONDOMESTICPROCUREMENT> ENTERPRISE_OPERATION_DOMESTIC_PROCUREMENT { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONDOMESTICPROCUREMENT> ENTERPRISEOPERATIONDOMESTICPROCUREMENT { get; set; }
     
         /// <summary>J6阿里金融行为</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_ALI_FINANCE_BEHAVIOR", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONALIFINANCEBEHAVIOR> ENTERPRISE_OPERATION_ALI_FINANCE_BEHAVIOR { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONALIFINANCEBEHAVIOR> ENTERPRISEOPERATIONALIFINANCEBEHAVIOR { get; set; }
     
         /// <summary>J7阿里服务购买情况</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION_BUY_SERVICE_INFO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONBUYSERVICEINFO> ENTERPRISE_OPERATION_BUY_SERVICE_INFO { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleEnterpriseOperationENTERPRISEOPERATIONBUYSERVICEINFO> ENTERPRISEOPERATIONBUYSERVICEINFO { get; set; }
     
     
     }
@@ -43839,15 +43839,15 @@ namespace AlibabaSDK.Models
     {
         /// <summary>认证类型</summary>
         [Newtonsoft.Json.JsonProperty("AUTH_TYPE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AUTH_TYPE { get; set; }
+        public string AUTHTYPE { get; set; }
     
         /// <summary>认证信息URL</summary>
         [Newtonsoft.Json.JsonProperty("AUTH_URL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AUTH_URL { get; set; }
+        public string AUTHURL { get; set; }
     
         /// <summary>认证日期</summary>
         [Newtonsoft.Json.JsonProperty("AUTH_DATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AUTH_DATE { get; set; }
+        public string AUTHDATE { get; set; }
     
     
     }
@@ -43859,7 +43859,7 @@ namespace AlibabaSDK.Models
     {
         /// <summary>K1验厂/验商</summary>
         [Newtonsoft.Json.JsonProperty("ONSITE_FACTORY_AUDIT", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleOnsiteONSITEFACTORYAUDIT> ONSITE_FACTORY_AUDIT { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleOnsiteONSITEFACTORYAUDIT> ONSITEFACTORYAUDIT { get; set; }
     
     
     }
@@ -43871,11 +43871,11 @@ namespace AlibabaSDK.Models
     {
         /// <summary>诚信评分</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_SCORE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CREDIT_SCORE { get; set; }
+        public string CREDITSCORE { get; set; }
     
         /// <summary>征信分超过的企业百分比</summary>
         [Newtonsoft.Json.JsonProperty("CP_CREDIT_SCORE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CP_CREDIT_SCORE { get; set; }
+        public string CPCREDITSCORE { get; set; }
     
     
     }
@@ -43887,23 +43887,23 @@ namespace AlibabaSDK.Models
     {
         /// <summary>基本行为评分</summary>
         [Newtonsoft.Json.JsonProperty("BASIC_SCORE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BASIC_SCORE { get; set; }
+        public string BASICSCORE { get; set; }
     
         /// <summary>贸易行为评分</summary>
         [Newtonsoft.Json.JsonProperty("TRADE_SCORE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string TRADE_SCORE { get; set; }
+        public string TRADESCORE { get; set; }
     
         /// <summary>金融行为评分</summary>
         [Newtonsoft.Json.JsonProperty("FIN_SCORE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FIN_SCORE { get; set; }
+        public string FINSCORE { get; set; }
     
         /// <summary>商业关系评分</summary>
         [Newtonsoft.Json.JsonProperty("BUSI_SCORE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BUSI_SCORE { get; set; }
+        public string BUSISCORE { get; set; }
     
         /// <summary>法定代表人评分</summary>
         [Newtonsoft.Json.JsonProperty("LEGAL_OWNER_SCORE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string LEGAL_OWNER_SCORE { get; set; }
+        public string LEGALOWNERSCORE { get; set; }
     
     
     }
@@ -43915,11 +43915,11 @@ namespace AlibabaSDK.Models
     {
         /// <summary>L1诚信等级</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_RATE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleCreditCREDITRATE> CREDIT_RATE { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleCreditCREDITRATE> CREDITRATE { get; set; }
     
         /// <summary>L2诚信评分子项</summary>
         [Newtonsoft.Json.JsonProperty("CREDIT_RATE_BRACH", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleCreditCREDITRATEBRACH> CREDIT_RATE_BRACH { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaBizcreditReportModuleModuleCreditCREDITRATEBRACH> CREDITRATEBRACH { get; set; }
     
     
     }
@@ -43943,7 +43943,7 @@ namespace AlibabaSDK.Models
     
         /// <summary>J经营信息</summary>
         [Newtonsoft.Json.JsonProperty("ENTERPRISE_OPERATION", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AlibabaBizcreditReportModuleModuleEnterpriseOperation ENTERPRISE_OPERATION { get; set; }
+        public AlibabaBizcreditReportModuleModuleEnterpriseOperation ENTERPRISEOPERATION { get; set; }
     
         /// <summary>K实地信息</summary>
         [Newtonsoft.Json.JsonProperty("ONSITE", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]

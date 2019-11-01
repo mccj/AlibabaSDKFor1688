@@ -10,25 +10,25 @@ namespace ConsoleApp2
         {
             return str?.Replace("\b", "").Replace("\u001b", "");
         }
-        /// <summary>
-        /// CamelCase
-        /// PascalCase
-        /// </summary>
-        /// <param name="the_string"></param>
-        /// <returns></returns>
-        public static string 转换驼峰命名方式(this string the_string)
-        {
-            var charlist = the_string.ToArray();
-            for (int i = 0; i < charlist.Length; i++)
-            {
-                if (i == 0) { charlist[i] = char.ToUpper(charlist[i]); }
-                else if (new[] { '.', '_' }.Contains(charlist[i]) && i <= charlist.Length - 1)
-                {
-                    charlist[i + 1] = char.ToUpper(charlist[i + 1]);
-                }
-            }
-            return new string(charlist).Replace(".", "").Replace("_", "");
-        }
+        ///// <summary>
+        ///// CamelCase
+        ///// PascalCase
+        ///// </summary>
+        ///// <param name="the_string"></param>
+        ///// <returns></returns>
+        //public static string 转换驼峰命名方式(this string the_string)
+        //{
+        //    var charlist = the_string.ToArray();
+        //    for (int i = 0; i < charlist.Length; i++)
+        //    {
+        //        if (i == 0) { charlist[i] = char.ToUpper(charlist[i]); }
+        //        else if (new[] { '.', '_' }.Contains(charlist[i]) && i <= charlist.Length - 1)
+        //        {
+        //            charlist[i + 1] = char.ToUpper(charlist[i + 1]);
+        //        }
+        //    }
+        //    return new string(charlist).Replace(".", "").Replace("_", "");
+        //}
         /// <summary>
         /// 转换大驼峰命名方式
         /// </summary>
@@ -36,21 +36,20 @@ namespace ConsoleApp2
         /// <returns></returns>
         public static string ToPascalCase(this string the_string)
         {
-            return 转换驼峰命名方式(the_string);
             // If there are 0 or 1 characters, just return the string.
             if (the_string == null) return the_string;
             if (the_string.Length < 2) return the_string.ToUpper();
 
             // Split the string into words.
-            string[] words = the_string.Split(new[] { '.', '_', '-', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] words = the_string.Split(new[] { '.', '_'/*, '-', ' '*/ }, StringSplitOptions.RemoveEmptyEntries);
 
             // Combine the words.
             var result = new System.Text.StringBuilder();
             foreach (string word in words)
             {
-                if (word.All(f => char.IsUpper(f)))
-                    result.Append("_" + word);
-                else
+                //if (word.All(f => char.IsUpper(f)))
+                //    result.Append("_" + word);
+                //else
                     result.Append(word.Substring(0, 1).ToUpper() + word.Substring(1));
             }
 
