@@ -75,9 +75,9 @@ namespace ConsoleApp2
             var result = new System.Text.StringBuilder(words[0].ToLower());
             foreach (string word in words)
             {
-                if (word.All(f => char.IsUpper(f)))
-                    result.Append("_" + word);
-                else
+                //if (word.All(f => char.IsUpper(f)))
+                //    result.Append("_" + word);
+                //else
                     result.Append(word.Substring(0, 1).ToUpper() + word.Substring(1));
             }
 
