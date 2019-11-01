@@ -11,7 +11,6 @@ namespace ConsoleApp2
 {
     public class ApiDocument
     {
-        private readonly AlibabaApi alibabaApi = new AlibabaApi();
         public OpenApiDocument 创建文档()
         {
             //var document1 = OpenApiDocument.FromFileAsync(@"Data\swagger.json").Result;
@@ -28,11 +27,11 @@ namespace ConsoleApp2
 
             document.Servers.Add(new OpenApiServer { Url = "https://gw.open.1688.com/" });
 
-            var publicApisAll = await alibabaApi.ListPublicApiAsync();
+            var publicApisAll = await AlibabaDataCache.ListPublicApiByCacheAsync();
             var publicApis = publicApisAll.Data.GroupBy(f => new { f.Namespace, f.Name }).Select(f => new Datum { Name = f.Key.Name, Namespace = f.Key.Namespace, Version = f.Max(ff => ff.Version) }).ToArray();
             //var ss2 = alibabaApi.GetAllApiCategory().Result.Result;
             //var ss3 = ss2.Select(f => GetAopApiListByCategory(f.AopCategoryCode).Result.Result).ToArray();
-            var publicApiDetails = publicApis.Select(f => new { ApiInfo = f, ApiDetail = GetApiDetail(f.Namespace, f.Name, f.Version) })/*.Skip(587).Take(1)*/.ToArray();
+            var publicApiDetails = publicApis.Select(f => new { ApiInfo = f, ApiDetail = AlibabaDataCache.GetApiDetailByCacheAsync(f.Namespace, f.Name, f.Version) })/*.Skip(587).Take(1)*/.ToArray();
 
             for (int i = 0; i < publicApiDetails.Length; i++)
             {
@@ -43,12 +42,12 @@ namespace ConsoleApp2
                 var apiDetail = apiDetailResponse.Result;
                 //var apiArguments = await GetApiArguments(item.Namespace, item.Name, item.Version);
 
-                var description = 过滤特殊字符($" \r\n{apiDetail.DisplayName}\r\n{apiDetail.Description}\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id={apiDetail.OceanApiId} \r\n调试:https://open.1688.com/api/apiTool.htm?ns={apiDetail.Namespace}&n={apiDetail.Name}&v={apiDetail.Version} \r\n ");
+                var description = ($" \r\n{apiDetail.DisplayName}\r\n{apiDetail.Description}\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id={apiDetail.OceanApiId} \r\n调试:https://open.1688.com/api/apiTool.htm?ns={apiDetail.Namespace}&n={apiDetail.Name}&v={apiDetail.Version} \r\n ")?.过滤特殊字符();
                 var openApiOperation = new OpenApiOperation
                 {
                     Summary = description,
                     //Description = item.Description,
-                    OperationId = 转换驼峰命名方式(apiDetail.Name)
+                    OperationId = apiDetail.Name?.转换驼峰命名方式()
                 };
 
                 //if (openApiOperation.OperationId == "AlibabaTradeGetLogisticsInfosBuyerView") { }
@@ -76,8 +75,8 @@ namespace ConsoleApp2
                             Name = item.Name,
                             IsRequired = item.Required == true,
                             Default = item.DefaultValue,
-                            Description = 过滤特殊字符(item.Description),
-                            Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, 过滤特殊字符(item.Description))
+                            Description = item.Description?.过滤特殊字符(),
+                            Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description?.过滤特殊字符())
                         });
                     }
                     if (apiDetail.ApiReturnParamVOList.Length <= 1)
@@ -85,7 +84,7 @@ namespace ConsoleApp2
                         var item = apiDetail.ApiReturnParamVOList.SingleOrDefault();
                         var openApiResponse = new OpenApiResponse
                         {
-                            Description = 过滤特殊字符(item?.Description)
+                            Description = item?.Description?.过滤特殊字符()
                         };
                         if (item != null)
                             openApiResponse.Content.Add("application/json", new OpenApiMediaType { Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description) });
@@ -101,7 +100,7 @@ namespace ConsoleApp2
                             document.Definitions.Add(typeName, jsonSchema);
                         else
                         {
-                            document.Definitions.Add(转换驼峰命名方式(apiDetail.Namespace) + typeName, jsonSchema);
+                            document.Definitions.Add(apiDetail.Namespace?.转换驼峰命名方式() + typeName, jsonSchema);
 
                             //var dfsdfsd = document.Definitions[jjjjj];
                         }
@@ -151,19 +150,7 @@ namespace ConsoleApp2
             return document;
         }
 
-        private string 转换驼峰命名方式(string name)
-        {
-            var charlist = name.ToArray();
-            for (int i = 0; i < charlist.Length; i++)
-            {
-                if (i == 0) { charlist[i] = char.ToUpper(charlist[i]); }
-                else if (charlist[i] == '.' && i <= charlist.Length - 1)
-                {
-                    charlist[i + 1] = char.ToUpper(charlist[i + 1]);
-                }
-            }
-            return new string(charlist).Replace(".", "");
-        }
+
         private System.Collections.Generic.List<string> keyValuePairs____ = new System.Collections.Generic.List<string>();
         private NJsonSchema.JsonSchema getSchema(OpenApiDocument document, string @namespace, string apiname, int version, string type, string description)
         {
@@ -258,7 +245,7 @@ namespace ConsoleApp2
             }
             else
             {
-                var modelInfo = GetModelInfo(@namespace, apiname, version, typeName).GetAwaiter().GetResult();
+                var modelInfo = AlibabaDataCache.GetModelInfoByCacheAsync(@namespace, apiname, version, typeName).GetAwaiter().GetResult();
                 var modelInfoResult = modelInfo.Result;
 
                 var jsonSchema = new NJsonSchema.JsonSchema
@@ -270,12 +257,12 @@ namespace ConsoleApp2
                 createJsonSchema(jsonSchema, document, @namespace, apiname, version, modelInfoResult);
                 jsonSchema.Description = $"{modelInfo.ErrMsg}\r\n namespace:{@namespace},apiname:{apiname},version:{version},typeName:{typeName}";
 
-                var _typeName = 转换驼峰命名方式(typeName);
+                var _typeName = typeName?.转换驼峰命名方式();
                 if (!document.Definitions.ContainsKey(_typeName))
                     document.Definitions.Add(_typeName, jsonSchema);
                 else
                 {
-                    document.Definitions.Add(转换驼峰命名方式(@namespace + "." + apiname) + _typeName, jsonSchema);
+                    document.Definitions.Add((@namespace + "." + apiname)?.转换驼峰命名方式() + _typeName, jsonSchema);
                     //var dfsdfsd = document.Definitions[_typeName];
                 }
                 return new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema };
@@ -306,7 +293,7 @@ namespace ConsoleApp2
                     }
                     else/* if(!jsonSchema.Properties.ContainsKey(item.Name))*/
                     {
-                        jsonSchema.Properties.Add(item.Name, getJsonSchemaProperty(document, @namespace, apiname, version, item.Name, item.Type, item.DefaultValue, false, 过滤特殊字符(item.Description)));
+                        jsonSchema.Properties.Add(item.Name, getJsonSchemaProperty(document, @namespace, apiname, version, item.Name, item.Type, item.DefaultValue, false, item.Description?.过滤特殊字符()));
                     }
                 }
             }
@@ -314,30 +301,13 @@ namespace ConsoleApp2
         private NJsonSchema.JsonSchemaProperty getJsonSchemaProperty(OpenApiDocument document, string @namespace, string apiname, int version,
             string name, string type, object defaultValue, bool required, string description)
         {
-            var r = new NJsonSchema.JsonSchemaProperty
-            {
-                //Name = name,
-                AllowAdditionalProperties = false,
-                Description = description,
-                IsRequired = required,
-                //Default = defaultValue
-            };
             var tt = getSchema(document, @namespace, apiname, version, type, "");
-            if (type.StartsWith("message:"))
-            {
-                r.Reference = tt.Reference;
-            }
-            else
-            {
-                //var tt = toSchema(type);
-                if (tt != null)
-                {
-                    r.Type = tt.Type;
-                    r.Format = tt.Format;
-                    r.MinLength = tt.MinLength;
-                    r.Title = tt.Title;
-                }
-            }
+            var r = tt.ToJsonSchemaProperty();
+            r.AllowAdditionalProperties = false;
+            r.Description = description;
+            r.IsRequired = required;
+            //Default = defaultValue
+
             return r;
         }
 
@@ -392,12 +362,11 @@ namespace ConsoleApp2
                     return typeof(object);
                 case "java.util.List":
                 case "List":
-                    return typeof(System.Collections.Generic.List<string>);
+                case "java.util.Set":
+                    return typeof(string[]);
                 case "Map":
                 case "java.util.Map":
                     return typeof(System.Collections.Generic.Dictionary<string, object>);
-                case "java.util.Set":
-                    return typeof(System.Collections.Generic.HashSet<string>);
                 case "java.lang.Throwable":
                     return typeof(System.Exception);
                 //case "java.io.InputStream":
@@ -417,70 +386,8 @@ namespace ConsoleApp2
             return null;
         }
 
-        private string 过滤特殊字符(string str)
-        {
-            return str?.Replace("\b", "").Replace("\u001b", "");
-        }
-        private async Task<BaseResponse<ArgumentData>> GetApiArguments(string @namespace, string name, int version)
-        {
-            var path = @"Data\缓存\ApiArguments\";
-            if (!System.IO.Directory.Exists(path)) System.IO.Directory.CreateDirectory(path);
-            var f = System.IO.Path.Combine(path, @namespace + "_" + name + "_" + version + ".json");
-            if (System.IO.File.Exists(f))
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<BaseResponse<ArgumentData>>(System.IO.File.ReadAllText(f));
-            var sssddd = await alibabaApi.GetApiArguments(@namespace, name, version);
-            System.IO.File.WriteAllText(f, Newtonsoft.Json.JsonConvert.SerializeObject(sssddd));
-            return sssddd;
-        }
-        private async Task<Base2Response<ListByCategoryResult[]>> GetAopApiListByCategory(string aopApiCategory)
-        {
-            var path = @"Data\缓存\ApiCategory\";
-            if (!System.IO.Directory.Exists(path)) System.IO.Directory.CreateDirectory(path);
-            var f = System.IO.Path.Combine(path, aopApiCategory + ".json");
-            if (System.IO.File.Exists(f))
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<Base2Response<ListByCategoryResult[]>>(System.IO.File.ReadAllText(f));
-            var sssddd = await alibabaApi.GetAopApiListByCategory(aopApiCategory);
-            System.IO.File.WriteAllText(f, Newtonsoft.Json.JsonConvert.SerializeObject(sssddd));
-            return sssddd;
-        }
-        private async Task<Base2Response<DetailResult>> GetApiDetail(string @namespace, string name, int version)
-        {
-            try
-            {
-                var path = @"Data\缓存\ApiDetail\";
-                if (!System.IO.Directory.Exists(path)) System.IO.Directory.CreateDirectory(path);
-                var f = System.IO.Path.Combine(path, @namespace + "_" + name + "_" + version + ".json");
-                if (System.IO.File.Exists(f))
-                    return Newtonsoft.Json.JsonConvert.DeserializeObject<Base2Response<DetailResult>>(System.IO.File.ReadAllText(f));
-                var sssddd = await alibabaApi.GetApiDetail(@namespace, name, version);
-                System.IO.File.WriteAllText(f, Newtonsoft.Json.JsonConvert.SerializeObject(sssddd));
-                return sssddd;
-            }
-            catch (Exception ex)
-            {
-                return null;
-                //throw;
-            }
-        }
-        private async Task<Base2Response<ModelInfoResult[]>> GetModelInfo(string @namespace, string apiname, int version, string typeName)
-        {
-            try
-            {
-                var path = @"Data\缓存\ModelInfo\";
-                if (!System.IO.Directory.Exists(path)) System.IO.Directory.CreateDirectory(path);
-                var f = System.IO.Path.Combine(path, @namespace + "_" + apiname + "_" + version + "_" + typeName + ".json");
-                if (System.IO.File.Exists(f))
-                    return Newtonsoft.Json.JsonConvert.DeserializeObject<Base2Response<ModelInfoResult[]>>(System.IO.File.ReadAllText(f));
-                var sssddd = await alibabaApi.GetModelInfo(@namespace, apiname, version, typeName);
-                System.IO.File.WriteAllText(f, Newtonsoft.Json.JsonConvert.SerializeObject(sssddd));
-                return sssddd;
-            }
-            catch (Exception ex)
-            {
-                return null;
-                //throw;
-            }
-        }
+
+        #region ToCode
         public string ToCSharpCode(OpenApiDocument document)
         {
             //System.Net.WebClient wclient = new System.Net.WebClient();
@@ -501,6 +408,48 @@ namespace ConsoleApp2
             var code = generator.GenerateFile();
             return code;
         }
+        public string ToCSharpCodeClient(OpenApiDocument document)
+        {
+            //System.Net.WebClient wclient = new System.Net.WebClient();
+            //var document = await OpenApiDocument.FromJsonAsync(wclient.DownloadString("Https://SwaggerSpecificationURL.json"));
+            //wclient.Dispose();
+
+            var settings = new CSharpClientGeneratorSettings
+            {
+                ClassName = "AlibabaClient",
+                CSharpGeneratorSettings =
+                {
+                    Namespace = "AlibabaSDK"
+                },
+                GenerateSyncMethods = true,
+                GenerateDtoTypes = false,
+                GenerateClientInterfaces = true,
+                AdditionalNamespaceUsages = new[] { "AlibabaSDK.Models" }
+            };
+
+            var generator = new CSharpClientGenerator(document, settings);
+            var code = generator.GenerateFile();
+            return code;
+        }
+        public string ToCSharpCodeModels(OpenApiDocument document)
+        {
+            //System.Net.WebClient wclient = new System.Net.WebClient();
+            //var document = await OpenApiDocument.FromJsonAsync(wclient.DownloadString("Https://SwaggerSpecificationURL.json"));
+            //wclient.Dispose();
+
+            var settings = new CSharpClientGeneratorSettings
+            {
+                CSharpGeneratorSettings =
+                {
+                    Namespace = "AlibabaSDK.Models"
+                },
+                GenerateClientClasses = false
+            };
+
+            var generator = new CSharpClientGenerator(document, settings);
+            var code = generator.GenerateFile();
+            return code;
+        }
         public string ToTypeScriptCode(OpenApiDocument document)
         {
             //var document = OpenApiDocument.FromUrl(swaggerSpecUrl);
@@ -514,5 +463,6 @@ namespace ConsoleApp2
             var code = generator.GenerateFile();
             return code;
         }
+        #endregion ToCode
     }
 }
