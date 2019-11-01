@@ -7955,17 +7955,17 @@ namespace AlibabaSDK.Models
     }
     
     /// <summary>查找API时出错
-    ///  namespace:com.alibaba.product,apiname:alibaba.aitools.upload.material.package,version:1,typeName:FileExtend</summary>
+    ///  namespace:com.alibaba.product,apiname:alibaba.aitools.upload.material.package,version:1,typeName:alibaba.aitools.device.DeviceInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class FileExtend 
+    public partial class AlibabaAitoolsDeviceDeviceInfo 
     {
     
     }
     
     /// <summary>查找API时出错
-    ///  namespace:com.alibaba.product,apiname:alibaba.aitools.upload.material.package,version:1,typeName:alibaba.aitools.device.DeviceInfo</summary>
+    ///  namespace:com.alibaba.product,apiname:alibaba.aitools.upload.material.package,version:1,typeName:FileExtend</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaAitoolsDeviceDeviceInfo 
+    public partial class FileExtend 
     {
     
     }
@@ -13821,6 +13821,18 @@ namespace AlibabaSDK.Models
     }
     
     /// <summary>
+    ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.ProductImageInfo</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo 
+    {
+        /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
+        [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<string> Images { get; set; }
+    
+    
+    }
+    
+    /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaProductAlibabaProductAddAlibabaProductProductAttribute 
@@ -13844,18 +13856,6 @@ namespace AlibabaSDK.Models
         /// <summary>是否为自定义属性，国际站无需关注</summary>
         [Newtonsoft.Json.JsonProperty("isCustom", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? IsCustom { get; set; }
-    
-    
-    }
-    
-    /// <summary>
-    ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.ProductImageInfo</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo 
-    {
-        /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
-        [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<string> Images { get; set; }
     
     
     }

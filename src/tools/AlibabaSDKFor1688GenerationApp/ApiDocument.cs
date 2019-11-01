@@ -73,7 +73,7 @@ namespace ConsoleApp2
                     //foreach (var item in apiDetail.ApiSystemParamVOList)
                     //{
                     //}
-                    foreach (var item in apiDetail.ApiAppParamVOList)
+                    foreach (var item in apiDetail.ApiAppParamVOList.OrderByDescending(f=>f.Required))
                     {
                         openApiOperation.Parameters.Add(new OpenApiParameter
                         {
@@ -456,6 +456,7 @@ namespace ConsoleApp2
             //settings.CodeGeneratorSettings.TemplateDirectory = "";
             settings.CodeGeneratorSettings.GenerateDefaultValues = true;
             settings.CodeGeneratorSettings.PropertyNameGenerator = new MyCSharpPropertyNameGenerator();
+            settings.GenerateOptionalParameters = true;
 
             var generator = new CSharpClientGenerator(document, settings);
             var code = generator.GenerateFile();

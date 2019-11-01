@@ -14,8 +14,8 @@ namespace AlibabaSDKFor1688Test
         {
             try
             {
-                var s1 = AlibabaClient.AlibabaTradeGetLogisticsTraceInfoBuyerView("", 687707394323979339, "1688");
-                var s2 = AlibabaClient.AlibabaTradeGetLogisticsInfosSellerView(687707394323979339, "", "1688");
+                var s1 = AlibabaClient.AlibabaTradeGetLogisticsTraceInfoBuyerView(687707394323979339, "1688", "");
+                var s2 = AlibabaClient.AlibabaTradeGetLogisticsInfosSellerView(687707394323979339, "1688", "");
 
             }
             catch (Exception ex)
