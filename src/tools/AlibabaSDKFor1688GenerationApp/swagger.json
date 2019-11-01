@@ -1,0 +1,858 @@
+{
+  "x-generator": "NSwag v13.1.3.0 (NJsonSchema v10.0.27.0 (Newtonsoft.Json v11.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "天使项目 API 文档(稳定版)",
+    "description": "天使项目 API 文档,可以使用API Key来授权测试。",
+    "version": "v1"
+  },
+  "host": "test_serialnumber.service.erp.consul",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/Configure/ReadConfigure": {
+      "post": {
+        "tags": [
+          "Configure"
+        ],
+        "summary": "读取配置",
+        "operationId": "Configure_ReadConfigure",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SerialNumber"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Configure/SaveConfigure": {
+      "post": {
+        "tags": [
+          "Configure"
+        ],
+        "summary": "保存配置",
+        "operationId": "Configure_SaveConfigure",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "pk",
+            "in": "formData",
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "name",
+            "in": "formData",
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "value",
+            "in": "formData",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/api/Configure/ReadListConfigure": {
+      "post": {
+        "tags": [
+          "Configure"
+        ],
+        "summary": "读取列表配置",
+        "operationId": "Configure_ReadListConfigure",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ConfigureInfo"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SerialNumber/GetSerialNumber": {
+      "post": {
+        "tags": [
+          "SerialNumber"
+        ],
+        "summary": "获取序列号，并标记使用",
+        "operationId": "SerialNumber_GetSerialNumber",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "name",
+            "in": "query",
+            "description": "配置名称",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "count",
+            "in": "query",
+            "description": "需要序列号的数量，默认是1",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SerialNumberInfo"
+            }
+          }
+        }
+      }
+    },
+    "/api/SerialNumber/GetListSerialNumber": {
+      "post": {
+        "tags": [
+          "SerialNumber"
+        ],
+        "summary": "获取存储的序列号，并标记使用",
+        "operationId": "SerialNumber_GetListSerialNumber",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "name",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "count",
+            "in": "query",
+            "format": "int32",
+            "default": 1,
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ListSerialNumberInfo"
+            }
+          }
+        }
+      }
+    },
+    "/api/SerialNumber/GetListSerialNumberAttachment": {
+      "get": {
+        "tags": [
+          "SerialNumber"
+        ],
+        "summary": "获取已经使用的序列号附件",
+        "operationId": "SerialNumber_GetListSerialNumberAttachment",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "name",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "name": "numbers",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ListSerialNumber"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SerialNumber/GetListSerialNumberDataItem": {
+      "post": {
+        "tags": [
+          "SerialNumber"
+        ],
+        "summary": "查询序列号数据",
+        "operationId": "SerialNumber_GetListSerialNumberDataItem",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "name",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "offset",
+            "in": "query",
+            "format": "int32",
+            "default": 0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "limit",
+            "in": "query",
+            "format": "int32",
+            "default": 10,
+            "x-nullable": false
+          },
+          {
+            "type": "boolean",
+            "name": "isUsing",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "searchNo",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "searchAttachment",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PageDataOfListSerialNumberData"
+            }
+          }
+        }
+      }
+    },
+    "/api/SerialNumber/GetListSerialNumberDataItemByPredicateString": {
+      "post": {
+        "tags": [
+          "SerialNumber"
+        ],
+        "summary": "查询序列号数据",
+        "operationId": "SerialNumber_GetListSerialNumberDataItemByPredicateString",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "name",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "offset",
+            "in": "query",
+            "format": "int32",
+            "default": 0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "limit",
+            "in": "query",
+            "format": "int32",
+            "default": 10,
+            "x-nullable": false
+          },
+          {
+            "name": "predicate",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PageDataOfListSerialNumberData"
+            }
+          }
+        }
+      }
+    },
+    "/api/SerialNumber/GetListSerialNumberDataItemByPredicate": {
+      "post": {
+        "tags": [
+          "SerialNumber"
+        ],
+        "summary": "查询序列号数据",
+        "operationId": "SerialNumber_GetListSerialNumberDataItemByPredicate",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "name",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "integer",
+            "name": "offset",
+            "in": "query",
+            "format": "int32",
+            "default": 0,
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "limit",
+            "in": "query",
+            "format": "int32",
+            "default": 10,
+            "x-nullable": false
+          },
+          {
+            "name": "predicate",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PredicateQueryable"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PageDataOfListSerialNumberData"
+            }
+          }
+        }
+      }
+    },
+    "/api/SerialNumber/ImportDataItem": {
+      "post": {
+        "tags": [
+          "SerialNumber"
+        ],
+        "summary": "导入序列号数据",
+        "operationId": "SerialNumber_ImportDataItem",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "name",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "name": "items",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ListSerialNumber"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/BaseResponse"
+            }
+          }
+        }
+      }
+    },
+    "/api/SerialNumber/ResetNoUsing": {
+      "post": {
+        "tags": [
+          "SerialNumber"
+        ],
+        "summary": "重置序列号为未使用状态",
+        "operationId": "SerialNumber_ResetNoUsing",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "name",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "name": "items",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/BaseResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "SerialNumber": {
+      "type": "object",
+      "description": "SerialNumberType\n序列号表",
+      "required": [
+        "Type",
+        "Enable",
+        "No",
+        "Length",
+        "DefaultNullValue",
+        "间隔清零"
+      ],
+      "properties": {
+        "Type": {
+          "description": "类型\n ",
+          "allOf": [
+            {
+              "$ref": "#/definitions/SerialNumberType"
+            }
+          ]
+        },
+        "Id": {
+          "type": "string",
+          "description": "标识"
+        },
+        "Enable": {
+          "type": "boolean",
+          "description": "是否启用"
+        },
+        "Token": {
+          "type": "string",
+          "description": "授权标记"
+        },
+        "Prefix": {
+          "type": "string",
+          "description": "前缀"
+        },
+        "Suffix": {
+          "type": "string",
+          "description": "后缀"
+        },
+        "No": {
+          "type": "integer",
+          "description": "计数",
+          "format": "int64"
+        },
+        "Length": {
+          "type": "integer",
+          "description": "长度",
+          "format": "int32"
+        },
+        "DefaultNullValue": {
+          "type": "string",
+          "description": "默认填充字符串",
+          "minLength": 1
+        },
+        "Description": {
+          "type": "string",
+          "description": "描述"
+        },
+        "CustomNumberTypeString": {
+          "type": "string",
+          "description": "自定义内容组合，只正对 Type 为 Custom 起作用"
+        },
+        "间隔清零": {
+          "type": "boolean",
+          "description": "是否启用间隔清零功能"
+        },
+        "标记时间": {
+          "type": "string",
+          "description": "上次标记时间",
+          "format": "date-time"
+        },
+        "间隔时间": {
+          "description": "间隔周期",
+          "allOf": [
+            {
+              "$ref": "#/definitions/间隔时间"
+            }
+          ]
+        },
+        "Timestamp": {
+          "type": "string",
+          "description": "系统并发控制标记",
+          "format": "byte"
+        }
+      }
+    },
+    "SerialNumberType": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "Number",
+        "String",
+        "Hex2",
+        "Hex8",
+        "Hex16",
+        "Hex36",
+        "Custom"
+      ],
+      "enum": [
+        "Number",
+        "String",
+        "Hex2",
+        "Hex8",
+        "Hex16",
+        "Hex36",
+        "Custom"
+      ]
+    },
+    "间隔时间": {
+      "type": "string",
+      "description": "",
+      "x-enumNames": [
+        "分钟",
+        "小时",
+        "天",
+        "月",
+        "年"
+      ],
+      "enum": [
+        "分钟",
+        "小时",
+        "天",
+        "月",
+        "年"
+      ]
+    },
+    "ConfigureInfo": {
+      "type": "object",
+      "required": [
+        "Enable",
+        "Count"
+      ],
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "标识"
+        },
+        "Enable": {
+          "type": "boolean",
+          "description": "是否启用"
+        },
+        "Token": {
+          "type": "string",
+          "description": "授权标记"
+        },
+        "Description": {
+          "type": "string",
+          "description": "描述"
+        },
+        "Count": {
+          "type": "integer",
+          "description": "系统并发控制标记",
+          "format": "int32"
+        }
+      }
+    },
+    "SerialNumberInfo": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SerialNumberBaseResponseOfString"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "SerialNumberBaseResponseOfString": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseResponse"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "Numbers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "BaseResponse": {
+      "type": "object",
+      "required": [
+        "IsSuccess"
+      ],
+      "properties": {
+        "IsSuccess": {
+          "type": "boolean"
+        },
+        "Exception": {
+          "$ref": "#/definitions/Exception"
+        }
+      }
+    },
+    "Exception": {
+      "type": "object",
+      "properties": {
+        "Message": {
+          "type": "string"
+        },
+        "InnerException": {
+          "$ref": "#/definitions/Exception"
+        },
+        "StackTrace": {
+          "type": "string"
+        },
+        "Source": {
+          "type": "string"
+        }
+      }
+    },
+    "ListSerialNumberInfo": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SerialNumberBaseResponseOfListSerialNumber"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "SerialNumberBaseResponseOfListSerialNumber": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseResponse"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "Numbers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ListSerialNumber"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ListSerialNumber": {
+      "type": "object",
+      "properties": {
+        "No": {
+          "type": "string"
+        },
+        "附件数据": {
+          "type": "string"
+        }
+      }
+    },
+    "PageDataOfListSerialNumberData": {
+      "type": "object",
+      "required": [
+        "Total"
+      ],
+      "properties": {
+        "Data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ListSerialNumberData"
+          }
+        },
+        "Total": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "ListSerialNumberData": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ListSerialNumber"
+        },
+        {
+          "type": "object",
+          "required": [
+            "IsUsing"
+          ],
+          "properties": {
+            "IsUsing": {
+              "type": "boolean",
+              "description": "是否使用"
+            },
+            "创建时间": {
+              "type": "string",
+              "description": "添加时间",
+              "format": "date-time"
+            },
+            "使用时间": {
+              "type": "string",
+              "description": "使用时间",
+              "format": "date-time"
+            }
+          }
+        }
+      ]
+    },
+    "PredicateQueryable": {
+      "type": "object",
+      "properties": {
+        "Predicate": {
+          "type": "string"
+        },
+        "Parameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Parameter"
+          }
+        }
+      }
+    },
+    "Parameter": {
+      "type": "object",
+      "required": [
+        "Index"
+      ],
+      "properties": {
+        "Index": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "Value": {}
+      }
+    }
+  }
+}

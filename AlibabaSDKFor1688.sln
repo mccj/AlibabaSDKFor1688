@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlibabaSDKFor1688", "src\sdk\AlibabaSDKFor1688\AlibabaSDKFor1688.csproj", "{7F95DDFA-7419-42A9-9C28-7F07E7B82377}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlibabaSDKFor1688Test", "src\test\AlibabaSDKFor1688Test\AlibabaSDKFor1688Test.csproj", "{1C759147-D6F1-4688-821F-D48FC8315494}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlibabaSDKFor1688GenerationApp", "src\tools\AlibabaSDKFor1688GenerationApp\AlibabaSDKFor1688GenerationApp.csproj", "{F2F23A23-4E60-4403-B156-E1B593DCE056}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F95DDFA-7419-42A9-9C28-7F07E7B82377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F95DDFA-7419-42A9-9C28-7F07E7B82377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F95DDFA-7419-42A9-9C28-7F07E7B82377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F95DDFA-7419-42A9-9C28-7F07E7B82377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C759147-D6F1-4688-821F-D48FC8315494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C759147-D6F1-4688-821F-D48FC8315494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C759147-D6F1-4688-821F-D48FC8315494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C759147-D6F1-4688-821F-D48FC8315494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F23A23-4E60-4403-B156-E1B593DCE056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F23A23-4E60-4403-B156-E1B593DCE056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F23A23-4E60-4403-B156-E1B593DCE056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F23A23-4E60-4403-B156-E1B593DCE056}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F42D67D-8989-41C6-BC3F-B7F2A3D54669}
+	EndGlobalSection
+EndGlobal
