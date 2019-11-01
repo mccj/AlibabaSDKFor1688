@@ -33,6 +33,9 @@ namespace ConsoleApp2
             //var ss3 = ss2.Select(f => GetAopApiListByCategory(f.AopCategoryCode).Result.Result).ToArray();
             var publicApiDetails = publicApis.Select(f => new { ApiInfo = f, ApiDetail = AlibabaDataCache.GetApiDetailByCacheAsync(f.Namespace, f.Name, f.Version) })/*.Skip(587).Take(1)*/.ToArray();
 
+            var errorSchema = errorJsonSchemaResponse();
+            document.Definitions.Add("ErrorResponse", errorSchema);
+
             for (int i = 0; i < publicApiDetails.Length; i++)
             {
                 var publicApi = publicApiDetails[i];
@@ -63,6 +66,8 @@ namespace ConsoleApp2
                     openApiOperation.Tags.Add("oceanApiId=" + apiDetail.OceanApiId);
                     openApiOperation.Tags.Add("billFlag=" + apiDetail.BillFlag);
                     openApiOperation.Tags.Add("neddAuth=" + apiDetail.NeddAuth);
+
+                    openApiOperation.Responses.Add("400", new OpenApiResponse { Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = errorSchema } });
 
                     //foreach (var item in apiDetail.ApiSystemParamVOList)
                     //{
@@ -107,8 +112,9 @@ namespace ConsoleApp2
                         var openApiResponse = new OpenApiResponse
                         {
                             //Description = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                            Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema }
                         };
-                        openApiResponse.Content.Add("application/json", new OpenApiMediaType { Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema } });
+                        //openApiResponse.Content.Add("application/json", new OpenApiMediaType { Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema } });
                         openApiOperation.Responses.Add("200", openApiResponse);
                     }
                     if (apiDetail.ApiErrorCodeVOList.Any())
@@ -142,7 +148,7 @@ namespace ConsoleApp2
 
                     document.Paths.Add($"/openapi/param2/{apiDetail.Version}/{apiDetail.Namespace}/{apiDetail.Name}/{{AppKey}}", new OpenApiPathItem
                     {
-                        { "post",openApiOperation}
+                        { OpenApiOperationMethod.Post,openApiOperation}
                     });
                 }
             }
@@ -150,13 +156,23 @@ namespace ConsoleApp2
             return document;
         }
 
+        private NJsonSchema.JsonSchema errorJsonSchemaResponse()
+        {
+            var typeString = NJsonSchema.JsonSchema.FromType(typeof(string));
 
+            var jsonSchema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Description = "返回错误信息" };
+            jsonSchema.Properties.Add("error_message", typeString.ToJsonSchemaProperty(f => { f.Description = "错误信息"; }));
+            jsonSchema.Properties.Add("exception", typeString.ToJsonSchemaProperty(f => f.Description = "异常描述"));
+            jsonSchema.Properties.Add("error_code", typeString.ToJsonSchemaProperty());
+            jsonSchema.Properties.Add("request_id", typeString.ToJsonSchemaProperty(f => f.Description = "请求标识"));
+            return jsonSchema;
+        }
         private System.Collections.Generic.List<string> keyValuePairs____ = new System.Collections.Generic.List<string>();
         private NJsonSchema.JsonSchema getSchema(OpenApiDocument document, string @namespace, string apiname, int version, string type, string description)
         {
             var jsonSchema = keyValuePairs.GetOrAdd(@namespace + apiname + type, t =>
              {
-                 return getMessageSchema(document, @namespace, apiname, version, type) ?? toSchema(type);
+                 return getMessageTypeToSchema(document, @namespace, apiname, version, type) ?? getSystemTypeToSchema(type);
              });
 
             if (jsonSchema == null)
@@ -167,107 +183,7 @@ namespace ConsoleApp2
             }
             return jsonSchema;
         }
-        private NJsonSchema.JsonSchema toSchema(string type)
-        {
-            if (string.IsNullOrWhiteSpace(type))
-            {
-                //TODO:eeeeeeee
-                return NJsonSchema.JsonSchema.FromType<object>();
-            }
-            var a = 0;
-            for (int i = 0; i < 100; i++)
-            {
-                if (type.EndsWith("[]"))
-                {
-                    a++;
-                    type = type.Remove(type.Length - 2);
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            //if (type.StartsWith("message:"))
-            //{
-            //    return keyValuePairs.GetOrAdd(type, t =>
-            //    {
-            //        return getMessageSchema(t);
-            //    });
-            //}
-            //else
-            {
-                var typp = getType(type);
-                if (typp != null)
-                {
-                    for (int i = 0; i < a; i++)
-                    {
-                        typp = typp.MakeArrayType();
-                    }
-
-                    return NJsonSchema.JsonSchema.FromType(typp);
-                }
-            }
-
-            //TODO:eeeeeeee
-            return null;
-        }
         private System.Collections.Generic.Dictionary<string, NJsonSchema.JsonSchema> keyValuePairstModelInfo = new System.Collections.Generic.Dictionary<string, NJsonSchema.JsonSchema>();
-        private NJsonSchema.JsonSchema getMessageSchema(OpenApiDocument document, string @namespace, string apiname, int version, string type)
-        {
-            if (type?.StartsWith("message:") != true) return null;
-            var typeName = type.Replace("message:", "");
-
-            var a = 0;
-            for (int i = 0; i < 100; i++)
-            {
-                if (typeName.EndsWith("[]"))
-                {
-                    a++;
-                    typeName = typeName.Remove(typeName.Length - 2);
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            if (a > 0)
-            {
-                //new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Type = NJsonSchema.JsonObjectType.Array }.Item.Reference;
-                //TODO:eeeeeeee
-            }
-
-            var key = @namespace + apiname + typeName;
-            if (keyValuePairstModelInfo.ContainsKey(key))
-            {
-                return new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = keyValuePairstModelInfo[key] };
-            }
-            else
-            {
-                var modelInfo = AlibabaDataCache.GetModelInfoByCacheAsync(@namespace, apiname, version, typeName).GetAwaiter().GetResult();
-                var modelInfoResult = modelInfo.Result;
-
-                var jsonSchema = new NJsonSchema.JsonSchema
-                {
-                    AllowAdditionalProperties = false,
-                    Type = NJsonSchema.JsonObjectType.Object
-                };
-                keyValuePairstModelInfo.Add(key, jsonSchema);
-                createJsonSchema(jsonSchema, document, @namespace, apiname, version, modelInfoResult);
-                jsonSchema.Description = $"{modelInfo.ErrMsg}\r\n namespace:{@namespace},apiname:{apiname},version:{version},typeName:{typeName}";
-
-                var _typeName = typeName?.转换驼峰命名方式();
-                if (!document.Definitions.ContainsKey(_typeName))
-                    document.Definitions.Add(_typeName, jsonSchema);
-                else
-                {
-                    document.Definitions.Add((@namespace + "." + apiname)?.转换驼峰命名方式() + _typeName, jsonSchema);
-                    //var dfsdfsd = document.Definitions[_typeName];
-                }
-                return new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema };
-            }
-        }
         private NJsonSchema.JsonSchema createJsonSchema(OpenApiDocument document, string @namespace, string apiname, int version, ModelInfoResult[] modelInfoResult)
         {
             var jsonSchema = new NJsonSchema.JsonSchema
@@ -313,79 +229,180 @@ namespace ConsoleApp2
 
         //private System.Collections.Generic.List<string> vs = new System.Collections.Generic.List<string>();
         private System.Collections.Concurrent.ConcurrentDictionary<string, NJsonSchema.JsonSchema> keyValuePairs = new System.Collections.Concurrent.ConcurrentDictionary<string, NJsonSchema.JsonSchema>();
-        private Type getType(string _type)
-        {
-            if (string.IsNullOrWhiteSpace(_type)) return null;
 
-            switch (_type)
+        #region 类型转换
+        private NJsonSchema.JsonSchema getMessageTypeToSchema(OpenApiDocument document, string @namespace, string apiname, int version, string type)
+        {
+            if (type?.StartsWith("message:") != true) return null;
+            var typeName = type.Replace("message:", "");
+
+            var _type = 获取数组维度(typeName);
+
+            var key = @namespace + apiname + _type.type;
+            if (keyValuePairstModelInfo.ContainsKey(key))
             {
-                case "String":
-                case "java.lang.String":
-                    return typeof(string);
-                case "[Ljava.lang.String;":
-                    return typeof(string[]);
-                case "Long":
-                case "long":
-                case "java.lang.Long":
-                    return typeof(long);
+                return makeArraySchemaType(new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = keyValuePairstModelInfo[key] }, _type.arrLength);
+            }
+            else
+            {
+                var modelInfo = AlibabaDataCache.GetModelInfoByCacheAsync(@namespace, apiname, version, _type.type).GetAwaiter().GetResult();
+                var modelInfoResult = modelInfo.Result;
+
+                var jsonSchema = new NJsonSchema.JsonSchema
+                {
+                    AllowAdditionalProperties = false,
+                    Type = NJsonSchema.JsonObjectType.Object
+                };
+                keyValuePairstModelInfo.Add(key, jsonSchema);
+                createJsonSchema(jsonSchema, document, @namespace, apiname, version, modelInfoResult);
+                jsonSchema.Description = $"{modelInfo.ErrMsg}\r\n namespace:{@namespace},apiname:{apiname},version:{version},typeName:{_type.type}";
+
+                var _typeName = _type.type?.转换驼峰命名方式();
+                if (!document.Definitions.ContainsKey(_typeName))
+                    document.Definitions.Add(_typeName, jsonSchema);
+                else
+                {
+                    document.Definitions.Add((@namespace + "." + apiname)?.转换驼峰命名方式() + _typeName, jsonSchema);
+                    //var dfsdfsd = document.Definitions[_typeName];
+                }
+                return makeArraySchemaType(new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema }, _type.arrLength);
+            }
+        }
+
+        private NJsonSchema.JsonSchema getSystemTypeToSchema(string type)
+        {
+            if (string.IsNullOrWhiteSpace(type)) return null;
+
+            var _type = 获取数组维度(type);
+            switch (_type.type?.ToLower())
+            {
                 case "int":
-                case "Integer":
-                case "java.lang.Integer":
-                    return typeof(int);
-                case "java.lang.Float":
-                    return typeof(float);
-                case "Boolean":
-                case "boolean":
-                case "java.lang.Boolean":
-                    return typeof(bool);
-                case "java.lang.Double":
-                case "Double":
+                case "integer":
+                case "java.lang.integer":
+                    return makeArraySystemType(typeof(int), _type.arrLength);
+                case "java.lang.float":
+                    return makeArraySystemType(typeof(float), _type.arrLength);
+                case "long":
+                case "java.lang.long":
+                    return makeArraySystemType(typeof(long), _type.arrLength);
+                case "java.lang.double":
                 case "double":
-                    return typeof(double);
-                case "BigDecimal":
-                case "java.math.BigDecimal":
-                    return typeof(decimal);
-                case "Date":
-                case "java.util.Date":
-                    return typeof(DateTime);
+                    return makeArraySystemType(typeof(double), _type.arrLength);
+                case "bigdecimal":
+                case "java.math.bigdecimal":
+                    return makeArraySystemType(typeof(decimal), _type.arrLength);
+                case "boolean":
+                case "java.lang.boolean":
+                    return makeArraySystemType(typeof(bool), _type.arrLength);
+                case "date":
+                case "java.util.date":
+                    return makeArraySystemType(typeof(DateTime), _type.arrLength);
                 case "byte":
-                case "java.lang.Byte":
-                    return typeof(byte);
-                case "[B":
-                case "InputStream":
-                case "java.io.InputStream":
-                    return typeof(byte[]);
+                case "java.lang.byte":
+                case "b":
+                    return makeArraySystemType(typeof(byte), _type.arrLength);
+                case "string":
+                case "java.lang.string":
+                case "ljava.lang.string":
+                    return makeArraySystemType(typeof(string), _type.arrLength);
+                case "inputstream":
+                case "java.io.inputstream":
+                    return makeArraySystemType(typeof(byte[]), _type.arrLength);
+                case "t":
                 case "object":
-                case "Object":
-                case "java.lang.Object":
-                case "com.alibaba.fastjson.JSONObject":
-                    return typeof(object);
-                case "java.util.List":
-                case "List":
-                case "java.util.Set":
-                    return typeof(string[]);
-                case "Map":
-                case "java.util.Map":
-                    return typeof(System.Collections.Generic.Dictionary<string, object>);
-                case "java.lang.Throwable":
-                    return typeof(System.Exception);
-                //case "java.io.InputStream":
-                //case "InputStream":
-                //case "T":
-                //case "java.util.Set":
+                case "java.lang.object":
+                case "com.alibaba.fastjson.jsonobject":
+                    return makeArraySystemType(typeof(object), _type.arrLength);
+                case "java.util.list":
+                case "list":
+                case "java.util.set":
+                    return makeArraySystemType(typeof(object[]), _type.arrLength);
+                case "map":
+                case "java.util.map":
+                    return makeArraySchemaType(DictionarySchema(typeof(object)), _type.arrLength);
+                case "java.lang.throwable":
+                case "java.lang.void":
+                    return makeArraySystemType(typeof(object), _type.arrLength);
 
 
                 default:
-                    break;
+                    return makeArraySystemType(typeof(object), 0);
             }
-            //var v = $"case \"{ _type}\":";
-            //if (!vs.Contains(v))
-            //    vs.Add(v);
-
-            //TODO:eeeeeeee
-            return null;
         }
+        private NJsonSchema.JsonSchema DictionarySchema(Type type)
+        {
+            var jsonSchema = new NJsonSchema.JsonSchema { Type = NJsonSchema.JsonObjectType.Object };
+            jsonSchema.AdditionalPropertiesSchema = NJsonSchema.JsonSchema.FromType(type);
+            return jsonSchema;
+        }
+        private NJsonSchema.JsonSchema DictionarySchema(NJsonSchema.JsonSchema jsonSchemaItem)
+        {
+            var jsonSchema = new NJsonSchema.JsonSchema { Type = NJsonSchema.JsonObjectType.Object };
+            jsonSchema.AdditionalPropertiesSchema = jsonSchemaItem;
+            return jsonSchema;
+        }
+        private (string type, int arrLength) 获取数组维度(string type)
+        {
+            //type = type?.ToLower();
+            var arrLength = 0;
+            for (int i = 0; i < 100; i++)
+            {
+                if (type.EndsWith("[]"))
+                {
+                    arrLength++;
+                    type = type.Remove(type.Length - 2);
+                }
+                else if (type.StartsWith("["))
+                {
+                    arrLength++;
+                    type = type.Remove(0, 1).Trim(';');
+                }
+                else
+                {
+                    break;
+                }
+            }
+            //var byteArr = new[] { "byte", "java.lang.Byte", "b" };
+            //if (byteArr.Contains(type) && arrLength > 0)
+            //{
+            //    type = "byte[]";
+            //    arrLength -= 1;
+            //}
+            return (type: type, arrLength: arrLength);
+        }
+        private NJsonSchema.JsonSchema makeArraySystemType(Type type, int arrLength)
+        {
+            if (type != null)
+            {
+                for (int i = 0; i < arrLength; i++)
+                {
+                    type = type.MakeArrayType();
+                }
 
+                return NJsonSchema.JsonSchema.FromType(type);
+            }
+            else
+            {
+                return null;
+            }
+        }
+        private NJsonSchema.JsonSchema makeArraySchemaType(NJsonSchema.JsonSchema jsonSchema, int arrLength)
+        {
+            if (jsonSchema != null)
+            {
+                for (int i = 0; i < arrLength; i++)
+                {
+                    jsonSchema = new NJsonSchema.JsonSchema { Type = NJsonSchema.JsonObjectType.Array, Item = jsonSchema };
+                }
+
+                return jsonSchema;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        #endregion 类型转换
 
         #region ToCode
         public string ToCSharpCode(OpenApiDocument document)

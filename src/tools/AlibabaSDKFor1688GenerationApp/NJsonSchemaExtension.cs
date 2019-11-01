@@ -7,9 +7,9 @@ namespace ConsoleApp2
 {
     public static class NJsonSchemaExtension
     {
-        public static JsonSchemaProperty ToJsonSchemaProperty(this JsonSchema jsonSchema)
+        public static JsonSchemaProperty ToJsonSchemaProperty(this JsonSchema jsonSchema,System.Action<JsonSchemaProperty> action=null)
         {
-            return new JsonSchemaProperty
+            var jsonSchemaProperty = new JsonSchemaProperty
             {
                 Type = jsonSchema.Type,
                 Format = jsonSchema.Format,
@@ -18,6 +18,8 @@ namespace ConsoleApp2
                 Reference = jsonSchema.Reference,
                 Item = jsonSchema.Item
             };
+            action?.Invoke(jsonSchemaProperty);
+            return jsonSchemaProperty;
         }
     }
 }
