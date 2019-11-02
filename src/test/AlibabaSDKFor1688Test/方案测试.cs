@@ -14,12 +14,15 @@ namespace AlibabaSDKFor1688Test
         {
             try
             {
-                var s0 = AlibabaClient.SystemTimeGet( );
+                var s0 = AlibabaClient.SystemTimeGet();
                 var s1 = AlibabaClient.AlibabaTradeGetLogisticsTraceInfoBuyerView(687707394323979339, "1688");
                 var s2 = AlibabaClient.AlibabaTradeGetLogisticsInfosBuyerView(687707394323979339, "1688");
 
                 var s3 = AlibabaClient.AlibabaTradeGetBuyerView("1688", 687707394323979339);
                 var s4 = AlibabaClient.AlibabaTradeGetBuyerOrderList();
+
+                var s6 = AlibabaClient.AlibabaAccountAgentBasic("gamesalorcn");
+                //var s5 = AlibabaClient.AlibabaAccountBasic();
 
             }
             catch (Exception ex)
