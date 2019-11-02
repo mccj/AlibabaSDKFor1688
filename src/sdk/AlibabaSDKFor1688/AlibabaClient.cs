@@ -57,6 +57,7 @@ namespace AlibabaSDK
         }
         partial void UpdateJsonSerializerSettings(Newtonsoft.Json.JsonSerializerSettings settings)
         {
+            //"yyyyMMddHHmmssfff"
             settings.DateFormatString = "yyyyMMddHHmmssfffzzz";
         }
 
