@@ -73,7 +73,7 @@ namespace ConsoleApp2
                     //foreach (var item in apiDetail.ApiSystemParamVOList)
                     //{
                     //}
-                    foreach (var item in apiDetail.ApiAppParamVOList.OrderByDescending(f=>f.Required))
+                    foreach (var item in apiDetail.ApiAppParamVOList.OrderByDescending(f => f.Required))
                     {
                         openApiOperation.Parameters.Add(new OpenApiParameter
                         {
@@ -85,12 +85,39 @@ namespace ConsoleApp2
                             Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description?.过滤特殊字符())
                         });
                     }
+                    var apiErrorCodeDescription = "";
+                    if (apiDetail.ApiErrorCodeVOList.Any())
+                    {
+                        apiErrorCodeDescription = "返回 ErrorCode 的错误信息\r\n" +
+                            string.Join("\r\n", apiDetail.ApiErrorCodeVOList.Select(f => f.Code + "\t- " + f.Desc + (string.IsNullOrWhiteSpace(f.HowToFix) ? "" : ("(" + f.HowToFix + ")"))));
+                        //var dfsfsd = NJsonSchema.JsonSchema.FromType<rrr>();
+                        //var jsonSchema = new NJsonSchema.JsonSchema
+                        //{
+                        //    AllowAdditionalProperties = false,
+                        //    Type = NJsonSchema.JsonObjectType.String,
+                        //    Description = description
+                        //};
+                        //foreach (var item2 in item.ApiErrorCodeVOList)
+                        //{
+                        //    jsonSchema.Enumeration.Add(int.Parse(item2.Code));
+                        //    jsonSchema.EnumerationNames.Add(item2.Desc + "_" + item2.Code);
+                        //}
+                        //var jjjjj = openApiOperation.OperationId + "ErrorCode";
+                        //if (!document.Components.Schemas.ContainsKey(jjjjj))
+                        //    document.Components.Schemas.Add(jjjjj, jsonSchema);
+                        //else
+                        //{
+                        //    document.Components.Schemas.Add(转换驼峰命名方式(item.Namespace) + jjjjj, jsonSchema);
+                        //    //var dfsdfsd = document.Definitions[jjjjj];
+                        //}
+                    }
+
                     if (apiDetail.ApiReturnParamVOList.Length <= 1)
                     {
                         var item = apiDetail.ApiReturnParamVOList.SingleOrDefault();
                         var openApiResponse = new OpenApiResponse
                         {
-                            Description = item?.Description?.过滤特殊字符()
+                            Description = item?.Description?.过滤特殊字符() + apiErrorCodeDescription,
                         };
                         if (item != null)
                             //openApiResponse.Content.Add("application/json", new OpenApiMediaType { Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description) });
@@ -113,36 +140,13 @@ namespace ConsoleApp2
                         }
                         var openApiResponse = new OpenApiResponse
                         {
-                            //Description = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                            Description = apiErrorCodeDescription,
                             Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema }
                         };
                         //openApiResponse.Content.Add("application/json", new OpenApiMediaType { Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema } });
                         openApiOperation.Responses.Add("200", openApiResponse);
                     }
 
-                    if (apiDetail.ApiErrorCodeVOList.Any())
-                    {
-                        //var dfsfsd = NJsonSchema.JsonSchema.FromType<rrr>();
-                        //var jsonSchema = new NJsonSchema.JsonSchema
-                        //{
-                        //    AllowAdditionalProperties = false,
-                        //    Type = NJsonSchema.JsonObjectType.String,
-                        //    Description = description
-                        //};
-                        //foreach (var item2 in item.ApiErrorCodeVOList)
-                        //{
-                        //    jsonSchema.Enumeration.Add(int.Parse(item2.Code));
-                        //    jsonSchema.EnumerationNames.Add(item2.Desc + "_" + item2.Code);
-                        //}
-                        //var jjjjj = openApiOperation.OperationId + "ErrorCode";
-                        //if (!document.Components.Schemas.ContainsKey(jjjjj))
-                        //    document.Components.Schemas.Add(jjjjj, jsonSchema);
-                        //else
-                        //{
-                        //    document.Components.Schemas.Add(转换驼峰命名方式(item.Namespace) + jjjjj, jsonSchema);
-                        //    //var dfsdfsd = document.Definitions[jjjjj];
-                        //}
-                    }
 
                     foreach (var item2 in apiDetail.ApiDocSampleVOList)
                     {

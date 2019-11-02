@@ -55,5 +55,10 @@ namespace AlibabaSDK
                 content_.Add(new System.Net.Http.StringContent(signStr), "_aop_signature");
             }//                //System.Web.HttpUtility.ParseQueryString("");
         }
+        partial void UpdateJsonSerializerSettings(Newtonsoft.Json.JsonSerializerSettings settings)
+        {
+            settings.DateFormatString = "yyyyMMddHHmmssfffzzz";
+        }
+
     }
 }
