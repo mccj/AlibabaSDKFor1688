@@ -7,6 +7,17 @@ namespace ConsoleApp2
     public static class AlibabaDataCache
     {
         private readonly static AlibabaApi alibabaApi = new AlibabaApi();
+        public static async Task<Base2Response<CategoryResult[]>> GetAllApiCategoryAsync()
+        {
+            var path = @"Data\缓存\";
+            if (!System.IO.Directory.Exists(path)) System.IO.Directory.CreateDirectory(path);
+            var f = System.IO.Path.Combine(path, "AllApiCategorys.json");
+            if (System.IO.File.Exists(f))
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<Base2Response<CategoryResult[]>>(System.IO.File.ReadAllText(f));
+            var sssddd = await alibabaApi.GetAllApiCategory();
+            System.IO.File.WriteAllText(f, Newtonsoft.Json.JsonConvert.SerializeObject(sssddd));
+            return sssddd;
+        }
 
         public static async Task<BaseResponse<Datum[]>> ListPublicApiByCacheAsync()
         {
@@ -32,7 +43,8 @@ namespace ConsoleApp2
             return sssddd;
         }
 
-        public  static async Task<Base2Response<ListByCategoryResult[]>> GetAopApiListByCategoryByCacheAsync(string aopApiCategory)
+
+        public static async Task<Base2Response<ListByCategoryResult[]>> GetAopApiListByCategoryByCacheAsync(string aopApiCategory)
         {
             var path = @"Data\缓存\ApiCategory\";
             if (!System.IO.Directory.Exists(path)) System.IO.Directory.CreateDirectory(path);
