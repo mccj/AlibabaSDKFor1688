@@ -40,7 +40,7 @@ namespace ConsoleApp2
             for (int i = 0; i < publicApiDetails.Length; i++)
             {
                 var publicApi = publicApiDetails[i];
-                Console.WriteLine((i + 1) + "." + publicApi.ApiInfo.Name);
+                Console.WriteLine((i + 1) + "." + publicApi.ApiInfo.Namespace + ":" + publicApi.ApiInfo.Name + "-" + publicApi.ApiInfo.Version);
 
                 var apiDetailResponse = await publicApi.ApiDetail;
                 var apiDetail = apiDetailResponse.Result;
@@ -51,7 +51,16 @@ namespace ConsoleApp2
                 {
                     Summary = description,
                     //Description = item.Description,
-                    OperationId = apiDetail.Name?.ToPascalCase()
+                    OperationId = apiDetail.Name?.ToPascalCase(),
+                    Tags = {
+                        "namespace=" + apiDetail.Namespace,
+                        "name=" + apiDetail.Name,
+                        "version=" + apiDetail.Version,
+                        "oceanApiId=" + apiDetail.OceanApiId,
+                        "billFlag=" + apiDetail.BillFlag,
+                        "neddAuth=" + apiDetail.NeddAuth
+                    },
+                    Responses = { { "400", new OpenApiResponse { Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = errorSchema } } } }
                 };
 
                 //if (openApiOperation.OperationId == "AlibabaTradeGetLogisticsInfosBuyerView") { }
@@ -61,14 +70,6 @@ namespace ConsoleApp2
                     //sss.Add("zzzzzzzzzzzzzz", new[] { "fdfff" });
                     //openApiOperation.Security.Add(sss);
 
-                    openApiOperation.Tags.Add("namespace=" + apiDetail.Namespace);
-                    openApiOperation.Tags.Add("name=" + apiDetail.Name);
-                    openApiOperation.Tags.Add("version=" + apiDetail.Version);
-                    openApiOperation.Tags.Add("oceanApiId=" + apiDetail.OceanApiId);
-                    openApiOperation.Tags.Add("billFlag=" + apiDetail.BillFlag);
-                    openApiOperation.Tags.Add("neddAuth=" + apiDetail.NeddAuth);
-
-                    openApiOperation.Responses.Add("400", new OpenApiResponse { Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = errorSchema } });
 
                     //foreach (var item in apiDetail.ApiSystemParamVOList)
                     //{
