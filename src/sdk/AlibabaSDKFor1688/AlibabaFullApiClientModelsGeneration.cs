@@ -388,7 +388,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:alibaba.ae.marketing.batchLimitedDiscountPromStockManagementBeta,version:1,typeName:alibaba.ae.marketing.PromProductSkuProperty</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenAlibabaAeMarketingBatchLimitedDiscountPromStockManagementBetaAlibabaAeMarketingPromProductSkuProperty 
+    public partial class AlibabaAeMarketingPromProductSkuProperty2 
     {
         /// <summary>skuPropertyId</summary>
         [Newtonsoft.Json.JsonProperty("skuPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -417,7 +417,7 @@ namespace AlibabaSDK.FullModels
         public long? IpmSkuStock { get; set; }
     
         [Newtonsoft.Json.JsonProperty("promProductSkuPropertys", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenAlibabaAeMarketingBatchLimitedDiscountPromStockManagementBetaAlibabaAeMarketingPromProductSkuProperty> PromProductSkuPropertys { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaAeMarketingPromProductSkuProperty2> PromProductSkuPropertys { get; set; }
     
     
     }
@@ -593,7 +593,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:alibaba.ae.marketing.joinLimitedDiscountPromotion,version:1,typeName:AeopSKUProperty</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenAlibabaAeMarketingJoinLimitedDiscountPromotionAeopSKUProperty 
+    public partial class AeopSKUProperty2 
     {
         /// <summary>sku属性名id。从类目属性接口getAttributesResultByCateId获取sku属性。</summary>
         [Newtonsoft.Json.JsonProperty("skuPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -622,7 +622,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:alibaba.ae.marketing.joinLimitedDiscountPromotion,version:1,typeName:alibaba.product.AeopSKUNationalDiscountPrice</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenAlibabaAeMarketingJoinLimitedDiscountPromotionAlibabaProductAeopSKUNationalDiscountPrice 
+    public partial class AlibabaProductAeopSKUNationalDiscountPrice2 
     {
         /// <summary>国家</summary>
         [Newtonsoft.Json.JsonProperty("shiptoCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -666,7 +666,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku属性对象list，允许1-6个sku属性对象，按sku属性顺序排放。sku属性从类目属性接口getAttributesResultByCateId获取。该项值输入sku属性，不能输入普通类目属性。注意，sku属性是有顺序的，必须按照顺序存放。</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUProperty", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenAlibabaAeMarketingJoinLimitedDiscountPromotionAeopSKUProperty> AeopSKUProperty { get; set; }
+        public System.Collections.Generic.ICollection<AeopSKUProperty2> AeopSKUProperty { get; set; }
     
         /// <summary>sku 条码</summary>
         [Newtonsoft.Json.JsonProperty("barcode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -678,7 +678,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku分国家的日常促销价集合</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUNationalDiscountPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenAlibabaAeMarketingJoinLimitedDiscountPromotionAlibabaProductAeopSKUNationalDiscountPrice> AeopSKUNationalDiscountPrice { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductAeopSKUNationalDiscountPrice2> AeopSKUNationalDiscountPrice { get; set; }
     
     
     }
@@ -990,7 +990,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:alibaba.product.postMultilanguageAeProduct,version:1,typeName:AeopSKUProperty</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenAlibabaProductPostMultilanguageAeProductAeopSKUProperty 
+    public partial class AeopSKUProperty3 
     {
         /// <summary>sku属性名id。从类目属性接口getAttributesResultByCateId获取sku属性。</summary>
         [Newtonsoft.Json.JsonProperty("skuPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -1019,7 +1019,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:alibaba.product.postMultilanguageAeProduct,version:1,typeName:alibaba.product.AeopSKUNationalDiscountPrice</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenAlibabaProductPostMultilanguageAeProductAlibabaProductAeopSKUNationalDiscountPrice 
+    public partial class AlibabaProductAeopSKUNationalDiscountPrice3 
     {
         /// <summary>国家</summary>
         [Newtonsoft.Json.JsonProperty("shiptoCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -1063,7 +1063,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku属性对象list，允许1-6个sku属性对象，按sku属性顺序排放。sku属性从类目属性接口getAttributesResultByCateId获取。该项值输入sku属性，不能输入普通类目属性。注意，sku属性是有顺序的，必须按照顺序存放。</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUProperty", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenAlibabaProductPostMultilanguageAeProductAeopSKUProperty> AeopSKUProperty { get; set; }
+        public System.Collections.Generic.ICollection<AeopSKUProperty3> AeopSKUProperty { get; set; }
     
         /// <summary>sku 条码</summary>
         [Newtonsoft.Json.JsonProperty("barcode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -1075,7 +1075,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku分国家的日常促销价集合</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUNationalDiscountPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenAlibabaProductPostMultilanguageAeProductAlibabaProductAeopSKUNationalDiscountPrice> AeopSKUNationalDiscountPrice { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductAeopSKUNationalDiscountPrice3> AeopSKUNationalDiscountPrice { get; set; }
     
     
     }
@@ -1845,7 +1845,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:push.cursor.messageList,version:1,typeName:PushMessage</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenPushCursorMessageListPushMessage 
+    public partial class PushMessage2 
     {
         /// <summary>消息唯一id</summary>
         [Newtonsoft.Json.JsonProperty("msgId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -2508,7 +2508,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.editProductCidAttIdSku,version:1,typeName:AeopSKUProperty</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiEditProductCidAttIdSkuAeopSKUProperty 
+    public partial class AeopSKUProperty4 
     {
         /// <summary>sku属性名id。从类目属性接口getAttributesResultByCateId获取sku属性。</summary>
         [Newtonsoft.Json.JsonProperty("skuPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -2537,7 +2537,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.editProductCidAttIdSku,version:1,typeName:alibaba.product.AeopSKUNationalDiscountPrice</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiEditProductCidAttIdSkuAlibabaProductAeopSKUNationalDiscountPrice 
+    public partial class AlibabaProductAeopSKUNationalDiscountPrice4 
     {
         /// <summary>国家</summary>
         [Newtonsoft.Json.JsonProperty("shiptoCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -2581,7 +2581,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku属性对象list，允许1-6个sku属性对象，按sku属性顺序排放。sku属性从类目属性接口getAttributesResultByCateId获取。该项值输入sku属性，不能输入普通类目属性。注意，sku属性是有顺序的，必须按照顺序存放。</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUProperty", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiEditProductCidAttIdSkuAeopSKUProperty> AeopSKUProperty { get; set; }
+        public System.Collections.Generic.ICollection<AeopSKUProperty4> AeopSKUProperty { get; set; }
     
         /// <summary>sku 条码</summary>
         [Newtonsoft.Json.JsonProperty("barcode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -2593,7 +2593,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku分国家的日常促销价集合</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUNationalDiscountPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiEditProductCidAttIdSkuAlibabaProductAeopSKUNationalDiscountPrice> AeopSKUNationalDiscountPrice { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductAeopSKUNationalDiscountPrice4> AeopSKUNationalDiscountPrice { get; set; }
     
     
     }
@@ -3390,7 +3390,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.findOrderListQuery,version:1,typeName:Currency</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiFindOrderListQueryCurrency 
+    public partial class Currency2 
     {
         /// <summary>默认分数</summary>
         [Newtonsoft.Json.JsonProperty("defaultFractionDigits", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3410,7 +3410,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.findOrderListQuery,version:1,typeName:trade.Money</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiFindOrderListQueryTradeMoney 
+    public partial class TradeMoney2 
     {
         /// <summary>金额</summary>
         [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3425,7 +3425,7 @@ namespace AlibabaSDK.FullModels
         public string CurrencyCode { get; set; }
     
         [Newtonsoft.Json.JsonProperty("currency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliexpressOpenApiFindOrderListQueryCurrency Currency { get; set; }
+        public Currency2 Currency { get; set; }
     
     
     }
@@ -3548,13 +3548,13 @@ namespace AlibabaSDK.FullModels
         public string SonOrderStatus { get; set; }
     
         [Newtonsoft.Json.JsonProperty("logisticsAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliexpressOpenApiFindOrderListQueryTradeMoney LogisticsAmount { get; set; }
+        public TradeMoney2 LogisticsAmount { get; set; }
     
         [Newtonsoft.Json.JsonProperty("productUnitPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliexpressOpenApiFindOrderListQueryTradeMoney ProductUnitPrice { get; set; }
+        public TradeMoney2 ProductUnitPrice { get; set; }
     
         [Newtonsoft.Json.JsonProperty("totalProductAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliexpressOpenApiFindOrderListQueryTradeMoney TotalProductAmount { get; set; }
+        public TradeMoney2 TotalProductAmount { get; set; }
     
         /// <summary>联盟佣金比例</summary>
         [Newtonsoft.Json.JsonProperty("afflicateFeeRate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3662,15 +3662,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>手续费</summary>
         [Newtonsoft.Json.JsonProperty("escrowFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliexpressOpenApiFindOrderListQueryTradeMoney EscrowFee { get; set; }
+        public TradeMoney2 EscrowFee { get; set; }
     
         /// <summary>放款金额</summary>
         [Newtonsoft.Json.JsonProperty("loanAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliexpressOpenApiFindOrderListQueryTradeMoney LoanAmount { get; set; }
+        public TradeMoney2 LoanAmount { get; set; }
     
         /// <summary>付款金额</summary>
         [Newtonsoft.Json.JsonProperty("payAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliexpressOpenApiFindOrderListQueryTradeMoney PayAmount { get; set; }
+        public TradeMoney2 PayAmount { get; set; }
     
         /// <summary>商品列表</summary>
         [Newtonsoft.Json.JsonProperty("productList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3763,7 +3763,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.onlineAeProduct,version:1,typeName:alibaba.product.online.ErrorDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiOnlineAeProductAlibabaProductOnlineErrorDetail 
+    public partial class AlibabaProductOnlineErrorDetail2 
     {
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3795,7 +3795,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>商品上架错误详情</summary>
         [Newtonsoft.Json.JsonProperty("errorDetails", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiOnlineAeProductAlibabaProductOnlineErrorDetail> ErrorDetails { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductOnlineErrorDetail2> ErrorDetails { get; set; }
     
         /// <summary>操作成功返回成功产品个数。</summary>
         [Newtonsoft.Json.JsonProperty("modifyCount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3832,7 +3832,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.editAeProduct,version:1,typeName:AeopSKUProperty</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiEditAeProductAeopSKUProperty 
+    public partial class AeopSKUProperty5 
     {
         /// <summary>sku属性名id。从类目属性接口getAttributesResultByCateId获取sku属性。</summary>
         [Newtonsoft.Json.JsonProperty("skuPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3861,7 +3861,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.editAeProduct,version:1,typeName:alibaba.product.AeopSKUNationalDiscountPrice</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiEditAeProductAlibabaProductAeopSKUNationalDiscountPrice 
+    public partial class AlibabaProductAeopSKUNationalDiscountPrice5 
     {
         /// <summary>国家</summary>
         [Newtonsoft.Json.JsonProperty("shiptoCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3905,7 +3905,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku属性对象list，允许1-6个sku属性对象，按sku属性顺序排放。sku属性从类目属性接口getAttributesResultByCateId获取。该项值输入sku属性，不能输入普通类目属性。注意，sku属性是有顺序的，必须按照顺序存放。</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUProperty", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiEditAeProductAeopSKUProperty> AeopSKUProperty { get; set; }
+        public System.Collections.Generic.ICollection<AeopSKUProperty5> AeopSKUProperty { get; set; }
     
         /// <summary>sku 条码</summary>
         [Newtonsoft.Json.JsonProperty("barcode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3917,7 +3917,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku分国家的日常促销价集合</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUNationalDiscountPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiEditAeProductAlibabaProductAeopSKUNationalDiscountPrice> AeopSKUNationalDiscountPrice { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductAeopSKUNationalDiscountPrice5> AeopSKUNationalDiscountPrice { get; set; }
     
     
     }
@@ -4037,7 +4037,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.findAeProductById,version:1,typeName:aeopAeProductPropertys</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiFindAeProductByIdAeopAeProductPropertys 
+    public partial class AeopAeProductPropertys2 
     {
         /// <summary>属性名ID。从类目属性接口getAttributesResultByCateId获取普通类目属性，不可填入sku属性。 自定义属性名时,该项不填.</summary>
         [Newtonsoft.Json.JsonProperty("attrNameId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4061,7 +4061,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.findAeProductById,version:1,typeName:AeopSKUProperty</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiFindAeProductByIdAeopSKUProperty 
+    public partial class AeopSKUProperty6 
     {
         /// <summary>sku属性名id。从类目属性接口getAttributesResultByCateId获取sku属性。</summary>
         [Newtonsoft.Json.JsonProperty("skuPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4086,7 +4086,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.findAeProductById,version:1,typeName:alibaba.product.AeopSKUNationalDiscountPrice</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiFindAeProductByIdAlibabaProductAeopSKUNationalDiscountPrice 
+    public partial class AlibabaProductAeopSKUNationalDiscountPrice6 
     {
         /// <summary>国家</summary>
         [Newtonsoft.Json.JsonProperty("shiptoCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4102,7 +4102,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.findAeProductById,version:1,typeName:aeopAeProductSKUs</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiFindAeProductByIdAeopAeProductSKUs 
+    public partial class AeopAeProductSKUs2 
     {
         /// <summary>Sku价格。取值范围:0.01-100000;单位:美元。 如:200.07，表示:200美元7分。需要在正确的价格区间内。</summary>
         [Newtonsoft.Json.JsonProperty("skuPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4130,7 +4130,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku属性对象list，允许1-6个sku属性对象，按sku属性顺序排放。sku属性从类目属性接口getAttributesResultByCateId获取。该项值输入sku属性，不能输入普通类目属性。注意，sku属性是有顺序的，必须按照顺序存放。</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUProperty", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiFindAeProductByIdAeopSKUProperty> AeopSKUProperty { get; set; }
+        public System.Collections.Generic.ICollection<AeopSKUProperty6> AeopSKUProperty { get; set; }
     
         /// <summary>sku 条码</summary>
         [Newtonsoft.Json.JsonProperty("barcode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4142,7 +4142,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku分国家的日常促销价集合</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUNationalDiscountPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiFindAeProductByIdAlibabaProductAeopSKUNationalDiscountPrice> AeopSKUNationalDiscountPrice { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductAeopSKUNationalDiscountPrice6> AeopSKUNationalDiscountPrice { get; set; }
     
     
     }
@@ -4150,7 +4150,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.findAeProductById,version:1,typeName:alibaba.product.AeopAEVideo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiFindAeProductByIdAlibabaProductAeopAEVideo 
+    public partial class AlibabaProductAeopAEVideo2 
     {
         /// <summary>卖家主账户ID</summary>
         [Newtonsoft.Json.JsonProperty("aliMemberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4178,11 +4178,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.findAeProductById,version:1,typeName:alibaba.product.AeopAEMultimedia</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiFindAeProductByIdAlibabaProductAeopAEMultimedia 
+    public partial class AlibabaProductAeopAEMultimedia2 
     {
         /// <summary>多媒体信息。</summary>
         [Newtonsoft.Json.JsonProperty("aeopAEVideos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiFindAeProductByIdAlibabaProductAeopAEVideo> AeopAEVideos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductAeopAEVideo2> AeopAEVideos { get; set; }
     
     
     }
@@ -4190,7 +4190,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.findAeProductById,version:1,typeName:alibaba.product.NationalQuoteConfiguration</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiFindAeProductByIdAlibabaProductNationalQuoteConfiguration 
+    public partial class AlibabaProductNationalQuoteConfiguration2 
     {
         /// <summary>分国家定价规则类型[percentage：基于基准价格按比例配置]</summary>
         [Newtonsoft.Json.JsonProperty("configurationType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4218,19 +4218,19 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>商品的类目属性</summary>
         [Newtonsoft.Json.JsonProperty("aeopAeProductPropertys", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiFindAeProductByIdAeopAeProductPropertys> AeopAeProductPropertys { get; set; }
+        public System.Collections.Generic.ICollection<AeopAeProductPropertys2> AeopAeProductPropertys { get; set; }
     
         /// <summary>商品的SKU信息</summary>
         [Newtonsoft.Json.JsonProperty("aeopAeProductSKUs", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiFindAeProductByIdAeopAeProductSKUs> AeopAeProductSKUs { get; set; }
+        public System.Collections.Generic.ICollection<AeopAeProductSKUs2> AeopAeProductSKUs { get; set; }
     
         /// <summary>商品多媒体信息，该属性主要包含商品的视频列表</summary>
         [Newtonsoft.Json.JsonProperty("aeopAEMultimedia", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliexpressOpenApiFindAeProductByIdAlibabaProductAeopAEMultimedia AeopAEMultimedia { get; set; }
+        public AlibabaProductAeopAEMultimedia2 AeopAEMultimedia { get; set; }
     
         /// <summary>商品分国家报价的配置</summary>
         [Newtonsoft.Json.JsonProperty("aeopNationalQuoteConfiguration", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliexpressOpenApiFindAeProductByIdAlibabaProductNationalQuoteConfiguration AeopNationalQuoteConfiguration { get; set; }
+        public AlibabaProductNationalQuoteConfiguration2 AeopNationalQuoteConfiguration { get; set; }
     
         /// <summary>商品详描</summary>
         [Newtonsoft.Json.JsonProperty("detail", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4848,7 +4848,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.postAeProduct,version:1,typeName:AeopSKUProperty</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiPostAeProductAeopSKUProperty 
+    public partial class AeopSKUProperty7 
     {
         /// <summary>sku属性名id。从类目属性接口getAttributesResultByCateId获取sku属性。</summary>
         [Newtonsoft.Json.JsonProperty("skuPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4877,7 +4877,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.postAeProduct,version:1,typeName:alibaba.product.AeopSKUNationalDiscountPrice</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiPostAeProductAlibabaProductAeopSKUNationalDiscountPrice 
+    public partial class AlibabaProductAeopSKUNationalDiscountPrice7 
     {
         /// <summary>国家</summary>
         [Newtonsoft.Json.JsonProperty("shiptoCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4921,7 +4921,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku属性对象list，允许1-6个sku属性对象，按sku属性顺序排放。sku属性从类目属性接口getAttributesResultByCateId获取。该项值输入sku属性，不能输入普通类目属性。注意，sku属性是有顺序的，必须按照顺序存放。</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUProperty", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiPostAeProductAeopSKUProperty> AeopSKUProperty { get; set; }
+        public System.Collections.Generic.ICollection<AeopSKUProperty7> AeopSKUProperty { get; set; }
     
         /// <summary>sku 条码</summary>
         [Newtonsoft.Json.JsonProperty("barcode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4933,7 +4933,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Sku分国家的日常促销价集合</summary>
         [Newtonsoft.Json.JsonProperty("aeopSKUNationalDiscountPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiPostAeProductAlibabaProductAeopSKUNationalDiscountPrice> AeopSKUNationalDiscountPrice { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductAeopSKUNationalDiscountPrice7> AeopSKUNationalDiscountPrice { get; set; }
     
     
     }
@@ -4988,7 +4988,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:aliexpress.open,apiname:api.postAeProduct,version:1,typeName:alibaba.product.AeopAEVideo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliexpressOpenApiPostAeProductAlibabaProductAeopAEVideo 
+    public partial class AlibabaProductAeopAEVideo3 
     {
         /// <summary>卖家主账户ID</summary>
         [Newtonsoft.Json.JsonProperty("aliMemberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5020,7 +5020,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>多媒体信息。</summary>
         [Newtonsoft.Json.JsonProperty("aeopAEVideos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliexpressOpenApiPostAeProductAlibabaProductAeopAEVideo> AeopAEVideos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductAeopAEVideo3> AeopAEVideos { get; set; }
     
     
     }
@@ -5309,411 +5309,6 @@ namespace AlibabaSDK.FullModels
     }
     
     /// <summary>
-    ///  namespace:alibaba.open,apiname:contact.findRegisterInfo,version:1,typeName:userDefineContact</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaOpenContactFindRegisterInfoUserDefineContact 
-    {
-        /// <summary>最后一次联系距现在天数</summary>
-        [Newtonsoft.Json.JsonProperty("lastContactDay", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? LastContactDay { get; set; }
-    
-        /// <summary>客户关系类型： 
-        /// NotCompanyContact：不是公司客户 
-        /// CollegageContact：同事客户 
-        /// MyContact：我/子帐号客户</summary>
-        [Newtonsoft.Json.JsonProperty("contactRelation", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ContactRelation { get; set; }
-    
-        /// <summary>客户detail url</summary>
-        [Newtonsoft.Json.JsonProperty("detailUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string DetailUrl { get; set; }
-    
-        /// <summary>公司名字</summary>
-        [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CompanyName { get; set; }
-    
-        /// <summary>公司地址</summary>
-        [Newtonsoft.Json.JsonProperty("companyAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CompanyAddress { get; set; }
-    
-        /// <summary>姓</summary>
-        [Newtonsoft.Json.JsonProperty("firstName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FirstName { get; set; }
-    
-        /// <summary>名</summary>
-        [Newtonsoft.Json.JsonProperty("lastName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string LastName { get; set; }
-    
-        /// <summary>email地址</summary>
-        [Newtonsoft.Json.JsonProperty("email", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Email { get; set; }
-    
-        /// <summary>性别：M：男士/F：女士</summary>
-        [Newtonsoft.Json.JsonProperty("sex", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Sex { get; set; }
-    
-        /// <summary>电话-国家</summary>
-        [Newtonsoft.Json.JsonProperty("phoneCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PhoneCountry { get; set; }
-    
-        /// <summary>电话-地区</summary>
-        [Newtonsoft.Json.JsonProperty("phoneArea", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PhoneArea { get; set; }
-    
-        /// <summary>电话-号码</summary>
-        [Newtonsoft.Json.JsonProperty("phoneNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PhoneNumber { get; set; }
-    
-        /// <summary>传真-国家</summary>
-        [Newtonsoft.Json.JsonProperty("faxCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FaxCountry { get; set; }
-    
-        /// <summary>传真-地区</summary>
-        [Newtonsoft.Json.JsonProperty("faxArea", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FaxArea { get; set; }
-    
-        /// <summary>传真-号码</summary>
-        [Newtonsoft.Json.JsonProperty("faxNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FaxNumber { get; set; }
-    
-        /// <summary>手机号码</summary>
-        [Newtonsoft.Json.JsonProperty("mobile", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Mobile { get; set; }
-    
-        /// <summary>国家</summary>
-        [Newtonsoft.Json.JsonProperty("country", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Country { get; set; }
-    
-        /// <summary>国家全称</summary>
-        [Newtonsoft.Json.JsonProperty("countryFullName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CountryFullName { get; set; }
-    
-        /// <summary>省份</summary>
-        [Newtonsoft.Json.JsonProperty("province", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Province { get; set; }
-    
-        /// <summary>城市</summary>
-        [Newtonsoft.Json.JsonProperty("city", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string City { get; set; }
-    
-        /// <summary>邮编</summary>
-        [Newtonsoft.Json.JsonProperty("zip", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Zip { get; set; }
-    
-        /// <summary>网址</summary>
-        [Newtonsoft.Json.JsonProperty("webSite", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WebSite { get; set; }
-    
-        /// <summary>部门</summary>
-        [Newtonsoft.Json.JsonProperty("department", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Department { get; set; }
-    
-        /// <summary>职位</summary>
-        [Newtonsoft.Json.JsonProperty("jobTitle", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string JobTitle { get; set; }
-    
-        /// <summary>客户级别[1,5]</summary>
-        [Newtonsoft.Json.JsonProperty("grade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Grade { get; set; }
-    
-        /// <summary>组名</summary>
-        [Newtonsoft.Json.JsonProperty("groupName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string GroupName { get; set; }
-    
-        /// <summary>来源</summary>
-        [Newtonsoft.Json.JsonProperty("addedFrom", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AddedFrom { get; set; }
-    
-        /// <summary>yahooid</summary>
-        [Newtonsoft.Json.JsonProperty("yahooId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string YahooId { get; set; }
-    
-        /// <summary>msnid</summary>
-        [Newtonsoft.Json.JsonProperty("msnId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string MsnId { get; set; }
-    
-        /// <summary>skypeid</summary>
-        [Newtonsoft.Json.JsonProperty("skypeId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SkypeId { get; set; }
-    
-    
-    }
-    
-    /// <summary>
-    ///  namespace:alibaba.open,apiname:contact.listByPage,version:1,typeName:userDefineContact</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AlibabaOpenContactListByPageUserDefineContact 
-    {
-        /// <summary>最后一次联系距现在天数</summary>
-        [Newtonsoft.Json.JsonProperty("lastContactDay", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? LastContactDay { get; set; }
-    
-        /// <summary>客户关系类型： 
-        /// NotCompanyContact：不是公司客户 
-        /// CollegageContact：同事客户 
-        /// MyContact：我/子帐号客户</summary>
-        [Newtonsoft.Json.JsonProperty("contactRelation", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ContactRelation { get; set; }
-    
-        /// <summary>客户detail url</summary>
-        [Newtonsoft.Json.JsonProperty("detailUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string DetailUrl { get; set; }
-    
-        /// <summary>公司名字</summary>
-        [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CompanyName { get; set; }
-    
-        /// <summary>公司地址</summary>
-        [Newtonsoft.Json.JsonProperty("companyAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CompanyAddress { get; set; }
-    
-        /// <summary>姓</summary>
-        [Newtonsoft.Json.JsonProperty("firstName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FirstName { get; set; }
-    
-        /// <summary>名</summary>
-        [Newtonsoft.Json.JsonProperty("lastName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string LastName { get; set; }
-    
-        /// <summary>email地址</summary>
-        [Newtonsoft.Json.JsonProperty("email", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Email { get; set; }
-    
-        /// <summary>性别：M：男士/F：女士</summary>
-        [Newtonsoft.Json.JsonProperty("sex", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Sex { get; set; }
-    
-        /// <summary>电话-国家</summary>
-        [Newtonsoft.Json.JsonProperty("phoneCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PhoneCountry { get; set; }
-    
-        /// <summary>电话-地区</summary>
-        [Newtonsoft.Json.JsonProperty("phoneArea", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PhoneArea { get; set; }
-    
-        /// <summary>电话-号码</summary>
-        [Newtonsoft.Json.JsonProperty("phoneNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PhoneNumber { get; set; }
-    
-        /// <summary>传真-国家</summary>
-        [Newtonsoft.Json.JsonProperty("faxCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FaxCountry { get; set; }
-    
-        /// <summary>传真-地区</summary>
-        [Newtonsoft.Json.JsonProperty("faxArea", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FaxArea { get; set; }
-    
-        /// <summary>传真-号码</summary>
-        [Newtonsoft.Json.JsonProperty("faxNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FaxNumber { get; set; }
-    
-        /// <summary>手机号码</summary>
-        [Newtonsoft.Json.JsonProperty("mobile", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Mobile { get; set; }
-    
-        /// <summary>国家</summary>
-        [Newtonsoft.Json.JsonProperty("country", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Country { get; set; }
-    
-        /// <summary>国家全称</summary>
-        [Newtonsoft.Json.JsonProperty("countryFullName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CountryFullName { get; set; }
-    
-        /// <summary>省份</summary>
-        [Newtonsoft.Json.JsonProperty("province", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Province { get; set; }
-    
-        /// <summary>城市</summary>
-        [Newtonsoft.Json.JsonProperty("city", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string City { get; set; }
-    
-        /// <summary>邮编</summary>
-        [Newtonsoft.Json.JsonProperty("zip", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Zip { get; set; }
-    
-        /// <summary>网址</summary>
-        [Newtonsoft.Json.JsonProperty("webSite", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WebSite { get; set; }
-    
-        /// <summary>部门</summary>
-        [Newtonsoft.Json.JsonProperty("department", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Department { get; set; }
-    
-        /// <summary>职位</summary>
-        [Newtonsoft.Json.JsonProperty("jobTitle", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string JobTitle { get; set; }
-    
-        /// <summary>客户级别[1,5]</summary>
-        [Newtonsoft.Json.JsonProperty("grade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Grade { get; set; }
-    
-        /// <summary>组名</summary>
-        [Newtonsoft.Json.JsonProperty("groupName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string GroupName { get; set; }
-    
-        /// <summary>来源</summary>
-        [Newtonsoft.Json.JsonProperty("addedFrom", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AddedFrom { get; set; }
-    
-        /// <summary>yahooid</summary>
-        [Newtonsoft.Json.JsonProperty("yahooId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string YahooId { get; set; }
-    
-        /// <summary>msnid</summary>
-        [Newtonsoft.Json.JsonProperty("msnId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string MsnId { get; set; }
-    
-        /// <summary>skypeid</summary>
-        [Newtonsoft.Json.JsonProperty("skypeId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string SkypeId { get; set; }
-    
-    
-    }
-    
-    /// <summary>
-    ///  namespace:alibaba.open,apiname:contact.findRegisterInfoByEmail,version:1,typeName:memberRegisiterInfo</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class MemberRegisiterInfo 
-    {
-        /// <summary>最后一次联系距现在天数</summary>
-        [Newtonsoft.Json.JsonProperty("lastContactDay", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? LastContactDay { get; set; }
-    
-        /// <summary>客户关系类型： 
-        /// NotCompanyContact：不是公司客户 
-        /// CollegageContact：同事客户 
-        /// MyContact：我/子帐号客户</summary>
-        [Newtonsoft.Json.JsonProperty("contactRelation", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ContactRelation { get; set; }
-    
-        /// <summary>客户detailURL</summary>
-        [Newtonsoft.Json.JsonProperty("detailUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string DetailUrl { get; set; }
-    
-        /// <summary>公司名字</summary>
-        [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CompanyName { get; set; }
-    
-        /// <summary>公司地址</summary>
-        [Newtonsoft.Json.JsonProperty("companyAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CompanyAddress { get; set; }
-    
-        /// <summary>姓</summary>
-        [Newtonsoft.Json.JsonProperty("firstName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FirstName { get; set; }
-    
-        /// <summary>名</summary>
-        [Newtonsoft.Json.JsonProperty("lastName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string LastName { get; set; }
-    
-        /// <summary>email地址</summary>
-        [Newtonsoft.Json.JsonProperty("email", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Email { get; set; }
-    
-        /// <summary>性别：M：男士/F：女士</summary>
-        [Newtonsoft.Json.JsonProperty("sex", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Sex { get; set; }
-    
-        /// <summary>电话-国家</summary>
-        [Newtonsoft.Json.JsonProperty("phoneCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PhoneCountry { get; set; }
-    
-        /// <summary>电话-地区</summary>
-        [Newtonsoft.Json.JsonProperty("phoneArea", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PhoneArea { get; set; }
-    
-        /// <summary>电话-号码</summary>
-        [Newtonsoft.Json.JsonProperty("phoneNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PhoneNumber { get; set; }
-    
-        /// <summary>传真-国家</summary>
-        [Newtonsoft.Json.JsonProperty("faxCountry", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FaxCountry { get; set; }
-    
-        /// <summary>传真-地区</summary>
-        [Newtonsoft.Json.JsonProperty("faxArea", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FaxArea { get; set; }
-    
-        /// <summary>传真-号码</summary>
-        [Newtonsoft.Json.JsonProperty("faxNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string FaxNumber { get; set; }
-    
-        /// <summary>手机号码</summary>
-        [Newtonsoft.Json.JsonProperty("mobile", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Mobile { get; set; }
-    
-        /// <summary>国家</summary>
-        [Newtonsoft.Json.JsonProperty("country", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Country { get; set; }
-    
-        /// <summary>国际全称</summary>
-        [Newtonsoft.Json.JsonProperty("countryFullName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string CountryFullName { get; set; }
-    
-        /// <summary>省份</summary>
-        [Newtonsoft.Json.JsonProperty("province", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Province { get; set; }
-    
-        /// <summary>城市</summary>
-        [Newtonsoft.Json.JsonProperty("city", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string City { get; set; }
-    
-        /// <summary>邮编</summary>
-        [Newtonsoft.Json.JsonProperty("zip", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Zip { get; set; }
-    
-        /// <summary>网站地址</summary>
-        [Newtonsoft.Json.JsonProperty("webSite", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string WebSite { get; set; }
-    
-        /// <summary>部门</summary>
-        [Newtonsoft.Json.JsonProperty("department", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Department { get; set; }
-    
-        /// <summary>职位</summary>
-        [Newtonsoft.Json.JsonProperty("jobTitle", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string JobTitle { get; set; }
-    
-        /// <summary>会员id加密串</summary>
-        [Newtonsoft.Json.JsonProperty("accountIdEncrypt", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AccountIdEncrypt { get; set; }
-    
-        /// <summary>是否email认证过</summary>
-        [Newtonsoft.Json.JsonProperty("isEmailVirify", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public bool? IsEmailVirify { get; set; }
-    
-        /// <summary>旺旺亮灯串</summary>
-        [Newtonsoft.Json.JsonProperty("alitalkEncrypt", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AlitalkEncrypt { get; set; }
-    
-        /// <summary>头像</summary>
-        [Newtonsoft.Json.JsonProperty("portrait", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string Portrait { get; set; }
-    
-        /// <summary>经营模式</summary>
-        [Newtonsoft.Json.JsonProperty("bizType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string BizType { get; set; }
-    
-        /// <summary>年采用金额</summary>
-        [Newtonsoft.Json.JsonProperty("annualRevenue", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string AnnualRevenue { get; set; }
-    
-        /// <summary>采购产品</summary>
-        [Newtonsoft.Json.JsonProperty("purchaseProducts", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PurchaseProducts { get; set; }
-    
-        /// <summary>加入会员年限</summary>
-        [Newtonsoft.Json.JsonProperty("gmtPaidJoin", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? GmtPaidJoin { get; set; }
-    
-        /// <summary>被多少人加为客户</summary>
-        [Newtonsoft.Json.JsonProperty("addedContactCnt", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public int? AddedContactCnt { get; set; }
-    
-    
-    }
-    
-    /// <summary>
     ///  namespace:alibaba.open,apiname:contact.findBuyer360ByAccountId,version:1,typeName:buyer360Info</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class Buyer360Info 
@@ -5899,7 +5494,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:api.example,apiname:example.family.post,version:1,typeName:ExamplePerson</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ApiExampleExampleFamilyPostExamplePerson 
+    public partial class ExamplePerson2 
     {
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Name { get; set; }
@@ -5919,7 +5514,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:api.example,apiname:example.family.post,version:1,typeName:ExampleCar</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ApiExampleExampleFamilyPostExampleCar 
+    public partial class ExampleCar2 
     {
         [Newtonsoft.Json.JsonProperty("builtDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.DateTimeOffset? BuiltDate { get; set; }
@@ -5948,7 +5543,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:api.example,apiname:example.family.post,version:1,typeName:ExampleHouse</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ApiExampleExampleFamilyPostExampleHouse 
+    public partial class ExampleHouse2 
     {
         [Newtonsoft.Json.JsonProperty("location", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Location { get; set; }
@@ -5974,19 +5569,19 @@ namespace AlibabaSDK.FullModels
         public int? FamilyNumber { get; set; }
     
         [Newtonsoft.Json.JsonProperty("father", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ApiExampleExampleFamilyPostExamplePerson Father { get; set; }
+        public ExamplePerson2 Father { get; set; }
     
         [Newtonsoft.Json.JsonProperty("mother", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ApiExampleExampleFamilyPostExamplePerson Mother { get; set; }
+        public ExamplePerson2 Mother { get; set; }
     
         [Newtonsoft.Json.JsonProperty("children", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ApiExampleExampleFamilyPostExamplePerson> Children { get; set; }
+        public System.Collections.Generic.ICollection<ExamplePerson2> Children { get; set; }
     
         [Newtonsoft.Json.JsonProperty("ownedCars", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ApiExampleExampleFamilyPostExampleCar> OwnedCars { get; set; }
+        public System.Collections.Generic.ICollection<ExampleCar2> OwnedCars { get; set; }
     
         [Newtonsoft.Json.JsonProperty("myHouse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ApiExampleExampleFamilyPostExampleHouse MyHouse { get; set; }
+        public ExampleHouse2 MyHouse { get; set; }
     
     
     }
@@ -6134,7 +5729,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:aitools.image.oss.dha.execute,version:1,typeName:background</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAitoolsImageOssDhaExecuteBackground 
+    public partial class Background2 
     {
         /// <summary>背景图片</summary>
         [Newtonsoft.Json.JsonProperty("backgroundUri", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6179,7 +5774,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>背景图信息</summary>
         [Newtonsoft.Json.JsonProperty("background", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAitoolsImageOssDhaExecuteBackground> Background { get; set; }
+        public System.Collections.Generic.ICollection<Background2> Background { get; set; }
     
     
     }
@@ -7473,7 +7068,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:brand.product.find,version:1,typeName:alibaba.china.product.api.open.model.OpenPropertyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductBrandProductFindAlibabaChinaProductApiOpenModelOpenPropertyModel 
+    public partial class AlibabaChinaProductApiOpenModelOpenPropertyModel2 
     {
         /// <summary>外部属性ID</summary>
         [Newtonsoft.Json.JsonProperty("outerPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7505,7 +7100,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:brand.product.find,version:1,typeName:alibaba.china.product.api.open.model.OpenProductModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductBrandProductFindAlibabaChinaProductApiOpenModelOpenProductModel 
+    public partial class AlibabaChinaProductApiOpenModelOpenProductModel2 
     {
         /// <summary>1688品牌ID</summary>
         [Newtonsoft.Json.JsonProperty("brandId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7545,7 +7140,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>产品属性</summary>
         [Newtonsoft.Json.JsonProperty("properties", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductBrandProductFindAlibabaChinaProductApiOpenModelOpenPropertyModel> Properties { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaChinaProductApiOpenModelOpenPropertyModel2> Properties { get; set; }
     
         /// <summary>1688类目 ID</summary>
         [Newtonsoft.Json.JsonProperty("categoryId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7561,7 +7156,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>产品信息</summary>
         [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductBrandProductFindAlibabaChinaProductApiOpenModelOpenProductModel Data { get; set; }
+        public AlibabaChinaProductApiOpenModelOpenProductModel2 Data { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("msgCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7581,7 +7176,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:brand.productGroup.find,version:1,typeName:alibaba.china.product.api.open.model.OpenPropertyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductBrandProductGroupFindAlibabaChinaProductApiOpenModelOpenPropertyModel 
+    public partial class AlibabaChinaProductApiOpenModelOpenPropertyModel3 
     {
         /// <summary>外部属性ID</summary>
         [Newtonsoft.Json.JsonProperty("outerPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7621,7 +7216,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:brand.productGroup.find,version:1,typeName:alibaba.china.product.api.open.model.OpenProductGroupModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductBrandProductGroupFindAlibabaChinaProductApiOpenModelOpenProductGroupModel 
+    public partial class AlibabaChinaProductApiOpenModelOpenProductGroupModel2 
     {
         /// <summary>1688品牌ID</summary>
         [Newtonsoft.Json.JsonProperty("brandId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7657,7 +7252,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>产品组属性</summary>
         [Newtonsoft.Json.JsonProperty("properties", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductBrandProductGroupFindAlibabaChinaProductApiOpenModelOpenPropertyModel> Properties { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaChinaProductApiOpenModelOpenPropertyModel3> Properties { get; set; }
     
         /// <summary>产品组视频ID</summary>
         [Newtonsoft.Json.JsonProperty("videoId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7677,7 +7272,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>产品组信息</summary>
         [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductBrandProductGroupFindAlibabaChinaProductApiOpenModelOpenProductGroupModel Data { get; set; }
+        public AlibabaChinaProductApiOpenModelOpenProductGroupModel2 Data { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("msgCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7697,7 +7292,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:brand.productGroup.setLectotype,version:1,typeName:alibaba.china.product.api.open.model.OpenPropertyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductBrandProductGroupSetLectotypeAlibabaChinaProductApiOpenModelOpenPropertyModel 
+    public partial class AlibabaChinaProductApiOpenModelOpenPropertyModel4 
     {
         /// <summary>外部属性Id</summary>
         [Newtonsoft.Json.JsonProperty("outerPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7741,7 +7336,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:brand.product.add,version:1,typeName:alibaba.china.product.api.open.model.OpenPropertyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductBrandProductAddAlibabaChinaProductApiOpenModelOpenPropertyModel 
+    public partial class AlibabaChinaProductApiOpenModelOpenPropertyModel5 
     {
         /// <summary>属性外部ID</summary>
         [Newtonsoft.Json.JsonProperty("outerPropertyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7809,7 +7404,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>产品属性</summary>
         [Newtonsoft.Json.JsonProperty("properties", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductBrandProductAddAlibabaChinaProductApiOpenModelOpenPropertyModel> Properties { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaChinaProductApiOpenModelOpenPropertyModel5> Properties { get; set; }
     
     
     }
@@ -8026,7 +7621,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.aitools.product.resolve,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaAitoolsProductResolveAlibabaProductProductAttribute 
+    public partial class AlibabaProductProductAttribute2 
     {
         /// <summary>属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8067,7 +7662,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>依据识别号标识的识别资源，智能识别出的商品属性列表，每个行业和品类的属性参照 1688 API：https://open.1688.com/api/apidocdetail.htm?aopApiCategory=category_new&amp;id=com.alibaba.product%3Aalibaba.category.attribute.get-1</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaAitoolsProductResolveAlibabaProductProductAttribute> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductAttribute2> Attributes { get; set; }
     
         /// <summary>自动生成的全局唯一的货号</summary>
         [Newtonsoft.Json.JsonProperty("articleNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8285,7 +7880,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.aitools.product.attr.resolve,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaAitoolsProductAttrResolveAlibabaProductProductAttribute 
+    public partial class AlibabaProductProductAttribute3 
     {
         /// <summary>属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8326,7 +7921,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>属性列表。如果同一个属性包含多个识别出的属性值，那么属性值会按照识别评分从高到低排列（识别度越高的属性值排名越靠前）</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaAitoolsProductAttrResolveAlibabaProductProductAttribute> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductAttribute3> Attributes { get; set; }
     
         /// <summary>自动生成的货号</summary>
         [Newtonsoft.Json.JsonProperty("articleNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8500,7 +8095,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo2 
     {
         /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8512,7 +8107,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductSKUAttrInfo 
+    public partial class AlibabaProductSKUAttrInfo2 
     {
         /// <summary>sku属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8540,11 +8135,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductSKUInfo 
+    public partial class AlibabaProductProductSKUInfo2 
     {
         /// <summary>SKU属性值，可填多组信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductSKUAttrInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductSKUAttrInfo2> Attributes { get; set; }
     
         /// <summary>指定规格的货号</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8580,7 +8175,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductPriceRange 
+    public partial class AlibabaProductProductPriceRange2 
     {
         /// <summary>起批量</summary>
         [Newtonsoft.Json.JsonProperty("startQuantity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8596,7 +8191,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductSaleInfo 
+    public partial class AlibabaProductProductSaleInfo2 
     {
         /// <summary>是否支持网上交易。true：支持 false：不支持</summary>
         [Newtonsoft.Json.JsonProperty("supportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8612,7 +8207,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>区间价格。按数量范围设定的区间价格</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductPriceRange> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange2> PriceRanges { get; set; }
     
         /// <summary>可售数量</summary>
         [Newtonsoft.Json.JsonProperty("amountOnSale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8656,7 +8251,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductShippingInfo 
+    public partial class AlibabaProductProductShippingInfo2 
     {
         /// <summary>运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplateID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8708,7 +8303,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.ProductExtendInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductExtendInfo 
+    public partial class AlibabaProductProductExtendInfo2 
     {
         /// <summary>扩展结构的key</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8724,7 +8319,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductInfo 
+    public partial class AlibabaProductProductInfo2 
     {
         /// <summary>商品ID</summary>
         [Newtonsoft.Json.JsonProperty("productID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8776,23 +8371,23 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo2 Image { get; set; }
     
         /// <summary>sku信息</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductSKUInfo> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductSKUInfo2> SkuInfos { get; set; }
     
         /// <summary>商品销售信息</summary>
         [Newtonsoft.Json.JsonProperty("saleInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductSaleInfo SaleInfo { get; set; }
+        public AlibabaProductProductSaleInfo2 SaleInfo { get; set; }
     
         /// <summary>商品物流信息</summary>
         [Newtonsoft.Json.JsonProperty("shippingInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductShippingInfo ShippingInfo { get; set; }
+        public AlibabaProductProductShippingInfo2 ShippingInfo { get; set; }
     
         /// <summary>商品扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("extendInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductExtendInfo> ExtendInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductExtendInfo2> ExtendInfos { get; set; }
     
         /// <summary>供应商用户ID</summary>
         [Newtonsoft.Json.JsonProperty("supplierUserId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8864,7 +8459,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>查找API时出错
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.description.MaterialInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionMaterialInfo 
+    public partial class AlibabaProductDescriptionMaterialInfo2 
     {
     
     }
@@ -8872,7 +8467,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>查找API时出错
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.description.CompanyInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionCompanyInfo 
+    public partial class AlibabaProductDescriptionCompanyInfo2 
     {
     
     }
@@ -8880,7 +8475,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.description.TagImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionTagImageInfo 
+    public partial class AlibabaProductDescriptionTagImageInfo2 
     {
         /// <summary>吊牌图片url相对地址</summary>
         [Newtonsoft.Json.JsonProperty("imageUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8900,19 +8495,19 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.description.ProductDetailExtend</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionProductDetailExtend 
+    public partial class AlibabaProductDescriptionProductDetailExtend2 
     {
         /// <summary>商品材料信息说明</summary>
         [Newtonsoft.Json.JsonProperty("materialInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionMaterialInfo MaterialInfo { get; set; }
+        public AlibabaProductDescriptionMaterialInfo2 MaterialInfo { get; set; }
     
         /// <summary>商家公司信息说明</summary>
         [Newtonsoft.Json.JsonProperty("companyInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionCompanyInfo CompanyInfo { get; set; }
+        public AlibabaProductDescriptionCompanyInfo2 CompanyInfo { get; set; }
     
         /// <summary>商家上传吊牌信息</summary>
         [Newtonsoft.Json.JsonProperty("tagInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionTagImageInfo TagInfo { get; set; }
+        public AlibabaProductDescriptionTagImageInfo2 TagInfo { get; set; }
     
     
     }
@@ -8920,11 +8515,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.std,version:1,typeName:alibaba.product.description.DescriptionInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionDescriptionInfo 
+    public partial class AlibabaProductDescriptionDescriptionInfo2 
     {
         /// <summary>详情页扩展信息，可选</summary>
         [Newtonsoft.Json.JsonProperty("productDetailExtend", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionProductDetailExtend ProductDetailExtend { get; set; }
+        public AlibabaProductDescriptionProductDetailExtend2 ProductDetailExtend { get; set; }
     
     
     }
@@ -8941,11 +8536,11 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>基于产品模型生成的模版信息</summary>
         [Newtonsoft.Json.JsonProperty("productInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductProductInfo ProductInfo { get; set; }
+        public AlibabaProductProductInfo2 ProductInfo { get; set; }
     
         /// <summary>商品详情描述结构化信息。注意，descriptionInfo 中所有包含 URL 信息的字段都是完整 URL。</summary>
         [Newtonsoft.Json.JsonProperty("descriptionInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateStdAlibabaProductDescriptionDescriptionInfo DescriptionInfo { get; set; }
+        public AlibabaProductDescriptionDescriptionInfo2 DescriptionInfo { get; set; }
     
     
     }
@@ -8981,7 +8576,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo3 
     {
         /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8993,7 +8588,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductSKUAttrInfo 
+    public partial class AlibabaProductSKUAttrInfo3 
     {
         /// <summary>sku属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9021,11 +8616,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductSKUInfo 
+    public partial class AlibabaProductProductSKUInfo3 
     {
         /// <summary>SKU属性值，可填多组信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductSKUAttrInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductSKUAttrInfo3> Attributes { get; set; }
     
         /// <summary>指定规格的货号</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9061,7 +8656,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductPriceRange 
+    public partial class AlibabaProductProductPriceRange3 
     {
         /// <summary>起批量</summary>
         [Newtonsoft.Json.JsonProperty("startQuantity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9077,7 +8672,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductSaleInfo 
+    public partial class AlibabaProductProductSaleInfo3 
     {
         /// <summary>是否支持网上交易。true：支持 false：不支持</summary>
         [Newtonsoft.Json.JsonProperty("supportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9093,7 +8688,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>区间价格。按数量范围设定的区间价格</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductPriceRange> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange3> PriceRanges { get; set; }
     
         /// <summary>可售数量</summary>
         [Newtonsoft.Json.JsonProperty("amountOnSale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9137,7 +8732,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductShippingInfo 
+    public partial class AlibabaProductProductShippingInfo3 
     {
         /// <summary>运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplateID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9189,7 +8784,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.ProductExtendInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductExtendInfo 
+    public partial class AlibabaProductProductExtendInfo3 
     {
         /// <summary>扩展结构的key</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9205,7 +8800,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductInfo 
+    public partial class AlibabaProductProductInfo3 
     {
         /// <summary>商品ID</summary>
         [Newtonsoft.Json.JsonProperty("productID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9257,23 +8852,23 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo3 Image { get; set; }
     
         /// <summary>sku信息</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductSKUInfo> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductSKUInfo3> SkuInfos { get; set; }
     
         /// <summary>商品销售信息</summary>
         [Newtonsoft.Json.JsonProperty("saleInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductSaleInfo SaleInfo { get; set; }
+        public AlibabaProductProductSaleInfo3 SaleInfo { get; set; }
     
         /// <summary>商品物流信息</summary>
         [Newtonsoft.Json.JsonProperty("shippingInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductShippingInfo ShippingInfo { get; set; }
+        public AlibabaProductProductShippingInfo3 ShippingInfo { get; set; }
     
         /// <summary>商品扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("extendInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductExtendInfo> ExtendInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductExtendInfo3> ExtendInfos { get; set; }
     
         /// <summary>供应商用户ID</summary>
         [Newtonsoft.Json.JsonProperty("supplierUserId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9345,7 +8940,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.ImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionImageInfo 
+    public partial class AlibabaProductDescriptionImageInfo2 
     {
         /// <summary>URL 地址</summary>
         [Newtonsoft.Json.JsonProperty("url", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9369,7 +8964,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.MultiImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionMultiImageInfo 
+    public partial class AlibabaProductDescriptionMultiImageInfo2 
     {
         /// <summary>多图部分的类型:ANGLE 多个多角度图,SKU 多个sku图,CUSTOMIZE 多个用户自定义图,SCENE 多个场景图</summary>
         [Newtonsoft.Json.JsonProperty("title", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9381,7 +8976,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>多个图片信息</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionImageInfo> Images { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductDescriptionImageInfo2> Images { get; set; }
     
     
     }
@@ -9389,7 +8984,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.aitools.product.DetailOriginalImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaAitoolsProductDetailOriginalImageInfo 
+    public partial class AlibabaAitoolsProductDetailOriginalImageInfo2 
     {
         /// <summary>细节切图所在原图中的 y 坐标比例，取值为 0.0 ~ 1.0，由 height * y 可得出 y 坐标的像素值</summary>
         [Newtonsoft.Json.JsonProperty("detailYRate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9425,11 +9020,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.DetailInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionDetailInfo 
+    public partial class AlibabaProductDescriptionDetailInfo2 
     {
         /// <summary>细节图片信息，可能为空。当该字段为空时，此细节信息表示一个占位符，title 和 description 字段仍然可用，此时需要 ISV 自动填充图片，或引导用户自行填充图片</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionImageInfo Image { get; set; }
+        public AlibabaProductDescriptionImageInfo2 Image { get; set; }
     
         /// <summary>细节描述文案，可能为空</summary>
         [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9441,7 +9036,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>细节切图所在的原图信息，ISV 可根据此信息对默认的切图信息进行调整和定制。image 为空时此字段也为空</summary>
         [Newtonsoft.Json.JsonProperty("originalImage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaAitoolsProductDetailOriginalImageInfo OriginalImage { get; set; }
+        public AlibabaAitoolsProductDetailOriginalImageInfo2 OriginalImage { get; set; }
     
     
     }
@@ -9465,7 +9060,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.AttributesPart</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionAttributesPart 
+    public partial class AlibabaProductDescriptionAttributesPart2 
     {
         /// <summary>配图 URL，默认为主图，ISV 可以自由替换</summary>
         [Newtonsoft.Json.JsonProperty("imageUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9481,7 +9076,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.SizePart</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionSizePart 
+    public partial class AlibabaProductDescriptionSizePart2 
     {
         /// <summary>商品尺寸示意图片 URL 地址</summary>
         [Newtonsoft.Json.JsonProperty("sampleImageUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9505,7 +9100,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.ProductPicture</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductPicture 
+    public partial class AlibabaProductProductPicture2 
     {
         /// <summary>图片URL地址，可访问</summary>
         [Newtonsoft.Json.JsonProperty("address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9529,15 +9124,15 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.VideoPart</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionVideoPart 
+    public partial class AlibabaProductDescriptionVideoPart2 
     {
         /// <summary>主图素材</summary>
         [Newtonsoft.Json.JsonProperty("mainPic", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductPicture MainPic { get; set; }
+        public AlibabaProductProductPicture2 MainPic { get; set; }
     
         /// <summary>其他图片素材</summary>
         [Newtonsoft.Json.JsonProperty("otherPic", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductPicture> OtherPic { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPicture2> OtherPic { get; set; }
     
         /// <summary>视频素材列表</summary>
         [Newtonsoft.Json.JsonProperty("videoList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9549,7 +9144,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.MaterialInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionMaterialInfo 
+    public partial class AlibabaProductDescriptionMaterialInfo3 
     {
         /// <summary>组成类型，全部枚举：面料、工艺、材质、成分、材料</summary>
         [Newtonsoft.Json.JsonProperty("materialType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9573,7 +9168,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.CompanyInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionCompanyInfo 
+    public partial class AlibabaProductDescriptionCompanyInfo3 
     {
         /// <summary>公司名称</summary>
         [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9609,15 +9204,15 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.ProductDetailExtend</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionProductDetailExtend 
+    public partial class AlibabaProductDescriptionProductDetailExtend3 
     {
         /// <summary>商品材料信息说明</summary>
         [Newtonsoft.Json.JsonProperty("materialInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionMaterialInfo MaterialInfo { get; set; }
+        public AlibabaProductDescriptionMaterialInfo3 MaterialInfo { get; set; }
     
         /// <summary>商家公司信息说明</summary>
         [Newtonsoft.Json.JsonProperty("companyInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionCompanyInfo CompanyInfo { get; set; }
+        public AlibabaProductDescriptionCompanyInfo3 CompanyInfo { get; set; }
     
     
     }
@@ -9625,11 +9220,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.descr.template.create.model3D,version:1,typeName:alibaba.product.description.DescriptionInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionDescriptionInfo 
+    public partial class AlibabaProductDescriptionDescriptionInfo3 
     {
         /// <summary>主图图片信息</summary>
         [Newtonsoft.Json.JsonProperty("mainImage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionImageInfo MainImage { get; set; }
+        public AlibabaProductDescriptionImageInfo2 MainImage { get; set; }
     
         /// <summary>商品总体描述，可能为空</summary>
         [Newtonsoft.Json.JsonProperty("mainDescriptionText", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9637,27 +9232,27 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>详情描述中的多图部分，包含多图部分的标题、描述以及多个图片信息。 注意，该字段中第一个元素默认为精美版 3D 模型的多角度图部分，images.title 代表该角度名称。3D 多角度图片的角度名称根据常规物品摆放规则输出，如用户未按要求摆放则角度名称可能有误，建议以文案形式提示用户。</summary>
         [Newtonsoft.Json.JsonProperty("multiImageParts", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionMultiImageInfo> MultiImageParts { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductDescriptionMultiImageInfo2> MultiImageParts { get; set; }
     
         /// <summary>详情描述细节信息，可能为空</summary>
         [Newtonsoft.Json.JsonProperty("details", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionDetailInfo> Details { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductDescriptionDetailInfo2> Details { get; set; }
     
         /// <summary>属性列表部分，可能为空。另外属性列表中的个别属性值可能也为空（空字符串），需要 ISV 引导用户自行补充，或者删除。</summary>
         [Newtonsoft.Json.JsonProperty("attributesPart", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionAttributesPart AttributesPart { get; set; }
+        public AlibabaProductDescriptionAttributesPart2 AttributesPart { get; set; }
     
         /// <summary>商品尺寸部分，可能为空。使用相关设备扫描商品后会自动产出商品尺寸，并生成一张标注好的示意图片。</summary>
         [Newtonsoft.Json.JsonProperty("sizePart", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionSizePart SizePart { get; set; }
+        public AlibabaProductDescriptionSizePart2 SizePart { get; set; }
     
         /// <summary>视频结构化信息</summary>
         [Newtonsoft.Json.JsonProperty("videoPart", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionVideoPart VideoPart { get; set; }
+        public AlibabaProductDescriptionVideoPart2 VideoPart { get; set; }
     
         /// <summary>详情页扩展信息，可选</summary>
         [Newtonsoft.Json.JsonProperty("productDetailExtend", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionProductDetailExtend ProductDetailExtend { get; set; }
+        public AlibabaProductDescriptionProductDetailExtend3 ProductDetailExtend { get; set; }
     
     
     }
@@ -9674,11 +9269,11 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>基于产品模型生成的模版信息</summary>
         [Newtonsoft.Json.JsonProperty("productInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductProductInfo ProductInfo { get; set; }
+        public AlibabaProductProductInfo3 ProductInfo { get; set; }
     
         /// <summary>商品详情描述结构化信息。注意，descriptionInfo 中所有包含 URL 信息的字段都是完整 URL。</summary>
         [Newtonsoft.Json.JsonProperty("descriptionInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductDescrTemplateCreateModel3DAlibabaProductDescriptionDescriptionInfo DescriptionInfo { get; set; }
+        public AlibabaProductDescriptionDescriptionInfo3 DescriptionInfo { get; set; }
     
     
     }
@@ -9714,7 +9309,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.description.ImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductDescriptionImageInfo 
+    public partial class AlibabaProductDescriptionImageInfo3 
     {
         /// <summary>URL 地址</summary>
         [Newtonsoft.Json.JsonProperty("url", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9734,7 +9329,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.description.MultiImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductDescriptionMultiImageInfo 
+    public partial class AlibabaProductDescriptionMultiImageInfo3 
     {
         /// <summary>多图部分的标题</summary>
         [Newtonsoft.Json.JsonProperty("title", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9746,7 +9341,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>多个图片信息</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductDescriptionImageInfo> Images { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductDescriptionImageInfo3> Images { get; set; }
     
         /// <summary>多图部分副标题</summary>
         [Newtonsoft.Json.JsonProperty("subTitle", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9758,7 +9353,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo4 
     {
         /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9770,7 +9365,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductSKUAttrInfo 
+    public partial class AlibabaProductSKUAttrInfo4 
     {
         /// <summary>sku属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9798,11 +9393,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductSKUInfo 
+    public partial class AlibabaProductProductSKUInfo4 
     {
         /// <summary>SKU属性值，可填多组信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductSKUAttrInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductSKUAttrInfo4> Attributes { get; set; }
     
         /// <summary>指定规格的货号</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9838,7 +9433,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductPriceRange 
+    public partial class AlibabaProductProductPriceRange4 
     {
         /// <summary>起批量</summary>
         [Newtonsoft.Json.JsonProperty("startQuantity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9854,7 +9449,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductSaleInfo 
+    public partial class AlibabaProductProductSaleInfo4 
     {
         /// <summary>是否支持网上交易。true：支持 false：不支持</summary>
         [Newtonsoft.Json.JsonProperty("supportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9870,7 +9465,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>区间价格。按数量范围设定的区间价格</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductPriceRange> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange4> PriceRanges { get; set; }
     
         /// <summary>可售数量</summary>
         [Newtonsoft.Json.JsonProperty("amountOnSale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9914,7 +9509,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductShippingInfo 
+    public partial class AlibabaProductProductShippingInfo4 
     {
         /// <summary>运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplateID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9966,7 +9561,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.ProductExtendInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductExtendInfo 
+    public partial class AlibabaProductProductExtendInfo4 
     {
         /// <summary>扩展结构的key</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9982,7 +9577,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.ProductInternationalTradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductInternationalTradeInfo 
+    public partial class AlibabaProductProductInternationalTradeInfo2 
     {
         /// <summary>FOB价格货币，参见FAQ 货币枚举值</summary>
         [Newtonsoft.Json.JsonProperty("fobCurrency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10046,7 +9641,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.ProductBizGroupInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductBizGroupInfo 
+    public partial class AlibabaProductProductBizGroupInfo2 
     {
         /// <summary>是否支持</summary>
         [Newtonsoft.Json.JsonProperty("support", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10066,7 +9661,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.model3D,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductInfo 
+    public partial class AlibabaProductProductInfo4 
     {
         /// <summary>商品ID</summary>
         [Newtonsoft.Json.JsonProperty("productID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10118,23 +9713,23 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo4 Image { get; set; }
     
         /// <summary>sku信息</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductSKUInfo> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductSKUInfo4> SkuInfos { get; set; }
     
         /// <summary>商品销售信息</summary>
         [Newtonsoft.Json.JsonProperty("saleInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductSaleInfo SaleInfo { get; set; }
+        public AlibabaProductProductSaleInfo4 SaleInfo { get; set; }
     
         /// <summary>商品物流信息</summary>
         [Newtonsoft.Json.JsonProperty("shippingInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductShippingInfo ShippingInfo { get; set; }
+        public AlibabaProductProductShippingInfo4 ShippingInfo { get; set; }
     
         /// <summary>商品扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("extendInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductExtendInfo> ExtendInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductExtendInfo4> ExtendInfos { get; set; }
     
         /// <summary>供应商用户ID</summary>
         [Newtonsoft.Json.JsonProperty("supplierUserId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10206,11 +9801,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品国际贸易信息，1688无需处理此字段</summary>
         [Newtonsoft.Json.JsonProperty("internationalTradeInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductInternationalTradeInfo InternationalTradeInfo { get; set; }
+        public AlibabaProductProductInternationalTradeInfo2 InternationalTradeInfo { get; set; }
     
         /// <summary>产品业务的支持信息,support为false说明不支持.</summary>
         [Newtonsoft.Json.JsonProperty("bizGroupInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateModel3DAlibabaProductProductBizGroupInfo> BizGroupInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductBizGroupInfo2> BizGroupInfos { get; set; }
     
         /// <summary>卖家旺旺ID</summary>
         [Newtonsoft.Json.JsonProperty("sellerLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10250,7 +9845,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.description.ImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductDescriptionImageInfo 
+    public partial class AlibabaProductDescriptionImageInfo4 
     {
         /// <summary>URL 地址</summary>
         [Newtonsoft.Json.JsonProperty("url", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10282,7 +9877,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>多个图片信息</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductDescriptionImageInfo> Images { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductDescriptionImageInfo4> Images { get; set; }
     
         /// <summary>多图部分副标题</summary>
         [Newtonsoft.Json.JsonProperty("subTitle", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10294,7 +9889,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo5 
     {
         /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10306,7 +9901,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductSKUAttrInfo 
+    public partial class AlibabaProductSKUAttrInfo5 
     {
         /// <summary>sku属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10334,11 +9929,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductSKUInfo 
+    public partial class AlibabaProductProductSKUInfo5 
     {
         /// <summary>SKU属性值，可填多组信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductSKUAttrInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductSKUAttrInfo5> Attributes { get; set; }
     
         /// <summary>指定规格的货号</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10374,7 +9969,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductPriceRange 
+    public partial class AlibabaProductProductPriceRange5 
     {
         /// <summary>起批量</summary>
         [Newtonsoft.Json.JsonProperty("startQuantity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10390,7 +9985,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductSaleInfo 
+    public partial class AlibabaProductProductSaleInfo5 
     {
         /// <summary>是否支持网上交易。true：支持 false：不支持</summary>
         [Newtonsoft.Json.JsonProperty("supportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10406,7 +10001,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>区间价格。按数量范围设定的区间价格</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductPriceRange> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange5> PriceRanges { get; set; }
     
         /// <summary>可售数量</summary>
         [Newtonsoft.Json.JsonProperty("amountOnSale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10450,7 +10045,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductShippingInfo 
+    public partial class AlibabaProductProductShippingInfo5 
     {
         /// <summary>运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplateID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10502,7 +10097,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.ProductExtendInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductExtendInfo 
+    public partial class AlibabaProductProductExtendInfo5 
     {
         /// <summary>扩展结构的key</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10518,7 +10113,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.ProductInternationalTradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductInternationalTradeInfo 
+    public partial class AlibabaProductProductInternationalTradeInfo3 
     {
         /// <summary>FOB价格货币，参见FAQ 货币枚举值</summary>
         [Newtonsoft.Json.JsonProperty("fobCurrency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10582,7 +10177,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.template.create.std,version:1,typeName:alibaba.product.ProductBizGroupInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductBizGroupInfo 
+    public partial class AlibabaProductProductBizGroupInfo3 
     {
         /// <summary>是否支持</summary>
         [Newtonsoft.Json.JsonProperty("support", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10654,23 +10249,23 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo5 Image { get; set; }
     
         /// <summary>sku信息</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductSKUInfo> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductSKUInfo5> SkuInfos { get; set; }
     
         /// <summary>商品销售信息</summary>
         [Newtonsoft.Json.JsonProperty("saleInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductSaleInfo SaleInfo { get; set; }
+        public AlibabaProductProductSaleInfo5 SaleInfo { get; set; }
     
         /// <summary>商品物流信息</summary>
         [Newtonsoft.Json.JsonProperty("shippingInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductShippingInfo ShippingInfo { get; set; }
+        public AlibabaProductProductShippingInfo5 ShippingInfo { get; set; }
     
         /// <summary>商品扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("extendInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductExtendInfo> ExtendInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductExtendInfo5> ExtendInfos { get; set; }
     
         /// <summary>供应商用户ID</summary>
         [Newtonsoft.Json.JsonProperty("supplierUserId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10742,11 +10337,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品国际贸易信息，1688无需处理此字段</summary>
         [Newtonsoft.Json.JsonProperty("internationalTradeInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductInternationalTradeInfo InternationalTradeInfo { get; set; }
+        public AlibabaProductProductInternationalTradeInfo3 InternationalTradeInfo { get; set; }
     
         /// <summary>产品业务的支持信息,support为false说明不支持.</summary>
         [Newtonsoft.Json.JsonProperty("bizGroupInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductTemplateCreateStdAlibabaProductProductBizGroupInfo> BizGroupInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductBizGroupInfo3> BizGroupInfos { get; set; }
     
         /// <summary>卖家旺旺ID</summary>
         [Newtonsoft.Json.JsonProperty("sellerLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10928,7 +10523,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByIdList,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByIdListAlibabaProductProductAttribute 
+    public partial class AlibabaProductProductAttribute4 
     {
         /// <summary>属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10956,7 +10551,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByIdList,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByIdListAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo6 
     {
         /// <summary>主图列表，需先使用图片上传接口上传图片</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10980,7 +10575,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByIdList,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByIdListAlibabaProductProductInfo 
+    public partial class AlibabaProductProductInfo5 
     {
         /// <summary>商品ID</summary>
         [Newtonsoft.Json.JsonProperty("productID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10992,7 +10587,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品属性和属性值</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetByIdListAlibabaProductProductAttribute> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductAttribute4> Attributes { get; set; }
     
         /// <summary>分组ID，确定商品所属分组。1688可传入多个分组ID，国际站同一个商品只能属于一个分组，因此默认只取第一个</summary>
         [Newtonsoft.Json.JsonProperty("groupID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11024,7 +10619,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductGetByIdListAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo6 Image { get; set; }
     
         /// <summary>供应商loginId</summary>
         [Newtonsoft.Json.JsonProperty("supplierLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11049,7 +10644,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>商品列表</summary>
         [Newtonsoft.Json.JsonProperty("productList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetByIdListAlibabaProductProductInfo> ProductList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductInfo5> ProductList { get; set; }
     
         /// <summary>是否成功</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11065,7 +10660,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductAttribute 
+    public partial class AlibabaProductProductAttribute5 
     {
         /// <summary>属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11093,7 +10688,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo7 
     {
         /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11117,7 +10712,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductSKUAttrInfo 
+    public partial class AlibabaProductSKUAttrInfo6 
     {
         /// <summary>sku属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11149,7 +10744,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductPriceRange 
+    public partial class AlibabaProductProductPriceRange6 
     {
         [Newtonsoft.Json.JsonProperty("startQuantity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? StartQuantity { get; set; }
@@ -11163,11 +10758,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductSKUInfo 
+    public partial class AlibabaProductProductSKUInfo6 
     {
         /// <summary>SKU属性值，可填多组信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductListGetAlibabaProductSKUAttrInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductSKUAttrInfo6> Attributes { get; set; }
     
         /// <summary>指定规格的货号，国际站无需关注</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11187,7 +10782,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>阶梯报价，1688无需关注</summary>
         [Newtonsoft.Json.JsonProperty("priceRange", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductListGetAlibabaProductProductPriceRange> PriceRange { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange6> PriceRange { get; set; }
     
         /// <summary>商品编码，1688无需关注</summary>
         [Newtonsoft.Json.JsonProperty("skuCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11211,7 +10806,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductSaleInfo 
+    public partial class AlibabaProductProductSaleInfo6 
     {
         /// <summary>是否支持网上交易。true：支持 false：不支持，国际站不需关注此字段</summary>
         [Newtonsoft.Json.JsonProperty("supportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11231,7 +10826,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>区间价格。按数量范围设定的区间价格</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductListGetAlibabaProductProductPriceRange> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange6> PriceRanges { get; set; }
     
         /// <summary>可售数量，国际站无需关注此字段</summary>
         [Newtonsoft.Json.JsonProperty("amountOnSale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11275,7 +10870,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductShippingInfo 
+    public partial class AlibabaProductProductShippingInfo6 
     {
         /// <summary>运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplateID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11311,7 +10906,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductInternationalTradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductInternationalTradeInfo 
+    public partial class AlibabaProductProductInternationalTradeInfo4 
     {
         /// <summary>FOB价格货币，参见FAQ 货币枚举值</summary>
         [Newtonsoft.Json.JsonProperty("fobCurrency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11375,7 +10970,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductExtendInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductExtendInfo 
+    public partial class AlibabaProductProductExtendInfo6 
     {
         /// <summary>扩展结构的key</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11391,7 +10986,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductBizGroupInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductBizGroupInfo 
+    public partial class AlibabaProductProductBizGroupInfo4 
     {
         /// <summary>是否支持</summary>
         [Newtonsoft.Json.JsonProperty("support", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11411,7 +11006,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductListGetAlibabaProductProductInfo 
+    public partial class AlibabaProductProductInfo6 
     {
         /// <summary>商品ID</summary>
         [Newtonsoft.Json.JsonProperty("productID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11427,7 +11022,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品属性和属性值</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductListGetAlibabaProductProductAttribute> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductAttribute5> Attributes { get; set; }
     
         /// <summary>分组ID，确定商品所属分组。1688可传入多个分组ID，国际站同一个商品只能属于一个分组，因此默认只取第一个</summary>
         [Newtonsoft.Json.JsonProperty("groupID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11463,27 +11058,27 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductListGetAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo7 Image { get; set; }
     
         /// <summary>sku信息</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductListGetAlibabaProductProductSKUInfo> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductSKUInfo6> SkuInfos { get; set; }
     
         /// <summary>商品销售信息</summary>
         [Newtonsoft.Json.JsonProperty("saleInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductListGetAlibabaProductProductSaleInfo SaleInfo { get; set; }
+        public AlibabaProductProductSaleInfo6 SaleInfo { get; set; }
     
         /// <summary>商品物流信息</summary>
         [Newtonsoft.Json.JsonProperty("shippingInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductListGetAlibabaProductProductShippingInfo ShippingInfo { get; set; }
+        public AlibabaProductProductShippingInfo6 ShippingInfo { get; set; }
     
         /// <summary>商品国际贸易信息，1688无需处理此字段</summary>
         [Newtonsoft.Json.JsonProperty("internationalTradeInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductListGetAlibabaProductProductInternationalTradeInfo InternationalTradeInfo { get; set; }
+        public AlibabaProductProductInternationalTradeInfo4 InternationalTradeInfo { get; set; }
     
         /// <summary>商品扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("extendInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductListGetAlibabaProductProductExtendInfo> ExtendInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductExtendInfo6> ExtendInfos { get; set; }
     
         /// <summary>供应商用户ID</summary>
         [Newtonsoft.Json.JsonProperty("supplierUserId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11543,7 +11138,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>产品业务的支持信息,support为false说明不支持.</summary>
         [Newtonsoft.Json.JsonProperty("bizGroupInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductListGetAlibabaProductProductBizGroupInfo> BizGroupInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductBizGroupInfo4> BizGroupInfos { get; set; }
     
     
     }
@@ -11559,7 +11154,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品列表</summary>
         [Newtonsoft.Json.JsonProperty("resultList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductListGetAlibabaProductProductInfo> ResultList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductInfo6> ResultList { get; set; }
     
         /// <summary>商品总数量</summary>
         [Newtonsoft.Json.JsonProperty("totalRecords", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11665,7 +11260,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.incrementModify,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductIncrementModifyAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo8 
     {
         /// <summary>主图列表，需先使用图片上传接口上传图片</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11689,7 +11284,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.incrementModify,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductIncrementModifyAlibabaProductProductAttribute 
+    public partial class AlibabaProductProductAttribute6 
     {
         /// <summary>属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11717,7 +11312,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.incrementModify,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductIncrementModifyAlibabaProductProductInfo 
+    public partial class AlibabaProductProductInfo7 
     {
         /// <summary>商品ID</summary>
         [Newtonsoft.Json.JsonProperty("productID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11733,7 +11328,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品属性和属性值</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductIncrementModifyAlibabaProductProductAttribute> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductAttribute6> Attributes { get; set; }
     
         /// <summary>分组ID，确定商品所属分组。1688可传入多个分组ID，国际站同一个商品只能属于一个分组，因此默认只取第一个</summary>
         [Newtonsoft.Json.JsonProperty("groupID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11769,7 +11364,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductIncrementModifyAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo8 Image { get; set; }
     
     
     }
@@ -11787,7 +11382,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>商品信息</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductIncrementModifyAlibabaProductProductInfo Result { get; set; }
+        public AlibabaProductProductInfo7 Result { get; set; }
     
         /// <summary>错误码标识</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11803,7 +11398,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.repost,version:1,typeName:alibaba.product.ProductOperateResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductRepostAlibabaProductProductOperateResult 
+    public partial class AlibabaProductProductOperateResult2 
     {
         /// <summary>重发商品Id</summary>
         [Newtonsoft.Json.JsonProperty("productId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11836,7 +11431,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>操作结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductRepostAlibabaProductProductOperateResult> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductOperateResult2> Result { get; set; }
     
         /// <summary>错误code</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11896,7 +11491,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.modifyStock,version:1,typeName:alibaba.product.ProductOperateResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductModifyStockAlibabaProductProductOperateResult 
+    public partial class AlibabaProductProductOperateResult3 
     {
         /// <summary>商品ID</summary>
         [Newtonsoft.Json.JsonProperty("productId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11929,7 +11524,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>返回信息</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductModifyStockAlibabaProductProductOperateResult> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductOperateResult3> Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11949,7 +11544,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductAttribute 
+    public partial class AlibabaProductProductAttribute7 
     {
         /// <summary>属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11977,7 +11572,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo9 
     {
         /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -11989,7 +11584,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByStatusAlibabaProductSKUAttrInfo 
+    public partial class AlibabaProductSKUAttrInfo7 
     {
         /// <summary>sku属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12017,11 +11612,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductSKUInfo 
+    public partial class AlibabaProductProductSKUInfo7 
     {
         /// <summary>SKU属性值，可填多组信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetByStatusAlibabaProductSKUAttrInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductSKUAttrInfo7> Attributes { get; set; }
     
         /// <summary>指定规格的货号</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12057,7 +11652,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductPriceRange 
+    public partial class AlibabaProductProductPriceRange7 
     {
         /// <summary>起批量</summary>
         [Newtonsoft.Json.JsonProperty("startQuantity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12073,7 +11668,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductSaleInfo 
+    public partial class AlibabaProductProductSaleInfo7 
     {
         /// <summary>是否支持网上交易。true：支持 false：不支持</summary>
         [Newtonsoft.Json.JsonProperty("supportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12089,7 +11684,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>区间价格。按数量范围设定的区间价格</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductPriceRange> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange7> PriceRanges { get; set; }
     
         /// <summary>可售数量</summary>
         [Newtonsoft.Json.JsonProperty("amountOnSale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12133,7 +11728,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductShippingInfo 
+    public partial class AlibabaProductProductShippingInfo7 
     {
         /// <summary>运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplateID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12185,7 +11780,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductExtendInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductExtendInfo 
+    public partial class AlibabaProductProductExtendInfo7 
     {
         /// <summary>扩展结构的key</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12201,7 +11796,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductInfo 
+    public partial class AlibabaProductProductInfo8 
     {
         /// <summary>商品ID</summary>
         [Newtonsoft.Json.JsonProperty("productID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12217,7 +11812,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品属性和属性值</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductAttribute> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductAttribute7> Attributes { get; set; }
     
         /// <summary>分组ID，确定商品所属分组。1688可传入多个分组ID，国际站同一个商品只能属于一个分组，因此默认只取第一个</summary>
         [Newtonsoft.Json.JsonProperty("groupID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12253,23 +11848,23 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo9 Image { get; set; }
     
         /// <summary>sku信息</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductSKUInfo> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductSKUInfo7> SkuInfos { get; set; }
     
         /// <summary>商品销售信息</summary>
         [Newtonsoft.Json.JsonProperty("saleInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductSaleInfo SaleInfo { get; set; }
+        public AlibabaProductProductSaleInfo7 SaleInfo { get; set; }
     
         /// <summary>商品物流信息</summary>
         [Newtonsoft.Json.JsonProperty("shippingInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductShippingInfo ShippingInfo { get; set; }
+        public AlibabaProductProductShippingInfo7 ShippingInfo { get; set; }
     
         /// <summary>商品扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("extendInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductExtendInfo> ExtendInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductExtendInfo7> ExtendInfos { get; set; }
     
         /// <summary>类目名</summary>
         [Newtonsoft.Json.JsonProperty("categoryName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12321,7 +11916,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品列表</summary>
         [Newtonsoft.Json.JsonProperty("resultList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductGetByStatusAlibabaProductProductInfo ResultList { get; set; }
+        public AlibabaProductProductInfo8 ResultList { get; set; }
     
         /// <summary>每页数量</summary>
         [Newtonsoft.Json.JsonProperty("sizePerPage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12382,7 +11977,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.expire,version:1,typeName:alibaba.product.ProductOperateResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductExpireAlibabaProductProductOperateResult 
+    public partial class AlibabaProductProductOperateResult4 
     {
         /// <summary>过期商品ID</summary>
         [Newtonsoft.Json.JsonProperty("productId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12415,7 +12010,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>操作结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductExpireAlibabaProductProductOperateResult> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductOperateResult4> Result { get; set; }
     
         /// <summary>错误code</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12763,7 +12358,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.category.searchSPUInfo,version:1,typeName:alibaba.category.FeatureAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaCategorySearchSPUInfoAlibabaCategoryFeatureAttribute 
+    public partial class AlibabaCategoryFeatureAttribute2 
     {
         /// <summary>规格属性id</summary>
         [Newtonsoft.Json.JsonProperty("attrID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12799,7 +12394,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.category.searchSPUInfo,version:1,typeName:alibaba.category.SpuInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaCategorySearchSPUInfoAlibabaCategorySpuInfo 
+    public partial class AlibabaCategorySpuInfo2 
     {
         /// <summary>spu ID</summary>
         [Newtonsoft.Json.JsonProperty("spuId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12815,7 +12410,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>spu的属性值对</summary>
         [Newtonsoft.Json.JsonProperty("standardSpuAttrValues", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaCategorySearchSPUInfoAlibabaCategoryFeatureAttribute> StandardSpuAttrValues { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCategoryFeatureAttribute2> StandardSpuAttrValues { get; set; }
     
         /// <summary>SPU的详细说明</summary>
         [Newtonsoft.Json.JsonProperty("details", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12840,7 +12435,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>SPU数组信息</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaCategorySearchSPUInfoAlibabaCategorySpuInfo> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCategorySpuInfo2> Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12930,7 +12525,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductProductAttribute 
+    public partial class AlibabaProductProductAttribute8 
     {
         /// <summary>属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12958,7 +12553,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo10 
     {
         /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12970,7 +12565,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductSKUAttrInfo 
+    public partial class AlibabaProductSKUAttrInfo8 
     {
         /// <summary>sku属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -12998,11 +12593,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductProductSKUInfo 
+    public partial class AlibabaProductProductSKUInfo8 
     {
         /// <summary>SKU属性值，可填多组信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductEditAlibabaProductSKUAttrInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductSKUAttrInfo8> Attributes { get; set; }
     
         /// <summary>指定规格的货号</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13038,7 +12633,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductProductPriceRange 
+    public partial class AlibabaProductProductPriceRange8 
     {
         /// <summary>起批量</summary>
         [Newtonsoft.Json.JsonProperty("startQuantity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13054,7 +12649,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductProductSaleInfo 
+    public partial class AlibabaProductProductSaleInfo8 
     {
         /// <summary>是否支持网上交易。true：支持 false：不支持</summary>
         [Newtonsoft.Json.JsonProperty("supportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13070,7 +12665,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>区间价格。按数量范围设定的区间价格</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductEditAlibabaProductProductPriceRange> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange8> PriceRanges { get; set; }
     
         /// <summary>可售数量</summary>
         [Newtonsoft.Json.JsonProperty("amountOnSale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13114,7 +12709,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductProductShippingInfo 
+    public partial class AlibabaProductProductShippingInfo8 
     {
         /// <summary>运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplateID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13166,7 +12761,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.ProductExtendInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductProductExtendInfo 
+    public partial class AlibabaProductProductExtendInfo8 
     {
         /// <summary>扩展结构的key</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13182,7 +12777,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.ProductInternationalTradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductProductInternationalTradeInfo 
+    public partial class AlibabaProductProductInternationalTradeInfo5 
     {
         /// <summary>FOB价格货币，参见FAQ 货币枚举值</summary>
         [Newtonsoft.Json.JsonProperty("fobCurrency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13246,7 +12841,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.edit,version:1,typeName:alibaba.product.ProductBizGroupInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductEditAlibabaProductProductBizGroupInfo 
+    public partial class AlibabaProductProductBizGroupInfo5 
     {
         /// <summary>是否支持</summary>
         [Newtonsoft.Json.JsonProperty("support", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13282,7 +12877,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品属性和属性值</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductEditAlibabaProductProductAttribute> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductAttribute8> Attributes { get; set; }
     
         /// <summary>分组ID，确定商品所属分组。1688可传入多个分组ID，国际站同一个商品只能属于一个分组，因此默认只取第一个</summary>
         [Newtonsoft.Json.JsonProperty("groupID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13318,23 +12913,23 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductEditAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo10 Image { get; set; }
     
         /// <summary>sku信息</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductEditAlibabaProductProductSKUInfo> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductSKUInfo8> SkuInfos { get; set; }
     
         /// <summary>商品销售信息</summary>
         [Newtonsoft.Json.JsonProperty("saleInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductEditAlibabaProductProductSaleInfo SaleInfo { get; set; }
+        public AlibabaProductProductSaleInfo8 SaleInfo { get; set; }
     
         /// <summary>商品物流信息</summary>
         [Newtonsoft.Json.JsonProperty("shippingInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductEditAlibabaProductProductShippingInfo ShippingInfo { get; set; }
+        public AlibabaProductProductShippingInfo8 ShippingInfo { get; set; }
     
         /// <summary>商品扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("extendInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductEditAlibabaProductProductExtendInfo> ExtendInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductExtendInfo8> ExtendInfos { get; set; }
     
         /// <summary>供应商用户ID</summary>
         [Newtonsoft.Json.JsonProperty("supplierUserId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13406,11 +13001,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品国际贸易信息，1688无需处理此字段</summary>
         [Newtonsoft.Json.JsonProperty("internationalTradeInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductEditAlibabaProductProductInternationalTradeInfo InternationalTradeInfo { get; set; }
+        public AlibabaProductProductInternationalTradeInfo5 InternationalTradeInfo { get; set; }
     
         /// <summary>产品业务的支持信息,support为false说明不支持.</summary>
         [Newtonsoft.Json.JsonProperty("bizGroupInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductEditAlibabaProductProductBizGroupInfo> BizGroupInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductBizGroupInfo5> BizGroupInfos { get; set; }
     
         /// <summary>卖家旺旺ID</summary>
         [Newtonsoft.Json.JsonProperty("sellerLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13485,7 +13080,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.photobank.album.getList,version:1,typeName:alibaba.photobank.photo.AlbumDomain</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaPhotobankAlbumGetListAlibabaPhotobankPhotoAlbumDomain 
+    public partial class AlibabaPhotobankPhotoAlbumDomain2 
     {
         /// <summary>相册ID</summary>
         [Newtonsoft.Json.JsonProperty("albumID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13522,7 +13117,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>相册信息</summary>
         [Newtonsoft.Json.JsonProperty("albumInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaPhotobankAlbumGetListAlibabaPhotobankPhotoAlbumDomain> AlbumInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaPhotobankPhotoAlbumDomain2> AlbumInfos { get; set; }
     
         /// <summary>错误信息</summary>
         [Newtonsoft.Json.JsonProperty("errorMsg", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13538,7 +13133,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.photobank.photo.getList,version:1,typeName:alibaba.photobank.photo.ResponseDomain</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaPhotobankPhotoGetListAlibabaPhotobankPhotoResponseDomain 
+    public partial class AlibabaPhotobankPhotoResponseDomain2 
     {
         /// <summary>图片ID</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13571,7 +13166,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>图片列表</summary>
         [Newtonsoft.Json.JsonProperty("photoInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaPhotobankPhotoGetListAlibabaPhotobankPhotoResponseDomain> PhotoInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaPhotobankPhotoResponseDomain2> PhotoInfos { get; set; }
     
         /// <summary>总条数</summary>
         [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13749,7 +13344,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.photobank.photo.add,version:1,typeName:alibaba.photobank.photo.ResponseDomain</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaPhotobankPhotoAddAlibabaPhotobankPhotoResponseDomain 
+    public partial class AlibabaPhotobankPhotoResponseDomain3 
     {
         /// <summary>图片ID</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13782,7 +13377,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>图片信息</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaPhotobankPhotoAddAlibabaPhotobankPhotoResponseDomain Image { get; set; }
+        public AlibabaPhotobankPhotoResponseDomain3 Image { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13863,7 +13458,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductAddAlibabaProductSKUAttrInfo 
+    public partial class AlibabaProductSKUAttrInfo9 
     {
         /// <summary>sku属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13891,11 +13486,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductAddAlibabaProductProductSKUInfo 
+    public partial class AlibabaProductProductSKUInfo9 
     {
         /// <summary>SKU属性值，可填多组信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductAddAlibabaProductSKUAttrInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductSKUAttrInfo9> Attributes { get; set; }
     
         /// <summary>指定规格的货号</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13931,7 +13526,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductAddAlibabaProductProductPriceRange 
+    public partial class AlibabaProductProductPriceRange9 
     {
         /// <summary>起批量</summary>
         [Newtonsoft.Json.JsonProperty("startQuantity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13947,7 +13542,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductAddAlibabaProductProductSaleInfo 
+    public partial class AlibabaProductProductSaleInfo9 
     {
         /// <summary>是否支持网上交易。true：支持 false：不支持</summary>
         [Newtonsoft.Json.JsonProperty("supportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -13963,7 +13558,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>区间价格。按数量范围设定的区间价格</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductAddAlibabaProductProductPriceRange> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange9> PriceRanges { get; set; }
     
         /// <summary>可售数量</summary>
         [Newtonsoft.Json.JsonProperty("amountOnSale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14007,7 +13602,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductAddAlibabaProductProductShippingInfo 
+    public partial class AlibabaProductProductShippingInfo9 
     {
         /// <summary>运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplateID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14059,7 +13654,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.ProductInternationalTradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductAddAlibabaProductProductInternationalTradeInfo 
+    public partial class AlibabaProductProductInternationalTradeInfo6 
     {
         /// <summary>FOB价格货币，参见FAQ 货币枚举值</summary>
         [Newtonsoft.Json.JsonProperty("fobCurrency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14144,7 +13739,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductExtendInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductProductExtendInfo 
+    public partial class AlibabaProductProductExtendInfo9 
     {
         /// <summary>扩展结构的key</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14160,7 +13755,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductProductShippingInfo 
+    public partial class AlibabaProductProductShippingInfo10 
     {
         /// <summary>运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplateID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14196,7 +13791,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductProductImageInfo 
+    public partial class AlibabaProductProductImageInfo11 
     {
         /// <summary>主图列表，使用相对路径，需要增加域名：https://cbu01.alicdn.com/</summary>
         [Newtonsoft.Json.JsonProperty("images", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14220,7 +13815,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductSKUAttrInfo 
+    public partial class AlibabaProductSKUAttrInfo10 
     {
         /// <summary>sku属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14256,7 +13851,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductProductPriceRange 
+    public partial class AlibabaProductProductPriceRange10 
     {
         [Newtonsoft.Json.JsonProperty("startQuantity", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? StartQuantity { get; set; }
@@ -14270,11 +13865,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductProductSKUInfo 
+    public partial class AlibabaProductProductSKUInfo10 
     {
         /// <summary>SKU属性值，可填多组信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetAlibabaProductSKUAttrInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductSKUAttrInfo10> Attributes { get; set; }
     
         /// <summary>指定规格的货号，国际站无需关注</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14294,7 +13889,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>阶梯报价，1688无需关注</summary>
         [Newtonsoft.Json.JsonProperty("priceRange", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetAlibabaProductProductPriceRange> PriceRange { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange10> PriceRange { get; set; }
     
         /// <summary>商品编码，1688无需关注</summary>
         [Newtonsoft.Json.JsonProperty("skuCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14318,7 +13913,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductProductSaleInfo 
+    public partial class AlibabaProductProductSaleInfo10 
     {
         /// <summary>是否支持网上交易。true：支持 false：不支持，国际站不需关注此字段</summary>
         [Newtonsoft.Json.JsonProperty("supportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14338,7 +13933,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>区间价格。按数量范围设定的区间价格</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetAlibabaProductProductPriceRange> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductPriceRange10> PriceRanges { get; set; }
     
         /// <summary>可售数量，国际站无需关注此字段</summary>
         [Newtonsoft.Json.JsonProperty("amountOnSale", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14382,7 +13977,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductProductAttribute 
+    public partial class AlibabaProductProductAttribute9 
     {
         /// <summary>属性ID</summary>
         [Newtonsoft.Json.JsonProperty("attributeID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14410,11 +14005,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductProductInfo 
+    public partial class AlibabaProductProductInfo9 
     {
         /// <summary>商品扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("extendInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetAlibabaProductProductExtendInfo> ExtendInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductExtendInfo9> ExtendInfos { get; set; }
     
         /// <summary>主图视频播放地址</summary>
         [Newtonsoft.Json.JsonProperty("mainVedio", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14434,7 +14029,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品物流信息</summary>
         [Newtonsoft.Json.JsonProperty("shippingInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductGetAlibabaProductProductShippingInfo ShippingInfo { get; set; }
+        public AlibabaProductProductShippingInfo10 ShippingInfo { get; set; }
     
         /// <summary>商品详情描述，可包含图片中心的图片URL</summary>
         [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14470,7 +14065,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品主图</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductGetAlibabaProductProductImageInfo Image { get; set; }
+        public AlibabaProductProductImageInfo11 Image { get; set; }
     
         /// <summary>是否海外代发</summary>
         [Newtonsoft.Json.JsonProperty("crossBorderOffer", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14482,7 +14077,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>sku信息</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetAlibabaProductProductSKUInfo> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductSKUInfo10> SkuInfos { get; set; }
     
         /// <summary>质量星级(0-5)</summary>
         [Newtonsoft.Json.JsonProperty("qualityLevel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14498,7 +14093,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品销售信息</summary>
         [Newtonsoft.Json.JsonProperty("saleInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductGetAlibabaProductProductSaleInfo SaleInfo { get; set; }
+        public AlibabaProductProductSaleInfo10 SaleInfo { get; set; }
     
         /// <summary>创建时间</summary>
         [Newtonsoft.Json.JsonProperty("createTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14506,7 +14101,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品属性和属性值</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetAlibabaProductProductAttribute> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductAttribute9> Attributes { get; set; }
     
         /// <summary>商品状态。published:上网状态;member expired:会员撤销;auto expired:自然过期;expired:过期(包含手动过期与自动过期);member deleted:会员删除;modified:修改;new:新发;deleted:删除;TBD:to be delete;approved:审批通过;auditing:审核中;untread:审核不通过;</summary>
         [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14526,7 +14121,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductBizGroupInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaProductGetAlibabaProductProductBizGroupInfo 
+    public partial class AlibabaProductProductBizGroupInfo6 
     {
         /// <summary>是否支持</summary>
         [Newtonsoft.Json.JsonProperty("support", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14555,11 +14150,11 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>商品详细信息</summary>
         [Newtonsoft.Json.JsonProperty("productInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaProductAlibabaProductGetAlibabaProductProductInfo ProductInfo { get; set; }
+        public AlibabaProductProductInfo9 ProductInfo { get; set; }
     
         /// <summary>产品业务的支持信息,support为false说明不支持.</summary>
         [Newtonsoft.Json.JsonProperty("bizGroupInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaProductGetAlibabaProductProductBizGroupInfo> BizGroupInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductProductBizGroupInfo6> BizGroupInfos { get; set; }
     
         /// <summary>创建时间</summary>
         [Newtonsoft.Json.JsonProperty("createTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14607,7 +14202,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product,apiname:alibaba.category.get,version:1,typeName:alibaba.category.CategoryInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductAlibabaCategoryGetAlibabaCategoryCategoryInfo 
+    public partial class AlibabaCategoryCategoryInfo2 
     {
         /// <summary>类目ID</summary>
         [Newtonsoft.Json.JsonProperty("categoryID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -14652,7 +14247,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>类目列表</summary>
         [Newtonsoft.Json.JsonProperty("categoryInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductAlibabaCategoryGetAlibabaCategoryCategoryInfo> CategoryInfo { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCategoryCategoryInfo2> CategoryInfo { get; set; }
     
         /// <summary>错误信息</summary>
         [Newtonsoft.Json.JsonProperty("errorMsg", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -15716,7 +15311,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:ali.intl.tpg,apiname:alibaba.tpg.test.mapping2.test1,version:1,typeName:alibaba.tpg.mapping2.Complex3</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliIntlTpgAlibabaTpgTestMapping2Test1AlibabaTpgMapping2Complex3 
+    public partial class AlibabaTpgMapping2Complex32 
     {
         [Newtonsoft.Json.JsonProperty("a", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string A { get; set; }
@@ -15745,7 +15340,7 @@ namespace AlibabaSDK.FullModels
         public System.DateTimeOffset? Date { get; set; }
     
         [Newtonsoft.Json.JsonProperty("complex3array", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<AliIntlTpgAlibabaTpgTestMapping2Test1AlibabaTpgMapping2Complex3> Complex3array { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTpgMapping2Complex32> Complex3array { get; set; }
     
     
     }
@@ -15765,7 +15360,7 @@ namespace AlibabaSDK.FullModels
         public System.Collections.Generic.ICollection<AlibabaTpgMapping2Complex2> Complex2Array { get; set; }
     
         [Newtonsoft.Json.JsonProperty("complex3", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliIntlTpgAlibabaTpgTestMapping2Test1AlibabaTpgMapping2Complex3 Complex3 { get; set; }
+        public AlibabaTpgMapping2Complex32 Complex3 { get; set; }
     
     
     }
@@ -15864,7 +15459,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:ali.intl.tpg,apiname:open.reportCustomsDeclarationStatusFromZWY,version:1,typeName:alibaba.tpg.CommonResponseHeader</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliIntlTpgOpenReportCustomsDeclarationStatusFromZWYAlibabaTpgCommonResponseHeader 
+    public partial class AlibabaTpgCommonResponseHeader2 
     {
         [Newtonsoft.Json.JsonProperty("messageId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string MessageId { get; set; }
@@ -15896,7 +15491,7 @@ namespace AlibabaSDK.FullModels
         public string Body { get; set; }
     
         [Newtonsoft.Json.JsonProperty("header", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliIntlTpgOpenReportCustomsDeclarationStatusFromZWYAlibabaTpgCommonResponseHeader Header { get; set; }
+        public AlibabaTpgCommonResponseHeader2 Header { get; set; }
     
     
     }
@@ -16215,7 +15810,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.da.mydata,apiname:alibaba.mydata.myKeywordsService.getKeywordsWeekEffect,version:1,typeName:alibaba.mydata.myKeywordsService.DateRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaDaMydataAlibabaMydataMyKeywordsServiceGetKeywordsWeekEffectAlibabaMydataMyKeywordsServiceDateRange 
+    public partial class AlibabaMydataMyKeywordsServiceDateRange2 
     {
         /// <summary>周期开始时间，格式为yyyy-MM-dd</summary>
         [Newtonsoft.Json.JsonProperty("startDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -16271,7 +15866,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.da.mydata,apiname:alibaba.mydata.myKeywordsService.getKeywordsWeekEffect,version:1,typeName:alibaba.mydata.myKeywordsService.EffectEntity</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaDaMydataAlibabaMydataMyKeywordsServiceGetKeywordsWeekEffectAlibabaMydataMyKeywordsServiceEffectEntity 
+    public partial class AlibabaMydataMyKeywordsServiceEffectEntity2 
     {
         /// <summary>Top10平均点击</summary>
         [Newtonsoft.Json.JsonProperty("avgSumClickCnt", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -16323,7 +15918,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.da.mydata,apiname:alibaba.mydata.myKeywordsService.getKeywordsWeekEffect,version:1,typeName:alibaba.mydata.myKeywordsService.MyKeywordEffect</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaDaMydataAlibabaMydataMyKeywordsServiceGetKeywordsWeekEffectAlibabaMydataMyKeywordsServiceMyKeywordEffect 
+    public partial class AlibabaMydataMyKeywordsServiceMyKeywordEffect2 
     {
         /// <summary>总的数据量</summary>
         [Newtonsoft.Json.JsonProperty("totalCount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -16331,7 +15926,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>词效果数据</summary>
         [Newtonsoft.Json.JsonProperty("effects", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaDaMydataAlibabaMydataMyKeywordsServiceGetKeywordsWeekEffectAlibabaMydataMyKeywordsServiceEffectEntity> Effects { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaMydataMyKeywordsServiceEffectEntity2> Effects { get; set; }
     
     
     }
@@ -16348,7 +15943,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>周效果数据</summary>
         [Newtonsoft.Json.JsonProperty("myKeywordEffect", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaDaMydataAlibabaMydataMyKeywordsServiceGetKeywordsWeekEffectAlibabaMydataMyKeywordsServiceMyKeywordEffect MyKeywordEffect { get; set; }
+        public AlibabaMydataMyKeywordsServiceMyKeywordEffect2 MyKeywordEffect { get; set; }
     
         /// <summary>错误编码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -16405,7 +16000,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.da.mydata,apiname:alibaba.mydata.overviewService.getCompanyIndicators,version:1,typeName:alibaba.mydata.overviewService.DateRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaDaMydataAlibabaMydataOverviewServiceGetCompanyIndicatorsAlibabaMydataOverviewServiceDateRange 
+    public partial class AlibabaMydataOverviewServiceDateRange2 
     {
         /// <summary>周期开始时间，格式为yyyy-MM-dd</summary>
         [Newtonsoft.Json.JsonProperty("startDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -16514,7 +16109,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.da.mydata,apiname:alibaba.mydata.overviewService.getIndustries,version:1,typeName:alibaba.mydata.overviewService.Industry</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaDaMydataAlibabaMydataOverviewServiceGetIndustriesAlibabaMydataOverviewServiceIndustry 
+    public partial class AlibabaMydataOverviewServiceIndustry2 
     {
         /// <summary>行业ID</summary>
         [Newtonsoft.Json.JsonProperty("industryId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -16543,7 +16138,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>供应商有效果的前20个行业二级行业</summary>
         [Newtonsoft.Json.JsonProperty("industries", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaDaMydataAlibabaMydataOverviewServiceGetIndustriesAlibabaMydataOverviewServiceIndustry> Industries { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaMydataOverviewServiceIndustry2> Industries { get; set; }
     
         /// <summary>错误编码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18597,7 +18192,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerOrderService.createOrderBySourceId,version:1,typeName:alibaba.procurement.api.order.interactive.model.ExecuteTermInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelExecuteTermInfo 
+    public partial class AlibabaProcurementApiOrderInteractiveModelExecuteTermInfo2 
     {
         /// <summary>描述</summary>
         [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18629,7 +18224,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerOrderService.createOrderBySourceId,version:1,typeName:alibaba.procurement.api.order.interactive.model.DeliveryAddress</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelDeliveryAddress 
+    public partial class AlibabaProcurementApiOrderInteractiveModelDeliveryAddress2 
     {
         /// <summary>收货地址</summary>
         [Newtonsoft.Json.JsonProperty("address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18677,7 +18272,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerOrderService.createOrderBySourceId,version:1,typeName:alibaba.procurement.api.order.interactive.model.InvoiceTemplateInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelInvoiceTemplateInfo 
+    public partial class AlibabaProcurementApiOrderInteractiveModelInvoiceTemplateInfo2 
     {
         /// <summary>银行卡账号</summary>
         [Newtonsoft.Json.JsonProperty("accountId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18697,7 +18292,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收货地址</summary>
         [Newtonsoft.Json.JsonProperty("deliveryAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelDeliveryAddress DeliveryAddress { get; set; }
+        public AlibabaProcurementApiOrderInteractiveModelDeliveryAddress2 DeliveryAddress { get; set; }
     
         /// <summary>发票主键ID</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18745,11 +18340,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerOrderService.createOrderBySourceId,version:1,typeName:alibaba.procurement.api.order.interactive.model.LogisticsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelLogisticsInfo 
+    public partial class AlibabaProcurementApiOrderInteractiveModelLogisticsInfo2 
     {
         /// <summary>收货地址</summary>
         [Newtonsoft.Json.JsonProperty("address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelDeliveryAddress Address { get; set; }
+        public AlibabaProcurementApiOrderInteractiveModelDeliveryAddress2 Address { get; set; }
     
     
     }
@@ -18757,7 +18352,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerOrderService.createOrderBySourceId,version:1,typeName:alibaba.procurement.api.order.interactive.model.entry.AdditionalChargeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelEntryAdditionalChargeInfo 
+    public partial class AlibabaProcurementApiOrderInteractiveModelEntryAdditionalChargeInfo2 
     {
         /// <summary>单价</summary>
         [Newtonsoft.Json.JsonProperty("pea", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18793,7 +18388,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerOrderService.createOrderBySourceId,version:1,typeName:alibaba.procurement.api.order.interactive.model.entry.DeliveryInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelEntryDeliveryInfo 
+    public partial class AlibabaProcurementApiOrderInteractiveModelEntryDeliveryInfo2 
     {
         /// <summary>交付日期</summary>
         [Newtonsoft.Json.JsonProperty("deliveryDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18825,7 +18420,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>附加费用</summary>
         [Newtonsoft.Json.JsonProperty("additionalChargeInfoList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelEntryAdditionalChargeInfo> AdditionalChargeInfoList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProcurementApiOrderInteractiveModelEntryAdditionalChargeInfo2> AdditionalChargeInfoList { get; set; }
     
         /// <summary>采购数量</summary>
         [Newtonsoft.Json.JsonProperty("amount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18833,7 +18428,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收货信息</summary>
         [Newtonsoft.Json.JsonProperty("deliveryInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelEntryDeliveryInfo DeliveryInfo { get; set; }
+        public AlibabaProcurementApiOrderInteractiveModelEntryDeliveryInfo2 DeliveryInfo { get; set; }
     
         /// <summary>额外扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("extraInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18869,15 +18464,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>执行条款信息</summary>
         [Newtonsoft.Json.JsonProperty("executeTermInfoList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelExecuteTermInfo> ExecuteTermInfoList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProcurementApiOrderInteractiveModelExecuteTermInfo2> ExecuteTermInfoList { get; set; }
     
         /// <summary>发票模板信息</summary>
         [Newtonsoft.Json.JsonProperty("invoiceTemplateInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelInvoiceTemplateInfo InvoiceTemplateInfo { get; set; }
+        public AlibabaProcurementApiOrderInteractiveModelInvoiceTemplateInfo2 InvoiceTemplateInfo { get; set; }
     
         /// <summary>物流信息</summary>
         [Newtonsoft.Json.JsonProperty("logisticsInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiOrderInteractiveModelLogisticsInfo LogisticsInfo { get; set; }
+        public AlibabaProcurementApiOrderInteractiveModelLogisticsInfo2 LogisticsInfo { get; set; }
     
         /// <summary>是否需要默认发票</summary>
         [Newtonsoft.Json.JsonProperty("needDefaultInvoiceTemplate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18917,7 +18512,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerOrderService.createOrderBySourceId,version:1,typeName:alibaba.procurement.api.integration.result.IntegrationCreateOrderResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiIntegrationResultIntegrationCreateOrderResult 
+    public partial class AlibabaProcurementApiIntegrationResultIntegrationCreateOrderResult2 
     {
         /// <summary>订单编码</summary>
         [Newtonsoft.Json.JsonProperty("orderCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -18937,7 +18532,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>创建订单返回数据</summary>
         [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaProcurementBuyerOrderServiceCreateOrderBySourceIdAlibabaProcurementApiIntegrationResultIntegrationCreateOrderResult Data { get; set; }
+        public AlibabaProcurementApiIntegrationResultIntegrationCreateOrderResult2 Data { get; set; }
     
         /// <summary>错误信息</summary>
         [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -21144,7 +20739,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.SupplierSendGoodsService,version:1,typeName:alibaba.procurement.api.sendgoods.basic.model.PoSendGoodsEntryModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementSupplierSendGoodsServiceAlibabaProcurementApiSendgoodsBasicModelPoSendGoodsEntryModel 
+    public partial class AlibabaProcurementApiSendgoodsBasicModelPoSendGoodsEntryModel2 
     {
         /// <summary>扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -21300,7 +20895,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.SupplierSendGoodsService,version:1,typeName:alibaba.procurement.api.sendgoods.integration.result.IntegrationSendGoodsNoteModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementSupplierSendGoodsServiceAlibabaProcurementApiSendgoodsIntegrationResultIntegrationSendGoodsNoteModel 
+    public partial class AlibabaProcurementApiSendgoodsIntegrationResultIntegrationSendGoodsNoteModel2 
     {
         /// <summary>收货地址</summary>
         [Newtonsoft.Json.JsonProperty("address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -21340,7 +20935,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>发货单子单列表</summary>
         [Newtonsoft.Json.JsonProperty("entryList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenComAlibabaProcurementSupplierSendGoodsServiceAlibabaProcurementApiSendgoodsBasicModelPoSendGoodsEntryModel> EntryList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProcurementApiSendgoodsBasicModelPoSendGoodsEntryModel2> EntryList { get; set; }
     
         /// <summary>预计到货期</summary>
         [Newtonsoft.Json.JsonProperty("expectArrivalDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -21437,7 +21032,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>处理结果	</summary>
         [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaProcurementSupplierSendGoodsServiceAlibabaProcurementApiSendgoodsIntegrationResultIntegrationSendGoodsNoteModel Data { get; set; }
+        public AlibabaProcurementApiSendgoodsIntegrationResultIntegrationSendGoodsNoteModel2 Data { get; set; }
     
     
     }
@@ -21713,7 +21308,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.dictionary.queryCompanyFactoryByFactoryCodes,version:1,typeName:alibaba.caigou.coopapi.dictionary.model.CompanyFactoryCoopDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaCaigouDictionaryQueryCompanyFactoryByFactoryCodesAlibabaCaigouCoopapiDictionaryModelCompanyFactoryCoopDetail 
+    public partial class AlibabaCaigouCoopapiDictionaryModelCompanyFactoryCoopDetail2 
     {
         /// <summary>公司编码</summary>
         [Newtonsoft.Json.JsonProperty("companyCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -21753,7 +21348,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>接口返回数据</summary>
         [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaCaigouDictionaryQueryCompanyFactoryByFactoryCodesAlibabaCaigouCoopapiDictionaryModelCompanyFactoryCoopDetail> Data { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCaigouCoopapiDictionaryModelCompanyFactoryCoopDetail2> Data { get; set; }
     
         /// <summary>错误消息</summary>
         [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -22947,7 +22542,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.requisition.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.cooper.param.OpenCreateRequisitionItemParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceRequisitionOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam 
+    public partial class AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam2 
     {
         /// <summary>需求跟踪号</summary>
         [Newtonsoft.Json.JsonProperty("ErpReqTrackNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -23179,7 +22774,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.requisition.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.requisition.model.ReceiveAddressModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceRequisitionOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiRequisitionModelReceiveAddressModel 
+    public partial class AlibabaCaigouBizApiRequisitionModelReceiveAddressModel2 
     {
         /// <summary>地址编码</summary>
         [Newtonsoft.Json.JsonProperty("addressCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -23243,7 +22838,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>请购行列表</summary>
         [Newtonsoft.Json.JsonProperty("itemList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceRequisitionOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam> ItemList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam2> ItemList { get; set; }
     
         /// <summary>memberId</summary>
         [Newtonsoft.Json.JsonProperty("memberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -23251,7 +22846,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收货地址，模型</summary>
         [Newtonsoft.Json.JsonProperty("receiptAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceRequisitionOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiRequisitionModelReceiveAddressModel ReceiptAddress { get; set; }
+        public AlibabaCaigouBizApiRequisitionModelReceiveAddressModel2 ReceiptAddress { get; set; }
     
         /// <summary>收货地址，文本</summary>
         [Newtonsoft.Json.JsonProperty("receiveAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -23291,7 +22886,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.requisition.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponseModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceRequisitionOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel 
+    public partial class AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel2 
     {
         /// <summary>ERP请购行号</summary>
         [Newtonsoft.Json.JsonProperty("erpReqItemNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -23319,11 +22914,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.requisition.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponse</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceRequisitionOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse 
+    public partial class AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse2 
     {
         /// <summary>响应模型</summary>
         [Newtonsoft.Json.JsonProperty("requisitionResponseModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceRequisitionOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel> RequisitionResponseModels { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel2> RequisitionResponseModels { get; set; }
     
     
     }
@@ -23335,7 +22930,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>返回详情</summary>
         [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceRequisitionOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse Data { get; set; }
+        public AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse2 Data { get; set; }
     
         /// <summary>异常消息</summary>
         [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -23355,7 +22950,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.cooper.param.OpenCreateRequisitionItemParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam 
+    public partial class AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam3 
     {
         /// <summary>a</summary>
         [Newtonsoft.Json.JsonProperty("ErpReqTrackNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -23587,7 +23182,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.requisition.model.ReceiveAddressModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiRequisitionModelReceiveAddressModel 
+    public partial class AlibabaCaigouBizApiRequisitionModelReceiveAddressModel3 
     {
         /// <summary>a</summary>
         [Newtonsoft.Json.JsonProperty("addressCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -23651,7 +23246,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>a</summary>
         [Newtonsoft.Json.JsonProperty("itemList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam> ItemList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam3> ItemList { get; set; }
     
         /// <summary>a</summary>
         [Newtonsoft.Json.JsonProperty("memberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -23659,7 +23254,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>a</summary>
         [Newtonsoft.Json.JsonProperty("receiptAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceCreateMallRequisitionAlibabaCaigouBizApiRequisitionModelReceiveAddressModel ReceiptAddress { get; set; }
+        public AlibabaCaigouBizApiRequisitionModelReceiveAddressModel3 ReceiptAddress { get; set; }
     
         /// <summary>a</summary>
         [Newtonsoft.Json.JsonProperty("receiveAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -24489,7 +24084,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerReceiveGoodsService.queryReceiveGoodsNote,version:1,typeName:alibaba.procurement.api.receivegoods.basic.model.ReceiveGoodsNoteEntryModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementBuyerReceiveGoodsServiceQueryReceiveGoodsNoteAlibabaProcurementApiReceivegoodsBasicModelReceiveGoodsNoteEntryModel 
+    public partial class AlibabaProcurementApiReceivegoodsBasicModelReceiveGoodsNoteEntryModel2 
     {
         /// <summary>品牌</summary>
         [Newtonsoft.Json.JsonProperty("brand", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -24613,7 +24208,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerReceiveGoodsService.queryReceiveGoodsNote,version:1,typeName:alibaba.procurement.api.receivegoods.integration.result.IntegrationReceiveGoodsNoteModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaProcurementBuyerReceiveGoodsServiceQueryReceiveGoodsNoteAlibabaProcurementApiReceivegoodsIntegrationResultIntegrationReceiveGoodsNoteModel 
+    public partial class AlibabaProcurementApiReceivegoodsIntegrationResultIntegrationReceiveGoodsNoteModel2 
     {
         /// <summary>买家对内备注</summary>
         [Newtonsoft.Json.JsonProperty("buyerInsideRemark", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -24681,7 +24276,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收货子单列表</summary>
         [Newtonsoft.Json.JsonProperty("receiveGoodsNoteEntries", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenComAlibabaProcurementBuyerReceiveGoodsServiceQueryReceiveGoodsNoteAlibabaProcurementApiReceivegoodsBasicModelReceiveGoodsNoteEntryModel> ReceiveGoodsNoteEntries { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProcurementApiReceivegoodsBasicModelReceiveGoodsNoteEntryModel2> ReceiveGoodsNoteEntries { get; set; }
     
         /// <summary>收货单号</summary>
         [Newtonsoft.Json.JsonProperty("rnCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -24742,7 +24337,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>处理结果</summary>
         [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaProcurementBuyerReceiveGoodsServiceQueryReceiveGoodsNoteAlibabaProcurementApiReceivegoodsIntegrationResultIntegrationReceiveGoodsNoteModel Data { get; set; }
+        public AlibabaProcurementApiReceivegoodsIntegrationResultIntegrationReceiveGoodsNoteModel2 Data { get; set; }
     
         /// <summary>是否处理成功</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -25189,7 +24784,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.param.OpenCreateRequisitionItemParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam 
+    public partial class AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam4 
     {
         /// <summary>需求跟踪号</summary>
         [Newtonsoft.Json.JsonProperty("ErpReqTrackNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -25333,7 +24928,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>请购单行列表</summary>
         [Newtonsoft.Json.JsonProperty("itemList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam> ItemList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam4> ItemList { get; set; }
     
         /// <summary>会员id</summary>
         [Newtonsoft.Json.JsonProperty("memberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -25377,7 +24972,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponseModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel 
+    public partial class AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel3 
     {
         /// <summary>外部单行号</summary>
         [Newtonsoft.Json.JsonProperty("erpReqItemNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -25409,11 +25004,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponse</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse 
+    public partial class AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse3 
     {
         /// <summary>返回模型</summary>
         [Newtonsoft.Json.JsonProperty("requisitionResponseModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel> RequisitionResponseModels { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel3> RequisitionResponseModels { get; set; }
     
     
     }
@@ -25425,7 +25020,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>返回数据实例</summary>
         [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse Data { get; set; }
+        public AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse3 Data { get; set; }
     
         /// <summary>错误信息</summary>
         [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -25685,7 +25280,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.market.coupon.list,version:1,typeName:alibaba.ocean.openplatform.common.PageResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaMarketCouponListAlibabaOceanOpenplatformCommonPageResult 
+    public partial class AlibabaOceanOpenplatformCommonPageResult2 
     {
         /// <summary>是否成功</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -28754,7 +28349,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.website.getOfficialNewsInfoContent,version:1,typeName:alibaba.website.OfficialSite</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaWebsiteGetOfficialNewsInfoContentAlibabaWebsiteOfficialSite 
+    public partial class AlibabaWebsiteOfficialSite2 
     {
         /// <summary>信息详细内容</summary>
         [Newtonsoft.Json.JsonProperty("content", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -28792,7 +28387,7 @@ namespace AlibabaSDK.FullModels
         public string Message { get; set; }
     
         [Newtonsoft.Json.JsonProperty("models", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaWebsiteGetOfficialNewsInfoContentAlibabaWebsiteOfficialSite> Models { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaWebsiteOfficialSite2> Models { get; set; }
     
         [Newtonsoft.Json.JsonProperty("resultCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? ResultCode { get; set; }
@@ -29251,7 +28846,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.panama.updateUnicomRefundStatus,version:1,typeName:alibaba.panama.UnicomCommonResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaPanamaUpdateUnicomRefundStatusAlibabaPanamaUnicomCommonResult 
+    public partial class AlibabaPanamaUnicomCommonResult2 
     {
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Result { get; set; }
@@ -29270,7 +28865,7 @@ namespace AlibabaSDK.FullModels
     public partial class AlibabaPanamaUpdateUnicomRefundStatusResult 
     {
         [Newtonsoft.Json.JsonProperty("unicomCommonResult", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenAlibabaPanamaUpdateUnicomRefundStatusAlibabaPanamaUnicomCommonResult UnicomCommonResult { get; set; }
+        public AlibabaPanamaUnicomCommonResult2 UnicomCommonResult { get; set; }
     
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? Success { get; set; }
@@ -29311,7 +28906,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.panama.updateUnicomOrderStatus,version:1,typeName:alibaba.panama.UnicomCommonResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaPanamaUpdateUnicomOrderStatusAlibabaPanamaUnicomCommonResult 
+    public partial class AlibabaPanamaUnicomCommonResult3 
     {
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Result { get; set; }
@@ -29330,7 +28925,7 @@ namespace AlibabaSDK.FullModels
     public partial class AlibabaPanamaUpdateUnicomOrderStatusResult 
     {
         [Newtonsoft.Json.JsonProperty("unicomCommonResult", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenAlibabaPanamaUpdateUnicomOrderStatusAlibabaPanamaUnicomCommonResult UnicomCommonResult { get; set; }
+        public AlibabaPanamaUnicomCommonResult3 UnicomCommonResult { get; set; }
     
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? Success { get; set; }
@@ -29699,7 +29294,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.app.pieceorder.get,version:1,typeName:isvOrderItemDto</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaAppPieceorderGetIsvOrderItemDto 
+    public partial class IsvOrderItemDto2 
     {
         /// <summary>订单详细状态 audit_pass:审核通过，issue_ready：待发布，service：服务中，suspend：挂起
         ///      arrear_suspend：欠费挂起，closed：关闭，cancel：作废</summary>
@@ -29983,7 +29578,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.daixiao.similar.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchGraphOfferDaixiaoSimilarPagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel2 
     {
         /// <summary>商品的Id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -30035,7 +29630,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.daixiao.similar.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferQueryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchGraphOfferDaixiaoSimilarPagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult2 
     {
         /// <summary>返回数量</summary>
         [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -30055,7 +29650,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品的列表</summary>
         [Newtonsoft.Json.JsonProperty("offerList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaSearchGraphOfferDaixiaoSimilarPagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel> OfferList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel2> OfferList { get; set; }
     
     
     }
@@ -30075,7 +29670,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>offer查询的信息</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenAlibabaSearchGraphOfferDaixiaoSimilarPagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult Result { get; set; }
+        public ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult2 Result { get; set; }
     
     
     }
@@ -30248,7 +29843,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.similar.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchGraphOfferSimilarPagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel3 
     {
         /// <summary>商品的Id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -30300,7 +29895,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.similar.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferQueryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchGraphOfferSimilarPagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult3 
     {
         /// <summary>返回数量</summary>
         [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -30320,7 +29915,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品的列表</summary>
         [Newtonsoft.Json.JsonProperty("offerList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaSearchGraphOfferSimilarPagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel> OfferList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel3> OfferList { get; set; }
     
     
     }
@@ -30340,7 +29935,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>offer查询的信息</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenAlibabaSearchGraphOfferSimilarPagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult Result { get; set; }
+        public ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult3 Result { get; set; }
     
     
     }
@@ -30348,7 +29943,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.same.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchGraphOfferSamePagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel4 
     {
         /// <summary>商品的Id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -30400,7 +29995,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.same.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferQueryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchGraphOfferSamePagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult4 
     {
         /// <summary>返回数量</summary>
         [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -30420,7 +30015,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品的列表</summary>
         [Newtonsoft.Json.JsonProperty("offerList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaSearchGraphOfferSamePagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel> OfferList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel4> OfferList { get; set; }
     
     
     }
@@ -30440,7 +30035,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>offer查询的信息</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenAlibabaSearchGraphOfferSamePagesComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult Result { get; set; }
+        public ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult4 Result { get; set; }
     
     
     }
@@ -31080,7 +30675,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.offer,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchDaixiaoRecomOfferComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel5 
     {
         /// <summary>offer的Id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31128,7 +30723,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.offer,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferQueryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchDaixiaoRecomOfferComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult5 
     {
         /// <summary>返回数量</summary>
         [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31148,7 +30743,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>offer的列表</summary>
         [Newtonsoft.Json.JsonProperty("offerList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaSearchDaixiaoRecomOfferComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel> OfferList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel5> OfferList { get; set; }
     
     
     }
@@ -31168,7 +30763,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Offer的查询结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenAlibabaSearchDaixiaoRecomOfferComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult Result { get; set; }
+        public ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult5 Result { get; set; }
     
     
     }
@@ -31200,7 +30795,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.company,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchDaixiaoRecomCompanyComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel6 
     {
         /// <summary>offer的Id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31248,7 +30843,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.company,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferQueryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchDaixiaoRecomCompanyComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult6 
     {
         /// <summary>返回数量</summary>
         [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31268,7 +30863,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>offer的列表</summary>
         [Newtonsoft.Json.JsonProperty("offerList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaSearchDaixiaoRecomCompanyComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel> OfferList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel6> OfferList { get; set; }
     
     
     }
@@ -31288,7 +30883,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>供应闪下面的推荐商品信息</summary>
         [Newtonsoft.Json.JsonProperty("offerResult", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenAlibabaSearchDaixiaoRecomCompanyComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult OfferResult { get; set; }
+        public ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult6 OfferResult { get; set; }
     
     
     }
@@ -31368,7 +30963,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.offer.get,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchDaixiaoOfferGetComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel7 
     {
         /// <summary>offer的Id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31416,7 +31011,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.offer.get,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferQueryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaSearchDaixiaoOfferGetComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult 
+    public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult7 
     {
         /// <summary>返回数量</summary>
         [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31436,7 +31031,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>offer的列表</summary>
         [Newtonsoft.Json.JsonProperty("offerList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaSearchDaixiaoOfferGetComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel> OfferList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel7> OfferList { get; set; }
     
     
     }
@@ -31456,7 +31051,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>Offer的查询结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenAlibabaSearchDaixiaoOfferGetComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult Result { get; set; }
+        public ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult7 Result { get; set; }
     
     
     }
@@ -31669,7 +31264,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.listForAlreadyConsignment,version:1,typeName:alibaba.daixiao.SkuAttributeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaDistributorListForAlreadyConsignmentAlibabaDaixiaoSkuAttributeInfo 
+    public partial class AlibabaDaixiaoSkuAttributeInfo2 
     {
         /// <summary>属性名称</summary>
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31685,7 +31280,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.listForAlreadyConsignment,version:1,typeName:alibaba.daixiao.ProductSkuInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaDistributorListForAlreadyConsignmentAlibabaDaixiaoProductSkuInfo 
+    public partial class AlibabaDaixiaoProductSkuInfo2 
     {
         /// <summary>skuId</summary>
         [Newtonsoft.Json.JsonProperty("skuId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31717,7 +31312,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>其他属性</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaDistributorListForAlreadyConsignmentAlibabaDaixiaoSkuAttributeInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaDaixiaoSkuAttributeInfo2> Attributes { get; set; }
     
     
     }
@@ -31725,7 +31320,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.listForAlreadyConsignment,version:1,typeName:alibaba.daixiao.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaDistributorListForAlreadyConsignmentAlibabaDaixiaoProductInfo 
+    public partial class AlibabaDaixiaoProductInfo2 
     {
         /// <summary>1688商品Id</summary>
         [Newtonsoft.Json.JsonProperty("productId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31745,7 +31340,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品规格属性列表</summary>
         [Newtonsoft.Json.JsonProperty("skuModelList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaDistributorListForAlreadyConsignmentAlibabaDaixiaoProductSkuInfo> SkuModelList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaDaixiaoProductSkuInfo2> SkuModelList { get; set; }
     
         /// <summary>skuModel的String形式</summary>
         [Newtonsoft.Json.JsonProperty("skuModelStr", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31830,7 +31425,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>商品列表</summary>
         [Newtonsoft.Json.JsonProperty("productInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaDistributorListForAlreadyConsignmentAlibabaDaixiaoProductInfo> ProductInfo { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaDaixiaoProductInfo2> ProductInfo { get; set; }
     
         /// <summary>总条数</summary>
         [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31850,7 +31445,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.listForAllConsignment,version:1,typeName:alibaba.daixiao.SkuAttributeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaDistributorListForAllConsignmentAlibabaDaixiaoSkuAttributeInfo 
+    public partial class AlibabaDaixiaoSkuAttributeInfo3 
     {
         /// <summary>属性名称</summary>
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31866,7 +31461,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.listForAllConsignment,version:1,typeName:alibaba.daixiao.ProductSkuInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaDistributorListForAllConsignmentAlibabaDaixiaoProductSkuInfo 
+    public partial class AlibabaDaixiaoProductSkuInfo3 
     {
         /// <summary>skuId</summary>
         [Newtonsoft.Json.JsonProperty("skuId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31898,7 +31493,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>其他属性</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaDistributorListForAllConsignmentAlibabaDaixiaoSkuAttributeInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaDaixiaoSkuAttributeInfo3> Attributes { get; set; }
     
     
     }
@@ -31906,7 +31501,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.listForAllConsignment,version:1,typeName:alibaba.daixiao.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAlibabaDistributorListForAllConsignmentAlibabaDaixiaoProductInfo 
+    public partial class AlibabaDaixiaoProductInfo3 
     {
         /// <summary>1688商品Id</summary>
         [Newtonsoft.Json.JsonProperty("productId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -31926,7 +31521,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品规格属性列表</summary>
         [Newtonsoft.Json.JsonProperty("skuModelList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaDistributorListForAllConsignmentAlibabaDaixiaoProductSkuInfo> SkuModelList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaDaixiaoProductSkuInfo3> SkuModelList { get; set; }
     
         /// <summary>skuModel的String形式</summary>
         [Newtonsoft.Json.JsonProperty("skuModelStr", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -32011,7 +31606,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>商品列表</summary>
         [Newtonsoft.Json.JsonProperty("productInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAlibabaDistributorListForAllConsignmentAlibabaDaixiaoProductInfo> ProductInfo { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaDaixiaoProductInfo3> ProductInfo { get; set; }
     
         /// <summary>总条数</summary>
         [Newtonsoft.Json.JsonProperty("count", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -32404,7 +31999,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:offer.getPublishOfferList,version:1,typeName:offerImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenOfferGetPublishOfferListOfferImageInfo 
+    public partial class OfferImageInfo2 
     {
         /// <summary>图片URL（推荐用这个）</summary>
         [Newtonsoft.Json.JsonProperty("imageURI", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -32436,7 +32031,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:offer.getPublishOfferList,version:1,typeName:productFeatureInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenOfferGetPublishOfferListProductFeatureInfo 
+    public partial class ProductFeatureInfo2 
     {
         /// <summary>属性ID。版本1不支持返回属性ID</summary>
         [Newtonsoft.Json.JsonProperty("propId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -32460,7 +32055,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:offer.getPublishOfferList,version:1,typeName:priceRangeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenOfferGetPublishOfferListPriceRangeInfo 
+    public partial class PriceRangeInfo2 
     {
         /// <summary>最小起订量。</summary>
         [Newtonsoft.Json.JsonProperty("range", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -32542,11 +32137,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品图片列表</summary>
         [Newtonsoft.Json.JsonProperty("imageList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenOfferGetPublishOfferListOfferImageInfo> ImageList { get; set; }
+        public System.Collections.Generic.ICollection<OfferImageInfo2> ImageList { get; set; }
     
         /// <summary>商品属性信息</summary>
         [Newtonsoft.Json.JsonProperty("productFeatureList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenOfferGetPublishOfferListProductFeatureInfo> ProductFeatureList { get; set; }
+        public System.Collections.Generic.ICollection<ProductFeatureInfo2> ProductFeatureList { get; set; }
     
         /// <summary>是否支持网上交易。首先需要类目支持，如果类目支持，需要有价格，供货总量，最小起订量。true：支持网上订购；false：不支持网上订购</summary>
         [Newtonsoft.Json.JsonProperty("isOfferSupportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -32590,7 +32185,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>价格区间</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenOfferGetPublishOfferListPriceRangeInfo> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<PriceRangeInfo2> PriceRanges { get; set; }
     
         /// <summary>有效期(单位：天)</summary>
         [Newtonsoft.Json.JsonProperty("termOfferProcess", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -32652,7 +32247,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:company.get,version:1,typeName:companyInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCompanyGetCompanyInfo 
+    public partial class CompanyInfo2 
     {
         /// <summary>会员ID</summary>
         [Newtonsoft.Json.JsonProperty("memberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -33601,7 +33196,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:industry.showwindow.doQueryRecommOfferList,version:1,typeName:offerImageInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenIndustryShowwindowDoQueryRecommOfferListOfferImageInfo 
+    public partial class OfferImageInfo3 
     {
         /// <summary>图片URL（推荐用这个）</summary>
         [Newtonsoft.Json.JsonProperty("imageURI", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -33633,7 +33228,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:industry.showwindow.doQueryRecommOfferList,version:1,typeName:productFeatureInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenIndustryShowwindowDoQueryRecommOfferListProductFeatureInfo 
+    public partial class ProductFeatureInfo3 
     {
         /// <summary>属性ID。版本1不支持返回属性ID</summary>
         [Newtonsoft.Json.JsonProperty("propId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -33657,7 +33252,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:industry.showwindow.doQueryRecommOfferList,version:1,typeName:priceRangeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenIndustryShowwindowDoQueryRecommOfferListPriceRangeInfo 
+    public partial class PriceRangeInfo3 
     {
         /// <summary>最小起订量。</summary>
         [Newtonsoft.Json.JsonProperty("range", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -33736,11 +33331,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品图片列表</summary>
         [Newtonsoft.Json.JsonProperty("imageList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenIndustryShowwindowDoQueryRecommOfferListOfferImageInfo> ImageList { get; set; }
+        public System.Collections.Generic.ICollection<OfferImageInfo3> ImageList { get; set; }
     
         /// <summary>商品属性信息</summary>
         [Newtonsoft.Json.JsonProperty("productFeatureList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenIndustryShowwindowDoQueryRecommOfferListProductFeatureInfo> ProductFeatureList { get; set; }
+        public System.Collections.Generic.ICollection<ProductFeatureInfo3> ProductFeatureList { get; set; }
     
         /// <summary>是否支持网上交易。首先需要类目支持，如果类目支持，需要有价格，供货总量，最小起订量。true：支持网上订购；false：不支持网上订购</summary>
         [Newtonsoft.Json.JsonProperty("isOfferSupportOnlineTrade", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -33784,7 +33379,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>价格区间</summary>
         [Newtonsoft.Json.JsonProperty("priceRanges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenIndustryShowwindowDoQueryRecommOfferListPriceRangeInfo> PriceRanges { get; set; }
+        public System.Collections.Generic.ICollection<PriceRangeInfo3> PriceRanges { get; set; }
     
         /// <summary>有效期(单位：天)</summary>
         [Newtonsoft.Json.JsonProperty("termOfferProcess", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -34056,7 +33651,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:app.order.get,version:1,typeName:isvOrderItemDto</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenAppOrderGetIsvOrderItemDto 
+    public partial class IsvOrderItemDto3 
     {
         /// <summary>订单详细状态 audit_pass:审核通过，issue_ready：待发布，service：服务中，suspend：挂起
         ///      arrear_suspend：欠费挂起，closed：关闭，cancel：作废</summary>
@@ -34139,7 +33734,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>isv订单信息</summary>
         [Newtonsoft.Json.JsonProperty("returnValue", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenAppOrderGetIsvOrderItemDto> ReturnValue { get; set; }
+        public System.Collections.Generic.ICollection<IsvOrderItemDto3> ReturnValue { get; set; }
     
         /// <summary>是否成功</summary>
         [Newtonsoft.Json.JsonProperty("successed", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -34251,7 +33846,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.product.queryProduct,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiProductQueryProductComAlibabaCaigouApiCommonModelAttachment 
+    public partial class ComAlibabaCaigouApiCommonModelAttachment2 
     {
         /// <summary>附件大小</summary>
         [Newtonsoft.Json.JsonProperty("size", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -34323,7 +33918,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>产品附件列表</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiProductQueryProductComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment2> Attachments { get; set; }
     
         /// <summary>产品副标题</summary>
         [Newtonsoft.Json.JsonProperty("productId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -34555,7 +34150,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:trade.order.detail.get,version:1,typeName:OrderMemoModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenTradeOrderDetailGetOrderMemoModel 
+    public partial class OrderMemoModel2 
     {
         /// <summary>主键id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -34723,7 +34318,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>备注列表</summary>
         [Newtonsoft.Json.JsonProperty("orderMemoList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenTradeOrderDetailGetOrderMemoModel> OrderMemoList { get; set; }
+        public System.Collections.Generic.ICollection<OrderMemoModel2> OrderMemoList { get; set; }
     
         /// <summary>发票信息</summary>
         [Newtonsoft.Json.JsonProperty("orderInvoiceModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -34791,11 +34386,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>买家备注</summary>
         [Newtonsoft.Json.JsonProperty("buyerOrderMemo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenTradeOrderDetailGetOrderMemoModel BuyerOrderMemo { get; set; }
+        public OrderMemoModel2 BuyerOrderMemo { get; set; }
     
         /// <summary>卖家备注</summary>
         [Newtonsoft.Json.JsonProperty("sellerOrderMemo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenTradeOrderDetailGetOrderMemoModel SellerOrderMemo { get; set; }
+        public OrderMemoModel2 SellerOrderMemo { get; set; }
     
         /// <summary>订单号</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -34855,7 +34450,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:trade.order.list.get,version:2,typeName:OrderMemoModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenTradeOrderListGetOrderMemoModel 
+    public partial class OrderMemoModel3 
     {
         /// <summary>主键id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -34891,7 +34486,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:trade.order.list.get,version:2,typeName:OrderInvoiceModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenTradeOrderListGetOrderInvoiceModel 
+    public partial class OrderInvoiceModel2 
     {
         /// <summary>主键id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35323,7 +34918,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:trade.order.list.get,version:2,typeName:OrderModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenTradeOrderListGetOrderModel 
+    public partial class OrderModel2 
     {
         /// <summary>订单状态。CANCEL交易关闭，SUCCESS交易成功，WAIT_BUYER_PAY等待买家付款，WAIT_SELLER_SEND等待卖家发货，WAIT_BUYER_RECEIVE等待买家确认收货，WAIT_SELLER_ACT分阶段等待卖家操作，WAIT_BUYER_CONFIRM_ACTION分阶段等待买家确认卖家操作，WAIT_SELLER_PUSH分阶段等待卖家推进，WAIT_LOGISTICS_TAKE_IN等待物流公司揽件COD，WAIT_BUYER_SIGN等待买家签收COD，SIGN_IN_SUCCESS买家已签收COD，SIGN_IN_FAILED签收失败COD</summary>
         [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35419,11 +35014,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>备注列表</summary>
         [Newtonsoft.Json.JsonProperty("orderMemoList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenTradeOrderListGetOrderMemoModel> OrderMemoList { get; set; }
+        public System.Collections.Generic.ICollection<OrderMemoModel3> OrderMemoList { get; set; }
     
         /// <summary>发票信息</summary>
         [Newtonsoft.Json.JsonProperty("orderInvoiceModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenTradeOrderListGetOrderInvoiceModel OrderInvoiceModel { get; set; }
+        public OrderInvoiceModel2 OrderInvoiceModel { get; set; }
     
         /// <summary>子支付单</summary>
         [Newtonsoft.Json.JsonProperty("stepOrderList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35487,11 +35082,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>买家备注</summary>
         [Newtonsoft.Json.JsonProperty("buyerOrderMemo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenTradeOrderListGetOrderMemoModel BuyerOrderMemo { get; set; }
+        public OrderMemoModel3 BuyerOrderMemo { get; set; }
     
         /// <summary>卖家备注</summary>
         [Newtonsoft.Json.JsonProperty("sellerOrderMemo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenTradeOrderListGetOrderMemoModel SellerOrderMemo { get; set; }
+        public OrderMemoModel3 SellerOrderMemo { get; set; }
     
         /// <summary>订单号</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35607,7 +35202,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary> 订单列表</summary>
         [Newtonsoft.Json.JsonProperty("modelList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenTradeOrderListGetOrderModel> ModelList { get; set; }
+        public System.Collections.Generic.ICollection<OrderModel2> ModelList { get; set; }
     
         /// <summary>预判下一页记录数</summary>
         [Newtonsoft.Json.JsonProperty("realPrePageSize", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35673,7 +35268,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.category.getById,version:1,typeName:caigou.domain.category.LeafCategory</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiCategoryGetByIdCaigouDomainCategoryLeafCategory 
+    public partial class CaigouDomainCategoryLeafCategory2 
     {
         /// <summary>类目名称</summary>
         [Newtonsoft.Json.JsonProperty("categoryName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35709,7 +35304,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.category.getById,version:1,typeName:caigou.domain.category.TwoCategory</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiCategoryGetByIdCaigouDomainCategoryTwoCategory 
+    public partial class CaigouDomainCategoryTwoCategory2 
     {
         /// <summary>类目名称</summary>
         [Newtonsoft.Json.JsonProperty("categoryName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35741,7 +35336,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>叶子类目列表</summary>
         [Newtonsoft.Json.JsonProperty("children", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiCategoryGetByIdCaigouDomainCategoryLeafCategory> Children { get; set; }
+        public System.Collections.Generic.ICollection<CaigouDomainCategoryLeafCategory2> Children { get; set; }
     
     
     }
@@ -35781,7 +35376,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>子类目列表</summary>
         [Newtonsoft.Json.JsonProperty("children", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiCategoryGetByIdCaigouDomainCategoryTwoCategory> Children { get; set; }
+        public System.Collections.Generic.ICollection<CaigouDomainCategoryTwoCategory2> Children { get; set; }
     
     
     }
@@ -35789,7 +35384,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.category.queryAll,version:1,typeName:caigou.domain.category.LeafCategory</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiCategoryQueryAllCaigouDomainCategoryLeafCategory 
+    public partial class CaigouDomainCategoryLeafCategory3 
     {
         /// <summary>类目名称</summary>
         [Newtonsoft.Json.JsonProperty("categoryName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35825,7 +35420,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.category.queryAll,version:1,typeName:caigou.domain.category.TwoCategory</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiCategoryQueryAllCaigouDomainCategoryTwoCategory 
+    public partial class CaigouDomainCategoryTwoCategory3 
     {
         /// <summary>类目名称</summary>
         [Newtonsoft.Json.JsonProperty("categoryName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35857,7 +35452,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>叶子类目列表</summary>
         [Newtonsoft.Json.JsonProperty("children", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiCategoryQueryAllCaigouDomainCategoryLeafCategory> Children { get; set; }
+        public System.Collections.Generic.ICollection<CaigouDomainCategoryLeafCategory3> Children { get; set; }
     
     
     }
@@ -35897,7 +35492,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>子类目列表</summary>
         [Newtonsoft.Json.JsonProperty("children", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiCategoryQueryAllCaigouDomainCategoryTwoCategory> Children { get; set; }
+        public System.Collections.Generic.ICollection<CaigouDomainCategoryTwoCategory3> Children { get; set; }
     
     
     }
@@ -35905,7 +35500,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:caigou.domain.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiProductQueryProductByIdCaigouDomainProductProductAttribute 
+    public partial class CaigouDomainProductProductAttribute2 
     {
         /// <summary>属性名</summary>
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35929,7 +35524,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:com.alibaba.caigou.api.product.model.ProductImage</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiProductQueryProductByIdComAlibabaCaigouApiProductModelProductImage 
+    public partial class ComAlibabaCaigouApiProductModelProductImage2 
     {
         /// <summary>图片路径，图片银行上传后的路径，原图</summary>
         [Newtonsoft.Json.JsonProperty("imageUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35941,7 +35536,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiProductQueryProductByIdComAlibabaCaigouApiCommonModelAttachment 
+    public partial class ComAlibabaCaigouApiCommonModelAttachment3 
     {
         /// <summary>附件大小</summary>
         [Newtonsoft.Json.JsonProperty("size", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -35965,7 +35560,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:caigou.domain.product.ProductCoop</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiProductQueryProductByIdCaigouDomainProductProductCoop 
+    public partial class CaigouDomainProductProductCoop2 
     {
         /// <summary>用户编号</summary>
         [Newtonsoft.Json.JsonProperty("memberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36005,15 +35600,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>属性列表</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiProductQueryProductByIdCaigouDomainProductProductAttribute> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<CaigouDomainProductProductAttribute2> Attributes { get; set; }
     
         /// <summary>产品图片</summary>
         [Newtonsoft.Json.JsonProperty("imgList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiProductQueryProductByIdComAlibabaCaigouApiProductModelProductImage> ImgList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiProductModelProductImage2> ImgList { get; set; }
     
         /// <summary>产品附件列表</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiProductQueryProductByIdComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment3> Attachments { get; set; }
     
         /// <summary>产品副标题</summary>
         [Newtonsoft.Json.JsonProperty("instruction", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36164,7 +35759,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyoffer.queryList,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelAttachment 
+    public partial class ComAlibabaCaigouApiCommonModelAttachment4 
     {
         /// <summary>附件大小</summary>
         [Newtonsoft.Json.JsonProperty("size", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36188,7 +35783,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyoffer.queryList,version:1,typeName:com.alibaba.caigou.api.common.model.Area</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelArea 
+    public partial class ComAlibabaCaigouApiCommonModelArea2 
     {
         /// <summary>地区名</summary>
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36227,7 +35822,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyoffer.queryList,version:1,typeName:com.alibaba.caigou.api.common.model.AreaInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelAreaInfo 
+    public partial class ComAlibabaCaigouApiCommonModelAreaInfo2 
     {
         /// <summary>省代码</summary>
         [Newtonsoft.Json.JsonProperty("provinceCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36243,15 +35838,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>地区详情-省</summary>
         [Newtonsoft.Json.JsonProperty("province", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelArea Province { get; set; }
+        public ComAlibabaCaigouApiCommonModelArea2 Province { get; set; }
     
         /// <summary>地区详情-市</summary>
         [Newtonsoft.Json.JsonProperty("city", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelArea City { get; set; }
+        public ComAlibabaCaigouApiCommonModelArea2 City { get; set; }
     
         /// <summary>地区详情-区</summary>
         [Newtonsoft.Json.JsonProperty("district", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelArea District { get; set; }
+        public ComAlibabaCaigouApiCommonModelArea2 District { get; set; }
     
     
     }
@@ -36259,7 +35854,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyoffer.queryList,version:1,typeName:com.alibaba.caigou.api.common.model.PurchaseNoteItem</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelPurchaseNoteItem 
+    public partial class ComAlibabaCaigouApiCommonModelPurchaseNoteItem2 
     {
         /// <summary>标题</summary>
         [Newtonsoft.Json.JsonProperty("subject", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36267,7 +35862,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>附件</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment4> Attachments { get; set; }
     
         /// <summary>采购数量</summary>
         [Newtonsoft.Json.JsonProperty("purchaseAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36303,7 +35898,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyoffer.queryList,version:1,typeName:com.alibaba.caigou.api.common.model.ContactInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelContactInfo 
+    public partial class ComAlibabaCaigouApiCommonModelContactInfo2 
     {
         /// <summary>邮箱</summary>
         [Newtonsoft.Json.JsonProperty("email", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36327,7 +35922,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyoffer.queryList,version:1,typeName:com.alibaba.caigou.api.buyOffer.model.BuyOffer</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiBuyOfferModelBuyOffer 
+    public partial class ComAlibabaCaigouApiBuyOfferModelBuyOffer2 
     {
         /// <summary>询价单报价截至时间</summary>
         [Newtonsoft.Json.JsonProperty("gmtQuotationExpire", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36347,7 +35942,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>询价单附件</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment4> Attachments { get; set; }
     
         /// <summary>采购单ID（询价单ID）</summary>
         [Newtonsoft.Json.JsonProperty("purchaseNoteId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36367,15 +35962,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收货人地址</summary>
         [Newtonsoft.Json.JsonProperty("receiptAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelAreaInfo ReceiptAddress { get; set; }
+        public ComAlibabaCaigouApiCommonModelAreaInfo2 ReceiptAddress { get; set; }
     
         /// <summary>询价单条目</summary>
         [Newtonsoft.Json.JsonProperty("purchaseNoteItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelPurchaseNoteItem> PurchaseNoteItems { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelPurchaseNoteItem2> PurchaseNoteItems { get; set; }
     
         /// <summary>联系方式</summary>
         [Newtonsoft.Json.JsonProperty("contactInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiCommonModelContactInfo ContactInfo { get; set; }
+        public ComAlibabaCaigouApiCommonModelContactInfo2 ContactInfo { get; set; }
     
         /// <summary>外部系统的prId</summary>
         [Newtonsoft.Json.JsonProperty("prId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36492,7 +36087,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:push.query.messageList,version:1,typeName:PushMessage</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenPushQueryMessageListPushMessage 
+    public partial class PushMessage3 
     {
         /// <summary>消息唯一id</summary>
         [Newtonsoft.Json.JsonProperty("msgId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36524,7 +36119,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>分页的消息数据列表</summary>
         [Newtonsoft.Json.JsonProperty("datas", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenPushQueryMessageListPushMessage> Datas { get; set; }
+        public System.Collections.Generic.ICollection<PushMessage3> Datas { get; set; }
     
         /// <summary>消息总数</summary>
         [Newtonsoft.Json.JsonProperty("totalCount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36586,7 +36181,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.queryBuyOfferByPrId,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelAttachment 
+    public partial class ComAlibabaCaigouApiCommonModelAttachment5 
     {
         /// <summary>附件大小</summary>
         [Newtonsoft.Json.JsonProperty("size", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36610,7 +36205,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.queryBuyOfferByPrId,version:1,typeName:com.alibaba.caigou.api.common.model.Area</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelArea 
+    public partial class ComAlibabaCaigouApiCommonModelArea3 
     {
         /// <summary>地区名</summary>
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36649,7 +36244,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.queryBuyOfferByPrId,version:1,typeName:com.alibaba.caigou.api.common.model.AreaInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelAreaInfo 
+    public partial class ComAlibabaCaigouApiCommonModelAreaInfo3 
     {
         /// <summary>省代码</summary>
         [Newtonsoft.Json.JsonProperty("provinceCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36665,15 +36260,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>地区详情-省</summary>
         [Newtonsoft.Json.JsonProperty("province", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelArea Province { get; set; }
+        public ComAlibabaCaigouApiCommonModelArea3 Province { get; set; }
     
         /// <summary>地区详情-市</summary>
         [Newtonsoft.Json.JsonProperty("city", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelArea City { get; set; }
+        public ComAlibabaCaigouApiCommonModelArea3 City { get; set; }
     
         /// <summary>地区详情-区</summary>
         [Newtonsoft.Json.JsonProperty("district", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelArea District { get; set; }
+        public ComAlibabaCaigouApiCommonModelArea3 District { get; set; }
     
     
     }
@@ -36681,7 +36276,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.queryBuyOfferByPrId,version:1,typeName:com.alibaba.caigou.api.common.model.PurchaseNoteItem</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelPurchaseNoteItem 
+    public partial class ComAlibabaCaigouApiCommonModelPurchaseNoteItem3 
     {
         /// <summary>标题</summary>
         [Newtonsoft.Json.JsonProperty("subject", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36689,7 +36284,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>附件</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment5> Attachments { get; set; }
     
         /// <summary>采购数量</summary>
         [Newtonsoft.Json.JsonProperty("purchaseAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36725,7 +36320,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.queryBuyOfferByPrId,version:1,typeName:com.alibaba.caigou.api.common.model.ContactInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelContactInfo 
+    public partial class ComAlibabaCaigouApiCommonModelContactInfo3 
     {
         /// <summary>邮箱</summary>
         [Newtonsoft.Json.JsonProperty("email", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36769,7 +36364,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>询价单附件</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment5> Attachments { get; set; }
     
         /// <summary>采购单ID（询价单ID）</summary>
         [Newtonsoft.Json.JsonProperty("purchaseNoteId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36789,15 +36384,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收货人地址</summary>
         [Newtonsoft.Json.JsonProperty("receiptAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelAreaInfo ReceiptAddress { get; set; }
+        public ComAlibabaCaigouApiCommonModelAreaInfo3 ReceiptAddress { get; set; }
     
         /// <summary>询价单条目</summary>
         [Newtonsoft.Json.JsonProperty("purchaseNoteItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelPurchaseNoteItem> PurchaseNoteItems { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelPurchaseNoteItem3> PurchaseNoteItems { get; set; }
     
         /// <summary>联系方式</summary>
         [Newtonsoft.Json.JsonProperty("contactInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferQueryBuyOfferByPrIdComAlibabaCaigouApiCommonModelContactInfo ContactInfo { get; set; }
+        public ComAlibabaCaigouApiCommonModelContactInfo3 ContactInfo { get; set; }
     
         /// <summary>外部系统的prId</summary>
         [Newtonsoft.Json.JsonProperty("prId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36817,7 +36412,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelAttachment 
+    public partial class ComAlibabaCaigouApiCommonModelAttachment6 
     {
         /// <summary>附件大小</summary>
         [Newtonsoft.Json.JsonProperty("size", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36841,7 +36436,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.Area</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelArea 
+    public partial class ComAlibabaCaigouApiCommonModelArea4 
     {
         /// <summary>地区名</summary>
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36880,7 +36475,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.AreaInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelAreaInfo 
+    public partial class ComAlibabaCaigouApiCommonModelAreaInfo4 
     {
         /// <summary>省代码</summary>
         [Newtonsoft.Json.JsonProperty("provinceCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36896,15 +36491,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>地区详情-省</summary>
         [Newtonsoft.Json.JsonProperty("province", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelArea Province { get; set; }
+        public ComAlibabaCaigouApiCommonModelArea4 Province { get; set; }
     
         /// <summary>地区详情-市</summary>
         [Newtonsoft.Json.JsonProperty("city", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelArea City { get; set; }
+        public ComAlibabaCaigouApiCommonModelArea4 City { get; set; }
     
         /// <summary>地区详情-区</summary>
         [Newtonsoft.Json.JsonProperty("district", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelArea District { get; set; }
+        public ComAlibabaCaigouApiCommonModelArea4 District { get; set; }
     
     
     }
@@ -36912,7 +36507,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.PurchaseNoteItem</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelPurchaseNoteItem 
+    public partial class ComAlibabaCaigouApiCommonModelPurchaseNoteItem4 
     {
         /// <summary>标题</summary>
         [Newtonsoft.Json.JsonProperty("subject", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36920,7 +36515,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>附件</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment6> Attachments { get; set; }
     
         /// <summary>采购数量</summary>
         [Newtonsoft.Json.JsonProperty("purchaseAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -36956,7 +36551,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.ContactInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelContactInfo 
+    public partial class ComAlibabaCaigouApiCommonModelContactInfo4 
     {
         /// <summary>邮箱</summary>
         [Newtonsoft.Json.JsonProperty("email", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37000,7 +36595,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>询价单附件</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment6> Attachments { get; set; }
     
         /// <summary>采购单ID（询价单ID）</summary>
         [Newtonsoft.Json.JsonProperty("purchaseNoteId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37020,15 +36615,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收货人地址</summary>
         [Newtonsoft.Json.JsonProperty("receiptAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelAreaInfo ReceiptAddress { get; set; }
+        public ComAlibabaCaigouApiCommonModelAreaInfo4 ReceiptAddress { get; set; }
     
         /// <summary>询价单条目</summary>
         [Newtonsoft.Json.JsonProperty("purchaseNoteItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelPurchaseNoteItem> PurchaseNoteItems { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelPurchaseNoteItem4> PurchaseNoteItems { get; set; }
     
         /// <summary>联系方式</summary>
         [Newtonsoft.Json.JsonProperty("contactInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelContactInfo ContactInfo { get; set; }
+        public ComAlibabaCaigouApiCommonModelContactInfo4 ContactInfo { get; set; }
     
         /// <summary>外部系统的prId</summary>
         [Newtonsoft.Json.JsonProperty("prId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37108,7 +36703,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>网购文件附件</summary>
         [Newtonsoft.Json.JsonProperty("onlineShoppingAttachList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyOfferGetBuyOfferByIdComAlibabaCaigouApiCommonModelAttachment> OnlineShoppingAttachList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment6> OnlineShoppingAttachList { get; set; }
     
     
     }
@@ -37116,7 +36711,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationListByBuyOfferId,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationListByBuyOfferIdComAlibabaCaigouApiCommonModelAttachment 
+    public partial class ComAlibabaCaigouApiCommonModelAttachment7 
     {
         /// <summary>附件大小</summary>
         [Newtonsoft.Json.JsonProperty("size", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37140,7 +36735,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationListByBuyOfferId,version:1,typeName:com.alibaba.caigou.api.common.model.ContactInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationListByBuyOfferIdComAlibabaCaigouApiCommonModelContactInfo 
+    public partial class ComAlibabaCaigouApiCommonModelContactInfo5 
     {
         /// <summary>邮箱</summary>
         [Newtonsoft.Json.JsonProperty("email", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37328,7 +36923,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>附件信息（没有附件时为空）</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationListByBuyOfferIdComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment7> Attachments { get; set; }
     
         /// <summary>供应商memberId</summary>
         [Newtonsoft.Json.JsonProperty("supplierMemberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37336,7 +36931,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>报价联系人信息</summary>
         [Newtonsoft.Json.JsonProperty("contactInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationListByBuyOfferIdComAlibabaCaigouApiCommonModelContactInfo ContactInfo { get; set; }
+        public ComAlibabaCaigouApiCommonModelContactInfo5 ContactInfo { get; set; }
     
         /// <summary>税务发票类型（common：普通发票，vat：17%增值发票，no：不提供发票）</summary>
         [Newtonsoft.Json.JsonProperty("invoiceType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37400,7 +36995,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelAttachment 
+    public partial class ComAlibabaCaigouApiCommonModelAttachment8 
     {
         /// <summary>附件大小</summary>
         [Newtonsoft.Json.JsonProperty("size", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37424,7 +37019,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.ContactInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelContactInfo 
+    public partial class ComAlibabaCaigouApiCommonModelContactInfo6 
     {
         /// <summary>邮箱</summary>
         [Newtonsoft.Json.JsonProperty("email", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37448,7 +37043,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.SupplyNoteItem</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelSupplyNoteItem 
+    public partial class ComAlibabaCaigouApiCommonModelSupplyNoteItem2 
     {
         /// <summary>报价产品名称</summary>
         [Newtonsoft.Json.JsonProperty("subject", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37516,7 +37111,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.StepPayInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelStepPayInfo 
+    public partial class ComAlibabaCaigouApiCommonModelStepPayInfo2 
     {
         /// <summary>分摊比例：0~1之间的小数.三位小数</summary>
         [Newtonsoft.Json.JsonProperty("percent", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37584,7 +37179,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.PayRequirement</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelPayRequirement 
+    public partial class ComAlibabaCaigouApiCommonModelPayRequirement2 
     {
         /// <summary>类型（guarantee：全额付款，step：分阶段付款，other：其它）</summary>
         [Newtonsoft.Json.JsonProperty("type", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37596,7 +37191,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>分阶段付款信息（type不是step时为空）</summary>
         [Newtonsoft.Json.JsonProperty("stepPayInfoList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelStepPayInfo> StepPayInfoList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelStepPayInfo2> StepPayInfoList { get; set; }
     
     
     }
@@ -37616,7 +37211,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>附件信息（没有附件时为空）</summary>
         [Newtonsoft.Json.JsonProperty("attachments", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelAttachment> Attachments { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelAttachment8> Attachments { get; set; }
     
         /// <summary>供应商memberId</summary>
         [Newtonsoft.Json.JsonProperty("supplierMemberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37624,7 +37219,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>报价联系人信息</summary>
         [Newtonsoft.Json.JsonProperty("contactInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelContactInfo ContactInfo { get; set; }
+        public ComAlibabaCaigouApiCommonModelContactInfo6 ContactInfo { get; set; }
     
         /// <summary>税务发票类型（common：普通发票，vat：17%增值发票，no：不提供发票）</summary>
         [Newtonsoft.Json.JsonProperty("invoiceType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -37644,11 +37239,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>报价单条目列表</summary>
         [Newtonsoft.Json.JsonProperty("supplyNoteItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelSupplyNoteItem> SupplyNoteItems { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiCommonModelSupplyNoteItem2> SupplyNoteItems { get; set; }
     
         /// <summary>报价单付款条件</summary>
         [Newtonsoft.Json.JsonProperty("payRequirementInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public CnAlibabaOpenCaigouApiQuotationBuyerGetQuotationDetailComAlibabaCaigouApiCommonModelPayRequirement PayRequirementInfo { get; set; }
+        public ComAlibabaCaigouApiCommonModelPayRequirement2 PayRequirementInfo { get; set; }
     
         /// <summary>报价单创建时间</summary>
         [Newtonsoft.Json.JsonProperty("gmtCreate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38191,7 +37786,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.freightTemplate.getList,version:1,typeName:alibaba.logistics.FreightTemplate</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsFreightTemplateGetListAlibabaLogisticsFreightTemplate 
+    public partial class AlibabaLogisticsFreightTemplate2 
     {
         /// <summary>地址信息</summary>
         [Newtonsoft.Json.JsonProperty("addressCodeText", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38236,7 +37831,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>运费模板列表</summary>
         [Newtonsoft.Json.JsonProperty("freightTemplates", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaLogisticsFreightTemplateGetListAlibabaLogisticsFreightTemplate> FreightTemplates { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaLogisticsFreightTemplate2> FreightTemplates { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38409,7 +38004,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpDeliverySendOrder.offline,version:1,typeName:alibaba.logistics.OpSendGoodEntry</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsOpDeliverySendOrderOfflineAlibabaLogisticsOpSendGoodEntry 
+    public partial class AlibabaLogisticsOpSendGoodEntry2 
     {
         /// <summary>发货对象明细id，对应子订单Id</summary>
         [Newtonsoft.Json.JsonProperty("sourceEntryId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38437,7 +38032,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>发货对象明细列表</summary>
         [Newtonsoft.Json.JsonProperty("sendGoodEntries", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaLogisticsOpDeliverySendOrderOfflineAlibabaLogisticsOpSendGoodEntry> SendGoodEntries { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaLogisticsOpSendGoodEntry2> SendGoodEntries { get; set; }
     
     
     }
@@ -38517,7 +38112,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpDeliverySendOrder.offline,version:1,typeName:alibaba.logistic.result.OpSendOrderModelResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsOpDeliverySendOrderOfflineAlibabaLogisticResultOpSendOrderModelResult 
+    public partial class AlibabaLogisticResultOpSendOrderModelResult2 
     {
         /// <summary>物流编号</summary>
         [Newtonsoft.Json.JsonProperty("logisticsId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38542,7 +38137,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>发货明细</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaLogisticsAlibabaLogisticsOpDeliverySendOrderOfflineAlibabaLogisticResultOpSendOrderModelResult Result { get; set; }
+        public AlibabaLogisticResultOpSendOrderModelResult2 Result { get; set; }
     
         /// <summary>是否成功</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38630,7 +38225,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpQueryLogisticCompanyList.offline,version:1,typeName:alibaba.logistics.OpLogisticsCompanyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsOpQueryLogisticCompanyListOfflineAlibabaLogisticsOpLogisticsCompanyModel 
+    public partial class AlibabaLogisticsOpLogisticsCompanyModel2 
     {
         /// <summary> </summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38671,7 +38266,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>物流公司列表</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaLogisticsOpQueryLogisticCompanyListOfflineAlibabaLogisticsOpLogisticsCompanyModel> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaLogisticsOpLogisticsCompanyModel2> Result { get; set; }
     
         /// <summary>是否成功</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38695,7 +38290,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpQueryLogisticCompanyList,version:1,typeName:alibaba.logistics.OpLogisticsCompanyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsOpQueryLogisticCompanyListAlibabaLogisticsOpLogisticsCompanyModel 
+    public partial class AlibabaLogisticsOpLogisticsCompanyModel3 
     {
         /// <summary> </summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38736,7 +38331,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>物流公司列表</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaLogisticsOpQueryLogisticCompanyListAlibabaLogisticsOpLogisticsCompanyModel> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaLogisticsOpLogisticsCompanyModel3> Result { get; set; }
     
         /// <summary>是否成功</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38837,7 +38432,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySubTemplateDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliverySubTemplateDTO 
+    public partial class AlibabaOpenplatformLogisticsDeliverySubTemplateDTO2 
     {
         /// <summary>计件类型。0:重量 1:件数 2:体积</summary>
         [Newtonsoft.Json.JsonProperty("chargeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38897,7 +38492,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliveryRateDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliveryRateDTO 
+    public partial class AlibabaOpenplatformLogisticsDeliveryRateDTO2 
     {
         /// <summary>创建人</summary>
         [Newtonsoft.Json.JsonProperty("creator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -38957,7 +38552,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySysRateDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliverySysRateDTO 
+    public partial class AlibabaOpenplatformLogisticsDeliverySysRateDTO2 
     {
         /// <summary>创建人</summary>
         [Newtonsoft.Json.JsonProperty("creator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39013,7 +38608,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliveryRateDetailDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliveryRateDetailDTO 
+    public partial class AlibabaOpenplatformLogisticsDeliveryRateDetailDTO2 
     {
         /// <summary>费率操作类型：INSERT,UPDATE,DELETE</summary>
         [Newtonsoft.Json.JsonProperty("operateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39029,11 +38624,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>普通子模板费率</summary>
         [Newtonsoft.Json.JsonProperty("rateDTO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliveryRateDTO RateDTO { get; set; }
+        public AlibabaOpenplatformLogisticsDeliveryRateDTO2 RateDTO { get; set; }
     
         /// <summary>系统子模板费率</summary>
         [Newtonsoft.Json.JsonProperty("sysRateDTO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliverySysRateDTO SysRateDTO { get; set; }
+        public AlibabaOpenplatformLogisticsDeliverySysRateDTO2 SysRateDTO { get; set; }
     
     
     }
@@ -39041,7 +38636,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySubTemplateDetailDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO 
+    public partial class AlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO2 
     {
         /// <summary>操作类型</summary>
         [Newtonsoft.Json.JsonProperty("operateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39049,11 +38644,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>子模板</summary>
         [Newtonsoft.Json.JsonProperty("subTemplateDTO", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliverySubTemplateDTO SubTemplateDTO { get; set; }
+        public AlibabaOpenplatformLogisticsDeliverySubTemplateDTO2 SubTemplateDTO { get; set; }
     
         /// <summary>费率</summary>
         [Newtonsoft.Json.JsonProperty("rateList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliveryRateDetailDTO> RateList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformLogisticsDeliveryRateDetailDTO2> RateList { get; set; }
     
     
     }
@@ -39061,7 +38656,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.logistics.FreightTemplate</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaLogisticsFreightTemplate 
+    public partial class AlibabaLogisticsFreightTemplate3 
     {
         /// <summary>地址信息</summary>
         [Newtonsoft.Json.JsonProperty("addressCodeText", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39093,15 +38688,15 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>快递子模版</summary>
         [Newtonsoft.Json.JsonProperty("expressSubTemplate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO ExpressSubTemplate { get; set; }
+        public AlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO2 ExpressSubTemplate { get; set; }
     
         /// <summary>货运子模版</summary>
         [Newtonsoft.Json.JsonProperty("logisticsSubTemplate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO LogisticsSubTemplate { get; set; }
+        public AlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO2 LogisticsSubTemplate { get; set; }
     
         /// <summary>货到付款子模版</summary>
         [Newtonsoft.Json.JsonProperty("codSubTemplate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO CodSubTemplate { get; set; }
+        public AlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO2 CodSubTemplate { get; set; }
     
     
     }
@@ -39117,7 +38712,7 @@ namespace AlibabaSDK.FullModels
     public partial class AlibabaLogisticsMyFreightTemplateListGetResult 
     {
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaLogisticsMyFreightTemplateListGetAlibabaLogisticsFreightTemplate> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaLogisticsFreightTemplate3> Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39409,7 +39004,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsTraceInfo.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsStep</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaTradeGetLogisticsTraceInfoSellerViewAlibabaLogisticsOpenPlatformLogisticsStep 
+    public partial class AlibabaLogisticsOpenPlatformLogisticsStep2 
     {
         /// <summary>物流跟踪单该步骤的时间</summary>
         [Newtonsoft.Json.JsonProperty("acceptTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39425,7 +39020,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsTraceInfo.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsTrace</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaTradeGetLogisticsTraceInfoSellerViewAlibabaLogisticsOpenPlatformLogisticsTrace 
+    public partial class AlibabaLogisticsOpenPlatformLogisticsTrace2 
     {
         /// <summary>物流编号，如BX110096003841234</summary>
         [Newtonsoft.Json.JsonProperty("logisticsId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39441,7 +39036,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>物流跟踪步骤</summary>
         [Newtonsoft.Json.JsonProperty("logisticsSteps", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaTradeGetLogisticsTraceInfoSellerViewAlibabaLogisticsOpenPlatformLogisticsStep> LogisticsSteps { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaLogisticsOpenPlatformLogisticsStep2> LogisticsSteps { get; set; }
     
     
     }
@@ -39458,7 +39053,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>跟踪单详情</summary>
         [Newtonsoft.Json.JsonProperty("logisticsTrace", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaTradeGetLogisticsTraceInfoSellerViewAlibabaLogisticsOpenPlatformLogisticsTrace> LogisticsTrace { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaLogisticsOpenPlatformLogisticsTrace2> LogisticsTrace { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39474,7 +39069,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsSender</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaTradeGetLogisticsInfosSellerViewAlibabaLogisticsOpenPlatformLogisticsSender 
+    public partial class AlibabaLogisticsOpenPlatformLogisticsSender2 
     {
         /// <summary>发件人姓名</summary>
         [Newtonsoft.Json.JsonProperty("senderName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39525,7 +39120,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsReceiver</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaTradeGetLogisticsInfosSellerViewAlibabaLogisticsOpenPlatformLogisticsReceiver 
+    public partial class AlibabaLogisticsOpenPlatformLogisticsReceiver2 
     {
         /// <summary>收件人名字</summary>
         [Newtonsoft.Json.JsonProperty("receiverName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39576,7 +39171,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsSendGood</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaTradeGetLogisticsInfosSellerViewAlibabaLogisticsOpenPlatformLogisticsSendGood 
+    public partial class AlibabaLogisticsOpenPlatformLogisticsSendGood2 
     {
         /// <summary>商品名</summary>
         [Newtonsoft.Json.JsonProperty("goodName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39596,11 +39191,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsOrder</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaLogisticsAlibabaTradeGetLogisticsInfosSellerViewAlibabaLogisticsOpenPlatformLogisticsOrder 
+    public partial class AlibabaLogisticsOpenPlatformLogisticsOrder2 
     {
         /// <summary>发件人信息</summary>
         [Newtonsoft.Json.JsonProperty("sender", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaLogisticsAlibabaTradeGetLogisticsInfosSellerViewAlibabaLogisticsOpenPlatformLogisticsSender Sender { get; set; }
+        public AlibabaLogisticsOpenPlatformLogisticsSender2 Sender { get; set; }
     
         /// <summary> </summary>
         [Newtonsoft.Json.JsonProperty("serviceFeature", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39620,7 +39215,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收件人信息</summary>
         [Newtonsoft.Json.JsonProperty("receiver", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaLogisticsAlibabaTradeGetLogisticsInfosSellerViewAlibabaLogisticsOpenPlatformLogisticsReceiver Receiver { get; set; }
+        public AlibabaLogisticsOpenPlatformLogisticsReceiver2 Receiver { get; set; }
     
         /// <summary>物流公司编码</summary>
         [Newtonsoft.Json.JsonProperty("logisticsCompanyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39632,7 +39227,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品信息</summary>
         [Newtonsoft.Json.JsonProperty("sendGoods", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaTradeGetLogisticsInfosSellerViewAlibabaLogisticsOpenPlatformLogisticsSendGood> SendGoods { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaLogisticsOpenPlatformLogisticsSendGood2> SendGoods { get; set; }
     
         /// <summary> </summary>
         [Newtonsoft.Json.JsonProperty("gmtSystemSend", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -39661,7 +39256,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>查询结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaLogisticsAlibabaTradeGetLogisticsInfosSellerViewAlibabaLogisticsOpenPlatformLogisticsOrder> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaLogisticsOpenPlatformLogisticsOrder2> Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -40098,7 +39693,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cps.queryOfferDetailActivity,version:1,typeName:com.alibaba.p4p.open.client.dto.UnionActivityAreaModelDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivityAreaModelDTO 
+    public partial class ComAlibabaP4pOpenClientDtoUnionActivityAreaModelDTO2 
     {
         /// <summary>code</summary>
         [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -40114,7 +39709,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cps.queryOfferDetailActivity,version:1,typeName:com.alibaba.p4p.open.client.dto.UnionActivityRangePriceDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivityRangePriceDTO 
+    public partial class ComAlibabaP4pOpenClientDtoUnionActivityRangePriceDTO2 
     {
         /// <summary>区间价数组，每个item为一个价格,以分为单位</summary>
         [Newtonsoft.Json.JsonProperty("price", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -40130,7 +39725,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cps.queryOfferDetailActivity,version:1,typeName:com.alibaba.p4p.open.client.dto.UnionActivityPromotionItemDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivityPromotionItemDTO 
+    public partial class ComAlibabaP4pOpenClientDtoUnionActivityPromotionItemDTO2 
     {
         /// <summary>sku优惠结果时有意义；对于区间价的优惠结果，此字段无意义，可能为null</summary>
         [Newtonsoft.Json.JsonProperty("skuId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -40150,7 +39745,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cps.queryOfferDetailActivity,version:1,typeName:com.alibaba.p4p.open.client.dto.UnionActivitySkuStockDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivitySkuStockDTO 
+    public partial class ComAlibabaP4pOpenClientDtoUnionActivitySkuStockDTO2 
     {
         /// <summary>库存</summary>
         [Newtonsoft.Json.JsonProperty("stock", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -40166,7 +39761,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cps.queryOfferDetailActivity,version:1,typeName:com.alibaba.p4p.open.client.dto.UnionActivityOfferDetailDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivityOfferDetailDTO 
+    public partial class ComAlibabaP4pOpenClientDtoUnionActivityOfferDetailDTO2 
     {
         /// <summary>商品id</summary>
         [Newtonsoft.Json.JsonProperty("offerId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -40222,19 +39817,19 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>免包邮地区，与活动包邮配合使用</summary>
         [Newtonsoft.Json.JsonProperty("excludeAreaList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivityAreaModelDTO> ExcludeAreaList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaP4pOpenClientDtoUnionActivityAreaModelDTO2> ExcludeAreaList { get; set; }
     
         /// <summary>如果offer是范围报价，且价格优惠是折扣的情况，返回折扣计算后的价格范围;优先取该字段，该字段为空时，表示分sku报价，取promotionItemList</summary>
         [Newtonsoft.Json.JsonProperty("rangePrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivityRangePriceDTO RangePrice { get; set; }
+        public ComAlibabaP4pOpenClientDtoUnionActivityRangePriceDTO2 RangePrice { get; set; }
     
         /// <summary>优惠结果，根据优惠方式（PromotionInfo），结合offer的原价信息，计算出优惠结果：每个sku或者每个区间价的促销价，折扣率</summary>
         [Newtonsoft.Json.JsonProperty("promotionItemList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivityPromotionItemDTO> PromotionItemList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaP4pOpenClientDtoUnionActivityPromotionItemDTO2> PromotionItemList { get; set; }
     
         /// <summary>sku维度的库存结果</summary>
         [Newtonsoft.Json.JsonProperty("skuStockList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivitySkuStockDTO> SkuStockList { get; set; }
+        public System.Collections.Generic.ICollection<ComAlibabaP4pOpenClientDtoUnionActivitySkuStockDTO2> SkuStockList { get; set; }
     
         /// <summary>这里平台会计算一个推荐使用的下单flow，可以用这个flow值调用下单接口</summary>
         [Newtonsoft.Json.JsonProperty("introOrderFlow", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -40250,7 +39845,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaP4pAlibabaCpsQueryOfferDetailActivityComAlibabaP4pOpenClientDtoUnionActivityOfferDetailDTO Result { get; set; }
+        public ComAlibabaP4pOpenClientDtoUnionActivityOfferDetailDTO2 Result { get; set; }
     
         /// <summary>状态</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -40957,7 +40552,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cps.webUnionTradeBillList,version:1,typeName:alibaba.cps.OpenTradeBillDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaP4pAlibabaCpsWebUnionTradeBillListAlibabaCpsOpenTradeBillDTO 
+    public partial class AlibabaCpsOpenTradeBillDTO2 
     {
         /// <summary>主订单号</summary>
         [Newtonsoft.Json.JsonProperty("bizId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -41094,7 +40689,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>cps交易列表</summary>
         [Newtonsoft.Json.JsonProperty("tradeBillList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaP4pAlibabaCpsWebUnionTradeBillListAlibabaCpsOpenTradeBillDTO> TradeBillList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCpsOpenTradeBillDTO2> TradeBillList { get; set; }
     
         /// <summary>总记录数</summary>
         [Newtonsoft.Json.JsonProperty("totalRow", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -41762,7 +41357,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cnp4p.keyword.add,version:1,typeName:alibaba.cnp4p.keyword</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaP4pAlibabaCnp4pKeywordAddAlibabaCnp4pKeyword 
+    public partial class AlibabaCnp4pKeyword2 
     {
         /// <summary>关键词id</summary>
         [Newtonsoft.Json.JsonProperty("keywordId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -41826,7 +41421,7 @@ namespace AlibabaSDK.FullModels
     public partial class AlibabaCnp4pKeywordAddResult 
     {
         [Newtonsoft.Json.JsonProperty("keywords", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaP4pAlibabaCnp4pKeywordAddAlibabaCnp4pKeyword> Keywords { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCnp4pKeyword2> Keywords { get; set; }
     
         /// <summary>添加失败的关键词json串：{&amp;quot;关键词1&amp;quot;:&amp;quot;错误码&amp;quot;，&amp;quot;关键词2&amp;quot;:&amp;quot;错误码&amp;quot;}</summary>
         [Newtonsoft.Json.JsonProperty("errorKeywords", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42330,7 +41925,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cnp4p.adgroup.bycampaignids.list,version:1,typeName:alibaba.cnp4p.adgroup</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaP4pAlibabaCnp4pAdgroupBycampaignidsListAlibabaCnp4pAdgroup 
+    public partial class AlibabaCnp4pAdgroup2 
     {
         /// <summary>推广计划id</summary>
         [Newtonsoft.Json.JsonProperty("campaignId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -42390,7 +41985,7 @@ namespace AlibabaSDK.FullModels
     public partial class AlibabaCnp4pAdgroupBycampaignidsListResult 
     {
         [Newtonsoft.Json.JsonProperty("adgroups", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaP4pAlibabaCnp4pAdgroupBycampaignidsListAlibabaCnp4pAdgroup> Adgroups { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaCnp4pAdgroup2> Adgroups { get; set; }
     
         /// <summary>分页页码</summary>
         [Newtonsoft.Json.JsonProperty("pageNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -44245,7 +43840,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:ali.b2b.image,apiname:alibaba.image.color.matching,version:1,typeName:alibaba.image.ImageData</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class AliB2bImageAlibabaImageColorMatchingAlibabaImageImageData 
+    public partial class AlibabaImageImageData2 
     {
         /// <summary>数据类型</summary>
         [Newtonsoft.Json.JsonProperty("dataType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -44265,7 +43860,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>图片数据</summary>
         [Newtonsoft.Json.JsonProperty("image", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public AliB2bImageAlibabaImageColorMatchingAlibabaImageImageData Image { get; set; }
+        public AlibabaImageImageData2 Image { get; set; }
     
         /// <summary>图片处理配置</summary>
         [Newtonsoft.Json.JsonProperty("config", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -44735,7 +44330,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.finance,apiname:alibaba.api.minmetalsbao.sunshine.creditbuy.insure,version:1,typeName:alibaba.china.shared.insurance.model.feedback.InsureResp</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaFinanceAlibabaApiMinmetalsbaoSunshineCreditbuyInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp 
+    public partial class AlibabaChinaSharedInsuranceModelFeedbackInsureResp2 
     {
         [Newtonsoft.Json.JsonProperty("errorMsg", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string ErrorMsg { get; set; }
@@ -44767,7 +44362,7 @@ namespace AlibabaSDK.FullModels
         public string Output { get; set; }
     
         [Newtonsoft.Json.JsonProperty("respModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaFinanceAlibabaApiMinmetalsbaoSunshineCreditbuyInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp RespModel { get; set; }
+        public AlibabaChinaSharedInsuranceModelFeedbackInsureResp2 RespModel { get; set; }
     
     
     }
@@ -44879,7 +44474,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.finance,apiname:alibaba.api.creditbuy.sunshine.creditIns.insure,version:1,typeName:alibaba.china.shared.insurance.model.feedback.InsureResp</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaFinanceAlibabaApiCreditbuySunshineCreditInsInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp 
+    public partial class AlibabaChinaSharedInsuranceModelFeedbackInsureResp3 
     {
         /// <summary>反馈成功结果</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -44917,7 +44512,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>反馈结果</summary>
         [Newtonsoft.Json.JsonProperty("respModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaFinanceAlibabaApiCreditbuySunshineCreditInsInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp RespModel { get; set; }
+        public AlibabaChinaSharedInsuranceModelFeedbackInsureResp3 RespModel { get; set; }
     
     
     }
@@ -45099,7 +44694,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.finance,apiname:alibaba.api.creditbuy.sunshine.creditIns.claim,version:1,typeName:alibaba.china.shared.insurance.model.feedback.ClaimResp</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaFinanceAlibabaApiCreditbuySunshineCreditInsClaimAlibabaChinaSharedInsuranceModelFeedbackClaimResp 
+    public partial class AlibabaChinaSharedInsuranceModelFeedbackClaimResp2 
     {
         /// <summary>反馈是否成功标识</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -45132,7 +44727,7 @@ namespace AlibabaSDK.FullModels
         public string Output { get; set; }
     
         [Newtonsoft.Json.JsonProperty("respModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaFinanceAlibabaApiCreditbuySunshineCreditInsClaimAlibabaChinaSharedInsuranceModelFeedbackClaimResp RespModel { get; set; }
+        public AlibabaChinaSharedInsuranceModelFeedbackClaimResp2 RespModel { get; set; }
     
     
     }
@@ -45314,7 +44909,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.finance,apiname:alibaba.api.minmetalsbao.sunshine.creditIns.claim,version:1,typeName:alibaba.china.shared.insurance.model.feedback.ClaimResp</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaFinanceAlibabaApiMinmetalsbaoSunshineCreditInsClaimAlibabaChinaSharedInsuranceModelFeedbackClaimResp 
+    public partial class AlibabaChinaSharedInsuranceModelFeedbackClaimResp3 
     {
         /// <summary>反馈是否成功标识</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -45347,7 +44942,7 @@ namespace AlibabaSDK.FullModels
         public string Output { get; set; }
     
         [Newtonsoft.Json.JsonProperty("respModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaFinanceAlibabaApiMinmetalsbaoSunshineCreditInsClaimAlibabaChinaSharedInsuranceModelFeedbackClaimResp RespModel { get; set; }
+        public AlibabaChinaSharedInsuranceModelFeedbackClaimResp3 RespModel { get; set; }
     
     
     }
@@ -45459,7 +45054,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.finance,apiname:alibaba.api.minmetalsbao.sunshine.creditIns.insure,version:1,typeName:alibaba.china.shared.insurance.model.feedback.InsureResp</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaFinanceAlibabaApiMinmetalsbaoSunshineCreditInsInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp 
+    public partial class AlibabaChinaSharedInsuranceModelFeedbackInsureResp4 
     {
         /// <summary>反馈成功结果</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -45497,7 +45092,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>反馈结果</summary>
         [Newtonsoft.Json.JsonProperty("respModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaFinanceAlibabaApiMinmetalsbaoSunshineCreditInsInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp RespModel { get; set; }
+        public AlibabaChinaSharedInsuranceModelFeedbackInsureResp4 RespModel { get; set; }
     
     
     }
@@ -45684,7 +45279,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.finance,apiname:alibaba.api.cyb.sunshine.creditIns.insure,version:1,typeName:alibaba.china.shared.insurance.model.feedback.InsureResp</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaFinanceAlibabaApiCybSunshineCreditInsInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp 
+    public partial class AlibabaChinaSharedInsuranceModelFeedbackInsureResp5 
     {
         /// <summary>反馈成功结果</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -45722,7 +45317,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>反馈结果</summary>
         [Newtonsoft.Json.JsonProperty("respModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaFinanceAlibabaApiCybSunshineCreditInsInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp RespModel { get; set; }
+        public AlibabaChinaSharedInsuranceModelFeedbackInsureResp5 RespModel { get; set; }
     
     
     }
@@ -46004,7 +45599,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.finance,apiname:alibaba.api.lst.sunshine.creditIns.claim,version:1,typeName:alibaba.china.shared.insurance.model.feedback.ClaimResp</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaFinanceAlibabaApiLstSunshineCreditInsClaimAlibabaChinaSharedInsuranceModelFeedbackClaimResp 
+    public partial class AlibabaChinaSharedInsuranceModelFeedbackClaimResp4 
     {
         /// <summary>反馈是否成功标识</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -46037,7 +45632,7 @@ namespace AlibabaSDK.FullModels
         public string Output { get; set; }
     
         [Newtonsoft.Json.JsonProperty("respModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaFinanceAlibabaApiLstSunshineCreditInsClaimAlibabaChinaSharedInsuranceModelFeedbackClaimResp RespModel { get; set; }
+        public AlibabaChinaSharedInsuranceModelFeedbackClaimResp4 RespModel { get; set; }
     
     
     }
@@ -46149,7 +45744,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.finance,apiname:alibaba.api.lst.sunshine.creditIns.insure,version:1,typeName:alibaba.china.shared.insurance.model.feedback.InsureResp</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaFinanceAlibabaApiLstSunshineCreditInsInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp 
+    public partial class AlibabaChinaSharedInsuranceModelFeedbackInsureResp6 
     {
         /// <summary>反馈成功结果</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -46187,7 +45782,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>反馈结果</summary>
         [Newtonsoft.Json.JsonProperty("respModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaFinanceAlibabaApiLstSunshineCreditInsInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp RespModel { get; set; }
+        public AlibabaChinaSharedInsuranceModelFeedbackInsureResp6 RespModel { get; set; }
     
     
     }
@@ -46347,7 +45942,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.finance,apiname:alibaba.api.cpic.exporting.trans.insure,version:1,typeName:alibaba.china.shared.insurance.model.feedback.InsureResp</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaFinanceAlibabaApiCpicExportingTransInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp 
+    public partial class AlibabaChinaSharedInsuranceModelFeedbackInsureResp7 
     {
         /// <summary>反馈成功结果</summary>
         [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -46385,7 +45980,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>反馈结果</summary>
         [Newtonsoft.Json.JsonProperty("respModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaFinanceAlibabaApiCpicExportingTransInsureAlibabaChinaSharedInsuranceModelFeedbackInsureResp RespModel { get; set; }
+        public AlibabaChinaSharedInsuranceModelFeedbackInsureResp7 RespModel { get; set; }
     
     
     }
@@ -47199,9 +46794,9 @@ namespace AlibabaSDK.FullModels
     }
     
     /// <summary>
-    ///  namespace:com.alibaba.trade,apiname:alibaba.trade.uploadRefundVoucher,version:1,typeName:alibaba.ocean.openplatform.common.ResultModel</summary>
+    ///  namespace:com.alibaba.trade,apiname:alibaba.trade.uploadRefundVoucher,version:1,typeName:alibaba.ocean.openplatform.common.OrderRefundUploadVoucherResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeUploadRefundVoucherAlibabaOceanOpenplatformCommonResultModel 
+    public partial class AlibabaOceanOpenplatformCommonOrderRefundUploadVoucherResult 
     {
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -47243,9 +46838,9 @@ namespace AlibabaSDK.FullModels
     }
     
     /// <summary>
-    ///  namespace:com.alibaba.trade,apiname:alibaba.trade.createRefund,version:1,typeName:alibaba.ocean.openplatform.common.ResultModel</summary>
+    ///  namespace:com.alibaba.trade,apiname:alibaba.trade.createRefund,version:1,typeName:alibaba.ocean.openplatform.common.OrderRefundCreateResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeCreateRefundAlibabaOceanOpenplatformCommonResultModel 
+    public partial class AlibabaOceanOpenplatformCommonOrderRefundCreateResult 
     {
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51103,7 +50698,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.KeyValuePair</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeKeyValuePair 
+    public partial class AlibabaOpenplatformTradeKeyValuePair2 
     {
         /// <summary>键</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51123,7 +50718,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.invoice.OrderInvoiceModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaInvoiceOrderInvoiceModel 
+    public partial class AlibabaInvoiceOrderInvoiceModel2 
     {
         /// <summary>发票公司名称(即发票抬头-title)</summary>
         [Newtonsoft.Json.JsonProperty("invoiceCompanyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51203,7 +50798,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.tradeContact</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeTradeContact 
+    public partial class AlibabaTradeTradeContact2 
     {
         /// <summary>联系电话</summary>
         [Newtonsoft.Json.JsonProperty("phone", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51311,7 +50906,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.tradeSellerContact</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeTradeSellerContact 
+    public partial class AlibabaTradeTradeSellerContact2 
     {
         /// <summary>联系电话</summary>
         [Newtonsoft.Json.JsonProperty("phone", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51355,7 +50950,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.orderReceiverInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeOrderReceiverInfo 
+    public partial class AlibabaTradeOrderReceiverInfo2 
     {
         /// <summary>收件人</summary>
         [Newtonsoft.Json.JsonProperty("toFullName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51391,7 +50986,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.StepOrderModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeStepOrderModel 
+    public partial class AlibabaTradeStepOrderModel2 
     {
         /// <summary>阶段id</summary>
         [Newtonsoft.Json.JsonProperty("stepOrderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51545,7 +51140,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelOrderBaseInfo 
+    public partial class AlibabaOpenplatformTradeModelOrderBaseInfo2 
     {
         /// <summary>完全发货时间</summary>
         [Newtonsoft.Json.JsonProperty("allDeliveredTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51601,7 +51196,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>买家联系人</summary>
         [Newtonsoft.Json.JsonProperty("buyerContact", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeTradeContact BuyerContact { get; set; }
+        public AlibabaTradeTradeContact2 BuyerContact { get; set; }
     
         /// <summary>买家等级</summary>
         [Newtonsoft.Json.JsonProperty("buyerLevel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51665,7 +51260,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>卖家联系人信息</summary>
         [Newtonsoft.Json.JsonProperty("sellerContact", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeTradeSellerContact SellerContact { get; set; }
+        public AlibabaTradeTradeSellerContact2 SellerContact { get; set; }
     
         /// <summary>红包金额，实付金额（totalAmount）已经计算过红包金额</summary>
         [Newtonsoft.Json.JsonProperty("couponFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51673,7 +51268,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收件人信息</summary>
         [Newtonsoft.Json.JsonProperty("receiverInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeOrderReceiverInfo ReceiverInfo { get; set; }
+        public AlibabaTradeOrderReceiverInfo2 ReceiverInfo { get; set; }
     
         /// <summary>订单的售中退款状态，等待卖家同意：waitselleragree ，待买家修改：waitbuyermodify，等待买家退货：waitbuyersend，等待卖家确认收货：waitsellerreceive，退款成功：refundsuccess，退款失败：refundclose</summary>
         [Newtonsoft.Json.JsonProperty("refundStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51734,7 +51329,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>[交易3.0]分阶段交易，分阶段订单list</summary>
         [Newtonsoft.Json.JsonProperty("stepOrderList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeStepOrderModel> StepOrderList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeStepOrderModel2> StepOrderList { get; set; }
     
         /// <summary>买家支付宝id</summary>
         [Newtonsoft.Json.JsonProperty("buyerAlipayId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51790,7 +51385,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.GuaranteeTermsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelGuaranteeTermsInfo 
+    public partial class AlibabaOpenplatformTradeModelGuaranteeTermsInfo2 
     {
         /// <summary>保障条款</summary>
         [Newtonsoft.Json.JsonProperty("assuranceInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51810,7 +51405,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.SkuItemDesc</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeSkuItemDesc 
+    public partial class AlibabaTradeSkuItemDesc2 
     {
         /// <summary>属性名</summary>
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51826,7 +51421,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelProductItemInfo 
+    public partial class AlibabaOpenplatformTradeModelProductItemInfo2 
     {
         /// <summary>指定单品货号，国际站无需关注。该字段不一定有值，仅仅在下单时才会把货号记录(如果卖家设置了单品货号的话)。别的订单类型的货号只能通过商品接口去获取。请注意：通过商品接口获取时的货号和下单时的货号可能不一致，因为下单完成后卖家可能修改商品信息，改变了货号。</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51902,7 +51497,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>保障条款，此字段仅针对1688</summary>
         [Newtonsoft.Json.JsonProperty("guaranteesTerms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelGuaranteeTermsInfo> GuaranteesTerms { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelGuaranteeTermsInfo2> GuaranteesTerms { get; set; }
     
         /// <summary>指定商品货号，该字段不一定有值，在下单时才会把货号记录。别的订单类型的货号只能通过商品接口去获取。请注意：通过商品接口获取时的货号和下单时的货号可能不一致，因为下单完成后卖家可能修改商品信息，改变了货号。该字段和cargoNUmber的区别是：该字段是定义在商品级别上的货号，cargoNUmber是定义在单品级别的货号</summary>
         [Newtonsoft.Json.JsonProperty("productCargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51910,7 +51505,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>sku信息</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeSkuItemDesc> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeSkuItemDesc2> SkuInfos { get; set; }
     
         /// <summary>订单明细涨价或降价的金额</summary>
         [Newtonsoft.Json.JsonProperty("entryDiscount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -51988,7 +51583,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.creditOrder.forDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaCreditOrderForDetail 
+    public partial class AlibabaCreditOrderForDetail2 
     {
         /// <summary>订单金额</summary>
         [Newtonsoft.Json.JsonProperty("payAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52032,7 +51627,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.order.preOrder.forRead</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOrderPreOrderForRead 
+    public partial class AlibabaOrderPreOrderForRead2 
     {
         /// <summary>创建预订单时传入的市场名</summary>
         [Newtonsoft.Json.JsonProperty("marketName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52048,7 +51643,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.order.bizInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOrderBizInfo 
+    public partial class AlibabaOrderBizInfo2 
     {
         /// <summary>是否采源宝订单</summary>
         [Newtonsoft.Json.JsonProperty("odsCyd", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52056,7 +51651,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>诚e赊支付详情，只有使用诚e赊付款时返回</summary>
         [Newtonsoft.Json.JsonProperty("creditOrderDetail", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaCreditOrderForDetail CreditOrderDetail { get; set; }
+        public AlibabaCreditOrderForDetail2 CreditOrderDetail { get; set; }
     
         /// <summary>零售通订单信息</summary>
         [Newtonsoft.Json.JsonProperty("lstOrderInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52064,7 +51659,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>预订单信息</summary>
         [Newtonsoft.Json.JsonProperty("preOrderInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOrderPreOrderForRead PreOrderInfo { get; set; }
+        public AlibabaOrderPreOrderForRead2 PreOrderInfo { get; set; }
     
         /// <summary>账期交易订单的到账时间</summary>
         [Newtonsoft.Json.JsonProperty("accountPeriodTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52080,7 +51675,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.OverseasExtraAddress</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeOverseasExtraAddress 
+    public partial class AlibabaTradeOverseasExtraAddress2 
     {
         /// <summary>路线名称</summary>
         [Newtonsoft.Json.JsonProperty("channelName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52116,7 +51711,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.orderDetail.caigouQuoteInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOrderDetailCaigouQuoteInfo 
+    public partial class AlibabaOrderDetailCaigouQuoteInfo2 
     {
         /// <summary>供应单项的名称</summary>
         [Newtonsoft.Json.JsonProperty("productQuoteName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52136,7 +51731,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.order.rateDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOrderRateDetail 
+    public partial class AlibabaOrderRateDetail2 
     {
         /// <summary>评价星级</summary>
         [Newtonsoft.Json.JsonProperty("starLevel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52164,7 +51759,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.OrderRateInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeOrderRateInfo 
+    public partial class AlibabaTradeOrderRateInfo2 
     {
         /// <summary>买家评价状态(4:已评论,5:未评论,6;不需要评论)</summary>
         [Newtonsoft.Json.JsonProperty("buyerRateStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52176,11 +51771,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>卖家給买家的评价</summary>
         [Newtonsoft.Json.JsonProperty("buyerRateList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOrderRateDetail> BuyerRateList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOrderRateDetail2> BuyerRateList { get; set; }
     
         /// <summary>买家給卖家的评价</summary>
         [Newtonsoft.Json.JsonProperty("sellerRateList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOrderRateDetail> SellerRateList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOrderRateDetail2> SellerRateList { get; set; }
     
     
     }
@@ -52188,7 +51783,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.TradeTermsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelTradeTermsInfo 
+    public partial class AlibabaOpenplatformTradeModelTradeTermsInfo2 
     {
         /// <summary>支付状态。国际站：WAIT_PAY(未支付),PAYER_PAID(已完成支付),PART_SUCCESS(部分支付成功),PAY_SUCCESS(支付成功),CLOSED(风控关闭),CANCELLED(支付撤销),SUCCESS(成功),FAIL(失败)。
         /// 1688:1(未付款);2(已付款);4(全额退款);6(卖家有收到钱，回款完成) ;7(未创建外部支付单);8 (付款前取消) ; 9(正在支付中);12(账期支付,待到账)</summary>
@@ -52239,7 +51834,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsItemsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelNativeLogisticsItemsInfo 
+    public partial class AlibabaOpenplatformTradeModelNativeLogisticsItemsInfo2 
     {
         /// <summary>发货时间</summary>
         [Newtonsoft.Json.JsonProperty("deliveredTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52379,7 +51974,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelNativeLogisticsInfo 
+    public partial class AlibabaOpenplatformTradeModelNativeLogisticsInfo2 
     {
         /// <summary>详细地址</summary>
         [Newtonsoft.Json.JsonProperty("address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52423,7 +52018,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>运单明细</summary>
         [Newtonsoft.Json.JsonProperty("logisticsItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelNativeLogisticsItemsInfo> LogisticsItems { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelNativeLogisticsItemsInfo2> LogisticsItems { get; set; }
     
         /// <summary>镇，街道地址码</summary>
         [Newtonsoft.Json.JsonProperty("townCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52439,7 +52034,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.CustomsAttributesInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeCustomsAttributesInfo 
+    public partial class AlibabaTradeCustomsAttributesInfo2 
     {
         /// <summary>sku标识</summary>
         [Newtonsoft.Json.JsonProperty("sku", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52475,7 +52070,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.Customs</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeCustoms 
+    public partial class AlibabaTradeCustoms2 
     {
         /// <summary>id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52503,7 +52098,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>报关信息列表</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeCustomsAttributesInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeCustomsAttributesInfo2> Attributes { get; set; }
     
     
     }
@@ -52511,55 +52106,55 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelTradeInfo 
+    public partial class AlibabaOpenplatformTradeModelTradeInfo2 
     {
         /// <summary>订单扩展属性</summary>
         [Newtonsoft.Json.JsonProperty("extAttributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeKeyValuePair> ExtAttributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeKeyValuePair2> ExtAttributes { get; set; }
     
         /// <summary>发票信息</summary>
         [Newtonsoft.Json.JsonProperty("orderInvoiceInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaInvoiceOrderInvoiceModel OrderInvoiceInfo { get; set; }
+        public AlibabaInvoiceOrderInvoiceModel2 OrderInvoiceInfo { get; set; }
     
         /// <summary>订单基础信息</summary>
         [Newtonsoft.Json.JsonProperty("baseInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelOrderBaseInfo BaseInfo { get; set; }
+        public AlibabaOpenplatformTradeModelOrderBaseInfo2 BaseInfo { get; set; }
     
         /// <summary>商品条目信息</summary>
         [Newtonsoft.Json.JsonProperty("productItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelProductItemInfo> ProductItems { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelProductItemInfo2> ProductItems { get; set; }
     
         /// <summary>订单业务信息</summary>
         [Newtonsoft.Json.JsonProperty("orderBizInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOrderBizInfo OrderBizInfo { get; set; }
+        public AlibabaOrderBizInfo2 OrderBizInfo { get; set; }
     
         /// <summary>跨境地址扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("overseasExtraAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeOverseasExtraAddress OverseasExtraAddress { get; set; }
+        public AlibabaTradeOverseasExtraAddress2 OverseasExtraAddress { get; set; }
     
         /// <summary>采购单详情列表，为大企业采购订单独有域。</summary>
         [Newtonsoft.Json.JsonProperty("quoteList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOrderDetailCaigouQuoteInfo> QuoteList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOrderDetailCaigouQuoteInfo2> QuoteList { get; set; }
     
         /// <summary>订单评价信息</summary>
         [Newtonsoft.Json.JsonProperty("orderRateInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeOrderRateInfo OrderRateInfo { get; set; }
+        public AlibabaTradeOrderRateInfo2 OrderRateInfo { get; set; }
     
         /// <summary>交易条款</summary>
         [Newtonsoft.Json.JsonProperty("tradeTerms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelTradeTermsInfo> TradeTerms { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelTradeTermsInfo2> TradeTerms { get; set; }
     
         /// <summary>国内物流</summary>
         [Newtonsoft.Json.JsonProperty("nativeLogistics", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelNativeLogisticsInfo NativeLogistics { get; set; }
+        public AlibabaOpenplatformTradeModelNativeLogisticsInfo2 NativeLogistics { get; set; }
     
         /// <summary>保障条款</summary>
         [Newtonsoft.Json.JsonProperty("guaranteesTerms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelGuaranteeTermsInfo GuaranteesTerms { get; set; }
+        public AlibabaOpenplatformTradeModelGuaranteeTermsInfo2 GuaranteesTerms { get; set; }
     
         /// <summary>跨境报关信息</summary>
         [Newtonsoft.Json.JsonProperty("customs", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaTradeCustoms Customs { get; set; }
+        public AlibabaTradeCustoms2 Customs { get; set; }
     
     
     }
@@ -52576,7 +52171,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>返回结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerViewAlibabaOpenplatformTradeModelTradeInfo Result { get; set; }
+        public AlibabaOpenplatformTradeModelTradeInfo2 Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52650,7 +52245,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus,version:1,typeName:alibaba.trade.refund.OpLogisticsCompanyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAlibabaTradeRefundOpLogisticsCompanyModel 
+    public partial class AlibabaTradeRefundOpLogisticsCompanyModel2 
     {
         /// <summary>快递公司名</summary>
         [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52690,7 +52285,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus,version:1,typeName:alibaba.trade.refund.OpOrderRefundOperationModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAlibabaTradeRefundOpOrderRefundOperationModel 
+    public partial class AlibabaTradeRefundOpOrderRefundOperationModel2 
     {
         /// <summary>操作后的退款状态</summary>
         [Newtonsoft.Json.JsonProperty("afterOperateStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -52790,7 +52385,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>物流公司详情</summary>
         [Newtonsoft.Json.JsonProperty("logisticsCompany", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAlibabaTradeRefundOpLogisticsCompanyModel LogisticsCompany { get; set; }
+        public AlibabaTradeRefundOpLogisticsCompanyModel2 LogisticsCompany { get; set; }
     
     
     }
@@ -52798,7 +52393,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAlibabaTradeRefundOpOrderRefundModel 
+    public partial class AlibabaTradeRefundOpOrderRefundModel2 
     {
         /// <summary>支付宝交易号</summary>
         [Newtonsoft.Json.JsonProperty("alipayPaymentId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53016,7 +52611,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>操作记录列表</summary>
         [Newtonsoft.Json.JsonProperty("refundOperationList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAlibabaTradeRefundOpOrderRefundOperationModel> RefundOperationList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeRefundOpOrderRefundOperationModel2> RefundOperationList { get; set; }
     
         /// <summary>买家会员ID</summary>
         [Newtonsoft.Json.JsonProperty("buyerLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53088,7 +52683,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>退款单信息</summary>
         [Newtonsoft.Json.JsonProperty("opOrderRefundModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAlibabaTradeRefundOpOrderRefundModel> OpOrderRefundModels { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeRefundOpOrderRefundModel2> OpOrderRefundModels { get; set; }
     
     
     }
@@ -53101,7 +52696,7 @@ namespace AlibabaSDK.FullModels
     /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus&amp;v=1 
     ///  </summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult 
+    public partial class AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult2 
     {
         /// <summary>查询结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53125,7 +52720,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefundOperationList,version:1,typeName:alibaba.trade.refund.OpLogisticsCompanyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundOperationListAlibabaTradeRefundOpLogisticsCompanyModel 
+    public partial class AlibabaTradeRefundOpLogisticsCompanyModel3 
     {
         /// <summary>快递公司名</summary>
         [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53165,7 +52760,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefundOperationList,version:1,typeName:alibaba.trade.refund.OpOrderRefundOperationModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundOperationListAlibabaTradeRefundOpOrderRefundOperationModel 
+    public partial class AlibabaTradeRefundOpOrderRefundOperationModel3 
     {
         /// <summary>操作后的退款状态</summary>
         [Newtonsoft.Json.JsonProperty("afterOperateStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53265,7 +52860,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>物流公司详情</summary>
         [Newtonsoft.Json.JsonProperty("logisticsCompany", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundOperationListAlibabaTradeRefundOpLogisticsCompanyModel LogisticsCompany { get; set; }
+        public AlibabaTradeRefundOpLogisticsCompanyModel3 LogisticsCompany { get; set; }
     
     
     }
@@ -53277,7 +52872,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>退款信息</summary>
         [Newtonsoft.Json.JsonProperty("opOrderRefundOperationModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundOperationListAlibabaTradeRefundOpOrderRefundOperationModel> OpOrderRefundOperationModels { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeRefundOpOrderRefundOperationModel3> OpOrderRefundOperationModels { get; set; }
     
     
     }
@@ -53290,7 +52885,7 @@ namespace AlibabaSDK.FullModels
     /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.OpQueryOrderRefundOperationList&amp;v=1 
     ///  </summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundOperationListResult 
+    public partial class AlibabaTradeRefundOpQueryOrderRefundOperationListResult2 
     {
         /// <summary>返回结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53314,7 +52909,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpLogisticsCompanyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundAlibabaTradeRefundOpLogisticsCompanyModel 
+    public partial class AlibabaTradeRefundOpLogisticsCompanyModel4 
     {
         /// <summary>快递公司名</summary>
         [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53354,7 +52949,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpOrderRefundOperationModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundAlibabaTradeRefundOpOrderRefundOperationModel 
+    public partial class AlibabaTradeRefundOpOrderRefundOperationModel4 
     {
         /// <summary>操作后的退款状态</summary>
         [Newtonsoft.Json.JsonProperty("afterOperateStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53454,7 +53049,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>物流公司详情</summary>
         [Newtonsoft.Json.JsonProperty("logisticsCompany", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundAlibabaTradeRefundOpLogisticsCompanyModel LogisticsCompany { get; set; }
+        public AlibabaTradeRefundOpLogisticsCompanyModel4 LogisticsCompany { get; set; }
     
     
     }
@@ -53462,7 +53057,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundAlibabaTradeRefundOpOrderRefundModel 
+    public partial class AlibabaTradeRefundOpOrderRefundModel3 
     {
         /// <summary>售后超时标记</summary>
         [Newtonsoft.Json.JsonProperty("aftersaleAgreeTimeout", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53728,7 +53323,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>操作记录列表</summary>
         [Newtonsoft.Json.JsonProperty("refundOperationList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundAlibabaTradeRefundOpOrderRefundOperationModel> RefundOperationList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeRefundOpOrderRefundOperationModel4> RefundOperationList { get; set; }
     
         /// <summary>买家LoginId</summary>
         [Newtonsoft.Json.JsonProperty("buyerLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53748,7 +53343,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>退款模型</summary>
         [Newtonsoft.Json.JsonProperty("opOrderRefundModelDetail", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundAlibabaTradeRefundOpOrderRefundModel OpOrderRefundModelDetail { get; set; }
+        public AlibabaTradeRefundOpOrderRefundModel3 OpOrderRefundModelDetail { get; set; }
     
     
     }
@@ -53761,7 +53356,7 @@ namespace AlibabaSDK.FullModels
     /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.OpQueryOrderRefund&amp;v=1 
     ///  </summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundResult 
+    public partial class AlibabaTradeRefundOpQueryOrderRefundResult2 
     {
         /// <summary>查询结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -53785,7 +53380,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.queryOrderRefundList,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundQueryOrderRefundListAlibabaTradeRefundOpOrderRefundModel 
+    public partial class AlibabaTradeRefundOpOrderRefundModel4 
     {
         /// <summary>售后超时标记</summary>
         [Newtonsoft.Json.JsonProperty("aftersaleAgreeTimeout", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54051,11 +53646,11 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.queryOrderRefundList,version:1,typeName:alibaba.trade.refund.OpQueryOrderRefundListResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeRefundQueryOrderRefundListAlibabaTradeRefundOpQueryOrderRefundListResult 
+    public partial class AlibabaTradeRefundOpQueryOrderRefundListResult2 
     {
         /// <summary>退款单列表</summary>
         [Newtonsoft.Json.JsonProperty("opOrderRefundModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeRefundQueryOrderRefundListAlibabaTradeRefundOpOrderRefundModel> OpOrderRefundModels { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeRefundOpOrderRefundModel4> OpOrderRefundModels { get; set; }
     
         /// <summary>符合条件总的记录条数</summary>
         [Newtonsoft.Json.JsonProperty("totalCount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54080,7 +53675,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>返回结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeRefundQueryOrderRefundListAlibabaTradeRefundOpQueryOrderRefundListResult Result { get; set; }
+        public AlibabaTradeRefundOpQueryOrderRefundListResult2 Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54100,7 +53695,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.invoice.get,version:1,typeName:alibaba.invoice.OrderInvoiceModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaInvoiceGetAlibabaInvoiceOrderInvoiceModel 
+    public partial class AlibabaInvoiceOrderInvoiceModel3 
     {
         /// <summary>发票公司名称(即发票抬头-title)</summary>
         [Newtonsoft.Json.JsonProperty("invoiceCompanyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54205,7 +53800,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>发票信息</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaInvoiceGetAlibabaInvoiceOrderInvoiceModel Result { get; set; }
+        public AlibabaInvoiceOrderInvoiceModel3 Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54221,7 +53816,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.com.KeyValuePair</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeComKeyValuePair 
+    public partial class AlibabaTradeComKeyValuePair2 
     {
         /// <summary>键值对的Key</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54277,7 +53872,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>扩展数据,附加参数集合,自定各个业务场景下的附加属性</summary>
         [Newtonsoft.Json.JsonProperty("extParams", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeComKeyValuePair> ExtParams { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeComKeyValuePair2> ExtParams { get; set; }
     
     
     }
@@ -54337,7 +53932,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.SimpleBuyer</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeSimpleBuyer 
+    public partial class AlibabaTradeSimpleBuyer2 
     {
         /// <summary>会员memberId</summary>
         [Newtonsoft.Json.JsonProperty("memberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54357,7 +53952,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.resultCodeDef</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeResultCodeDef 
+    public partial class AlibabaTradeResultCodeDef2 
     {
         /// <summary>错误描述</summary>
         [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54377,7 +53972,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.payment.PayChannel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaPaymentPayChannel 
+    public partial class AlibabaPaymentPayChannel2 
     {
         /// <summary>不可用的错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54401,15 +53996,15 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.payment.PayChannels</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaPaymentPayChannels 
+    public partial class AlibabaPaymentPayChannels2 
     {
         /// <summary>可选支付渠道</summary>
         [Newtonsoft.Json.JsonProperty("availbleChannels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaPaymentPayChannel> AvailbleChannels { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaPaymentPayChannel2> AvailbleChannels { get; set; }
     
         /// <summary>默认已选支付渠道</summary>
         [Newtonsoft.Json.JsonProperty("defaultSelected", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaPaymentPayChannel DefaultSelected { get; set; }
+        public AlibabaPaymentPayChannel2 DefaultSelected { get; set; }
     
     
     }
@@ -54417,7 +54012,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.SimpleSeller</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeSimpleSeller 
+    public partial class AlibabaTradeSimpleSeller2 
     {
         /// <summary>公司名称</summary>
         [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54461,7 +54056,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.SubPayInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeSubPayInfo 
+    public partial class AlibabaTradeSubPayInfo2 
     {
         /// <summary>实际付款金额，含邮费,减了优惠.</summary>
         [Newtonsoft.Json.JsonProperty("actualPayFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54573,7 +54168,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.trademode</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeTrademode 
+    public partial class AlibabaTradeTrademode2 
     {
         /// <summary>提示文案(合约,账期结算,支付宝担保说明等)</summary>
         [Newtonsoft.Json.JsonProperty("desc", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54625,7 +54220,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>多阶段信息</summary>
         [Newtonsoft.Json.JsonProperty("subPayInfors", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeSubPayInfo> SubPayInfors { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeSubPayInfo2> SubPayInfors { get; set; }
     
     
     }
@@ -54633,7 +54228,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.TradeModeModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeTradeModeModel 
+    public partial class AlibabaTradeTradeModeModel2 
     {
         /// <summary>是否能够修改交易方式</summary>
         [Newtonsoft.Json.JsonProperty("canModifyTradeMode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54641,11 +54236,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>默认选择交易模型</summary>
         [Newtonsoft.Json.JsonProperty("curSelectedTradeMode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeTrademode CurSelectedTradeMode { get; set; }
+        public AlibabaTradeTrademode2 CurSelectedTradeMode { get; set; }
     
         /// <summary>可选交易模型</summary>
         [Newtonsoft.Json.JsonProperty("tradeModes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeTrademode> TradeModes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeTrademode2> TradeModes { get; set; }
     
     
     }
@@ -54653,7 +54248,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.ToleranceCollection</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeToleranceCollection 
+    public partial class AlibabaTradeToleranceCollection2 
     {
         /// <summary>运费是否被容错. 0: 没有容错。 1：被容错.</summary>
         [Newtonsoft.Json.JsonProperty("toleranceFreight", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54705,7 +54300,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.OpPromotionInfor</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeOpPromotionInfor 
+    public partial class AlibabaTradeOpPromotionInfor2 
     {
         /// <summary>优惠Id</summary>
         [Newtonsoft.Json.JsonProperty("promotionId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54733,7 +54328,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.Cargo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeCargo 
+    public partial class AlibabaTradeCargo2 
     {
         [Newtonsoft.Json.JsonProperty("additionalFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public double? AdditionalFee { get; set; }
@@ -54859,7 +54454,7 @@ namespace AlibabaSDK.FullModels
         public double? Weight { get; set; }
     
         [Newtonsoft.Json.JsonProperty("subPayInfors", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeSubPayInfo> SubPayInfors { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeSubPayInfo2> SubPayInfors { get; set; }
     
         [Newtonsoft.Json.JsonProperty("specInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaTradeSpecInfo> SpecInfo { get; set; }
@@ -54877,7 +54472,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>商品行级别的优惠信息</summary>
         [Newtonsoft.Json.JsonProperty("productPromotionInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeOpPromotionInfor ProductPromotionInfo { get; set; }
+        public AlibabaTradeOpPromotionInfor2 ProductPromotionInfo { get; set; }
     
     
     }
@@ -54885,7 +54480,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.MakeOrderModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeMakeOrderModel 
+    public partial class AlibabaTradeMakeOrderModel2 
     {
         /// <summary>附加费,单位，分</summary>
         [Newtonsoft.Json.JsonProperty("additionalFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -54977,35 +54572,35 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>交易对象买家信息</summary>
         [Newtonsoft.Json.JsonProperty("buyer", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeSimpleBuyer Buyer { get; set; }
+        public AlibabaTradeSimpleBuyer2 Buyer { get; set; }
     
         /// <summary> 支付渠道列表. 当面交易接入诚意赊时增加</summary>
         [Newtonsoft.Json.JsonProperty("payChannels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaPaymentPayChannels PayChannels { get; set; }
+        public AlibabaPaymentPayChannels2 PayChannels { get; set; }
     
         /// <summary>卖家</summary>
         [Newtonsoft.Json.JsonProperty("seller", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeSimpleSeller Seller { get; set; }
+        public AlibabaTradeSimpleSeller2 Seller { get; set; }
     
         /// <summary>卖家</summary>
         [Newtonsoft.Json.JsonProperty("simpleSeller", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeSimpleSeller SimpleSeller { get; set; }
+        public AlibabaTradeSimpleSeller2 SimpleSeller { get; set; }
     
         /// <summary>交易方式模型</summary>
         [Newtonsoft.Json.JsonProperty("tradeModeModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeTradeModeModel TradeModeModel { get; set; }
+        public AlibabaTradeTradeModeModel2 TradeModeModel { get; set; }
     
         /// <summary>容错项目集合</summary>
         [Newtonsoft.Json.JsonProperty("toleranceCollection", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeToleranceCollection ToleranceCollection { get; set; }
+        public AlibabaTradeToleranceCollection2 ToleranceCollection { get; set; }
     
         /// <summary>货品信息</summary>
         [Newtonsoft.Json.JsonProperty("cargos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeCargo> Cargos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeCargo2> Cargos { get; set; }
     
         /// <summary>店铺级别的优惠信息</summary>
         [Newtonsoft.Json.JsonProperty("shopPromotionInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeOpPromotionInfor ShopPromotionInfo { get; set; }
+        public AlibabaTradeOpPromotionInfor2 ShopPromotionInfo { get; set; }
     
     
     }
@@ -55013,7 +54608,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.OrderViewModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeOrderViewModel 
+    public partial class AlibabaTradeOrderViewModel2 
     {
         /// <summary>需要后续执行的流程标示列表.</summary>
         [Newtonsoft.Json.JsonProperty("afterFlowIds", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55021,11 +54616,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>resultCode定义对象</summary>
         [Newtonsoft.Json.JsonProperty("resultCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeResultCodeDef ResultCode { get; set; }
+        public AlibabaTradeResultCodeDef2 ResultCode { get; set; }
     
         /// <summary>下单过程中在页面上需要显示的元素</summary>
         [Newtonsoft.Json.JsonProperty("orderModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeMakeOrderModel OrderModel { get; set; }
+        public AlibabaTradeMakeOrderModel2 OrderModel { get; set; }
     
     
     }
@@ -55033,15 +54628,15 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.general.preorder,version:1,typeName:alibaba.trade.OrderMutilViewResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeOrderMutilViewResult 
+    public partial class AlibabaTradeOrderMutilViewResult2 
     {
         /// <summary>交易对象买家信息</summary>
         [Newtonsoft.Json.JsonProperty("buyer", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeSimpleBuyer Buyer { get; set; }
+        public AlibabaTradeSimpleBuyer2 Buyer { get; set; }
     
         /// <summary>下单过程中在页面上需要显示的元素</summary>
         [Newtonsoft.Json.JsonProperty("orderModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeOrderViewModel> OrderModels { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeOrderViewModel2> OrderModels { get; set; }
     
         /// <summary>订单的买家地址</summary>
         [Newtonsoft.Json.JsonProperty("receiveAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55049,7 +54644,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>resultCode定义对象，在交易订单中，一个订单可以包含多个子订单，服务端会对每个子订单那都检查逻辑。所以resultCode定义对象可以定义在每个子订单中。</summary>
         [Newtonsoft.Json.JsonProperty("resultCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeResultCodeDef ResultCode { get; set; }
+        public AlibabaTradeResultCodeDef2 ResultCode { get; set; }
     
     
     }
@@ -55066,7 +54661,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>多订单展示处理结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGeneralPreorderAlibabaTradeOrderMutilViewResult Result { get; set; }
+        public AlibabaTradeOrderMutilViewResult2 Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55135,7 +54730,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.addresscode.parse,version:1,typeName:alibaba.trade.ReceiveAddress</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeAddresscodeParseAlibabaTradeReceiveAddress 
+    public partial class AlibabaTradeReceiveAddress2 
     {
         /// <summary>街道地址，不包括省市编码</summary>
         [Newtonsoft.Json.JsonProperty("address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55196,7 +54791,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>解析后的收获地址</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeAddresscodeParseAlibabaTradeReceiveAddress Result { get; set; }
+        public AlibabaTradeReceiveAddress2 Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55212,7 +54807,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.addresscode.get,version:1,typeName:alibaba.TradeAddressCode</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeAddresscodeGetAlibabaTradeAddressCode 
+    public partial class AlibabaTradeAddressCode2 
     {
         /// <summary>地区编码</summary>
         [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55249,7 +54844,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>返回地区信息</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeAddresscodeGetAlibabaTradeAddressCode Result { get; set; }
+        public AlibabaTradeAddressCode2 Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55265,7 +54860,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.orderDetail.caigouQuoteInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOrderDetailCaigouQuoteInfo 
+    public partial class AlibabaOrderDetailCaigouQuoteInfo3 
     {
         /// <summary>供应单项的名称</summary>
         [Newtonsoft.Json.JsonProperty("productQuoteName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55285,7 +54880,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.KeyValuePair</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeKeyValuePair 
+    public partial class AlibabaOpenplatformTradeKeyValuePair3 
     {
         /// <summary>键</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55305,7 +54900,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.OrderRateInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeOrderRateInfo 
+    public partial class AlibabaTradeOrderRateInfo3 
     {
         /// <summary>买家评价状态(4:已评论,5:未评论,6;不需要评论)</summary>
         [Newtonsoft.Json.JsonProperty("buyerRateStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55321,7 +54916,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.invoice.OrderInvoiceModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaInvoiceOrderInvoiceModel 
+    public partial class AlibabaInvoiceOrderInvoiceModel4 
     {
         /// <summary>发票公司名称(即发票抬头-title)</summary>
         [Newtonsoft.Json.JsonProperty("invoiceCompanyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55401,7 +54996,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeTermsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelTradeTermsInfo 
+    public partial class AlibabaOpenplatformTradeModelTradeTermsInfo3 
     {
         /// <summary>支付状态。国际站：WAIT_PAY(未支付),PAYER_PAID(已完成支付),PART_SUCCESS(部分支付成功),PAY_SUCCESS(支付成功),CLOSED(风控关闭),CANCELLED(支付撤销),SUCCESS(成功),FAIL(失败)。
         /// 1688:未付款，1;已付款，2;全额退款，4;卖家有收到钱，回款完成，6 ;未创建外部支付单，7; 付款前取消 ，8 ; 正在支付中 ，9</summary>
@@ -55439,7 +55034,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelNativeLogisticsInfo 
+    public partial class AlibabaOpenplatformTradeModelNativeLogisticsInfo3 
     {
         /// <summary>详细地址</summary>
         [Newtonsoft.Json.JsonProperty("address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55495,7 +55090,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.GuaranteeTermsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelGuaranteeTermsInfo 
+    public partial class AlibabaOpenplatformTradeModelGuaranteeTermsInfo3 
     {
         /// <summary>保障条款</summary>
         [Newtonsoft.Json.JsonProperty("assuranceInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55515,7 +55110,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.tradeContact</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeTradeContact 
+    public partial class AlibabaTradeTradeContact3 
     {
         /// <summary>联系电话</summary>
         [Newtonsoft.Json.JsonProperty("phone", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55551,7 +55146,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.orderReceiverInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeOrderReceiverInfo 
+    public partial class AlibabaTradeOrderReceiverInfo3 
     {
         /// <summary>收件人</summary>
         [Newtonsoft.Json.JsonProperty("toFullName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55587,7 +55182,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.StepOrderModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeStepOrderModel 
+    public partial class AlibabaTradeStepOrderModel3 
     {
         /// <summary>阶段id</summary>
         [Newtonsoft.Json.JsonProperty("stepOrderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55741,7 +55336,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelOrderBaseInfo 
+    public partial class AlibabaOpenplatformTradeModelOrderBaseInfo3 
     {
         /// <summary>完全发货时间</summary>
         [Newtonsoft.Json.JsonProperty("allDeliveredTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55845,11 +55440,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>买家联系人</summary>
         [Newtonsoft.Json.JsonProperty("buyerContact", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeTradeContact BuyerContact { get; set; }
+        public AlibabaTradeTradeContact3 BuyerContact { get; set; }
     
         /// <summary>卖家联系人</summary>
         [Newtonsoft.Json.JsonProperty("sellerContact", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeTradeContact SellerContact { get; set; }
+        public AlibabaTradeTradeContact3 SellerContact { get; set; }
     
         /// <summary>1:担保交易
         /// 2:预存款交易
@@ -55886,7 +55481,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收件人信息</summary>
         [Newtonsoft.Json.JsonProperty("receiverInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeOrderReceiverInfo ReceiverInfo { get; set; }
+        public AlibabaTradeOrderReceiverInfo3 ReceiverInfo { get; set; }
     
         /// <summary>买家loginId，旺旺Id</summary>
         [Newtonsoft.Json.JsonProperty("buyerLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55926,7 +55521,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>[交易3.0]分阶段交易，分阶段订单list</summary>
         [Newtonsoft.Json.JsonProperty("stepOrderList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeStepOrderModel> StepOrderList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeStepOrderModel3> StepOrderList { get; set; }
     
         /// <summary>分阶段法务协议地址</summary>
         [Newtonsoft.Json.JsonProperty("stepAgreementPath", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -55974,7 +55569,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.creditOrder.forDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaCreditOrderForDetail 
+    public partial class AlibabaCreditOrderForDetail3 
     {
         /// <summary>订单金额</summary>
         [Newtonsoft.Json.JsonProperty("payAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56006,7 +55601,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.order.preOrder.forRead</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOrderPreOrderForRead 
+    public partial class AlibabaOrderPreOrderForRead3 
     {
         /// <summary>创建预订单的appkey</summary>
         [Newtonsoft.Json.JsonProperty("appkey", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56026,7 +55621,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.order.bizInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOrderBizInfo 
+    public partial class AlibabaOrderBizInfo3 
     {
         /// <summary>是否采源宝订单</summary>
         [Newtonsoft.Json.JsonProperty("odsCyd", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56042,11 +55637,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>诚e赊支付详情，只有使用诚e赊付款时返回</summary>
         [Newtonsoft.Json.JsonProperty("creditOrderDetail", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaCreditOrderForDetail CreditOrderDetail { get; set; }
+        public AlibabaCreditOrderForDetail3 CreditOrderDetail { get; set; }
     
         /// <summary>预订单信息</summary>
         [Newtonsoft.Json.JsonProperty("preOrderInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOrderPreOrderForRead PreOrderInfo { get; set; }
+        public AlibabaOrderPreOrderForRead3 PreOrderInfo { get; set; }
     
     
     }
@@ -56054,7 +55649,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.SkuItemDesc</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeSkuItemDesc 
+    public partial class AlibabaTradeSkuItemDesc3 
     {
         /// <summary>属性名</summary>
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56070,7 +55665,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelProductItemInfo 
+    public partial class AlibabaOpenplatformTradeModelProductItemInfo3 
     {
         /// <summary>指定单品货号，国际站无需关注。该字段不一定有值，仅仅在下单时才会把货号记录(如果卖家设置了单品货号的话)。别的订单类型的货号只能通过商品接口去获取。请注意：通过商品接口获取时的货号和下单时的货号可能不一致，因为下单完成后卖家可能修改商品信息，改变了货号。</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56146,7 +55741,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>保障条款，此字段仅针对1688</summary>
         [Newtonsoft.Json.JsonProperty("guaranteesTerms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelGuaranteeTermsInfo> GuaranteesTerms { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelGuaranteeTermsInfo3> GuaranteesTerms { get; set; }
     
         /// <summary>指定商品货号，该字段不一定有值，在下单时才会把货号记录。别的订单类型的货号只能通过商品接口去获取。请注意：通过商品接口获取时的货号和下单时的货号可能不一致，因为下单完成后卖家可能修改商品信息，改变了货号。该字段和cargoNUmber的区别是：该字段是定义在商品级别上的货号，cargoNUmber是定义在单品级别的货号</summary>
         [Newtonsoft.Json.JsonProperty("productCargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56154,7 +55749,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>SKU属性描述</summary>
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeSkuItemDesc> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeSkuItemDesc3> SkuInfos { get; set; }
     
         /// <summary>订单明细涨价或降价的金额</summary>
         [Newtonsoft.Json.JsonProperty("entryDiscount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56200,7 +55795,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.OverseasExtraAddress</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeOverseasExtraAddress 
+    public partial class AlibabaTradeOverseasExtraAddress3 
     {
         /// <summary>路线名称</summary>
         [Newtonsoft.Json.JsonProperty("channelName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56236,7 +55831,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.CustomsAttributesInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeCustomsAttributesInfo 
+    public partial class AlibabaTradeCustomsAttributesInfo3 
     {
         /// <summary>sku标识</summary>
         [Newtonsoft.Json.JsonProperty("sku", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56272,7 +55867,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.Customs</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeCustoms 
+    public partial class AlibabaTradeCustoms3 
     {
         /// <summary>id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56300,7 +55895,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>报关信息列表</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeCustomsAttributesInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeCustomsAttributesInfo3> Attributes { get; set; }
     
     
     }
@@ -56308,55 +55903,55 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelTradeInfo 
+    public partial class AlibabaOpenplatformTradeModelTradeInfo3 
     {
         /// <summary>采购单详情列表，为大企业采购订单独有域。</summary>
         [Newtonsoft.Json.JsonProperty("quoteList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOrderDetailCaigouQuoteInfo> QuoteList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOrderDetailCaigouQuoteInfo3> QuoteList { get; set; }
     
         /// <summary>订单扩展属性</summary>
         [Newtonsoft.Json.JsonProperty("extAttributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeKeyValuePair> ExtAttributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeKeyValuePair3> ExtAttributes { get; set; }
     
         /// <summary>订单评价信息</summary>
         [Newtonsoft.Json.JsonProperty("orderRateInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeOrderRateInfo OrderRateInfo { get; set; }
+        public AlibabaTradeOrderRateInfo3 OrderRateInfo { get; set; }
     
         /// <summary>发票信息</summary>
         [Newtonsoft.Json.JsonProperty("orderInvoiceInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaInvoiceOrderInvoiceModel OrderInvoiceInfo { get; set; }
+        public AlibabaInvoiceOrderInvoiceModel4 OrderInvoiceInfo { get; set; }
     
         /// <summary>交易条款</summary>
         [Newtonsoft.Json.JsonProperty("tradeTerms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelTradeTermsInfo> TradeTerms { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelTradeTermsInfo3> TradeTerms { get; set; }
     
         /// <summary>国内物流</summary>
         [Newtonsoft.Json.JsonProperty("nativeLogistics", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelNativeLogisticsInfo NativeLogistics { get; set; }
+        public AlibabaOpenplatformTradeModelNativeLogisticsInfo3 NativeLogistics { get; set; }
     
         /// <summary>保障条款</summary>
         [Newtonsoft.Json.JsonProperty("guaranteesTerms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelGuaranteeTermsInfo GuaranteesTerms { get; set; }
+        public AlibabaOpenplatformTradeModelGuaranteeTermsInfo3 GuaranteesTerms { get; set; }
     
         /// <summary>订单基础信息</summary>
         [Newtonsoft.Json.JsonProperty("baseInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelOrderBaseInfo BaseInfo { get; set; }
+        public AlibabaOpenplatformTradeModelOrderBaseInfo3 BaseInfo { get; set; }
     
         /// <summary>订单业务信息</summary>
         [Newtonsoft.Json.JsonProperty("orderBizInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOrderBizInfo OrderBizInfo { get; set; }
+        public AlibabaOrderBizInfo3 OrderBizInfo { get; set; }
     
         /// <summary>商品条目信息</summary>
         [Newtonsoft.Json.JsonProperty("productItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelProductItemInfo> ProductItems { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelProductItemInfo3> ProductItems { get; set; }
     
         /// <summary>跨境地址扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("overseasExtraAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeOverseasExtraAddress OverseasExtraAddress { get; set; }
+        public AlibabaTradeOverseasExtraAddress3 OverseasExtraAddress { get; set; }
     
         /// <summary>跨境报关信息</summary>
         [Newtonsoft.Json.JsonProperty("customs", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaTradeCustoms Customs { get; set; }
+        public AlibabaTradeCustoms3 Customs { get; set; }
     
     
     }
@@ -56373,7 +55968,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>查询返回列表</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetBuyerOrderListAlibabaOpenplatformTradeModelTradeInfo> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelTradeInfo3> Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56393,7 +55988,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.trade.orderReceiverInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeOrderReceiverInfo 
+    public partial class AlibabaTradeOrderReceiverInfo4 
     {
         /// <summary>收件人</summary>
         [Newtonsoft.Json.JsonProperty("toFullName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56429,7 +56024,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.trade.tradeContact</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeTradeContact 
+    public partial class AlibabaTradeTradeContact4 
     {
         /// <summary>联系电话</summary>
         [Newtonsoft.Json.JsonProperty("phone", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56465,7 +56060,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.trade.StepOrderModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeStepOrderModel 
+    public partial class AlibabaTradeStepOrderModel4 
     {
         /// <summary>阶段id</summary>
         [Newtonsoft.Json.JsonProperty("stepOrderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56619,7 +56214,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.trade.tradeSellerContact</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeTradeSellerContact 
+    public partial class AlibabaTradeTradeSellerContact3 
     {
         /// <summary>联系电话</summary>
         [Newtonsoft.Json.JsonProperty("phone", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56663,7 +56258,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelOrderBaseInfo 
+    public partial class AlibabaOpenplatformTradeModelOrderBaseInfo4 
     {
         /// <summary>完全发货时间</summary>
         [Newtonsoft.Json.JsonProperty("allDeliveredTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56679,7 +56274,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>收件人信息</summary>
         [Newtonsoft.Json.JsonProperty("receiverInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeOrderReceiverInfo ReceiverInfo { get; set; }
+        public AlibabaTradeOrderReceiverInfo4 ReceiverInfo { get; set; }
     
         /// <summary>折扣信息，单位分</summary>
         [Newtonsoft.Json.JsonProperty("discount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56760,7 +56355,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>买家联系人</summary>
         [Newtonsoft.Json.JsonProperty("buyerContact", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeTradeContact BuyerContact { get; set; }
+        public AlibabaTradeTradeContact4 BuyerContact { get; set; }
     
         /// <summary>收货时间，这里返回的是完全收货时间</summary>
         [Newtonsoft.Json.JsonProperty("receivingTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56804,7 +56399,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>[交易3.0]分阶段交易，分阶段订单list</summary>
         [Newtonsoft.Json.JsonProperty("stepOrderList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeStepOrderModel> StepOrderList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeStepOrderModel4> StepOrderList { get; set; }
     
         /// <summary>买家支付宝id</summary>
         [Newtonsoft.Json.JsonProperty("buyerAlipayId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56880,7 +56475,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>卖家联系人信息</summary>
         [Newtonsoft.Json.JsonProperty("sellerContact", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeTradeSellerContact SellerContact { get; set; }
+        public AlibabaTradeTradeSellerContact3 SellerContact { get; set; }
     
         /// <summary>关联code</summary>
         [Newtonsoft.Json.JsonProperty("relatedCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -56892,7 +56487,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsItemsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelNativeLogisticsItemsInfo 
+    public partial class AlibabaOpenplatformTradeModelNativeLogisticsItemsInfo3 
     {
         /// <summary>发货时间</summary>
         [Newtonsoft.Json.JsonProperty("deliveredTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57008,7 +56603,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelNativeLogisticsInfo 
+    public partial class AlibabaOpenplatformTradeModelNativeLogisticsInfo4 
     {
         /// <summary>详细地址</summary>
         [Newtonsoft.Json.JsonProperty("address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57052,7 +56647,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>运单明细</summary>
         [Newtonsoft.Json.JsonProperty("logisticsItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelNativeLogisticsItemsInfo> LogisticsItems { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelNativeLogisticsItemsInfo3> LogisticsItems { get; set; }
     
         /// <summary>镇，街道地址码</summary>
         [Newtonsoft.Json.JsonProperty("townCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57068,7 +56663,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.trade.OverseasExtraAddress</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeOverseasExtraAddress 
+    public partial class AlibabaTradeOverseasExtraAddress4 
     {
         /// <summary>路线名称</summary>
         [Newtonsoft.Json.JsonProperty("channelName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57104,7 +56699,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.GuaranteeTermsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelGuaranteeTermsInfo 
+    public partial class AlibabaOpenplatformTradeModelGuaranteeTermsInfo4 
     {
         /// <summary>保障条款</summary>
         [Newtonsoft.Json.JsonProperty("assuranceInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57124,7 +56719,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.trade.SkuItemDesc</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeSkuItemDesc 
+    public partial class AlibabaTradeSkuItemDesc4 
     {
         /// <summary>属性名</summary>
         [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57140,7 +56735,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelProductItemInfo 
+    public partial class AlibabaOpenplatformTradeModelProductItemInfo4 
     {
         /// <summary>指定单品货号，国际站无需关注。该字段不一定有值，仅仅在下单时才会把货号记录(如果卖家设置了单品货号的话)。别的订单类型的货号只能通过商品接口去获取。请注意：通过商品接口获取时的货号和下单时的货号可能不一致，因为下单完成后卖家可能修改商品信息，改变了货号。</summary>
         [Newtonsoft.Json.JsonProperty("cargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57216,14 +56811,14 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>保障条款，此字段仅针对1688</summary>
         [Newtonsoft.Json.JsonProperty("guaranteesTerms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelGuaranteeTermsInfo> GuaranteesTerms { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelGuaranteeTermsInfo4> GuaranteesTerms { get; set; }
     
         /// <summary>指定商品货号，该字段不一定有值，在下单时才会把货号记录。别的订单类型的货号只能通过商品接口去获取。请注意：通过商品接口获取时的货号和下单时的货号可能不一致，因为下单完成后卖家可能修改商品信息，改变了货号。该字段和cargoNUmber的区别是：该字段是定义在商品级别上的货号，cargoNUmber是定义在单品级别的货号</summary>
         [Newtonsoft.Json.JsonProperty("productCargoNumber", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string ProductCargoNumber { get; set; }
     
         [Newtonsoft.Json.JsonProperty("skuInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeSkuItemDesc> SkuInfos { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeSkuItemDesc4> SkuInfos { get; set; }
     
         /// <summary>订单明细涨价或降价的金额</summary>
         [Newtonsoft.Json.JsonProperty("entryDiscount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57293,7 +56888,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.trade.CustomsAttributesInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeCustomsAttributesInfo 
+    public partial class AlibabaTradeCustomsAttributesInfo4 
     {
         /// <summary>sku标识</summary>
         [Newtonsoft.Json.JsonProperty("sku", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57329,7 +56924,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.trade.Customs</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeCustoms 
+    public partial class AlibabaTradeCustoms4 
     {
         /// <summary>id</summary>
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57357,7 +56952,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>报关信息列表</summary>
         [Newtonsoft.Json.JsonProperty("attributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeCustomsAttributesInfo> Attributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaTradeCustomsAttributesInfo4> Attributes { get; set; }
     
     
     }
@@ -57365,7 +56960,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeTermsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelTradeTermsInfo 
+    public partial class AlibabaOpenplatformTradeModelTradeTermsInfo4 
     {
         /// <summary>支付状态。国际站：WAIT_PAY(未支付),PAYER_PAID(已完成支付),PART_SUCCESS(部分支付成功),PAY_SUCCESS(支付成功),CLOSED(风控关闭),CANCELLED(支付撤销),SUCCESS(成功),FAIL(失败)。
         /// 1688:1(未付款);2(已付款);4(全额退款);6(卖家有收到钱，回款完成) ;7(未创建外部支付单);8 (付款前取消) ; 9(正在支付中);12(账期支付,待到账)</summary>
@@ -57416,7 +57011,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.order.rateDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOrderRateDetail 
+    public partial class AlibabaOrderRateDetail3 
     {
         /// <summary>评价星级</summary>
         [Newtonsoft.Json.JsonProperty("starLevel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57444,7 +57039,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.trade.OrderRateInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeOrderRateInfo 
+    public partial class AlibabaTradeOrderRateInfo4 
     {
         /// <summary>买家评价状态(4:已评论,5:未评论,6;不需要评论)</summary>
         [Newtonsoft.Json.JsonProperty("buyerRateStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57456,11 +57051,11 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>卖家給买家的评价</summary>
         [Newtonsoft.Json.JsonProperty("buyerRateList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOrderRateDetail> BuyerRateList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOrderRateDetail3> BuyerRateList { get; set; }
     
         /// <summary>买家給卖家的评价</summary>
         [Newtonsoft.Json.JsonProperty("sellerRateList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOrderRateDetail> SellerRateList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOrderRateDetail3> SellerRateList { get; set; }
     
     
     }
@@ -57468,7 +57063,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.invoice.OrderInvoiceModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaInvoiceOrderInvoiceModel 
+    public partial class AlibabaInvoiceOrderInvoiceModel5 
     {
         /// <summary>发票公司名称(即发票抬头-title)</summary>
         [Newtonsoft.Json.JsonProperty("invoiceCompanyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57548,7 +57143,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.KeyValuePair</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeKeyValuePair 
+    public partial class AlibabaOpenplatformTradeKeyValuePair4 
     {
         /// <summary>键</summary>
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57568,47 +57163,47 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelTradeInfo 
+    public partial class AlibabaOpenplatformTradeModelTradeInfo4 
     {
         /// <summary>订单基础信息</summary>
         [Newtonsoft.Json.JsonProperty("baseInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelOrderBaseInfo BaseInfo { get; set; }
+        public AlibabaOpenplatformTradeModelOrderBaseInfo4 BaseInfo { get; set; }
     
         /// <summary>国内物流</summary>
         [Newtonsoft.Json.JsonProperty("nativeLogistics", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelNativeLogisticsInfo NativeLogistics { get; set; }
+        public AlibabaOpenplatformTradeModelNativeLogisticsInfo4 NativeLogistics { get; set; }
     
         /// <summary>跨境地址扩展信息</summary>
         [Newtonsoft.Json.JsonProperty("overseasExtraAddress", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeOverseasExtraAddress OverseasExtraAddress { get; set; }
+        public AlibabaTradeOverseasExtraAddress4 OverseasExtraAddress { get; set; }
     
         /// <summary>商品条目信息</summary>
         [Newtonsoft.Json.JsonProperty("productItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelProductItemInfo> ProductItems { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelProductItemInfo4> ProductItems { get; set; }
     
         /// <summary>跨境报关信息</summary>
         [Newtonsoft.Json.JsonProperty("customs", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeCustoms Customs { get; set; }
+        public AlibabaTradeCustoms4 Customs { get; set; }
     
         /// <summary>交易条款</summary>
         [Newtonsoft.Json.JsonProperty("tradeTerms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelTradeTermsInfo> TradeTerms { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelTradeTermsInfo4> TradeTerms { get; set; }
     
         /// <summary>订单评价信息</summary>
         [Newtonsoft.Json.JsonProperty("orderRateInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaTradeOrderRateInfo OrderRateInfo { get; set; }
+        public AlibabaTradeOrderRateInfo4 OrderRateInfo { get; set; }
     
         /// <summary>发票信息</summary>
         [Newtonsoft.Json.JsonProperty("orderInvoiceInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaInvoiceOrderInvoiceModel OrderInvoiceInfo { get; set; }
+        public AlibabaInvoiceOrderInvoiceModel5 OrderInvoiceInfo { get; set; }
     
         /// <summary>保障条款</summary>
         [Newtonsoft.Json.JsonProperty("guaranteesTerms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelGuaranteeTermsInfo GuaranteesTerms { get; set; }
+        public AlibabaOpenplatformTradeModelGuaranteeTermsInfo4 GuaranteesTerms { get; set; }
     
         /// <summary>订单扩展属性</summary>
         [Newtonsoft.Json.JsonProperty("extAttributes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeKeyValuePair> ExtAttributes { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeKeyValuePair4> ExtAttributes { get; set; }
     
     
     }
@@ -57625,7 +57220,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>查询返回结果</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaTradeAlibabaTradeGetSellerOrderListAlibabaOpenplatformTradeModelTradeInfo> Result { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaOpenplatformTradeModelTradeInfo4> Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57764,7 +57359,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.search,apiname:alibaba.search.relation.supply,version:1,typeName:alibaba.search.RelationGroupInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaSearchAlibabaSearchRelationSupplyAlibabaSearchRelationGroupInfo 
+    public partial class AlibabaSearchRelationGroupInfo2 
     {
         /// <summary>描述</summary>
         [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -57796,7 +57391,7 @@ namespace AlibabaSDK.FullModels
     
         /// <summary>关联的信息描述</summary>
         [Newtonsoft.Json.JsonProperty("relationDesc", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaSearchAlibabaSearchRelationSupplyAlibabaSearchRelationGroupInfo> RelationDesc { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaSearchRelationGroupInfo2> RelationDesc { get; set; }
     
         /// <summary>卖家在平台上的旺铺域名</summary>
         [Newtonsoft.Json.JsonProperty("domainInPlatforms", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -59787,7 +59382,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.account,apiname:alibaba.account.basic,version:1,typeName:alibaba.account.simpleAccountInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaAccountAlibabaAccountBasicAlibabaAccountSimpleAccountInfo 
+    public partial class AlibabaAccountSimpleAccountInfo2 
     {
         /// <summary>登录名</summary>
         [Newtonsoft.Json.JsonProperty("loginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -59952,7 +59547,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>会员信息</summary>
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public ComAlibabaAccountAlibabaAccountBasicAlibabaAccountSimpleAccountInfo Result { get; set; }
+        public AlibabaAccountSimpleAccountInfo2 Result { get; set; }
     
         /// <summary>错误码</summary>
         [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -60075,7 +59670,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>
     ///  namespace:com.alibaba.product.push,apiname:alibaba.product.push.TaOrderQueryService.queryTradeBill,version:1,typeName:alibaba.product.push.TaTradeBillModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class ComAlibabaProductPushAlibabaProductPushTaOrderQueryServiceQueryTradeBillAlibabaProductPushTaTradeBillModel 
+    public partial class AlibabaProductPushTaTradeBillModel2 
     {
         /// <summary>账单时间</summary>
         [Newtonsoft.Json.JsonProperty("gmtCreate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -60116,7 +59711,7 @@ namespace AlibabaSDK.FullModels
     {
         /// <summary>结果列表</summary>
         [Newtonsoft.Json.JsonProperty("modelList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<ComAlibabaProductPushAlibabaProductPushTaOrderQueryServiceQueryTradeBillAlibabaProductPushTaTradeBillModel> ModelList { get; set; }
+        public System.Collections.Generic.ICollection<AlibabaProductPushTaTradeBillModel2> ModelList { get; set; }
     
         /// <summary>是否有上一页</summary>
         [Newtonsoft.Json.JsonProperty("hasLast", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]

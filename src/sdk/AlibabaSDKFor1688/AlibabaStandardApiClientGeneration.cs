@@ -113,7 +113,7 @@ namespace AlibabaSDK
         /// 400_1	- 查询时类目关键属性必须输入(入参keyAttrs是必填项)
         /// 400_2	- 查询时类目关键属性键值(fid, value)必须输入(入参keyAttrs中的属性值是必填项)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCategoryGetSPUInfoResult AlibabaCategoryGetSPUInfo(long categoryId, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaCategoryGetSPUInfoAlibabaCategoryFeatureAttribute> keyAttrs);
+        AlibabaCategoryGetSPUInfoResult AlibabaCategoryGetSPUInfo(long categoryId, System.Collections.Generic.IEnumerable<AlibabaCategoryFeatureAttribute2> keyAttrs);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>获取标准化产品单元信息(1688)
@@ -127,7 +127,7 @@ namespace AlibabaSDK
         /// 400_1	- 查询时类目关键属性必须输入(入参keyAttrs是必填项)
         /// 400_2	- 查询时类目关键属性键值(fid, value)必须输入(入参keyAttrs中的属性值是必填项)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCategoryGetSPUInfoResult> AlibabaCategoryGetSPUInfoAsync(long categoryId, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaCategoryGetSPUInfoAlibabaCategoryFeatureAttribute> keyAttrs, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaCategoryGetSPUInfoResult> AlibabaCategoryGetSPUInfoAsync(long categoryId, System.Collections.Generic.IEnumerable<AlibabaCategoryFeatureAttribute2> keyAttrs, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>根据关键字搜索类目
         /// 根据关键字搜索发布类目，发布类目都是叶子类目
@@ -430,7 +430,7 @@ namespace AlibabaSDK
         /// 系统错误	- 自定义属性个数超过最大限制!(自定义属性最多可以添加3个)
         /// 系统错误	- XXX:是必填项！(attributes中必须包括类目的必填属性，请检查入参)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaProductAddResult AlibabaProductAdd(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaProductAddAlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaProductAddAlibabaProductProductSKUInfo> skuInfos = null, ComAlibabaProductAlibabaProductAddAlibabaProductProductSaleInfo saleInfo = null, ComAlibabaProductAlibabaProductAddAlibabaProductProductShippingInfo shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null);
+        AlibabaProductAddResult AlibabaProductAdd(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute3> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>发布商品
@@ -461,7 +461,7 @@ namespace AlibabaSDK
         /// 系统错误	- 自定义属性个数超过最大限制!(自定义属性最多可以添加3个)
         /// 系统错误	- XXX:是必填项！(attributes中必须包括类目的必填属性，请检查入参)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaProductAddResult> AlibabaProductAddAsync(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaProductAddAlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaProductAddAlibabaProductProductSKUInfo> skuInfos = null, ComAlibabaProductAlibabaProductAddAlibabaProductProductSaleInfo saleInfo = null, ComAlibabaProductAlibabaProductAddAlibabaProductProductShippingInfo shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaProductAddResult> AlibabaProductAddAsync(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute3> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>获取是否启用自定义分类
         /// 获取是否启用自定义分类，启用后在旺铺中将按自定义分类展示商品。此API对国际站无效
@@ -647,7 +647,7 @@ namespace AlibabaSDK
         /// <param name="productInfo">商品详细信息</param>
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaProductEditResult AlibabaProductEdit(long productID, ComAlibabaProductAlibabaProductEditAlibabaProductProductInfo productInfo, string webSite);
+        AlibabaProductEditResult AlibabaProductEdit(long productID, AlibabaProductProductInfo5 productInfo, string webSite);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>修改商品
@@ -659,7 +659,7 @@ namespace AlibabaSDK
         /// <param name="productInfo">商品详细信息</param>
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaProductEditResult> AlibabaProductEditAsync(long productID, ComAlibabaProductAlibabaProductEditAlibabaProductProductInfo productInfo, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaProductEditResult> AlibabaProductEditAsync(long productID, AlibabaProductProductInfo5 productInfo, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>根据状态查询商品
         /// 根据状态查询商品（开放平台自建API）
@@ -736,7 +736,7 @@ namespace AlibabaSDK
         /// <param name="webSite">1688或者alibaba</param>
         /// <param name="password">图片相册密码，可为空。如果不为空，则修改相册权限</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaPhotobankAlbumModifyResult AlibabaPhotobankAlbumModify(ComAlibabaProductAlibabaPhotobankAlbumModifyAlibabaPhotobankPhotoAlbumDomain albumInfo, string webSite, string password = null);
+        AlibabaPhotobankAlbumModifyResult AlibabaPhotobankAlbumModify(AlibabaPhotobankPhotoAlbumDomain2 albumInfo, string webSite, string password = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>修改相册
@@ -748,7 +748,7 @@ namespace AlibabaSDK
         /// <param name="webSite">1688或者alibaba</param>
         /// <param name="password">图片相册密码，可为空。如果不为空，则修改相册权限</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaPhotobankAlbumModifyResult> AlibabaPhotobankAlbumModifyAsync(ComAlibabaProductAlibabaPhotobankAlbumModifyAlibabaPhotobankPhotoAlbumDomain albumInfo, string webSite, string password = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaPhotobankAlbumModifyResult> AlibabaPhotobankAlbumModifyAsync(AlibabaPhotobankPhotoAlbumDomain2 albumInfo, string webSite, string password = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>修改图片信息
         /// 修改图片信息
@@ -1367,7 +1367,7 @@ namespace AlibabaSDK
         /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:退款数据错误，请检查退款单号，退款单号的格式一般为TD+id\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:REFUND_DATA_ERROR,errorMsg:refundId : 11043002311780591,cause:null\&amp;quot;}(退款单不正确)
         /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:OrderRefundService#queryOrderRefundOperationList\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:INVALID_PARAM,errorMsg:null,cause:null\&amp;quot;}(退款单不正确)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundResult AlibabaTradeRefundOpQueryOrderRefund(string refundId, bool? needTimeOutInfo = null, bool? needOrderRefundOperation = null);
+        AlibabaTradeRefundOpQueryOrderRefundResult2 AlibabaTradeRefundOpQueryOrderRefund(string refundId, bool? needTimeOutInfo = null, bool? needOrderRefundOperation = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>查询退款单详情-根据退款单ID
@@ -1383,7 +1383,7 @@ namespace AlibabaSDK
         /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:退款数据错误，请检查退款单号，退款单号的格式一般为TD+id\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:REFUND_DATA_ERROR,errorMsg:refundId : 11043002311780591,cause:null\&amp;quot;}(退款单不正确)
         /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:OrderRefundService#queryOrderRefundOperationList\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:INVALID_PARAM,errorMsg:null,cause:null\&amp;quot;}(退款单不正确)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundResult> AlibabaTradeRefundOpQueryOrderRefundAsync(string refundId, bool? needTimeOutInfo = null, bool? needOrderRefundOperation = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaTradeRefundOpQueryOrderRefundResult2> AlibabaTradeRefundOpQueryOrderRefundAsync(string refundId, bool? needTimeOutInfo = null, bool? needOrderRefundOperation = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>查询退款单列表(卖家视角)
         /// 根据订单号或退款单列表查询退款单列表，有可能有延迟。
@@ -1510,7 +1510,7 @@ namespace AlibabaSDK
         /// <returns>返回 ErrorCode 的错误信息
         /// 500	- &amp;quot;{\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:OrderRefundService.queryBatchRefundByOrderIdAndStatus\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:ORDER_NOT_EXIST,errorMsg:null,cause:null\&amp;quot;}&amp;quot;(订单号有误)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatus(string orderId, string queryType);
+        AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult2 AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatus(string orderId, string queryType);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>查询退款单详情-根据订单ID
@@ -1523,7 +1523,7 @@ namespace AlibabaSDK
         /// <returns>返回 ErrorCode 的错误信息
         /// 500	- &amp;quot;{\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:OrderRefundService.queryBatchRefundByOrderIdAndStatus\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:ORDER_NOT_EXIST,errorMsg:null,cause:null\&amp;quot;}&amp;quot;(订单号有误)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult> AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAsync(string orderId, string queryType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult2> AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAsync(string orderId, string queryType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>查询退款单列表(买家视角)
         /// 买家查看退款单列表，该接口不支持子账号查询，请使用主账号授权后查询
@@ -2258,9 +2258,8 @@ namespace AlibabaSDK
         /// <param name="title">Offer标题,对应为offer的标题，字段名为title</param>
         /// <param name="catid">Offer 发布类目id,对应为offer的发布类目id，字段名为catid</param>
         /// <param name="brief">Offer属性,对应为offer的属性，字段名为brief。brief的字段格式要求为： key：value 多个间空格分开</param>
-        /// <returns>对于存在不一致的，会在TYPE输出对应的作弊程度，没有作弊的会标示为NONE.其他字段比如ANTIVAL，KEY标示具体的属性KEY下存在冲突的VAL。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        string SearchTitlePropertiesInconsistent(string title, string catid, string brief);
+        void SearchTitlePropertiesInconsistent(string title, string catid, string brief);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>标题属性不一致（Deprecated）
@@ -2271,9 +2270,8 @@ namespace AlibabaSDK
         /// <param name="title">Offer标题,对应为offer的标题，字段名为title</param>
         /// <param name="catid">Offer 发布类目id,对应为offer的发布类目id，字段名为catid</param>
         /// <param name="brief">Offer属性,对应为offer的属性，字段名为brief。brief的字段格式要求为： key：value 多个间空格分开</param>
-        /// <returns>对于存在不一致的，会在TYPE输出对应的作弊程度，没有作弊的会标示为NONE.其他字段比如ANTIVAL，KEY标示具体的属性KEY下存在冲突的VAL。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<string> SearchTitlePropertiesInconsistentAsync(string title, string catid, string brief, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task SearchTitlePropertiesInconsistentAsync(string title, string catid, string brief, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>查询淘宝卖家的商品在1688的同款及相似款信息
         /// 查询淘宝卖家的商品在1688的同款及相似款信息，此API为定向招募开放
@@ -2422,9 +2420,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:search.title.stuffing-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=search.title.stuffing&amp;v=1</summary>
-        /// <returns>对于检测到作弊的，会在 type中标示具体的作弊类型(CP|XH|PP|XSC)，否则为none，CP对应产品词堆砌，XH对应型号词堆砌，PP对于品牌词堆砌，XSC对应产品修饰词修饰。相对应的，会有具体字段提示引起堆砌的词具体信息。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        string SearchTitleStuffing(string title, string catid);
+        void SearchTitleStuffing(string title, string catid);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>标题堆砌（Deprecated）
@@ -2432,9 +2429,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:search.title.stuffing-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=search.title.stuffing&amp;v=1</summary>
-        /// <returns>对于检测到作弊的，会在 type中标示具体的作弊类型(CP|XH|PP|XSC)，否则为none，CP对应产品词堆砌，XH对应型号词堆砌，PP对于品牌词堆砌，XSC对应产品修饰词修饰。相对应的，会有具体字段提示引起堆砌的词具体信息。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<string> SearchTitleStuffingAsync(string title, string catid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task SearchTitleStuffingAsync(string title, string catid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>分页查询淘宝商品在1688的相似款商品信息
         /// 分页查询淘宝商品在1688的相似款商品信息，此API为定向招募开放
@@ -7162,7 +7158,7 @@ namespace AlibabaSDK
         /// 400_1	- 查询时类目关键属性必须输入(入参keyAttrs是必填项)
         /// 400_2	- 查询时类目关键属性键值(fid, value)必须输入(入参keyAttrs中的属性值是必填项)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCategoryGetSPUInfoResult AlibabaCategoryGetSPUInfo(long categoryId, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaCategoryGetSPUInfoAlibabaCategoryFeatureAttribute> keyAttrs)
+        public AlibabaCategoryGetSPUInfoResult AlibabaCategoryGetSPUInfo(long categoryId, System.Collections.Generic.IEnumerable<AlibabaCategoryFeatureAttribute2> keyAttrs)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaCategoryGetSPUInfoAsync(categoryId, keyAttrs, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -7179,7 +7175,7 @@ namespace AlibabaSDK
         /// 400_1	- 查询时类目关键属性必须输入(入参keyAttrs是必填项)
         /// 400_2	- 查询时类目关键属性键值(fid, value)必须输入(入参keyAttrs中的属性值是必填项)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCategoryGetSPUInfoResult> AlibabaCategoryGetSPUInfoAsync(long categoryId, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaCategoryGetSPUInfoAlibabaCategoryFeatureAttribute> keyAttrs, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaCategoryGetSPUInfoResult> AlibabaCategoryGetSPUInfoAsync(long categoryId, System.Collections.Generic.IEnumerable<AlibabaCategoryFeatureAttribute2> keyAttrs, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product/alibaba.category.getSPUInfo/{AppKey}");
@@ -8435,7 +8431,7 @@ namespace AlibabaSDK
         /// 系统错误	- 自定义属性个数超过最大限制!(自定义属性最多可以添加3个)
         /// 系统错误	- XXX:是必填项！(attributes中必须包括类目的必填属性，请检查入参)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaProductAddResult AlibabaProductAdd(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaProductAddAlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaProductAddAlibabaProductProductSKUInfo> skuInfos = null, ComAlibabaProductAlibabaProductAddAlibabaProductProductSaleInfo saleInfo = null, ComAlibabaProductAlibabaProductAddAlibabaProductProductShippingInfo shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null)
+        public AlibabaProductAddResult AlibabaProductAdd(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute3> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaProductAddAsync(productType, categoryID, subject, language, image, webSite, attributes, groupID, description, periodOfValidity, bizType, pictureAuth, skuInfos, saleInfo, shippingInfo, internationalTradeInfo, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -8469,7 +8465,7 @@ namespace AlibabaSDK
         /// 系统错误	- 自定义属性个数超过最大限制!(自定义属性最多可以添加3个)
         /// 系统错误	- XXX:是必填项！(attributes中必须包括类目的必填属性，请检查入参)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaProductAddResult> AlibabaProductAddAsync(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaProductAddAlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<ComAlibabaProductAlibabaProductAddAlibabaProductProductSKUInfo> skuInfos = null, ComAlibabaProductAlibabaProductAddAlibabaProductProductSaleInfo saleInfo = null, ComAlibabaProductAlibabaProductAddAlibabaProductProductShippingInfo shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaProductAddResult> AlibabaProductAddAsync(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute3> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product/alibaba.product.add/{AppKey}");
@@ -9290,7 +9286,7 @@ namespace AlibabaSDK
         /// <param name="productInfo">商品详细信息</param>
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaProductEditResult AlibabaProductEdit(long productID, ComAlibabaProductAlibabaProductEditAlibabaProductProductInfo productInfo, string webSite)
+        public AlibabaProductEditResult AlibabaProductEdit(long productID, AlibabaProductProductInfo5 productInfo, string webSite)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaProductEditAsync(productID, productInfo, webSite, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -9305,7 +9301,7 @@ namespace AlibabaSDK
         /// <param name="productInfo">商品详细信息</param>
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaProductEditResult> AlibabaProductEditAsync(long productID, ComAlibabaProductAlibabaProductEditAlibabaProductProductInfo productInfo, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaProductEditResult> AlibabaProductEditAsync(long productID, AlibabaProductProductInfo5 productInfo, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product/alibaba.product.edit/{AppKey}");
@@ -9632,7 +9628,7 @@ namespace AlibabaSDK
         /// <param name="webSite">1688或者alibaba</param>
         /// <param name="password">图片相册密码，可为空。如果不为空，则修改相册权限</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaPhotobankAlbumModifyResult AlibabaPhotobankAlbumModify(ComAlibabaProductAlibabaPhotobankAlbumModifyAlibabaPhotobankPhotoAlbumDomain albumInfo, string webSite, string password = null)
+        public AlibabaPhotobankAlbumModifyResult AlibabaPhotobankAlbumModify(AlibabaPhotobankPhotoAlbumDomain2 albumInfo, string webSite, string password = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaPhotobankAlbumModifyAsync(albumInfo, webSite, password, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -9647,7 +9643,7 @@ namespace AlibabaSDK
         /// <param name="webSite">1688或者alibaba</param>
         /// <param name="password">图片相册密码，可为空。如果不为空，则修改相册权限</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaPhotobankAlbumModifyResult> AlibabaPhotobankAlbumModifyAsync(ComAlibabaProductAlibabaPhotobankAlbumModifyAlibabaPhotobankPhotoAlbumDomain albumInfo, string webSite, string password = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaPhotobankAlbumModifyResult> AlibabaPhotobankAlbumModifyAsync(AlibabaPhotobankPhotoAlbumDomain2 albumInfo, string webSite, string password = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product/alibaba.photobank.album.modify/{AppKey}");
@@ -12334,7 +12330,7 @@ namespace AlibabaSDK
         /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:退款数据错误，请检查退款单号，退款单号的格式一般为TD+id\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:REFUND_DATA_ERROR,errorMsg:refundId : 11043002311780591,cause:null\&amp;quot;}(退款单不正确)
         /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:OrderRefundService#queryOrderRefundOperationList\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:INVALID_PARAM,errorMsg:null,cause:null\&amp;quot;}(退款单不正确)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundResult AlibabaTradeRefundOpQueryOrderRefund(string refundId, bool? needTimeOutInfo = null, bool? needOrderRefundOperation = null)
+        public AlibabaTradeRefundOpQueryOrderRefundResult2 AlibabaTradeRefundOpQueryOrderRefund(string refundId, bool? needTimeOutInfo = null, bool? needOrderRefundOperation = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeRefundOpQueryOrderRefundAsync(refundId, needTimeOutInfo, needOrderRefundOperation, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -12353,7 +12349,7 @@ namespace AlibabaSDK
         /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:退款数据错误，请检查退款单号，退款单号的格式一般为TD+id\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:REFUND_DATA_ERROR,errorMsg:refundId : 11043002311780591,cause:null\&amp;quot;}(退款单不正确)
         /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:OrderRefundService#queryOrderRefundOperationList\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:INVALID_PARAM,errorMsg:null,cause:null\&amp;quot;}(退款单不正确)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundResult> AlibabaTradeRefundOpQueryOrderRefundAsync(string refundId, bool? needTimeOutInfo = null, bool? needOrderRefundOperation = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaTradeRefundOpQueryOrderRefundResult2> AlibabaTradeRefundOpQueryOrderRefundAsync(string refundId, bool? needTimeOutInfo = null, bool? needOrderRefundOperation = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.refund.OpQueryOrderRefund/{AppKey}");
@@ -12411,7 +12407,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundResult>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaTradeRefundOpQueryOrderRefundResult2>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -12421,7 +12417,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(ComAlibabaTradeAlibabaTradeRefundOpQueryOrderRefundResult);
+                        return default(AlibabaTradeRefundOpQueryOrderRefundResult2);
                     }
                     finally
                     {
@@ -12855,7 +12851,7 @@ namespace AlibabaSDK
         /// <returns>返回 ErrorCode 的错误信息
         /// 500	- &amp;quot;{\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:OrderRefundService.queryBatchRefundByOrderIdAndStatus\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:ORDER_NOT_EXIST,errorMsg:null,cause:null\&amp;quot;}&amp;quot;(订单号有误)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatus(string orderId, string queryType)
+        public AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult2 AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatus(string orderId, string queryType)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAsync(orderId, queryType, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -12871,7 +12867,7 @@ namespace AlibabaSDK
         /// <returns>返回 ErrorCode 的错误信息
         /// 500	- &amp;quot;{\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:OrderRefundService.queryBatchRefundByOrderIdAndStatus\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:ORDER_NOT_EXIST,errorMsg:null,cause:null\&amp;quot;}&amp;quot;(订单号有误)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult> AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAsync(string orderId, string queryType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult2> AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusAsync(string orderId, string queryType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus/{AppKey}");
@@ -12927,7 +12923,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult2>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -12937,7 +12933,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(ComAlibabaTradeAlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult);
+                        return default(AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult2);
                     }
                     finally
                     {
@@ -15343,11 +15339,10 @@ namespace AlibabaSDK
         /// <param name="title">Offer标题,对应为offer的标题，字段名为title</param>
         /// <param name="catid">Offer 发布类目id,对应为offer的发布类目id，字段名为catid</param>
         /// <param name="brief">Offer属性,对应为offer的属性，字段名为brief。brief的字段格式要求为： key：value 多个间空格分开</param>
-        /// <returns>对于存在不一致的，会在TYPE输出对应的作弊程度，没有作弊的会标示为NONE.其他字段比如ANTIVAL，KEY标示具体的属性KEY下存在冲突的VAL。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public string SearchTitlePropertiesInconsistent(string title, string catid, string brief)
+        public void SearchTitlePropertiesInconsistent(string title, string catid, string brief)
         {
-            return System.Threading.Tasks.Task.Run(async () => await SearchTitlePropertiesInconsistentAsync(title, catid, brief, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            System.Threading.Tasks.Task.Run(async () => await SearchTitlePropertiesInconsistentAsync(title, catid, brief, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -15359,9 +15354,8 @@ namespace AlibabaSDK
         /// <param name="title">Offer标题,对应为offer的标题，字段名为title</param>
         /// <param name="catid">Offer 发布类目id,对应为offer的发布类目id，字段名为catid</param>
         /// <param name="brief">Offer属性,对应为offer的属性，字段名为brief。brief的字段格式要求为： key：value 多个间空格分开</param>
-        /// <returns>对于存在不一致的，会在TYPE输出对应的作弊程度，没有作弊的会标示为NONE.其他字段比如ANTIVAL，KEY标示具体的属性KEY下存在冲突的VAL。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<string> SearchTitlePropertiesInconsistentAsync(string title, string catid, string brief, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task SearchTitlePropertiesInconsistentAsync(string title, string catid, string brief, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/search.title.properties.inconsistent/{AppKey}");
@@ -15395,7 +15389,6 @@ namespace AlibabaSDK
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
     
                     PrepareRequest(client_, request_, urlBuilder_);
                     var url_ = urlBuilder_.ToString();
@@ -15423,8 +15416,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<string>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
+                            return;
                         }
                         else
                         if (status_ != "200" && status_ != "204")
@@ -15432,8 +15424,6 @@ namespace AlibabaSDK
                             var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
-            
-                        return default(string);
                     }
                     finally
                     {
@@ -16086,11 +16076,10 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:search.title.stuffing-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=search.title.stuffing&amp;v=1</summary>
-        /// <returns>对于检测到作弊的，会在 type中标示具体的作弊类型(CP|XH|PP|XSC)，否则为none，CP对应产品词堆砌，XH对应型号词堆砌，PP对于品牌词堆砌，XSC对应产品修饰词修饰。相对应的，会有具体字段提示引起堆砌的词具体信息。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public string SearchTitleStuffing(string title, string catid)
+        public void SearchTitleStuffing(string title, string catid)
         {
-            return System.Threading.Tasks.Task.Run(async () => await SearchTitleStuffingAsync(title, catid, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            System.Threading.Tasks.Task.Run(async () => await SearchTitleStuffingAsync(title, catid, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -16099,9 +16088,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:search.title.stuffing-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=search.title.stuffing&amp;v=1</summary>
-        /// <returns>对于检测到作弊的，会在 type中标示具体的作弊类型(CP|XH|PP|XSC)，否则为none，CP对应产品词堆砌，XH对应型号词堆砌，PP对于品牌词堆砌，XSC对应产品修饰词修饰。相对应的，会有具体字段提示引起堆砌的词具体信息。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<string> SearchTitleStuffingAsync(string title, string catid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task SearchTitleStuffingAsync(string title, string catid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/search.title.stuffing/{AppKey}");
@@ -16129,7 +16117,6 @@ namespace AlibabaSDK
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
     
                     PrepareRequest(client_, request_, urlBuilder_);
                     var url_ = urlBuilder_.ToString();
@@ -16157,8 +16144,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<string>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
+                            return;
                         }
                         else
                         if (status_ != "200" && status_ != "204")
@@ -16166,8 +16152,6 @@ namespace AlibabaSDK
                             var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
-            
-                        return default(string);
                     }
                     finally
                     {
