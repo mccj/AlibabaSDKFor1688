@@ -6,21 +6,21 @@ using System.Net.Http.Headers;
 
 namespace AlibabaSDK
 {
-    public partial class AlibabaApiClientBase
+   public  partial class AlibabaApiClientBase
     {
         private string _appKey;
         private string _accessToken;
         private string _clientSecret;
 
-        internal void setAppKey(string appKey)
+        internal void setAppKey(string appKey, string clientSecret)
         {
             this._appKey = appKey;
+            this._clientSecret = clientSecret;
         }
 
-        public void SetAccessToken(string accessToken, string clientSecret)
+        public void SetAccessToken(string accessToken)
         {
             this._accessToken = accessToken;
-            this._clientSecret = clientSecret;
         }
         internal void PrepareRequest(System.Net.Http.HttpClient client, System.Net.Http.HttpRequestMessage request, System.Text.StringBuilder urlBuilder)
         {

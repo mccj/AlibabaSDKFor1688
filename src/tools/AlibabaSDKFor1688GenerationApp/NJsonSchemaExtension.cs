@@ -16,8 +16,12 @@ namespace ConsoleApp2
                 MinLength = jsonSchema.MinLength,
                 Title = jsonSchema.Title,
                 Reference = jsonSchema.Reference,
-                Item = jsonSchema.Item
+                Item = jsonSchema.Item,
             };
+            foreach (var item in jsonSchema.Properties)
+            {
+                jsonSchemaProperty.Properties.Add(item);
+            }
             action?.Invoke(jsonSchemaProperty);
             return jsonSchemaProperty;
         }

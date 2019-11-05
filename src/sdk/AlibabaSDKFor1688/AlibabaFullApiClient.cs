@@ -8,10 +8,10 @@ namespace AlibabaSDK
 {
     public partial class AlibabaFullApiClient : AlibabaApiClientBase
     {
-        public AlibabaFullApiClient(string appKey) : this(appKey, new HttpClient()) { }
-        public AlibabaFullApiClient(string appKey, HttpClient httpClient) : this(httpClient)
+        public AlibabaFullApiClient(string appKey, string clientSecret) : this(appKey, clientSecret, new HttpClient()) { }
+        public AlibabaFullApiClient(string appKey, string clientSecret, HttpClient httpClient) : this(httpClient)
         {
-            base.setAppKey(appKey);
+            base.setAppKey(appKey, clientSecret);
         }
 
         partial void PrepareRequest(System.Net.Http.HttpClient client, System.Net.Http.HttpRequestMessage request, System.Text.StringBuilder urlBuilder)

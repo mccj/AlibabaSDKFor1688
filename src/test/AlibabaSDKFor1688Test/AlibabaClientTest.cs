@@ -9,7 +9,7 @@ namespace AlibabaSDKFor1688Test
         public void Test1()
         {
 
-            var ss = AlibabaClient.AlibabaAeMessagePushPerfData();
+            //var ss = AlibabaClient.AlibabaAeMessagePushPerfData();
             var rr = AlibabaClient.AlibabaAccountAgentBasic("gamesalorcn", "");
             //loginId=gamesalorcn&access_token=4ceb6921-d2fd-4cac-8eb0-92befd9be410&_aop_signature=09CA3BAB7B7D608C1EF10EDE847628DBA941EBC6
             //loginId=gamesalorcn&access_token=4ceb6921-d2fd-4cac-8eb0-92befd9be410&_aop_timestamp=1572426027001&_aop_signature=6A4D4C2DF7A721BE2CEE1EC3AFFEB6D279E7A853

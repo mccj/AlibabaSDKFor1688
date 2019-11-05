@@ -56,6 +56,33 @@ namespace ConsoleApp2
             var result = await response.Content.ReadAsAsync<Base2Response<ModelInfoResult[]>>();
             return result;
         }
+
+
+
+        public async Task<Base2Response<ddd.TopicGroupsResult[]>> GetTopicGroups()
+        {
+            var response = await _httpClient.GetAsync("https://open.1688.com/msg/dataNew/getTopicGroups.json?_input_charset=UTF-8");
+            var result = await response.Content.ReadAsAsync<Base2Response<ddd.TopicGroupsResult[]>>();
+            return result;
+        }
+        public async Task<Base2Response<ddd.TopicsByGroupAndOwnerResult[]>> GetTopicsByGroupAndOwner(string topicGroup)
+        {
+            var response = await _httpClient.GetAsync("https://open.1688.com/msg/dataNew/getTopicsByGroupAndOwner.json?_input_charset=UTF-8&topicGroup=" + topicGroup);
+            var result = await response.Content.ReadAsAsync<Base2Response<ddd.TopicsByGroupAndOwnerResult[]>>();
+            return result;
+        }
+        public async Task<Base2Response<ddd.TopicsByGroupAndOwnerResult[]>> GetAllTopics()
+        {
+            var response = await _httpClient.GetAsync("https://open.1688.com/msg/dataNew/getAllTopics.json?_input_charset=UTF-8");
+            var result = await response.Content.ReadAsAsync<Base2Response<ddd.TopicsByGroupAndOwnerResult[]>>();
+            return result;
+        }    
+        public async Task<Base2Response<ddd.TopicResult>> GetTopic(string topicId)
+        {
+            var response = await _httpClient.GetAsync("https://open.1688.com/msg/dataNew/getTopic.json?_input_charset=UTF-8&topicId=" + topicId);
+            var result = await response.Content.ReadAsAsync<Base2Response<ddd.TopicResult>>();
+            return result;
+        }
     }
 
     namespace sss
@@ -295,6 +322,107 @@ namespace ConsoleApp2
             [JsonProperty("errMsg")]
             public string ErrMsg { get; set; }
         }
+    }
+
+    namespace ddd
+    {
+        public class TopicGroupsResult
+        {
+
+            [JsonProperty("id")]
+            public string Id { get; set; }
+
+            [JsonProperty("text")]
+            public string Text { get; set; }
+        }
+
+        public class TopicsByGroupAndOwnerResult
+        {
+
+            [JsonProperty("topicId")]
+            public string TopicId { get; set; }
+
+            [JsonProperty("topicName")]
+            public string TopicName { get; set; }
+
+            [JsonProperty("topicDisplayName")]
+            public string TopicDisplayName { get; set; }
+
+            [JsonProperty("topicGroup")]
+            public string TopicGroup { get; set; }
+
+            [JsonProperty("topicGroupDisplayName")]
+            public string TopicGroupDisplayName { get; set; }
+
+            [JsonProperty("gmtModify")]
+            public object GmtModify { get; set; }
+
+            [JsonProperty("subscribed")]
+            public bool? Subscribed { get; set; }
+
+
+
+        }
+
+        public class MessageDoc
+        {
+
+            [JsonProperty("name")]
+            public string Name { get; set; }
+
+            [JsonProperty("desc")]
+            public string Desc { get; set; }
+
+            [JsonProperty("type")]
+            public string Type { get; set; }
+
+            [JsonProperty("sample")]
+            public string Sample { get; set; }
+
+            [JsonProperty("required")]
+            public bool Required { get; set; }
+
+            [JsonProperty("children")]
+            public MessageDoc[] Children { get; set; }
+        
+        }
+
+
+        public class TopicResult
+        {
+
+            [JsonProperty("topicId")]
+            public string TopicId { get; set; }
+
+            [JsonProperty("topicName")]
+            public string TopicName { get; set; }
+
+            [JsonProperty("topicDisplayName")]
+            public string TopicDisplayName { get; set; }
+
+            [JsonProperty("topicGroupName")]
+            public string TopicGroupName { get; set; }
+
+            [JsonProperty("topicGroupDisplayName")]
+            public string TopicGroupDisplayName { get; set; }
+
+            [JsonProperty("desc")]
+            public string Desc { get; set; }
+
+            [JsonProperty("messageDocs")]
+            public MessageDoc[] MessageDocs { get; set; }
+
+            [JsonProperty("gmtModify")]
+            public long GmtModify { get; set; }
+
+            [JsonProperty("sample")]
+            public string Sample { get; set; }
+
+            [JsonProperty("subscribed")]
+            public bool Subscribed { get; set; }
+        }
+
+
     }
 }
 

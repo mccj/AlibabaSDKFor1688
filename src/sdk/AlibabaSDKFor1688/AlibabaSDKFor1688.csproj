@@ -17,7 +17,32 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
+  <ItemGroup>
+    <Compile Update="AlibabaFullApiClient.cs">
+      <DependentUpon>AlibabaFullApiClient.json</DependentUpon>
+    </Compile>
+    <Compile Update="AlibabaFullApiClientGeneration.cs">
+      <DependentUpon>AlibabaFullApiClient.cs</DependentUpon>
+    </Compile>
+    <Compile Update="AlibabaFullApiClientModelsGeneration.cs">
+      <DependentUpon>AlibabaFullApiClient.cs</DependentUpon>
+    </Compile>
+    <Compile Update="AlibabaStandardApiClient.cs">
+      <DependentUpon>AlibabaStandardApiClient.json</DependentUpon>
+    </Compile>
+    <Compile Update="AlibabaStandardApiClientGeneration.cs">
+      <DependentUpon>AlibabaStandardApiClient.cs</DependentUpon>
+    </Compile>
+    <Compile Update="AlibabaStandardApiClientModelsGeneration.cs">
+      <DependentUpon>AlibabaStandardApiClient.cs</DependentUpon>
+    </Compile>   
+    <Compile Update="AlibabaWebSocketClient.cs">
+      <DependentUpon>AlibabaWebSocketClient.json</DependentUpon>
+    </Compile>
+    <Compile Update="AlibabaWebSocketClientModelsGeneration.cs">
+      <DependentUpon>AlibabaWebSocketClient.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
   <Target Name="NSwag" AfterTargets="Build">
     <!--<Exec Command="$(NSwagExe_Core22) run OmsApi3\nswag.json /variables:Configuration=$(Configuration)" />-->
     <!--<Exec Command="$(NSwagExe_Core22) run OmsApi3\OmsApiClient.nswag /variables:Configuration=$(Configuration)" />

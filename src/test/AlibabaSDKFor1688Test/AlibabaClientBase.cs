@@ -7,9 +7,9 @@ namespace AlibabaSDKFor1688Test
     {
         public AlibabaClientBase()
         {
-            AlibabaClient = new AlibabaSDK.AlibabaClient(ClientInfo.ClientId);
-            AlibabaClient.SetAccessToken(ClientInfo.AccessToken, ClientInfo.ClientSecret);
+            AlibabaClient = new AlibabaSDK.AlibabaStandardApiClient(ClientInfo.ClientId, ClientInfo.ClientSecret);
+            AlibabaClient.SetAccessToken(ClientInfo.AccessToken);
         }
-        public AlibabaSDK.AlibabaClient AlibabaClient { get; }
+        public AlibabaSDK.AlibabaStandardApiClient AlibabaClient { get; }
     }
 }

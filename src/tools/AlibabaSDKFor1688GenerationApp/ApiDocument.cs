@@ -83,15 +83,7 @@ namespace ConsoleApp2
 
                     //foreach (var item in apiDetail.ApiSystemParamVOList)
                     //{
-                    //    openApiOperation.Parameters.Add(new OpenApiParameter
-                    //    {
-                    //        Kind = OpenApiParameterKind.Header,
-                    //        Name = item.Name,
-                    //        IsRequired = item.Required == true,
-                    //        Default = item.DefaultValue,
-                    //        Description = item.Description?.过滤特殊字符(),
-                    //        Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description?.过滤特殊字符())
-                    //    });
+                    //    openApiOperation.RequestBody = new OpenApiRequestBody { Content = { { item.Name, new OpenApiMediaType { Schema = JsonSchema.FromType<string>() } } } };
                     //}
                     foreach (var item in apiDetail.ApiAppParamVOList.OrderByDescending(f => f.Required))
                     {
@@ -181,9 +173,9 @@ namespace ConsoleApp2
             ///////////////////
             var jsonSchema = keyValuePairs.GetOrAdd(@namespace + apiname + type, t =>
              {
-                 var jsonSchema = getMessageTypeToSchema(document, @namespace, apiname, version, type) ?? getSystemTypeToSchema(type);
+                 var jsonSchema1 = getMessageTypeToSchema(document, @namespace, apiname, version, type) ?? getSystemTypeToSchema(type);
 
-                 return jsonSchema;
+                 return jsonSchema1;
              });
 
             if (jsonSchema == null)
@@ -439,7 +431,7 @@ namespace ConsoleApp2
             var code = generator.GenerateFile();
             return code;
         }
-        public string ToCSharpCodeClient(OpenApiDocument document,string _namespace, string className,string[] namespaceUsages)
+        public string ToCSharpCodeClient(OpenApiDocument document, string _namespace, string className, string[] namespaceUsages)
         {
             //System.Net.WebClient wclient = new System.Net.WebClient();
             //var document = await OpenApiDocument.FromJsonAsync(wclient.DownloadString("Https://SwaggerSpecificationURL.json"));
@@ -455,13 +447,13 @@ namespace ConsoleApp2
                 GenerateSyncMethods = true,
                 GenerateDtoTypes = false,
                 GenerateClientInterfaces = true,
-                GenerateExceptionClasses=false,
+                GenerateExceptionClasses = false,
+                GenerateOptionalParameters = true,
                 AdditionalNamespaceUsages = namespaceUsages//new[] { "AlibabaSDK.Models" }
             };
             //settings.CodeGeneratorSettings.TemplateDirectory = "";
             settings.CodeGeneratorSettings.GenerateDefaultValues = true;
             settings.CodeGeneratorSettings.PropertyNameGenerator = new MyCSharpPropertyNameGenerator();
-            settings.GenerateOptionalParameters = true;
 
             var generator = new CSharpClientGenerator(document, settings);
             var code = generator.GenerateFile();
