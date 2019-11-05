@@ -45,45 +45,44 @@ namespace ConsoleApp2
 
 
 
-
-
+     
 
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            //Console.WriteLine("完整版类库");
+            Console.WriteLine("完整版类库");
 
-            //var apiDocumentFull = new ApiDocument();
-            //var documentFull = apiDocumentFull.创建文档(true);
+            var apiDocumentFull = new ApiDocument();
+            var documentFull = apiDocumentFull.创建文档(true);
 
-            //Console.WriteLine("转换成 json 文件并保存");
-            //var jsonFull = documentFull.ToJson();
-            //System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaFullApiClient.json", jsonFull);
+            Console.WriteLine("转换成 json 文件并保存");
+            var jsonFull = documentFull.ToJson();
+            System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaFullApiClient.json", jsonFull);
 
-            //Console.WriteLine("转换成 Client 代码并保存");
-            //var csharpClientCodeFull = apiDocumentFull.ToCSharpCodeClient(documentFull, "AlibabaSDK", "AlibabaFullApiClient", new[] { "AlibabaSDK.FullModels" });
-            //System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaFullApiClientGeneration.cs", csharpClientCodeFull);
+            Console.WriteLine("转换成 Client 代码并保存");
+            var csharpClientCodeFull = apiDocumentFull.ToCSharpCodeClient(documentFull, "AlibabaSDK", "AlibabaFullApiClient", new[] { "AlibabaSDK.FullModels" });
+            System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaFullApiClientGeneration.cs", csharpClientCodeFull);
 
-            //Console.WriteLine("转换成 ClientModels 代码并保存");
-            //var csharpModelsCodeFull = apiDocumentFull.ToCSharpCodeModels(documentFull, "AlibabaSDK.FullModels");
-            //System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaFullApiClientModelsGeneration.cs", csharpModelsCodeFull);
-
-
+            Console.WriteLine("转换成 ClientModels 代码并保存");
+            var csharpModelsCodeFull = apiDocumentFull.ToCSharpCodeModels(documentFull, "AlibabaSDK.FullModels");
+            System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaFullApiClientModelsGeneration.cs", csharpModelsCodeFull);
 
 
-            //Console.WriteLine("标准版类库");
-            //var apiDocumentStandard = new ApiDocument();
-            //var documentStandard = apiDocumentStandard.创建文档(false);
 
-            //Console.WriteLine("转换成 json 文件并保存");
-            //var jsonStandard = documentStandard.ToJson();
-            //System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaStandardApiClient.json", jsonStandard);
 
-            //Console.WriteLine("转换成 Client 代码并保存");
-            //var csharpClientCodeStandard = apiDocumentStandard.ToCSharpCodeClient(documentStandard, "AlibabaSDK", "AlibabaStandardApiClient", new[] { "AlibabaSDK.StandardModels" });
-            //System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaStandardApiClientGeneration.cs", csharpClientCodeStandard);
+            Console.WriteLine("标准版类库");
+            var apiDocumentStandard = new ApiDocument();
+            var documentStandard = apiDocumentStandard.创建文档(false);
 
-            //Console.WriteLine("转换成 ClientModels 代码并保存");
-            //var csharpModelsCodeStandard = apiDocumentStandard.ToCSharpCodeModels(documentStandard, "AlibabaSDK.StandardModels");
-            //System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaStandardApiClientModelsGeneration.cs", csharpModelsCodeStandard);
+            Console.WriteLine("转换成 json 文件并保存");
+            var jsonStandard = documentStandard.ToJson();
+            System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaStandardApiClient.json", jsonStandard);
+
+            Console.WriteLine("转换成 Client 代码并保存");
+            var csharpClientCodeStandard = apiDocumentStandard.ToCSharpCodeClient(documentStandard, "AlibabaSDK", "AlibabaStandardApiClient", new[] { "AlibabaSDK.StandardModels" });
+            System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaStandardApiClientGeneration.cs", csharpClientCodeStandard);
+
+            Console.WriteLine("转换成 ClientModels 代码并保存");
+            var csharpModelsCodeStandard = apiDocumentStandard.ToCSharpCodeModels(documentStandard, "AlibabaSDK.StandardModels");
+            System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaStandardApiClientModelsGeneration.cs", csharpModelsCodeStandard);
 
 
 
@@ -92,14 +91,14 @@ namespace ConsoleApp2
 
             Console.WriteLine("WebSocket类库");
             var apiDocumentWebSocketStandard = new WebSocketDocument();
-            var documentStandard = apiDocumentWebSocketStandard.创建文档(true);
+            var documentWebSocketStandard = apiDocumentWebSocketStandard.创建文档(true);
 
             Console.WriteLine("转换成 json 文件并保存");
-            var jsonWebSocketStandard = documentStandard.ToJson();
+            var jsonWebSocketStandard = documentWebSocketStandard.ToJson();
             System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaWebSocketClient.json", jsonWebSocketStandard);
 
             Console.WriteLine("转换成 ClientModels 代码并保存");
-            var csharpModelsCodeWebSocketStandard = apiDocumentWebSocketStandard.ToCSharpCode(documentStandard, "AlibabaSDK.WebSocketModels");
+            var csharpModelsCodeWebSocketStandard = apiDocumentWebSocketStandard.ToCSharpCode(documentWebSocketStandard, "AlibabaSDK.WebSocketModels");
             System.IO.File.WriteAllText(@"..\..\..\..\..\sdk\AlibabaSDKFor1688\AlibabaWebSocketClientModelsGeneration.cs", csharpModelsCodeWebSocketStandard);
             //var code2 = apiDocument.ToTypeScriptCode(document);
 

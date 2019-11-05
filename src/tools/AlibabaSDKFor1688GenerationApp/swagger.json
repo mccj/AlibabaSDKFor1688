@@ -718,6 +718,12 @@
         },
         "Exception": {
           "$ref": "#/definitions/Exception"
+        },
+        "aaaa": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
         }
       }
     },

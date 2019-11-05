@@ -75,15 +75,33 @@ namespace ConsoleApp2
         {
             var _type = 获取数组维度(type);
 
-            var jsonSchema = new NJsonSchema.JsonSchema
+            var ddd = getJsonSchemaCache(modelInfoResult, f =>
             {
-                AllowAdditionalProperties = false,
-                Type = NJsonSchema.JsonObjectType.Object
-            };
-            createJsonSchemaBy(jsonSchema, modelInfoResult);
 
-
-            return makeArraySchemaType(jsonSchema, _type.arrLength);
+                var jsonSchema = new NJsonSchema.JsonSchema
+                {
+                    AllowAdditionalProperties = false,
+                    Type = NJsonSchema.JsonObjectType.Object
+                };
+                createJsonSchemaBy(jsonSchema, modelInfoResult);
+                return jsonSchema;
+            });
+            return makeArraySchemaType(ddd, _type.arrLength);
+        }
+        private NJsonSchema.JsonSchema getJsonSchemaCache(ddd.MessageDoc[] modelInfoResult, Func<ddd.MessageDoc[], NJsonSchema.JsonSchema> func)
+        {
+            var md5key = string.Join("", modelInfoResult.Select(f => f.Name + f.Type));
+            if (keyValuePairstModelInfo.ContainsKey(md5key))
+            {
+                var jsonSchema = keyValuePairstModelInfo[md5key];
+                return jsonSchema;
+            }
+            else
+            {
+                var jsonSchema = func(modelInfoResult);
+                keyValuePairstModelInfo.Add(md5key, jsonSchema);
+                return jsonSchema;
+            }
         }
         private void createJsonSchemaBy(NJsonSchema.JsonSchema jsonSchema, ddd.MessageDoc[] modelInfoResult)
         {

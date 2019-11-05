@@ -763,7 +763,7 @@ namespace AlibabaSDK.WebSocketModels
     
         [Newtonsoft.Json.JsonProperty("Items", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Items4> Items { get; set; } = new System.Collections.ObjectModel.Collection<Items4>();
+        public System.Collections.Generic.ICollection<Items3> Items { get; set; } = new System.Collections.ObjectModel.Collection<Items3>();
     
         public string ToJson() 
         {
@@ -1569,7 +1569,7 @@ namespace AlibabaSDK.WebSocketModels
     
         [Newtonsoft.Json.JsonProperty("Items", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Items5> Items { get; set; } = new System.Collections.ObjectModel.Collection<Items5>();
+        public System.Collections.Generic.ICollection<Items4> Items { get; set; } = new System.Collections.ObjectModel.Collection<Items4>();
     
         public string ToJson() 
         {
@@ -4626,37 +4626,6 @@ namespace AlibabaSDK.WebSocketModels
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class Items4 
     {
-        /// <summary>订单的订单项ID</summary>
-        [Newtonsoft.Json.JsonProperty("orderItemId", Required = Newtonsoft.Json.Required.Always)]
-        public long OrderItemId { get; set; }
-    
-        /// <summary>采购必应的采购单的采购项ID</summary>
-        [Newtonsoft.Json.JsonProperty("supplyNoteItemId", Required = Newtonsoft.Json.Required.Always)]
-        public long SupplyNoteItemId { get; set; }
-    
-        /// <summary>外部对接系统的PR行ID</summary>
-        [Newtonsoft.Json.JsonProperty("prItemId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string PrItemId { get; set; }
-    
-        /// <summary>外部对接系统的产品代码</summary>
-        [Newtonsoft.Json.JsonProperty("productCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string ProductCode { get; set; }
-    
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static Items4 FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Items4>(data);
-        }
-    
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Items5 
-    {
         /// <summary>订单的订单项id</summary>
         [Newtonsoft.Json.JsonProperty("orderItemId", Required = Newtonsoft.Json.Required.Always)]
         public long OrderItemId { get; set; }
@@ -4682,9 +4651,9 @@ namespace AlibabaSDK.WebSocketModels
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Items5 FromJson(string data)
+        public static Items4 FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Items5>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<Items4>(data);
         }
     
     }

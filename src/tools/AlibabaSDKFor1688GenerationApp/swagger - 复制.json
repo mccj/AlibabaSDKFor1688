@@ -1,0 +1,15 @@
+{
+  "definitions": {
+    "BaseResponse": {
+      "type": "object",
+      "properties": {
+        "aaaa": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

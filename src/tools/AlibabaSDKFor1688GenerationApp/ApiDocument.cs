@@ -44,7 +44,7 @@ namespace ConsoleApp2
                     ApiDetail = await AlibabaDataCache.GetApiDetailByCacheAsync(ff.Namespace, ff.Name, ff.Version)
                 })).ToArray();
             }
-
+            //publicApiDetails = publicApiDetails.Skip(15).Take(1).ToArray();
             var errorSchema = errorJsonSchemaResponse();
             document.Definitions.Add("ErrorResponse", errorSchema);
             document.Security = new[] { new OpenApiSecurityRequirement() { { "NeddAuth", new[] { "access_token" } } } };
@@ -74,7 +74,9 @@ namespace ConsoleApp2
                     Responses = { { "400", new OpenApiResponse { Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = errorSchema } } } }
                 };
 
-                //if (openApiOperation.OperationId == "AlibabaTradeGetLogisticsInfosBuyerView") { }
+                //if (openApiOperation.OperationId == "DaeServiceRevoke4Aboss")
+                //{
+                //}
                 //else
                 {
                     if (apiDetail.NeddAuth == true)
@@ -94,7 +96,7 @@ namespace ConsoleApp2
                             IsRequired = item.Required == true,
                             Default = item.DefaultValue,
                             Description = item.Description?.过滤特殊字符(),
-                            Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description?.过滤特殊字符())
+                            Schema = getSchema(document.Definitions, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description?.过滤特殊字符())
                         });
                     }
                     var apiErrorCodeDescription = "";
@@ -104,21 +106,22 @@ namespace ConsoleApp2
                             string.Join("\r\n", apiDetail.ApiErrorCodeVOList.Select(f => f.Code + "\t- " + f.Desc + (string.IsNullOrWhiteSpace(f.HowToFix) ? "" : ("(" + f.HowToFix + ")"))));
                     }
 
-                    if (apiDetail.ApiReturnParamVOList.Length <= 1)
+                    var _apiReturnParamVOList = apiDetail.ApiReturnParamVOList.Where(f => !string.IsNullOrWhiteSpace(f.Name)).ToArray();
+                    if (_apiReturnParamVOList.Length <= 1)
                     {
-                        var item = apiDetail.ApiReturnParamVOList.SingleOrDefault();
+                        var item = _apiReturnParamVOList.SingleOrDefault();
                         var openApiResponse = new OpenApiResponse
                         {
                             Description = item?.Description?.过滤特殊字符() + apiErrorCodeDescription,
                         };
                         if (item != null)
                             //openApiResponse.Content.Add("application/json", new OpenApiMediaType { Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description) });
-                            openApiResponse.Schema = getSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description);
+                            openApiResponse.Schema = getSchema(document.Definitions, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, item.Type, item.Description);
                         openApiOperation.Responses.Add("200", openApiResponse);
                     }
                     else
                     {
-                        var jsonSchema = createJsonSchema(document, apiDetail.Namespace, apiDetail.Name, apiDetail.Version, apiDetail.ApiReturnParamVOList);
+                        var jsonSchema = createJsonSchema(apiDetail.Namespace, apiDetail.Name, apiDetail.Version, _apiReturnParamVOList);
                         jsonSchema.Description = description;
 
                         var typeName = openApiOperation.OperationId + "Result";
@@ -168,16 +171,19 @@ namespace ConsoleApp2
             return jsonSchema;
         }
         private System.Collections.Generic.List<string> keyValuePairs____ = new System.Collections.Generic.List<string>();
-        private NJsonSchema.JsonSchema getSchema(OpenApiDocument document, string @namespace, string apiname, int version, string type, string description)
+        private NJsonSchema.JsonSchema getSchema(System.Collections.Generic.IDictionary<string, JsonSchema> definitions, string @namespace, string apiname, int version, string type, string description)
         {
-            ///////////////////
-            var jsonSchema = keyValuePairs.GetOrAdd(@namespace + apiname + type, t =>
+            var key = @namespace + ":" + apiname + "-" + version + "=>" + type;
+            var jsonSchema = keyValuePairs.GetOrAdd(key, t =>
              {
-                 var jsonSchema1 = getMessageTypeToSchema(document, @namespace, apiname, version, type) ?? getSystemTypeToSchema(type);
+                 var jsonSchema1 = getMessageTypeToSchema(definitions, @namespace, apiname, version, type, description) ?? getSystemTypeToSchema(type);
 
                  return jsonSchema1;
              });
-
+            if (jsonSchema == null)
+            {
+                jsonSchema = eeee(definitions, key);
+            }
             if (jsonSchema == null)
             {
                 keyValuePairs____.Add(type + "\t\t\t=\t\t\t" + @namespace + ":" + apiname + "-" + version);
@@ -186,18 +192,67 @@ namespace ConsoleApp2
             }
             return jsonSchema;
         }
+        private NJsonSchema.JsonSchema eeee(System.Collections.Generic.IDictionary<string, JsonSchema> definitions, string key)
+        {
+            switch (key)
+            {
+                case "aliexpress.open:api.getChildrenPostCategoryById-1=>":
+                    return getAliexpressOpenApiGetChildrenPostCategoryByIdV1(definitions);
+                default:
+                    break;
+            }
+            if (key.StartsWith("aliexpress.open:api.getChildrenPostCategoryById-1"))
+            {
+
+            }
+
+            return null;
+        }
+        private NJsonSchema.JsonSchema getAliexpressOpenApiGetChildrenPostCategoryByIdV1(System.Collections.Generic.IDictionary<string, JsonSchema> definitions)
+        {
+            var jsonSchemaAeopPostCategoryList = new NJsonSchema.JsonSchema
+            {
+                AllowAdditionalProperties = false,
+                Type = NJsonSchema.JsonObjectType.Object,
+                Properties = {
+                    { "names", DictionarySchema(typeof(string)) .ToJsonSchemaProperty()} ,
+                    { "level", NJsonSchema.JsonSchema.FromType<int>().ToJsonSchemaProperty() } ,
+                    { "id", NJsonSchema.JsonSchema.FromType<int>().ToJsonSchemaProperty()} ,
+                    { "isleaf", NJsonSchema.JsonSchema.FromType<bool>().ToJsonSchemaProperty() }
+                }
+            };
+
+
+            var jsonSchema = new NJsonSchema.JsonSchema
+            {
+                AllowAdditionalProperties = false,
+                Type = NJsonSchema.JsonObjectType.Object,
+                Properties = {
+                    { "aeopPostCategoryList",makeArraySchemaType( jsonSchemaAeopPostCategoryList,1).ToJsonSchemaProperty()} ,
+                    { "success", NJsonSchema.JsonSchema.FromType<bool>().ToJsonSchemaProperty() }
+                }
+            };
+
+            definitions.Add("ApiGetChildrenPostCategoryByIdResult", jsonSchema);
+            return new NJsonSchema.JsonSchema
+            {
+                AllowAdditionalProperties = false,
+                Type = NJsonSchema.JsonObjectType.Object,
+                Reference = jsonSchema
+            };
+        }
         private System.Collections.Generic.Dictionary<string, NJsonSchema.JsonSchema> keyValuePairstModelInfo = new System.Collections.Generic.Dictionary<string, NJsonSchema.JsonSchema>();
-        private NJsonSchema.JsonSchema createJsonSchema(OpenApiDocument document, string @namespace, string apiname, int version, ModelInfoResult[] modelInfoResult)
+        private NJsonSchema.JsonSchema createJsonSchema(string @namespace, string apiname, int version, ModelInfoResult[] modelInfoResult)
         {
             var jsonSchema = new NJsonSchema.JsonSchema
             {
                 AllowAdditionalProperties = false,
                 Type = NJsonSchema.JsonObjectType.Object
             };
-            createJsonSchema(jsonSchema, document, @namespace, apiname, version, modelInfoResult);
+            createJsonSchema(jsonSchema, @namespace, apiname, version, modelInfoResult);
             return jsonSchema;
         }
-        private void createJsonSchema(NJsonSchema.JsonSchema jsonSchema, OpenApiDocument document, string @namespace, string apiname, int version, ModelInfoResult[] modelInfoResult)
+        private void createJsonSchema(NJsonSchema.JsonSchema jsonSchema, string @namespace, string apiname, int version, ModelInfoResult[] modelInfoResult)
         {
             if (modelInfoResult == null || modelInfoResult.Length == 0)
             {
@@ -212,15 +267,15 @@ namespace ConsoleApp2
                     }
                     else/* if(!jsonSchema.Properties.ContainsKey(item.Name))*/
                     {
-                        jsonSchema.Properties.Add(item.Name, getJsonSchemaProperty(document, @namespace, apiname, version, item.Name, item.Type, item.DefaultValue, false, item.Description?.过滤特殊字符()));
+                        jsonSchema.Properties.Add(item.Name, getJsonSchemaProperty(jsonSchema.Definitions, @namespace, apiname, version, item.Name, item.Type, item.DefaultValue, false, item.Description?.过滤特殊字符()));
                     }
                 }
             }
         }
-        private NJsonSchema.JsonSchemaProperty getJsonSchemaProperty(OpenApiDocument document, string @namespace, string apiname, int version,
+        private NJsonSchema.JsonSchemaProperty getJsonSchemaProperty(System.Collections.Generic.IDictionary<string, JsonSchema> definitions, string @namespace, string apiname, int version,
             string name, string type, object defaultValue, bool required, string description)
         {
-            var tt = getSchema(document, @namespace, apiname, version, type, "");
+            var tt = getSchema(definitions, @namespace, apiname, version, type, "");
             var r = tt.ToJsonSchemaProperty();
             r.AllowAdditionalProperties = false;
             r.Description = description;
@@ -234,7 +289,7 @@ namespace ConsoleApp2
         private System.Collections.Concurrent.ConcurrentDictionary<string, NJsonSchema.JsonSchema> keyValuePairs = new System.Collections.Concurrent.ConcurrentDictionary<string, NJsonSchema.JsonSchema>();
 
         #region 类型转换
-        private NJsonSchema.JsonSchema getMessageTypeToSchema(OpenApiDocument document, string @namespace, string apiname, int version, string type)
+        private NJsonSchema.JsonSchema getMessageTypeToSchema(System.Collections.Generic.IDictionary<string, JsonSchema> definitions, string @namespace, string apiname, int version, string type, string description)
         {
             if (type?.StartsWith("message:") != true) return null;
             var typeName = type.Replace("message:", "");
@@ -251,24 +306,39 @@ namespace ConsoleApp2
                 var modelInfo = AlibabaDataCache.GetModelInfoByCacheAsync(@namespace, apiname, version, _type.type).GetAwaiter().GetResult();
                 var modelInfoResult = modelInfo.Result;
 
-                var jsonSchema = new NJsonSchema.JsonSchema
+                var md5key = modelInfoResult == null ? null : string.Join("", modelInfoResult?.Select(f => f.Name + f.Type));
+                if (!string.IsNullOrWhiteSpace(md5key) && keyValuePairstModelInfo.ContainsKey(md5key))
                 {
-                    AllowAdditionalProperties = false,
-                    Type = NJsonSchema.JsonObjectType.Object
-                };
-                keyValuePairstModelInfo.Add(key, jsonSchema);
-                createJsonSchema(jsonSchema, document, @namespace, apiname, version, modelInfoResult);
-                jsonSchema.Description = $"{modelInfo.ErrMsg}\r\n namespace:{@namespace},apiname:{apiname},version:{version},typeName:{_type.type}";
-
-                var _typeName = _type.type?.ToPascalCase();
-                if (!document.Definitions.ContainsKey(_typeName))
-                    document.Definitions.Add(_typeName, jsonSchema);
+                    return makeArraySchemaType(new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = keyValuePairstModelInfo[md5key] }, _type.arrLength);
+                }
                 else
                 {
-                    document.Definitions.Add((@namespace + "." + apiname)?.ToPascalCase() + _typeName, jsonSchema);
-                    //var dfsdfsd = document.Definitions[_typeName];
+                    var jsonSchema = new NJsonSchema.JsonSchema
+                    {
+                        AllowAdditionalProperties = false,
+                        Type = NJsonSchema.JsonObjectType.Object
+                    };
+                    keyValuePairstModelInfo.Add(key, jsonSchema);
+                    if (!string.IsNullOrWhiteSpace(md5key))
+                        keyValuePairstModelInfo.Add(md5key, jsonSchema);
+                    createJsonSchema(jsonSchema, @namespace, apiname, version, modelInfoResult);
+                    jsonSchema.Description = (string.IsNullOrWhiteSpace(description) ? "" : description + "\r\n") + $"{modelInfo.ErrMsg}\r\n namespace:{@namespace},apiname:{apiname},version:{version},typeName:{_type.type}";
+
+                    if (definitions != null)
+                    {
+                        var _typeName = _type.type?.ToPascalCase();
+                        if (!definitions.ContainsKey(_typeName))
+                            definitions.Add(_typeName, jsonSchema);
+                        else
+                        {
+                            definitions.Add((@namespace + "." + apiname)?.ToPascalCase() + _typeName, jsonSchema);
+                            //var dfsdfsd = document.Definitions[_typeName];
+                        }
+                    }
+
+
+                    return makeArraySchemaType(new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema }, _type.arrLength);
                 }
-                return makeArraySchemaType(new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = jsonSchema }, _type.arrLength);
             }
         }
 
@@ -311,6 +381,7 @@ namespace ConsoleApp2
                 case "inputstream":
                 case "java.io.inputstream":
                     return makeArraySystemType(typeof(byte[]), _type.arrLength);
+                //return makeArraySchemaType(FileSchema(), _type.arrLength);
                 case "t":
                 case "object":
                 case "java.lang.object":
@@ -334,13 +405,20 @@ namespace ConsoleApp2
         }
         private NJsonSchema.JsonSchema DictionarySchema(Type type)
         {
-            var jsonSchema = new NJsonSchema.JsonSchema { Type = NJsonSchema.JsonObjectType.Object };
-            jsonSchema.AdditionalPropertiesSchema = NJsonSchema.JsonSchema.FromType(type);
+            //var jsonSchema = new NJsonSchema.JsonSchema { Type = NJsonSchema.JsonObjectType.Object, AllowAdditionalProperties = false };
+            //jsonSchema.AdditionalPropertiesSchema = NJsonSchema.JsonSchema.FromType(type);
+            var jsonSchema = NJsonSchema.JsonSchema.FromType<System.Collections.Generic.Dictionary<string, string>>();
+            return jsonSchema;
+        }
+        private NJsonSchema.JsonSchema FileSchema()
+        {
+            //var jsonSchema = new NJsonSchema.JsonSchema { Type = NJsonSchema.JsonObjectType.String, Format = JsonFormatStrings.Binary };
+            var jsonSchema = new NJsonSchema.JsonSchema { Type = NJsonSchema.JsonObjectType.File, AllowAdditionalProperties = false };
             return jsonSchema;
         }
         private NJsonSchema.JsonSchema DictionarySchema(NJsonSchema.JsonSchema jsonSchemaItem)
         {
-            var jsonSchema = new NJsonSchema.JsonSchema { Type = NJsonSchema.JsonObjectType.Object };
+            var jsonSchema = new NJsonSchema.JsonSchema { Type = NJsonSchema.JsonObjectType.Object, AllowAdditionalProperties = false };
             jsonSchema.AdditionalPropertiesSchema = jsonSchemaItem;
             return jsonSchema;
         }
