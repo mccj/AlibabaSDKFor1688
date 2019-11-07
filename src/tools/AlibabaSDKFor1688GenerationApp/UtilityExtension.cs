@@ -8,7 +8,15 @@ namespace ConsoleApp2
     {
         public static string 过滤特殊字符(this string str)
         {
-            return str?.Replace("\b", "").Replace("\u001b", "");
+            return str?.Replace("\b", "").Replace("\u001b", "").Replace("&lt;", "").Replace("&gt;", "");
+        }
+        public static string 类名过滤特殊字符(this string str)
+        {
+            if (str.Contains(';'))
+            {
+
+            }
+            return str?.Replace("&lt;", "").Replace("&gt;", "").Replace(";", "");
         }
         ///// <summary>
         ///// CamelCase
@@ -50,7 +58,7 @@ namespace ConsoleApp2
                 //if (word.All(f => char.IsUpper(f)))
                 //    result.Append("_" + word);
                 //else
-                    result.Append(word.Substring(0, 1).ToUpper() + word.Substring(1));
+                result.Append(word.Substring(0, 1).ToUpper() + word.Substring(1));
             }
 
             if (char.IsNumber(result[0])) result.Insert(0, '_');
@@ -78,7 +86,7 @@ namespace ConsoleApp2
                 //if (word.All(f => char.IsUpper(f)))
                 //    result.Append("_" + word);
                 //else
-                    result.Append(word.Substring(0, 1).ToUpper() + word.Substring(1));
+                result.Append(word.Substring(0, 1).ToUpper() + word.Substring(1));
             }
 
             if (char.IsNumber(result[0])) result.Insert(0, '_');

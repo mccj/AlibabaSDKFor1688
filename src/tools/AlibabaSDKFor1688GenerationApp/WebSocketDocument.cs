@@ -43,8 +43,6 @@ namespace ConsoleApp2
                 })).ToArray();
             }
 
-            var TypeDescriptionEnum = new NJsonSchema.JsonSchema { Type = JsonObjectType.String, Description = "消息类型" };
-            document.Definitions.Add("TypeDescription", TypeDescriptionEnum);
 
             for (int i = 0; i < publicApiDetails.Length; i++)
             {
@@ -55,17 +53,29 @@ namespace ConsoleApp2
 
                 document.Definitions.Add(apiDetail.TopicId, getMessageTypeToSchema(apiDetail));
 
-                TypeDescriptionEnum.Enumeration.Add(apiDetail.TopicId);
-                TypeDescriptionEnum.EnumerationNames.Add(apiDetail.TopicId);
             }
 
             var rr = NJsonSchema.JsonSchema.FromType<string>().ToJsonSchemaProperty();
             rr.Title = "TypeDescription的json";
             rr.IsReadOnly = true;
             rr.Default = Newtonsoft.Json.JsonConvert.SerializeObject(publicApiDetails.ToDictionary(f => f.Result.ApiInfo.TopicId, f => f.Result.ApiInfo.TopicGroupDisplayName + "-" + f.Result.ApiInfo.TopicDisplayName));
+            var rr1 = NJsonSchema.JsonSchema.FromType<string>().ToJsonSchemaProperty();
+            rr1.Title = "TypeDescription的json";
+            rr1.IsReadOnly = true;
+            rr1.Default = Newtonsoft.Json.JsonConvert.SerializeObject(document.Definitions.ToDictionary(f => f.Key, f => f.Value.Id));
+
+            var TypeDescriptionEnum = new NJsonSchema.JsonSchema { Type = JsonObjectType.String, Description = "消息类型" };
+            document.Definitions.Add("TypeDescription", TypeDescriptionEnum);
+            foreach (var item in publicApiDetails)
+            {
+                TypeDescriptionEnum.Enumeration.Add(item.Result.ApiInfo.TopicId);
+                TypeDescriptionEnum.EnumerationNames.Add(item.Result.ApiInfo.TopicId);
+            }
+
             var TypeDescriptionJson = new NJsonSchema.JsonSchema { Type = JsonObjectType.Object, AllowAdditionalProperties = false };
             document.Definitions.Add("TypeDescriptionJson", TypeDescriptionJson);
-            TypeDescriptionJson.Properties.Add("Json", rr);
+            TypeDescriptionJson.Properties.Add("JsonDescription", rr);
+            TypeDescriptionJson.Properties.Add("JsonClass", rr1);
             return document;
         }
 
@@ -147,15 +157,27 @@ namespace ConsoleApp2
             else
             {
                 var modelInfoResult = apiDetail.MessageDocs;
-
-                var jsonSchema = new NJsonSchema.JsonSchema
+                var md5key = string.Join("", modelInfoResult?.Select(f => f.Name + f.Type).ToArray() ?? new string[] { });
+                if (keyValuePairstModelInfo.ContainsKey(md5key))
                 {
-                    AllowAdditionalProperties = false,
-                    Type = NJsonSchema.JsonObjectType.Object,
-                    Description = $"{apiDetail.TopicGroupDisplayName}-{apiDetail.TopicDisplayName}\r\nhttps://open.1688.com/doc/topicDetail.htm?id={apiDetail.TopicId}&topicGroup={apiDetail.TopicGroupName}"
-                };
-                keyValuePairstModelInfo.Add(key, jsonSchema);
-                createJsonSchemaBy(jsonSchema, modelInfoResult);
+                    return keyValuePairstModelInfo[md5key];
+                }
+                else
+                {
+                    var jsonSchema = new NJsonSchema.JsonSchema
+                    {
+                        Id = key,
+                        AllowAdditionalProperties = false,
+                        Type = NJsonSchema.JsonObjectType.Object,
+                        Description = $"{apiDetail.TopicGroupDisplayName}-{apiDetail.TopicDisplayName}\r\nhttps://open.1688.com/doc/topicDetail.htm?id={apiDetail.TopicId}&topicGroup={apiDetail.TopicGroupName}"
+                    };
+                    keyValuePairstModelInfo.Add(key, jsonSchema);
+                    keyValuePairstModelInfo.Add(md5key, jsonSchema);
+                    createJsonSchemaBy(jsonSchema, modelInfoResult);
+
+                    return jsonSchema;
+                }
+
 
                 //var rr = NJsonSchema.JsonSchema.FromType<string>().ToJsonSchemaProperty();
                 //rr.Title = "指当前类型的具体功能";
@@ -163,7 +185,6 @@ namespace ConsoleApp2
                 //rr.Default = $"{apiDetail.TopicGroupDisplayName}-{apiDetail.TopicDisplayName}";
                 //jsonSchema.Properties.Add("TypeDescription", rr);
 
-                return jsonSchema;
             }
         }
 

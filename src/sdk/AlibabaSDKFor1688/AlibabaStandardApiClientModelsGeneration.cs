@@ -38,7 +38,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>spu的属性值对
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.category.searchSPUInfo,version:1,typeName:alibaba.category.FeatureAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCategoryFeatureAttribute 
@@ -74,7 +75,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>SPU数组信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.category.searchSPUInfo,version:1,typeName:alibaba.category.SpuInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCategorySpuInfo 
@@ -139,7 +141,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>属性id和值对
+    /// 
     ///  namespace:cn.alibaba.open,apiname:category.level.attr.get,version:1,typeName:CategoryFeatureIdValue</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class CategoryFeatureIdValue 
@@ -155,7 +158,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>类目属性
+    /// 
     ///  namespace:cn.alibaba.open,apiname:category.level.attr.get,version:1,typeName:CategoryFeature</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class CategoryFeature 
@@ -252,7 +256,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>属性可选的属性值,
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.category.attribute.get,version:1,typeName:alibaba.category.AttributeValueInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCategoryAttributeValueInfo 
@@ -280,7 +285,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>类目属性信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.category.attribute.get,version:1,typeName:alibaba.category.AttributeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCategoryAttributeInfo 
@@ -349,7 +355,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>(废弃)类目属性级联关系，只有1688业务返回返回该字段
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.category.attribute.get,version:1,typeName:alibaba.category.PostLevelAttrRel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCategoryPostLevelAttrRel 
@@ -472,7 +479,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>类目列表
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.category.searchByKeyword,version:1,typeName:alibaba.category.CategoryInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCategoryCategoryInfo 
@@ -521,7 +529,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>子类目信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.category.get,version:1,typeName:alibaba.child.category.info</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaChildCategoryInfo 
@@ -537,7 +546,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>类目列表
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.category.get,version:1,typeName:alibaba.category.CategoryInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCategoryCategoryInfo2 
@@ -619,7 +629,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>操作结果
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.expire,version:1,typeName:alibaba.product.ProductOperateResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductOperateResult 
@@ -734,7 +745,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>子自定义分类列表
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.userCategory.list.get,version:1,typeName:SubUserCategoryInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class SubUserCategoryInfo 
@@ -762,7 +774,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>自定义分类列表
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.userCategory.list.get,version:1,typeName:UserCategoryInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class UserCategoryInfo 
@@ -844,7 +857,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品属性和属性值
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.incrementModify,version:1,typeName:alibaba.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductAttribute 
@@ -872,7 +886,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.incrementModify,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductInfo 
@@ -958,7 +973,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品扩展信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductExtendInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductExtendInfo 
@@ -974,7 +990,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品物流信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductShippingInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductShippingInfo 
@@ -1010,7 +1027,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>SKU属性值，可填多组信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductSKUAttrInfo 
@@ -1046,7 +1064,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>阶梯报价，1688无需关注
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductPriceRange</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductPriceRange 
@@ -1060,7 +1079,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>sku信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductSKUInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductSKUInfo 
@@ -1108,7 +1128,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品销售信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductSaleInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductSaleInfo 
@@ -1172,7 +1193,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品详细信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductInfo2 
@@ -1288,7 +1310,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>产品业务的支持信息,support为false说明不支持.
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductBizGroupInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductBizGroupInfo 
@@ -1366,7 +1389,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>SKU属性值，可填多组信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.SKUAttrInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductSKUAttrInfo2 
@@ -1635,7 +1659,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品是否可以修改返回结果
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.isModifiable,version:1,typeName:alibaba.product.ProductModifiable</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductModifiable 
@@ -1680,7 +1705,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品列表
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductInfo3 
@@ -1820,7 +1846,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>查询结果
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.pageResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductPageResult 
@@ -1844,7 +1871,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>查询结果
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.productInfoListResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductInfoListResult 
@@ -1885,7 +1913,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品列表
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByIdList,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductInfo4 
@@ -1970,7 +1999,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>SKU的库存的变更信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.modifyStock,version:1,typeName:alibaba.product.SkuStockBean</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductSkuStockBean 
@@ -2214,7 +2244,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品列表
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductProductInfo6 
@@ -2326,7 +2357,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>查询结果
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.ocean.openplatform.common.PageResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOceanOpenplatformCommonPageResult 
@@ -2350,7 +2382,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>查询结果
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.ocean.openplatform.biz.product.result.ProductInfoListResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOceanOpenplatformBizProductResultProductInfoListResult 
@@ -2395,7 +2428,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>相册信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.photobank.album.getList,version:1,typeName:alibaba.photobank.photo.AlbumDomain</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaPhotobankPhotoAlbumDomain 
@@ -2567,7 +2601,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>图片相册详情
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.photobank.album.getProfile,version:1,typeName:alibaba.product.AlbumDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductAlbumDetail 
@@ -2658,7 +2693,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>图片信息
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.photobank.photo.add,version:1,typeName:alibaba.photobank.photo.ResponseDomain</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaPhotobankPhotoResponseDomain 
@@ -2707,7 +2743,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>图片批量操作信息结果
+    /// 
     ///  namespace:com.alibaba.product,apiname:alibaba.photobank.photo.deleteBatch,version:1,typeName:alibaba.product.ImageOperateBean</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProductImageOperateBean 
@@ -2789,7 +2826,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>子模板
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySubTemplateDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformLogisticsDeliverySubTemplateDTO 
@@ -2849,7 +2887,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>普通子模板费率
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliveryRateDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformLogisticsDeliveryRateDTO 
@@ -2909,7 +2948,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>系统子模板费率
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySysRateDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformLogisticsDeliverySysRateDTO 
@@ -2965,7 +3005,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>费率
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliveryRateDetailDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformLogisticsDeliveryRateDetailDTO 
@@ -2993,7 +3034,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>快递子模版
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySubTemplateDetailDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO 
@@ -3110,7 +3152,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>物流跟踪步骤
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsTraceInfo.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsStep</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsOpenPlatformLogisticsStep 
@@ -3126,7 +3169,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>跟踪单详情
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsTraceInfo.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsTrace</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsOpenPlatformLogisticsTrace 
@@ -3175,7 +3219,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回结果列表
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.mySendGoodsAddress.list.get,version:1,typeName:alibaba.lgistics.MySendGoodsAddress</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLgisticsMySendGoodsAddress 
@@ -3252,7 +3297,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>发货对象明细列表
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpDeliverySendOrder.offline,version:1,typeName:alibaba.logistics.OpSendGoodEntry</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsOpSendGoodEntry 
@@ -3362,7 +3408,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>发货明细
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpDeliverySendOrder.offline,version:1,typeName:alibaba.logistic.result.OpSendOrderModelResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticResultOpSendOrderModelResult 
@@ -3473,7 +3520,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>发件人信息
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsSender</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsOpenPlatformLogisticsSender 
@@ -3524,7 +3572,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>收件人信息
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsReceiver</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsOpenPlatformLogisticsReceiver 
@@ -3575,7 +3624,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品信息
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsSendGood</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsOpenPlatformLogisticsSendGood 
@@ -3595,7 +3645,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>查询结果
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsOrder</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsOpenPlatformLogisticsOrder 
@@ -3705,7 +3756,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>物流公司列表
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpQueryLogisticCompanyList.offline,version:1,typeName:alibaba.logistics.OpLogisticsCompanyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsOpLogisticsCompanyModel 
@@ -3770,7 +3822,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>物流公司列表
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpQueryLogisticCompanyList,version:1,typeName:alibaba.logistics.OpLogisticsCompanyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsOpLogisticsCompanyModel2 
@@ -3835,7 +3888,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>运费模板列表
+    /// 
     ///  namespace:com.alibaba.logistics,apiname:alibaba.logistics.freightTemplate.getList,version:1,typeName:alibaba.logistics.FreightTemplate</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLogisticsFreightTemplate2 
@@ -3929,7 +3983,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>买家联系人
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.tradeContact</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeTradeContact 
@@ -3965,7 +4020,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>卖家联系人信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.tradeSellerContact</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeTradeSellerContact 
@@ -4009,7 +4065,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>收件人信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.orderReceiverInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeOrderReceiverInfo 
@@ -4045,7 +4102,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>[交易3.0]分阶段交易，分阶段订单list
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.StepOrderModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeStepOrderModel 
@@ -4199,7 +4257,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单基础信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelOrderBaseInfo 
@@ -4452,7 +4511,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>诚e赊支付详情，只有使用诚e赊付款时返回
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.creditOrder.forDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCreditOrderForDetail 
@@ -4484,7 +4544,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>预订单信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.order.preOrder.forRead</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOrderPreOrderForRead 
@@ -4500,7 +4561,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单业务信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.order.bizInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOrderBizInfo 
@@ -4528,7 +4590,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>交易条款
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.TradeTermsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelTradeTermsInfo 
@@ -4579,7 +4642,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>保障条款，此字段仅针对1688
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.GuaranteeTermsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelGuaranteeTermsInfo 
@@ -4615,7 +4679,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品条目信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelProductItemInfo 
@@ -4772,7 +4837,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>运单明细
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsItemsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelNativeLogisticsItemsInfo 
@@ -4904,7 +4970,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>国内物流
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelNativeLogisticsInfo 
@@ -4964,7 +5031,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>发票信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.invoice.OrderInvoiceModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaInvoiceOrderInvoiceModel 
@@ -5044,7 +5112,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>卖家給买家的评价
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.order.rateDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOrderRateDetail 
@@ -5072,7 +5141,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单评价信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.OrderRateInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeOrderRateInfo 
@@ -5096,7 +5166,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>跨境地址扩展信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.OverseasExtraAddress</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeOverseasExtraAddress 
@@ -5132,7 +5203,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>报关信息列表
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.CustomsAttributesInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeCustomsAttributesInfo 
@@ -5168,7 +5240,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>跨境报关信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.Customs</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeCustoms 
@@ -5204,7 +5277,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>采购单详情列表，为大企业采购订单独有域。
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.orderDetail.caigouQuoteInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOrderDetailCaigouQuoteInfo 
@@ -5224,7 +5298,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单扩展属性
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.KeyValuePair</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeKeyValuePair 
@@ -5244,7 +5319,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单详情信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelTradeInfo 
@@ -5329,7 +5405,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>[交易4.0]分阶段交易，分阶段订单list
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.BizNewStepOrderModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeBizNewStepOrderModel 
@@ -5401,7 +5478,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单基础信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelOrderBaseInfo2 
@@ -5646,7 +5724,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品条目信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelProductItemInfo2 
@@ -5808,7 +5887,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>零售通订单信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.lst.tradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLstTradeInfo 
@@ -5820,7 +5900,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单业务信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.order.bizInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOrderBizInfo2 
@@ -5852,7 +5933,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回结果
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelTradeInfo2 
@@ -5966,7 +6048,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>物流公司详情
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpLogisticsCompanyModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeRefundOpLogisticsCompanyModel 
@@ -6006,7 +6089,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>操作记录列表
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpOrderRefundOperationModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeRefundOpOrderRefundOperationModel 
@@ -6105,7 +6189,7 @@ namespace AlibabaSDK.StandardModels
     
         /// <summary>凭证图片地址</summary>
         [Newtonsoft.Json.JsonProperty("vouchers", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> Vouchers { get; set; }
+        public System.Collections.Generic.ICollection<string> Vouchers { get; set; }
     
         /// <summary>物流公司详情</summary>
         [Newtonsoft.Json.JsonProperty("logisticsCompany", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6114,7 +6198,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>退款模型
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeRefundOpOrderRefundModel 
@@ -6283,7 +6368,7 @@ namespace AlibabaSDK.StandardModels
     
         /// <summary>退款单包含的订单明细，时间逆序排列</summary>
         [Newtonsoft.Json.JsonProperty("orderEntryIdList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> OrderEntryIdList { get; set; }
+        public System.Collections.Generic.ICollection<string> OrderEntryIdList { get; set; }
     
         /// <summary>退款单对应的订单编号</summary>
         [Newtonsoft.Json.JsonProperty("orderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6396,7 +6481,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>查询结果
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpQueryOrderRefundResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeRefundOpQueryOrderRefundResult 
@@ -6437,7 +6523,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>退款单列表
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.queryOrderRefundList,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeRefundOpOrderRefundModel2 
@@ -6606,7 +6693,7 @@ namespace AlibabaSDK.StandardModels
     
         /// <summary>退款单包含的订单明细，时间逆序排列</summary>
         [Newtonsoft.Json.JsonProperty("orderEntryIdList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> OrderEntryIdList { get; set; }
+        public System.Collections.Generic.ICollection<string> OrderEntryIdList { get; set; }
     
         /// <summary>退款单对应的订单编号</summary>
         [Newtonsoft.Json.JsonProperty("orderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6703,7 +6790,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回结果
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.queryOrderRefundList,version:1,typeName:alibaba.trade.refund.OpQueryOrderRefundListResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeRefundOpQueryOrderRefundListResult 
@@ -6792,7 +6880,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>支持的交易类型
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.queryTradeTypesOfOffer,version:1,typeName:alibaba.openplatform.trade.result.OpProcessTemplateResultModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeResultOpProcessTemplateResultModel 
@@ -6972,7 +7061,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品优惠列表
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:alibaba.trade.promotion.model</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradePromotionModel 
@@ -7004,7 +7094,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>规格信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:alibaba.createOrder.preview.resultCargo.model</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCreateOrderPreviewResultCargoModel 
@@ -7044,7 +7135,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:tradeModelExtensionList</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class TradeModelExtensionList 
@@ -7068,7 +7160,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单预览结果，过自动拆单会返回多个记录
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:alibaba.createOrder.preview.result.model</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCreateOrderPreviewResultModel 
@@ -7172,7 +7265,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>退款单信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeRefundOpOrderRefundModel3 
@@ -7305,7 +7399,7 @@ namespace AlibabaSDK.StandardModels
     
         /// <summary>退款单包含的订单明细，时间逆序排列</summary>
         [Newtonsoft.Json.JsonProperty("orderEntryIdList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> OrderEntryIdList { get; set; }
+        public System.Collections.Generic.ICollection<string> OrderEntryIdList { get; set; }
     
         /// <summary>退款单对应的订单编号</summary>
         [Newtonsoft.Json.JsonProperty("orderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7458,7 +7552,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>查询结果
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus,version:1,typeName:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatusResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult 
@@ -7566,7 +7661,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回结果
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.OpQueryMarketingMixConfig,version:1,typeName:alibaba.openplatform.trade.result.OpMarketingMixConfigModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeResultOpMarketingMixConfigModel 
@@ -7631,7 +7727,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>采购单详情列表，为大企业采购订单独有域。
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.orderDetail.caigouQuoteInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOrderDetailCaigouQuoteInfo2 
@@ -7651,7 +7748,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单评价信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.OrderRateInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeOrderRateInfo2 
@@ -7667,7 +7765,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>交易条款
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeTermsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelTradeTermsInfo2 
@@ -7705,7 +7804,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>国内物流
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelNativeLogisticsInfo2 
@@ -7761,7 +7861,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单基础信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelOrderBaseInfo3 
@@ -7994,7 +8095,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>预订单信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.order.preOrder.forRead</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOrderPreOrderForRead2 
@@ -8014,7 +8116,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单业务信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.order.bizInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOrderBizInfo3 
@@ -8042,7 +8145,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品条目信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelProductItemInfo3 
@@ -8172,7 +8276,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>查询返回列表
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelTradeInfo3 
@@ -8282,7 +8387,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回地区信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.addresscode.get,version:1,typeName:alibaba.TradeAddressCode</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeAddressCode 
@@ -8365,7 +8471,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>收货地址列表
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.receiveAddress.get,version:1,typeName:alibaba.trade.ReceiveAddressItem</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeReceiveAddressItem 
@@ -8417,7 +8524,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回结果
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.receiveAddress.get,version:1,typeName:alibaba.trade.ReceiveAddressResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeReceiveAddressResult 
@@ -8458,7 +8566,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单基础信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelOrderBaseInfo4 
@@ -8687,7 +8796,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品条目信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelProductItemInfo4 
@@ -8840,7 +8950,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>查询返回结果
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaOpenplatformTradeModelTradeInfo4 
@@ -8921,7 +9032,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>发票信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.invoice.get,version:1,typeName:alibaba.invoice.OrderInvoiceModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaInvoiceOrderInvoiceModel2 
@@ -9092,7 +9204,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>下单失败的商品信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.fastCreateOrder,version:1,typeName:alibaba.trade.fast.offer</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeFastOffer 
@@ -9116,7 +9229,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单详细信息
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.fastCreateOrder,version:1,typeName:alibaba.trade.fast.result</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeFastResult 
@@ -9195,7 +9309,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>解析后的收获地址
+    /// 
     ///  namespace:com.alibaba.trade,apiname:alibaba.trade.addresscode.parse,version:1,typeName:alibaba.trade.ReceiveAddress</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaTradeReceiveAddress 
@@ -9298,7 +9413,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>会员信息
+    /// 
     ///  namespace:com.alibaba.account,apiname:alibaba.account.basic,version:1,typeName:alibaba.account.simpleAccountInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaAccountSimpleAccountInfo 
@@ -9483,7 +9599,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>会员信息
+    /// 
     ///  namespace:com.alibaba.account,apiname:alibaba.account.agent.basic,version:1,typeName:alibaba.account.simpleAccountInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaAccountSimpleAccountInfo2 
@@ -9536,7 +9653,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>同款相似款的统计信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.info,version:1,typeName:alibaba.cbu.searchweb.open.hsf.result.IsvGraphOfferResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCbuSearchwebOpenHsfResultIsvGraphOfferResult 
@@ -9577,7 +9695,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品的列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.same.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel 
@@ -9629,7 +9748,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>offer查询的信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.same.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferQueryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult 
@@ -9721,7 +9841,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>isv订单信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.app.orderListbyIds,version:1,typeName:isvOrderItemDto</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class IsvOrderItemDto2 
@@ -9804,7 +9925,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>结算信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:app.order.get,version:1,typeName:alibaba.settle.SettleItemDto</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaSettleSettleItemDto 
@@ -9824,7 +9946,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>isv订单信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:app.order.get,version:1,typeName:isvOrderItemDto</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class IsvOrderItemDto3 
@@ -9919,7 +10042,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>简单sku信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.querySkuBySpecId,version:1,typeName:alibaba.daixiao.SimpleSkuInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaDaixiaoSimpleSkuInfo 
@@ -9981,7 +10105,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品规格属性列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.supplier.listForAllConsignment,version:1,typeName:alibaba.daixiao.ProductSkuInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaDaixiaoProductSkuInfo 
@@ -10021,7 +10146,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.supplier.listForAllConsignment,version:1,typeName:alibaba.daixiao.ProductInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaDaixiaoProductInfo 
@@ -10217,7 +10343,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>父订单包含的子订单列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.listSupplyOrders,version:1,typeName:alibaba.daixiao.subSupplyOrderInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaDaixiaoSubSupplyOrderInfo 
@@ -10317,7 +10444,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>采购单信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.listSupplyOrders,version:1,typeName:alibaba.daixiao.supplyOrderDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaDaixiaoSupplyOrderDetail 
@@ -10334,7 +10462,7 @@ namespace AlibabaSDK.StandardModels
         [Newtonsoft.Json.JsonProperty("outOrderGmtCreate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.DateTimeOffset? OutOrderGmtCreate { get; set; }
     
-        /// <summary>当前中间表订单状态,0(未下单)、1(等待买家付款)、2(等待卖家发货)、3(等待买家收货)、4(已收货-&amp;gt;交易成功)、5(交易关闭)</summary>
+        /// <summary>当前中间表订单状态,0(未下单)、1(等待买家付款)、2(等待卖家发货)、3(等待买家收货)、4(已收货-交易成功)、5(交易关闭)</summary>
         [Newtonsoft.Json.JsonProperty("orderStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? OrderStatus { get; set; }
     
@@ -10365,7 +10493,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>采购单列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.distributor.listSupplyOrders,version:1,typeName:alibaba.daixiao.supplyOrderInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaDaixiaoSupplyOrderInfo 
@@ -10589,7 +10718,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>结果集合
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.relation.querySuppliers,version:1,typeName:alibaba.relation.supplierModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaRelationSupplierModel 
@@ -10779,7 +10909,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>推荐的公司列表信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.company,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvCompanyOfferResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvCompanyOfferResult 
@@ -10799,7 +10930,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>公司推荐结果
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.company,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvRecommendResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCbuSearchwebOpenHsfResultIsvRecommendResult 
@@ -10865,7 +10997,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>结果集合
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.relation.queryConsigners,version:1,typeName:alibaba.relation.consignerModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaRelationConsignerModel 
@@ -11846,7 +11979,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>cps交易列表
+    /// 
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cps.webUnionTradeBillList,version:1,typeName:alibaba.cps.OpenTradeBillDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCpsOpenTradeBillDTO 
@@ -12276,7 +12410,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>列表
+    /// 
     ///  namespace:com.alibaba.p4p,apiname:alibaba.cps.listOfferPageQuery,version:1,typeName:alibaba.cps.OpenOfferDTO</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCpsOpenOfferDTO 
@@ -12437,7 +12572,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>询价单附件
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiCommonModelAttachment 
@@ -12461,7 +12597,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>地区详情-省
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.Area</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiCommonModelArea 
@@ -12500,7 +12637,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>收货人地址
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.AreaInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiCommonModelAreaInfo 
@@ -12532,7 +12670,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>询价单条目
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.PurchaseNoteItem</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiCommonModelPurchaseNoteItem 
@@ -12576,7 +12715,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>联系方式
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.ContactInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiCommonModelContactInfo 
@@ -12765,7 +12905,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>产品属性
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateErpProducts,version:1,typeName:alibaba.caigou.product.ProductAttributeCoopParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductProductAttributeCoopParam 
@@ -12862,7 +13003,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>失败记录列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateErpProducts,version:1,typeName:alibaba.caigou.product.FailedAddOrUpdateErpProductResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductFailedAddOrUpdateErpProductResult 
@@ -12878,7 +13020,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>批量操作结果
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateErpProducts,version:1,typeName:alibaba.caigou.product.BatchAddOrUpdateErpProductResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductBatchAddOrUpdateErpProductResult 
@@ -12939,7 +13082,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>失败记录列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.removeErpProducts,version:1,typeName:alibaba.caigou.product.FailedRemoveErpProductResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductFailedRemoveErpProductResult 
@@ -12955,7 +13099,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>批量操作结果
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.removeErpProducts,version:1,typeName:alibaba.caigou.product.BatchRemoveErpProductResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductBatchRemoveErpProductResult 
@@ -13125,10 +13270,10 @@ namespace AlibabaSDK.StandardModels
         public string ValueName { get; set; }
     
         [Newtonsoft.Json.JsonProperty("valueIds", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> ValueIds { get; set; }
+        public System.Collections.Generic.ICollection<string> ValueIds { get; set; }
     
         [Newtonsoft.Json.JsonProperty("values", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> Values { get; set; }
+        public System.Collections.Generic.ICollection<string> Values { get; set; }
     
         [Newtonsoft.Json.JsonProperty("isNeed", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? IsNeed { get; set; }
@@ -13169,10 +13314,10 @@ namespace AlibabaSDK.StandardModels
         public string Value { get; set; }
     
         [Newtonsoft.Json.JsonProperty("valueIds", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> ValueIds { get; set; }
+        public System.Collections.Generic.ICollection<string> ValueIds { get; set; }
     
         [Newtonsoft.Json.JsonProperty("valueList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<object> ValueList { get; set; }
+        public System.Collections.Generic.ICollection<string> ValueList { get; set; }
     
         [Newtonsoft.Json.JsonProperty("groupCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string GroupCode { get; set; }
@@ -13235,7 +13380,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>数据结果
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.getErpProductByErpProductCode,version:1,typeName:alibaba.caigou.product.ProductCoop</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductProductCoop 
@@ -13451,7 +13597,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>报价单条目列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.SupplyNoteItem</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiCommonModelSupplyNoteItem 
@@ -13519,7 +13666,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>分阶段付款信息（type不是step时为空）
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.StepPayInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiCommonModelStepPayInfo 
@@ -13587,7 +13735,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>报价单付款条件
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.PayRequirement</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiCommonModelPayRequirement 
@@ -13911,7 +14060,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>商品参数
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenOfferParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouMallOpenOfferParam 
@@ -13931,7 +14081,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>发票抬头
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenInvoiceHeadParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouMallOpenInvoiceHeadParam 
@@ -13975,7 +14126,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>临时邮寄地址
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenReceiveAddressParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouMallOpenReceiveAddressParam 
@@ -14015,7 +14167,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>发票信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenInvoiceParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouMallOpenInvoiceParam 
@@ -14072,7 +14225,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>下单成功商品列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.TradeOfferModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouMallTradeOfferModel 
@@ -14104,7 +14258,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单成功列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.TradeOrderModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouMallTradeOrderModel 
@@ -14120,7 +14275,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>订单失败列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.FailTradeOfferModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouMallFailTradeOfferModel 
@@ -14140,7 +14296,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回正确信息
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.PurchasOrderTradeModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouMallPurchasOrderTradeModel 
@@ -14197,7 +14354,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>叶子类目列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.category.queryAllErpCategory,version:1,typeName:caigou.domain.category.LeafCategory</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class CaigouDomainCategoryLeafCategory 
@@ -14233,7 +14391,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>子类目列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.category.queryAllErpCategory,version:1,typeName:caigou.domain.category.TwoCategory</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class CaigouDomainCategoryTwoCategory 
@@ -14391,7 +14550,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>a
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.cooper.param.OpenCreateRequisitionItemParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam 
@@ -14623,7 +14783,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>a
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.requisition.model.ReceiveAddressModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouBizApiRequisitionModelReceiveAddressModel 
@@ -14736,7 +14897,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>参考文档
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:com.alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponseModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel 
@@ -14764,7 +14926,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>参考文档
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:com.alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponse</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse 
@@ -14776,7 +14939,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>参考文档
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:com.alibaba.caigou.biz.api.common.model.ResultData</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouBizApiCommonModelResultData 
@@ -14858,7 +15022,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>物料工厂结果
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.getProductFactory,version:1,typeName:alibaba.caigou.product.CoopProductFactoryModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductCoopProductFactoryModel 
@@ -14950,7 +15115,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>请购单行列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.param.OpenCreateRequisitionItemParam</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam2 
@@ -15139,7 +15305,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回模型
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponseModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel 
@@ -15171,7 +15338,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回数据实例
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponse</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse 
@@ -15208,7 +15376,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>扩展属性
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerSettlementService.querySettlementNote,version:1,typeName:com.alibaba.procurement.api.settlement.integration.model.IntegrationSettlementEntryExtendsModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaProcurementApiSettlementIntegrationModelIntegrationSettlementEntryExtendsModel 
@@ -15288,7 +15457,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>结算子单列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerSettlementService.querySettlementNote,version:1,typeName:alibaba.procurement.api.settlement.interactive.model.ProcurementSettleEntryModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProcurementApiSettlementInteractiveModelProcurementSettleEntryModel 
@@ -15436,7 +15606,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>接口返回的数据（结算单模型）
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerSettlementService.querySettlementNote,version:1,typeName:alibaba.procurement.api.settlement.integration.model.IntegrationSettlementModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProcurementApiSettlementIntegrationModelIntegrationSettlementModel 
@@ -15719,7 +15890,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>失败记录列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateProductFactory,version:1,typeName:alibaba.caigou.product.FailedAddOrUpdateProductFactoryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductFailedAddOrUpdateProductFactoryResult 
@@ -15735,7 +15907,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>批量操作结果
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateProductFactory,version:1,typeName:alibaba.caigou.product.BatchAddOrUpdateProductFactoryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductBatchAddOrUpdateProductFactoryResult 
@@ -15779,7 +15952,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>付款明细
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerPayService.createPayNote,version:1,typeName:alibaba.procurement.api.settlement.integration.param.CreatePaymentDetail</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProcurementApiSettlementIntegrationParamCreatePaymentDetail 
@@ -15895,7 +16069,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>属性列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:caigou.domain.product.ProductAttribute</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class CaigouDomainProductProductAttribute 
@@ -15919,7 +16094,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>产品图片
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:com.alibaba.caigou.api.product.model.ProductImage</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiProductModelProductImage 
@@ -15991,7 +16167,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>退货子单列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerReturnGoodsService.queryReturnGoodsNote,version:1,typeName:alibaba.procurement.api.returngoods.basic.model.ReturnGoodsEntryModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProcurementApiReturngoodsBasicModelReturnGoodsEntryModel 
@@ -16115,7 +16292,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>返回数据
+    /// 
     ///  namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerReturnGoodsService.queryReturnGoodsNote,version:1,typeName:alibaba.procurement.api.returngoods.basic.model.ReturnGoodsModel</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaProcurementApiReturngoodsBasicModelReturnGoodsModel 
@@ -16285,7 +16463,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>工商注册信息{公司名字,法定代表人/负责人,公司注册地址,工商注册号,公司类型,成立日期,注册资本,登记机关,营业期限,经营范围}
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:IndustrialAndCommercialRegistrationInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class IndustrialAndCommercialRegistrationInfo 
@@ -16341,7 +16520,23 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>供应商公司信息{
+    /// 	诚信通会员标识;
+    /// 	政府邀约供应商标识;
+    /// 	工商注册信息{
+    /// 		公司名字;
+    /// 		法定代表人/负责人;
+    /// 		公司注册地址;
+    /// 		工商注册号;
+    /// 		公司类型;
+    /// 		成立日期;
+    /// 		注册资本;
+    /// 		登记机关;
+    /// 		营业期限;
+    /// 		经营范围
+    /// 	}
+    /// }
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:CompanyInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class CompanyInfo 
@@ -16369,7 +16564,14 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>供应商经营信息{
+    ///     经营模式;
+    ///     主营行业;
+    ///     主营产品/服务;
+    ///     品牌名称;
+    ///     经营地址
+    /// }
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:BusinessInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class BusinessInfo 
@@ -16401,7 +16603,18 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>供应商经营能力{
+    ///     员工人数;
+    ///     90天累计成交笔数;
+    ///     为名企供过货;
+    ///     支持买家保障;
+    ///     支持增值税发票;
+    ///     支持支付宝;
+    ///     支付宝类型;
+    ///     为淘宝卖家供过货;
+    ///     90天累计成交买家数
+    /// }
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:BusinessAbility</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class BusinessAbility 
@@ -16445,7 +16658,18 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>供应商公司信用{
+    ///     认证类型;
+    ///     供应等级;
+    ///     描述相符;
+    ///     服务态度;
+    ///     到货速度;
+    ///     180天买家评论;
+    ///     90天平均发货速度;
+    ///     90天退款率;
+    ///     90天投诉率;
+    /// }
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:CompanyCredit</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class CompanyCredit 
@@ -16489,7 +16713,13 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>供应商联系方式{
+    ///     姓名;
+    ///     手机;
+    ///     性别;
+    ///     电话;
+    /// }
+    /// 
     ///  namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:ContactInfo</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ContactInfo 
@@ -16598,7 +16828,7 @@ namespace AlibabaSDK.StandardModels
     
         /// <summary>供应商资质证书 {
         /// 	key包含:businessLicence;taxRegistration;taxRegistrationBackUp;OrganizationCode;approvalOfForeignInvestmentEnterprises;icpLicence;productLicence;otherLicence;
-        /// value 为List&amp;lt;供应商资质证书&amp;gt;类型:List的泛型请参见 domain:供应商资质证书
+        /// value 为List供应商资质证书类型:List的泛型请参见 domain:供应商资质证书
         /// key的名字解释.
         /// 	营业执照 : businessLicence;
         /// 	税务登记证 : taxRegistration;
@@ -16668,7 +16898,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>失败记录列表
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchFreezeProductFactory,version:1,typeName:alibaba.caigou.product.FailedFreezeProductFactoryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductFailedFreezeProductFactoryResult 
@@ -16684,7 +16915,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>批量操作结果
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchFreezeProductFactory,version:1,typeName:alibaba.caigou.product.BatchFreezeProductFactoryResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaCaigouProductBatchFreezeProductFactoryResult 
@@ -16819,7 +17051,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>询价单条目
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.open.caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.PurchaseNoteItem</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class ComAlibabaCaigouApiCommonModelPurchaseNoteItem2 
@@ -17083,7 +17316,8 @@ namespace AlibabaSDK.StandardModels
     
     }
     
-    /// <summary>
+    /// <summary>修改结果
+    /// 
     ///  namespace:cn.alibaba.open,apiname:alibaba.lst.item.setStock,version:1,typeName:alibaba.lst.stockOperateResult</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class AlibabaLstStockOperateResult 
@@ -17460,6 +17694,361 @@ namespace AlibabaSDK.StandardModels
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class Interactive3dPage 
     {
+    
+    }
+    
+    /// <summary>新建的类目的id</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response 
+    {
+        [Newtonsoft.Json.JsonProperty("catId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? CatId { get; set; }
+    
+    
+    }
+    
+    /// <summary>是否设置成功，true设置成功，false设置失败</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response2 
+    {
+        [Newtonsoft.Json.JsonProperty("isSuccess", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? IsSuccess { get; set; }
+    
+    
+    }
+    
+    /// <summary>true：已开启；false：未开启</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response3 
+    {
+        [Newtonsoft.Json.JsonProperty("switchValue", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? SwitchValue { get; set; }
+    
+    
+    }
+    
+    /// <summary>返回结果</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response4 
+    {
+        [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaOceanOpenplatformBizTradeResultTradeFeedbackResult> Result { get; set; }
+    
+    
+    }
+    
+    /// <summary>提交评价失败的订单Map(Long,String),前者为失败的订单号，后者为失败的错误码：
+    /// 1 返回为空时，创建全部成功
+    /// 2 没指定订单号及评价内容时,接口直接返回成功结果
+    /// 3 当订单已经评价过时，接口直接返回成功结果，不做任何处理
+    /// 4 当指定的订单不是指定postMemberId用户的订单是，接口直接返回成功结果，不做任何处理
+    /// 5 当指定的订单不处于待评价状态时，接口直接返回成功结果，不做任何处理</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response5 
+    {
+        [Newtonsoft.Json.JsonProperty("failedOrder", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.IDictionary<string, string> FailedOrder { get; set; }
+    
+    
+    }
+    
+    /// <summary>对于检测到类目作弊的，在type字段中，会标示为anti，否则为none。同时系统会推荐一到多个类目id，分别在catid，catname，以及score中标示，解析相关字段就可以得到。</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response6 
+    {
+        [Newtonsoft.Json.JsonProperty("ret", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Ret { get; set; }
+    
+    
+    }
+    
+    /// <summary>对于存在属性滥用的，会在OFFERLEVEL输出对应的作弊程度，没有作弊的会标示为NONE.其他字段会标示具体的引起属性滥用的原因以及具体的属性KEY和VALUE</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response7 
+    {
+        [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Result { get; set; }
+    
+    
+    }
+    
+    /// <summary>isv订单信息</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response8 
+    {
+        [Newtonsoft.Json.JsonProperty("isvOrderItemDto", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<IsvOrderItemDto> IsvOrderItemDto { get; set; }
+    
+    
+    }
+    
+    /// <summary>等级列表</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response9 
+    {
+        [Newtonsoft.Json.JsonProperty("groupsModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaRelationGroupsResult> GroupsModels { get; set; }
+    
+    
+    }
+    
+    /// <summary>产品分组结果集合</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response10 
+    {
+        [Newtonsoft.Json.JsonProperty("productlineModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaRelationProductlinesResult> ProductlineModels { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response11 
+    {
+        [Newtonsoft.Json.JsonProperty("adgroups", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pAdgroup> Adgroups { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response12 
+    {
+        [Newtonsoft.Json.JsonProperty("keywords", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pKeyword> Keywords { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response13 
+    {
+        [Newtonsoft.Json.JsonProperty("word", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<ComAlibabaP4pAlibabaCnp4pKeywordListRelativewordAlibabaCnp4pKeyword> Word { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response14 
+    {
+        [Newtonsoft.Json.JsonProperty("mlrScore", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pKeywordMlrScore> MlrScore { get; set; }
+    
+    
+    }
+    
+    /// <summary> </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response15 
+    {
+        [Newtonsoft.Json.JsonProperty("recommendPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pKeywordRecommendPrice> RecommendPrice { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response16 
+    {
+        [Newtonsoft.Json.JsonProperty("campaigns", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pCampaign> Campaigns { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response17 
+    {
+        [Newtonsoft.Json.JsonProperty("areas", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pCampaignArea> Areas { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response18 
+    {
+        [Newtonsoft.Json.JsonProperty("qualitys", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pKeywordQuality> Qualitys { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response19 
+    {
+        [Newtonsoft.Json.JsonProperty("recommends", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pKeywordRecommend> Recommends { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response20 
+    {
+        [Newtonsoft.Json.JsonProperty("offers", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pUnionOffer> Offers { get; set; }
+    
+    
+    }
+    
+    /// <summary>返回审核状态对象</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response21 
+    {
+        [Newtonsoft.Json.JsonProperty("auditStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pAuditStatus> AuditStatus { get; set; }
+    
+    
+    }
+    
+    /// <summary>结算消耗</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response22 
+    {
+        [Newtonsoft.Json.JsonProperty("settle", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCnp4pSettleCost> Settle { get; set; }
+    
+    
+    }
+    
+    /// <summary>网销宝客户当天实时消耗，单位：元</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response23 
+    {
+        [Newtonsoft.Json.JsonProperty("realtimeCost", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public double? RealtimeCost { get; set; }
+    
+    
+    }
+    
+    /// <summary>网销宝账户余额，单位为元</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response24 
+    {
+        [Newtonsoft.Json.JsonProperty("balance", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public double? Balance { get; set; }
+    
+    
+    }
+    
+    /// <summary>推送消息列表</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response25 
+    {
+        [Newtonsoft.Json.JsonProperty("pushMessageList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<PushMessage> PushMessageList { get; set; }
+    
+    
+    }
+    
+    /// <summary>创建成功的子帐号ID或者是已经与接入商系统内部employeeId绑定的子帐号ID</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response26 
+    {
+        [Newtonsoft.Json.JsonProperty("subUserId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? SubUserId { get; set; }
+    
+    
+    }
+    
+    /// <summary>返回列表</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response27 
+    {
+        [Newtonsoft.Json.JsonProperty("subAccountBindingList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<CaigouApiAccountCoopSubAccountModel> SubAccountBindingList { get; set; }
+    
+    
+    }
+    
+    /// <summary>是否执行成功</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response28 
+    {
+        [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? Result { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response29 
+    {
+        [Newtonsoft.Json.JsonProperty("categoryList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<CaigouDomainCategoryTopCategory> CategoryList { get; set; }
+    
+    
+    }
+    
+    /// <summary>返回导入失败的数据.全部成功返回的list长度为0.
+    /// 外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response30 
+    {
+        [Newtonsoft.Json.JsonProperty("list", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<string> List { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response31 
+    {
+        [Newtonsoft.Json.JsonProperty("buyOfferList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiBuyOfferModelBuyOffer> BuyOfferList { get; set; }
+    
+    
+    }
+    
+    /// <summary>删除结果</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response32 
+    {
+        [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int? Result { get; set; }
+    
+    
+    }
+    
+    /// <summary>报价</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response33 
+    {
+        [Newtonsoft.Json.JsonProperty("quotationList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<ComAlibabaCaigouApiQuotationModelQuotation> QuotationList { get; set; }
+    
+    
+    }
+    
+    /// <summary>发布成功的询价单id。如果发布失败则为空，具体的看错误码</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response34 
+    {
+        [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? Id { get; set; }
+    
+    
+    }
+    
+    /// <summary>分页数据</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response35 
+    {
+        [Newtonsoft.Json.JsonProperty("pushMessagePage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public PushMessagePage PushMessagePage { get; set; }
+    
+    
+    }
+    
+    /// <summary>返回结果为Map，key为外部系统的类目id，value为1688平台的类目id</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response36 
+    {
+        [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.IDictionary<string, string> Result { get; set; }
+    
     
     }
 

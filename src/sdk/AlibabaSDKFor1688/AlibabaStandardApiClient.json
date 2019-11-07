@@ -407,9 +407,14 @@
           "200": {
             "description": "新建的类目的id",
             "schema": {
-              "title": "Long",
-              "type": "integer",
-              "format": "int64"
+              "description": "新建的类目的id",
+              "properties": {
+                "catId": {
+                  "title": "Long",
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
             }
           }
         },
@@ -825,8 +830,13 @@
           "200": {
             "description": "是否设置成功，true设置成功，false设置失败",
             "schema": {
-              "title": "Boolean",
-              "type": "boolean"
+              "description": "是否设置成功，true设置成功，false设置失败",
+              "properties": {
+                "isSuccess": {
+                  "title": "Boolean",
+                  "type": "boolean"
+                }
+              }
             }
           }
         },
@@ -1133,8 +1143,13 @@
           "200": {
             "description": "true：已开启；false：未开启",
             "schema": {
-              "title": "Boolean",
-              "type": "boolean"
+              "description": "true：已开启；false：未开启",
+              "properties": {
+                "switchValue": {
+                  "title": "Boolean",
+                  "type": "boolean"
+                }
+              }
             }
           }
         },
@@ -3566,10 +3581,10 @@
             "in": "formData",
             "description": "退款状态列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -4056,9 +4071,14 @@
           "200": {
             "description": "返回结果返回 ErrorCode 的错误信息\r\n400_1\t- parameter invalid(检查参数是否有传及参数类型是否符合要求)\r\n400_2\t- need authorization(需要授权登录)\r\n500_1\t- invoke remote service error(调用远程服务异常，请在ISV交流群里咨询技术支持或帮助中心提单)\r\n500_2\t- remote service error(服务异常，请稍后再试，或在ISV交流群里咨询技术支持或帮助中心提单)\r\n500_2\t- invalid parameter error(请求参数无效，请在ISV交流群里咨询技术支持或帮助中心提单)\r\n500_2\t- user order not exist error(订单号对应的订单不是当前授权用户的订单，无权操作)\r\n500_2\t- order not exist error(订单号不存在对应订单，请检查订单号是否正确)",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaOceanOpenplatformBizTradeResultTradeFeedbackResult"
+              "description": "返回结果",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaOceanOpenplatformBizTradeResultTradeFeedbackResult"
+                  }
+                }
               }
             }
           }
@@ -4335,7 +4355,7 @@
             "name": "orders",
             "in": "formData",
             "required": true,
-            "description": "订单评价：Map(String,TradeRateParam[]),前者为订单号，后者为评价内容与星级,结构请看数据结构订单评价参数。\n评价星级(starLevel)必须是1-5, 当starLevel &lt; 4 时必须同时指定评价内容",
+            "description": "订单评价：Map(String,TradeRateParam[]),前者为订单号，后者为评价内容与星级,结构请看数据结构订单评价参数。\n评价星级(starLevel)必须是1-5, 当starLevel  4 时必须同时指定评价内容",
             "schema": {
               "title": "DictionaryOfStringAndString",
               "type": "object",
@@ -4355,10 +4375,15 @@
           "200": {
             "description": "提交评价失败的订单Map(Long,String),前者为失败的订单号，后者为失败的错误码：\n1 返回为空时，创建全部成功\n2 没指定订单号及评价内容时,接口直接返回成功结果\n3 当订单已经评价过时，接口直接返回成功结果，不做任何处理\n4 当指定的订单不是指定postMemberId用户的订单是，接口直接返回成功结果，不做任何处理\n5 当指定的订单不处于待评价状态时，接口直接返回成功结果，不做任何处理返回 ErrorCode 的错误信息\r\nNULL_PARAM\t- 指定的参数为空\r\nINVALID_PARAM\t- 指定的参数有误\r\nINVOKE_DUBBO_ERROR\t- 接口内部服务调用错误,请联系服务接口人\r\nUPDATE_DATABASE_FAILED\t- 提交评价失败,数据库异常",
             "schema": {
-              "title": "DictionaryOfStringAndString",
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
+              "description": "提交评价失败的订单Map(Long,String),前者为失败的订单号，后者为失败的错误码：\n1 返回为空时，创建全部成功\n2 没指定订单号及评价内容时,接口直接返回成功结果\n3 当订单已经评价过时，接口直接返回成功结果，不做任何处理\n4 当指定的订单不是指定postMemberId用户的订单是，接口直接返回成功结果，不做任何处理\n5 当指定的订单不处于待评价状态时，接口直接返回成功结果，不做任何处理",
+              "properties": {
+                "failedOrder": {
+                  "title": "DictionaryOfStringAndString",
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
@@ -5612,8 +5637,13 @@
           "200": {
             "description": "对于检测到类目作弊的，在type字段中，会标示为anti，否则为none。同时系统会推荐一到多个类目id，分别在catid，catname，以及score中标示，解析相关字段就可以得到。",
             "schema": {
-              "title": "String",
-              "type": "string"
+              "description": "对于检测到类目作弊的，在type字段中，会标示为anti，否则为none。同时系统会推荐一到多个类目id，分别在catid，catname，以及score中标示，解析相关字段就可以得到。",
+              "properties": {
+                "ret": {
+                  "title": "String",
+                  "type": "string"
+                }
+              }
             }
           }
         }
@@ -5663,8 +5693,13 @@
           "200": {
             "description": "对于存在属性滥用的，会在OFFERLEVEL输出对应的作弊程度，没有作弊的会标示为NONE.其他字段会标示具体的引起属性滥用的原因以及具体的属性KEY和VALUE",
             "schema": {
-              "title": "String",
-              "type": "string"
+              "description": "对于存在属性滥用的，会在OFFERLEVEL输出对应的作弊程度，没有作弊的会标示为NONE.其他字段会标示具体的引起属性滥用的原因以及具体的属性KEY和VALUE",
+              "properties": {
+                "result": {
+                  "title": "String",
+                  "type": "string"
+                }
+              }
             }
           }
         }
@@ -5916,9 +5951,14 @@
           "200": {
             "description": "isv订单信息",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/IsvOrderItemDto"
+              "description": "isv订单信息",
+              "properties": {
+                "isvOrderItemDto": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/IsvOrderItemDto"
+                  }
+                }
               }
             }
           }
@@ -5993,10 +6033,10 @@
             "in": "formData",
             "description": "订单服务状态列表\nB:服务前，S:服务中，P：挂起，E：关闭，C:作废",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -6031,9 +6071,14 @@
           "200": {
             "description": "isv订单信息",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/IsvOrderItemDto"
+              "description": "isv订单信息",
+              "properties": {
+                "isvOrderItemDto": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/IsvOrderItemDto"
+                  }
+                }
               }
             }
           }
@@ -6121,10 +6166,10 @@
             "in": "formData",
             "description": "订单服务状态列表\nB:服务前，S:服务中，P：挂起，E：关闭，C:作废",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -6772,9 +6817,14 @@
           "200": {
             "description": "等级列表",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaRelationGroups-result"
+              "description": "等级列表",
+              "properties": {
+                "groupsModels": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaRelationGroups-result"
+                  }
+                }
               }
             }
           }
@@ -7054,8 +7104,13 @@
           "200": {
             "description": "权益设置模型",
             "schema": {
-              "title": "String",
-              "type": "string"
+              "description": "对于存在属性滥用的，会在OFFERLEVEL输出对应的作弊程度，没有作弊的会标示为NONE.其他字段会标示具体的引起属性滥用的原因以及具体的属性KEY和VALUE",
+              "properties": {
+                "result": {
+                  "title": "String",
+                  "type": "string"
+                }
+              }
             }
           }
         },
@@ -7090,9 +7145,14 @@
           "200": {
             "description": "产品分组结果集合",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaRelationProductlines-result"
+              "description": "产品分组结果集合",
+              "properties": {
+                "productlineModels": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaRelationProductlines-result"
+                  }
+                }
               }
             }
           }
@@ -7727,10 +7787,10 @@
             "required": true,
             "description": "推广单元id列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -7745,9 +7805,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pAdgroup"
+              "description": "",
+              "properties": {
+                "adgroups": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pAdgroup"
+                  }
+                }
               }
             }
           }
@@ -7876,10 +7941,10 @@
             "required": true,
             "description": "推广计划id",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -7894,9 +7959,14 @@
           "200": {
             "description": "通用int型结果返回 ErrorCode 的错误信息\r\n110000\t- 计划id为空\r\n110017\t- 计划信息不存在\r\n88806\t- 包含不允许操作的产品线计划id信息(移除非支持操作的产品线计划id信息)",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pCommonIntegerResult"
+              "description": "返回结果",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaOceanOpenplatformBizTradeResultTradeFeedbackResult"
+                  }
+                }
               }
             }
           }
@@ -8078,10 +8148,10 @@
             "required": true,
             "description": "关键词id列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -8096,9 +8166,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pKeyword"
+              "description": "",
+              "properties": {
+                "keywords": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pKeyword"
+                  }
+                }
               }
             }
           }
@@ -8259,9 +8334,14 @@
           "200": {
             "description": "返回 ErrorCode 的错误信息\r\n100000\t- 客户号为空\r\n130003\t- 关键词为空",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ComAlibabaP4pAlibabaCnp4pKeywordListRelativewordAlibabaCnp4pKeyword"
+              "description": "",
+              "properties": {
+                "word": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/ComAlibabaP4pAlibabaCnp4pKeywordListRelativewordAlibabaCnp4pKeyword"
+                  }
+                }
               }
             }
           }
@@ -8386,10 +8466,10 @@
             "required": true,
             "description": "",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -8404,9 +8484,14 @@
           "200": {
             "description": "返回 ErrorCode 的错误信息\r\n100000\t- 客户号为空(未登录授权)\r\n120000\t- 推广单元id为空(参数传入推广单元id)\r\n130000\t- 关键词列表id为空(传入关键词id列表)\r\n130002\t- 关键词id列表size大于上限(传不超过关键词id上限列表)",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pKeywordMlrScore"
+              "description": "",
+              "properties": {
+                "mlrScore": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pKeywordMlrScore"
+                  }
+                }
               }
             }
           }
@@ -8450,10 +8535,10 @@
             "required": true,
             "description": "关键词id列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -8478,9 +8563,14 @@
           "200": {
             "description": " 返回 ErrorCode 的错误信息\r\n100000\t- 客户信息为空\r\n100001\t- 地域码为空\r\n120000\t- 推广单元为空\r\n130000\t- 关键词id为空\r\n130002\t- 关键词id列表size超过上限",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pKeywordRecommendPrice"
+              "description": " ",
+              "properties": {
+                "recommendPrice": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pKeywordRecommendPrice"
+                  }
+                }
               }
             }
           }
@@ -8560,10 +8650,10 @@
             "in": "formData",
             "description": "计划id列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -8578,9 +8668,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pCampaign"
+              "description": "",
+              "properties": {
+                "campaigns": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pCampaign"
+                  }
+                }
               }
             }
           }
@@ -8674,9 +8769,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pCampaignArea"
+              "description": "",
+              "properties": {
+                "areas": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pCampaignArea"
+                  }
+                }
               }
             }
           }
@@ -8820,10 +8920,10 @@
             "required": true,
             "description": "",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -8838,9 +8938,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pKeywordQuality"
+              "description": "",
+              "properties": {
+                "qualitys": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pKeywordQuality"
+                  }
+                }
               }
             }
           }
@@ -8911,9 +9016,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pKeywordRecommend"
+              "description": "",
+              "properties": {
+                "recommends": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pKeywordRecommend"
+                  }
+                }
               }
             }
           }
@@ -9022,9 +9132,14 @@
           "200": {
             "description": "返回 ErrorCode 的错误信息\r\n77703\t- 该用户不是联盟用户(联系联盟系统管理员，加入联盟平台)\r\n88804\t- 请求的数据起始页码为1\r\n150001\t- 联盟pid无效\r\n150002\t- 请求ip无效\r\n150003\t- 请求query无效\r\n150004\t- 请求useragent无效\r\n150005\t- 请求页面条数超出限制",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pUnionOffer"
+              "description": "",
+              "properties": {
+                "offers": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pUnionOffer"
+                  }
+                }
               }
             }
           }
@@ -9073,9 +9188,14 @@
           "200": {
             "description": "返回审核状态对象返回 ErrorCode 的错误信息\r\n120000\t- 推广单元为空(参数中传入推广单元id，eg=100234)",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pAuditStatus"
+              "description": "返回审核状态对象",
+              "properties": {
+                "auditStatus": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pAuditStatus"
+                  }
+                }
               }
             }
           }
@@ -9135,9 +9255,14 @@
           "200": {
             "description": "结算消耗返回 ErrorCode 的错误信息\r\n88805\t- 不支持的查询消耗类型（1：计划；2：推广单元）\r\n88806\t- 参数中包含暂未开放的产品线id信息\r\n110000\t- 查询参数id为空",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pSettleCost"
+              "description": "结算消耗",
+              "properties": {
+                "settle": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pSettleCost"
+                  }
+                }
               }
             }
           }
@@ -9252,9 +9377,14 @@
           "200": {
             "description": "网销宝客户当天实时消耗，单位：元",
             "schema": {
-              "title": "Double",
-              "type": "number",
-              "format": "double"
+              "description": "网销宝客户当天实时消耗，单位：元",
+              "properties": {
+                "realtimeCost": {
+                  "title": "Double",
+                  "type": "number",
+                  "format": "double"
+                }
+              }
             }
           }
         },
@@ -9297,10 +9427,10 @@
             "required": true,
             "description": "关键词列表，关键词和出价json字符串，keyword:词，不能有一些特殊字符。bidPrice：出价，以“元”为单位，保留两位小数，不能大于日限额。",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -9615,10 +9745,10 @@
             "required": true,
             "description": "关键词id列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -9633,9 +9763,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pKeyword"
+              "description": "",
+              "properties": {
+                "keywords": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pKeyword"
+                  }
+                }
               }
             }
           }
@@ -9684,9 +9819,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pKeyword"
+              "description": "",
+              "properties": {
+                "keywords": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pKeyword"
+                  }
+                }
               }
             }
           }
@@ -9719,10 +9859,10 @@
             "required": true,
             "description": "关键词列表，由keywordId、adGroupId、bidPrice组成的json字符串，其中keywordId为关键词id，adGroupId为单元id，bidPrice出价，以“元”为单位，保留一位小数，不能大于日限额。",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -9737,9 +9877,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pKeyword"
+              "description": "",
+              "properties": {
+                "keywords": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pKeyword"
+                  }
+                }
               }
             }
           }
@@ -9775,9 +9920,14 @@
           "200": {
             "description": "网销宝账户余额，单位为元",
             "schema": {
-              "title": "Double",
-              "type": "number",
-              "format": "double"
+              "description": "网销宝账户余额，单位为元",
+              "properties": {
+                "balance": {
+                  "title": "Double",
+                  "type": "number",
+                  "format": "double"
+                }
+              }
             }
           }
         },
@@ -9812,9 +9962,14 @@
           "200": {
             "description": "返回审核状态对象",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCnp4pAuditStatus"
+              "description": "返回审核状态对象",
+              "properties": {
+                "auditStatus": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaCnp4pAuditStatus"
+                  }
+                }
               }
             }
           }
@@ -10070,9 +10225,14 @@
           "200": {
             "description": " ",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCpsOpenUnionGroupDTO"
+              "description": "返回结果",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaOceanOpenplatformBizTradeResultTradeFeedbackResult"
+                  }
+                }
               }
             }
           }
@@ -10124,9 +10284,14 @@
           "200": {
             "description": "结果返回",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCpsOpenPriceRadarOfferDTO"
+              "description": "返回结果",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaOceanOpenplatformBizTradeResultTradeFeedbackResult"
+                  }
+                }
               }
             }
           }
@@ -10690,10 +10855,10 @@
             "required": true,
             "description": "推广实体",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -10717,9 +10882,14 @@
           "200": {
             "description": "结构体返回 ErrorCode 的错误信息\r\n99993\t- 业务参数不能为空\r\n150008\t- 无效生成点击实体类型\r\n88804\t- 请求的数据页条数超过系统限制1-200\r\n88807\t- 请求的数据起始页码为1",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCpsOpenClickUrlDTO"
+              "description": "返回结果",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaOceanOpenplatformBizTradeResultTradeFeedbackResult"
+                  }
+                }
               }
             }
           }
@@ -10767,9 +10937,14 @@
           "200": {
             "description": "返回 ErrorCode 的错误信息\r\n150009\t- 无效媒体id",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaCpsOpenUnionMediaDTO"
+              "description": "返回结果",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaOceanOpenplatformBizTradeResultTradeFeedbackResult"
+                  }
+                }
               }
             }
           }
@@ -10828,9 +11003,14 @@
           "200": {
             "description": "结果返回 ErrorCode 的错误信息\r\n88803\t- 缺少参数",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaP4pOpenClientDtoOpenUnionRptRealtimeStatDTO"
+              "description": "返回结果",
+              "properties": {
+                "result": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/AlibabaOceanOpenplatformBizTradeResultTradeFeedbackResult"
+                  }
+                }
               }
             }
           }
@@ -11184,9 +11364,14 @@
           "200": {
             "description": "推送消息列表",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/PushMessage"
+              "description": "推送消息列表",
+              "properties": {
+                "pushMessageList": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/PushMessage"
+                  }
+                }
               }
             }
           }
@@ -11491,9 +11676,14 @@
           "200": {
             "description": "创建成功的子帐号ID或者是已经与接入商系统内部employeeId绑定的子帐号ID返回 ErrorCode 的错误信息\r\nISV.CONFLICT_MEMBER\t- 主帐号存在同名帐号，这个是由于alibaba帐号体系合并导致还有很少一部分会员存在用户名冲突问题，新注册的不存在这个问题，如果主帐号冲突的话就不能使用子帐号相关功能，所以当发现这个问题后。(请修改自己的帐号名或者联系采购运营服务同学。)\r\nISV.INVALID_PARAM\t- 接口传入参数不合法(请按接口参数说明检查传入的param参数，确保param对象中的employeeId,buyerMemberId,name,departmend是合法有效的)\r\nISV.DATA_PRIVILEGE_ILLEGAL\t- 您无权调用此api接口，此接口只对与采购平台合作采购商才能提供这个接口服务(请先与采购平台进行合作，可联系采购运营服务同学进行咨询)\r\nISP.SYSTEM_ERROR\t- ISP系统繁忙(请确认主帐号已经登陆过旺旺（至少一次），并且已经领用了子帐号；请稍等片刻，在进行尝试；通知采购运营服务同学告知问题。)",
             "schema": {
-              "title": "Long",
-              "type": "integer",
-              "format": "int64"
+              "description": "创建成功的子帐号ID或者是已经与接入商系统内部employeeId绑定的子帐号ID",
+              "properties": {
+                "subUserId": {
+                  "title": "Long",
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
             }
           }
         },
@@ -11543,10 +11733,10 @@
             "in": "formData",
             "description": "采购单状态，可以一次查询多个，值为：等待审核：pending，审核不通过：tbd，接受报名中：sent，报价截止：end，撤销：cancel",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -11555,10 +11745,10 @@
             "in": "formData",
             "description": "业务类型；招投标：bidding，询报价：buyoffer，竞价：auction，招应募：recruitment",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12006,9 +12196,14 @@
           "200": {
             "description": "返回列表",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/CaigouApiAccountCoopSubAccountModel"
+              "description": "返回列表",
+              "properties": {
+                "subAccountBindingList": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/CaigouApiAccountCoopSubAccountModel"
+                  }
+                }
               }
             }
           }
@@ -12076,8 +12271,13 @@
           "200": {
             "description": "是否执行成功",
             "schema": {
-              "title": "Boolean",
-              "type": "boolean"
+              "description": "是否执行成功",
+              "properties": {
+                "result": {
+                  "title": "Boolean",
+                  "type": "boolean"
+                }
+              }
             }
           }
         },
@@ -12199,9 +12399,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/CaigouDomainCategoryTopCategory"
+              "description": "",
+              "properties": {
+                "categoryList": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/CaigouDomainCategoryTopCategory"
+                  }
+                }
               }
             }
           }
@@ -12234,10 +12439,10 @@
             "required": true,
             "description": "参数类型是json类型的list字符串.包含字段:\n&quot;buyerMemberId&quot; 采购商memberId\n&quot;supplierCompanyName&quot; 供应商公司名\n&quot;supplierEmail&quot; 供应商电子邮箱\n&quot;supplierMemberId&quot; 供应商memberId\n&quot;supplierMobile&quot; 供应商手机\n&quot;supplierPhone&quot; 供应商电话\n&quot;externalId&quot; (必填)\n\n其中供应商memberID、公司名、固话、邮箱、手机至少填写一项",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -12252,10 +12457,15 @@
           "200": {
             "description": "返回导入失败的数据.全部成功返回的list长度为0.\n外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.",
             "schema": {
-              "title": "String[]",
-              "type": "array",
-              "items": {
-                "type": "string"
+              "description": "返回导入失败的数据.全部成功返回的list长度为0.\n外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.",
+              "properties": {
+                "list": {
+                  "title": "String[]",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
@@ -12279,7 +12489,7 @@
           "billFlag=",
           "neddAuth=True"
         ],
-        "summary": " \r\n根据prId查询询价单列表\r\n根据prId查询询价单列表（限制：返回条数&lt;100，否则舍弃）\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.buyOffer.queryBuyOfferByPrId-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&n=caigou.api.buyOffer.queryBuyOfferByPrId&v=1 \r\n ",
+        "summary": " \r\n根据prId查询询价单列表\r\n根据prId查询询价单列表（限制：返回条数100，否则舍弃）\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.buyOffer.queryBuyOfferByPrId-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&n=caigou.api.buyOffer.queryBuyOfferByPrId&v=1 \r\n ",
         "operationId": "CaigouApiBuyOfferQueryBuyOfferByPrId",
         "parameters": [
           {
@@ -12303,9 +12513,14 @@
           "200": {
             "description": "返回 ErrorCode 的错误信息\r\nISV.DATA_NOT_EXIST\t- 数据不存在\r\nISP.SYSTEM_ERROR\t- 系统出错(请联系开发人员排查)",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiBuyOfferModelBuyOffer"
+              "description": "",
+              "properties": {
+                "buyOfferList": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/CnAlibabaOpenCaigouApiBuyofferQueryListComAlibabaCaigouApiBuyOfferModelBuyOffer"
+                  }
+                }
               }
             }
           }
@@ -12354,9 +12569,14 @@
           "200": {
             "description": "删除结果",
             "schema": {
-              "title": "Integer",
-              "type": "integer",
-              "format": "int32"
+              "description": "删除结果",
+              "properties": {
+                "result": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
             }
           }
         },
@@ -12434,10 +12654,10 @@
             "in": "formData",
             "description": "产品属性列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12455,10 +12675,10 @@
             "in": "formData",
             "description": "产品图片，最多10张，需要调用图片上传接口",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12467,10 +12687,10 @@
             "in": "formData",
             "description": "产品附件，最多3个附件，需调用附件上传接口",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12505,8 +12725,13 @@
           "200": {
             "description": "操作结果返回 ErrorCode 的错误信息\r\nISV.INVALID_PARAM\t- 参数不合法\r\nISV.SYSTEM_ERROR\t- 系统出错\r\nISV.DATA_NOT_EXIST\t- 您要修改的数据不存在(请检查productId是否是1688的主键，再检查该产品是否已被删除)\r\nISV.NO_PERMISSION\t- 无权限修改(请检查该产品归属人是否是您的账号)",
             "schema": {
-              "title": "Boolean",
-              "type": "boolean"
+              "description": "是否执行成功",
+              "properties": {
+                "result": {
+                  "title": "Boolean",
+                  "type": "boolean"
+                }
+              }
             }
           }
         },
@@ -12602,9 +12827,14 @@
           "200": {
             "description": "报价返回 ErrorCode 的错误信息\r\nISV.INVALID_PARAM\t- 参数错误(isv端确认参数是否传输正确)\r\nISP.SYSTEM_ERROR\t- 系统错误(isv联系isp进行问题排查)",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ComAlibabaCaigouApiQuotationModelQuotation"
+              "description": "报价",
+              "properties": {
+                "quotationList": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/ComAlibabaCaigouApiQuotationModelQuotation"
+                  }
+                }
               }
             }
           }
@@ -12647,10 +12877,10 @@
             "required": true,
             "description": "询价单清单。每个item项包括：subject(采购单条目的标题,String类型,不能为空，最大字符长度300), brandName(品牌,String类型,最大字符长度128), unit(单位,String类型,不能为空，最大字符长度10),purchaseAmount(采购数量,Long类型，不能为空)，productCode(对应的产品的code,String类型，最大字符长度64)，prItemId（pr的item项目的行号，string类型，最大长度为64），desc（询价项目的描述，String类型，最大字符长度2000），attachmentIdList（附件id列表，附件的id来源于上传附件接口）",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12736,10 +12966,10 @@
             "in": "formData",
             "description": "供应商要求：供应商所在地要求(国标)",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12766,10 +12996,10 @@
             "in": "formData",
             "description": "供应商证书要求。具体值如下：1(营业执照), 2(税务登记证), 3(组织机构代码证), 12(国际和国内的产品认证证书), 37(环境管理体系认证证书), 38(企业质量管理体系认证证书), 4(外商投资企业批准证书(外资企业必须)), 103(其他), 400(税务登记证副本（加盖增值税一般纳税人印章）), 5(食品生产许可证 ), 6(酒类生产许可证), 7(化妆品生产许可证), 8(药品生产许可证), 25(安全生产许可证 ), 26(医疗器械生产企业许可证), 27(制造计量器具许可证), 28(特种设备制造许可证（包括压力容器）), 29(建筑业企业资质证书), 30(排放污染物许可证 ), 31(烟草专卖许可证), 32(药品经营许可证), 33(危险化学品经营许可证), 34(烟花爆竹零售经营许可), 35(食品经营许可证), 36(餐饮服务许可证), 39(其他), 101(道路运输经营许可证), 102(印刷经营许可证), 201(食品流通许可证), 202(食品卫生许可证), 203(酒类流通备案登记表), 204(酒类商品批发许可证), 205(酒类商品零售许可证), 206(酒类产销许可证), 207(进口货物报关单), 208(商品出入境检验检疫合格证明), 209(出入境检验检疫卫生证书), 9(产品质量监督检查证书), 10(品牌授权书(如驰名商标、行业知名品牌)), 11(区域代理授权书), 16(纺织品生态标签发明专利、外观设计专利、实用新型外观设计类证书), 17(商标注册证), 19(其他), 20(荣誉证书，如消费者协会荣誉证书、行业协会荣誉证书、重合同守信用证书), 21(银行资信类证书、银行评级证明), 22(开户许可证), 23(公司证明、人事证明、纳税证明)",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12778,10 +13008,10 @@
             "in": "formData",
             "description": "供应商要求：其他证书名称【不能超过165个字符】",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12809,10 +13039,10 @@
             "in": "formData",
             "description": "附件id的列表。附件id来源于上传附件的接口。",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12932,10 +13162,10 @@
             "in": "formData",
             "description": "邀请供应商",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -12982,10 +13212,10 @@
             "in": "formData",
             "description": "网购文件附件附件id的列表id来源于上传附件的接口。",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -13014,10 +13244,10 @@
             "in": "formData",
             "description": "供应商loginIds",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -13141,9 +13371,14 @@
           "200": {
             "description": "发布成功的询价单id。如果发布失败则为空，具体的看错误码返回 ErrorCode 的错误信息\r\nISV.EXCEED_BUYOFFER_LIMIT_AMOUNT\t- 超过每天发布询价单数目\r\nISV.INVALID_PARAM\t- 非法参数\r\nISV.OPERATION_PRIVILEGE_ILLEGAL\t- 没有发布询价单的权限\r\nISV.USER_IN_BLACK_LIST\t- 该会员被举报，加入了黑名单\r\nISP.SYSTEM_ERROR\t- 系统错误(请联系采购平台)",
             "schema": {
-              "title": "Long",
-              "type": "integer",
-              "format": "int64"
+              "description": "发布成功的询价单id。如果发布失败则为空，具体的看错误码",
+              "properties": {
+                "id": {
+                  "title": "Long",
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
             }
           }
         },
@@ -13443,9 +13678,14 @@
           "200": {
             "description": "",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/CaigouDomainCategoryTopCategory"
+              "description": "",
+              "properties": {
+                "categoryList": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/CaigouDomainCategoryTopCategory"
+                  }
+                }
               }
             }
           }
@@ -13646,7 +13886,12 @@
           "200": {
             "description": "分页数据",
             "schema": {
-              "$ref": "#/definitions/PushMessagePage"
+              "description": "分页数据",
+              "properties": {
+                "pushMessagePage": {
+                  "$ref": "#/definitions/PushMessagePage"
+                }
+              }
             }
           }
         }
@@ -13901,10 +14146,10 @@
             "required": true,
             "description": "Json串，包含字段：categoryName：类目名称，categoryId：类目在外部业务的主键编码，parentId：父节点在外部系统的业务编码。",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -13919,10 +14164,15 @@
           "200": {
             "description": "返回结果为Map，key为外部系统的类目id，value为1688平台的类目id",
             "schema": {
-              "title": "DictionaryOfStringAndString",
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
+              "description": "返回结果为Map，key为外部系统的类目id，value为1688平台的类目id",
+              "properties": {
+                "result": {
+                  "title": "DictionaryOfStringAndString",
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
@@ -13955,10 +14205,10 @@
             "required": true,
             "description": "需要删除的类目在1688平台的id列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -13973,8 +14223,13 @@
           "200": {
             "description": "操作结果返回 ErrorCode 的错误信息\r\nCATEGORY_FAILED_HAS_CHILDREN\t- 所删类目中，存在有叶子类目的类目(先删除叶子类目，再删除父类目)\r\nSYSTEM_ERROR\t- 系统异常(联系开发同学)",
             "schema": {
-              "title": "Boolean",
-              "type": "boolean"
+              "description": "是否执行成功",
+              "properties": {
+                "result": {
+                  "title": "Boolean",
+                  "type": "boolean"
+                }
+              }
             }
           }
         },
@@ -14216,10 +14471,10 @@
             "required": true,
             "description": "Json串，包含字段：categoryName：类目名称，categoryId：必填，类目在1688的主键编码，parentId：父类目在1688的业务编码。",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -14234,8 +14489,13 @@
           "200": {
             "description": "修改结果返回 ErrorCode 的错误信息\r\nCATEGORY_FAILED\t- 同步自定义类目失败(请重新尝试，确保所传类目存在)\r\nSYSTEM_ERROR\t- 系统异常(联系开发同学)",
             "schema": {
-              "title": "Boolean",
-              "type": "boolean"
+              "description": "是否执行成功",
+              "properties": {
+                "result": {
+                  "title": "Boolean",
+                  "type": "boolean"
+                }
+              }
             }
           }
         },
@@ -14450,10 +14710,10 @@
             "in": "formData",
             "description": "审核未通过的子订单ID",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -14749,10 +15009,10 @@
             "in": "formData",
             "description": "产品属性列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -14761,10 +15021,10 @@
             "in": "formData",
             "description": "产品图片，最多10张，先调用上传图片接口，获取到图片相对url",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -14773,10 +15033,10 @@
             "in": "formData",
             "description": "产品附件，最多3个附件，先调用上传附件接口获取到附件id",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           },
@@ -14821,9 +15081,14 @@
           "200": {
             "description": "产品在1688采购平台的主键id，如果发布失败则为空，具体的看错误码返回 ErrorCode 的错误信息\r\nISV.INVALID_PARAM\t- 参数不合法\r\nISV.SYSTEM_ERROR\t- 系统出错\r\nISV.DUPLICATE_INSERT\t- 重复插入",
             "schema": {
-              "title": "Long",
-              "type": "integer",
-              "format": "int64"
+              "description": "发布成功的询价单id。如果发布失败则为空，具体的看错误码",
+              "properties": {
+                "id": {
+                  "title": "Long",
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
             }
           }
         },
@@ -14854,10 +15119,10 @@
             "in": "formData",
             "description": "待确认的消息id列表",
             "schema": {
-              "title": "Object[]",
+              "title": "String[]",
               "type": "array",
               "items": {
-                "additionalProperties": {}
+                "type": "string"
               }
             }
           }
@@ -14872,8 +15137,13 @@
           "200": {
             "description": "操作是否成功",
             "schema": {
-              "title": "Boolean",
-              "type": "boolean"
+              "description": "是否设置成功，true设置成功，false设置失败",
+              "properties": {
+                "isSuccess": {
+                  "title": "Boolean",
+                  "type": "boolean"
+                }
+              }
             }
           }
         }
@@ -17169,8 +17439,13 @@
           "200": {
             "description": "test",
             "schema": {
-              "title": "String",
-              "type": "string"
+              "description": "对于存在属性滥用的，会在OFFERLEVEL输出对应的作弊程度，没有作弊的会标示为NONE.其他字段会标示具体的引起属性滥用的原因以及具体的属性KEY和VALUE",
+              "properties": {
+                "result": {
+                  "title": "String",
+                  "type": "string"
+                }
+              }
             }
           }
         },
@@ -17228,8 +17503,13 @@
           "200": {
             "description": "模型草稿资源文件url前缀",
             "schema": {
-              "title": "String",
-              "type": "string"
+              "description": "对于存在属性滥用的，会在OFFERLEVEL输出对应的作弊程度，没有作弊的会标示为NONE.其他字段会标示具体的引起属性滥用的原因以及具体的属性KEY和VALUE",
+              "properties": {
+                "result": {
+                  "title": "String",
+                  "type": "string"
+                }
+              }
             }
           }
         }
@@ -17344,7 +17624,7 @@
       "definitions": {
         "AlibabaCategorySpuInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.category.searchSPUInfo,version:1,typeName:alibaba.category.SpuInfo",
+          "description": "SPU数组信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.category.searchSPUInfo,version:1,typeName:alibaba.category.SpuInfo",
           "properties": {
             "spuId": {
               "title": "Long",
@@ -17384,7 +17664,7 @@
           "definitions": {
             "AlibabaCategoryFeatureAttribute": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.category.searchSPUInfo,version:1,typeName:alibaba.category.FeatureAttribute",
+              "description": "spu的属性值对\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.category.searchSPUInfo,version:1,typeName:alibaba.category.FeatureAttribute",
               "properties": {
                 "attrID": {
                   "title": "Long",
@@ -17449,7 +17729,7 @@
       "definitions": {
         "CategoryFeature": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:category.level.attr.get,version:1,typeName:CategoryFeature",
+          "description": "类目属性\r\n\r\n namespace:cn.alibaba.open,apiname:category.level.attr.get,version:1,typeName:CategoryFeature",
           "properties": {
             "fid": {
               "title": "Long",
@@ -17550,7 +17830,7 @@
           "definitions": {
             "CategoryFeatureIdValue": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:category.level.attr.get,version:1,typeName:CategoryFeatureIdValue",
+              "description": "属性id和值对\r\n\r\n namespace:cn.alibaba.open,apiname:category.level.attr.get,version:1,typeName:CategoryFeatureIdValue",
               "properties": {
                 "vid": {
                   "title": "Long",
@@ -17611,7 +17891,7 @@
       "definitions": {
         "AlibabaCategoryAttributeInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.category.attribute.get,version:1,typeName:alibaba.category.AttributeInfo",
+          "description": "类目属性信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.category.attribute.get,version:1,typeName:alibaba.category.AttributeInfo",
           "properties": {
             "attrID": {
               "title": "Long",
@@ -17688,7 +17968,7 @@
           "definitions": {
             "AlibabaCategoryAttributeValueInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.category.attribute.get,version:1,typeName:alibaba.category.AttributeValueInfo",
+              "description": "属性可选的属性值,\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.category.attribute.get,version:1,typeName:alibaba.category.AttributeValueInfo",
               "properties": {
                 "attrValueID": {
                   "title": "Long",
@@ -17726,7 +18006,7 @@
         },
         "AlibabaCategoryPostLevelAttrRel": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.category.attribute.get,version:1,typeName:alibaba.category.PostLevelAttrRel",
+          "description": "(废弃)类目属性级联关系，只有1688业务返回返回该字段\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.category.attribute.get,version:1,typeName:alibaba.category.PostLevelAttrRel",
           "properties": {
             "fid": {
               "title": "Integer",
@@ -17851,7 +18131,7 @@
       "definitions": {
         "AlibabaCategoryCategoryInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.category.searchByKeyword,version:1,typeName:alibaba.category.CategoryInfo",
+          "description": "类目列表\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.category.searchByKeyword,version:1,typeName:alibaba.category.CategoryInfo",
           "properties": {
             "categoryID": {
               "title": "Long",
@@ -17903,7 +18183,7 @@
       "definitions": {
         "AlibabaCategoryCategoryInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.category.get,version:1,typeName:alibaba.category.CategoryInfo",
+          "description": "类目列表\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.category.get,version:1,typeName:alibaba.category.CategoryInfo",
           "properties": {
             "categoryID": {
               "title": "Long",
@@ -17947,7 +18227,7 @@
           "definitions": {
             "AlibabaChildCategoryInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.category.get,version:1,typeName:alibaba.child.category.info",
+              "description": "子类目信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.category.get,version:1,typeName:alibaba.child.category.info",
               "properties": {
                 "id": {
                   "title": "Long",
@@ -18007,7 +18287,7 @@
       "definitions": {
         "AlibabaProductProductOperateResult": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.expire,version:1,typeName:alibaba.product.ProductOperateResult",
+          "description": "操作结果\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.expire,version:1,typeName:alibaba.product.ProductOperateResult",
           "properties": {
             "productId": {
               "title": "Long",
@@ -18130,7 +18410,7 @@
       "definitions": {
         "UserCategoryInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.userCategory.list.get,version:1,typeName:UserCategoryInfo",
+          "description": "自定义分类列表\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.userCategory.list.get,version:1,typeName:UserCategoryInfo",
           "properties": {
             "subCategoryList": {
               "type": "array",
@@ -18165,7 +18445,7 @@
           "definitions": {
             "SubUserCategoryInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.userCategory.list.get,version:1,typeName:SubUserCategoryInfo",
+              "description": "子自定义分类列表\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.userCategory.list.get,version:1,typeName:SubUserCategoryInfo",
               "properties": {
                 "id": {
                   "title": "Long",
@@ -18252,7 +18532,7 @@
       "definitions": {
         "AlibabaProductProductInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.incrementModify,version:1,typeName:alibaba.product.ProductInfo",
+          "description": "商品信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.incrementModify,version:1,typeName:alibaba.product.ProductInfo",
           "properties": {
             "productID": {
               "title": "Long",
@@ -18332,7 +18612,7 @@
           "definitions": {
             "AlibabaProductProductAttribute": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.incrementModify,version:1,typeName:alibaba.product.ProductAttribute",
+              "description": "商品属性和属性值\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.incrementModify,version:1,typeName:alibaba.product.ProductAttribute",
               "properties": {
                 "attributeID": {
                   "title": "Long",
@@ -18421,7 +18701,7 @@
       "definitions": {
         "AlibabaProductProductInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductInfo",
+          "description": "商品详细信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductInfo",
           "properties": {
             "extendInfos": {
               "type": "array",
@@ -18577,7 +18857,7 @@
           "definitions": {
             "AlibabaProductProductExtendInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductExtendInfo",
+              "description": "商品扩展信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductExtendInfo",
               "properties": {
                 "key": {
                   "title": "String",
@@ -18593,7 +18873,7 @@
             },
             "AlibabaProductProductShippingInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductShippingInfo",
+              "description": "商品物流信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductShippingInfo",
               "properties": {
                 "freightTemplateID": {
                   "title": "Long",
@@ -18639,7 +18919,7 @@
             },
             "AlibabaProductProductSKUInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductSKUInfo",
+              "description": "sku信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductSKUInfo",
               "properties": {
                 "attributes": {
                   "type": "array",
@@ -18704,7 +18984,7 @@
               "definitions": {
                 "AlibabaProductSKUAttrInfo": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.SKUAttrInfo",
+                  "description": "SKU属性值，可填多组信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.SKUAttrInfo",
                   "properties": {
                     "attributeID": {
                       "title": "Long",
@@ -18747,7 +19027,7 @@
                 },
                 "AlibabaProductProductPriceRange": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductPriceRange",
+                  "description": "阶梯报价，1688无需关注\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductPriceRange",
                   "properties": {
                     "startQuantity": {
                       "title": "Integer",
@@ -18767,7 +19047,7 @@
             },
             "AlibabaProductProductSaleInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductSaleInfo",
+              "description": "商品销售信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductSaleInfo",
               "properties": {
                 "supportOnlineTrade": {
                   "title": "Boolean",
@@ -18853,7 +19133,7 @@
         },
         "AlibabaProductProductBizGroupInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductBizGroupInfo",
+          "description": "产品业务的支持信息,support为false说明不支持.\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.get,version:1,typeName:alibaba.product.ProductBizGroupInfo",
           "properties": {
             "support": {
               "title": "Boolean",
@@ -18943,7 +19223,7 @@
       "definitions": {
         "AlibabaProductSKUAttrInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.SKUAttrInfo",
+          "description": "SKU属性值，可填多组信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.add,version:1,typeName:alibaba.product.SKUAttrInfo",
           "properties": {
             "attributeID": {
               "title": "Long",
@@ -19248,7 +19528,7 @@
       "definitions": {
         "AlibabaProductProductModifiable": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.isModifiable,version:1,typeName:alibaba.product.ProductModifiable",
+          "description": "商品是否可以修改返回结果\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.isModifiable,version:1,typeName:alibaba.product.ProductModifiable",
           "properties": {
             "productId": {
               "title": "Long",
@@ -19297,7 +19577,7 @@
       "definitions": {
         "AlibabaProductProductInfoListResult": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.productInfoListResult",
+          "description": "查询结果\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.productInfoListResult",
           "properties": {
             "pageResult": {
               "description": "查询结果",
@@ -19307,7 +19587,7 @@
           "definitions": {
             "AlibabaProductPageResult": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.pageResult",
+              "description": "查询结果\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.pageResult",
               "properties": {
                 "sizePerPage": {
                   "title": "Integer",
@@ -19338,7 +19618,7 @@
               "definitions": {
                 "AlibabaProductProductInfo": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductInfo",
+                  "description": "商品列表\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.list.get,version:1,typeName:alibaba.product.ProductInfo",
                   "properties": {
                     "productID": {
                       "title": "Long",
@@ -19557,7 +19837,7 @@
       "definitions": {
         "AlibabaProductProductInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.getByIdList,version:1,typeName:alibaba.product.ProductInfo",
+          "description": "商品列表\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.getByIdList,version:1,typeName:alibaba.product.ProductInfo",
           "properties": {
             "productID": {
               "title": "Long",
@@ -19663,7 +19943,7 @@
       "definitions": {
         "AlibabaProductSkuStockBean": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.modifyStock,version:1,typeName:alibaba.product.SkuStockBean",
+          "description": "SKU的库存的变更信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.modifyStock,version:1,typeName:alibaba.product.SkuStockBean",
           "properties": {
             "skuId": {
               "title": "String",
@@ -19962,7 +20242,7 @@
       "definitions": {
         "AlibabaOceanOpenplatformBizProductResultProductInfoListResult": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.ocean.openplatform.biz.product.result.ProductInfoListResult",
+          "description": "查询结果\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.ocean.openplatform.biz.product.result.ProductInfoListResult",
           "properties": {
             "pageResult": {
               "description": "查询结果",
@@ -19977,7 +20257,7 @@
           "definitions": {
             "AlibabaOceanOpenplatformCommonPageResult": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.ocean.openplatform.common.PageResult",
+              "description": "查询结果\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.ocean.openplatform.common.PageResult",
               "properties": {
                 "pageIndex": {
                   "title": "Integer",
@@ -20005,7 +20285,7 @@
               "definitions": {
                 "AlibabaProductProductInfo": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductInfo",
+                  "description": "商品列表\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.getByStatus,version:1,typeName:alibaba.product.ProductInfo",
                   "properties": {
                     "productID": {
                       "title": "Long",
@@ -20187,7 +20467,7 @@
       "definitions": {
         "AlibabaPhotobankPhotoAlbumDomain": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.photobank.album.getList,version:1,typeName:alibaba.photobank.photo.AlbumDomain",
+          "description": "相册信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.photobank.album.getList,version:1,typeName:alibaba.photobank.photo.AlbumDomain",
           "properties": {
             "albumID": {
               "title": "Long",
@@ -20355,7 +20635,7 @@
       "definitions": {
         "AlibabaProductAlbumDetail": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.photobank.album.getProfile,version:1,typeName:alibaba.product.AlbumDetail",
+          "description": "图片相册详情\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.photobank.album.getProfile,version:1,typeName:alibaba.product.AlbumDetail",
           "properties": {
             "usedSpace": {
               "title": "Long",
@@ -20438,7 +20718,7 @@
       "definitions": {
         "AlibabaPhotobankPhotoResponseDomain": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.photobank.photo.add,version:1,typeName:alibaba.photobank.photo.ResponseDomain",
+          "description": "图片信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.photobank.photo.add,version:1,typeName:alibaba.photobank.photo.ResponseDomain",
           "properties": {
             "id": {
               "title": "Long",
@@ -20491,7 +20771,7 @@
       "definitions": {
         "AlibabaProductImageOperateBean": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.product,apiname:alibaba.photobank.photo.deleteBatch,version:1,typeName:alibaba.product.ImageOperateBean",
+          "description": "图片批量操作信息结果\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.photobank.photo.deleteBatch,version:1,typeName:alibaba.product.ImageOperateBean",
           "properties": {
             "imageId": {
               "title": "Long",
@@ -20634,7 +20914,7 @@
           "definitions": {
             "AlibabaOpenplatformLogisticsDeliverySubTemplateDetailDTO": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySubTemplateDetailDTO",
+              "description": "快递子模版\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySubTemplateDetailDTO",
               "properties": {
                 "operateType": {
                   "title": "String",
@@ -20656,7 +20936,7 @@
               "definitions": {
                 "AlibabaOpenplatformLogisticsDeliverySubTemplateDTO": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySubTemplateDTO",
+                  "description": "子模板\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySubTemplateDTO",
                   "properties": {
                     "chargeType": {
                       "title": "Integer",
@@ -20735,7 +21015,7 @@
                 },
                 "AlibabaOpenplatformLogisticsDeliveryRateDetailDTO": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliveryRateDetailDTO",
+                  "description": "费率\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliveryRateDetailDTO",
                   "properties": {
                     "operateType": {
                       "title": "String",
@@ -20764,7 +21044,7 @@
                   "definitions": {
                     "AlibabaOpenplatformLogisticsDeliveryRateDTO": {
                       "type": "object",
-                      "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliveryRateDTO",
+                      "description": "普通子模板费率\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliveryRateDTO",
                       "properties": {
                         "creator": {
                           "title": "String",
@@ -20847,7 +21127,7 @@
                     },
                     "AlibabaOpenplatformLogisticsDeliverySysRateDTO": {
                       "type": "object",
-                      "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySysRateDTO",
+                      "description": "系统子模板费率\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.myFreightTemplate.list.get,version:1,typeName:alibaba.openplatform.logistics.DeliverySysRateDTO",
                       "properties": {
                         "creator": {
                           "title": "String",
@@ -20979,7 +21259,7 @@
       "definitions": {
         "AlibabaLogisticsOpenPlatformLogisticsTrace": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsTraceInfo.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsTrace",
+          "description": "跟踪单详情\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsTraceInfo.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsTrace",
           "properties": {
             "logisticsId": {
               "title": "String",
@@ -21008,7 +21288,7 @@
           "definitions": {
             "AlibabaLogisticsOpenPlatformLogisticsStep": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsTraceInfo.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsStep",
+              "description": "物流跟踪步骤\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsTraceInfo.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsStep",
               "properties": {
                 "acceptTime": {
                   "title": "String",
@@ -21051,7 +21331,7 @@
       "definitions": {
         "AlibabaLgisticsMySendGoodsAddress": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.mySendGoodsAddress.list.get,version:1,typeName:alibaba.lgistics.MySendGoodsAddress",
+          "description": "返回结果列表\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.mySendGoodsAddress.list.get,version:1,typeName:alibaba.lgistics.MySendGoodsAddress",
           "properties": {
             "addressName": {
               "title": "String",
@@ -21134,7 +21414,7 @@
       "definitions": {
         "AlibabaLogisticsOpSendGoodEntry": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpDeliverySendOrder.offline,version:1,typeName:alibaba.logistics.OpSendGoodEntry",
+          "description": "发货对象明细列表\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpDeliverySendOrder.offline,version:1,typeName:alibaba.logistics.OpSendGoodEntry",
           "properties": {
             "sourceEntryId": {
               "title": "Long",
@@ -21276,7 +21556,7 @@
       "definitions": {
         "AlibabaLogisticResultOpSendOrderModelResult": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpDeliverySendOrder.offline,version:1,typeName:alibaba.logistic.result.OpSendOrderModelResult",
+          "description": "发货明细\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpDeliverySendOrder.offline,version:1,typeName:alibaba.logistic.result.OpSendOrderModelResult",
           "properties": {
             "logisticsId": {
               "title": "String",
@@ -21377,7 +21657,7 @@
       "definitions": {
         "AlibabaLogisticsOpenPlatformLogisticsOrder": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsOrder",
+          "description": "查询结果\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsOrder",
           "properties": {
             "sender": {
               "description": "发件人信息",
@@ -21443,7 +21723,7 @@
           "definitions": {
             "AlibabaLogisticsOpenPlatformLogisticsSender": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsSender",
+              "description": "发件人信息\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsSender",
               "properties": {
                 "senderName": {
                   "title": "String",
@@ -21504,7 +21784,7 @@
             },
             "AlibabaLogisticsOpenPlatformLogisticsReceiver": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsReceiver",
+              "description": "收件人信息\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsReceiver",
               "properties": {
                 "receiverName": {
                   "title": "String",
@@ -21565,7 +21845,7 @@
             },
             "AlibabaLogisticsOpenPlatformLogisticsSendGood": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsSendGood",
+              "description": "商品信息\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.trade.getLogisticsInfos.sellerView,version:1,typeName:alibaba.logistics.OpenPlatformLogisticsSendGood",
               "properties": {
                 "goodName": {
                   "title": "String",
@@ -21651,7 +21931,7 @@
       "definitions": {
         "AlibabaLogisticsOpLogisticsCompanyModel": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpQueryLogisticCompanyList.offline,version:1,typeName:alibaba.logistics.OpLogisticsCompanyModel",
+          "description": "物流公司列表\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpQueryLogisticCompanyList.offline,version:1,typeName:alibaba.logistics.OpLogisticsCompanyModel",
           "properties": {
             "id": {
               "title": "Long",
@@ -21723,7 +22003,7 @@
       "definitions": {
         "AlibabaLogisticsOpLogisticsCompanyModel": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpQueryLogisticCompanyList,version:1,typeName:alibaba.logistics.OpLogisticsCompanyModel",
+          "description": "物流公司列表\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.OpQueryLogisticCompanyList,version:1,typeName:alibaba.logistics.OpLogisticsCompanyModel",
           "properties": {
             "id": {
               "title": "Long",
@@ -21785,7 +22065,7 @@
       "definitions": {
         "AlibabaLogisticsFreightTemplate": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.freightTemplate.getList,version:1,typeName:alibaba.logistics.FreightTemplate",
+          "description": "运费模板列表\r\n\r\n namespace:com.alibaba.logistics,apiname:alibaba.logistics.freightTemplate.getList,version:1,typeName:alibaba.logistics.FreightTemplate",
           "properties": {
             "addressCodeText": {
               "title": "String",
@@ -21888,7 +22168,7 @@
       "definitions": {
         "AlibabaOpenplatformTradeModelTradeInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo",
+          "description": "订单详情信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo",
           "properties": {
             "baseInfo": {
               "description": "订单基础信息",
@@ -21954,7 +22234,7 @@
           "definitions": {
             "AlibabaOpenplatformTradeModelOrderBaseInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo",
+              "description": "订单基础信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo",
               "properties": {
                 "allDeliveredTime": {
                   "title": "DateTime",
@@ -22257,7 +22537,7 @@
               "definitions": {
                 "AlibabaTradeTradeContact": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.tradeContact",
+                  "description": "买家联系人\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.tradeContact",
                   "properties": {
                     "phone": {
                       "title": "String",
@@ -22298,7 +22578,7 @@
                 },
                 "AlibabaTradeTradeSellerContact": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.tradeSellerContact",
+                  "description": "卖家联系人信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.tradeSellerContact",
                   "properties": {
                     "phone": {
                       "title": "String",
@@ -22349,7 +22629,7 @@
                 },
                 "AlibabaTradeOrderReceiverInfo": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.orderReceiverInfo",
+                  "description": "收件人信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.orderReceiverInfo",
                   "properties": {
                     "toFullName": {
                       "title": "String",
@@ -22390,7 +22670,7 @@
                 },
                 "AlibabaTradeStepOrderModel": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.StepOrderModel",
+                  "description": "[交易3.0]分阶段交易，分阶段订单list\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.StepOrderModel",
                   "properties": {
                     "stepOrderId": {
                       "title": "Long",
@@ -22583,7 +22863,7 @@
             },
             "AlibabaOrderBizInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.order.bizInfo",
+              "description": "订单业务信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.order.bizInfo",
               "properties": {
                 "odsCyd": {
                   "title": "Boolean",
@@ -22612,7 +22892,7 @@
               "definitions": {
                 "AlibabaCreditOrderForDetail": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.creditOrder.forDetail",
+                  "description": "诚e赊支付详情，只有使用诚e赊付款时返回\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.creditOrder.forDetail",
                   "properties": {
                     "payAmount": {
                       "title": "Long",
@@ -22650,7 +22930,7 @@
                 },
                 "AlibabaOrderPreOrderForRead": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.order.preOrder.forRead",
+                  "description": "预订单信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.order.preOrder.forRead",
                   "properties": {
                     "marketName": {
                       "title": "String",
@@ -22668,7 +22948,7 @@
             },
             "AlibabaOpenplatformTradeModelTradeTermsInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.TradeTermsInfo",
+              "description": "交易条款\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.TradeTermsInfo",
               "properties": {
                 "payStatus": {
                   "title": "String",
@@ -22727,7 +23007,7 @@
             },
             "AlibabaOpenplatformTradeModelProductItemInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo",
+              "description": "商品条目信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo",
               "properties": {
                 "cargoNumber": {
                   "title": "String",
@@ -22929,7 +23209,7 @@
               "definitions": {
                 "AlibabaOpenplatformTradeModelGuaranteeTermsInfo": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.GuaranteeTermsInfo",
+                  "description": "保障条款，此字段仅针对1688\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.GuaranteeTermsInfo",
                   "properties": {
                     "assuranceInfo": {
                       "title": "String",
@@ -22968,7 +23248,7 @@
             },
             "AlibabaOpenplatformTradeModelNativeLogisticsInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsInfo",
+              "description": "国内物流\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsInfo",
               "properties": {
                 "address": {
                   "title": "String",
@@ -23041,7 +23321,7 @@
               "definitions": {
                 "AlibabaOpenplatformTradeModelNativeLogisticsItemsInfo": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsItemsInfo",
+                  "description": "运单明细\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsItemsInfo",
                   "properties": {
                     "deliveredTime": {
                       "title": "DateTime",
@@ -23210,7 +23490,7 @@
             },
             "AlibabaInvoiceOrderInvoiceModel": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.invoice.OrderInvoiceModel",
+              "description": "发票信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.invoice.OrderInvoiceModel",
               "properties": {
                 "invoiceCompanyName": {
                   "title": "String",
@@ -23309,7 +23589,7 @@
             },
             "AlibabaTradeOrderRateInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.OrderRateInfo",
+              "description": "订单评价信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.OrderRateInfo",
               "properties": {
                 "buyerRateStatus": {
                   "title": "Integer",
@@ -23341,7 +23621,7 @@
               "definitions": {
                 "AlibabaOrderRateDetail": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.order.rateDetail",
+                  "description": "卖家給买家的评价\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.order.rateDetail",
                   "properties": {
                     "starLevel": {
                       "title": "Integer",
@@ -23376,7 +23656,7 @@
             },
             "AlibabaTradeOverseasExtraAddress": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.OverseasExtraAddress",
+              "description": "跨境地址扩展信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.OverseasExtraAddress",
               "properties": {
                 "channelName": {
                   "title": "String",
@@ -23417,7 +23697,7 @@
             },
             "AlibabaTradeCustoms": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.Customs",
+              "description": "跨境报关信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.Customs",
               "properties": {
                 "id": {
                   "title": "Long",
@@ -23465,7 +23745,7 @@
               "definitions": {
                 "AlibabaTradeCustomsAttributesInfo": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.CustomsAttributesInfo",
+                  "description": "报关信息列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.trade.CustomsAttributesInfo",
                   "properties": {
                     "sku": {
                       "title": "String",
@@ -23511,7 +23791,7 @@
             },
             "AlibabaOrderDetailCaigouQuoteInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.orderDetail.caigouQuoteInfo",
+              "description": "采购单详情列表，为大企业采购订单独有域。\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.orderDetail.caigouQuoteInfo",
               "properties": {
                 "productQuoteName": {
                   "title": "String",
@@ -23534,7 +23814,7 @@
             },
             "AlibabaOpenplatformTradeKeyValuePair": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.KeyValuePair",
+              "description": "订单扩展属性\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.buyerView,version:1,typeName:alibaba.openplatform.trade.KeyValuePair",
               "properties": {
                 "key": {
                   "title": "String",
@@ -23584,7 +23864,7 @@
       "definitions": {
         "AlibabaOpenplatformTradeModelTradeInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo",
+          "description": "返回结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo",
           "properties": {
             "extAttributes": {
               "type": "array",
@@ -23650,7 +23930,7 @@
           "definitions": {
             "AlibabaOpenplatformTradeModelOrderBaseInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo",
+              "description": "订单基础信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo",
               "properties": {
                 "allDeliveredTime": {
                   "title": "DateTime",
@@ -23940,7 +24220,7 @@
               "definitions": {
                 "AlibabaTradeBizNewStepOrderModel": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.BizNewStepOrderModel",
+                  "description": "[交易4.0]分阶段交易，分阶段订单list\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.trade.BizNewStepOrderModel",
                   "properties": {
                     "gmtStart": {
                       "title": "DateTime",
@@ -24042,7 +24322,7 @@
             },
             "AlibabaOpenplatformTradeModelProductItemInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo",
+              "description": "商品条目信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo",
               "properties": {
                 "cargoNumber": {
                   "title": "String",
@@ -24249,7 +24529,7 @@
             },
             "AlibabaOrderBizInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.order.bizInfo",
+              "description": "订单业务信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.order.bizInfo",
               "properties": {
                 "odsCyd": {
                   "title": "Boolean",
@@ -24282,7 +24562,7 @@
               "definitions": {
                 "AlibabaLstTradeInfo": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.lst.tradeInfo",
+                  "description": "零售通订单信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.get.sellerView,version:1,typeName:alibaba.lst.tradeInfo",
                   "properties": {
                     "lstWarehouseType": {
                       "title": "String",
@@ -24350,7 +24630,7 @@
       "definitions": {
         "AlibabaTradeRefundOpQueryOrderRefundResult": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpQueryOrderRefundResult",
+          "description": "查询结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpQueryOrderRefundResult",
           "properties": {
             "opOrderRefundModelDetail": {
               "description": "退款模型",
@@ -24360,7 +24640,7 @@
           "definitions": {
             "AlibabaTradeRefundOpOrderRefundModel": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel",
+              "description": "退款模型\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel",
               "properties": {
                 "aftersaleAgreeTimeout": {
                   "title": "Boolean",
@@ -24581,11 +24861,11 @@
                   "description": "子订单退货数量"
                 },
                 "orderEntryIdList": {
-                  "title": "Object[]",
+                  "title": "String[]",
                   "type": "array",
                   "description": "退款单包含的订单明细，时间逆序排列",
                   "items": {
-                    "additionalProperties": {}
+                    "type": "string"
                   }
                 },
                 "orderId": {
@@ -24736,7 +25016,7 @@
               "definitions": {
                 "AlibabaTradeRefundOpOrderRefundOperationModel": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpOrderRefundOperationModel",
+                  "description": "操作记录列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpOrderRefundOperationModel",
                   "properties": {
                     "afterOperateStatus": {
                       "title": "String",
@@ -24863,11 +25143,11 @@
                       "description": "卖家拒绝退款原因"
                     },
                     "vouchers": {
-                      "title": "Object[]",
+                      "title": "String[]",
                       "type": "array",
                       "description": "凭证图片地址",
                       "items": {
-                        "additionalProperties": {}
+                        "type": "string"
                       }
                     },
                     "logisticsCompany": {
@@ -24878,7 +25158,7 @@
                   "definitions": {
                     "AlibabaTradeRefundOpLogisticsCompanyModel": {
                       "type": "object",
-                      "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpLogisticsCompanyModel",
+                      "description": "物流公司详情\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefund,version:1,typeName:alibaba.trade.refund.OpLogisticsCompanyModel",
                       "properties": {
                         "companyName": {
                           "title": "String",
@@ -24960,7 +25240,7 @@
       "definitions": {
         "AlibabaTradeRefundOpQueryOrderRefundListResult": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.queryOrderRefundList,version:1,typeName:alibaba.trade.refund.OpQueryOrderRefundListResult",
+          "description": "返回结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.queryOrderRefundList,version:1,typeName:alibaba.trade.refund.OpQueryOrderRefundListResult",
           "properties": {
             "opOrderRefundModels": {
               "type": "array",
@@ -24985,7 +25265,7 @@
           "definitions": {
             "AlibabaTradeRefundOpOrderRefundModel": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.queryOrderRefundList,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel",
+              "description": "退款单列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.queryOrderRefundList,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel",
               "properties": {
                 "aftersaleAgreeTimeout": {
                   "title": "Boolean",
@@ -25206,11 +25486,11 @@
                   "description": "子订单退货数量"
                 },
                 "orderEntryIdList": {
-                  "title": "Object[]",
+                  "title": "String[]",
                   "type": "array",
                   "description": "退款单包含的订单明细，时间逆序排列",
                   "items": {
-                    "additionalProperties": {}
+                    "type": "string"
                   }
                 },
                 "orderId": {
@@ -25368,7 +25648,7 @@
       "definitions": {
         "AlibabaOpenplatformTradeResultOpProcessTemplateResultModel": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.queryTradeTypesOfOffer,version:1,typeName:alibaba.openplatform.trade.result.OpProcessTemplateResultModel",
+          "description": "支持的交易类型\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.queryTradeTypesOfOffer,version:1,typeName:alibaba.openplatform.trade.result.OpProcessTemplateResultModel",
           "properties": {
             "opProcessTemplates": {
               "type": "array",
@@ -25641,7 +25921,7 @@
       "definitions": {
         "AlibabaCreateOrderPreviewResultModel": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:alibaba.createOrder.preview.result.model",
+          "description": "订单预览结果，过自动拆单会返回多个记录\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:alibaba.createOrder.preview.result.model",
           "properties": {
             "discountFee": {
               "title": "Long",
@@ -25731,7 +26011,7 @@
           "definitions": {
             "AlibabaCreateOrderPreviewResultCargoModel": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:alibaba.createOrder.preview.resultCargo.model",
+              "description": "规格信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:alibaba.createOrder.preview.resultCargo.model",
               "properties": {
                 "amount": {
                   "title": "Double",
@@ -25783,7 +26063,7 @@
               "definitions": {
                 "AlibabaTradePromotionModel": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:alibaba.trade.promotion.model",
+                  "description": "商品优惠列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:alibaba.trade.promotion.model",
                   "properties": {
                     "promotionId": {
                       "title": "String",
@@ -25822,7 +26102,7 @@
             },
             "TradeModelExtensionList": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:tradeModelExtensionList",
+              "description": "当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.preview,version:1,typeName:tradeModelExtensionList",
               "properties": {
                 "name": {
                   "title": "String",
@@ -25877,7 +26157,7 @@
       "definitions": {
         "AlibabaTradeRefundOpQueryBatchRefundByOrderIdAndStatusResult": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus,version:1,typeName:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatusResult",
+          "description": "查询结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus,version:1,typeName:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatusResult",
           "properties": {
             "opOrderRefundModels": {
               "type": "array",
@@ -25890,7 +26170,7 @@
           "definitions": {
             "AlibabaTradeRefundOpOrderRefundModel": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel",
+              "description": "退款单信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryBatchRefundByOrderIdAndStatus,version:1,typeName:alibaba.trade.refund.OpOrderRefundModel",
               "properties": {
                 "alipayPaymentId": {
                   "title": "String",
@@ -26066,11 +26346,11 @@
                   "description": "子订单退货数量"
                 },
                 "orderEntryIdList": {
-                  "title": "Object[]",
+                  "title": "String[]",
                   "type": "array",
                   "description": "退款单包含的订单明细，时间逆序排列",
                   "items": {
-                    "additionalProperties": {}
+                    "type": "string"
                   }
                 },
                 "orderId": {
@@ -26367,7 +26647,7 @@
       "definitions": {
         "AlibabaOpenplatformTradeResultOpMarketingMixConfigModel": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.OpQueryMarketingMixConfig,version:1,typeName:alibaba.openplatform.trade.result.OpMarketingMixConfigModel",
+          "description": "返回结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.OpQueryMarketingMixConfig,version:1,typeName:alibaba.openplatform.trade.result.OpMarketingMixConfigModel",
           "properties": {
             "generalHunpi": {
               "title": "Boolean",
@@ -26438,7 +26718,7 @@
       "definitions": {
         "AlibabaOpenplatformTradeModelTradeInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo",
+          "description": "查询返回列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo",
           "properties": {
             "quoteList": {
               "type": "array",
@@ -26504,7 +26784,7 @@
           "definitions": {
             "AlibabaOrderDetailCaigouQuoteInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.orderDetail.caigouQuoteInfo",
+              "description": "采购单详情列表，为大企业采购订单独有域。\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.orderDetail.caigouQuoteInfo",
               "properties": {
                 "productQuoteName": {
                   "title": "String",
@@ -26527,7 +26807,7 @@
             },
             "AlibabaTradeOrderRateInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.OrderRateInfo",
+              "description": "订单评价信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.trade.OrderRateInfo",
               "properties": {
                 "buyerRateStatus": {
                   "title": "Integer",
@@ -26545,7 +26825,7 @@
             },
             "AlibabaOpenplatformTradeModelTradeTermsInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeTermsInfo",
+              "description": "交易条款\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeTermsInfo",
               "properties": {
                 "payStatus": {
                   "title": "String",
@@ -26589,7 +26869,7 @@
             },
             "AlibabaOpenplatformTradeModelNativeLogisticsInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsInfo",
+              "description": "国内物流\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.NativeLogisticsInfo",
               "properties": {
                 "address": {
                   "title": "String",
@@ -26655,7 +26935,7 @@
             },
             "AlibabaOpenplatformTradeModelOrderBaseInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo",
+              "description": "订单基础信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo",
               "properties": {
                 "allDeliveredTime": {
                   "title": "DateTime",
@@ -26929,7 +27209,7 @@
             },
             "AlibabaOrderBizInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.order.bizInfo",
+              "description": "订单业务信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.order.bizInfo",
               "properties": {
                 "odsCyd": {
                   "title": "Boolean",
@@ -26958,7 +27238,7 @@
               "definitions": {
                 "AlibabaOrderPreOrderForRead": {
                   "type": "object",
-                  "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.order.preOrder.forRead",
+                  "description": "预订单信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.order.preOrder.forRead",
                   "properties": {
                     "appkey": {
                       "title": "String",
@@ -26981,7 +27261,7 @@
             },
             "AlibabaOpenplatformTradeModelProductItemInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo",
+              "description": "商品条目信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getBuyerOrderList,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo",
               "properties": {
                 "cargoNumber": {
                   "title": "String",
@@ -27190,7 +27470,7 @@
       "definitions": {
         "AlibabaTradeAddressCode": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.addresscode.get,version:1,typeName:alibaba.TradeAddressCode",
+          "description": "返回地区信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.addresscode.get,version:1,typeName:alibaba.TradeAddressCode",
           "properties": {
             "code": {
               "title": "String",
@@ -27278,7 +27558,7 @@
       "definitions": {
         "AlibabaTradeReceiveAddressResult": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.receiveAddress.get,version:1,typeName:alibaba.trade.ReceiveAddressResult",
+          "description": "返回结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.receiveAddress.get,version:1,typeName:alibaba.trade.ReceiveAddressResult",
           "properties": {
             "receiveAddressItems": {
               "type": "array",
@@ -27291,7 +27571,7 @@
           "definitions": {
             "AlibabaTradeReceiveAddressItem": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.receiveAddress.get,version:1,typeName:alibaba.trade.ReceiveAddressItem",
+              "description": "收货地址列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.receiveAddress.get,version:1,typeName:alibaba.trade.ReceiveAddressItem",
               "properties": {
                 "id": {
                   "title": "Long",
@@ -27391,7 +27671,7 @@
       "definitions": {
         "AlibabaOpenplatformTradeModelTradeInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo",
+          "description": "查询返回结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.TradeInfo",
           "properties": {
             "baseInfo": {
               "description": "订单基础信息",
@@ -27446,7 +27726,7 @@
           "definitions": {
             "AlibabaOpenplatformTradeModelOrderBaseInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo",
+              "description": "订单基础信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.OrderBaseInfo",
               "properties": {
                 "allDeliveredTime": {
                   "title": "DateTime",
@@ -27713,7 +27993,7 @@
             },
             "AlibabaOpenplatformTradeModelProductItemInfo": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo",
+              "description": "商品条目信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.getSellerOrderList,version:1,typeName:alibaba.openplatform.trade.model.ProductItemInfo",
               "properties": {
                 "cargoNumber": {
                   "title": "String",
@@ -27934,7 +28214,7 @@
       "definitions": {
         "AlibabaInvoiceOrderInvoiceModel": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.invoice.get,version:1,typeName:alibaba.invoice.OrderInvoiceModel",
+          "description": "发票信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.invoice.get,version:1,typeName:alibaba.invoice.OrderInvoiceModel",
           "properties": {
             "invoiceCompanyName": {
               "title": "String",
@@ -28125,7 +28405,7 @@
       "definitions": {
         "AlibabaTradeFastResult": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.fastCreateOrder,version:1,typeName:alibaba.trade.fast.result",
+          "description": "订单详细信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.fastCreateOrder,version:1,typeName:alibaba.trade.fast.result",
           "properties": {
             "totalSuccessAmount": {
               "title": "Long",
@@ -28155,7 +28435,7 @@
           "definitions": {
             "AlibabaTradeFastOffer": {
               "type": "object",
-              "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.fastCreateOrder,version:1,typeName:alibaba.trade.fast.offer",
+              "description": "下单失败的商品信息\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.fastCreateOrder,version:1,typeName:alibaba.trade.fast.offer",
               "properties": {
                 "offerId": {
                   "title": "String",
@@ -28226,7 +28506,7 @@
       "definitions": {
         "AlibabaTradeReceiveAddress": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.addresscode.parse,version:1,typeName:alibaba.trade.ReceiveAddress",
+          "description": "解析后的收获地址\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.addresscode.parse,version:1,typeName:alibaba.trade.ReceiveAddress",
           "properties": {
             "address": {
               "title": "String",
@@ -28336,7 +28616,7 @@
       "definitions": {
         "AlibabaAccountSimpleAccountInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.account,apiname:alibaba.account.basic,version:1,typeName:alibaba.account.simpleAccountInfo",
+          "description": "会员信息\r\n\r\n namespace:com.alibaba.account,apiname:alibaba.account.basic,version:1,typeName:alibaba.account.simpleAccountInfo",
           "properties": {
             "loginId": {
               "title": "String",
@@ -28559,7 +28839,7 @@
       "definitions": {
         "AlibabaAccountSimpleAccountInfo": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.account,apiname:alibaba.account.agent.basic,version:1,typeName:alibaba.account.simpleAccountInfo",
+          "description": "会员信息\r\n\r\n namespace:com.alibaba.account,apiname:alibaba.account.agent.basic,version:1,typeName:alibaba.account.simpleAccountInfo",
           "properties": {
             "loginId": {
               "title": "String",
@@ -28615,7 +28895,7 @@
       "definitions": {
         "AlibabaCbuSearchwebOpenHsfResultIsvGraphOfferResult": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.info,version:1,typeName:alibaba.cbu.searchweb.open.hsf.result.IsvGraphOfferResult",
+          "description": "同款相似款的统计信息\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.info,version:1,typeName:alibaba.cbu.searchweb.open.hsf.result.IsvGraphOfferResult",
           "properties": {
             "taobaoOfferId": {
               "title": "Long",
@@ -28661,7 +28941,7 @@
       "definitions": {
         "ComAlibabaCbuSearchwebOpenHsfResultIsvOfferQueryResult": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.same.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferQueryResult",
+          "description": "offer查询的信息\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.same.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferQueryResult",
           "properties": {
             "count": {
               "title": "Integer",
@@ -28697,7 +28977,7 @@
           "definitions": {
             "ComAlibabaCbuSearchwebOpenHsfResultIsvOfferModel": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.same.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferModel",
+              "description": "商品的列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.search.graph.offer.same.pages,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvOfferModel",
               "properties": {
                 "id": {
                   "title": "Long",
@@ -28843,7 +29123,7 @@
       "definitions": {
         "IsvOrderItemDto": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.app.orderListbyIds,version:1,typeName:isvOrderItemDto",
+          "description": "isv订单信息\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.app.orderListbyIds,version:1,typeName:isvOrderItemDto",
           "properties": {
             "bizStatusExt": {
               "title": "String",
@@ -28928,7 +29208,7 @@
       "definitions": {
         "IsvOrderItemDto": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:app.order.get,version:1,typeName:isvOrderItemDto",
+          "description": "isv订单信息\r\n\r\n namespace:cn.alibaba.open,apiname:app.order.get,version:1,typeName:isvOrderItemDto",
           "properties": {
             "bizStatusExt": {
               "title": "String",
@@ -29022,7 +29302,7 @@
           "definitions": {
             "AlibabaSettleSettleItemDto": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:app.order.get,version:1,typeName:alibaba.settle.SettleItemDto",
+              "description": "结算信息\r\n\r\n namespace:cn.alibaba.open,apiname:app.order.get,version:1,typeName:alibaba.settle.SettleItemDto",
               "properties": {
                 "settleAmount": {
                   "title": "Decimal",
@@ -29063,7 +29343,7 @@
       "definitions": {
         "AlibabaDaixiaoSimpleSkuInfo": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.distributor.querySkuBySpecId,version:1,typeName:alibaba.daixiao.SimpleSkuInfo",
+          "description": "简单sku信息\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.distributor.querySkuBySpecId,version:1,typeName:alibaba.daixiao.SimpleSkuInfo",
           "properties": {
             "amountOnSale": {
               "title": "Integer",
@@ -29138,7 +29418,7 @@
       "definitions": {
         "AlibabaDaixiaoProductInfo": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.supplier.listForAllConsignment,version:1,typeName:alibaba.daixiao.ProductInfo",
+          "description": "商品列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.supplier.listForAllConsignment,version:1,typeName:alibaba.daixiao.ProductInfo",
           "properties": {
             "productId": {
               "title": "Long",
@@ -29261,7 +29541,7 @@
           "definitions": {
             "AlibabaDaixiaoProductSkuInfo": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.supplier.listForAllConsignment,version:1,typeName:alibaba.daixiao.ProductSkuInfo",
+              "description": "商品规格属性列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.supplier.listForAllConsignment,version:1,typeName:alibaba.daixiao.ProductSkuInfo",
               "properties": {
                 "skuId": {
                   "title": "Long",
@@ -29411,7 +29691,7 @@
       "definitions": {
         "AlibabaDaixiaoSupplyOrderInfo": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.distributor.listSupplyOrders,version:1,typeName:alibaba.daixiao.supplyOrderInfo",
+          "description": "采购单列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.distributor.listSupplyOrders,version:1,typeName:alibaba.daixiao.supplyOrderInfo",
           "properties": {
             "orderModel": {
               "description": "采购单信息",
@@ -29441,7 +29721,7 @@
           "definitions": {
             "AlibabaDaixiaoSupplyOrderDetail": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.distributor.listSupplyOrders,version:1,typeName:alibaba.daixiao.supplyOrderDetail",
+              "description": "采购单信息\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.distributor.listSupplyOrders,version:1,typeName:alibaba.daixiao.supplyOrderDetail",
               "properties": {
                 "outMainOrderNo": {
                   "title": "String",
@@ -29462,7 +29742,7 @@
                 "orderStatus": {
                   "title": "Integer",
                   "type": "integer",
-                  "description": "当前中间表订单状态,0(未下单)、1(等待买家付款)、2(等待卖家发货)、3(等待买家收货)、4(已收货-&gt;交易成功)、5(交易关闭)",
+                  "description": "当前中间表订单状态,0(未下单)、1(等待买家付款)、2(等待卖家发货)、3(等待买家收货)、4(已收货-交易成功)、5(交易关闭)",
                   "format": "int32"
                 },
                 "tbMainOrderStatus": {
@@ -29502,7 +29782,7 @@
               "definitions": {
                 "AlibabaDaixiaoSubSupplyOrderInfo": {
                   "type": "object",
-                  "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.distributor.listSupplyOrders,version:1,typeName:alibaba.daixiao.subSupplyOrderInfo",
+                  "description": "父订单包含的子订单列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.distributor.listSupplyOrders,version:1,typeName:alibaba.daixiao.subSupplyOrderInfo",
                   "properties": {
                     "picUrl": {
                       "title": "String",
@@ -29818,7 +30098,7 @@
       "definitions": {
         "AlibabaRelationSupplierModel": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.relation.querySuppliers,version:1,typeName:alibaba.relation.supplierModel",
+          "description": "结果集合\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.relation.querySuppliers,version:1,typeName:alibaba.relation.supplierModel",
           "properties": {
             "consignStatus": {
               "title": "String",
@@ -30000,7 +30280,7 @@
       "definitions": {
         "ComAlibabaCbuSearchwebOpenHsfResultIsvRecommendResult": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.company,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvRecommendResult",
+          "description": "公司推荐结果\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.company,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvRecommendResult",
           "properties": {
             "count": {
               "title": "Integer",
@@ -30031,7 +30311,7 @@
           "definitions": {
             "ComAlibabaCbuSearchwebOpenHsfResultIsvCompanyOfferResult": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.company,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvCompanyOfferResult",
+              "description": "推荐的公司列表信息\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.search.daixiao.recom.company,version:1,typeName:com.alibaba.cbu.searchweb.open.hsf.result.IsvCompanyOfferResult",
               "properties": {
                 "memberId": {
                   "title": "String",
@@ -30103,7 +30383,7 @@
       "definitions": {
         "AlibabaRelationConsignerModel": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.relation.queryConsigners,version:1,typeName:alibaba.relation.consignerModel",
+          "description": "结果集合\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.relation.queryConsigners,version:1,typeName:alibaba.relation.consignerModel",
           "properties": {
             "consignStatus": {
               "title": "String",
@@ -31282,7 +31562,7 @@
       "definitions": {
         "AlibabaCpsOpenTradeBillDTO": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.p4p,apiname:alibaba.cps.webUnionTradeBillList,version:1,typeName:alibaba.cps.OpenTradeBillDTO",
+          "description": "cps交易列表\r\n\r\n namespace:com.alibaba.p4p,apiname:alibaba.cps.webUnionTradeBillList,version:1,typeName:alibaba.cps.OpenTradeBillDTO",
           "properties": {
             "bizId": {
               "title": "Long",
@@ -31813,7 +32093,7 @@
       "definitions": {
         "AlibabaCpsOpenOfferDTO": {
           "type": "object",
-          "description": "\r\n namespace:com.alibaba.p4p,apiname:alibaba.cps.listOfferPageQuery,version:1,typeName:alibaba.cps.OpenOfferDTO",
+          "description": "列表\r\n\r\n namespace:com.alibaba.p4p,apiname:alibaba.cps.listOfferPageQuery,version:1,typeName:alibaba.cps.OpenOfferDTO",
           "properties": {
             "loginId": {
               "title": "String",
@@ -32178,7 +32458,7 @@
       "definitions": {
         "ComAlibabaCaigouApiCommonModelAttachment": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment",
+          "description": "询价单附件\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.Attachment",
           "properties": {
             "size": {
               "title": "String",
@@ -32204,7 +32484,7 @@
         },
         "ComAlibabaCaigouApiCommonModelAreaInfo": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.AreaInfo",
+          "description": "收货人地址\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.AreaInfo",
           "properties": {
             "provinceCode": {
               "title": "String",
@@ -32237,7 +32517,7 @@
           "definitions": {
             "ComAlibabaCaigouApiCommonModelArea": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.Area",
+              "description": "地区详情-省\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.Area",
               "properties": {
                 "name": {
                   "title": "String",
@@ -32293,7 +32573,7 @@
         },
         "ComAlibabaCaigouApiCommonModelPurchaseNoteItem": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.PurchaseNoteItem",
+          "description": "询价单条目\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.PurchaseNoteItem",
           "properties": {
             "subject": {
               "title": "String",
@@ -32348,7 +32628,7 @@
         },
         "ComAlibabaCaigouApiCommonModelContactInfo": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.ContactInfo",
+          "description": "联系方式\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.ContactInfo",
           "properties": {
             "email": {
               "title": "String",
@@ -32504,7 +32784,7 @@
       "definitions": {
         "AlibabaCaigouProductProductAttributeCoopParam": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateErpProducts,version:1,typeName:alibaba.caigou.product.ProductAttributeCoopParam",
+          "description": "产品属性\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateErpProducts,version:1,typeName:alibaba.caigou.product.ProductAttributeCoopParam",
           "properties": {
             "name": {
               "title": "String",
@@ -32560,7 +32840,7 @@
       "definitions": {
         "AlibabaCaigouProductBatchAddOrUpdateErpProductResult": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateErpProducts,version:1,typeName:alibaba.caigou.product.BatchAddOrUpdateErpProductResult",
+          "description": "批量操作结果\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateErpProducts,version:1,typeName:alibaba.caigou.product.BatchAddOrUpdateErpProductResult",
           "properties": {
             "successNum": {
               "title": "Integer",
@@ -32585,7 +32865,7 @@
           "definitions": {
             "AlibabaCaigouProductFailedAddOrUpdateErpProductResult": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateErpProducts,version:1,typeName:alibaba.caigou.product.FailedAddOrUpdateErpProductResult",
+              "description": "失败记录列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateErpProducts,version:1,typeName:alibaba.caigou.product.FailedAddOrUpdateErpProductResult",
               "properties": {
                 "errorMsg": {
                   "title": "String",
@@ -32645,7 +32925,7 @@
       "definitions": {
         "AlibabaCaigouProductBatchRemoveErpProductResult": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.removeErpProducts,version:1,typeName:alibaba.caigou.product.BatchRemoveErpProductResult",
+          "description": "批量操作结果\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.removeErpProducts,version:1,typeName:alibaba.caigou.product.BatchRemoveErpProductResult",
           "properties": {
             "successNum": {
               "title": "Integer",
@@ -32670,7 +32950,7 @@
           "definitions": {
             "AlibabaCaigouProductFailedRemoveErpProductResult": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.removeErpProducts,version:1,typeName:alibaba.caigou.product.FailedRemoveErpProductResult",
+              "description": "失败记录列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.removeErpProducts,version:1,typeName:alibaba.caigou.product.FailedRemoveErpProductResult",
               "properties": {
                 "errorMsg": {
                   "title": "String",
@@ -32714,7 +32994,7 @@
       "definitions": {
         "AlibabaCaigouProductProductCoop": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.getErpProductByErpProductCode,version:1,typeName:alibaba.caigou.product.ProductCoop",
+          "description": "数据结果\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.getErpProductByErpProductCode,version:1,typeName:alibaba.caigou.product.ProductCoop",
           "properties": {
             "id": {
               "title": "Long",
@@ -33043,19 +33323,19 @@
                   "description": ""
                 },
                 "valueIds": {
-                  "title": "Object[]",
+                  "title": "String[]",
                   "type": "array",
                   "description": "",
                   "items": {
-                    "additionalProperties": {}
+                    "type": "string"
                   }
                 },
                 "values": {
-                  "title": "Object[]",
+                  "title": "String[]",
                   "type": "array",
                   "description": "",
                   "items": {
-                    "additionalProperties": {}
+                    "type": "string"
                   }
                 },
                 "isNeed": {
@@ -33120,19 +33400,19 @@
                   "description": ""
                 },
                 "valueIds": {
-                  "title": "Object[]",
+                  "title": "String[]",
                   "type": "array",
                   "description": "",
                   "items": {
-                    "additionalProperties": {}
+                    "type": "string"
                   }
                 },
                 "valueList": {
-                  "title": "Object[]",
+                  "title": "String[]",
                   "type": "array",
                   "description": "",
                   "items": {
-                    "additionalProperties": {}
+                    "type": "string"
                   }
                 },
                 "groupCode": {
@@ -33455,7 +33735,7 @@
       "definitions": {
         "ComAlibabaCaigouApiCommonModelSupplyNoteItem": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.SupplyNoteItem",
+          "description": "报价单条目列表\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.SupplyNoteItem",
           "properties": {
             "subject": {
               "title": "String",
@@ -33544,7 +33824,7 @@
         },
         "ComAlibabaCaigouApiCommonModelPayRequirement": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.PayRequirement",
+          "description": "报价单付款条件\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.PayRequirement",
           "properties": {
             "type": {
               "title": "String",
@@ -33567,7 +33847,7 @@
           "definitions": {
             "ComAlibabaCaigouApiCommonModelStepPayInfo": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.StepPayInfo",
+              "description": "分阶段付款信息（type不是step时为空）\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.quotation.buyerGetQuotationDetail,version:1,typeName:com.alibaba.caigou.api.common.model.StepPayInfo",
               "properties": {
                 "percent": {
                   "title": "Double",
@@ -33931,7 +34211,7 @@
       "definitions": {
         "AlibabaCaigouMallOpenOfferParam": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenOfferParam",
+          "description": "商品参数\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenOfferParam",
           "properties": {
             "offerId": {
               "title": "Long",
@@ -33954,7 +34234,7 @@
         },
         "AlibabaCaigouMallOpenInvoiceParam": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenInvoiceParam",
+          "description": "发票信息\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenInvoiceParam",
           "properties": {
             "invoiceType": {
               "title": "String",
@@ -33978,7 +34258,7 @@
           "definitions": {
             "AlibabaCaigouMallOpenInvoiceHeadParam": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenInvoiceHeadParam",
+              "description": "发票抬头\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenInvoiceHeadParam",
               "properties": {
                 "title": {
                   "title": "String",
@@ -34029,7 +34309,7 @@
             },
             "AlibabaCaigouMallOpenReceiveAddressParam": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenReceiveAddressParam",
+              "description": "临时邮寄地址\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.OpenReceiveAddressParam",
               "properties": {
                 "userName": {
                   "title": "String",
@@ -34104,7 +34384,7 @@
       "definitions": {
         "AlibabaCaigouMallPurchasOrderTradeModel": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.PurchasOrderTradeModel",
+          "description": "返回正确信息\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.PurchasOrderTradeModel",
           "properties": {
             "purchaseOrderId": {
               "title": "String",
@@ -34139,7 +34419,7 @@
           "definitions": {
             "AlibabaCaigouMallTradeOrderModel": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.TradeOrderModel",
+              "description": "订单成功列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.TradeOrderModel",
               "properties": {
                 "tradeOrderId": {
                   "title": "Long",
@@ -34158,7 +34438,7 @@
               "definitions": {
                 "AlibabaCaigouMallTradeOfferModel": {
                   "type": "object",
-                  "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.TradeOfferModel",
+                  "description": "下单成功商品列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.TradeOfferModel",
                   "properties": {
                     "offerId": {
                       "title": "Long",
@@ -34199,7 +34479,7 @@
             },
             "AlibabaCaigouMallFailTradeOfferModel": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.FailTradeOfferModel",
+              "description": "订单失败列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.mall.createTradeOrder,version:1,typeName:alibaba.caigou.mall.FailTradeOfferModel",
               "properties": {
                 "failOfferList": {
                   "type": "array",
@@ -34277,7 +34557,7 @@
       "definitions": {
         "CaigouDomainCategoryTwoCategory": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.category.queryAllErpCategory,version:1,typeName:caigou.domain.category.TwoCategory",
+          "description": "子类目列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.category.queryAllErpCategory,version:1,typeName:caigou.domain.category.TwoCategory",
           "properties": {
             "categoryName": {
               "title": "String",
@@ -34328,7 +34608,7 @@
           "definitions": {
             "CaigouDomainCategoryLeafCategory": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.category.queryAllErpCategory,version:1,typeName:caigou.domain.category.LeafCategory",
+              "description": "叶子类目列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.category.queryAllErpCategory,version:1,typeName:caigou.domain.category.LeafCategory",
               "properties": {
                 "categoryName": {
                   "title": "String",
@@ -34562,7 +34842,7 @@
       "definitions": {
         "AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.cooper.param.OpenCreateRequisitionItemParam",
+          "description": "a\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.cooper.param.OpenCreateRequisitionItemParam",
           "properties": {
             "ErpReqTrackNo": {
               "title": "String",
@@ -34864,7 +35144,7 @@
         },
         "AlibabaCaigouBizApiRequisitionModelReceiveAddressModel": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.requisition.model.ReceiveAddressModel",
+          "description": "a\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:alibaba.caigou.biz.api.requisition.model.ReceiveAddressModel",
           "properties": {
             "addressCode": {
               "title": "String",
@@ -34922,7 +35202,7 @@
       "definitions": {
         "ComAlibabaCaigouBizApiCommonModelResultData": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:com.alibaba.caigou.biz.api.common.model.ResultData",
+          "description": "参考文档\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:com.alibaba.caigou.biz.api.common.model.ResultData",
           "properties": {
             "data": {
               "description": "参考文档",
@@ -34947,7 +35227,7 @@
           "definitions": {
             "ComAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:com.alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponse",
+              "description": "参考文档\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:com.alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponse",
               "properties": {
                 "requisitionResponseModels": {
                   "type": "array",
@@ -34960,7 +35240,7 @@
               "definitions": {
                 "ComAlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel": {
                   "type": "object",
-                  "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:com.alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponseModel",
+                  "description": "参考文档\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService.createMallRequisition,version:1,typeName:com.alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponseModel",
                   "properties": {
                     "erpReqItemNo": {
                       "title": "String",
@@ -35048,7 +35328,7 @@
       "definitions": {
         "AlibabaCaigouProductCoopProductFactoryModel": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.getProductFactory,version:1,typeName:alibaba.caigou.product.CoopProductFactoryModel",
+          "description": "物料工厂结果\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.getProductFactory,version:1,typeName:alibaba.caigou.product.CoopProductFactoryModel",
           "properties": {
             "id": {
               "title": "Long",
@@ -35241,7 +35521,7 @@
       "definitions": {
         "AlibabaCaigouBizApiCooperParamOpenCreateRequisitionItemParam": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.param.OpenCreateRequisitionItemParam",
+          "description": "请购单行列表\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.param.OpenCreateRequisitionItemParam",
           "properties": {
             "ErpReqTrackNo": {
               "title": "String",
@@ -35412,7 +35692,7 @@
       "definitions": {
         "AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponse": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponse",
+          "description": "返回数据实例\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponse",
           "properties": {
             "requisitionResponseModels": {
               "type": "array",
@@ -35425,7 +35705,7 @@
           "definitions": {
             "AlibabaCaigouBizApiCooperModelOpenCreateRequisitionResponseModel": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponseModel",
+              "description": "返回模型\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService,version:1,typeName:alibaba.caigou.biz.api.cooper.model.OpenCreateRequisitionResponseModel",
               "properties": {
                 "erpReqItemNo": {
                   "title": "String",
@@ -35492,7 +35772,7 @@
       "definitions": {
         "AlibabaProcurementApiSettlementIntegrationModelIntegrationSettlementModel": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerSettlementService.querySettlementNote,version:1,typeName:alibaba.procurement.api.settlement.integration.model.IntegrationSettlementModel",
+          "description": "接口返回的数据（结算单模型）\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerSettlementService.querySettlementNote,version:1,typeName:alibaba.procurement.api.settlement.integration.model.IntegrationSettlementModel",
           "properties": {
             "autoSettle": {
               "title": "Boolean",
@@ -35697,7 +35977,7 @@
           "definitions": {
             "AlibabaProcurementApiSettlementInteractiveModelProcurementSettleEntryModel": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerSettlementService.querySettlementNote,version:1,typeName:alibaba.procurement.api.settlement.interactive.model.ProcurementSettleEntryModel",
+              "description": "结算子单列表\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerSettlementService.querySettlementNote,version:1,typeName:alibaba.procurement.api.settlement.interactive.model.ProcurementSettleEntryModel",
               "properties": {
                 "brand": {
                   "title": "String",
@@ -35899,7 +36179,7 @@
               "definitions": {
                 "ComAlibabaProcurementApiSettlementIntegrationModelIntegrationSettlementEntryExtendsModel": {
                   "type": "object",
-                  "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerSettlementService.querySettlementNote,version:1,typeName:com.alibaba.procurement.api.settlement.integration.model.IntegrationSettlementEntryExtendsModel",
+                  "description": "扩展属性\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerSettlementService.querySettlementNote,version:1,typeName:com.alibaba.procurement.api.settlement.integration.model.IntegrationSettlementEntryExtendsModel",
                   "properties": {
                     "subject": {
                       "title": "String",
@@ -36156,7 +36436,7 @@
       "definitions": {
         "AlibabaCaigouProductBatchAddOrUpdateProductFactoryResult": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateProductFactory,version:1,typeName:alibaba.caigou.product.BatchAddOrUpdateProductFactoryResult",
+          "description": "批量操作结果\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateProductFactory,version:1,typeName:alibaba.caigou.product.BatchAddOrUpdateProductFactoryResult",
           "properties": {
             "successNum": {
               "title": "Integer",
@@ -36181,7 +36461,7 @@
           "definitions": {
             "AlibabaCaigouProductFailedAddOrUpdateProductFactoryResult": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateProductFactory,version:1,typeName:alibaba.caigou.product.FailedAddOrUpdateProductFactoryResult",
+              "description": "失败记录列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchAddOrUpdateProductFactory,version:1,typeName:alibaba.caigou.product.FailedAddOrUpdateProductFactoryResult",
               "properties": {
                 "errorMsg": {
                   "title": "String",
@@ -36233,7 +36513,7 @@
       "definitions": {
         "AlibabaProcurementApiSettlementIntegrationParamCreatePaymentDetail": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerPayService.createPayNote,version:1,typeName:alibaba.procurement.api.settlement.integration.param.CreatePaymentDetail",
+          "description": "付款明细\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerPayService.createPayNote,version:1,typeName:alibaba.procurement.api.settlement.integration.param.CreatePaymentDetail",
           "properties": {
             "amount": {
               "title": "String",
@@ -36401,7 +36681,7 @@
       "definitions": {
         "CaigouDomainProductProductAttribute": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:caigou.domain.product.ProductAttribute",
+          "description": "属性列表\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:caigou.domain.product.ProductAttribute",
           "properties": {
             "name": {
               "title": "String",
@@ -36430,7 +36710,7 @@
         },
         "ComAlibabaCaigouApiProductModelProductImage": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:com.alibaba.caigou.api.product.model.ProductImage",
+          "description": "产品图片\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.product.queryProductById,version:1,typeName:com.alibaba.caigou.api.product.model.ProductImage",
           "properties": {
             "imageUrl": {
               "title": "String",
@@ -36468,7 +36748,7 @@
       "definitions": {
         "AlibabaProcurementApiReturngoodsBasicModelReturnGoodsModel": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerReturnGoodsService.queryReturnGoodsNote,version:1,typeName:alibaba.procurement.api.returngoods.basic.model.ReturnGoodsModel",
+          "description": "返回数据\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerReturnGoodsService.queryReturnGoodsNote,version:1,typeName:alibaba.procurement.api.returngoods.basic.model.ReturnGoodsModel",
           "properties": {
             "buyerInsideRemark": {
               "title": "String",
@@ -36625,7 +36905,7 @@
           "definitions": {
             "AlibabaProcurementApiReturngoodsBasicModelReturnGoodsEntryModel": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerReturnGoodsService.queryReturnGoodsNote,version:1,typeName:alibaba.procurement.api.returngoods.basic.model.ReturnGoodsEntryModel",
+              "description": "退货子单列表\r\n\r\n namespace:cn.alibaba.open,apiname:com.alibaba.procurement.BuyerReturnGoodsService.queryReturnGoodsNote,version:1,typeName:alibaba.procurement.api.returngoods.basic.model.ReturnGoodsEntryModel",
               "properties": {
                 "brand": {
                   "title": "String",
@@ -36836,7 +37116,7 @@
         "certifications": {
           "title": "DictionaryOfStringAndString",
           "type": "object",
-          "description": "供应商资质证书 {\n\tkey包含:businessLicence;taxRegistration;taxRegistrationBackUp;OrganizationCode;approvalOfForeignInvestmentEnterprises;icpLicence;productLicence;otherLicence;\nvalue 为List&lt;供应商资质证书&gt;类型:List的泛型请参见 domain:供应商资质证书\nkey的名字解释.\n\t营业执照 : businessLicence;\n\t税务登记证 : taxRegistration;\n\t税务登记证副本 : taxRegistrationBackUp;\n\t组织结构代码证 : OrganizationCode;\n\t外商投资企业批准证书 : approvalOfForeignInvestmentEnterprises;\n\t经营许可类证书列表（支持多个）: icpLicence;\n\t产品类证书列表（支持多个）:\tproductLicence;\n\t其他类证书列表（支持多个）:\totherLicence;\n}"
+          "description": "供应商资质证书 {\n\tkey包含:businessLicence;taxRegistration;taxRegistrationBackUp;OrganizationCode;approvalOfForeignInvestmentEnterprises;icpLicence;productLicence;otherLicence;\nvalue 为List供应商资质证书类型:List的泛型请参见 domain:供应商资质证书\nkey的名字解释.\n\t营业执照 : businessLicence;\n\t税务登记证 : taxRegistration;\n\t税务登记证副本 : taxRegistrationBackUp;\n\t组织结构代码证 : OrganizationCode;\n\t外商投资企业批准证书 : approvalOfForeignInvestmentEnterprises;\n\t经营许可类证书列表（支持多个）: icpLicence;\n\t产品类证书列表（支持多个）:\tproductLicence;\n\t其他类证书列表（支持多个）:\totherLicence;\n}"
         },
         "loginId": {
           "title": "String",
@@ -36847,7 +37127,7 @@
       "definitions": {
         "CompanyInfo": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:CompanyInfo",
+          "description": "供应商公司信息{\n\t诚信通会员标识;\n\t政府邀约供应商标识;\n\t工商注册信息{\n\t\t公司名字;\n\t\t法定代表人/负责人;\n\t\t公司注册地址;\n\t\t工商注册号;\n\t\t公司类型;\n\t\t成立日期;\n\t\t注册资本;\n\t\t登记机关;\n\t\t营业期限;\n\t\t经营范围\n\t}\n}\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:CompanyInfo",
           "properties": {
             "tp": {
               "title": "Boolean",
@@ -36880,7 +37160,7 @@
           "definitions": {
             "IndustrialAndCommercialRegistrationInfo": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:IndustrialAndCommercialRegistrationInfo",
+              "description": "工商注册信息{公司名字,法定代表人/负责人,公司注册地址,工商注册号,公司类型,成立日期,注册资本,登记机关,营业期限,经营范围}\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:IndustrialAndCommercialRegistrationInfo",
               "properties": {
                 "name": {
                   "title": "String",
@@ -36948,7 +37228,7 @@
         },
         "BusinessInfo": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:BusinessInfo",
+          "description": "供应商经营信息{\n    经营模式;\n    主营行业;\n    主营产品/服务;\n    品牌名称;\n    经营地址\n}\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:BusinessInfo",
           "properties": {
             "businessModel": {
               "title": "String",
@@ -36987,7 +37267,7 @@
         },
         "BusinessAbility": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:BusinessAbility",
+          "description": "供应商经营能力{\n    员工人数;\n    90天累计成交笔数;\n    为名企供过货;\n    支持买家保障;\n    支持增值税发票;\n    支持支付宝;\n    支付宝类型;\n    为淘宝卖家供过货;\n    90天累计成交买家数\n}\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:BusinessAbility",
           "properties": {
             "employeesCount": {
               "title": "String",
@@ -37040,7 +37320,7 @@
         },
         "CompanyCredit": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:CompanyCredit",
+          "description": "供应商公司信用{\n    认证类型;\n    供应等级;\n    描述相符;\n    服务态度;\n    到货速度;\n    180天买家评论;\n    90天平均发货速度;\n    90天退款率;\n    90天投诉率;\n}\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:CompanyCredit",
           "properties": {
             "authType": {
               "title": "String",
@@ -37099,7 +37379,7 @@
         },
         "ContactInfo": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:ContactInfo",
+          "description": "供应商联系方式{\n    姓名;\n    手机;\n    性别;\n    电话;\n}\r\n\r\n namespace:cn.alibaba.open,apiname:caigou.api.supplier.getSupplier,version:1,typeName:ContactInfo",
           "properties": {
             "name": {
               "title": "String",
@@ -37212,7 +37492,7 @@
       "definitions": {
         "AlibabaCaigouProductBatchFreezeProductFactoryResult": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchFreezeProductFactory,version:1,typeName:alibaba.caigou.product.BatchFreezeProductFactoryResult",
+          "description": "批量操作结果\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchFreezeProductFactory,version:1,typeName:alibaba.caigou.product.BatchFreezeProductFactoryResult",
           "properties": {
             "successNum": {
               "title": "Integer",
@@ -37237,7 +37517,7 @@
           "definitions": {
             "AlibabaCaigouProductFailedFreezeProductFactoryResult": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchFreezeProductFactory,version:1,typeName:alibaba.caigou.product.FailedFreezeProductFactoryResult",
+              "description": "失败记录列表\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.caigou.product.batchFreezeProductFactory,version:1,typeName:alibaba.caigou.product.FailedFreezeProductFactoryResult",
               "properties": {
                 "errorMsg": {
                   "title": "String",
@@ -37477,7 +37757,7 @@
           "definitions": {
             "ComAlibabaCaigouApiCommonModelPurchaseNoteItem": {
               "type": "object",
-              "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.open.caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.PurchaseNoteItem",
+              "description": "询价单条目\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.open.caigou.api.buyOffer.getBuyOfferById,version:1,typeName:com.alibaba.caigou.api.common.model.PurchaseNoteItem",
               "properties": {
                 "subject": {
                   "title": "String",
@@ -37672,7 +37952,7 @@
       "definitions": {
         "AlibabaLstStockOperateResult": {
           "type": "object",
-          "description": "\r\n namespace:cn.alibaba.open,apiname:alibaba.lst.item.setStock,version:1,typeName:alibaba.lst.stockOperateResult",
+          "description": "修改结果\r\n\r\n namespace:cn.alibaba.open,apiname:alibaba.lst.item.setStock,version:1,typeName:alibaba.lst.stockOperateResult",
           "properties": {
             "itemId": {
               "title": "String",

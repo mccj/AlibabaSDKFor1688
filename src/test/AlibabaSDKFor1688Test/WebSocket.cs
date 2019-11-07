@@ -10,8 +10,8 @@ namespace AlibabaSDKFor1688Test
     public class WebSocket111
     {
 
-        [Fact]
-        public  void Test1()
+        [Fact(Skip = "跳过")]
+        public void Test1()
         {
             //try
             //{
@@ -25,11 +25,22 @@ namespace AlibabaSDKFor1688Test
             //}
 
 
-            var ddddd = new AlibabaWebSocketClient(ClientInfo.ClientId, ClientInfo.ClientSecret, (d, f) =>
+            var ddddd = new AlibabaWebSocketClient(ClientInfo.ClientId, ClientInfo.ClientSecret)
             {
-                System.Diagnostics.Debug.WriteLine((d == MsgSource.MOCK ? "测试数据" : "生产数据") + "   " + f.Type + "   " + f.TypeDescription + "   " + f.UserInfo+"   "+f.ToJson());
-                return true;
-            });
+                ReceivedMessageFunc = (msgSource, data) =>
+                {
+                    System.Diagnostics.Debug.WriteLine((msgSource == MsgSource.MOCK ? "测试数据" : "生产数据") + "   " + data.Type + "   " + data.TypeDescription + "   " + data.UserInfo + "   " + data.ToJson());
+                    return true;
+                },
+                SystemInfoFunc = (msgSource, msg) =>
+                {
+                    System.Diagnostics.Debug.WriteLine((msgSource == MsgSource.MOCK ? "测试数据" : "生产数据") + "    系统消息:" + msg);
+                },
+                Loglogger = (logType, log, ex) =>
+                {
+                    System.Diagnostics.Debug.WriteLine("日志信息:" + log + ";   " + ex?.Message);
+                }
+            };
             ddddd.Connect();
 
 
@@ -58,90 +69,14 @@ namespace AlibabaSDKFor1688Test
             System.Threading.Thread.Sleep(1000 * 10 * 10 * 100 * 100);
         }
 
-        //[Fact]
-        //public void dddd()
-        //{
-        //    var sss = new AlibabaWebSocketClient("", "", null);
-        //    var dddd = sss.GetReceivedMessageData("CAIGOU_MSG_MALL_GOODS", "{}");
-        //}
-        //private string sign(WebSocketMessage tm, string secret)
-        //{
-        //    var query = new System.Text.StringBuilder(secret);
-        //    query.Append(tm.appKey);
-        //    //query.Append(tm.content);
-        //    query.Append(tm.pubTime);
-        //    byte[] bytes = encryptMD5(query.ToString());
-
-        //    return AlibabaSDK.Utility.SignatureHelper.ToHex(bytes);
-        //}
-
-        //private byte[] encryptMD5(string dd)
-        //{
-        //    var md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
-        //    var r = md5.ComputeHash(System.Text.Encoding.UTF8.GetBytes(dd));
-        //    return r;
-        //}
+        [Fact]
+        public void dddd()
+        {
+            var dddd = AlibabaWebSocketClient.GetReceivedMessageData("CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER", "{data:{buyOfferId:0,SubUserId:0}}");
+            dynamic ee = dddd;
+            var sss = ee.Data as AlibabaSDK.WebSocketModels.CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER;
+            Assert.NotNull(sss);
+        }
     }
 
-    //public class WebSocketMessage
-    //{
-    //    //      /**
-    //    //* 系统内部字段
-    //    //*/
-    //    //      private long relatedId;
-
-    //    //      private long relatedMsgTime;
-
-    //    /**
-    //     * 应用 AppKey
-    //     */
-    //    public String appKey { get; set; }
-
-    //    /**
-    //     * 应用 AppSecret
-    //     */
-    //    String secret;
-
-    //    /**
-    //     * webocket消息类型
-    //     */
-    //    public string type { get; set; }
-
-    //    ///**
-    //    // * 消息id
-    //    // */
-    //    //private String id;
-
-    //    ///**
-    //    // * 消息推送时间
-    //    // */
-    //    public long pubTime { get; set; }
-
-    //    ///**
-    //    // * 消息内容，json串格式
-    //    // */
-    //    //private String content;
-
-    //    ///**
-    //    // * 签名
-    //    // */
-    //    public String sign { get; set; }
-
-    //    ///**
-    //    // * isv端消息处理耗时
-    //    // */
-    //    //private long costInIsv;
-
-    //    ///**
-    //    // * 数据来源。包括
-    //    // * MOCK: 测试数据。使用消息测试工具产生。
-    //    // * REAL: 真实数据。此字段为空时默认为真实数据。
-    //    // */
-    //    //private String msgSource;
-    //}
-
-    //public enum WebSocketMessageType
-    //{
-    //    CONNECT, CONNECT_ACK, HEARTBEAT, CONFIRM, SERVER_PUSH, CLIENT_PUSH, CLOSE, SYSTEM
-    //}
 }

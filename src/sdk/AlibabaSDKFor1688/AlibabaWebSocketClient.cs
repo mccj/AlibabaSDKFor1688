@@ -7,26 +7,55 @@ namespace AlibabaSDK
 {
     public partial class AlibabaWebSocketClient
     {
-        private readonly Logger logger = new Logger();
         private readonly string _appKey;
         private string _clientSecret;
-        Func<MsgSource, ReceivedMessageDataBase, bool> _func;
         private System.Net.WebSockets.ClientWebSocket clientWebSocket = null;
+        private JsonSerializerSettings serializerSettings;
 
-        public AlibabaWebSocketClient(string appKey, string clientSecret, Func<MsgSource, ReceivedMessageDataBase, bool> func)
+        public AlibabaWebSocketClient(string appKey, string clientSecret)
         {
+            serializerSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+
             this._appKey = appKey;
             this._clientSecret = clientSecret;
-            _func = func;
+        }
+        public Func<MsgSource, ReceivedMessageDataBase, bool> ReceivedMessageFunc { get; set; }
+        public Action<MsgSource, string> SystemInfoFunc { get; set; }
+        public Action<LogType, string, Exception> Loglogger { get; set; }
+        public Action<AlibabaWebSocketClient, bool> ConnectStateChange { get; set; }
+        private void Log(LogType logType, string log, Exception ex = null)
+        {
+            if (Loglogger != null)
+            {
+                try
+                {
+                    Loglogger(logType, log, ex);
+                }
+                catch (Exception logex)
+                {
+                }
+            }
+            else
+                System.Diagnostics.Debug.WriteLine(logType + " " + log + " " + ex.Message);
         }
 
-
-        public bool IsConnect { get; private set; } = false;
+        private bool ____isConnect = false;
+        public bool IsConnect
+        {
+            get { return this.____isConnect; }
+            private set
+            {
+                if (this.____isConnect != value) ConnectStateChange?.Invoke(this, value);
+                this.____isConnect = value;
+            }
+        }
 
         public async void Connect(System.Threading.CancellationToken? token = null)
         {
             var _token = token ?? GetDefaultCancellationToken();
-            logger.Log("开始连接服务器");
+            if (ReceivedMessageFunc == null) throw (new ArgumentNullException(nameof(ReceivedMessageFunc)));
+
+            Log(LogType.Info, "开始连接服务器");
 
             if (!this._isConnect)
                 clientWebSocket = new System.Net.WebSockets.ClientWebSocket();
@@ -46,8 +75,8 @@ namespace AlibabaSDK
                             if (result.EndOfMessage)
                             {
                                 var json = System.Text.Encoding.UTF8.GetString(buffer.Array, 0, result.Count);
-                                var receivedMessage = Newtonsoft.Json.JsonConvert.DeserializeObject<ReceivedMessage>(json);
-                                logger.Log("接收到消息，类型:" + receivedMessage.Type);
+                                var receivedMessage = Newtonsoft.Json.JsonConvert.DeserializeObject<ReceivedMessage>(json, serializerSettings);
+                                Log(LogType.Info, "接收到消息，类型:" + receivedMessage.Type);
                                 if (receivedMessage.Type == WebSocketMessageType.CONNECT_ACK)
                                 {
                                     IsConnect = true;
@@ -59,23 +88,27 @@ namespace AlibabaSDK
                                     {
                                         try
                                         {
-                                            var b = Newtonsoft.Json.JsonConvert.DeserializeObject<ReceivedMessageDataBaseType>(receivedMessage.Content);
+                                            var b = Newtonsoft.Json.JsonConvert.DeserializeObject<ReceivedMessageDataBaseType>(receivedMessage.Content, serializerSettings);
                                             var ss = GetReceivedMessageData(b.Type, receivedMessage.Content);
-                                            var r = _func?.Invoke(receivedMessage.MsgSource, ss);
+                                            var r = ReceivedMessageFunc?.Invoke(receivedMessage.MsgSource, ss);
                                             if (r == true)
                                                 sendConfirm(receivedMessage, _token);
                                         }
                                         catch (Exception ex)
                                         {
-                                            logger.Log("处理消息异常", ex);
+                                            Log(LogType.Error, "处理消息异常", ex);
                                         }
                                     });
+                                }
+                                else if (receivedMessage.Type == WebSocketMessageType.SYSTEM)
+                                {
+                                    SystemInfoFunc?.Invoke(receivedMessage.MsgSource, receivedMessage.Content);
                                 }
                                 else
                                 {
 
-                                    logger.Log("接收到其他消息，--------------------------------------------------类型:" + receivedMessage.Type);
-                                    throw new Exception("异常");
+                                    Log(LogType.Error, "接收到其他消息，--------------------------------------------------类型:" + receivedMessage.Type);
+                                    //throw new Exception("异常");
                                 }
                             }
                             else
@@ -98,9 +131,8 @@ namespace AlibabaSDK
                     }
                     catch (Exception ex)
                     {
-                        throw new Exception("异常", ex);
-
-                        //throw;
+                        Log(LogType.Error, "接收数据异常", ex);
+                        //throw new Exception("异常", ex);
                     }
                 }
             });
@@ -112,7 +144,7 @@ namespace AlibabaSDK
         {
             var _token = token ?? GetDefaultCancellationToken();
 
-            logger.Log("开始断开连接服务器");
+            Log(LogType.Info, "开始断开连接服务器");
 
             if (this._isConnect)
                 await clientWebSocket.CloseAsync(System.Net.WebSockets.WebSocketCloseStatus.NormalClosure, "", _token);
@@ -121,7 +153,7 @@ namespace AlibabaSDK
         {
             var _token = token ?? GetDefaultCancellationToken();
 
-            logger.Log("重新链接");
+            Log(LogType.Info, "重新链接");
 
             //链接已经断开，重新链接
             if (!this._isConnect)
@@ -148,15 +180,15 @@ namespace AlibabaSDK
                 return r;
             }
         }
-        public object lockSend = new object();
+        private object lockSend = new object();
         private void send(object d, System.Threading.CancellationToken token)
         {
             try
             {
                 if (this._isConnect)
                 {
-                    var vvv = Newtonsoft.Json.JsonConvert.SerializeObject(d);
-                    logger.Log("发送消息，数据:" + vvv);
+                    var vvv = Newtonsoft.Json.JsonConvert.SerializeObject(d, serializerSettings);
+                    Log(LogType.Info, "发送消息，数据:" + vvv);
                     lock (lockSend)
                     {
                         clientWebSocket.SendAsync(new ArraySegment<byte>(System.Text.Encoding.UTF8.GetBytes(vvv)), System.Net.WebSockets.WebSocketMessageType.Text, true, token).Wait();
@@ -164,12 +196,12 @@ namespace AlibabaSDK
                 }
                 else
                 {
-                    logger.Log("发送消息，发现链接关闭");
+                    Log(LogType.Error, "发送消息，发现链接关闭");
                 }
             }
             catch (Exception ex)
             {
-                logger.Log("发送消息时产生异常，" + ex.Message);
+                Log(LogType.Error, "发送消息时产生异常，" + ex.Message);
 
                 //throw;
             }
@@ -180,29 +212,32 @@ namespace AlibabaSDK
         /// </summary>
         private void sendHeartbeat(System.Threading.CancellationToken token)
         {
-            timerSendHeartbeat = new System.Threading.Timer(f =>
+            if (timerSendHeartbeat == null)
             {
-                if (!this._isConnect)
-                    timerSendHeartbeat.Change(System.Threading.Timeout.Infinite, System.Threading.Timeout.Infinite);
-                else
+                timerSendHeartbeat = new System.Threading.Timer(f =>
                 {
-                    logger.Log("发送心跳请求");
-                    var wsm = new WebSocketMessage
+                    if (!this._isConnect)
+                        timerSendHeartbeat.Change(System.Threading.Timeout.Infinite, System.Threading.Timeout.Infinite);
+                    else
                     {
-                        AppKey = _appKey,
-                        Type = WebSocketMessageType.HEARTBEAT,
-                        PubTime = AlibabaSDK.Utility.DateTimeHelper.GetCurrentTimestamp(),
-                    };
-                    wsm.Sign = sign(wsm, _clientSecret);
-                    send(wsm, token);
-                }
-            }, null,
-            System.Threading.Timeout.Infinite,
-            System.Threading.Timeout.Infinite
-            );
+                        Log(LogType.Info, "发送心跳请求");
+                        var wsm = new WebSocketMessage
+                        {
+                            AppKey = _appKey,
+                            Type = WebSocketMessageType.HEARTBEAT,
+                            PubTime = AlibabaSDK.Utility.DateTimeHelper.GetCurrentTimestamp(),
+                        };
+                        wsm.Sign = sign(wsm, _clientSecret);
+                        send(wsm, token);
+                    }
+                }, null,
+                System.Threading.Timeout.Infinite,
+                System.Threading.Timeout.Infinite
+                );
+            }
 
-            //var FETCH_PERIOD = 5;
-            timerSendHeartbeat.Change(1000L, 1000L);
+            var FETCH_PERIOD = 30;
+            timerSendHeartbeat.Change(FETCH_PERIOD * 1000L, FETCH_PERIOD * 1000L);
         }
         /// <summary>
         /// 发送链接请求
@@ -211,7 +246,7 @@ namespace AlibabaSDK
         /// <param name="secret"></param>
         private void sendConnect(System.Threading.CancellationToken token)
         {
-            logger.Log("发送链接请求");
+            Log(LogType.Info, "发送链接请求");
             var wsm = new WebSocketMessage
             {
                 AppKey = _appKey,
@@ -229,7 +264,7 @@ namespace AlibabaSDK
         {
             if (this._isConnect)
             {
-                logger.Log("发送接收确认信息" + message.Id);
+                Log(LogType.Info, "发送接收确认信息" + message.Id);
                 var wsm = new WebSocketMessage
                 {
                     AppKey = _appKey,
@@ -268,11 +303,25 @@ namespace AlibabaSDK
             var r = md5.ComputeHash(System.Text.Encoding.UTF8.GetBytes(dd));
             return r;
         }
-
-        private ReceivedMessageDataBase GetReceivedMessageData(TypeDescription type, string content)
+        public static ReceivedMessageDataBase GetReceivedMessageData(string type, string content)
         {
+            if (Enum.TryParse<TypeDescription>(type, out var typeDescription))
+                return GetReceivedMessageData(typeDescription, content);
+            else
+                return null;
+        }
+        private static System.Collections.Generic.Dictionary<TypeDescription, string> _getTypeClass;
+        public static ReceivedMessageDataBase GetReceivedMessageData(TypeDescription type, string content)
+        {
+            if (_getTypeClass == null)
+            {
+                var s = new TypeDescriptionJson().JsonClass;
+                _getTypeClass = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Collections.Generic.Dictionary<TypeDescription, string>>(s);
+            }
+            var typeKey = _getTypeClass[type];
+
             var dddtype = typeof(ReceivedMessageData<>);
-            var mtype = dddtype.Assembly.GetType("AlibabaSDK.WebSocketModels." + type.ToString(), false) ?? typeof(object);
+            var mtype = dddtype.Assembly.GetType("AlibabaSDK.WebSocketModels." + typeKey, false) ?? typeof(object);
             var ssss = dddtype.MakeGenericType(mtype);
             return Newtonsoft.Json.JsonConvert.DeserializeObject(content, ssss) as ReceivedMessageDataBase;
 
@@ -356,7 +405,35 @@ namespace AlibabaSDK
 
     enum WebSocketMessageType
     {
-        CONNECT, CONNECT_ACK, HEARTBEAT, CONFIRM, SERVER_PUSH, CLIENT_PUSH, CLOSE, SYSTEM
+        /// <summary>
+        /// 客户端发起建连请求 	
+        /// </summary>
+        CONNECT,
+        /// <summary>
+        /// 服务端建连成功返回	
+        /// </summary>
+        CONNECT_ACK,
+        /// <summary>
+        /// 客户端心跳	
+        /// </summary>
+        HEARTBEAT,
+        /// <summary>
+        /// 客户端消息消费成功确认	
+        /// </summary>
+        CONFIRM,
+        /// <summary>
+        /// 服务端消息推送	
+        /// </summary>
+        SERVER_PUSH,
+        CLIENT_PUSH,
+        /// <summary>
+        /// 链接关闭	
+        /// </summary>
+        CLOSE,
+        /// <summary>
+        /// 服务端异常
+        /// </summary>
+        SYSTEM
     }
     public enum MsgSource
     {
@@ -370,12 +447,10 @@ namespace AlibabaSDK
         MOCK
 
     }
-    class Logger
+    public enum LogType
     {
-        public void Log(string v, Exception ex = null)
-        {
-            //System.Diagnostics.Debug.WriteLine(v);
-        }
+        Info,
+        Error
     }
 
     namespace WebSocketModels
@@ -426,7 +501,7 @@ namespace AlibabaSDK
             {
                 if (_getTypeDescription == null)
                 {
-                    var s = new TypeDescriptionJson().Json;
+                    var s = new TypeDescriptionJson().JsonDescription;
                     _getTypeDescription = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Collections.Generic.Dictionary<TypeDescription, string>>(s);
                 }
                 if (_getTypeDescription != null && _getTypeDescription.ContainsKey(type)) return _getTypeDescription[type];
