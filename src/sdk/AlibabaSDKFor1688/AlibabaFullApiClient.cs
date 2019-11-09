@@ -1,4 +1,5 @@
 ﻿using AlibabaSDK.Utility;
+using Newtonsoft.Json;
 using System;
 using System.Linq;
 using System.Net.Http;
@@ -13,7 +14,6 @@ namespace AlibabaSDK
         {
             base.setAppKey(appKey, clientSecret);
         }
-
         partial void PrepareRequest(System.Net.Http.HttpClient client, System.Net.Http.HttpRequestMessage request, System.Text.StringBuilder urlBuilder)
         {
             base.PrepareRequest(client, request, urlBuilder);
@@ -25,6 +25,10 @@ namespace AlibabaSDK
         partial void UpdateJsonSerializerSettings(Newtonsoft.Json.JsonSerializerSettings settings)
         {
             base.UpdateJsonSerializerSettings(settings);
+        }
+        private string ConvertToString(object value, System.Globalization.CultureInfo cultureInfo)
+        {
+            return base.ConvertToString(value, cultureInfo, this.JsonSerializerSettings);
         }
     }
 }

@@ -236,7 +236,7 @@ namespace AlibabaSDK
                 );
             }
 
-            var FETCH_PERIOD = 30;
+            var FETCH_PERIOD = 20;
             timerSendHeartbeat.Change(FETCH_PERIOD * 1000L, FETCH_PERIOD * 1000L);
         }
         /// <summary>

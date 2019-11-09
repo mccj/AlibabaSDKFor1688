@@ -26,5 +26,9 @@ namespace AlibabaSDK
         {
             base.UpdateJsonSerializerSettings(settings);
         }
+        private string ConvertToString(object value, System.Globalization.CultureInfo cultureInfo)
+        {
+            return base.ConvertToString(value, cultureInfo, this.JsonSerializerSettings);
+        }
     }
 }

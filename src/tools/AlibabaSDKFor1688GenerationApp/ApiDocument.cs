@@ -607,6 +607,7 @@ namespace ConsoleApp2
             //settings.CodeGeneratorSettings.TemplateDirectory = "";
             settings.CodeGeneratorSettings.GenerateDefaultValues = true;
             settings.CodeGeneratorSettings.PropertyNameGenerator = new MyCSharpPropertyNameGenerator();
+            settings.CodeGeneratorSettings.TemplateDirectory = @"D:\Users\mccj\Source\Repos\AlibabaSDKFor1688\src\tools\AlibabaSDKFor1688GenerationApp\Templates";
 
             var generator = new CSharpClientGenerator(document, settings);
             var code = generator.GenerateFile();

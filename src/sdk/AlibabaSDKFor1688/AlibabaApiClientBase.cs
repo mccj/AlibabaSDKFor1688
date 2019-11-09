@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 
 namespace AlibabaSDK
 {
-   public  partial class AlibabaApiClientBase
+    public abstract partial class AlibabaApiClientBase
     {
         private string _appKey;
         private string _accessToken;
@@ -118,6 +118,55 @@ namespace AlibabaSDK
             //"yyyyMMddHHmmssfff"
             settings.DateFormatString = "yyyyMMddHHmmssfffzzz";
         }
+        internal string ConvertToString(object value, System.Globalization.CultureInfo cultureInfo, Newtonsoft.Json.JsonSerializerSettings settings)
+        {
+            if (value is string)
+            {
+                return value as string;
+            }
+            else if (value is System.DateTimeOffset || value is System.DateTime)
+            {//将时间格式化成 yyyyMMddHHmmssSSS 字符串
+                return ((System.DateTimeOffset)value).ToString(settings.DateFormatString).Replace(":", "");
+            }
+            else
+            {
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(value, settings);
+                return json;
+            }
+            //if (value is System.Enum)
+            //{
+            //    string name = System.Enum.GetName(value.GetType(), value);
+            //    if (name != null)
+            //    {
+            //        var field = System.Reflection.IntrospectionExtensions.GetTypeInfo(value.GetType()).GetDeclaredField(name);
+            //        if (field != null)
+            //        {
+            //            var attribute = System.Reflection.CustomAttributeExtensions.GetCustomAttribute(field, typeof(System.Runtime.Serialization.EnumMemberAttribute))
+            //                as System.Runtime.Serialization.EnumMemberAttribute;
+            //            if (attribute != null)
+            //            {
+            //                return attribute.Value != null ? attribute.Value : name;
+            //            }
+            //        }
+            //    }
+            //}
+            //else if (value is bool)
+            //{
+            //    return System.Convert.ToString(value, cultureInfo).ToLowerInvariant();
+            //}
+            //else if (value is byte[])
+            //{
+            //    return System.Convert.ToBase64String((byte[])value);
+            //}
+            //else if (value != null && value.GetType().IsArray)
+            //{
+            //    var array = System.Linq.Enumerable.OfType<object>((System.Array)value);
+            //    return string.Join(",", System.Linq.Enumerable.Select(array, o => ConvertToString(o, cultureInfo, settings)));
+            //}
+
+            //return System.Convert.ToString(value, cultureInfo);
+        }
+
         private System.Collections.Specialized.NameValueCollection ParseQueryString(string query)
         {
             var nv = new System.Collections.Specialized.NameValueCollection();
