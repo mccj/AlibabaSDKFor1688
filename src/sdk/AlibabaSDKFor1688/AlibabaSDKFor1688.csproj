@@ -17,7 +17,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup>  
+    
     <Compile Update="AlibabaFullApiClient.cs">
       <DependentUpon>AlibabaFullApiClient.json</DependentUpon>
     </Compile>
@@ -27,6 +28,10 @@
     <Compile Update="AlibabaFullApiClientModelsGeneration.cs">
       <DependentUpon>AlibabaFullApiClient.cs</DependentUpon>
     </Compile>
+    
+    <Compile Update="AlibabaStandardApiClientCustom.cs">
+      <DependentUpon>AlibabaStandardApiClient.json</DependentUpon>
+    </Compile>
     <Compile Update="AlibabaStandardApiClient.cs">
       <DependentUpon>AlibabaStandardApiClient.json</DependentUpon>
     </Compile>
@@ -35,7 +40,8 @@
     </Compile>
     <Compile Update="AlibabaStandardApiClientModelsGeneration.cs">
       <DependentUpon>AlibabaStandardApiClient.cs</DependentUpon>
-    </Compile>   
+    </Compile>
+    
     <Compile Update="AlibabaWebSocketClient.cs">
       <DependentUpon>AlibabaWebSocketClient.json</DependentUpon>
     </Compile>

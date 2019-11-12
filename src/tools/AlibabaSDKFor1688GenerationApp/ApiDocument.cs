@@ -27,12 +27,12 @@ namespace ConsoleApp2
             var document = new OpenApiDocument();
 
             document.Servers.Add(new OpenApiServer { Url = "https://gw.open.1688.com/" });
-            Task<eeeeeeeee>[] publicApiDetails;
+            System.Collections.Generic.List<Task<eeeeeeeee>> publicApiDetails;
             if (isFull)
             {
                 var publicAllApis = await AlibabaDataCache.ListPublicApiByCacheAsync();
                 var publicApis = publicAllApis.Data.GroupBy(f => new { f.Namespace, f.Name }).Select(f => new Datum { Name = f.Key.Name, Namespace = f.Key.Namespace, Version = f.Max(ff => ff.Version) }).ToArray();
-                publicApiDetails = publicApis.Select(async f => new eeeeeeeee { ApiInfo = f, ApiDetail = await AlibabaDataCache.GetApiDetailByCacheAsync(f.Namespace, f.Name, f.Version) })/*.Skip(587).Take(1)*/.ToArray();
+                publicApiDetails = publicApis.Select(async f => new eeeeeeeee { ApiInfo = f, ApiDetail = await AlibabaDataCache.GetApiDetailByCacheAsync(f.Namespace, f.Name, f.Version) })/*.Skip(587).Take(1)*/.ToList();
             }
             else
             {
@@ -42,14 +42,34 @@ namespace ConsoleApp2
                 {
                     ApiInfo = new Datum { Name = ff.Name, Namespace = ff.Name, Version = ff.Version },
                     ApiDetail = await AlibabaDataCache.GetApiDetailByCacheAsync(ff.Namespace, ff.Name, ff.Version)
-                })).ToArray();
+                })).ToList();
             }
+
+            var 另外添加 = new[] {
+                                //创建订单前预览数据接口
+                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.createOrder.previewWithOBUid", Version = 1 },
+                //跨境订单创建
+                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.trade.createCrossOrder", Version = 1 },
+                //查询订单可以支持的支付渠道
+                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.trade.payWay.query", Version = 1 },
+                //批量获取订单的支付链接
+                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.alipay.url.get", Version = 1 },
+                //获取使用跨境宝支付的支付链接
+                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.crossBorderPay.url.get", Version = 1 },
+                                   //获取使用诚e赊支付的支付链接
+                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.creditPay.url.get", Version = 1 }
+         };
+
+            publicApiDetails.AddRange(
+                另外添加.Select(async f => new eeeeeeeee { ApiInfo = f, ApiDetail = await AlibabaDataCache.GetApiDetailByCacheAsync(f.Namespace, f.Name, f.Version) })
+            );
+
             //publicApiDetails = publicApiDetails.Skip(15).Take(1).ToArray();
             var errorSchema = errorJsonSchemaResponse();
             document.Definitions.Add("ErrorResponse", errorSchema);
             document.Security = new[] { new OpenApiSecurityRequirement() { { "NeddAuth", new[] { "access_token" } } } };
 
-            for (int i = 0; i < publicApiDetails.Length; i++)
+            for (int i = 0; i < publicApiDetails.Count; i++)
             {
                 var publicApi = publicApiDetails[i].Result;
                 Console.WriteLine((i + 1) + "." + publicApi.ApiInfo.Namespace + ":" + publicApi.ApiInfo.Name + "-" + publicApi.ApiInfo.Version);

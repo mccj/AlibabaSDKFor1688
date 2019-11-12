@@ -17697,6 +17697,411 @@ namespace AlibabaSDK.StandardModels
     
     }
     
+    /// <summary>当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。
+    /// 
+    ///  namespace:com.alibaba.trade,apiname:alibaba.createOrder.previewWithOBUid,version:1,typeName:tradeModelExtensionList</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class TradeModelExtensionList2 
+    {
+        /// <summary>交易方式</summary>
+        [Newtonsoft.Json.JsonProperty("tradeWay", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string TradeWay { get; set; }
+    
+        /// <summary>交易方式名称</summary>
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+    
+        /// <summary>开放平台下单时候传入的tradeType</summary>
+        [Newtonsoft.Json.JsonProperty("tradeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string TradeType { get; set; }
+    
+        /// <summary>交易描述</summary>
+        [Newtonsoft.Json.JsonProperty("description", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Description { get; set; }
+    
+        /// <summary>是否支持</summary>
+        [Newtonsoft.Json.JsonProperty("opSupport", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? OpSupport { get; set; }
+    
+    
+    }
+    
+    /// <summary>订单预览结果，过自动拆单会返回多个记录
+    /// 
+    ///  namespace:com.alibaba.trade,apiname:alibaba.createOrder.previewWithOBUid,version:1,typeName:alibaba.createOrder.preview.result.model</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaCreateOrderPreviewResultModel2 
+    {
+        /// <summary>当前交易可以支持的交易方式列表。某些场景的创建订单接口需要使用。</summary>
+        [Newtonsoft.Json.JsonProperty("tradeModeNameList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<string> TradeModeNameList { get; set; }
+    
+        /// <summary>订单总费用, 单位为分.</summary>
+        [Newtonsoft.Json.JsonProperty("sumPayment", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? SumPayment { get; set; }
+    
+        /// <summary>返回信息</summary>
+        [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Message { get; set; }
+    
+        /// <summary>返回码</summary>
+        [Newtonsoft.Json.JsonProperty("resultCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ResultCode { get; set; }
+    
+        /// <summary>订单下单流程</summary>
+        [Newtonsoft.Json.JsonProperty("flowFlag", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string FlowFlag { get; set; }
+    
+        /// <summary>规格信息</summary>
+        [Newtonsoft.Json.JsonProperty("cargoList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCreateOrderPreviewResultCargoModel> CargoList { get; set; }
+    
+        /// <summary>可用店铺级别优惠列表</summary>
+        [Newtonsoft.Json.JsonProperty("shopPromotionList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaTradePromotionModel> ShopPromotionList { get; set; }
+    
+        /// <summary>当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。</summary>
+        [Newtonsoft.Json.JsonProperty("tradeModelList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<TradeModelExtensionList2> TradeModelList { get; set; }
+    
+    
+    }
+    
+    /// <summary> 
+    /// 创建订单前预览数据接口
+    /// 订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.
+    /// 
+    /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 
+    /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.createOrder.previewWithOBUid&amp;v=1 
+    ///  </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaCreateOrderPreviewWithOBUidResult 
+    {
+        /// <summary>订单预览结果，过自动拆单会返回多个记录</summary>
+        [Newtonsoft.Json.JsonProperty("orderPreviewResuslt", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaCreateOrderPreviewResultModel2> OrderPreviewResuslt { get; set; }
+    
+        /// <summary>是否成功</summary>
+        [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? Success { get; set; }
+    
+        /// <summary>错误码</summary>
+        [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErrorCode { get; set; }
+    
+        /// <summary>错误信息</summary>
+        [Newtonsoft.Json.JsonProperty("errorMsg", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErrorMsg { get; set; }
+    
+        /// <summary>运费说明的商品列表</summary>
+        [Newtonsoft.Json.JsonProperty("postFeeByDescOfferList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<long> PostFeeByDescOfferList { get; set; }
+    
+        /// <summary>代销商品列表</summary>
+        [Newtonsoft.Json.JsonProperty("consignOfferList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<long> ConsignOfferList { get; set; }
+    
+    
+    }
+    
+    /// <summary>账期信息，非账期支付订单返回空
+    /// 
+    ///  namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.trade.cross.period</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaTradeCrossPeriod 
+    {
+        /// <summary>账期的类型,1：一个月指定日期结算一次，3：两个月指定日期结算一次，6：三个月指定日期结算一次，5：按收货时间和账期日期结算</summary>
+        [Newtonsoft.Json.JsonProperty("tapType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int? TapType { get; set; }
+    
+        /// <summary>根据账期类型不同而不同，按月结算类型此值代表具体某日，按收货时间结算时此值代表结算时间周期</summary>
+        [Newtonsoft.Json.JsonProperty("tapDate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int? TapDate { get; set; }
+    
+        /// <summary>逾期次数</summary>
+        [Newtonsoft.Json.JsonProperty("tapOverdue", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public int? TapOverdue { get; set; }
+    
+    
+    }
+    
+    /// <summary>一次创建多个订单
+    /// 
+    ///  namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.tradeResult.BizSimpleOrder</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaTradeResultBizSimpleOrder 
+    {
+        /// <summary>运费</summary>
+        [Newtonsoft.Json.JsonProperty("postFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? PostFee { get; set; }
+    
+        /// <summary>订单实付款金额，单位为分</summary>
+        [Newtonsoft.Json.JsonProperty("orderAmmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? OrderAmmount { get; set; }
+    
+        /// <summary>描述信息</summary>
+        [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Message { get; set; }
+    
+        /// <summary>返回码</summary>
+        [Newtonsoft.Json.JsonProperty("resultCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ResultCode { get; set; }
+    
+        /// <summary>是否成功</summary>
+        [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? Success { get; set; }
+    
+        /// <summary>订单号</summary>
+        [Newtonsoft.Json.JsonProperty("orderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OrderId { get; set; }
+    
+    
+    }
+    
+    /// <summary>创建订单结果
+    /// 
+    ///  namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.trade.cross.result</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaTradeCrossResult 
+    {
+        /// <summary>订单总金额（单位分），一次创建多个订单时，该字段为空</summary>
+        [Newtonsoft.Json.JsonProperty("totalSuccessAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? TotalSuccessAmount { get; set; }
+    
+        /// <summary>订单ID，一次创建多个订单时，该字段为空</summary>
+        [Newtonsoft.Json.JsonProperty("orderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OrderId { get; set; }
+    
+        /// <summary>是否成功</summary>
+        [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? Success { get; set; }
+    
+        /// <summary>错误码</summary>
+        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Code { get; set; }
+    
+        /// <summary>错误信息</summary>
+        [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Message { get; set; }
+    
+        /// <summary>账期信息，非账期支付订单返回空</summary>
+        [Newtonsoft.Json.JsonProperty("accountPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public AlibabaTradeCrossPeriod AccountPeriod { get; set; }
+    
+        /// <summary>失败商品信息</summary>
+        [Newtonsoft.Json.JsonProperty("failedOfferList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaTradeFastOffer> FailedOfferList { get; set; }
+    
+        /// <summary>运费，单位：分，一次创建多个订单时，该字段为空</summary>
+        [Newtonsoft.Json.JsonProperty("postFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? PostFee { get; set; }
+    
+        /// <summary>一次创建多个订单</summary>
+        [Newtonsoft.Json.JsonProperty("orderList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaTradeResultBizSimpleOrder> OrderList { get; set; }
+    
+    
+    }
+    
+    /// <summary> 
+    /// 跨境订单创建
+    /// 跨境专用订单创建。创建订单最多允许100个SKU，且必须为同一个供应商的商品。超过50个SKU或者一些特殊情况会一次创建多个个订单并返回多个订单号。
+    /// 支持大市场及分销两个场景。根据当前授权用户,区分主子账号下单
+    /// 
+    /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createCrossOrder-1 
+    /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.createCrossOrder&amp;v=1 
+    ///  </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaTradeCreateCrossOrderResult 
+    {
+        /// <summary>创建订单结果</summary>
+        [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public AlibabaTradeCrossResult Result { get; set; }
+    
+        /// <summary>是否成功</summary>
+        [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? Success { get; set; }
+    
+        /// <summary>错误码</summary>
+        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Code { get; set; }
+    
+        /// <summary>错误信息</summary>
+        [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Message { get; set; }
+    
+    
+    }
+    
+    /// <summary>可用支付渠道列表
+    /// 
+    ///  namespace:com.alibaba.trade,apiname:alibaba.trade.payWay.query,version:1,typeName:alibaba.ocean.openplatform.biz.trade.result.PayTypeInfo</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaOceanOpenplatformBizTradeResultPayTypeInfo 
+    {
+        /// <summary>支付渠道编码，1:支付宝,3:诚e赊,4:对公转账,7:账期支付,15:银行转账,16:跨境宝,20:跨境宝</summary>
+        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? Code { get; set; }
+    
+        /// <summary>支付渠道名称，1:支付宝,3:诚e赊,4:对公转账,7:账期支付,15:银行转账,16:跨境宝,20:跨境宝</summary>
+        [Newtonsoft.Json.JsonProperty("name", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Name { get; set; }
+    
+    
+    }
+    
+    /// <summary>返回结果
+    /// 
+    ///  namespace:com.alibaba.trade,apiname:alibaba.trade.payWay.query,version:1,typeName:alibaba.ocean.openplatform.biz.trade.result.TradePayTypeResult</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult 
+    {
+        /// <summary>可用支付渠道列表</summary>
+        [Newtonsoft.Json.JsonProperty("channels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<AlibabaOceanOpenplatformBizTradeResultPayTypeInfo> Channels { get; set; }
+    
+        /// <summary>订单号</summary>
+        [Newtonsoft.Json.JsonProperty("orderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OrderId { get; set; }
+    
+        /// <summary>支付金额，单位分</summary>
+        [Newtonsoft.Json.JsonProperty("payFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? PayFee { get; set; }
+    
+        /// <summary>最晚支付时间</summary>
+        [Newtonsoft.Json.JsonProperty("timeout", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Timeout { get; set; }
+    
+    
+    }
+    
+    /// <summary> 
+    /// 查询订单可以支持的支付渠道
+    /// 查询未支付订单可以使用的支付方式或者支付渠道
+    /// 
+    /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.payWay.query-1 
+    /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.payWay.query&amp;v=1 
+    ///  </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaTradePayWayQueryResult 
+    {
+        /// <summary>是否成功	</summary>
+        [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Success { get; set; }
+    
+        /// <summary>错误码	</summary>
+        [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErrorCode { get; set; }
+    
+        /// <summary>错误信息	</summary>
+        [Newtonsoft.Json.JsonProperty("errorMsg", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErrorMsg { get; set; }
+    
+        /// <summary>返回结果</summary>
+        [Newtonsoft.Json.JsonProperty("resultList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult ResultList { get; set; }
+    
+    
+    }
+    
+    /// <summary> 
+    /// 批量获取订单的支付链接
+    /// 通过ERP付款时，可以通过本API获取批量支付的收银台的链接。
+    /// 单个订单返回1688收银台地址，多个订单返回支付宝收银台地址。
+    /// ERP可以引导用户跳转到收银台链接完成支付动作，支付前会校验用户在1688的登陆状态。
+    /// 
+    /// 
+    /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.alipay.url.get-1 
+    /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.alipay.url.get&amp;v=1 
+    ///  </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaAlipayUrlGetResult 
+    {
+        /// <summary>错误信息</summary>
+        [Newtonsoft.Json.JsonProperty("erroMsg", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErroMsg { get; set; }
+    
+        /// <summary>支付链接</summary>
+        [Newtonsoft.Json.JsonProperty("payUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string PayUrl { get; set; }
+    
+        /// <summary>是否成功</summary>
+        [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? Success { get; set; }
+    
+        /// <summary>错误码</summary>
+        [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErrorCode { get; set; }
+    
+    
+    }
+    
+    /// <summary> 
+    /// 获取使用跨境宝支付的支付链接
+    /// 获取使用跨境宝支付的支付链接
+    /// 
+    /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.crossBorderPay.url.get-1 
+    /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.crossBorderPay.url.get&amp;v=1 
+    ///  </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaCrossBorderPayUrlGetResult 
+    {
+        /// <summary>是否成功</summary>
+        [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Success { get; set; }
+    
+        /// <summary>错误码</summary>
+        [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErrorCode { get; set; }
+    
+        /// <summary>错误描述</summary>
+        [Newtonsoft.Json.JsonProperty("errorMsg", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErrorMsg { get; set; }
+    
+        /// <summary>收银台支付链接</summary>
+        [Newtonsoft.Json.JsonProperty("payUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string PayUrl { get; set; }
+    
+        /// <summary>由于额度及风控原因不能批量支付的订单列表</summary>
+        [Newtonsoft.Json.JsonProperty("cantPayOrderList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<long> CantPayOrderList { get; set; }
+    
+    
+    }
+    
+    /// <summary> 
+    /// 获取使用诚e赊支付的支付链接
+    /// 获取使用诚e赊支付的支付链接
+    /// 
+    /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.creditPay.url.get-1 
+    /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.creditPay.url.get&amp;v=1 
+    ///  </summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class AlibabaCreditPayUrlGetResult 
+    {
+        /// <summary>是否成功</summary>
+        [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Success { get; set; }
+    
+        /// <summary>错误码</summary>
+        [Newtonsoft.Json.JsonProperty("errorCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErrorCode { get; set; }
+    
+        /// <summary>错误描述</summary>
+        [Newtonsoft.Json.JsonProperty("errorMsg", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ErrorMsg { get; set; }
+    
+        /// <summary>收银台支付链接</summary>
+        [Newtonsoft.Json.JsonProperty("payUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string PayUrl { get; set; }
+    
+        /// <summary>由于额度及风控原因不能批量支付的订单列表</summary>
+        [Newtonsoft.Json.JsonProperty("cantPayOrderList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<long> CantPayOrderList { get; set; }
+    
+    
+    }
+    
     /// <summary>新建的类目的id</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class Response 

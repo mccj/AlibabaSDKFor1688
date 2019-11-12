@@ -6774,6 +6774,184 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task I3dDraftmodelConfirmAsync(string code, string userId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <summary>创建订单前预览数据接口
+        /// 订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.createOrder.previewWithOBUid&amp;v=1</summary>
+        /// <param name="obUid">代购用户唯一Id</param>
+        /// <param name="addressParam">收货地址信息</param>
+        /// <param name="cargoParamList">商品信息</param>
+        /// <param name="invoiceParam">发票信息</param>
+        /// <param name="flow">general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 500_007	- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)
+        /// 500_005	- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)
+        /// 500_006	- 商品[offerId]的购买数量或者价格不满足混批限制。(商品的购买数量或者总金额均不满足混批条件)
+        /// 500_004	- 商品[offerId_specId]库存不足，请核实库存后订购。(商品的某个规格库存不足)
+        /// 500_002	- 商品[offerId]不属于同一卖家或者没有指定specId。(存在多个卖家的商品或者商品没有指定specId)
+        /// 500_003	- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)
+        /// 500_001	- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCreateOrderPreviewWithOBUidResult AlibabaCreateOrderPreviewWithOBUid(string obUid, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, AlibabaTradeFastInvoice invoiceParam = null, string flow = null);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>创建订单前预览数据接口
+        /// 订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.createOrder.previewWithOBUid&amp;v=1</summary>
+        /// <param name="obUid">代购用户唯一Id</param>
+        /// <param name="addressParam">收货地址信息</param>
+        /// <param name="cargoParamList">商品信息</param>
+        /// <param name="invoiceParam">发票信息</param>
+        /// <param name="flow">general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 500_007	- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)
+        /// 500_005	- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)
+        /// 500_006	- 商品[offerId]的购买数量或者价格不满足混批限制。(商品的购买数量或者总金额均不满足混批条件)
+        /// 500_004	- 商品[offerId_specId]库存不足，请核实库存后订购。(商品的某个规格库存不足)
+        /// 500_002	- 商品[offerId]不属于同一卖家或者没有指定specId。(存在多个卖家的商品或者商品没有指定specId)
+        /// 500_003	- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)
+        /// 500_001	- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCreateOrderPreviewWithOBUidResult> AlibabaCreateOrderPreviewWithOBUidAsync(string obUid, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, AlibabaTradeFastInvoice invoiceParam = null, string flow = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>跨境订单创建
+        /// 跨境专用订单创建。创建订单最多允许100个SKU，且必须为同一个供应商的商品。超过50个SKU或者一些特殊情况会一次创建多个个订单并返回多个订单号。
+        /// 支持大市场及分销两个场景。根据当前授权用户,区分主子账号下单
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createCrossOrder-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.createCrossOrder&amp;v=1</summary>
+        /// <param name="flow">流程</param>
+        /// <param name="addressParam">收货地址信息</param>
+        /// <param name="cargoParamList">商品信息</param>
+        /// <param name="message">买家留言</param>
+        /// <param name="invoiceParam">发票信息</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，默认使用的方式是支付宝担宝交易。</param>
+        /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
+        /// <param name="anonymousBuyer">是否匿名下单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// not support tradeType:【XXXX】	- 不支持的交易类型(当前交易可支持的交易类型，需要通过预览接口的tradeModeNameList字段获取)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaTradeCreateCrossOrderResult AlibabaTradeCreateCrossOrder(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string tradeType = null, string shopPromotionId = null, bool? anonymousBuyer = null);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>跨境订单创建
+        /// 跨境专用订单创建。创建订单最多允许100个SKU，且必须为同一个供应商的商品。超过50个SKU或者一些特殊情况会一次创建多个个订单并返回多个订单号。
+        /// 支持大市场及分销两个场景。根据当前授权用户,区分主子账号下单
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createCrossOrder-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.createCrossOrder&amp;v=1</summary>
+        /// <param name="flow">流程</param>
+        /// <param name="addressParam">收货地址信息</param>
+        /// <param name="cargoParamList">商品信息</param>
+        /// <param name="message">买家留言</param>
+        /// <param name="invoiceParam">发票信息</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，默认使用的方式是支付宝担宝交易。</param>
+        /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
+        /// <param name="anonymousBuyer">是否匿名下单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// not support tradeType:【XXXX】	- 不支持的交易类型(当前交易可支持的交易类型，需要通过预览接口的tradeModeNameList字段获取)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaTradeCreateCrossOrderResult> AlibabaTradeCreateCrossOrderAsync(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string tradeType = null, string shopPromotionId = null, bool? anonymousBuyer = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>查询订单可以支持的支付渠道
+        /// 查询未支付订单可以使用的支付方式或者支付渠道
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.payWay.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.payWay.query&amp;v=1</summary>
+        /// <param name="orderId">订单号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 500_2	- 没有权限获取该订单可支付方式。(检查授权用户，授权账号为买家，且必须为买家主账号。)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaTradePayWayQueryResult AlibabaTradePayWayQuery(string orderId);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>查询订单可以支持的支付渠道
+        /// 查询未支付订单可以使用的支付方式或者支付渠道
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.payWay.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.payWay.query&amp;v=1</summary>
+        /// <param name="orderId">订单号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 500_2	- 没有权限获取该订单可支付方式。(检查授权用户，授权账号为买家，且必须为买家主账号。)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaTradePayWayQueryResult> AlibabaTradePayWayQueryAsync(string orderId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>批量获取订单的支付链接
+        /// 通过ERP付款时，可以通过本API获取批量支付的收银台的链接。
+        /// 单个订单返回1688收银台地址，多个订单返回支付宝收银台地址。
+        /// ERP可以引导用户跳转到收银台链接完成支付动作，支付前会校验用户在1688的登陆状态。
+        /// 
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.alipay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.alipay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// Batch pay : not surport MANUAL-TRADE!	- Batch pay : not surport MANUAL-TRADE!(未补充买家收件信息的邀约订单不能合并付款，是否邀约订单可以通过订单详情里面的baseInfo.sellerOrder字段判断)
+        /// 操作库存失败:PRODUCT_TRADE_STAT_ERROR	- inventoryErrorIds:[16397675**722128**](存在付款减库存订单且扣减库存失败。)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaAlipayUrlGetResult AlibabaAlipayUrlGet(System.Collections.Generic.IEnumerable<long> orderIdList);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>批量获取订单的支付链接
+        /// 通过ERP付款时，可以通过本API获取批量支付的收银台的链接。
+        /// 单个订单返回1688收银台地址，多个订单返回支付宝收银台地址。
+        /// ERP可以引导用户跳转到收银台链接完成支付动作，支付前会校验用户在1688的登陆状态。
+        /// 
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.alipay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.alipay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// Batch pay : not surport MANUAL-TRADE!	- Batch pay : not surport MANUAL-TRADE!(未补充买家收件信息的邀约订单不能合并付款，是否邀约订单可以通过订单详情里面的baseInfo.sellerOrder字段判断)
+        /// 操作库存失败:PRODUCT_TRADE_STAT_ERROR	- inventoryErrorIds:[16397675**722128**](存在付款减库存订单且扣减库存失败。)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaAlipayUrlGetResult> AlibabaAlipayUrlGetAsync(System.Collections.Generic.IEnumerable<long> orderIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>获取使用跨境宝支付的支付链接
+        /// 获取使用跨境宝支付的支付链接
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.crossBorderPay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.crossBorderPay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 400_4	- 无可使用支付渠道[跨境宝]付款的订单(订单列表里面没有可以使用跨境宝支付的订单)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCrossBorderPayUrlGetResult AlibabaCrossBorderPayUrlGet(System.Collections.Generic.IEnumerable<long> orderIdList);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取使用跨境宝支付的支付链接
+        /// 获取使用跨境宝支付的支付链接
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.crossBorderPay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.crossBorderPay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 400_4	- 无可使用支付渠道[跨境宝]付款的订单(订单列表里面没有可以使用跨境宝支付的订单)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCrossBorderPayUrlGetResult> AlibabaCrossBorderPayUrlGetAsync(System.Collections.Generic.IEnumerable<long> orderIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>获取使用诚e赊支付的支付链接
+        /// 获取使用诚e赊支付的支付链接
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.creditPay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.creditPay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCreditPayUrlGetResult AlibabaCreditPayUrlGet(System.Collections.Generic.IEnumerable<long> orderIdList);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取使用诚e赊支付的支付链接
+        /// 获取使用诚e赊支付的支付链接
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.creditPay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.creditPay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCreditPayUrlGetResult> AlibabaCreditPayUrlGetAsync(System.Collections.Generic.IEnumerable<long> orderIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.1.3.0 (NJsonSchema v10.0.27.0 (Newtonsoft.Json v10.0.0.0))")]
@@ -34742,6 +34920,686 @@ namespace AlibabaSDK
                             var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>创建订单前预览数据接口
+        /// 订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.createOrder.previewWithOBUid&amp;v=1</summary>
+        /// <param name="obUid">代购用户唯一Id</param>
+        /// <param name="addressParam">收货地址信息</param>
+        /// <param name="cargoParamList">商品信息</param>
+        /// <param name="invoiceParam">发票信息</param>
+        /// <param name="flow">general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 500_007	- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)
+        /// 500_005	- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)
+        /// 500_006	- 商品[offerId]的购买数量或者价格不满足混批限制。(商品的购买数量或者总金额均不满足混批条件)
+        /// 500_004	- 商品[offerId_specId]库存不足，请核实库存后订购。(商品的某个规格库存不足)
+        /// 500_002	- 商品[offerId]不属于同一卖家或者没有指定specId。(存在多个卖家的商品或者商品没有指定specId)
+        /// 500_003	- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)
+        /// 500_001	- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCreateOrderPreviewWithOBUidResult AlibabaCreateOrderPreviewWithOBUid(string obUid, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, AlibabaTradeFastInvoice invoiceParam = null, string flow = null)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCreateOrderPreviewWithOBUidAsync(obUid, addressParam, cargoParamList, invoiceParam, flow, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>创建订单前预览数据接口
+        /// 订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.createOrder.previewWithOBUid&amp;v=1</summary>
+        /// <param name="obUid">代购用户唯一Id</param>
+        /// <param name="addressParam">收货地址信息</param>
+        /// <param name="cargoParamList">商品信息</param>
+        /// <param name="invoiceParam">发票信息</param>
+        /// <param name="flow">general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 500_007	- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)
+        /// 500_005	- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)
+        /// 500_006	- 商品[offerId]的购买数量或者价格不满足混批限制。(商品的购买数量或者总金额均不满足混批条件)
+        /// 500_004	- 商品[offerId_specId]库存不足，请核实库存后订购。(商品的某个规格库存不足)
+        /// 500_002	- 商品[offerId]不属于同一卖家或者没有指定specId。(存在多个卖家的商品或者商品没有指定specId)
+        /// 500_003	- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)
+        /// 500_001	- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCreateOrderPreviewWithOBUidResult> AlibabaCreateOrderPreviewWithOBUidAsync(string obUid, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, AlibabaTradeFastInvoice invoiceParam = null, string flow = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.createOrder.previewWithOBUid/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (obUid == null)
+                        throw new System.ArgumentNullException("obUid");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(obUid, System.Globalization.CultureInfo.InvariantCulture)), "obUid");
+                    }
+                    if (addressParam == null)
+                        throw new System.ArgumentNullException("addressParam");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(addressParam, System.Globalization.CultureInfo.InvariantCulture)), "addressParam");
+                    }
+                    if (cargoParamList == null)
+                        throw new System.ArgumentNullException("cargoParamList");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(cargoParamList, System.Globalization.CultureInfo.InvariantCulture)), "cargoParamList");
+                    }
+                    if (invoiceParam != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(invoiceParam, System.Globalization.CultureInfo.InvariantCulture)), "invoiceParam");
+                    }
+                    if (flow != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(flow, System.Globalization.CultureInfo.InvariantCulture)), "flow");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCreateOrderPreviewWithOBUidResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCreateOrderPreviewWithOBUidResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>跨境订单创建
+        /// 跨境专用订单创建。创建订单最多允许100个SKU，且必须为同一个供应商的商品。超过50个SKU或者一些特殊情况会一次创建多个个订单并返回多个订单号。
+        /// 支持大市场及分销两个场景。根据当前授权用户,区分主子账号下单
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createCrossOrder-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.createCrossOrder&amp;v=1</summary>
+        /// <param name="flow">流程</param>
+        /// <param name="addressParam">收货地址信息</param>
+        /// <param name="cargoParamList">商品信息</param>
+        /// <param name="message">买家留言</param>
+        /// <param name="invoiceParam">发票信息</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，默认使用的方式是支付宝担宝交易。</param>
+        /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
+        /// <param name="anonymousBuyer">是否匿名下单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// not support tradeType:【XXXX】	- 不支持的交易类型(当前交易可支持的交易类型，需要通过预览接口的tradeModeNameList字段获取)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaTradeCreateCrossOrderResult AlibabaTradeCreateCrossOrder(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string tradeType = null, string shopPromotionId = null, bool? anonymousBuyer = null)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeCreateCrossOrderAsync(flow, addressParam, cargoParamList, message, invoiceParam, tradeType, shopPromotionId, anonymousBuyer, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>跨境订单创建
+        /// 跨境专用订单创建。创建订单最多允许100个SKU，且必须为同一个供应商的商品。超过50个SKU或者一些特殊情况会一次创建多个个订单并返回多个订单号。
+        /// 支持大市场及分销两个场景。根据当前授权用户,区分主子账号下单
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createCrossOrder-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.createCrossOrder&amp;v=1</summary>
+        /// <param name="flow">流程</param>
+        /// <param name="addressParam">收货地址信息</param>
+        /// <param name="cargoParamList">商品信息</param>
+        /// <param name="message">买家留言</param>
+        /// <param name="invoiceParam">发票信息</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，默认使用的方式是支付宝担宝交易。</param>
+        /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
+        /// <param name="anonymousBuyer">是否匿名下单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// not support tradeType:【XXXX】	- 不支持的交易类型(当前交易可支持的交易类型，需要通过预览接口的tradeModeNameList字段获取)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaTradeCreateCrossOrderResult> AlibabaTradeCreateCrossOrderAsync(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string tradeType = null, string shopPromotionId = null, bool? anonymousBuyer = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.createCrossOrder/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (flow == null)
+                        throw new System.ArgumentNullException("flow");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(flow, System.Globalization.CultureInfo.InvariantCulture)), "flow");
+                    }
+                    if (addressParam == null)
+                        throw new System.ArgumentNullException("addressParam");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(addressParam, System.Globalization.CultureInfo.InvariantCulture)), "addressParam");
+                    }
+                    if (cargoParamList == null)
+                        throw new System.ArgumentNullException("cargoParamList");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(cargoParamList, System.Globalization.CultureInfo.InvariantCulture)), "cargoParamList");
+                    }
+                    if (message != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(message, System.Globalization.CultureInfo.InvariantCulture)), "message");
+                    }
+                    if (invoiceParam != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(invoiceParam, System.Globalization.CultureInfo.InvariantCulture)), "invoiceParam");
+                    }
+                    if (tradeType != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(tradeType, System.Globalization.CultureInfo.InvariantCulture)), "tradeType");
+                    }
+                    if (shopPromotionId != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(shopPromotionId, System.Globalization.CultureInfo.InvariantCulture)), "shopPromotionId");
+                    }
+                    if (anonymousBuyer != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(anonymousBuyer, System.Globalization.CultureInfo.InvariantCulture)), "anonymousBuyer");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaTradeCreateCrossOrderResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaTradeCreateCrossOrderResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>查询订单可以支持的支付渠道
+        /// 查询未支付订单可以使用的支付方式或者支付渠道
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.payWay.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.payWay.query&amp;v=1</summary>
+        /// <param name="orderId">订单号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 500_2	- 没有权限获取该订单可支付方式。(检查授权用户，授权账号为买家，且必须为买家主账号。)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaTradePayWayQueryResult AlibabaTradePayWayQuery(string orderId)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradePayWayQueryAsync(orderId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>查询订单可以支持的支付渠道
+        /// 查询未支付订单可以使用的支付方式或者支付渠道
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.payWay.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.payWay.query&amp;v=1</summary>
+        /// <param name="orderId">订单号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 500_2	- 没有权限获取该订单可支付方式。(检查授权用户，授权账号为买家，且必须为买家主账号。)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaTradePayWayQueryResult> AlibabaTradePayWayQueryAsync(string orderId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.payWay.query/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (orderId == null)
+                        throw new System.ArgumentNullException("orderId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orderId, System.Globalization.CultureInfo.InvariantCulture)), "orderId");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaTradePayWayQueryResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaTradePayWayQueryResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>批量获取订单的支付链接
+        /// 通过ERP付款时，可以通过本API获取批量支付的收银台的链接。
+        /// 单个订单返回1688收银台地址，多个订单返回支付宝收银台地址。
+        /// ERP可以引导用户跳转到收银台链接完成支付动作，支付前会校验用户在1688的登陆状态。
+        /// 
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.alipay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.alipay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// Batch pay : not surport MANUAL-TRADE!	- Batch pay : not surport MANUAL-TRADE!(未补充买家收件信息的邀约订单不能合并付款，是否邀约订单可以通过订单详情里面的baseInfo.sellerOrder字段判断)
+        /// 操作库存失败:PRODUCT_TRADE_STAT_ERROR	- inventoryErrorIds:[16397675**722128**](存在付款减库存订单且扣减库存失败。)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaAlipayUrlGetResult AlibabaAlipayUrlGet(System.Collections.Generic.IEnumerable<long> orderIdList)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaAlipayUrlGetAsync(orderIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>批量获取订单的支付链接
+        /// 通过ERP付款时，可以通过本API获取批量支付的收银台的链接。
+        /// 单个订单返回1688收银台地址，多个订单返回支付宝收银台地址。
+        /// ERP可以引导用户跳转到收银台链接完成支付动作，支付前会校验用户在1688的登陆状态。
+        /// 
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.alipay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.alipay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// Batch pay : not surport MANUAL-TRADE!	- Batch pay : not surport MANUAL-TRADE!(未补充买家收件信息的邀约订单不能合并付款，是否邀约订单可以通过订单详情里面的baseInfo.sellerOrder字段判断)
+        /// 操作库存失败:PRODUCT_TRADE_STAT_ERROR	- inventoryErrorIds:[16397675**722128**](存在付款减库存订单且扣减库存失败。)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaAlipayUrlGetResult> AlibabaAlipayUrlGetAsync(System.Collections.Generic.IEnumerable<long> orderIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.alipay.url.get/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (orderIdList == null)
+                        throw new System.ArgumentNullException("orderIdList");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orderIdList, System.Globalization.CultureInfo.InvariantCulture)), "orderIdList");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaAlipayUrlGetResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaAlipayUrlGetResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>获取使用跨境宝支付的支付链接
+        /// 获取使用跨境宝支付的支付链接
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.crossBorderPay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.crossBorderPay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 400_4	- 无可使用支付渠道[跨境宝]付款的订单(订单列表里面没有可以使用跨境宝支付的订单)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCrossBorderPayUrlGetResult AlibabaCrossBorderPayUrlGet(System.Collections.Generic.IEnumerable<long> orderIdList)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossBorderPayUrlGetAsync(orderIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取使用跨境宝支付的支付链接
+        /// 获取使用跨境宝支付的支付链接
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.crossBorderPay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.crossBorderPay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 400_4	- 无可使用支付渠道[跨境宝]付款的订单(订单列表里面没有可以使用跨境宝支付的订单)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCrossBorderPayUrlGetResult> AlibabaCrossBorderPayUrlGetAsync(System.Collections.Generic.IEnumerable<long> orderIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.crossBorderPay.url.get/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (orderIdList == null)
+                        throw new System.ArgumentNullException("orderIdList");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orderIdList, System.Globalization.CultureInfo.InvariantCulture)), "orderIdList");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCrossBorderPayUrlGetResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCrossBorderPayUrlGetResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>获取使用诚e赊支付的支付链接
+        /// 获取使用诚e赊支付的支付链接
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.creditPay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.creditPay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCreditPayUrlGetResult AlibabaCreditPayUrlGet(System.Collections.Generic.IEnumerable<long> orderIdList)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCreditPayUrlGetAsync(orderIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取使用诚e赊支付的支付链接
+        /// 获取使用诚e赊支付的支付链接
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.creditPay.url.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.creditPay.url.get&amp;v=1</summary>
+        /// <param name="orderIdList">订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCreditPayUrlGetResult> AlibabaCreditPayUrlGetAsync(System.Collections.Generic.IEnumerable<long> orderIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.creditPay.url.get/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (orderIdList == null)
+                        throw new System.ArgumentNullException("orderIdList");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orderIdList, System.Globalization.CultureInfo.InvariantCulture)), "orderIdList");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCreditPayUrlGetResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCreditPayUrlGetResult);
                     }
                     finally
                     {

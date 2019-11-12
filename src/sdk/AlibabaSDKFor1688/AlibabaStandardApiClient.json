@@ -17561,6 +17561,403 @@
           }
         }
       }
+    },
+    "/openapi/param2/1/com.alibaba.trade/alibaba.createOrder.previewWithOBUid/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.trade",
+          "name=alibaba.createOrder.previewWithOBUid",
+          "version=1",
+          "oceanApiId=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n创建订单前预览数据接口\r\n订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.createOrder.previewWithOBUid&v=1 \r\n ",
+        "operationId": "AlibabaCreateOrderPreviewWithOBUid",
+        "parameters": [
+          {
+            "name": "obUid",
+            "in": "formData",
+            "required": true,
+            "description": "代购用户唯一Id",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "addressParam",
+            "in": "formData",
+            "required": true,
+            "description": "收货地址信息",
+            "schema": {
+              "$ref": "#/definitions/AlibabaTradeFastAddress"
+            }
+          },
+          {
+            "name": "cargoParamList",
+            "in": "formData",
+            "required": true,
+            "description": "商品信息",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AlibabaTradeFastCargo"
+              }
+            }
+          },
+          {
+            "name": "invoiceParam",
+            "in": "formData",
+            "description": "发票信息",
+            "schema": {
+              "$ref": "#/definitions/AlibabaTradeFastInvoice"
+            }
+          },
+          {
+            "name": "flow",
+            "in": "formData",
+            "description": "general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\n500_007\t- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)\r\n500_005\t- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)\r\n500_006\t- 商品[offerId]的购买数量或者价格不满足混批限制。(商品的购买数量或者总金额均不满足混批条件)\r\n500_004\t- 商品[offerId_specId]库存不足，请核实库存后订购。(商品的某个规格库存不足)\r\n500_002\t- 商品[offerId]不属于同一卖家或者没有指定specId。(存在多个卖家的商品或者商品没有指定specId)\r\n500_003\t- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)\r\n500_001\t- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaCreateOrderPreviewWithOBUidResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.trade/alibaba.trade.createCrossOrder/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.trade",
+          "name=alibaba.trade.createCrossOrder",
+          "version=1",
+          "oceanApiId=com.alibaba.trade:alibaba.trade.createCrossOrder-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n跨境订单创建\r\n跨境专用订单创建。创建订单最多允许100个SKU，且必须为同一个供应商的商品。超过50个SKU或者一些特殊情况会一次创建多个个订单并返回多个订单号。\n支持大市场及分销两个场景。根据当前授权用户,区分主子账号下单\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createCrossOrder-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.createCrossOrder&v=1 \r\n ",
+        "operationId": "AlibabaTradeCreateCrossOrder",
+        "parameters": [
+          {
+            "name": "flow",
+            "in": "formData",
+            "required": true,
+            "description": "流程",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "addressParam",
+            "in": "formData",
+            "required": true,
+            "description": "收货地址信息",
+            "schema": {
+              "$ref": "#/definitions/AlibabaTradeFastAddress"
+            }
+          },
+          {
+            "name": "cargoParamList",
+            "in": "formData",
+            "required": true,
+            "description": "商品信息",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AlibabaTradeFastCargo"
+              }
+            }
+          },
+          {
+            "name": "message",
+            "in": "formData",
+            "description": "买家留言",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "invoiceParam",
+            "in": "formData",
+            "description": "发票信息",
+            "schema": {
+              "$ref": "#/definitions/AlibabaTradeFastInvoice"
+            }
+          },
+          {
+            "name": "tradeType",
+            "in": "formData",
+            "description": "由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，默认使用的方式是支付宝担宝交易。",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "shopPromotionId",
+            "in": "formData",
+            "description": "店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "anonymousBuyer",
+            "in": "formData",
+            "description": "是否匿名下单",
+            "schema": {
+              "title": "Boolean",
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\nnot support tradeType:【XXXX】\t- 不支持的交易类型(当前交易可支持的交易类型，需要通过预览接口的tradeModeNameList字段获取)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.trade/alibaba.trade.payWay.query/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.trade",
+          "name=alibaba.trade.payWay.query",
+          "version=1",
+          "oceanApiId=com.alibaba.trade:alibaba.trade.payWay.query-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n查询订单可以支持的支付渠道\r\n查询未支付订单可以使用的支付方式或者支付渠道\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.payWay.query-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.payWay.query&v=1 \r\n ",
+        "operationId": "AlibabaTradePayWayQuery",
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "formData",
+            "required": true,
+            "description": "订单号",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\n500_2\t- 没有权限获取该订单可支付方式。(检查授权用户，授权账号为买家，且必须为买家主账号。)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaTradePayWayQueryResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.trade/alibaba.alipay.url.get/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.trade",
+          "name=alibaba.alipay.url.get",
+          "version=1",
+          "oceanApiId=com.alibaba.trade:alibaba.alipay.url.get-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n批量获取订单的支付链接\r\n通过ERP付款时，可以通过本API获取批量支付的收银台的链接。\n单个订单返回1688收银台地址，多个订单返回支付宝收银台地址。\nERP可以引导用户跳转到收银台链接完成支付动作，支付前会校验用户在1688的登陆状态。\n\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.alipay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.alipay.url.get&v=1 \r\n ",
+        "operationId": "AlibabaAlipayUrlGet",
+        "parameters": [
+          {
+            "name": "orderIdList",
+            "in": "formData",
+            "required": true,
+            "description": "订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单",
+            "schema": {
+              "title": "Int64[]",
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\nBatch pay : not surport MANUAL-TRADE!\t- Batch pay : not surport MANUAL-TRADE!(未补充买家收件信息的邀约订单不能合并付款，是否邀约订单可以通过订单详情里面的baseInfo.sellerOrder字段判断)\r\n操作库存失败:PRODUCT_TRADE_STAT_ERROR\t- inventoryErrorIds:[16397675**722128**](存在付款减库存订单且扣减库存失败。)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaAlipayUrlGetResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.trade/alibaba.crossBorderPay.url.get/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.trade",
+          "name=alibaba.crossBorderPay.url.get",
+          "version=1",
+          "oceanApiId=com.alibaba.trade:alibaba.crossBorderPay.url.get-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n获取使用跨境宝支付的支付链接\r\n获取使用跨境宝支付的支付链接\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.crossBorderPay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.crossBorderPay.url.get&v=1 \r\n ",
+        "operationId": "AlibabaCrossBorderPayUrlGet",
+        "parameters": [
+          {
+            "name": "orderIdList",
+            "in": "formData",
+            "required": true,
+            "description": "订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单",
+            "schema": {
+              "title": "Int64[]",
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\n400_4\t- 无可使用支付渠道[跨境宝]付款的订单(订单列表里面没有可以使用跨境宝支付的订单)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaCrossBorderPayUrlGetResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.trade/alibaba.creditPay.url.get/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.trade",
+          "name=alibaba.creditPay.url.get",
+          "version=1",
+          "oceanApiId=com.alibaba.trade:alibaba.creditPay.url.get-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n获取使用诚e赊支付的支付链接\r\n获取使用诚e赊支付的支付链接\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.creditPay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.creditPay.url.get&v=1 \r\n ",
+        "operationId": "AlibabaCreditPayUrlGet",
+        "parameters": [
+          {
+            "name": "orderIdList",
+            "in": "formData",
+            "required": true,
+            "description": "订单Id列表,最多批量30个订单，订单过多会导致超时，建议一次10个订单",
+            "schema": {
+              "title": "Int64[]",
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AlibabaCreditPayUrlGetResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
     }
   },
   "definitions": {
@@ -38283,6 +38680,461 @@
     "Interactive3dPage": {
       "type": "object",
       "description": "3D模型草稿翻页数据\r\n查找API时出错\r\n namespace:com.alibaba.i3d,apiname:i3d.draftmodel.list,version:1,typeName:interactive3d.Page"
+    },
+    "AlibabaCreateOrderPreviewWithOBUidResult": {
+      "type": "object",
+      "description": " \r\n创建订单前预览数据接口\r\n订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.createOrder.previewWithOBUid&v=1 \r\n ",
+      "properties": {
+        "orderPreviewResuslt": {
+          "type": "array",
+          "description": "订单预览结果，过自动拆单会返回多个记录",
+          "items": {
+            "$ref": "#/definitions/AlibabaCreateOrderPreviewWithOBUidResult/definitions/AlibabaCreateOrderPreviewResultModel"
+          }
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "postFeeByDescOfferList": {
+          "title": "Int64[]",
+          "type": "array",
+          "description": "运费说明的商品列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "consignOfferList": {
+          "title": "Int64[]",
+          "type": "array",
+          "description": "代销商品列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "definitions": {
+        "AlibabaCreateOrderPreviewResultModel": {
+          "type": "object",
+          "description": "订单预览结果，过自动拆单会返回多个记录\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.previewWithOBUid,version:1,typeName:alibaba.createOrder.preview.result.model",
+          "properties": {
+            "tradeModeNameList": {
+              "title": "String[]",
+              "type": "array",
+              "description": "当前交易可以支持的交易方式列表。某些场景的创建订单接口需要使用。",
+              "items": {
+                "type": "string"
+              }
+            },
+            "sumPayment": {
+              "title": "Long",
+              "type": "integer",
+              "description": "订单总费用, 单位为分.",
+              "format": "int64"
+            },
+            "message": {
+              "title": "String",
+              "type": "string",
+              "description": "返回信息"
+            },
+            "resultCode": {
+              "title": "String",
+              "type": "string",
+              "description": "返回码"
+            },
+            "flowFlag": {
+              "title": "String",
+              "type": "string",
+              "description": "订单下单流程"
+            },
+            "cargoList": {
+              "type": "array",
+              "description": "规格信息",
+              "items": {
+                "$ref": "#/definitions/AlibabaCreateOrderPreviewResult/definitions/AlibabaCreateOrderPreviewResultModel/definitions/AlibabaCreateOrderPreviewResultCargoModel"
+              }
+            },
+            "shopPromotionList": {
+              "type": "array",
+              "description": "可用店铺级别优惠列表",
+              "items": {
+                "$ref": "#/definitions/AlibabaCreateOrderPreviewResult/definitions/AlibabaCreateOrderPreviewResultModel/definitions/AlibabaCreateOrderPreviewResultCargoModel/definitions/AlibabaTradePromotionModel"
+              }
+            },
+            "tradeModelList": {
+              "type": "array",
+              "description": "当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。",
+              "items": {
+                "$ref": "#/definitions/AlibabaCreateOrderPreviewWithOBUidResult/definitions/AlibabaCreateOrderPreviewResultModel/definitions/TradeModelExtensionList"
+              }
+            }
+          },
+          "definitions": {
+            "TradeModelExtensionList": {
+              "type": "object",
+              "description": "当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.previewWithOBUid,version:1,typeName:tradeModelExtensionList",
+              "properties": {
+                "tradeWay": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "交易方式"
+                },
+                "name": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "交易方式名称"
+                },
+                "tradeType": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "开放平台下单时候传入的tradeType"
+                },
+                "description": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "交易描述"
+                },
+                "opSupport": {
+                  "title": "Boolean",
+                  "type": "boolean",
+                  "description": "是否支持"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "AlibabaTradeCreateCrossOrderResult": {
+      "type": "object",
+      "description": " \r\n跨境订单创建\r\n跨境专用订单创建。创建订单最多允许100个SKU，且必须为同一个供应商的商品。超过50个SKU或者一些特殊情况会一次创建多个个订单并返回多个订单号。\n支持大市场及分销两个场景。根据当前授权用户,区分主子账号下单\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createCrossOrder-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.createCrossOrder&v=1 \r\n ",
+      "properties": {
+        "result": {
+          "description": "创建订单结果",
+          "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult/definitions/AlibabaTradeCrossResult"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "code": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "message": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        }
+      },
+      "definitions": {
+        "AlibabaTradeCrossResult": {
+          "type": "object",
+          "description": "创建订单结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.trade.cross.result",
+          "properties": {
+            "totalSuccessAmount": {
+              "title": "Long",
+              "type": "integer",
+              "description": "订单总金额（单位分），一次创建多个订单时，该字段为空",
+              "format": "int64"
+            },
+            "orderId": {
+              "title": "String",
+              "type": "string",
+              "description": "订单ID，一次创建多个订单时，该字段为空"
+            },
+            "success": {
+              "title": "Boolean",
+              "type": "boolean",
+              "description": "是否成功"
+            },
+            "code": {
+              "title": "String",
+              "type": "string",
+              "description": "错误码"
+            },
+            "message": {
+              "title": "String",
+              "type": "string",
+              "description": "错误信息"
+            },
+            "accountPeriod": {
+              "description": "账期信息，非账期支付订单返回空",
+              "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult/definitions/AlibabaTradeCrossResult/definitions/AlibabaTradeCrossPeriod"
+            },
+            "failedOfferList": {
+              "type": "array",
+              "description": "失败商品信息",
+              "items": {
+                "$ref": "#/definitions/AlibabaTradeFastCreateOrderResult/definitions/AlibabaTradeFastResult/definitions/AlibabaTradeFastOffer"
+              }
+            },
+            "postFee": {
+              "title": "Long",
+              "type": "integer",
+              "description": "运费，单位：分，一次创建多个订单时，该字段为空",
+              "format": "int64"
+            },
+            "orderList": {
+              "type": "array",
+              "description": "一次创建多个订单",
+              "items": {
+                "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult/definitions/AlibabaTradeCrossResult/definitions/AlibabaTradeResultBizSimpleOrder"
+              }
+            }
+          },
+          "definitions": {
+            "AlibabaTradeCrossPeriod": {
+              "type": "object",
+              "description": "账期信息，非账期支付订单返回空\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.trade.cross.period",
+              "properties": {
+                "tapType": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "账期的类型,1：一个月指定日期结算一次，3：两个月指定日期结算一次，6：三个月指定日期结算一次，5：按收货时间和账期日期结算",
+                  "format": "int32"
+                },
+                "tapDate": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "根据账期类型不同而不同，按月结算类型此值代表具体某日，按收货时间结算时此值代表结算时间周期",
+                  "format": "int32"
+                },
+                "tapOverdue": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "逾期次数",
+                  "format": "int32"
+                }
+              }
+            },
+            "AlibabaTradeResultBizSimpleOrder": {
+              "type": "object",
+              "description": "一次创建多个订单\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.tradeResult.BizSimpleOrder",
+              "properties": {
+                "postFee": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "运费",
+                  "format": "int64"
+                },
+                "orderAmmount": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "订单实付款金额，单位为分",
+                  "format": "int64"
+                },
+                "message": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "描述信息"
+                },
+                "resultCode": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "返回码"
+                },
+                "success": {
+                  "title": "Boolean",
+                  "type": "boolean",
+                  "description": "是否成功"
+                },
+                "orderId": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "订单号"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "AlibabaTradePayWayQueryResult": {
+      "type": "object",
+      "description": " \r\n查询订单可以支持的支付渠道\r\n查询未支付订单可以使用的支付方式或者支付渠道\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.payWay.query-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.payWay.query&v=1 \r\n ",
+      "properties": {
+        "success": {
+          "title": "String",
+          "type": "string",
+          "description": "是否成功\t"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码\t"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息\t"
+        },
+        "resultList": {
+          "description": "返回结果",
+          "$ref": "#/definitions/AlibabaTradePayWayQueryResult/definitions/AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult"
+        }
+      },
+      "definitions": {
+        "AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult": {
+          "type": "object",
+          "description": "返回结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.payWay.query,version:1,typeName:alibaba.ocean.openplatform.biz.trade.result.TradePayTypeResult",
+          "properties": {
+            "channels": {
+              "type": "array",
+              "description": "可用支付渠道列表",
+              "items": {
+                "$ref": "#/definitions/AlibabaTradePayWayQueryResult/definitions/AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult/definitions/AlibabaOceanOpenplatformBizTradeResultPayTypeInfo"
+              }
+            },
+            "orderId": {
+              "title": "String",
+              "type": "string",
+              "description": "订单号"
+            },
+            "payFee": {
+              "title": "Long",
+              "type": "integer",
+              "description": "支付金额，单位分",
+              "format": "int64"
+            },
+            "timeout": {
+              "title": "String",
+              "type": "string",
+              "description": "最晚支付时间"
+            }
+          },
+          "definitions": {
+            "AlibabaOceanOpenplatformBizTradeResultPayTypeInfo": {
+              "type": "object",
+              "description": "可用支付渠道列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.payWay.query,version:1,typeName:alibaba.ocean.openplatform.biz.trade.result.PayTypeInfo",
+              "properties": {
+                "code": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "支付渠道编码，1:支付宝,3:诚e赊,4:对公转账,7:账期支付,15:银行转账,16:跨境宝,20:跨境宝",
+                  "format": "int64"
+                },
+                "name": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "支付渠道名称，1:支付宝,3:诚e赊,4:对公转账,7:账期支付,15:银行转账,16:跨境宝,20:跨境宝"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "AlibabaAlipayUrlGetResult": {
+      "type": "object",
+      "description": " \r\n批量获取订单的支付链接\r\n通过ERP付款时，可以通过本API获取批量支付的收银台的链接。\n单个订单返回1688收银台地址，多个订单返回支付宝收银台地址。\nERP可以引导用户跳转到收银台链接完成支付动作，支付前会校验用户在1688的登陆状态。\n\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.alipay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.alipay.url.get&v=1 \r\n ",
+      "properties": {
+        "erroMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "payUrl": {
+          "title": "String",
+          "type": "string",
+          "description": "支付链接"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        }
+      }
+    },
+    "AlibabaCrossBorderPayUrlGetResult": {
+      "type": "object",
+      "description": " \r\n获取使用跨境宝支付的支付链接\r\n获取使用跨境宝支付的支付链接\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.crossBorderPay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.crossBorderPay.url.get&v=1 \r\n ",
+      "properties": {
+        "success": {
+          "title": "String",
+          "type": "string",
+          "description": "是否成功"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误描述"
+        },
+        "payUrl": {
+          "title": "String",
+          "type": "string",
+          "description": "收银台支付链接"
+        },
+        "cantPayOrderList": {
+          "title": "Int64[]",
+          "type": "array",
+          "description": "由于额度及风控原因不能批量支付的订单列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      }
+    },
+    "AlibabaCreditPayUrlGetResult": {
+      "type": "object",
+      "description": " \r\n获取使用诚e赊支付的支付链接\r\n获取使用诚e赊支付的支付链接\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.creditPay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.creditPay.url.get&v=1 \r\n ",
+      "properties": {
+        "success": {
+          "title": "String",
+          "type": "string",
+          "description": "是否成功"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误描述"
+        },
+        "payUrl": {
+          "title": "String",
+          "type": "string",
+          "description": "收银台支付链接"
+        },
+        "cantPayOrderList": {
+          "title": "Int64[]",
+          "type": "array",
+          "description": "由于额度及风控原因不能批量支付的订单列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      }
     }
   },
   "security": [
