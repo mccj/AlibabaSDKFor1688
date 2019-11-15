@@ -6952,6 +6952,91 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaCreditPayUrlGetResult> AlibabaCreditPayUrlGetAsync(System.Collections.Generic.IEnumerable<long> orderIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <summary>跨境场景获取商品详情
+        /// 跨境场景获取商品详情，需要建立跨境铺货关系之后才能获取详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productInfo-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.cross.productInfo&amp;v=1</summary>
+        /// <param name="productId">1688商品ID</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 没有该商品的查询权限	- 没有该商品的查询权限(没有建立铺货关系，在商品页面点击一键铺货或者调用铺货同步接口)
+        /// 商品[57374140142]不存在	- 商品[57374140142]不存在(商品ID错误，检查商品ID)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCrossProductInfoResult AlibabaCrossProductInfo(long productId);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>跨境场景获取商品详情
+        /// 跨境场景获取商品详情，需要建立跨境铺货关系之后才能获取详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productInfo-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.cross.productInfo&amp;v=1</summary>
+        /// <param name="productId">1688商品ID</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 没有该商品的查询权限	- 没有该商品的查询权限(没有建立铺货关系，在商品页面点击一键铺货或者调用铺货同步接口)
+        /// 商品[57374140142]不存在	- 商品[57374140142]不存在(商品ID错误，检查商品ID)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCrossProductInfoResult> AlibabaCrossProductInfoAsync(long productId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>跨境场景下将商品加入铺货列表
+        /// 跨境场景专用，将商品加入铺货列表（即：新增铺货关系），单次操作上限20条。加入后才可以通过商品详情查询接口查询商品详情。调用前需要联系跨境小二手动配置权限。
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&amp;n=alibaba.cross.syncProductListPushed&amp;v=1</summary>
+        /// <param name="productIdList">1688的商品ID列表,列表长度不能超过20个</param>
+        /// <returns>同步结果返回 ErrorCode 的错误信息
+        /// OFFERIDS_IS_NULL	- 商品ID列表参数为空(检查入参商品是否存在)
+        /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
+        /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaPanamaCommonResult AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>跨境场景下将商品加入铺货列表
+        /// 跨境场景专用，将商品加入铺货列表（即：新增铺货关系），单次操作上限20条。加入后才可以通过商品详情查询接口查询商品详情。调用前需要联系跨境小二手动配置权限。
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&amp;n=alibaba.cross.syncProductListPushed&amp;v=1</summary>
+        /// <param name="productIdList">1688的商品ID列表,列表长度不能超过20个</param>
+        /// <returns>同步结果返回 ErrorCode 的错误信息
+        /// OFFERIDS_IS_NULL	- 商品ID列表参数为空(检查入参商品是否存在)
+        /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
+        /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaPanamaCommonResult> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>同步铺货结果
+        /// 同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&amp;n=alibaba.product.push.syncPushProductResult&amp;v=1</summary>
+        /// <param name="platformDefinition">目标平台的定义</param>
+        /// <param name="pushProductResults">商品级别的铺货结果</param>
+        /// <param name="pushRecordIdentity">在批量铺货时，源平台可能会为每次铺货产生一个批次传递给ISV，ISV可以在同步通知时返回该字段。该字段由平台传递给ISV，该字段不是必须。</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 当前isv未在巴拿马平台注册(找负责的小二在巴拿马平台添加。)
+        /// getProductIdInSource_IS_EMPTY	- 入参的源ProductId为空(检查入参的源productId是否正确)
+        /// getPlatformDefId_IS_EMPTY	- 入参的PlatformDefId为空(检查PlatformDefId是否正确)
+        /// getProductIdInTargetPlatform_IS_EMPTY	- 入参的目的ProductId为空(入参的目的ProductId是否正确)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaProductPushSyncPushProductResultResult AlibabaProductPushSyncPushProductResult(AlibabaProductPushPlatformDefinition platformDefinition, AlibabaProductPushPushProductResult pushProductResults, AlibabaProductPushIdentity pushRecordIdentity = null);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>同步铺货结果
+        /// 同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&amp;n=alibaba.product.push.syncPushProductResult&amp;v=1</summary>
+        /// <param name="platformDefinition">目标平台的定义</param>
+        /// <param name="pushProductResults">商品级别的铺货结果</param>
+        /// <param name="pushRecordIdentity">在批量铺货时，源平台可能会为每次铺货产生一个批次传递给ISV，ISV可以在同步通知时返回该字段。该字段由平台传递给ISV，该字段不是必须。</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 当前isv未在巴拿马平台注册(找负责的小二在巴拿马平台添加。)
+        /// getProductIdInSource_IS_EMPTY	- 入参的源ProductId为空(检查入参的源productId是否正确)
+        /// getPlatformDefId_IS_EMPTY	- 入参的PlatformDefId为空(检查PlatformDefId是否正确)
+        /// getProductIdInTargetPlatform_IS_EMPTY	- 入参的目的ProductId为空(入参的目的ProductId是否正确)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaProductPushSyncPushProductResultResult> AlibabaProductPushSyncPushProductResultAsync(AlibabaProductPushPlatformDefinition platformDefinition, AlibabaProductPushPushProductResult pushProductResults, AlibabaProductPushIdentity pushRecordIdentity = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.1.3.0 (NJsonSchema v10.0.27.0 (Newtonsoft.Json v10.0.0.0))")]
@@ -35600,6 +35685,326 @@ namespace AlibabaSDK
                         }
             
                         return default(AlibabaCreditPayUrlGetResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>跨境场景获取商品详情
+        /// 跨境场景获取商品详情，需要建立跨境铺货关系之后才能获取详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productInfo-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.cross.productInfo&amp;v=1</summary>
+        /// <param name="productId">1688商品ID</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 没有该商品的查询权限	- 没有该商品的查询权限(没有建立铺货关系，在商品页面点击一键铺货或者调用铺货同步接口)
+        /// 商品[57374140142]不存在	- 商品[57374140142]不存在(商品ID错误，检查商品ID)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCrossProductInfoResult AlibabaCrossProductInfo(long productId)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossProductInfoAsync(productId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>跨境场景获取商品详情
+        /// 跨境场景获取商品详情，需要建立跨境铺货关系之后才能获取详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productInfo-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.cross.productInfo&amp;v=1</summary>
+        /// <param name="productId">1688商品ID</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 没有该商品的查询权限	- 没有该商品的查询权限(没有建立铺货关系，在商品页面点击一键铺货或者调用铺货同步接口)
+        /// 商品[57374140142]不存在	- 商品[57374140142]不存在(商品ID错误，检查商品ID)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCrossProductInfoResult> AlibabaCrossProductInfoAsync(long productId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product/alibaba.cross.productInfo/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (productId == null)
+                        throw new System.ArgumentNullException("productId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(productId, System.Globalization.CultureInfo.InvariantCulture)), "productId");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCrossProductInfoResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCrossProductInfoResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>跨境场景下将商品加入铺货列表
+        /// 跨境场景专用，将商品加入铺货列表（即：新增铺货关系），单次操作上限20条。加入后才可以通过商品详情查询接口查询商品详情。调用前需要联系跨境小二手动配置权限。
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&amp;n=alibaba.cross.syncProductListPushed&amp;v=1</summary>
+        /// <param name="productIdList">1688的商品ID列表,列表长度不能超过20个</param>
+        /// <returns>同步结果返回 ErrorCode 的错误信息
+        /// OFFERIDS_IS_NULL	- 商品ID列表参数为空(检查入参商品是否存在)
+        /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
+        /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaPanamaCommonResult AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossSyncProductListPushedAsync(productIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>跨境场景下将商品加入铺货列表
+        /// 跨境场景专用，将商品加入铺货列表（即：新增铺货关系），单次操作上限20条。加入后才可以通过商品详情查询接口查询商品详情。调用前需要联系跨境小二手动配置权限。
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&amp;n=alibaba.cross.syncProductListPushed&amp;v=1</summary>
+        /// <param name="productIdList">1688的商品ID列表,列表长度不能超过20个</param>
+        /// <returns>同步结果返回 ErrorCode 的错误信息
+        /// OFFERIDS_IS_NULL	- 商品ID列表参数为空(检查入参商品是否存在)
+        /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
+        /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaPanamaCommonResult> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product.push/alibaba.cross.syncProductListPushed/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (productIdList == null)
+                        throw new System.ArgumentNullException("productIdList");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(productIdList, System.Globalization.CultureInfo.InvariantCulture)), "productIdList");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaPanamaCommonResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaPanamaCommonResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>同步铺货结果
+        /// 同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&amp;n=alibaba.product.push.syncPushProductResult&amp;v=1</summary>
+        /// <param name="platformDefinition">目标平台的定义</param>
+        /// <param name="pushProductResults">商品级别的铺货结果</param>
+        /// <param name="pushRecordIdentity">在批量铺货时，源平台可能会为每次铺货产生一个批次传递给ISV，ISV可以在同步通知时返回该字段。该字段由平台传递给ISV，该字段不是必须。</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 当前isv未在巴拿马平台注册(找负责的小二在巴拿马平台添加。)
+        /// getProductIdInSource_IS_EMPTY	- 入参的源ProductId为空(检查入参的源productId是否正确)
+        /// getPlatformDefId_IS_EMPTY	- 入参的PlatformDefId为空(检查PlatformDefId是否正确)
+        /// getProductIdInTargetPlatform_IS_EMPTY	- 入参的目的ProductId为空(入参的目的ProductId是否正确)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaProductPushSyncPushProductResultResult AlibabaProductPushSyncPushProductResult(AlibabaProductPushPlatformDefinition platformDefinition, AlibabaProductPushPushProductResult pushProductResults, AlibabaProductPushIdentity pushRecordIdentity = null)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaProductPushSyncPushProductResultAsync(platformDefinition, pushProductResults, pushRecordIdentity, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>同步铺货结果
+        /// 同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&amp;n=alibaba.product.push.syncPushProductResult&amp;v=1</summary>
+        /// <param name="platformDefinition">目标平台的定义</param>
+        /// <param name="pushProductResults">商品级别的铺货结果</param>
+        /// <param name="pushRecordIdentity">在批量铺货时，源平台可能会为每次铺货产生一个批次传递给ISV，ISV可以在同步通知时返回该字段。该字段由平台传递给ISV，该字段不是必须。</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 当前isv未在巴拿马平台注册(找负责的小二在巴拿马平台添加。)
+        /// getProductIdInSource_IS_EMPTY	- 入参的源ProductId为空(检查入参的源productId是否正确)
+        /// getPlatformDefId_IS_EMPTY	- 入参的PlatformDefId为空(检查PlatformDefId是否正确)
+        /// getProductIdInTargetPlatform_IS_EMPTY	- 入参的目的ProductId为空(入参的目的ProductId是否正确)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaProductPushSyncPushProductResultResult> AlibabaProductPushSyncPushProductResultAsync(AlibabaProductPushPlatformDefinition platformDefinition, AlibabaProductPushPushProductResult pushProductResults, AlibabaProductPushIdentity pushRecordIdentity = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product.push/alibaba.product.push.syncPushProductResult/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (platformDefinition == null)
+                        throw new System.ArgumentNullException("platformDefinition");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(platformDefinition, System.Globalization.CultureInfo.InvariantCulture)), "platformDefinition");
+                    }
+                    if (pushProductResults == null)
+                        throw new System.ArgumentNullException("pushProductResults");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pushProductResults, System.Globalization.CultureInfo.InvariantCulture)), "pushProductResults");
+                    }
+                    if (pushRecordIdentity != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pushRecordIdentity, System.Globalization.CultureInfo.InvariantCulture)), "pushRecordIdentity");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaProductPushSyncPushProductResultResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaProductPushSyncPushProductResultResult);
                     }
                     finally
                     {

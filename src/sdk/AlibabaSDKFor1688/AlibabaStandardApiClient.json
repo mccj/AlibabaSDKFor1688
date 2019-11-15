@@ -17958,6 +17958,168 @@
           }
         ]
       }
+    },
+    "/openapi/param2/1/com.alibaba.product/alibaba.cross.productInfo/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product",
+          "name=alibaba.cross.productInfo",
+          "version=1",
+          "oceanApiId=com.alibaba.product:alibaba.cross.productInfo-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n跨境场景获取商品详情\r\n跨境场景获取商品详情，需要建立跨境铺货关系之后才能获取详情\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productInfo-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.cross.productInfo&v=1 \r\n ",
+        "operationId": "AlibabaCrossProductInfo",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "formData",
+            "required": true,
+            "description": "1688商品ID",
+            "schema": {
+              "title": "Long",
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\n没有该商品的查询权限\t- 没有该商品的查询权限(没有建立铺货关系，在商品页面点击一键铺货或者调用铺货同步接口)\r\n商品[57374140142]不存在\t- 商品[57374140142]不存在(商品ID错误，检查商品ID)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaCrossProductInfoResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.product.push/alibaba.cross.syncProductListPushed/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product.push",
+          "name=alibaba.cross.syncProductListPushed",
+          "version=1",
+          "oceanApiId=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n跨境场景下将商品加入铺货列表\r\n跨境场景专用，将商品加入铺货列表（即：新增铺货关系），单次操作上限20条。加入后才可以通过商品详情查询接口查询商品详情。调用前需要联系跨境小二手动配置权限。\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&n=alibaba.cross.syncProductListPushed&v=1 \r\n ",
+        "operationId": "AlibabaCrossSyncProductListPushed",
+        "parameters": [
+          {
+            "name": "productIdList",
+            "in": "formData",
+            "required": true,
+            "description": "1688的商品ID列表,列表长度不能超过20个",
+            "schema": {
+              "title": "Int64[]",
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "同步结果返回 ErrorCode 的错误信息\r\nOFFERIDS_IS_NULL\t- 商品ID列表参数为空(检查入参商品是否存在)\r\nAPPKEY_ISV_CONFIG_IS_NOT_EXIST\t- 平台appkey配置不存在(联系运营在平台添加配置)\r\nISVUSERS_IS_NULL\t- ISV端用户帐号列表为空(同步Isv账户信息)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaPanamaCommonResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.product.push/alibaba.product.push.syncPushProductResult/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product.push",
+          "name=alibaba.product.push.syncPushProductResult",
+          "version=1",
+          "oceanApiId=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n同步铺货结果\r\n同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&n=alibaba.product.push.syncPushProductResult&v=1 \r\n ",
+        "operationId": "AlibabaProductPushSyncPushProductResult",
+        "parameters": [
+          {
+            "name": "platformDefinition",
+            "in": "formData",
+            "required": true,
+            "description": "目标平台的定义",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductPushPlatformDefinition"
+            }
+          },
+          {
+            "name": "pushProductResults",
+            "in": "formData",
+            "required": true,
+            "description": "商品级别的铺货结果",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductPushPushProductResult"
+            }
+          },
+          {
+            "name": "pushRecordIdentity",
+            "in": "formData",
+            "description": "在批量铺货时，源平台可能会为每次铺货产生一个批次传递给ISV，ISV可以在同步通知时返回该字段。该字段由平台传递给ISV，该字段不是必须。",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductPushIdentity"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\nAPPKEY_ISV_CONFIG_IS_NOT_EXIST\t- 当前isv未在巴拿马平台注册(找负责的小二在巴拿马平台添加。)\r\ngetProductIdInSource_IS_EMPTY\t- 入参的源ProductId为空(检查入参的源productId是否正确)\r\ngetPlatformDefId_IS_EMPTY\t- 入参的PlatformDefId为空(检查PlatformDefId是否正确)\r\ngetProductIdInTargetPlatform_IS_EMPTY\t- 入参的目的ProductId为空(入参的目的ProductId是否正确)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductPushSyncPushProductResultResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
     }
   },
   "definitions": {
@@ -39133,6 +39295,511 @@
             "type": "integer",
             "format": "int64"
           }
+        }
+      }
+    },
+    "AlibabaCrossProductInfoResult": {
+      "type": "object",
+      "description": " \r\n跨境场景获取商品详情\r\n跨境场景获取商品详情，需要建立跨境铺货关系之后才能获取详情\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productInfo-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.cross.productInfo&v=1 \r\n ",
+      "properties": {
+        "productInfo": {
+          "description": "商品详情",
+          "$ref": "#/definitions/AlibabaCrossProductInfoResult/definitions/AlibabaProductProductInfo"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "message": {
+          "title": "String",
+          "type": "string",
+          "description": "调用信息"
+        }
+      },
+      "definitions": {
+        "AlibabaProductProductInfo": {
+          "type": "object",
+          "description": "商品详情\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.cross.productInfo,version:1,typeName:alibaba.product.ProductInfo",
+          "properties": {
+            "productID": {
+              "title": "Long",
+              "type": "integer",
+              "description": "商品ID",
+              "format": "int64"
+            },
+            "productType": {
+              "title": "String",
+              "type": "string",
+              "description": "商品类型，在线批发商品(wholesale)或者询盘商品(sourcing)，1688网站缺省为wholesale"
+            },
+            "categoryID": {
+              "title": "Long",
+              "type": "integer",
+              "description": "类目ID，标识商品所属类目",
+              "format": "int64"
+            },
+            "attributes": {
+              "type": "array",
+              "description": "商品属性和属性值",
+              "items": {
+                "$ref": "#/definitions/AlibabaProductIncrementModifyResult/definitions/AlibabaProductProductInfo/definitions/AlibabaProductProductAttribute"
+              }
+            },
+            "groupID": {
+              "title": "Int64[]",
+              "type": "array",
+              "description": "分组ID，确定商品所属分组。1688可传入多个分组ID，国际站同一个商品只能属于一个分组，因此默认只取第一个",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            },
+            "status": {
+              "title": "String",
+              "type": "string",
+              "description": "商品状态。published:上网状态;member expired:会员撤销;auto expired:自然过期;expired:过期(包含手动过期与自动过期);member deleted:会员删除;modified:修改;new:新发;deleted:删除;TBD:to be delete;approved:审批通过;auditing:审核中;untread:审核不通过;"
+            },
+            "subject": {
+              "title": "String",
+              "type": "string",
+              "description": "商品标题，最多128个字符"
+            },
+            "description": {
+              "title": "String",
+              "type": "string",
+              "description": "商品详情描述，可包含图片中心的图片URL"
+            },
+            "language": {
+              "title": "String",
+              "type": "string",
+              "description": "语种，参见FAQ 语种枚举值，1688网站默认传入CHINESE"
+            },
+            "periodOfValidity": {
+              "title": "Integer",
+              "type": "integer",
+              "description": "信息有效期，按天计算，国际站无此信息",
+              "format": "int32"
+            },
+            "bizType": {
+              "title": "Integer",
+              "type": "integer",
+              "description": "业务类型。1：商品，2：加工，3：代理，4：合作，5：商务服务。国际站按默认商品。",
+              "format": "int32"
+            },
+            "pictureAuth": {
+              "title": "Boolean",
+              "type": "boolean",
+              "description": "是否图片私密信息，国际站此字段无效"
+            },
+            "image": {
+              "description": "商品主图",
+              "$ref": "#/definitions/AlibabaProductProductImageInfo"
+            },
+            "skuInfos": {
+              "type": "array",
+              "description": "sku信息",
+              "items": {
+                "$ref": "#/definitions/AlibabaProductGetResult/definitions/AlibabaProductProductInfo/definitions/AlibabaProductProductSKUInfo"
+              }
+            },
+            "saleInfo": {
+              "description": "商品销售信息",
+              "$ref": "#/definitions/AlibabaProductGetResult/definitions/AlibabaProductProductInfo/definitions/AlibabaProductProductSaleInfo"
+            },
+            "shippingInfo": {
+              "description": "商品物流信息",
+              "$ref": "#/definitions/AlibabaCrossProductInfoResult/definitions/AlibabaProductProductInfo/definitions/AlibabaProductProductShippingInfo"
+            },
+            "internationalTradeInfo": {
+              "description": "商品国际贸易信息，1688无需处理此字段",
+              "$ref": "#/definitions/AlibabaProductProductInternationalTradeInfo"
+            },
+            "extendInfos": {
+              "type": "array",
+              "description": "商品扩展信息",
+              "items": {
+                "$ref": "#/definitions/AlibabaProductGetResult/definitions/AlibabaProductProductInfo/definitions/AlibabaProductProductExtendInfo"
+              }
+            },
+            "supplierUserId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商用户ID"
+            },
+            "qualityLevel": {
+              "title": "Integer",
+              "type": "integer",
+              "description": "质量星级(0-5)",
+              "format": "int32"
+            },
+            "supplierLoginId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商loginId"
+            },
+            "categoryName": {
+              "title": "String",
+              "type": "string",
+              "description": "类目名"
+            },
+            "mainVedio": {
+              "title": "String",
+              "type": "string",
+              "description": "主图视频播放地址"
+            },
+            "productCargoNumber": {
+              "title": "String",
+              "type": "string",
+              "description": "商品货号，产品属性中的货号"
+            },
+            "crossBorderOffer": {
+              "title": "Boolean",
+              "type": "boolean",
+              "description": "是否海外代发"
+            },
+            "referencePrice": {
+              "title": "String",
+              "type": "string",
+              "description": "参考价格，返回价格区间，可能为空"
+            },
+            "createTime": {
+              "title": "DateTime",
+              "type": "string",
+              "description": "创建时间",
+              "format": "date-time"
+            },
+            "lastUpdateTime": {
+              "title": "DateTime",
+              "type": "string",
+              "description": "获取用户最后一次修改商品信息的时间",
+              "format": "date-time"
+            }
+          },
+          "definitions": {
+            "AlibabaProductProductShippingInfo": {
+              "type": "object",
+              "description": "商品物流信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.cross.productInfo,version:1,typeName:alibaba.product.ProductShippingInfo",
+              "properties": {
+                "unitWeight": {
+                  "title": "Double",
+                  "type": "number",
+                  "description": "重量/毛重，单位千克/件",
+                  "format": "double"
+                },
+                "volume": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "体积，单位是立方厘米，范围是1-9999999，1688无需关注此字段",
+                  "format": "int32"
+                },
+                "handlingTime": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "备货期，单位是天，范围是1-60。1688无需处理此字段",
+                  "format": "int32"
+                },
+                "freightTemplateID": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "运费模板ID，0表示运费说明，1表示卖家承担运费，其他值表示使用运费模版。此参数可调用运费模板相关API获取",
+                  "format": "int64"
+                },
+                "suttleWeight": {
+                  "title": "Double",
+                  "type": "number",
+                  "description": "净重，单位千克/件",
+                  "format": "double"
+                },
+                "sendGoodsAddressText": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "发货地描述"
+                },
+                "width": {
+                  "title": "Double",
+                  "type": "number",
+                  "description": "宽度，单位厘米",
+                  "format": "double"
+                },
+                "height": {
+                  "title": "Double",
+                  "type": "number",
+                  "description": "高度，单位厘米",
+                  "format": "double"
+                },
+                "length": {
+                  "title": "Double",
+                  "type": "number",
+                  "description": "长度，单位厘米",
+                  "format": "double"
+                },
+                "packageSize": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "尺寸，单位是厘米，长宽高范围是1-9999999。1688无需关注此字段"
+                },
+                "sendGoodsAddressId": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "发货地址ID，国际站无需处理此字段",
+                  "format": "int64"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "AlibabaPanamaCommonResult": {
+      "type": "object",
+      "description": "同步结果\r\n\r\n namespace:com.alibaba.product.push,apiname:alibaba.cross.syncProductListPushed,version:1,typeName:alibaba.panama.commonResult",
+      "properties": {
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      }
+    },
+    "AlibabaProductPushPlatformDefinition": {
+      "type": "object",
+      "description": "目标平台的定义\r\n\r\n namespace:com.alibaba.product.push,apiname:alibaba.product.push.syncPushProductResult,version:1,typeName:alibaba.product.push.PlatformDefinition",
+      "properties": {
+        "definitionId": {
+          "title": "String",
+          "type": "string",
+          "description": "平台ID，由alibaba定义。比如淘宝为www.taobao.com。枚举值：亚马逊Amazon:AMAZON,速卖通:AE,Wish:WISH,Ebay易贝:EBAY,Lazada来赞达:LAZADA,淘宝Taobao:TAOBAO"
+        }
+      }
+    },
+    "AlibabaProductPushPushProductResult": {
+      "type": "object",
+      "description": "商品级别的铺货结果\r\n\r\n namespace:com.alibaba.product.push,apiname:alibaba.product.push.syncPushProductResult,version:1,typeName:alibaba.product.push.PushProductResult",
+      "properties": {
+        "productIdInTargetPlatform": {
+          "title": "String",
+          "type": "string",
+          "description": "在目标平台的商品ID，纯数字字符串"
+        },
+        "productIdInPartner": {
+          "title": "String",
+          "type": "string",
+          "description": "在第三方平台的商品ID"
+        },
+        "productIdInSource": {
+          "title": "String",
+          "type": "string",
+          "description": "在源平台的商品ID，纯数字字符串"
+        },
+        "productPushStatus": {
+          "title": "String",
+          "type": "string",
+          "description": "铺货状态，0：未成功，1：已成功"
+        },
+        "productInfoInTargetPlatform": {
+          "description": "商品级别的铺货结果",
+          "$ref": "#/definitions/AlibabaProductPushPushProductResult/definitions/AlibabaProductPushSimpleItemDesc"
+        },
+        "skus": {
+          "type": "array",
+          "description": "SKU数组",
+          "items": {
+            "$ref": "#/definitions/AlibabaProductPushPushProductResult/definitions/AlibabaProductPushPushProductSKUResult"
+          }
+        },
+        "userShopIdInTargetPlatform": {
+          "title": "String",
+          "type": "string",
+          "description": "用户在目标平台的店铺标志，纯数字字符串，对应后台的targetUserId。比如目标平台为淘宝，则需要传递客户在淘宝的用户Id"
+        }
+      },
+      "definitions": {
+        "AlibabaProductPushSimpleItemDesc": {
+          "type": "object",
+          "description": "商品级别的铺货结果\r\n\r\n namespace:com.alibaba.product.push,apiname:alibaba.product.push.syncPushProductResult,version:1,typeName:alibaba.product.push.SimpleItemDesc",
+          "properties": {
+            "id": {
+              "title": "String",
+              "type": "string",
+              "description": "唯一标识"
+            },
+            "price": {
+              "title": "Double",
+              "type": "number",
+              "description": "价格",
+              "format": "double"
+            },
+            "subject": {
+              "title": "String",
+              "type": "string",
+              "description": "商品名称"
+            },
+            "description": {
+              "title": "String",
+              "type": "string",
+              "description": "描述"
+            },
+            "url": {
+              "title": "String",
+              "type": "string",
+              "description": "商品的URL"
+            },
+            "priceRanges": {
+              "type": "array",
+              "description": "价格区间",
+              "items": {
+                "$ref": "#/definitions/AlibabaProductPushPushProductResult/definitions/AlibabaProductPushSimpleItemDesc/definitions/AlibabaProductPushPriceRanges"
+              }
+            }
+          },
+          "definitions": {
+            "AlibabaProductPushPriceRanges": {
+              "type": "object",
+              "description": "价格区间\r\n\r\n namespace:com.alibaba.product.push,apiname:alibaba.product.push.syncPushProductResult,version:1,typeName:alibaba.product.push.priceRanges",
+              "properties": {
+                "price": {
+                  "title": "Double",
+                  "type": "number",
+                  "description": "",
+                  "format": "double"
+                },
+                "startQuantity": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "AlibabaProductPushPushProductSKUResult": {
+          "type": "object",
+          "description": "SKU数组\r\n\r\n namespace:com.alibaba.product.push,apiname:alibaba.product.push.syncPushProductResult,version:1,typeName:alibaba.product.push.PushProductSKUResult",
+          "properties": {
+            "skuIdInSource": {
+              "title": "String",
+              "type": "string",
+              "description": "在源平台的SKU标志"
+            },
+            "skuIdInPartner": {
+              "title": "String",
+              "type": "string",
+              "description": "在第三方平台的SKU标志"
+            },
+            "skuPushStatus": {
+              "title": "String",
+              "type": "string",
+              "description": "铺货状态"
+            },
+            "skuIdInTargetPlatform": {
+              "title": "String",
+              "type": "string",
+              "description": "在目标平台的SKU标志"
+            },
+            "skuInfoInTargetPlatform": {
+              "description": "SKU铺货结果",
+              "$ref": "#/definitions/AlibabaProductPushPushProductResult/definitions/AlibabaProductPushSimpleItemDesc"
+            },
+            "mappingInfo": {
+              "type": "array",
+              "description": "属性映射关系",
+              "items": {
+                "$ref": "#/definitions/AlibabaProductPushPushProductResult/definitions/AlibabaProductPushPushProductSKUResult/definitions/AlibabaProductPushAttributeRelationMapping"
+              }
+            }
+          },
+          "definitions": {
+            "AlibabaProductPushAttributeRelationMapping": {
+              "type": "object",
+              "description": "属性映射关系\r\n\r\n namespace:com.alibaba.product.push,apiname:alibaba.product.push.syncPushProductResult,version:1,typeName:alibaba.product.push.attributeRelationMapping",
+              "properties": {
+                "propertyIdInSource": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "在源平台(1688)的属性ID"
+                },
+                "propertyTextInSource": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "在源平台(1688)的属性ID文本"
+                },
+                "valueIdInSource": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "在源平台(1688)的属性值ID"
+                },
+                "valueTextInSource": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "在源平台(1688)的属性值文本"
+                },
+                "propertyIdInTarget": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "在目标平台(比如TAOBAO)的属性ID"
+                },
+                "propertyTextInTarget": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "在目标平台(比如TAOBAO)的属性ID文本"
+                },
+                "valueIdInTarget": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "在目标平台(比如TAOBAO)的属性值的ID"
+                },
+                "valueTextInTarget": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "在目标平台(比如TAOBAO)的属性值的文本"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "AlibabaProductPushIdentity": {
+      "type": "object",
+      "description": "在批量铺货时，源平台可能会为每次铺货产生一个批次传递给ISV，ISV可以在同步通知时返回该字段。该字段由平台传递给ISV，该字段不是必须。\r\n\r\n namespace:com.alibaba.product.push,apiname:alibaba.product.push.syncPushProductResult,version:1,typeName:alibaba.product.push.Identity",
+      "properties": {
+        "content": {
+          "title": "String",
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "AlibabaProductPushSyncPushProductResultResult": {
+      "type": "object",
+      "description": " \r\n同步铺货结果\r\n同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&n=alibaba.product.push.syncPushProductResult&v=1 \r\n ",
+      "properties": {
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMessage": {
+          "title": "String",
+          "type": "string",
+          "description": "错误描述"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
         }
       }
     }
