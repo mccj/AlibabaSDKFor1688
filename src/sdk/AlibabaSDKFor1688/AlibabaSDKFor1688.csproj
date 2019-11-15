@@ -17,6 +17,7 @@
                 //订单详情查看
                 var order = alibabaClient.AlibabaTradeGetBuyerView("1688", 1111);
 </Description>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
