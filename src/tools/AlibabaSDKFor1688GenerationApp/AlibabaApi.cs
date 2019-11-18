@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace ConsoleApp2
 {
@@ -76,11 +77,31 @@ namespace ConsoleApp2
             var response = await _httpClient.GetAsync("https://open.1688.com/msg/dataNew/getAllTopics.json?_input_charset=UTF-8");
             var result = await response.Content.ReadAsAsync<Base2Response<ddd.TopicsByGroupAndOwnerResult[]>>();
             return result;
-        }    
+        }
         public async Task<Base2Response<ddd.TopicResult>> GetTopic(string topicId)
         {
             var response = await _httpClient.GetAsync("https://open.1688.com/msg/dataNew/getTopic.json?_input_charset=UTF-8&topicId=" + topicId);
             var result = await response.Content.ReadAsAsync<Base2Response<ddd.TopicResult>>();
+            return result;
+        }
+
+
+        public async Task<Datum[]> GetSolutionApiAndMessageListDetail()
+        {
+            var response = await _httpClient.GetAsync($"https://open.1688.com/solution/data/getSolutionDetail.jsonp?solutionKey=1513248184893&callback=jsonp");
+            var result1 = await response.Content.ReadAsStringAsync();
+            var ss = Newtonsoft.Json.JsonConvert.DeserializeObject<Newtonsoft.Json.Linq.JObject>(result1.Remove(0, 5).Trim('(', ')'));
+            var ddjson = ss.SelectToken("$.result.solutionDescList[?(@subCategory=='apiAndMessageList')].content").ToObject<string>();
+            var ss1 = Newtonsoft.Json.JsonConvert.DeserializeObject<Newtonsoft.Json.Linq.JObject>(ddjson);
+            var ss2 = ss1.SelectTokens("$.apis[*].modules[*]");
+            var result = ss2.Select(f => new Datum
+            {
+                //description = f.Value<string>("description"),
+                //fullName = f.Value<string>("fullName"),
+                Name = f.Value<string>("name"),
+                Namespace = f.Value<string>("namespace"),
+                Version = f.Value<int>("version")
+            }).ToArray();
             return result;
         }
     }
@@ -384,7 +405,7 @@ namespace ConsoleApp2
 
             [JsonProperty("children")]
             public MessageDoc[] Children { get; set; }
-        
+
         }
 
 

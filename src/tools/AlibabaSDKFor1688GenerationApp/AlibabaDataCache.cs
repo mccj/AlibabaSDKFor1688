@@ -92,19 +92,37 @@ namespace ConsoleApp2
                 return null;
                 //throw;
             }
-        }     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        }
+
+        public static async Task<Datum[]> GetSolutionApiAndMessageListDetailByCacheAsync()
+        {
+            try
+            {
+                var path = @"Data\缓存\";
+                if (!System.IO.Directory.Exists(path)) System.IO.Directory.CreateDirectory(path);
+                var f = System.IO.Path.Combine(path, "SolutionApiAndMessageListDetail.json");
+                if (System.IO.File.Exists(f))
+                    return Newtonsoft.Json.JsonConvert.DeserializeObject<Datum[]>(System.IO.File.ReadAllText(f));
+                var sssddd = await alibabaApi.GetSolutionApiAndMessageListDetail();
+                System.IO.File.WriteAllText(f, Newtonsoft.Json.JsonConvert.SerializeObject(sssddd));
+                return sssddd;
+            }
+            catch (Exception ex)
+            {
+                return null;
+                //throw;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
         public static async Task<Base2Response<ddd.TopicGroupsResult[]>> GetTopicGroups()
         {
             var path = @"Data\缓存\";
@@ -120,13 +138,13 @@ namespace ConsoleApp2
         {
             var path = @"Data\缓存\TopicsByGroupAndOwner\";
             if (!System.IO.Directory.Exists(path)) System.IO.Directory.CreateDirectory(path);
-            var f = System.IO.Path.Combine(path, "GetTopicsByGroupAndOwner_"+ topicGroup + ".json");
+            var f = System.IO.Path.Combine(path, "GetTopicsByGroupAndOwner_" + topicGroup + ".json");
             if (System.IO.File.Exists(f))
                 return Newtonsoft.Json.JsonConvert.DeserializeObject<Base2Response<ddd.TopicsByGroupAndOwnerResult[]>>(System.IO.File.ReadAllText(f));
             var sssddd = await alibabaApi.GetTopicsByGroupAndOwner(topicGroup);
             System.IO.File.WriteAllText(f, Newtonsoft.Json.JsonConvert.SerializeObject(sssddd));
             return sssddd;
-        }   
+        }
         public static async Task<Base2Response<ddd.TopicsByGroupAndOwnerResult[]>> GetAllTopics()
         {
             var path = @"Data\缓存\";
@@ -137,7 +155,7 @@ namespace ConsoleApp2
             var sssddd = await alibabaApi.GetAllTopics();
             System.IO.File.WriteAllText(f, Newtonsoft.Json.JsonConvert.SerializeObject(sssddd));
             return sssddd;
-        }  
+        }
         public static async Task<Base2Response<ddd.TopicResult>> GetTopic(string topicId)
         {
             var path = @"Data\缓存\Topic\";
@@ -148,6 +166,6 @@ namespace ConsoleApp2
             var sssddd = await alibabaApi.GetTopic(topicId);
             System.IO.File.WriteAllText(f, Newtonsoft.Json.JsonConvert.SerializeObject(sssddd));
             return sssddd;
-        }   
+        }
     }
 }

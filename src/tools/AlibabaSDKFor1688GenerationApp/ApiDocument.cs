@@ -44,27 +44,32 @@ namespace ConsoleApp2
                     ApiDetail = await AlibabaDataCache.GetApiDetailByCacheAsync(ff.Namespace, ff.Name, ff.Version)
                 })).ToList();
             }
+            var solutionApiAndMessageList = await AlibabaDataCache.GetSolutionApiAndMessageListDetailByCacheAsync();
+            publicApiDetails.AddRange(
+                solutionApiAndMessageList.Select(async f => new eeeeeeeee { ApiInfo = f, ApiDetail = await AlibabaDataCache.GetApiDetailByCacheAsync(f.Namespace, f.Name, f.Version) })
+            );
+
 
             var 另外添加 = new[] {
-                                //创建订单前预览数据接口
+                //创建订单前预览数据接口
                 new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.createOrder.previewWithOBUid", Version = 1 },
-                //跨境订单创建
-                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.trade.createCrossOrder", Version = 1 },
-                //查询订单可以支持的支付渠道
-                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.trade.payWay.query", Version = 1 },
+                ////跨境订单创建
+                //new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.trade.createCrossOrder", Version = 1 },
+                ////查询订单可以支持的支付渠道
+                //new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.trade.payWay.query", Version = 1 },
                 //批量获取订单的支付链接
-                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.alipay.url.get", Version = 1 },
-                //获取使用跨境宝支付的支付链接
-                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.crossBorderPay.url.get", Version = 1 },
-                //获取使用诚e赊支付的支付链接
-                new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.creditPay.url.get", Version = 1 },
-                //跨境场景获取商品详情
-                new Datum { Namespace = "com.alibaba.product", Name = "alibaba.cross.productInfo", Version = 1 },
-                //跨境场景下将商品加入铺货列表
-                new Datum { Namespace = "com.alibaba.product.push", Name = "alibaba.cross.syncProductListPushed", Version = 1 },
-                //同步铺货结果
-                new Datum { Namespace = "com.alibaba.product.push", Name = "alibaba.product.push.syncPushProductResult", Version = 1 }
-  };
+                //new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.alipay.url.get", Version = 1 },
+                ////获取使用跨境宝支付的支付链接
+                //new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.crossBorderPay.url.get", Version = 1 },
+                ////获取使用诚e赊支付的支付链接
+                //new Datum { Namespace = "com.alibaba.trade", Name = "alibaba.creditPay.url.get", Version = 1 },
+                ////跨境场景获取商品详情
+                //new Datum { Namespace = "com.alibaba.product", Name = "alibaba.cross.productInfo", Version = 1 },
+                ////跨境场景下将商品加入铺货列表
+                //new Datum { Namespace = "com.alibaba.product.push", Name = "alibaba.cross.syncProductListPushed", Version = 1 },
+                ////同步铺货结果
+                //new Datum { Namespace = "com.alibaba.product.push", Name = "alibaba.product.push.syncPushProductResult", Version = 1 }
+            };
 
             publicApiDetails.AddRange(
                 另外添加.Select(async f => new eeeeeeeee { ApiInfo = f, ApiDetail = await AlibabaDataCache.GetApiDetailByCacheAsync(f.Namespace, f.Name, f.Version) })
@@ -86,6 +91,8 @@ namespace ConsoleApp2
                 {
 
                 }
+                var pathKey = $"/openapi/param2/{apiDetail.Version}/{apiDetail.Namespace}/{apiDetail.Name}/{{AppKey}}";
+
                 var description = ($" \r\n{apiDetail.DisplayName}\r\n{apiDetail.Description}\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id={apiDetail.OceanApiId} \r\n调试:https://open.1688.com/api/apiTool.htm?ns={apiDetail.Namespace}&n={apiDetail.Name}&v={apiDetail.Version} \r\n ")?.过滤特殊字符();
                 var openApiOperation = new OpenApiOperation
                 {
@@ -102,11 +109,14 @@ namespace ConsoleApp2
                     },
                     Responses = { { "400", new OpenApiResponse { Schema = new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, Reference = errorSchema } } } }
                 };
+                if (document.Paths.ContainsKey(pathKey))
+                {
 
+                }
                 //if (openApiOperation.OperationId == "DaeServiceRevoke4Aboss")
                 //{
                 //}
-                //else
+                else
                 {
                     if (apiDetail.NeddAuth == true)
                         openApiOperation.Security = document.Security;
@@ -177,8 +187,7 @@ namespace ConsoleApp2
 
                     }
 
-
-                    document.Paths.Add($"/openapi/param2/{apiDetail.Version}/{apiDetail.Namespace}/{apiDetail.Name}/{{AppKey}}", new OpenApiPathItem
+                    document.Paths.Add(pathKey, new OpenApiPathItem
                     {
                         { OpenApiOperationMethod.Post,openApiOperation}
                     });

@@ -17562,65 +17562,28 @@
         }
       }
     },
-    "/openapi/param2/1/com.alibaba.trade/alibaba.createOrder.previewWithOBUid/{AppKey}": {
+    "/openapi/param2/1/com.alibaba.product/alibaba.cross.productInfo/{AppKey}": {
       "post": {
         "tags": [
-          "namespace=com.alibaba.trade",
-          "name=alibaba.createOrder.previewWithOBUid",
+          "namespace=com.alibaba.product",
+          "name=alibaba.cross.productInfo",
           "version=1",
-          "oceanApiId=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1",
+          "oceanApiId=com.alibaba.product:alibaba.cross.productInfo-1",
           "billFlag=False",
           "neddAuth=True"
         ],
-        "summary": " \r\n创建订单前预览数据接口\r\n订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.createOrder.previewWithOBUid&v=1 \r\n ",
-        "operationId": "AlibabaCreateOrderPreviewWithOBUid",
+        "summary": " \r\n跨境场景获取商品详情\r\n跨境场景获取商品详情，需要建立跨境铺货关系之后才能获取详情\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productInfo-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.cross.productInfo&v=1 \r\n ",
+        "operationId": "AlibabaCrossProductInfo",
         "parameters": [
           {
-            "name": "obUid",
+            "name": "productId",
             "in": "formData",
             "required": true,
-            "description": "代购用户唯一Id",
+            "description": "1688商品ID",
             "schema": {
-              "title": "String",
-              "type": "string"
-            }
-          },
-          {
-            "name": "addressParam",
-            "in": "formData",
-            "required": true,
-            "description": "收货地址信息",
-            "schema": {
-              "$ref": "#/definitions/AlibabaTradeFastAddress"
-            }
-          },
-          {
-            "name": "cargoParamList",
-            "in": "formData",
-            "required": true,
-            "description": "商品信息",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AlibabaTradeFastCargo"
-              }
-            }
-          },
-          {
-            "name": "invoiceParam",
-            "in": "formData",
-            "description": "发票信息",
-            "schema": {
-              "$ref": "#/definitions/AlibabaTradeFastInvoice"
-            }
-          },
-          {
-            "name": "flow",
-            "in": "formData",
-            "description": "general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系",
-            "schema": {
-              "title": "String",
-              "type": "string"
+              "title": "Long",
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
@@ -17632,9 +17595,227 @@
             }
           },
           "200": {
-            "description": "返回 ErrorCode 的错误信息\r\n500_007\t- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)\r\n500_005\t- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)\r\n500_006\t- 商品[offerId]的购买数量或者价格不满足混批限制。(商品的购买数量或者总金额均不满足混批条件)\r\n500_004\t- 商品[offerId_specId]库存不足，请核实库存后订购。(商品的某个规格库存不足)\r\n500_002\t- 商品[offerId]不属于同一卖家或者没有指定specId。(存在多个卖家的商品或者商品没有指定specId)\r\n500_003\t- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)\r\n500_001\t- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)",
+            "description": "返回 ErrorCode 的错误信息\r\n没有该商品的查询权限\t- 没有该商品的查询权限(没有建立铺货关系，在商品页面点击一键铺货或者调用铺货同步接口)\r\n商品[57374140142]不存在\t- 商品[57374140142]不存在(商品ID错误，检查商品ID)",
             "schema": {
-              "$ref": "#/definitions/AlibabaCreateOrderPreviewWithOBUidResult"
+              "$ref": "#/definitions/AlibabaCrossProductInfoResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.product.push/alibaba.cross.syncProductListPushed/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product.push",
+          "name=alibaba.cross.syncProductListPushed",
+          "version=1",
+          "oceanApiId=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n跨境场景下将商品加入铺货列表\r\n跨境场景专用，将商品加入铺货列表（即：新增铺货关系），单次操作上限20条。加入后才可以通过商品详情查询接口查询商品详情。调用前需要联系跨境小二手动配置权限。\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&n=alibaba.cross.syncProductListPushed&v=1 \r\n ",
+        "operationId": "AlibabaCrossSyncProductListPushed",
+        "parameters": [
+          {
+            "name": "productIdList",
+            "in": "formData",
+            "required": true,
+            "description": "1688的商品ID列表,列表长度不能超过20个",
+            "schema": {
+              "title": "Int64[]",
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "同步结果返回 ErrorCode 的错误信息\r\nOFFERIDS_IS_NULL\t- 商品ID列表参数为空(检查入参商品是否存在)\r\nAPPKEY_ISV_CONFIG_IS_NOT_EXIST\t- 平台appkey配置不存在(联系运营在平台添加配置)\r\nISVUSERS_IS_NULL\t- ISV端用户帐号列表为空(同步Isv账户信息)",
+            "schema": {
+              "description": "同步结果",
+              "properties": {
+                "result": {
+                  "$ref": "#/definitions/AlibabaPanamaCommonResult"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.product.push/alibaba.product.push.syncPushProductResult/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product.push",
+          "name=alibaba.product.push.syncPushProductResult",
+          "version=1",
+          "oceanApiId=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n同步铺货结果\r\n同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&n=alibaba.product.push.syncPushProductResult&v=1 \r\n ",
+        "operationId": "AlibabaProductPushSyncPushProductResult",
+        "parameters": [
+          {
+            "name": "platformDefinition",
+            "in": "formData",
+            "required": true,
+            "description": "目标平台的定义",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductPushPlatformDefinition"
+            }
+          },
+          {
+            "name": "pushProductResults",
+            "in": "formData",
+            "required": true,
+            "description": "商品级别的铺货结果",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductPushPushProductResult"
+            }
+          },
+          {
+            "name": "pushRecordIdentity",
+            "in": "formData",
+            "description": "在批量铺货时，源平台可能会为每次铺货产生一个批次传递给ISV，ISV可以在同步通知时返回该字段。该字段由平台传递给ISV，该字段不是必须。",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductPushIdentity"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\nAPPKEY_ISV_CONFIG_IS_NOT_EXIST\t- 当前isv未在巴拿马平台注册(找负责的小二在巴拿马平台添加。)\r\ngetProductIdInSource_IS_EMPTY\t- 入参的源ProductId为空(检查入参的源productId是否正确)\r\ngetPlatformDefId_IS_EMPTY\t- 入参的PlatformDefId为空(检查PlatformDefId是否正确)\r\ngetProductIdInTargetPlatform_IS_EMPTY\t- 入参的目的ProductId为空(入参的目的ProductId是否正确)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductPushSyncPushProductResultResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.product/alibaba.cross.productList/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product",
+          "name=alibaba.cross.productList",
+          "version=1",
+          "oceanApiId=com.alibaba.product:alibaba.cross.productList-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n跨境场景获取商品列表\r\n该接口需要校验跨境的铺货关系，跨境业务专用。商品模型V2\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productList-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.cross.productList&v=1 \r\n ",
+        "operationId": "AlibabaCrossProductList",
+        "parameters": [
+          {
+            "name": "productIdList",
+            "in": "formData",
+            "required": true,
+            "description": "商品Id列表",
+            "schema": {
+              "title": "Int64[]",
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\n商品不存在\t- 574325651XXX:商品不存在,57002765XXX:商品不存在(检查铺货列表中是否存在该商品)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaCrossProductListResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.product/alibaba.product.unfollow.crossborder/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product",
+          "name=alibaba.product.unfollow.crossborder",
+          "version=1",
+          "oceanApiId=com.alibaba.product:alibaba.product.unfollow.crossborder-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n解除关注商品\r\n解除关注商品\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.unfollow.crossborder-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.product.unfollow.crossborder&v=1 \r\n ",
+        "operationId": "AlibabaProductUnfollowCrossborder",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "formData",
+            "required": true,
+            "description": "商品id",
+            "schema": {
+              "title": "Long",
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductUnfollowCrossborderResult"
             }
           }
         },
@@ -17747,6 +17928,562 @@
             "description": "返回 ErrorCode 的错误信息\r\nnot support tradeType:【XXXX】\t- 不支持的交易类型(当前交易可支持的交易类型，需要通过预览接口的tradeModeNameList字段获取)",
             "schema": {
               "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/cn.alibaba.open/convertLoginIdsByMemberIds/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=cn.alibaba.open",
+          "name=convertLoginIdsByMemberIds",
+          "version=1",
+          "oceanApiId=cn.alibaba.open:convertLoginIdsByMemberIds-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n批量转换memberId到loginId\r\n批量转换memberId到loginId\r\n(最大数量不超过110个，数量太大时抛出异常)\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:convertLoginIdsByMemberIds-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&n=convertLoginIdsByMemberIds&v=1 \r\n ",
+        "operationId": "ConvertLoginIdsByMemberIds",
+        "parameters": [
+          {
+            "name": "memberIds",
+            "in": "formData",
+            "required": true,
+            "description": "需要转换的memberId列表",
+            "schema": {
+              "title": "String[]",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ConvertLoginIdsByMemberIdsResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.account/alibaba.subAccount.list/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.account",
+          "name=alibaba.subAccount.list",
+          "version=1",
+          "oceanApiId=com.alibaba.account:alibaba.subAccount.list-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n获取子账号列表\r\n获取用户的主账号及子账号信息。\n如果调用API时的授权为子账号，则只返回支持子账号对应的主账号；\n如果调用API时的授权为主账号，则只返回所有子账号列表；\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.account:alibaba.subAccount.list-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.account&n=alibaba.subAccount.list&v=1 \r\n ",
+        "operationId": "AlibabaSubAccountList",
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AlibabaSubAccountListResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.account/alibaba.account.agent.crossBasic/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.account",
+          "name=alibaba.account.agent.crossBasic",
+          "version=1",
+          "oceanApiId=com.alibaba.account:alibaba.account.agent.crossBasic-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n跨境场景获取非授权用户的基本信息\r\n可以查看他人的用户信息，使用在跨境场景\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.account:alibaba.account.agent.crossBasic-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.account&n=alibaba.account.agent.crossBasic&v=1 \r\n ",
+        "operationId": "AlibabaAccountAgentCrossBasic",
+        "parameters": [
+          {
+            "name": "loginId",
+            "in": "formData",
+            "description": "用户的loginId，入参不可同时为空",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "domain",
+            "in": "formData",
+            "description": "旺铺域名，入参不可同时为空",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AlibabaAccountAgentCrossBasicResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/system.oauth2/subaccount.auth.add/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=system.oauth2",
+          "name=subaccount.auth.add",
+          "version=1",
+          "oceanApiId=system.oauth2:subaccount.auth.add-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n批量添加子账号授权\r\n批量对某个主账号下面的子账号添加授权，前提是主账号已经授权\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=system.oauth2:subaccount.auth.add-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=system.oauth2&n=subaccount.auth.add&v=1 \r\n ",
+        "operationId": "SubaccountAuthAdd",
+        "parameters": [
+          {
+            "name": "subUserIdentityList",
+            "in": "formData",
+            "required": true,
+            "description": "子账号id列表",
+            "schema": {
+              "title": "String[]",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回结果对象",
+            "schema": {
+              "$ref": "#/definitions/AlibabaOceanAuthDtoAuthResultModelMap"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/system.oauth2/subaccount.auth.cancel/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=system.oauth2",
+          "name=subaccount.auth.cancel",
+          "version=1",
+          "oceanApiId=system.oauth2:subaccount.auth.cancel-1",
+          "billFlag=",
+          "neddAuth="
+        ],
+        "summary": " \r\n批量取消子账号授权\r\n对子账号的授权批量取消\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=system.oauth2:subaccount.auth.cancel-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=system.oauth2&n=subaccount.auth.cancel&v=1 \r\n ",
+        "operationId": "SubaccountAuthCancel",
+        "parameters": [
+          {
+            "name": "subUserIdentityList",
+            "in": "formData",
+            "required": true,
+            "description": "子账号id列表",
+            "schema": {
+              "title": "String[]",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回结果",
+            "schema": {
+              "$ref": "#/definitions/AlibabaOceanAuthDtoAuthResultModelBoolean"
+            }
+          }
+        }
+      }
+    },
+    "/openapi/param2/1/system.oauth2/subaccount.auth.list/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=system.oauth2",
+          "name=subaccount.auth.list",
+          "version=1",
+          "oceanApiId=system.oauth2:subaccount.auth.list-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n批量查询子账号授权\r\n批量查询主账号下面子账号的授权情况\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=system.oauth2:subaccount.auth.list-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=system.oauth2&n=subaccount.auth.list&v=1 \r\n ",
+        "operationId": "SubaccountAuthList",
+        "parameters": [
+          {
+            "name": "subUserIdentityList",
+            "in": "formData",
+            "required": true,
+            "description": "子账号id列表",
+            "schema": {
+              "title": "String[]",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "查询结果",
+            "schema": {
+              "$ref": "#/definitions/AlibabaOceanAuthDtoAuthResultModelRelation"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.trade/alibaba.trade.refund.OpQueryOrderRefundOperationList/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.trade",
+          "name=alibaba.trade.refund.OpQueryOrderRefundOperationList",
+          "version=1",
+          "oceanApiId=com.alibaba.trade:alibaba.trade.refund.OpQueryOrderRefundOperationList-1",
+          "billFlag=False",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n退款单操作记录列表\r\n买卖双方退款操作记录\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.OpQueryOrderRefundOperationList-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.refund.OpQueryOrderRefundOperationList&v=1 \r\n ",
+        "operationId": "AlibabaTradeRefundOpQueryOrderRefundOperationList",
+        "parameters": [
+          {
+            "name": "refundId",
+            "in": "formData",
+            "required": true,
+            "description": "退款单Id",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageNo",
+            "in": "formData",
+            "required": true,
+            "description": "当前页号",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "formData",
+            "required": true,
+            "description": "页大小",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "返回 ErrorCode 的错误信息\r\n500\t- {\\&quot;errorCode\\&quot;:\\&quot;003\\&quot;,\\&quot;errorMessage\\&quot;:\\&quot;SERVICE:查询数据失败，请检查输入参数后重试。\\&quot;,\\&quot;cause\\&quot;:\\&quot;\\&quot;}(非授权用户的退款单)\r\n500\t- {\\&quot;errorCode\\&quot;:\\&quot;003002\\&quot;,\\&quot;errorMessage\\&quot;:\\&quot;SERVICE:INVOKE_FAIL:退款数据错误，请检查退款单号，退款单号的格式一般为TD+id\\&quot;,\\&quot;cause\\&quot;:\\&quot;errorCode:REFUND_DATA_ERROR,errorMsg:refundId : 11043002311780591,cause:null\\&quot;}(退款单不正确)\r\n500\t- {\\&quot;errorCode\\&quot;:\\&quot;003002\\&quot;,\\&quot;errorMessage\\&quot;:\\&quot;SERVICE:INVOKE_FAIL:OrderRefundService#queryOrderRefundOperationList\\&quot;,\\&quot;cause\\&quot;:\\&quot;errorCode:INVALID_PARAM,errorMsg:null,cause:null\\&quot;}(退款单不正确)",
+            "schema": {
+              "$ref": "#/definitions/AlibabaTradeRefundOpQueryOrderRefundOperationListResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.product/alibaba.product.genDijiaFxUrl/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product",
+          "name=alibaba.product.genDijiaFxUrl",
+          "version=1",
+          "oceanApiId=com.alibaba.product:alibaba.product.genDijiaFxUrl-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n跨境产品开发工具低价开发接口\r\n传入分销客推广位PID，获取跨境产品开发工具低价开发页面的 URL。在此页面中推广的商品，买家购买后 ISV 能获得佣金分成。（此接口仅对跨境ERP及数据选品工具开放，ISVID需要向小二申请）\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.genDijiaFxUrl-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.product.genDijiaFxUrl&v=1 \r\n ",
+        "operationId": "AlibabaProductGenDijiaFxUrl",
+        "parameters": [
+          {
+            "name": "isvId",
+            "in": "formData",
+            "required": true,
+            "description": "ISV唯一标识，联系小二提供",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "pid",
+            "in": "formData",
+            "required": true,
+            "description": "分销客推广位PID",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "detailUrl",
+            "in": "formData",
+            "description": "1688商品URL",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "offerId",
+            "in": "formData",
+            "description": "1688商品ID",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductGenDijiaFxUrlResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.product/alibaba.product.genTongkuanFxUrl/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product",
+          "name=alibaba.product.genTongkuanFxUrl",
+          "version=1",
+          "oceanApiId=com.alibaba.product:alibaba.product.genTongkuanFxUrl-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n跨境产品开发工具同款开发接口\r\n传入分销客推广位PID，获取跨境产品开发工具低价开发页面的 URL。在此页面中推广的商品，买家购买后 ISV 能获得佣金分成。（此接口仅对跨境ERP及数据选品工具开放，ISVID需要向小二申请）\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.genTongkuanFxUrl-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.product.genTongkuanFxUrl&v=1 \r\n ",
+        "operationId": "AlibabaProductGenTongkuanFxUrl",
+        "parameters": [
+          {
+            "name": "isvId",
+            "in": "formData",
+            "required": true,
+            "description": "ISV标识，联系小二提供",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "pid",
+            "in": "formData",
+            "required": true,
+            "description": "分销客推广位PID",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "productUrl",
+            "in": "formData",
+            "description": "下游产品URL",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "imgUrl",
+            "in": "formData",
+            "description": "下游产品图片URL",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductGenTongkuanFxUrlResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
+    "/openapi/param2/1/com.alibaba.product/alibaba.product.suggest.crossBorder/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.product",
+          "name=alibaba.product.suggest.crossBorder",
+          "version=1",
+          "oceanApiId=com.alibaba.product:alibaba.product.suggest.crossBorder-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n跨境场景根据关键字推荐商品\r\n跨境场景根据关键字及类目推荐商品，按销量排序。注意：该API有流量控制，仅适用于手动关联场景\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.suggest.crossBorder-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.product.suggest.crossBorder&v=1 \r\n ",
+        "operationId": "AlibabaProductSuggestCrossBorder",
+        "parameters": [
+          {
+            "name": "keyWord",
+            "in": "formData",
+            "required": true,
+            "description": "商品的搜索关键字，通常是商品的标题",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          },
+          {
+            "name": "loginId",
+            "in": "formData",
+            "description": "卖家loginId",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AlibabaProductSuggestCrossBorderResult"
             }
           }
         },
@@ -17908,6 +18645,62 @@
         ]
       }
     },
+    "/openapi/param2/1/com.alibaba.trade/alibaba.accountPeriod.list.buyerView/{AppKey}": {
+      "post": {
+        "tags": [
+          "namespace=com.alibaba.trade",
+          "name=alibaba.accountPeriod.list.buyerView",
+          "version=1",
+          "oceanApiId=com.alibaba.trade:alibaba.accountPeriod.list.buyerView-1",
+          "billFlag=",
+          "neddAuth=True"
+        ],
+        "summary": " \r\n买家查看获得的所有账期授信\r\n买家维度查看所有获得的账期授信。可翻页查询，每次返回不超过10条\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.accountPeriod.list.buyerView-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.accountPeriod.list.buyerView&v=1 \r\n ",
+        "operationId": "AlibabaAccountPeriodListBuyerView",
+        "parameters": [
+          {
+            "name": "pageIndex",
+            "in": "formData",
+            "description": "页码",
+            "schema": {
+              "title": "Long",
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "sellerLoginId",
+            "in": "formData",
+            "description": "卖家ID，不填则查询全部",
+            "schema": {
+              "title": "String",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AlibabaAccountPeriodListBuyerViewResult"
+            }
+          }
+        },
+        "security": [
+          {
+            "NeddAuth": [
+              "access_token"
+            ]
+          }
+        ]
+      }
+    },
     "/openapi/param2/1/com.alibaba.trade/alibaba.creditPay.url.get/{AppKey}": {
       "post": {
         "tags": [
@@ -17959,79 +18752,65 @@
         ]
       }
     },
-    "/openapi/param2/1/com.alibaba.product/alibaba.cross.productInfo/{AppKey}": {
+    "/openapi/param2/1/com.alibaba.trade/alibaba.createOrder.previewWithOBUid/{AppKey}": {
       "post": {
         "tags": [
-          "namespace=com.alibaba.product",
-          "name=alibaba.cross.productInfo",
+          "namespace=com.alibaba.trade",
+          "name=alibaba.createOrder.previewWithOBUid",
           "version=1",
-          "oceanApiId=com.alibaba.product:alibaba.cross.productInfo-1",
+          "oceanApiId=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1",
           "billFlag=False",
           "neddAuth=True"
         ],
-        "summary": " \r\n跨境场景获取商品详情\r\n跨境场景获取商品详情，需要建立跨境铺货关系之后才能获取详情\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productInfo-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.cross.productInfo&v=1 \r\n ",
-        "operationId": "AlibabaCrossProductInfo",
+        "summary": " \r\n创建订单前预览数据接口\r\n订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.createOrder.previewWithOBUid&v=1 \r\n ",
+        "operationId": "AlibabaCreateOrderPreviewWithOBUid",
         "parameters": [
           {
-            "name": "productId",
+            "name": "obUid",
             "in": "formData",
             "required": true,
-            "description": "1688商品ID",
+            "description": "代购用户唯一Id",
             "schema": {
-              "title": "Long",
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "400": {
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
+              "title": "String",
+              "type": "string"
             }
           },
-          "200": {
-            "description": "返回 ErrorCode 的错误信息\r\n没有该商品的查询权限\t- 没有该商品的查询权限(没有建立铺货关系，在商品页面点击一键铺货或者调用铺货同步接口)\r\n商品[57374140142]不存在\t- 商品[57374140142]不存在(商品ID错误，检查商品ID)",
-            "schema": {
-              "$ref": "#/definitions/AlibabaCrossProductInfoResult"
-            }
-          }
-        },
-        "security": [
           {
-            "NeddAuth": [
-              "access_token"
-            ]
-          }
-        ]
-      }
-    },
-    "/openapi/param2/1/com.alibaba.product.push/alibaba.cross.syncProductListPushed/{AppKey}": {
-      "post": {
-        "tags": [
-          "namespace=com.alibaba.product.push",
-          "name=alibaba.cross.syncProductListPushed",
-          "version=1",
-          "oceanApiId=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1",
-          "billFlag=False",
-          "neddAuth=True"
-        ],
-        "summary": " \r\n跨境场景下将商品加入铺货列表\r\n跨境场景专用，将商品加入铺货列表（即：新增铺货关系），单次操作上限20条。加入后才可以通过商品详情查询接口查询商品详情。调用前需要联系跨境小二手动配置权限。\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.cross.syncProductListPushed-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&n=alibaba.cross.syncProductListPushed&v=1 \r\n ",
-        "operationId": "AlibabaCrossSyncProductListPushed",
-        "parameters": [
-          {
-            "name": "productIdList",
+            "name": "addressParam",
             "in": "formData",
             "required": true,
-            "description": "1688的商品ID列表,列表长度不能超过20个",
+            "description": "收货地址信息",
             "schema": {
-              "title": "Int64[]",
+              "$ref": "#/definitions/AlibabaTradeFastAddress"
+            }
+          },
+          {
+            "name": "cargoParamList",
+            "in": "formData",
+            "required": true,
+            "description": "商品信息",
+            "schema": {
               "type": "array",
               "items": {
-                "type": "integer",
-                "format": "int64"
+                "$ref": "#/definitions/AlibabaTradeFastCargo"
               }
+            }
+          },
+          {
+            "name": "invoiceParam",
+            "in": "formData",
+            "description": "发票信息",
+            "schema": {
+              "$ref": "#/definitions/AlibabaTradeFastInvoice"
+            }
+          },
+          {
+            "name": "flow",
+            "in": "formData",
+            "description": "general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系",
+            "schema": {
+              "title": "String",
+              "type": "string"
             }
           }
         ],
@@ -18043,77 +18822,9 @@
             }
           },
           "200": {
-            "description": "同步结果返回 ErrorCode 的错误信息\r\nOFFERIDS_IS_NULL\t- 商品ID列表参数为空(检查入参商品是否存在)\r\nAPPKEY_ISV_CONFIG_IS_NOT_EXIST\t- 平台appkey配置不存在(联系运营在平台添加配置)\r\nISVUSERS_IS_NULL\t- ISV端用户帐号列表为空(同步Isv账户信息)",
+            "description": "返回 ErrorCode 的错误信息\r\n500_007\t- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)\r\n500_005\t- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)\r\n500_006\t- 商品[offerId]的购买数量或者价格不满足混批限制。(商品的购买数量或者总金额均不满足混批条件)\r\n500_004\t- 商品[offerId_specId]库存不足，请核实库存后订购。(商品的某个规格库存不足)\r\n500_002\t- 商品[offerId]不属于同一卖家或者没有指定specId。(存在多个卖家的商品或者商品没有指定specId)\r\n500_003\t- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)\r\n500_001\t- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)",
             "schema": {
-              "description": "同步结果",
-              "properties": {
-                "result": {
-                  "$ref": "#/definitions/AlibabaPanamaCommonResult"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "NeddAuth": [
-              "access_token"
-            ]
-          }
-        ]
-      }
-    },
-    "/openapi/param2/1/com.alibaba.product.push/alibaba.product.push.syncPushProductResult/{AppKey}": {
-      "post": {
-        "tags": [
-          "namespace=com.alibaba.product.push",
-          "name=alibaba.product.push.syncPushProductResult",
-          "version=1",
-          "oceanApiId=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1",
-          "billFlag=False",
-          "neddAuth=True"
-        ],
-        "summary": " \r\n同步铺货结果\r\n同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product.push:alibaba.product.push.syncPushProductResult-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product.push&n=alibaba.product.push.syncPushProductResult&v=1 \r\n ",
-        "operationId": "AlibabaProductPushSyncPushProductResult",
-        "parameters": [
-          {
-            "name": "platformDefinition",
-            "in": "formData",
-            "required": true,
-            "description": "目标平台的定义",
-            "schema": {
-              "$ref": "#/definitions/AlibabaProductPushPlatformDefinition"
-            }
-          },
-          {
-            "name": "pushProductResults",
-            "in": "formData",
-            "required": true,
-            "description": "商品级别的铺货结果",
-            "schema": {
-              "$ref": "#/definitions/AlibabaProductPushPushProductResult"
-            }
-          },
-          {
-            "name": "pushRecordIdentity",
-            "in": "formData",
-            "description": "在批量铺货时，源平台可能会为每次铺货产生一个批次传递给ISV，ISV可以在同步通知时返回该字段。该字段由平台传递给ISV，该字段不是必须。",
-            "schema": {
-              "$ref": "#/definitions/AlibabaProductPushIdentity"
-            }
-          }
-        ],
-        "responses": {
-          "400": {
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
-            }
-          },
-          "200": {
-            "description": "返回 ErrorCode 的错误信息\r\nAPPKEY_ISV_CONFIG_IS_NOT_EXIST\t- 当前isv未在巴拿马平台注册(找负责的小二在巴拿马平台添加。)\r\ngetProductIdInSource_IS_EMPTY\t- 入参的源ProductId为空(检查入参的源productId是否正确)\r\ngetPlatformDefId_IS_EMPTY\t- 入参的PlatformDefId为空(检查PlatformDefId是否正确)\r\ngetProductIdInTargetPlatform_IS_EMPTY\t- 入参的目的ProductId为空(入参的目的ProductId是否正确)",
-            "schema": {
-              "$ref": "#/definitions/AlibabaProductPushSyncPushProductResultResult"
+              "$ref": "#/definitions/AlibabaCreateOrderPreviewWithOBUidResult"
             }
           }
         },
@@ -38848,461 +39559,6 @@
       "type": "object",
       "description": "3D模型草稿翻页数据\r\n查找API时出错\r\n namespace:com.alibaba.i3d,apiname:i3d.draftmodel.list,version:1,typeName:interactive3d.Page"
     },
-    "AlibabaCreateOrderPreviewWithOBUidResult": {
-      "type": "object",
-      "description": " \r\n创建订单前预览数据接口\r\n订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.createOrder.previewWithOBUid&v=1 \r\n ",
-      "properties": {
-        "orderPreviewResuslt": {
-          "type": "array",
-          "description": "订单预览结果，过自动拆单会返回多个记录",
-          "items": {
-            "$ref": "#/definitions/AlibabaCreateOrderPreviewWithOBUidResult/definitions/AlibabaCreateOrderPreviewResultModel"
-          }
-        },
-        "success": {
-          "title": "Boolean",
-          "type": "boolean",
-          "description": "是否成功"
-        },
-        "errorCode": {
-          "title": "String",
-          "type": "string",
-          "description": "错误码"
-        },
-        "errorMsg": {
-          "title": "String",
-          "type": "string",
-          "description": "错误信息"
-        },
-        "postFeeByDescOfferList": {
-          "title": "Int64[]",
-          "type": "array",
-          "description": "运费说明的商品列表",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "consignOfferList": {
-          "title": "Int64[]",
-          "type": "array",
-          "description": "代销商品列表",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        }
-      },
-      "definitions": {
-        "AlibabaCreateOrderPreviewResultModel": {
-          "type": "object",
-          "description": "订单预览结果，过自动拆单会返回多个记录\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.previewWithOBUid,version:1,typeName:alibaba.createOrder.preview.result.model",
-          "properties": {
-            "tradeModeNameList": {
-              "title": "String[]",
-              "type": "array",
-              "description": "当前交易可以支持的交易方式列表。某些场景的创建订单接口需要使用。",
-              "items": {
-                "type": "string"
-              }
-            },
-            "sumPayment": {
-              "title": "Long",
-              "type": "integer",
-              "description": "订单总费用, 单位为分.",
-              "format": "int64"
-            },
-            "message": {
-              "title": "String",
-              "type": "string",
-              "description": "返回信息"
-            },
-            "resultCode": {
-              "title": "String",
-              "type": "string",
-              "description": "返回码"
-            },
-            "flowFlag": {
-              "title": "String",
-              "type": "string",
-              "description": "订单下单流程"
-            },
-            "cargoList": {
-              "type": "array",
-              "description": "规格信息",
-              "items": {
-                "$ref": "#/definitions/AlibabaCreateOrderPreviewResult/definitions/AlibabaCreateOrderPreviewResultModel/definitions/AlibabaCreateOrderPreviewResultCargoModel"
-              }
-            },
-            "shopPromotionList": {
-              "type": "array",
-              "description": "可用店铺级别优惠列表",
-              "items": {
-                "$ref": "#/definitions/AlibabaCreateOrderPreviewResult/definitions/AlibabaCreateOrderPreviewResultModel/definitions/AlibabaCreateOrderPreviewResultCargoModel/definitions/AlibabaTradePromotionModel"
-              }
-            },
-            "tradeModelList": {
-              "type": "array",
-              "description": "当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。",
-              "items": {
-                "$ref": "#/definitions/AlibabaCreateOrderPreviewWithOBUidResult/definitions/AlibabaCreateOrderPreviewResultModel/definitions/TradeModelExtensionList"
-              }
-            }
-          },
-          "definitions": {
-            "TradeModelExtensionList": {
-              "type": "object",
-              "description": "当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.previewWithOBUid,version:1,typeName:tradeModelExtensionList",
-              "properties": {
-                "tradeWay": {
-                  "title": "String",
-                  "type": "string",
-                  "description": "交易方式"
-                },
-                "name": {
-                  "title": "String",
-                  "type": "string",
-                  "description": "交易方式名称"
-                },
-                "tradeType": {
-                  "title": "String",
-                  "type": "string",
-                  "description": "开放平台下单时候传入的tradeType"
-                },
-                "description": {
-                  "title": "String",
-                  "type": "string",
-                  "description": "交易描述"
-                },
-                "opSupport": {
-                  "title": "Boolean",
-                  "type": "boolean",
-                  "description": "是否支持"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "AlibabaTradeCreateCrossOrderResult": {
-      "type": "object",
-      "description": " \r\n跨境订单创建\r\n跨境专用订单创建。创建订单最多允许100个SKU，且必须为同一个供应商的商品。超过50个SKU或者一些特殊情况会一次创建多个个订单并返回多个订单号。\n支持大市场及分销两个场景。根据当前授权用户,区分主子账号下单\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createCrossOrder-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.createCrossOrder&v=1 \r\n ",
-      "properties": {
-        "result": {
-          "description": "创建订单结果",
-          "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult/definitions/AlibabaTradeCrossResult"
-        },
-        "success": {
-          "title": "Boolean",
-          "type": "boolean",
-          "description": "是否成功"
-        },
-        "code": {
-          "title": "String",
-          "type": "string",
-          "description": "错误码"
-        },
-        "message": {
-          "title": "String",
-          "type": "string",
-          "description": "错误信息"
-        }
-      },
-      "definitions": {
-        "AlibabaTradeCrossResult": {
-          "type": "object",
-          "description": "创建订单结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.trade.cross.result",
-          "properties": {
-            "totalSuccessAmount": {
-              "title": "Long",
-              "type": "integer",
-              "description": "订单总金额（单位分），一次创建多个订单时，该字段为空",
-              "format": "int64"
-            },
-            "orderId": {
-              "title": "String",
-              "type": "string",
-              "description": "订单ID，一次创建多个订单时，该字段为空"
-            },
-            "success": {
-              "title": "Boolean",
-              "type": "boolean",
-              "description": "是否成功"
-            },
-            "code": {
-              "title": "String",
-              "type": "string",
-              "description": "错误码"
-            },
-            "message": {
-              "title": "String",
-              "type": "string",
-              "description": "错误信息"
-            },
-            "accountPeriod": {
-              "description": "账期信息，非账期支付订单返回空",
-              "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult/definitions/AlibabaTradeCrossResult/definitions/AlibabaTradeCrossPeriod"
-            },
-            "failedOfferList": {
-              "type": "array",
-              "description": "失败商品信息",
-              "items": {
-                "$ref": "#/definitions/AlibabaTradeFastCreateOrderResult/definitions/AlibabaTradeFastResult/definitions/AlibabaTradeFastOffer"
-              }
-            },
-            "postFee": {
-              "title": "Long",
-              "type": "integer",
-              "description": "运费，单位：分，一次创建多个订单时，该字段为空",
-              "format": "int64"
-            },
-            "orderList": {
-              "type": "array",
-              "description": "一次创建多个订单",
-              "items": {
-                "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult/definitions/AlibabaTradeCrossResult/definitions/AlibabaTradeResultBizSimpleOrder"
-              }
-            }
-          },
-          "definitions": {
-            "AlibabaTradeCrossPeriod": {
-              "type": "object",
-              "description": "账期信息，非账期支付订单返回空\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.trade.cross.period",
-              "properties": {
-                "tapType": {
-                  "title": "Integer",
-                  "type": "integer",
-                  "description": "账期的类型,1：一个月指定日期结算一次，3：两个月指定日期结算一次，6：三个月指定日期结算一次，5：按收货时间和账期日期结算",
-                  "format": "int32"
-                },
-                "tapDate": {
-                  "title": "Integer",
-                  "type": "integer",
-                  "description": "根据账期类型不同而不同，按月结算类型此值代表具体某日，按收货时间结算时此值代表结算时间周期",
-                  "format": "int32"
-                },
-                "tapOverdue": {
-                  "title": "Integer",
-                  "type": "integer",
-                  "description": "逾期次数",
-                  "format": "int32"
-                }
-              }
-            },
-            "AlibabaTradeResultBizSimpleOrder": {
-              "type": "object",
-              "description": "一次创建多个订单\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.tradeResult.BizSimpleOrder",
-              "properties": {
-                "postFee": {
-                  "title": "Long",
-                  "type": "integer",
-                  "description": "运费",
-                  "format": "int64"
-                },
-                "orderAmmount": {
-                  "title": "Long",
-                  "type": "integer",
-                  "description": "订单实付款金额，单位为分",
-                  "format": "int64"
-                },
-                "message": {
-                  "title": "String",
-                  "type": "string",
-                  "description": "描述信息"
-                },
-                "resultCode": {
-                  "title": "String",
-                  "type": "string",
-                  "description": "返回码"
-                },
-                "success": {
-                  "title": "Boolean",
-                  "type": "boolean",
-                  "description": "是否成功"
-                },
-                "orderId": {
-                  "title": "String",
-                  "type": "string",
-                  "description": "订单号"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "AlibabaTradePayWayQueryResult": {
-      "type": "object",
-      "description": " \r\n查询订单可以支持的支付渠道\r\n查询未支付订单可以使用的支付方式或者支付渠道\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.payWay.query-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.payWay.query&v=1 \r\n ",
-      "properties": {
-        "success": {
-          "title": "String",
-          "type": "string",
-          "description": "是否成功\t"
-        },
-        "errorCode": {
-          "title": "String",
-          "type": "string",
-          "description": "错误码\t"
-        },
-        "errorMsg": {
-          "title": "String",
-          "type": "string",
-          "description": "错误信息\t"
-        },
-        "resultList": {
-          "description": "返回结果",
-          "$ref": "#/definitions/AlibabaTradePayWayQueryResult/definitions/AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult"
-        }
-      },
-      "definitions": {
-        "AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult": {
-          "type": "object",
-          "description": "返回结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.payWay.query,version:1,typeName:alibaba.ocean.openplatform.biz.trade.result.TradePayTypeResult",
-          "properties": {
-            "channels": {
-              "type": "array",
-              "description": "可用支付渠道列表",
-              "items": {
-                "$ref": "#/definitions/AlibabaTradePayWayQueryResult/definitions/AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult/definitions/AlibabaOceanOpenplatformBizTradeResultPayTypeInfo"
-              }
-            },
-            "orderId": {
-              "title": "String",
-              "type": "string",
-              "description": "订单号"
-            },
-            "payFee": {
-              "title": "Long",
-              "type": "integer",
-              "description": "支付金额，单位分",
-              "format": "int64"
-            },
-            "timeout": {
-              "title": "String",
-              "type": "string",
-              "description": "最晚支付时间"
-            }
-          },
-          "definitions": {
-            "AlibabaOceanOpenplatformBizTradeResultPayTypeInfo": {
-              "type": "object",
-              "description": "可用支付渠道列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.payWay.query,version:1,typeName:alibaba.ocean.openplatform.biz.trade.result.PayTypeInfo",
-              "properties": {
-                "code": {
-                  "title": "Long",
-                  "type": "integer",
-                  "description": "支付渠道编码，1:支付宝,3:诚e赊,4:对公转账,7:账期支付,15:银行转账,16:跨境宝,20:跨境宝",
-                  "format": "int64"
-                },
-                "name": {
-                  "title": "String",
-                  "type": "string",
-                  "description": "支付渠道名称，1:支付宝,3:诚e赊,4:对公转账,7:账期支付,15:银行转账,16:跨境宝,20:跨境宝"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "AlibabaAlipayUrlGetResult": {
-      "type": "object",
-      "description": " \r\n批量获取订单的支付链接\r\n通过ERP付款时，可以通过本API获取批量支付的收银台的链接。\n单个订单返回1688收银台地址，多个订单返回支付宝收银台地址。\nERP可以引导用户跳转到收银台链接完成支付动作，支付前会校验用户在1688的登陆状态。\n\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.alipay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.alipay.url.get&v=1 \r\n ",
-      "properties": {
-        "erroMsg": {
-          "title": "String",
-          "type": "string",
-          "description": "错误信息"
-        },
-        "payUrl": {
-          "title": "String",
-          "type": "string",
-          "description": "支付链接"
-        },
-        "success": {
-          "title": "Boolean",
-          "type": "boolean",
-          "description": "是否成功"
-        },
-        "errorCode": {
-          "title": "String",
-          "type": "string",
-          "description": "错误码"
-        }
-      }
-    },
-    "AlibabaCrossBorderPayUrlGetResult": {
-      "type": "object",
-      "description": " \r\n获取使用跨境宝支付的支付链接\r\n获取使用跨境宝支付的支付链接\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.crossBorderPay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.crossBorderPay.url.get&v=1 \r\n ",
-      "properties": {
-        "success": {
-          "title": "String",
-          "type": "string",
-          "description": "是否成功"
-        },
-        "errorCode": {
-          "title": "String",
-          "type": "string",
-          "description": "错误码"
-        },
-        "errorMsg": {
-          "title": "String",
-          "type": "string",
-          "description": "错误描述"
-        },
-        "payUrl": {
-          "title": "String",
-          "type": "string",
-          "description": "收银台支付链接"
-        },
-        "cantPayOrderList": {
-          "title": "Int64[]",
-          "type": "array",
-          "description": "由于额度及风控原因不能批量支付的订单列表",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        }
-      }
-    },
-    "AlibabaCreditPayUrlGetResult": {
-      "type": "object",
-      "description": " \r\n获取使用诚e赊支付的支付链接\r\n获取使用诚e赊支付的支付链接\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.creditPay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.creditPay.url.get&v=1 \r\n ",
-      "properties": {
-        "success": {
-          "title": "String",
-          "type": "string",
-          "description": "是否成功"
-        },
-        "errorCode": {
-          "title": "String",
-          "type": "string",
-          "description": "错误码"
-        },
-        "errorMsg": {
-          "title": "String",
-          "type": "string",
-          "description": "错误描述"
-        },
-        "payUrl": {
-          "title": "String",
-          "type": "string",
-          "description": "收银台支付链接"
-        },
-        "cantPayOrderList": {
-          "title": "Int64[]",
-          "type": "array",
-          "description": "由于额度及风控原因不能批量支付的订单列表",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        }
-      }
-    },
     "AlibabaCrossProductInfoResult": {
       "type": "object",
       "description": " \r\n跨境场景获取商品详情\r\n跨境场景获取商品详情，需要建立跨境铺货关系之后才能获取详情\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productInfo-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.cross.productInfo&v=1 \r\n ",
@@ -39805,6 +40061,1247 @@
           "title": "Boolean",
           "type": "boolean",
           "description": "是否成功"
+        }
+      }
+    },
+    "AlibabaCrossProductListResult": {
+      "type": "object",
+      "description": " \r\n跨境场景获取商品列表\r\n该接口需要校验跨境的铺货关系，跨境业务专用。商品模型V2\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.cross.productList-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.cross.productList&v=1 \r\n ",
+      "properties": {
+        "productList": {
+          "type": "array",
+          "description": "商品列表",
+          "items": {
+            "$ref": "#/definitions/AlibabaCrossProductListResult/definitions/AlibabaProductProductInfo"
+          }
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "message": {
+          "title": "String",
+          "type": "string",
+          "description": "返回信息"
+        }
+      },
+      "definitions": {
+        "AlibabaProductProductInfo": {
+          "type": "object",
+          "description": "商品列表\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.cross.productList,version:1,typeName:alibaba.product.ProductInfo",
+          "properties": {
+            "productID": {
+              "title": "Long",
+              "type": "integer",
+              "description": "商品ID",
+              "format": "int64"
+            },
+            "productType": {
+              "title": "String",
+              "type": "string",
+              "description": "商品类型，在线批发商品(wholesale)或者询盘商品(sourcing)，1688网站缺省为wholesale"
+            },
+            "attributes": {
+              "type": "array",
+              "description": "商品属性和属性值",
+              "items": {
+                "$ref": "#/definitions/AlibabaProductIncrementModifyResult/definitions/AlibabaProductProductInfo/definitions/AlibabaProductProductAttribute"
+              }
+            },
+            "groupID": {
+              "title": "Int64[]",
+              "type": "array",
+              "description": "分组ID，确定商品所属分组。1688可传入多个分组ID，国际站同一个商品只能属于一个分组，因此默认只取第一个",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            },
+            "status": {
+              "title": "String",
+              "type": "string",
+              "description": "商品状态。published:上网状态;member expired:会员撤销;auto expired:自然过期;expired:过期(包含手动过期与自动过期);member deleted:会员删除;modified:修改;new:新发;deleted:删除;TBD:to be delete;approved:审批通过;auditing:审核中;untread:审核不通过;"
+            },
+            "subject": {
+              "title": "String",
+              "type": "string",
+              "description": "商品标题，最多128个字符"
+            },
+            "description": {
+              "title": "String",
+              "type": "string",
+              "description": "商品详情描述，可包含图片中心的图片URL"
+            },
+            "language": {
+              "title": "String",
+              "type": "string",
+              "description": "语种，参见FAQ 语种枚举值，1688网站默认传入CHINESE"
+            },
+            "periodOfValidity": {
+              "title": "Integer",
+              "type": "integer",
+              "description": "信息有效期，按天计算，国际站无此信息",
+              "format": "int32"
+            },
+            "bizType": {
+              "title": "Integer",
+              "type": "integer",
+              "description": "业务类型。1：商品，2：加工，3：代理，4：合作，5：商务服务。国际站按默认商品。",
+              "format": "int32"
+            },
+            "image": {
+              "description": "商品主图",
+              "$ref": "#/definitions/AlibabaProductProductImageInfo"
+            },
+            "extendInfos": {
+              "type": "array",
+              "description": "商品扩展信息",
+              "items": {
+                "$ref": "#/definitions/AlibabaProductGetResult/definitions/AlibabaProductProductInfo/definitions/AlibabaProductProductExtendInfo"
+              }
+            },
+            "supplierLoginId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商loginId"
+            },
+            "categoryID": {
+              "title": "Long",
+              "type": "integer",
+              "description": "类目ID，标识商品所属类目",
+              "format": "int64"
+            },
+            "categoryName": {
+              "title": "String",
+              "type": "string",
+              "description": "类目名"
+            },
+            "productCargoNumber": {
+              "title": "String",
+              "type": "string",
+              "description": "商品货号，产品属性中的货号"
+            }
+          }
+        }
+      }
+    },
+    "AlibabaProductUnfollowCrossborderResult": {
+      "type": "object",
+      "description": " \r\n解除关注商品\r\n解除关注商品\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.unfollow.crossborder-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.product.unfollow.crossborder&v=1 \r\n ",
+      "properties": {
+        "code": {
+          "title": "Integer",
+          "type": "integer",
+          "description": "code,0表示成功",
+          "format": "int32"
+        },
+        "message": {
+          "title": "String",
+          "type": "string",
+          "description": "结果的描述"
+        }
+      }
+    },
+    "AlibabaTradeCreateCrossOrderResult": {
+      "type": "object",
+      "description": " \r\n跨境订单创建\r\n跨境专用订单创建。创建订单最多允许100个SKU，且必须为同一个供应商的商品。超过50个SKU或者一些特殊情况会一次创建多个个订单并返回多个订单号。\n支持大市场及分销两个场景。根据当前授权用户,区分主子账号下单\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createCrossOrder-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.createCrossOrder&v=1 \r\n ",
+      "properties": {
+        "result": {
+          "description": "创建订单结果",
+          "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult/definitions/AlibabaTradeCrossResult"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "code": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "message": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        }
+      },
+      "definitions": {
+        "AlibabaTradeCrossResult": {
+          "type": "object",
+          "description": "创建订单结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.trade.cross.result",
+          "properties": {
+            "totalSuccessAmount": {
+              "title": "Long",
+              "type": "integer",
+              "description": "订单总金额（单位分），一次创建多个订单时，该字段为空",
+              "format": "int64"
+            },
+            "orderId": {
+              "title": "String",
+              "type": "string",
+              "description": "订单ID，一次创建多个订单时，该字段为空"
+            },
+            "success": {
+              "title": "Boolean",
+              "type": "boolean",
+              "description": "是否成功"
+            },
+            "code": {
+              "title": "String",
+              "type": "string",
+              "description": "错误码"
+            },
+            "message": {
+              "title": "String",
+              "type": "string",
+              "description": "错误信息"
+            },
+            "accountPeriod": {
+              "description": "账期信息，非账期支付订单返回空",
+              "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult/definitions/AlibabaTradeCrossResult/definitions/AlibabaTradeCrossPeriod"
+            },
+            "failedOfferList": {
+              "type": "array",
+              "description": "失败商品信息",
+              "items": {
+                "$ref": "#/definitions/AlibabaTradeFastCreateOrderResult/definitions/AlibabaTradeFastResult/definitions/AlibabaTradeFastOffer"
+              }
+            },
+            "postFee": {
+              "title": "Long",
+              "type": "integer",
+              "description": "运费，单位：分，一次创建多个订单时，该字段为空",
+              "format": "int64"
+            },
+            "orderList": {
+              "type": "array",
+              "description": "一次创建多个订单",
+              "items": {
+                "$ref": "#/definitions/AlibabaTradeCreateCrossOrderResult/definitions/AlibabaTradeCrossResult/definitions/AlibabaTradeResultBizSimpleOrder"
+              }
+            }
+          },
+          "definitions": {
+            "AlibabaTradeCrossPeriod": {
+              "type": "object",
+              "description": "账期信息，非账期支付订单返回空\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.trade.cross.period",
+              "properties": {
+                "tapType": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "账期的类型,1：一个月指定日期结算一次，3：两个月指定日期结算一次，6：三个月指定日期结算一次，5：按收货时间和账期日期结算",
+                  "format": "int32"
+                },
+                "tapDate": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "根据账期类型不同而不同，按月结算类型此值代表具体某日，按收货时间结算时此值代表结算时间周期",
+                  "format": "int32"
+                },
+                "tapOverdue": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "逾期次数",
+                  "format": "int32"
+                }
+              }
+            },
+            "AlibabaTradeResultBizSimpleOrder": {
+              "type": "object",
+              "description": "一次创建多个订单\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.createCrossOrder,version:1,typeName:alibaba.tradeResult.BizSimpleOrder",
+              "properties": {
+                "postFee": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "运费",
+                  "format": "int64"
+                },
+                "orderAmmount": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "订单实付款金额，单位为分",
+                  "format": "int64"
+                },
+                "message": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "描述信息"
+                },
+                "resultCode": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "返回码"
+                },
+                "success": {
+                  "title": "Boolean",
+                  "type": "boolean",
+                  "description": "是否成功"
+                },
+                "orderId": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "订单号"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ConvertLoginIdsByMemberIdsResult": {
+      "type": "object",
+      "description": " \r\n批量转换memberId到loginId\r\n批量转换memberId到loginId\r\n(最大数量不超过110个，数量太大时抛出异常)\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:convertLoginIdsByMemberIds-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&n=convertLoginIdsByMemberIds&v=1 \r\n ",
+      "properties": {
+        "loginIdMap": {
+          "title": "String",
+          "type": "string",
+          "description": "memberId与loginId的对应关系"
+        },
+        "success": {
+          "title": "String",
+          "type": "string",
+          "description": "是否成功"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        }
+      }
+    },
+    "AlibabaSubAccountListResult": {
+      "type": "object",
+      "description": " \r\n获取子账号列表\r\n获取用户的主账号及子账号信息。\n如果调用API时的授权为子账号，则只返回支持子账号对应的主账号；\n如果调用API时的授权为主账号，则只返回所有子账号列表；\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.account:alibaba.subAccount.list-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.account&n=alibaba.subAccount.list&v=1 \r\n ",
+      "properties": {
+        "mainUserId": {
+          "title": "String",
+          "type": "string",
+          "description": "主账号Userid"
+        },
+        "mainLoginId": {
+          "title": "String",
+          "type": "string",
+          "description": "主账号loginId"
+        },
+        "mainMemberId": {
+          "title": "String",
+          "type": "string",
+          "description": "主账号MemberId"
+        },
+        "subAccountList": {
+          "type": "array",
+          "description": "子账号列表",
+          "items": {
+            "$ref": "#/definitions/AlibabaSubAccountListResult/definitions/AlibabaAccountSimpleAccountInfo"
+          }
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误描述"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        }
+      },
+      "definitions": {
+        "AlibabaAccountSimpleAccountInfo": {
+          "type": "object",
+          "description": "子账号列表\r\n\r\n namespace:com.alibaba.account,apiname:alibaba.subAccount.list,version:1,typeName:alibaba.account.simpleAccountInfo",
+          "properties": {
+            "loginId": {
+              "title": "String",
+              "type": "string",
+              "description": "子账号登录名"
+            },
+            "userId": {
+              "title": "Long",
+              "type": "integer",
+              "description": "子账号用户ID",
+              "format": "int64"
+            },
+            "memberId": {
+              "title": "String",
+              "type": "string",
+              "description": "子账号memberId"
+            }
+          }
+        }
+      }
+    },
+    "AlibabaAccountAgentCrossBasicResult": {
+      "type": "object",
+      "description": " \r\n跨境场景获取非授权用户的基本信息\r\n可以查看他人的用户信息，使用在跨境场景\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.account:alibaba.account.agent.crossBasic-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.account&n=alibaba.account.agent.crossBasic&v=1 \r\n ",
+      "properties": {
+        "result": {
+          "description": "会员信息",
+          "$ref": "#/definitions/AlibabaAccountAgentCrossBasicResult/definitions/AlibabaAccountSimpleAccountInfo"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误编码"
+        },
+        "errorMessage": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "definitions": {
+        "AlibabaAccountSimpleAccountInfo": {
+          "type": "object",
+          "description": "会员信息\r\n\r\n namespace:com.alibaba.account,apiname:alibaba.account.agent.crossBasic,version:1,typeName:alibaba.account.simpleAccountInfo",
+          "properties": {
+            "loginId": {
+              "title": "String",
+              "type": "string",
+              "description": "登录名"
+            },
+            "categoryName": {
+              "title": "String",
+              "type": "string",
+              "description": "主营行业的类目名称"
+            },
+            "companyName": {
+              "title": "String",
+              "type": "string",
+              "description": "公司名"
+            },
+            "shopUrl": {
+              "title": "String",
+              "type": "string",
+              "description": "旺铺首页地址"
+            },
+            "supplierName": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商名称"
+            },
+            "kuaJingBao": {
+              "title": "Boolean",
+              "type": "boolean",
+              "description": "是否跨境宝"
+            }
+          }
+        }
+      }
+    },
+    "AlibabaOceanAuthDtoAuthResultModelMap": {
+      "type": "object",
+      "description": "返回结果对象\r\n\r\n namespace:system.oauth2,apiname:subaccount.auth.add,version:1,typeName:alibaba.ocean.auth.dto.AuthResultModelMap",
+      "properties": {
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMessage": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "returnValue": {
+          "title": "DictionaryOfStringAndString",
+          "type": "object",
+          "description": "返回结果"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      }
+    },
+    "AlibabaOceanAuthDtoAuthResultModelBoolean": {
+      "type": "object",
+      "description": "返回结果\r\n\r\n namespace:system.oauth2,apiname:subaccount.auth.cancel,version:1,typeName:alibaba.ocean.auth.dto.AuthResultModelBoolean",
+      "properties": {
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMessage": {
+          "title": "String",
+          "type": "string",
+          "description": "错误描述"
+        },
+        "returnValue": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "返回结果"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      }
+    },
+    "AlibabaOceanAuthDtoAuthResultModelRelation": {
+      "type": "object",
+      "description": "查询结果\r\n\r\n namespace:system.oauth2,apiname:subaccount.auth.list,version:1,typeName:alibaba.ocean.auth.dto.AuthResultModelRelation",
+      "properties": {
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMessage": {
+          "title": "String",
+          "type": "string",
+          "description": "错误描述"
+        },
+        "returnValue": {
+          "type": "array",
+          "description": "返回结果",
+          "items": {
+            "$ref": "#/definitions/AlibabaOceanAuthDtoAuthResultModelRelation/definitions/AlibabaOceanAuthDtoAuthRelationDTO"
+          }
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "definitions": {
+        "AlibabaOceanAuthDtoAuthRelationDTO": {
+          "type": "object",
+          "description": "返回结果\r\n\r\n namespace:system.oauth2,apiname:subaccount.auth.list,version:1,typeName:alibaba.ocean.auth.dto.AuthRelationDTO",
+          "properties": {
+            "accessToken": {
+              "title": "String",
+              "type": "string",
+              "description": "授权凭证"
+            },
+            "adminOwnerId": {
+              "title": "String",
+              "type": "string",
+              "description": "主账号loginId"
+            },
+            "adminUserId": {
+              "title": "Long",
+              "type": "integer",
+              "description": "主账号userId",
+              "format": "int64"
+            },
+            "clientId": {
+              "title": "String",
+              "type": "string",
+              "description": "appKey"
+            },
+            "clientName": {
+              "title": "String",
+              "type": "string",
+              "description": "appName"
+            },
+            "gmtExpired": {
+              "title": "DateTime",
+              "type": "string",
+              "description": "授权过期时间",
+              "format": "date-time"
+            },
+            "memberId": {
+              "title": "String",
+              "type": "string",
+              "description": "授权用户memberId"
+            },
+            "ownerId": {
+              "title": "String",
+              "type": "string",
+              "description": "授权用户loginId"
+            },
+            "resourceScopes": {
+              "title": "String",
+              "type": "string",
+              "description": "资源域"
+            },
+            "site": {
+              "title": "String",
+              "type": "string",
+              "description": "授权站点"
+            },
+            "status": {
+              "title": "String",
+              "type": "string",
+              "description": "授权状态"
+            },
+            "subAuth": {
+              "title": "Boolean",
+              "type": "boolean",
+              "description": "是否子账号授权"
+            },
+            "subOwnerId": {
+              "title": "String",
+              "type": "string",
+              "description": "子账号loginId"
+            },
+            "subUserId": {
+              "title": "Long",
+              "type": "integer",
+              "description": "子账号userId",
+              "format": "int64"
+            },
+            "userId": {
+              "title": "Long",
+              "type": "integer",
+              "description": "授权用户userId",
+              "format": "int64"
+            }
+          }
+        }
+      }
+    },
+    "AlibabaTradeRefundOpQueryOrderRefundOperationListResult": {
+      "type": "object",
+      "description": " \r\n退款单操作记录列表\r\n买卖双方退款操作记录\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.OpQueryOrderRefundOperationList-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.refund.OpQueryOrderRefundOperationList&v=1 \r\n ",
+      "properties": {
+        "result": {
+          "description": "返回结果",
+          "$ref": "#/definitions/AlibabaTradeRefundOpQueryOrderRefundOperationListResult/definitions/AlibabaTradeRefundOpQueryOrderRefundOperationListResult"
+        },
+        "errorMessage": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "extErrorMessage": {
+          "title": "String",
+          "type": "string",
+          "description": "附加错误信息"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        }
+      },
+      "definitions": {
+        "AlibabaTradeRefundOpQueryOrderRefundOperationListResult": {
+          "type": "object",
+          "description": "返回结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.refund.OpQueryOrderRefundOperationList,version:1,typeName:alibaba.trade.refund.OpQueryOrderRefundOperationListResult",
+          "properties": {
+            "opOrderRefundOperationModels": {
+              "type": "array",
+              "description": "退款信息",
+              "items": {
+                "$ref": "#/definitions/AlibabaTradeRefundOpQueryOrderRefundResult/definitions/AlibabaTradeRefundOpQueryOrderRefundResult/definitions/AlibabaTradeRefundOpOrderRefundModel/definitions/AlibabaTradeRefundOpOrderRefundOperationModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "AlibabaProductGenDijiaFxUrlResult": {
+      "type": "object",
+      "description": " \r\n跨境产品开发工具低价开发接口\r\n传入分销客推广位PID，获取跨境产品开发工具低价开发页面的 URL。在此页面中推广的商品，买家购买后 ISV 能获得佣金分成。（此接口仅对跨境ERP及数据选品工具开放，ISVID需要向小二申请）\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.genDijiaFxUrl-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.product.genDijiaFxUrl&v=1 \r\n ",
+      "properties": {
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "url": {
+          "title": "String",
+          "type": "string",
+          "description": "生成的URL"
+        },
+        "error": {
+          "title": "String",
+          "type": "string",
+          "description": "错误代码"
+        },
+        "msg": {
+          "title": "String",
+          "type": "string",
+          "description": "描述信息"
+        }
+      }
+    },
+    "AlibabaProductGenTongkuanFxUrlResult": {
+      "type": "object",
+      "description": " \r\n跨境产品开发工具同款开发接口\r\n传入分销客推广位PID，获取跨境产品开发工具低价开发页面的 URL。在此页面中推广的商品，买家购买后 ISV 能获得佣金分成。（此接口仅对跨境ERP及数据选品工具开放，ISVID需要向小二申请）\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.genTongkuanFxUrl-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.product.genTongkuanFxUrl&v=1 \r\n ",
+      "properties": {
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "url": {
+          "title": "String",
+          "type": "string",
+          "description": "生成的URL"
+        },
+        "error": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "msg": {
+          "title": "String",
+          "type": "string",
+          "description": "描述信息"
+        }
+      }
+    },
+    "AlibabaProductSuggestCrossBorderResult": {
+      "type": "object",
+      "description": " \r\n跨境场景根据关键字推荐商品\r\n跨境场景根据关键字及类目推荐商品，按销量排序。注意：该API有流量控制，仅适用于手动关联场景\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.suggest.crossBorder-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&n=alibaba.product.suggest.crossBorder&v=1 \r\n ",
+      "properties": {
+        "resultList": {
+          "type": "array",
+          "description": "搜索的返回结果",
+          "items": {
+            "$ref": "#/definitions/AlibabaProductSuggestCrossBorderResult/definitions/AlibabaSearchProductSearchResultInfo"
+          }
+        },
+        "success": {
+          "title": "String",
+          "type": "string",
+          "description": "是否成功"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误描述"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        }
+      },
+      "definitions": {
+        "AlibabaSearchProductSearchResultInfo": {
+          "type": "object",
+          "description": "搜索的返回结果\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.suggest.crossBorder,version:1,typeName:alibaba.search.ProductSearchResultInfo",
+          "properties": {
+            "amountOnSale": {
+              "title": "Integer",
+              "type": "integer",
+              "description": "可售数量",
+              "format": "int32"
+            },
+            "minPurchaseQuantity": {
+              "title": "Double",
+              "type": "number",
+              "description": "最小起批量",
+              "format": "double"
+            },
+            "picUrl": {
+              "title": "String",
+              "type": "string",
+              "description": "产品的图片地址"
+            },
+            "price": {
+              "title": "Double",
+              "type": "number",
+              "description": "参考商品价格",
+              "format": "double"
+            },
+            "productID": {
+              "title": "Long",
+              "type": "integer",
+              "description": "商品ID",
+              "format": "int64"
+            },
+            "bookedCount": {
+              "title": "Double",
+              "type": "number",
+              "description": "商品售卖了多少笔(以订单为维度)",
+              "format": "double"
+            },
+            "saleQuantity": {
+              "title": "Double",
+              "type": "number",
+              "description": "该商品售卖了多少件(以商品单位为维度)",
+              "format": "double"
+            },
+            "province": {
+              "title": "String",
+              "type": "string",
+              "description": "商品发货省份码"
+            },
+            "city": {
+              "title": "String",
+              "type": "string",
+              "description": "商品发货城市"
+            },
+            "retailPrice": {
+              "title": "Double",
+              "type": "number",
+              "description": "建议零售价",
+              "format": "double"
+            },
+            "subject": {
+              "title": "String",
+              "type": "string",
+              "description": "商品标题"
+            },
+            "unit": {
+              "title": "String",
+              "type": "string",
+              "description": "商品单位"
+            },
+            "skuList": {
+              "type": "array",
+              "description": "sku信息",
+              "items": {
+                "$ref": "#/definitions/AlibabaProductSuggestCrossBorderResult/definitions/AlibabaSearchProductSearchResultInfo/definitions/AlibabaSimpleSku"
+              }
+            }
+          },
+          "definitions": {
+            "AlibabaSimpleSku": {
+              "type": "object",
+              "description": "sku信息\r\n\r\n namespace:com.alibaba.product,apiname:alibaba.product.suggest.crossBorder,version:1,typeName:alibaba.simple.sku",
+              "properties": {
+                "description": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "规格描述"
+                },
+                "amountOnSale": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": "可售数量",
+                  "format": "int32"
+                },
+                "skuId": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "skuID，全局唯一标示",
+                  "format": "int64"
+                },
+                "specId": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "specID，商品内唯一，不同商品间可能重复"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "AlibabaTradePayWayQueryResult": {
+      "type": "object",
+      "description": " \r\n查询订单可以支持的支付渠道\r\n查询未支付订单可以使用的支付方式或者支付渠道\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.payWay.query-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.trade.payWay.query&v=1 \r\n ",
+      "properties": {
+        "success": {
+          "title": "String",
+          "type": "string",
+          "description": "是否成功\t"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码\t"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息\t"
+        },
+        "resultList": {
+          "description": "返回结果",
+          "$ref": "#/definitions/AlibabaTradePayWayQueryResult/definitions/AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult"
+        }
+      },
+      "definitions": {
+        "AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult": {
+          "type": "object",
+          "description": "返回结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.payWay.query,version:1,typeName:alibaba.ocean.openplatform.biz.trade.result.TradePayTypeResult",
+          "properties": {
+            "channels": {
+              "type": "array",
+              "description": "可用支付渠道列表",
+              "items": {
+                "$ref": "#/definitions/AlibabaTradePayWayQueryResult/definitions/AlibabaOceanOpenplatformBizTradeResultTradePayTypeResult/definitions/AlibabaOceanOpenplatformBizTradeResultPayTypeInfo"
+              }
+            },
+            "orderId": {
+              "title": "String",
+              "type": "string",
+              "description": "订单号"
+            },
+            "payFee": {
+              "title": "Long",
+              "type": "integer",
+              "description": "支付金额，单位分",
+              "format": "int64"
+            },
+            "timeout": {
+              "title": "String",
+              "type": "string",
+              "description": "最晚支付时间"
+            }
+          },
+          "definitions": {
+            "AlibabaOceanOpenplatformBizTradeResultPayTypeInfo": {
+              "type": "object",
+              "description": "可用支付渠道列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.trade.payWay.query,version:1,typeName:alibaba.ocean.openplatform.biz.trade.result.PayTypeInfo",
+              "properties": {
+                "code": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "支付渠道编码，1:支付宝,3:诚e赊,4:对公转账,7:账期支付,15:银行转账,16:跨境宝,20:跨境宝",
+                  "format": "int64"
+                },
+                "name": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "支付渠道名称，1:支付宝,3:诚e赊,4:对公转账,7:账期支付,15:银行转账,16:跨境宝,20:跨境宝"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "AlibabaAlipayUrlGetResult": {
+      "type": "object",
+      "description": " \r\n批量获取订单的支付链接\r\n通过ERP付款时，可以通过本API获取批量支付的收银台的链接。\n单个订单返回1688收银台地址，多个订单返回支付宝收银台地址。\nERP可以引导用户跳转到收银台链接完成支付动作，支付前会校验用户在1688的登陆状态。\n\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.alipay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.alipay.url.get&v=1 \r\n ",
+      "properties": {
+        "erroMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "payUrl": {
+          "title": "String",
+          "type": "string",
+          "description": "支付链接"
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        }
+      }
+    },
+    "AlibabaCrossBorderPayUrlGetResult": {
+      "type": "object",
+      "description": " \r\n获取使用跨境宝支付的支付链接\r\n获取使用跨境宝支付的支付链接\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.crossBorderPay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.crossBorderPay.url.get&v=1 \r\n ",
+      "properties": {
+        "success": {
+          "title": "String",
+          "type": "string",
+          "description": "是否成功"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误描述"
+        },
+        "payUrl": {
+          "title": "String",
+          "type": "string",
+          "description": "收银台支付链接"
+        },
+        "cantPayOrderList": {
+          "title": "Int64[]",
+          "type": "array",
+          "description": "由于额度及风控原因不能批量支付的订单列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      }
+    },
+    "AlibabaAccountPeriodListBuyerViewResult": {
+      "type": "object",
+      "description": " \r\n买家查看获得的所有账期授信\r\n买家维度查看所有获得的账期授信。可翻页查询，每次返回不超过10条\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.accountPeriod.list.buyerView-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.accountPeriod.list.buyerView&v=1 \r\n ",
+      "properties": {
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "resultList": {
+          "description": "返回数据结果",
+          "$ref": "#/definitions/AlibabaAccountPeriodListBuyerViewResult/definitions/AccountPeriodListBuyerViewResult"
+        }
+      },
+      "definitions": {
+        "AccountPeriodListBuyerViewResult": {
+          "type": "object",
+          "description": "返回数据结果\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.accountPeriod.list.buyerView,version:1,typeName:accountPeriod.list.buyerView.result",
+          "properties": {
+            "totalCount": {
+              "title": "String",
+              "type": "string",
+              "description": "总数据条数"
+            },
+            "accountPeriodList": {
+              "type": "array",
+              "description": "授信列表",
+              "items": {
+                "$ref": "#/definitions/AlibabaAccountPeriodListBuyerViewResult/definitions/AccountPeriodListBuyerViewResult/definitions/AlibabaOceanOpenplatformBizTradeCommonModelAccountPeriodInfo"
+              }
+            }
+          },
+          "definitions": {
+            "AlibabaOceanOpenplatformBizTradeCommonModelAccountPeriodInfo": {
+              "type": "object",
+              "description": "授信列表\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.accountPeriod.list.buyerView,version:1,typeName:alibaba.ocean.openplatform.biz.trade.common.model.AccountPeriodInfo",
+              "properties": {
+                "sellerLoginId": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "卖家loginId"
+                },
+                "sellerCompanyName": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "卖家公司名"
+                },
+                "gmtQuota": {
+                  "title": "DateTime",
+                  "type": "string",
+                  "description": "授信日期",
+                  "format": "date-time"
+                },
+                "quota": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "授信额度值,单位为分",
+                  "format": "int64"
+                },
+                "surplusQuota": {
+                  "title": "Long",
+                  "type": "integer",
+                  "description": "可用授信额度值,单位为分",
+                  "format": "int64"
+                },
+                "statusStr": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "状态描述"
+                },
+                "tapDateStr": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "账期日期描述"
+                },
+                "tapOverdue": {
+                  "title": "Integer",
+                  "type": "integer",
+                  "description": " 逾期次数",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "AlibabaCreditPayUrlGetResult": {
+      "type": "object",
+      "description": " \r\n获取使用诚e赊支付的支付链接\r\n获取使用诚e赊支付的支付链接\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.creditPay.url.get-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.creditPay.url.get&v=1 \r\n ",
+      "properties": {
+        "success": {
+          "title": "String",
+          "type": "string",
+          "description": "是否成功"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误描述"
+        },
+        "payUrl": {
+          "title": "String",
+          "type": "string",
+          "description": "收银台支付链接"
+        },
+        "cantPayOrderList": {
+          "title": "Int64[]",
+          "type": "array",
+          "description": "由于额度及风控原因不能批量支付的订单列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      }
+    },
+    "AlibabaCreateOrderPreviewWithOBUidResult": {
+      "type": "object",
+      "description": " \r\n创建订单前预览数据接口\r\n订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。1、校验商品数据是否允许订购。2、校验代销关系3、校验库存、起批量、是否满足混批条件。Order creation only allows purchasing items from the same supplier. This interface returns information such as the order-related discount offers. 1. Verify if the product is allowed to be ordered. 2. Verify the consignment relationship. 3. Check the inventory, minimum order quantity, whether to meet the mixed batch conditions.\r\n\r\n文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.createOrder.previewWithOBUid-1 \r\n调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&n=alibaba.createOrder.previewWithOBUid&v=1 \r\n ",
+      "properties": {
+        "orderPreviewResuslt": {
+          "type": "array",
+          "description": "订单预览结果，过自动拆单会返回多个记录",
+          "items": {
+            "$ref": "#/definitions/AlibabaCreateOrderPreviewWithOBUidResult/definitions/AlibabaCreateOrderPreviewResultModel"
+          }
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "是否成功"
+        },
+        "errorCode": {
+          "title": "String",
+          "type": "string",
+          "description": "错误码"
+        },
+        "errorMsg": {
+          "title": "String",
+          "type": "string",
+          "description": "错误信息"
+        },
+        "postFeeByDescOfferList": {
+          "title": "Int64[]",
+          "type": "array",
+          "description": "运费说明的商品列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "consignOfferList": {
+          "title": "Int64[]",
+          "type": "array",
+          "description": "代销商品列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "definitions": {
+        "AlibabaCreateOrderPreviewResultModel": {
+          "type": "object",
+          "description": "订单预览结果，过自动拆单会返回多个记录\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.previewWithOBUid,version:1,typeName:alibaba.createOrder.preview.result.model",
+          "properties": {
+            "tradeModeNameList": {
+              "title": "String[]",
+              "type": "array",
+              "description": "当前交易可以支持的交易方式列表。某些场景的创建订单接口需要使用。",
+              "items": {
+                "type": "string"
+              }
+            },
+            "sumPayment": {
+              "title": "Long",
+              "type": "integer",
+              "description": "订单总费用, 单位为分.",
+              "format": "int64"
+            },
+            "message": {
+              "title": "String",
+              "type": "string",
+              "description": "返回信息"
+            },
+            "resultCode": {
+              "title": "String",
+              "type": "string",
+              "description": "返回码"
+            },
+            "flowFlag": {
+              "title": "String",
+              "type": "string",
+              "description": "订单下单流程"
+            },
+            "cargoList": {
+              "type": "array",
+              "description": "规格信息",
+              "items": {
+                "$ref": "#/definitions/AlibabaCreateOrderPreviewResult/definitions/AlibabaCreateOrderPreviewResultModel/definitions/AlibabaCreateOrderPreviewResultCargoModel"
+              }
+            },
+            "shopPromotionList": {
+              "type": "array",
+              "description": "可用店铺级别优惠列表",
+              "items": {
+                "$ref": "#/definitions/AlibabaCreateOrderPreviewResult/definitions/AlibabaCreateOrderPreviewResultModel/definitions/AlibabaCreateOrderPreviewResultCargoModel/definitions/AlibabaTradePromotionModel"
+              }
+            },
+            "tradeModelList": {
+              "type": "array",
+              "description": "当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。",
+              "items": {
+                "$ref": "#/definitions/AlibabaCreateOrderPreviewWithOBUidResult/definitions/AlibabaCreateOrderPreviewResultModel/definitions/TradeModelExtensionList"
+              }
+            }
+          },
+          "definitions": {
+            "TradeModelExtensionList": {
+              "type": "object",
+              "description": "当前交易可以支持的交易方式列表。结果可以参照1688下单预览页面的交易方式。\r\n\r\n namespace:com.alibaba.trade,apiname:alibaba.createOrder.previewWithOBUid,version:1,typeName:tradeModelExtensionList",
+              "properties": {
+                "tradeWay": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "交易方式"
+                },
+                "name": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "交易方式名称"
+                },
+                "tradeType": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "开放平台下单时候传入的tradeType"
+                },
+                "description": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "交易描述"
+                },
+                "opSupport": {
+                  "title": "Boolean",
+                  "type": "boolean",
+                  "description": "是否支持"
+                }
+              }
+            }
+          }
         }
       }
     }
