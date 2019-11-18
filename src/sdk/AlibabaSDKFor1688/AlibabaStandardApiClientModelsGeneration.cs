@@ -18885,6 +18885,16 @@ namespace AlibabaSDK.StandardModels
     
     
     }
+    
+    /// <summary>同步结果</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response37 
+    {
+        [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public AlibabaPanamaCommonResult Result { get; set; }
+    
+    
+    }
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.1.3.0 (NJsonSchema v10.0.27.0 (Newtonsoft.Json v10.0.0.0))")]
     public partial class ApiException : System.Exception

@@ -313,25 +313,18 @@ namespace AlibabaSDK
         private static System.Collections.Generic.Dictionary<TypeDescription, string> _getTypeClass;
         public static ReceivedMessageDataBase GetReceivedMessageData(TypeDescription type, string content)
         {
-            if (_getTypeClass == null)
-            {
-                var s = new TypeDescriptionJson().JsonClass;
-                _getTypeClass = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Collections.Generic.Dictionary<TypeDescription, string>>(s);
-            }
-            var typeKey = _getTypeClass[type];
+            //if (_getTypeClass == null)
+            //{
+            //    var s = new TypeDescriptionJson().JsonClass;
+            //    _getTypeClass = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Collections.Generic.Dictionary<TypeDescription, string>>(s);
+            //}
+            //var typeKey = _getTypeClass[type];
+            var typeKey = type.ToString();
 
             var dddtype = typeof(ReceivedMessageData<>);
             var mtype = dddtype.Assembly.GetType("AlibabaSDK.WebSocketModels." + typeKey, false) ?? typeof(object);
             var ssss = dddtype.MakeGenericType(mtype);
             return Newtonsoft.Json.JsonConvert.DeserializeObject(content, ssss) as ReceivedMessageDataBase;
-
-            //switch (type)
-            //{
-            //    case "ORDER_BUYER_VIEW_ORDER_SUCCESS":
-            //        return Newtonsoft.Json.JsonConvert.DeserializeObject<ReceivedMessageData<WebSocketModels.ORDER_BUYER_VIEW_ORDER_SUCCESS>>(content, new dddd());
-            //    default:
-            //        return Newtonsoft.Json.JsonConvert.DeserializeObject<ReceivedMessageData<object>>(content, new dddd());
-            //}
         }
     }
     class WebSocketMessageBase

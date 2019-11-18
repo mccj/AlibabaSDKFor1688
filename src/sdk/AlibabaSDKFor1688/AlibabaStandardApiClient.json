@@ -18045,7 +18045,12 @@
           "200": {
             "description": "同步结果返回 ErrorCode 的错误信息\r\nOFFERIDS_IS_NULL\t- 商品ID列表参数为空(检查入参商品是否存在)\r\nAPPKEY_ISV_CONFIG_IS_NOT_EXIST\t- 平台appkey配置不存在(联系运营在平台添加配置)\r\nISVUSERS_IS_NULL\t- ISV端用户帐号列表为空(同步Isv账户信息)",
             "schema": {
-              "$ref": "#/definitions/AlibabaPanamaCommonResult"
+              "description": "同步结果",
+              "properties": {
+                "result": {
+                  "$ref": "#/definitions/AlibabaPanamaCommonResult"
+                }
+              }
             }
           }
         },

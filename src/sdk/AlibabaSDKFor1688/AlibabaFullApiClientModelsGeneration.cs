@@ -42320,8 +42320,18 @@ namespace AlibabaSDK.FullModels
     
     }
     
+    /// <summary>返回结果</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class Response26 
+    {
+        [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public object Result { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Response27 
     {
         [Newtonsoft.Json.JsonProperty("res", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Res { get; set; }
@@ -42331,7 +42341,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>是否成功</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response27 
+    public partial class Response28 
     {
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? Result { get; set; }
@@ -42341,7 +42351,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>返回数据</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response28 
+    public partial class Response29 
     {
         [Newtonsoft.Json.JsonProperty("orders", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Orders { get; set; }
@@ -42351,7 +42361,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>多个已存在的统一编号字符串</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response29 
+    public partial class Response30 
     {
         [Newtonsoft.Json.JsonProperty("existsNumbers", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string ExistsNumbers { get; set; }
@@ -42360,7 +42370,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response30 
+    public partial class Response31 
     {
         [Newtonsoft.Json.JsonProperty("ossObjectWithWhd", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string OssObjectWithWhd { get; set; }
@@ -42369,7 +42379,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response31 
+    public partial class Response32 
     {
         [Newtonsoft.Json.JsonProperty("hasTag", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? HasTag { get; set; }
@@ -42378,7 +42388,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response32 
+    public partial class Response33 
     {
         [Newtonsoft.Json.JsonProperty("dataList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaAitoolsDataUserRevisionData> DataList { get; set; }
@@ -42387,7 +42397,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response33 
+    public partial class Response34 
     {
         [Newtonsoft.Json.JsonProperty("value", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public object Value { get; set; }
@@ -42396,7 +42406,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response34 
+    public partial class Response35 
     {
         [Newtonsoft.Json.JsonProperty("textBlocks", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<TextInfo> TextBlocks { get; set; }
@@ -42405,7 +42415,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response35 
+    public partial class Response36 
     {
         [Newtonsoft.Json.JsonProperty("valueRead", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string ValueRead { get; set; }
@@ -42414,7 +42424,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response36 
+    public partial class Response37 
     {
         [Newtonsoft.Json.JsonProperty("aa", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Aa { get; set; }
@@ -42423,7 +42433,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response37 
+    public partial class Response38 
     {
         [Newtonsoft.Json.JsonProperty("helloMessage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string HelloMessage { get; set; }
@@ -42432,7 +42442,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response38 
+    public partial class Response39 
     {
         [Newtonsoft.Json.JsonProperty("deployResultJson", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string DeployResultJson { get; set; }
@@ -42442,7 +42452,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>是否成功</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response39 
+    public partial class Response40 
     {
         [Newtonsoft.Json.JsonProperty("sucess", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? Sucess { get; set; }
@@ -42451,7 +42461,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response40 
+    public partial class Response41 
     {
         [Newtonsoft.Json.JsonProperty("categoryList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<CaigouDomainCategoryTopCategory> CategoryList { get; set; }
@@ -42461,7 +42471,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>isv订单信息</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response41 
+    public partial class Response42 
     {
         [Newtonsoft.Json.JsonProperty("isvOrderItemDto", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<IsvOrderItemDto2> IsvOrderItemDto { get; set; }
@@ -42471,7 +42481,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>等级列表</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response42 
+    public partial class Response43 
     {
         [Newtonsoft.Json.JsonProperty("groupsModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaRelationGroupsResult> GroupsModels { get; set; }
@@ -42481,7 +42491,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>产品分组结果集合</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response43 
+    public partial class Response44 
     {
         [Newtonsoft.Json.JsonProperty("productlineModels", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaRelationProductlinesResult> ProductlineModels { get; set; }
@@ -42491,7 +42501,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>阿里助手页面地址</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response44 
+    public partial class Response45 
     {
         [Newtonsoft.Json.JsonProperty("url", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Url { get; set; }
@@ -42501,7 +42511,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>产品详细信息</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response45 
+    public partial class Response46 
     {
         [Newtonsoft.Json.JsonProperty("offerDetailInfo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<OfferDetailInfo> OfferDetailInfo { get; set; }
@@ -42511,7 +42521,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>返回列表元素个数</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response46 
+    public partial class Response47 
     {
         [Newtonsoft.Json.JsonProperty("total", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? Total { get; set; }
@@ -42521,7 +42531,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>自定义分类列表</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response47 
+    public partial class Response48 
     {
         [Newtonsoft.Json.JsonProperty("sellerCats", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<SellerCatInfo> SellerCats { get; set; }
@@ -42531,7 +42541,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>发票说明</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response48 
+    public partial class Response49 
     {
         [Newtonsoft.Json.JsonProperty("invoiceRemark", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string InvoiceRemark { get; set; }
@@ -42541,7 +42551,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>元素为offerId，isEditable和message</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response49 
+    public partial class Response50 
     {
         [Newtonsoft.Json.JsonProperty("offerResult", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<OfferResult> OfferResult { get; set; }
@@ -42551,7 +42561,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>返回的自定义分类ID。多个产品的分类ID用产品ID：groupID值对形式返回；一个offer的多个分类ID半角逗号分隔。</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response50 
+    public partial class Response51 
     {
         [Newtonsoft.Json.JsonProperty("groupIds", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string GroupIds { get; set; }
@@ -42561,7 +42571,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>true：已开启；false：未开启</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response51 
+    public partial class Response52 
     {
         [Newtonsoft.Json.JsonProperty("isOpened", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public bool? IsOpened { get; set; }
@@ -42571,7 +42581,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>操作成功的情况下会返回offerId</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response52 
+    public partial class Response53 
     {
         [Newtonsoft.Json.JsonProperty("offerId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public long? OfferId { get; set; }
@@ -42581,7 +42591,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>关系来源</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response53 
+    public partial class Response54 
     {
         [Newtonsoft.Json.JsonProperty("relationSource", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public object RelationSource { get; set; }
@@ -42591,7 +42601,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>来自哪家子公司，0为淘宝，1为b2b</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response54 
+    public partial class Response55 
     {
         [Newtonsoft.Json.JsonProperty("fromSite", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public object FromSite { get; set; }
@@ -42606,7 +42616,7 @@ namespace AlibabaSDK.FullModels
     /// 4 当指定的订单不是指定postMemberId用户的订单是，接口直接返回成功结果，不做任何处理
     /// 5 当指定的订单不处于待评价状态时，接口直接返回成功结果，不做任何处理</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response55 
+    public partial class Response56 
     {
         [Newtonsoft.Json.JsonProperty("failedOrder", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.IDictionary<string, string> FailedOrder { get; set; }
@@ -42616,7 +42626,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>推荐橱窗offer列表</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response56 
+    public partial class Response57 
     {
         [Newtonsoft.Json.JsonProperty("showWindowOfferList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<OfferDetailInfo> ShowWindowOfferList { get; set; }
@@ -42626,7 +42636,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>返回Map对像,包含产品ID(offerId),修改时间(modifyTime)</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response57 
+    public partial class Response58 
     {
         [Newtonsoft.Json.JsonProperty("resultMap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.IDictionary<string, string> ResultMap { get; set; }
@@ -42636,7 +42646,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>产品在1688采购平台的主键id，如果发布失败则为空，具体的看错误码</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response58 
+    public partial class Response59 
     {
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public long? Id { get; set; }
@@ -42646,7 +42656,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>调用结果：0:成功;2001:模板不存在;3001:参数错误;8001:业务异常;9001:超出流量控制;9999:系统异常</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response59 
+    public partial class Response60 
     {
         [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? Code { get; set; }
@@ -42656,7 +42666,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>对于检测到类目作弊的，在type字段中，会标示为anti，否则为none。同时系统会推荐一到多个类目id，分别在catid，catname，以及score中标示，解析相关字段就可以得到。</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response60 
+    public partial class Response61 
     {
         [Newtonsoft.Json.JsonProperty("ret", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Ret { get; set; }
@@ -42666,7 +42676,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>删除结果</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response61 
+    public partial class Response62 
     {
         [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? Result { get; set; }
@@ -42676,7 +42686,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>返回列表</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response62 
+    public partial class Response63 
     {
         [Newtonsoft.Json.JsonProperty("subAccountBindingList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<CaigouApiAccountCoopSubAccountModel> SubAccountBindingList { get; set; }
@@ -42686,7 +42696,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>分页数据</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response63 
+    public partial class Response64 
     {
         [Newtonsoft.Json.JsonProperty("pushMessagePage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public CnAlibabaOpenPushQueryMessageListPushMessagePage PushMessagePage { get; set; }
@@ -42695,7 +42705,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response64 
+    public partial class Response65 
     {
         [Newtonsoft.Json.JsonProperty("10000", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string _10000 { get; set; }
@@ -42705,7 +42715,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>结果码</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response65 
+    public partial class Response66 
     {
         [Newtonsoft.Json.JsonProperty("resultCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public long? ResultCode { get; set; }
@@ -42716,7 +42726,7 @@ namespace AlibabaSDK.FullModels
     /// <summary>返回导入失败的数据.全部成功返回的list长度为0.
     /// 外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response66 
+    public partial class Response67 
     {
         [Newtonsoft.Json.JsonProperty("list", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<string> List { get; set; }
@@ -42725,7 +42735,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response67 
+    public partial class Response68 
     {
         [Newtonsoft.Json.JsonProperty("buyOfferList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<ComAlibabaCaigouApiBuyOfferModelBuyOffer2> BuyOfferList { get; set; }
@@ -42735,7 +42745,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>报价</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response68 
+    public partial class Response69 
     {
         [Newtonsoft.Json.JsonProperty("quotationList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<ComAlibabaCaigouApiQuotationModelQuotation> QuotationList { get; set; }
@@ -42745,7 +42755,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>异常信息</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response69 
+    public partial class Response70 
     {
         [Newtonsoft.Json.JsonProperty("throwable", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public object Throwable { get; set; }
@@ -42755,7 +42765,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary> </summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response70 
+    public partial class Response71 
     {
         [Newtonsoft.Json.JsonProperty("recommendPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pKeywordRecommendPrice> RecommendPrice { get; set; }
@@ -42765,7 +42775,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>结算消耗</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response71 
+    public partial class Response72 
     {
         [Newtonsoft.Json.JsonProperty("settle", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pSettleCost> Settle { get; set; }
@@ -42775,7 +42785,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>返回审核状态对象</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response72 
+    public partial class Response73 
     {
         [Newtonsoft.Json.JsonProperty("auditStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pAuditStatus> AuditStatus { get; set; }
@@ -42784,7 +42794,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response73 
+    public partial class Response74 
     {
         [Newtonsoft.Json.JsonProperty("word", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pKeyword> Word { get; set; }
@@ -42793,7 +42803,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response74 
+    public partial class Response75 
     {
         [Newtonsoft.Json.JsonProperty("mlrScore", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pKeywordMlrScore> MlrScore { get; set; }
@@ -42802,7 +42812,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response75 
+    public partial class Response76 
     {
         [Newtonsoft.Json.JsonProperty("offers", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pUnionOffer> Offers { get; set; }
@@ -42811,7 +42821,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response76 
+    public partial class Response77 
     {
         [Newtonsoft.Json.JsonProperty("campaigns", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pCampaign> Campaigns { get; set; }
@@ -42820,7 +42830,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response77 
+    public partial class Response78 
     {
         [Newtonsoft.Json.JsonProperty("areas", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pCampaignArea> Areas { get; set; }
@@ -42829,7 +42839,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response78 
+    public partial class Response79 
     {
         [Newtonsoft.Json.JsonProperty("keywords", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pKeyword2> Keywords { get; set; }
@@ -42838,7 +42848,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response79 
+    public partial class Response80 
     {
         [Newtonsoft.Json.JsonProperty("adgroups", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pAdgroup> Adgroups { get; set; }
@@ -42847,7 +42857,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response80 
+    public partial class Response81 
     {
         [Newtonsoft.Json.JsonProperty("recommends", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pKeywordRecommend> Recommends { get; set; }
@@ -42856,7 +42866,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response81 
+    public partial class Response82 
     {
         [Newtonsoft.Json.JsonProperty("qualitys", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaCnp4pKeywordQuality> Qualitys { get; set; }
@@ -42866,7 +42876,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>网销宝客户当天实时消耗，单位：元</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response82 
+    public partial class Response83 
     {
         [Newtonsoft.Json.JsonProperty("realtimeCost", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public double? RealtimeCost { get; set; }
@@ -42876,7 +42886,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>网销宝账户余额，单位为元</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response83 
+    public partial class Response84 
     {
         [Newtonsoft.Json.JsonProperty("balance", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public double? Balance { get; set; }
@@ -42885,7 +42895,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response84 
+    public partial class Response85 
     {
         [Newtonsoft.Json.JsonProperty("aliSendAVInfoResponse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string AliSendAVInfoResponse { get; set; }
@@ -42894,7 +42904,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response85 
+    public partial class Response86 
     {
         [Newtonsoft.Json.JsonProperty("modifyOrderResponse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.IDictionary<string, string> ModifyOrderResponse { get; set; }
@@ -42903,7 +42913,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response86 
+    public partial class Response87 
     {
         [Newtonsoft.Json.JsonProperty("getModifiedOrdersResponse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.IDictionary<string, string> GetModifiedOrdersResponse { get; set; }
@@ -42912,7 +42922,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response87 
+    public partial class Response88 
     {
         [Newtonsoft.Json.JsonProperty("quickOrderResponse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.IDictionary<string, string> QuickOrderResponse { get; set; }
@@ -42921,7 +42931,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response88 
+    public partial class Response89 
     {
         [Newtonsoft.Json.JsonProperty("aliReceiveAVInfoResponse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string AliReceiveAVInfoResponse { get; set; }
@@ -42930,7 +42940,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response89 
+    public partial class Response90 
     {
         [Newtonsoft.Json.JsonProperty("str", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Str { get; set; }
@@ -42939,7 +42949,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response90 
+    public partial class Response91 
     {
         [Newtonsoft.Json.JsonProperty("params", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Params { get; set; }
@@ -42949,7 +42959,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>文件流</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response91 
+    public partial class Response92 
     {
         [Newtonsoft.Json.JsonProperty("fileContent", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public byte[] FileContent { get; set; }
@@ -42959,7 +42969,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>响应支付宝回调的确认消息</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response92 
+    public partial class Response93 
     {
         [Newtonsoft.Json.JsonProperty("msg", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Msg { get; set; }
@@ -42968,7 +42978,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response93 
+    public partial class Response94 
     {
         [Newtonsoft.Json.JsonProperty("param0", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Param0 { get; set; }
@@ -42977,7 +42987,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response94 
+    public partial class Response95 
     {
         [Newtonsoft.Json.JsonProperty("lists", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaEdiQuotaPreRevocationInfo> Lists { get; set; }
@@ -42987,7 +42997,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>银行返回结果body</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response95 
+    public partial class Response96 
     {
         [Newtonsoft.Json.JsonProperty("ret", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public byte[] Ret { get; set; }
@@ -42996,7 +43006,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response96 
+    public partial class Response97 
     {
         [Newtonsoft.Json.JsonProperty("fileMetaArray", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<AlibabaB2bPloutosRemoteFtpVo> FileMetaArray { get; set; }
@@ -43005,7 +43015,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response97 
+    public partial class Response98 
     {
         [Newtonsoft.Json.JsonProperty("rsp", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public byte[] Rsp { get; set; }
@@ -43014,7 +43024,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response98 
+    public partial class Response99 
     {
         [Newtonsoft.Json.JsonProperty("out", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Out { get; set; }
@@ -43024,7 +43034,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>cashshield风控结果返回</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response99 
+    public partial class Response100 
     {
         [Newtonsoft.Json.JsonProperty("cashshieldResponse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string CashshieldResponse { get; set; }
@@ -43033,7 +43043,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response100 
+    public partial class Response101 
     {
         [Newtonsoft.Json.JsonProperty("redirectURL", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string RedirectURL { get; set; }
@@ -43042,7 +43052,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response101 
+    public partial class Response102 
     {
         [Newtonsoft.Json.JsonProperty("cybersourceResponse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string CybersourceResponse { get; set; }
@@ -43052,7 +43062,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>公司主体id</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response102 
+    public partial class Response103 
     {
         [Newtonsoft.Json.JsonProperty("agentId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public long? AgentId { get; set; }
@@ -43061,7 +43071,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response103 
+    public partial class Response104 
     {
         [Newtonsoft.Json.JsonProperty("args", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public object Args { get; set; }
@@ -43070,7 +43080,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response104 
+    public partial class Response105 
     {
         [Newtonsoft.Json.JsonProperty("mobileDTOEnvelope", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string MobileDTOEnvelope { get; set; }
@@ -43079,7 +43089,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response105 
+    public partial class Response106 
     {
         [Newtonsoft.Json.JsonProperty("output", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Output { get; set; }
@@ -43088,7 +43098,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response106 
+    public partial class Response107 
     {
         [Newtonsoft.Json.JsonProperty("nvpResponse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.IDictionary<string, string> NvpResponse { get; set; }
@@ -43097,7 +43107,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response107 
+    public partial class Response108 
     {
         [Newtonsoft.Json.JsonProperty("nvpResponse", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string NvpResponse { get; set; }
@@ -43106,7 +43116,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response108 
+    public partial class Response109 
     {
         [Newtonsoft.Json.JsonProperty("file", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public byte[] File { get; set; }
@@ -43115,7 +43125,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response109 
+    public partial class Response110 
     {
         [Newtonsoft.Json.JsonProperty("categoryRule", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public object CategoryRule { get; set; }
@@ -43124,7 +43134,7 @@ namespace AlibabaSDK.FullModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response110 
+    public partial class Response111 
     {
         [Newtonsoft.Json.JsonProperty("key", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Key { get; set; }
@@ -43134,7 +43144,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>a81e065e2c7e42e4b5611d619cc52ef7</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response111 
+    public partial class Response112 
     {
         [Newtonsoft.Json.JsonProperty("transactionId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string TransactionId { get; set; }
@@ -43144,7 +43154,7 @@ namespace AlibabaSDK.FullModels
     
     /// <summary>重定向地址</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class Response112 
+    public partial class Response113 
     {
         [Newtonsoft.Json.JsonProperty("redirectUrl", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string RedirectUrl { get; set; }

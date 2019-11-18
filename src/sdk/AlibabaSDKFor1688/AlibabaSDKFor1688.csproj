@@ -8,15 +8,16 @@
     <PackageProjectUrl>https://github.com/mccj/AlibabaSDKFor1688</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mccj/AlibabaSDKFor1688.git</RepositoryUrl>
     <PackageTags>Alibaba AlibabaSDK 1688 sdk 阿里 阿里巴巴</PackageTags>
-    <Description>阿里巴巴开放平台SDK C#版本 http://open.1688.com/
+    <Description>
+      阿里巴巴开放平台SDK C#版本 http://open.1688.com/
 
-使用例子
-                var alibabaClient = new AlibabaSDK.AlibabaStandardApiClient("appKey", "appSecret");
-                //设置授权信息
-                alibabaClient.SetAccessToken("accessToken");
-                //订单详情查看
-                var order = alibabaClient.AlibabaTradeGetBuyerView("1688", 1111);
-</Description>
+      使用例子
+      var alibabaClient = new AlibabaSDK.AlibabaStandardApiClient("appKey", "appSecret");
+      //设置授权信息
+      alibabaClient.SetAccessToken("accessToken");
+      //订单详情查看
+      var order = alibabaClient.AlibabaTradeGetBuyerView("1688", 1111);
+    </Description>
     <Version>1.0.0</Version>
   </PropertyGroup>
 
@@ -25,20 +26,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!--<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />-->
-    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <!--<PackageReference Include="System.Net.Http" Version="4.3.4" />-->
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <PackageReference Include="NSwag.MSBuild" Version="13.1.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>  
-    
+  </ItemGroup>-->
+  
+  <ItemGroup>
     <Compile Update="AlibabaFullApiClient.cs">
       <DependentUpon>AlibabaFullApiClient.json</DependentUpon>
     </Compile>
@@ -48,7 +49,7 @@
     <Compile Update="AlibabaFullApiClientModelsGeneration.cs">
       <DependentUpon>AlibabaFullApiClient.cs</DependentUpon>
     </Compile>
-    
+
     <Compile Update="AlibabaStandardApiClientCustom.cs">
       <DependentUpon>AlibabaStandardApiClient.json</DependentUpon>
     </Compile>
@@ -61,7 +62,7 @@
     <Compile Update="AlibabaStandardApiClientModelsGeneration.cs">
       <DependentUpon>AlibabaStandardApiClient.cs</DependentUpon>
     </Compile>
-    
+
     <Compile Update="AlibabaWebSocketClient.cs">
       <DependentUpon>AlibabaWebSocketClient.json</DependentUpon>
     </Compile>
@@ -69,9 +70,9 @@
       <DependentUpon>AlibabaWebSocketClient.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <Target Name="NSwag" AfterTargets="Build">
-    <!--<Exec Command="$(NSwagExe_Core22) run OmsApi3\nswag.json /variables:Configuration=$(Configuration)" />-->
-    <!--<Exec Command="$(NSwagExe_Core22) run OmsApi3\OmsApiClient.nswag /variables:Configuration=$(Configuration)" />
-    <Exec Command="$(NSwagExe_Core22) run OmsApi3\OmsApiModels.nswag /variables:Configuration=$(Configuration)" />-->
-  </Target>
+  <!--<Target Name="NSwag" AfterTargets="Build">
+    <Exec Command="$(NSwagExe_Core22) run OmsApi3\nswag.json /variables:Configuration=$(Configuration)" />
+    <Exec Command="$(NSwagExe_Core22) run OmsApi3\OmsApiClient.nswag /variables:Configuration=$(Configuration)" />
+    <Exec Command="$(NSwagExe_Core22) run OmsApi3\OmsApiModels.nswag /variables:Configuration=$(Configuration)" />
+  </Target>-->
 </Project>

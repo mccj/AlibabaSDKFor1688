@@ -196,8 +196,9 @@ namespace ConsoleApp2
             };
             var 包含OceanApiId = new[] {
                 "cn.alibaba.open:push.query.messageList-1",
-                "cn.alibaba.open:push.cursor.messageList-1"
-            };
+                "cn.alibaba.open:push.cursor.messageList-1",
+                "com.alibaba.product.push:alibaba.cross.syncProductListPushed-1"
+  };
             if (!排除OceanApiId.Contains(apiDetail.OceanApiId) && (ss.Reference == null || 包含OceanApiId.Contains(apiDetail.OceanApiId)))
             {
                 var ssssss = new NJsonSchema.JsonSchema
@@ -210,7 +211,7 @@ namespace ConsoleApp2
                     }
                 };
 
-                var key = string.Join("", ssssss.Properties.Select(f => f.Key + f.Value.Title));
+                var key = string.Join("", ssssss.Properties.Select(f => f.Key + f.Value.Type + f.Value.Title));
                 if (keyValuePairstModelInfo.ContainsKey(key))
                 {
                     return keyValuePairstModelInfo[key];

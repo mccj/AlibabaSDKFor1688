@@ -6988,7 +6988,7 @@ namespace AlibabaSDK
         /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
         /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaPanamaCommonResult AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList);
+        Response37 AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>跨境场景下将商品加入铺货列表
@@ -7002,7 +7002,7 @@ namespace AlibabaSDK
         /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
         /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaPanamaCommonResult> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response37> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>同步铺货结果
         /// 同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述
@@ -35809,7 +35809,7 @@ namespace AlibabaSDK
         /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
         /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaPanamaCommonResult AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList)
+        public Response37 AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossSyncProductListPushedAsync(productIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -35826,7 +35826,7 @@ namespace AlibabaSDK
         /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
         /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaPanamaCommonResult> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response37> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product.push/alibaba.cross.syncProductListPushed/{AppKey}");
@@ -35876,7 +35876,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaPanamaCommonResult>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response37>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -35886,7 +35886,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaPanamaCommonResult);
+                        return default(Response37);
                     }
                     finally
                     {

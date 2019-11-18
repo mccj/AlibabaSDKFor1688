@@ -59,10 +59,10 @@ namespace ConsoleApp2
             rr.Title = "TypeDescription的json";
             rr.IsReadOnly = true;
             rr.Default = Newtonsoft.Json.JsonConvert.SerializeObject(publicApiDetails.ToDictionary(f => f.Result.ApiInfo.TopicId, f => f.Result.ApiInfo.TopicGroupDisplayName + "-" + f.Result.ApiInfo.TopicDisplayName));
-            var rr1 = NJsonSchema.JsonSchema.FromType<string>().ToJsonSchemaProperty();
-            rr1.Title = "TypeDescription的json";
-            rr1.IsReadOnly = true;
-            rr1.Default = Newtonsoft.Json.JsonConvert.SerializeObject(document.Definitions.ToDictionary(f => f.Key, f => f.Value.Id));
+            //var rr1 = NJsonSchema.JsonSchema.FromType<string>().ToJsonSchemaProperty();
+            //rr1.Title = "TypeDescription的json";
+            //rr1.IsReadOnly = true;
+            //rr1.Default = Newtonsoft.Json.JsonConvert.SerializeObject(document.Definitions.ToDictionary(f => f.Key, f => f.Value.Id));
 
             var TypeDescriptionEnum = new NJsonSchema.JsonSchema { Type = JsonObjectType.String, Description = "消息类型" };
             document.Definitions.Add("TypeDescription", TypeDescriptionEnum);
@@ -75,7 +75,7 @@ namespace ConsoleApp2
             var TypeDescriptionJson = new NJsonSchema.JsonSchema { Type = JsonObjectType.Object, AllowAdditionalProperties = false };
             document.Definitions.Add("TypeDescriptionJson", TypeDescriptionJson);
             TypeDescriptionJson.Properties.Add("JsonDescription", rr);
-            TypeDescriptionJson.Properties.Add("JsonClass", rr1);
+            //TypeDescriptionJson.Properties.Add("JsonClass", rr1);
             return document;
         }
 
@@ -104,7 +104,7 @@ namespace ConsoleApp2
             if (keyValuePairstModelInfo.ContainsKey(md5key))
             {
                 var jsonSchema = keyValuePairstModelInfo[md5key];
-                return jsonSchema;
+                return new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, AllOf = { jsonSchema } };
             }
             else
             {
@@ -152,7 +152,8 @@ namespace ConsoleApp2
             var key = apiDetail.TopicId;
             if (keyValuePairstModelInfo.ContainsKey(key))
             {
-                return keyValuePairstModelInfo[key];
+                var jsonSchema = keyValuePairstModelInfo[key];
+                return new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, AllOf = { jsonSchema } };
             }
             else
             {
@@ -160,7 +161,8 @@ namespace ConsoleApp2
                 var md5key = string.Join("", modelInfoResult?.Select(f => f.Name + f.Type).ToArray() ?? new string[] { });
                 if (keyValuePairstModelInfo.ContainsKey(md5key))
                 {
-                    return keyValuePairstModelInfo[md5key];
+                    var jsonSchema = keyValuePairstModelInfo[md5key];
+                    return new NJsonSchema.JsonSchema { AllowAdditionalProperties = false, AllOf = { jsonSchema } };
                 }
                 else
                 {
@@ -330,7 +332,7 @@ namespace ConsoleApp2
             //settings.CodeGeneratorSettings.TemplateDirectory = "";
             settings.CodeGeneratorSettings.GenerateDefaultValues = true;
             settings.CodeGeneratorSettings.PropertyNameGenerator = new MyCSharpPropertyNameGenerator();
-            settings.CSharpGeneratorSettings.GenerateJsonMethods = true;
+            settings.CSharpGeneratorSettings.GenerateJsonMethods = false;
 
             var generator = new CSharpClientGenerator(document, settings);
             var code = generator.GenerateFile();

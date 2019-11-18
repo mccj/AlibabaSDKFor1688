@@ -33,15 +33,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("subUserId", Required = Newtonsoft.Json.Required.Always)]
         public long SubUserId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER>(data);
-        }
     
     }
     
@@ -63,15 +54,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("subUserId", Required = Newtonsoft.Json.Required.Always)]
         public long SubUserId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_BUYER_CANCEL_BUYOFFER FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_BUYER_CANCEL_BUYOFFER>(data);
-        }
     
     }
     
@@ -97,15 +79,24 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string SupplierMemberId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static CAIGOU_MSG_SUPPLIER_QUOTATION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_SUPPLIER_QUOTATION>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_SUPPLIER_CANCEL_QUOTATION : CAIGOU_MSG_SUPPLIER_QUOTATION
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_BUYER_MARK_QUOTATION : CAIGOU_MSG_SUPPLIER_QUOTATION
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_BUYER_UNMARK_QUOTATION : CAIGOU_MSG_SUPPLIER_QUOTATION
+    {
     
     }
     
@@ -130,15 +121,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("subUserId", Required = Newtonsoft.Json.Required.Always)]
         public long SubUserId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_BUYER_MODIFY_BUYOFFER FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_BUYER_MODIFY_BUYOFFER>(data);
-        }
     
     }
     
@@ -169,15 +151,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required]
         public System.Collections.Generic.ICollection<Items> Items { get; set; } = new System.Collections.ObjectModel.Collection<Items>();
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_BUYER_ORDERED FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_BUYER_ORDERED>(data);
-        }
     
     }
     
@@ -190,15 +163,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("buyOfferId", Required = Newtonsoft.Json.Required.Always)]
         public long BuyOfferId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_CREATE_COOPERATEION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_CREATE_COOPERATEION>(data);
-        }
     
     }
     
@@ -236,15 +200,18 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required]
         public System.Collections.Generic.ICollection<Items2> Items { get; set; } = new System.Collections.ObjectModel.Collection<Items2>();
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static CAIGOU_MSG_TRADE_SUCCEED FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_TRADE_SUCCEED>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_CLOSE_ORDER : CAIGOU_MSG_TRADE_SUCCEED
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_SUPPLIER_APPLY : CAIGOU_MSG_CREATE_COOPERATEION
+    {
     
     }
     
@@ -284,15 +251,42 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required]
         public System.Collections.Generic.ICollection<Items3> Items { get; set; } = new System.Collections.ObjectModel.Collection<Items3>();
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static CAIGOU_MSG_BUYER_PAYED_SUCCEED FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_BUYER_PAYED_SUCCEED>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_BUYER_PUBLISH_PRODUCT : CAIGOU_MSG_CREATE_COOPERATEION
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_BUYER_MODIFIED_PRODUCT : CAIGOU_MSG_CREATE_COOPERATEION
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_BUYER_DELETE_PRODUCT_QUOTE : CAIGOU_MSG_CREATE_COOPERATEION
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_BUYER_DELETE_PRODUCT : CAIGOU_MSG_CREATE_COOPERATEION
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_BUYER_PUBLISH_PRODUCT_QUOTE : CAIGOU_MSG_CREATE_COOPERATEION
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_BUYER_MODIFIED_PRODUCT_QUOTE : CAIGOU_MSG_CREATE_COOPERATEION
+    {
     
     }
     
@@ -319,15 +313,66 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("buyerMemberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string BuyerMemberId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static ORDER_BUYER_MAKE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<ORDER_BUYER_MAKE>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_PART_PART_SENDGOODS : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_ORDER_PRICE_MODIFY : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_ANNOUNCE_SENDGOODS : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_ORDER_SUCCESS : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_PAY : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_ORDER_COMFIRM_RECEIVEGOODS : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_ORDER_BUYER_CLOSE : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_ORDER_SELLER_CLOSE : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_ORDER_BOPS_CLOSE : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_ORDER_STEP_PAY : ORDER_BUYER_MAKE
+    {
     
     }
     
@@ -356,15 +401,24 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string MsgSendTime { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static PRODUCT_PRODUCT_EXPIRE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<PRODUCT_PRODUCT_EXPIRE>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_PRODUCT_NEW_OR_MODIFY : PRODUCT_PRODUCT_EXPIRE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_PRODUCT_DELETE : PRODUCT_PRODUCT_EXPIRE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_PRODUCT_REPOST : PRODUCT_PRODUCT_EXPIRE
+    {
     
     }
     
@@ -392,15 +446,18 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("msgSendTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string MsgSendTime { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static PRODUCT_ICBU_PRODUCT_EDIT FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<PRODUCT_ICBU_PRODUCT_EDIT>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_ICBU_PRODUCT_DELETE : PRODUCT_ICBU_PRODUCT_EDIT
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_ICBU_PRODUCT_NEW : PRODUCT_ICBU_PRODUCT_EDIT
+    {
     
     }
     
@@ -431,15 +488,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required]
         public System.Collections.Generic.ICollection<Items4> Items { get; set; } = new System.Collections.ObjectModel.Collection<Items4>();
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_SUPPLIER_SEND_GOODS FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_SUPPLIER_SEND_GOODS>(data);
-        }
     
     }
     
@@ -484,15 +532,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required]
         public System.Collections.Generic.ICollection<OrderList> OrderList { get; set; } = new System.Collections.ObjectModel.Collection<OrderList>();
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_PURCHARSE_ORDER FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PURCHARSE_ORDER>(data);
-        }
     
     }
     
@@ -534,15 +573,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("offerId", Required = Newtonsoft.Json.Required.Always)]
         public long OfferId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE>(data);
-        }
     
     }
     
@@ -626,15 +656,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("offerId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string OfferId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_MALL_GOODS FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_MALL_GOODS>(data);
-        }
     
     }
     
@@ -643,15 +664,6 @@ namespace AlibabaSDK.WebSocketModels
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE 
     {
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE>(data);
-        }
     
     }
     
@@ -696,15 +708,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required]
         public PriceRangeList2 PriceRangeList { get; set; } = new PriceRangeList2();
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE>(data);
-        }
     
     }
     
@@ -740,15 +743,12 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("operator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Operator { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static ORDER_ORDER_BUYER_REFUND_IN_SALES FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<ORDER_ORDER_BUYER_REFUND_IN_SALES>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_ORDER_REFUND_AFTER_SALES : ORDER_ORDER_BUYER_REFUND_IN_SALES
+    {
     
     }
     
@@ -776,15 +776,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("requisitionId", Required = Newtonsoft.Json.Required.Always)]
         public long RequisitionId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS>(data);
-        }
     
     }
     
@@ -818,15 +809,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string SrcGoodId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static PRODUCT_PRODUCT_CREATE_RESULT FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<PRODUCT_PRODUCT_CREATE_RESULT>(data);
-        }
     
     }
     
@@ -847,15 +829,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Status { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_PURCHASE_ORDER_CANCEL FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PURCHASE_ORDER_CANCEL>(data);
-        }
     
     }
     
@@ -879,15 +852,24 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string Action { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static PRODUCT_PRODUCT_CROSSBOARD_INFORM FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<PRODUCT_PRODUCT_CROSSBOARD_INFORM>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE : CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE : CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE : CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE
+    {
     
     }
     
@@ -905,15 +887,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string OpMsgType { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_PROCUREMENT_ORDER_CREATED FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PROCUREMENT_ORDER_CREATED>(data);
-        }
     
     }
     
@@ -939,15 +912,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("productUri", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string ProductUri { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CROSSBOARD_CROSSBOARD_ADD_SUPPLY FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CROSSBOARD_CROSSBOARD_ADD_SUPPLY>(data);
-        }
     
     }
     
@@ -977,15 +941,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string Status { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE>(data);
-        }
     
     }
     
@@ -1012,15 +967,12 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("frameworkAgreementNum", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string FrameworkAgreementNum { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE : CAIGOU_MSG_PROCUREMENT_ORDER_CREATED
+    {
     
     }
     
@@ -1033,15 +985,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("settlementId", Required = Newtonsoft.Json.Required.Always)]
         public long SettlementId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_SETTLEMENT_ORDER_CREATE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_SETTLEMENT_ORDER_CREATE>(data);
-        }
     
     }
     
@@ -1082,15 +1025,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string SellerMemberId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES>(data);
-        }
     
     }
     
@@ -1139,15 +1073,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required]
         public Reason Reason { get; set; } = new Reason();
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static AUTHORIZATION_CANCEL FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<AUTHORIZATION_CANCEL>(data);
-        }
     
     }
     
@@ -1180,15 +1105,96 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string SellerMemberId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static ORDER_BUYER_VIEW_ORDER_PAY FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<ORDER_BUYER_VIEW_ORDER_PAY>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES : ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_BUYER_MAKE : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_ORDER_STEP_PAY : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_PART_PART_SENDGOODS : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_ORDER_SUCCESS : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE : ORDER_BUYER_VIEW_ORDER_PAY
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY : PRODUCT_PRODUCT_EXPIRE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_RELATION_VIEW_PRODUCT_DELETE : PRODUCT_PRODUCT_EXPIRE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_RELATION_VIEW_PRODUCT_REPOST : PRODUCT_PRODUCT_EXPIRE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE : PRODUCT_PRODUCT_EXPIRE
+    {
     
     }
     
@@ -1296,15 +1302,24 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string SellerAliid { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static SERVICEMARKET_ORDER_CREATE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<SERVICEMARKET_ORDER_CREATE>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class SERVICEMARKET_ORDER_CANCEL : SERVICEMARKET_ORDER_CREATE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class SERVICEMARKET_ORDER_PAY : SERVICEMARKET_ORDER_CREATE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class SERVICEMARKET_ORDER_CLOSE : SERVICEMARKET_ORDER_CREATE
+    {
     
     }
     
@@ -1322,15 +1337,24 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string Action { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class SERVICEMARKET_ORDER_CREATE_FAIL : SERVICEMARKET_ORDER_CREATE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class SERVICEMARKET_ORDER_SERVICE_START : SERVICEMARKET_ORDER_CREATE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class SERVICEMARKET_ORDER_SERVICE_END : SERVICEMARKET_ORDER_CREATE
+    {
     
     }
     
@@ -1344,15 +1368,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required]
         public MsgItems MsgItems { get; set; } = new MsgItems();
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_REJECT_REQUISITION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_REJECT_REQUISITION>(data);
-        }
     
     }
     
@@ -1370,15 +1385,36 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("settlementNoteId", Required = Newtonsoft.Json.Required.Always)]
         public long SettlementNoteId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION : CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class SERVICEMARKET_ORDER_SERVICE_REFUND : SERVICEMARKET_ORDER_CREATE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION : CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_MODIFY_MEMO : ORDER_BUYER_MAKE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_BUYER_VIEW_MODIFY_MEMO : ORDER_BUYER_VIEW_ORDER_PAY
+    {
     
     }
     
@@ -1399,15 +1435,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("userId", Required = Newtonsoft.Json.Required.Always)]
         public long UserId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_PRICINGCHART_SUBMITTED FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PRICINGCHART_SUBMITTED>(data);
-        }
     
     }
     
@@ -1430,15 +1457,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Always)]
         public long Id { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_PROCUREMENT_PAY_ACTION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PROCUREMENT_PAY_ACTION>(data);
-        }
     
     }
     
@@ -1462,15 +1480,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string DataContent { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_PROCUREMENT_ORDER_ACTION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PROCUREMENT_ORDER_ACTION>(data);
-        }
     
     }
     
@@ -1493,15 +1502,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string SupplierMemberId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION>(data);
-        }
     
     }
     
@@ -1514,15 +1514,12 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required]
         public System.Collections.Generic.ICollection<BatchPay> BatchPay { get; set; } = new System.Collections.ObjectModel.Collection<BatchPay>();
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static ORDER_BATCH_PAY FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<ORDER_BATCH_PAY>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION : CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION
+    {
     
     }
     
@@ -1539,15 +1536,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("orderCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string OrderCode { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION>(data);
-        }
     
     }
     
@@ -1560,15 +1548,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("OfferInventoryChangeList", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<OfferInventoryChangeList> OfferInventoryChangeList { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static PRODUCT_PRODUCT_INVENTORY_CHANGE FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<PRODUCT_PRODUCT_INVENTORY_CHANGE>(data);
-        }
     
     }
     
@@ -1609,15 +1588,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("creatorUserId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public long? CreatorUserId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION>(data);
-        }
     
     }
     
@@ -1629,15 +1599,12 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("products", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public System.Collections.Generic.ICollection<Products> Products { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
     
-        public static PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER>(data);
-        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class PRODUCT_RELATION_VIEW_PRODUCT_AUDIT : PRODUCT_PRODUCT_EXPIRE
+    {
     
     }
     
@@ -1960,17 +1927,8 @@ namespace AlibabaSDK.WebSocketModels
         public string JsonDescription { get; set; } = "{\"CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d1\u5e03\u8be2\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_CANCEL_BUYOFFER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d6\u6d88\u8be2\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_SUPPLIER_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u53d1\u5e03\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_SUPPLIER_CANCEL_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u53d6\u6d88\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MARK_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u9009\u62e9\u5907\u9009\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_UNMARK_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u64a4\u9500\u5907\u9009\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MODIFY_BUYOFFER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4fee\u6539\u8be2\u4ef7\u5355\u6d88\u606f\",\"CAIGOU_MSG_BUYER_ORDERED\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4e0b\u5355\u6d88\u606f\",\"CAIGOU_MSG_CREATE_COOPERATEION\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4e0e\u4f9b\u5e94\u5546\u5efa\u7acb\u5408\u4f5c\u5173\u7cfb\u6d88\u606f\",\"CAIGOU_MSG_TRADE_SUCCEED\":\"\u91c7\u8d2d\u6d88\u606f-\u4ea4\u6613\u6210\u529f\uff08\u8d26\u671f\u3001\u786e\u8ba4\u6536\u8d27\uff09\u6d88\u606f\",\"CAIGOU_MSG_CLOSE_ORDER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u5173\u95ed\u4e0b\u5355\u6d88\u606f\",\"CAIGOU_MSG_SUPPLIER_APPLY\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u7533\u8bf7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_PAYED_SUCCEED\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4ed8\u6b3e\u6210\u529f\u6d88\u606f\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d1\u5e03\u7269\u6599\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4fee\u6539\u7269\u6599\u4fe1\u606f\u6d88\u606f\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT_QUOTE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u5220\u9664\u7269\u6599\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u5220\u9664\u7269\u6599\u6d88\u606f\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT_QUOTE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d1\u5e03\u7269\u6599\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT_QUOTE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4fee\u6539\u7269\u6599\u62a5\u4ef7\u6d88\u606f\",\"ORDER_BUYER_MAKE\":\"\u8ba2\u5355\u6d88\u606f-1688\u521b\u5efa\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_PART_PART_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u90e8\u5206\u53d1\u8d27\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_PRICE_MODIFY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4fee\u6539\u8ba2\u5355\u4ef7\u683c\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ANNOUNCE_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u53d1\u8d27\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_SUCCESS\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u6210\u529f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u4ed8\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_COMFIRM_RECEIVEGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u786e\u8ba4\u6536\u8d27\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_BUYER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u4e70\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_SELLER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u5356\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_BOPS_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u8fd0\u8425\u540e\u53f0\u5173\u95ed\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_STEP_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u9636\u6bb5\u4ed8\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"PRODUCT_PRODUCT_EXPIRE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0b\u67b6/merchandise off the shelf\",\"PRODUCT_PRODUCT_NEW_OR_MODIFY\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u65b0\u589e\u6216\u4fee\u6539/merchandise adding or modification\",\"PRODUCT_PRODUCT_DELETE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u5220\u9664/merchandise removal\",\"PRODUCT_PRODUCT_REPOST\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0a\u67b6/new product listing\",\"PRODUCT_ICBU_PRODUCT_EDIT\":\"\u5546\u54c1\u6d88\u606f-ICBU\u5546\u54c1\u7f16\u8f91\",\"PRODUCT_ICBU_PRODUCT_DELETE\":\"\u5546\u54c1\u6d88\u606f-ICBU\u5546\u54c1\u5220\u9664\",\"PRODUCT_ICBU_PRODUCT_NEW\":\"\u5546\u54c1\u6d88\u606f-ICBU\u5546\u54c1\u53d1\u5e03\",\"CAIGOU_MSG_SUPPLIER_SEND_GOODS\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u53d1\u8d27\",\"CAIGOU_MSG_PURCHARSE_ORDER\":\"\u91c7\u8d2d\u6d88\u606f-\u4f01\u4e1a\u91c7\u8d2d\u5355\",\"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u54c1\u72b6\u6001\u53d8\u5316\",\"CAIGOU_MSG_MALL_GOODS\":\"\u91c7\u8d2d\u6d88\u606f-\u5546\u54c1\u53d8\u5316\u6d88\u606f\",\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5355\u521b\u5efa\u6210\u529f\",\"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u54c1\u4ef7\u683c\u53d8\u5316\",\"ORDER_ORDER_BUYER_REFUND_IN_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u4e2d\u9000\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_REFUND_AFTER_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u540e\u9000\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u8bf7\u8d2d\u5355\u521b\u5efa\u6210\u529f\u6d88\u606f\",\"PRODUCT_PRODUCT_CREATE_RESULT\":\"\u5546\u54c1\u6d88\u606f-\u5546\u54c1\u53d1\u5e03\u7ed3\u679c\u6d88\u606f\u540c\u6b65\",\"CAIGOU_MSG_PURCHASE_ORDER_CANCEL\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5355\u53d6\u6d88\",\"PRODUCT_PRODUCT_CROSSBOARD_INFORM\":\"\u5546\u54c1\u6d88\u606f-\u4e00\u952e\u94fa\u8d27\u6d88\u606f\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6536\u8d27\u5355\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE\":\"\u91c7\u8d2d\u6d88\u606f-\u62d2\u7edd\u6536\u8d27\u5355\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE\":\"\u91c7\u8d2d\u6d88\u606f-\u540c\u610f\u6536\u8d27\u5355\",\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u91c7\u8d2d\u8ba2\u5355\",\"CROSSBOARD_CROSSBOARD_ADD_SUPPLY\":\"\u8de8\u5883\u6d88\u606f-\u8de8\u5883\u8bbe\u4e3a\u8d27\u6e90\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE\":\"\u91c7\u8d2d\u6d88\u606f-\u66f4\u65b0\u6846\u67b6\u534f\u8bae\u72b6\u6001\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6846\u67b6\u534f\u8bae\",\"CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u8ba2\u5355\u72b6\u6001\u66f4\u65b0\",\"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u7ed3\u7b97\u5355\",\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u4e2d\u9000\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"AUTHORIZATION_CANCEL\":\"\u6388\u6743\u6d88\u606f-\u6388\u6743\u53d6\u6d88\u6d88\u606f\",\"ORDER_BUYER_VIEW_ORDER_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u4ed8\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/1688 transaction payment (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u540e\u9000\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u4e70\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/buyer closing order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u8fd0\u8425\u540e\u53f0\u5173\u95ed\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_BUYER_MAKE\":\"\u8ba2\u5355\u6d88\u606f-1688\u521b\u5efa\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order created (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_STEP_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u9636\u6bb5\u4ed8\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_PART_PART_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u90e8\u5206\u53d1\u8d27\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/Partial delivery of 1688 order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4fee\u6539\u8ba2\u5355\u4ef7\u683c\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order price modification (buyer view)\",\"ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u53d1\u8d27\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/1688 order delivery (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u786e\u8ba4\u6536\u8d27\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order receipt confirmation (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_SUCCESS\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u6210\u529f\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u5356\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/seller closing order (buyer view)\",\"PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u65b0\u589e\u6216\u4fee\u6539\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_DELETE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u5220\u9664\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_REPOST\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0a\u67b6\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0b\u67b6\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"SERVICEMARKET_ORDER_CREATE\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u521b\u5efa\",\"SERVICEMARKET_ORDER_CANCEL\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u53d6\u6d88\",\"SERVICEMARKET_ORDER_PAY\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u652f\u4ed8\",\"SERVICEMARKET_ORDER_CLOSE\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u5173\u95ed\",\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6536\u8d27\u5355\u6210\u529f\u6d88\u606f\",\"SERVICEMARKET_ORDER_CREATE_FAIL\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u521b\u5efa\u5931\u8d25\",\"SERVICEMARKET_ORDER_SERVICE_START\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u670d\u52a1\u5f00\u59cb\",\"SERVICEMARKET_ORDER_SERVICE_END\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u670d\u52a1\u7ed3\u675f\",\"CAIGOU_MSG_REJECT_REQUISITION\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u8bf7\u8d2d\u5355\u9a73\u56de\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u7ed3\u7b97\u5355\u52a8\u4f5c\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u6267\u884c\u53d1\u8d27\u6d88\u606f\",\"SERVICEMARKET_ORDER_SERVICE_REFUND\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u9000\u6b3e\",\"CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u9000\u8d27\u5355\u52a8\u4f5c\u6d88\u606f\",\"ORDER_MODIFY_MEMO\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u5907\u6ce8\u4fee\u6539\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_MODIFY_MEMO\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u5907\u6ce8\u4fee\u6539\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order remarks modification (buyer view)\",\"CAIGOU_MSG_PRICINGCHART_SUBMITTED\":\"\u91c7\u8d2d\u6d88\u606f-\u63d0\u4ea4\u6bd4\u4ef7\u5355\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_PAY_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u4ed8\u6b3e\u5355\u52a8\u4f5c\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u8ba2\u5355\u6267\u884c\u4e2d\u6d88\u606f \",\"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u8fd0\u8f93\u9700\u6c42\u5355\u52a8\u4f5c\u6d88\u606f\",\"ORDER_BATCH_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u6279\u91cf\u652f\u4ed8\u72b6\u6001\u540c\u6b65\u6d88\u606f\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6536\u8d27\u5355\u6210\u529f\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u5173\u95ed\u91c7\u8d2d\u8ba2\u5355\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"PRODUCT_PRODUCT_INVENTORY_CHANGE\":\"\u5546\u54c1\u6d88\u606f-1688\u5546\u54c1\u5e93\u5b58\u53d8\u66f4\u6d88\u606f\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u91c7\u8d2d\u8ba2\u5355\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER\":\"\u5546\u54c1\u6d88\u606f-\u5546\u54c1\u6c60&\u8d85\u4e70\u4ef7\u53d8\u66f4\u6d88\u606f\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_AUDIT\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u5ba1\u6838\u4e0b\u67b6\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\"}";
     
         [Newtonsoft.Json.JsonProperty("JsonClass", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string JsonClass { get; set; } = "{\"CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER\":\"CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER\",\"CAIGOU_MSG_BUYER_CANCEL_BUYOFFER\":\"CAIGOU_MSG_BUYER_CANCEL_BUYOFFER\",\"CAIGOU_MSG_SUPPLIER_QUOTATION\":\"CAIGOU_MSG_SUPPLIER_QUOTATION\",\"CAIGOU_MSG_SUPPLIER_CANCEL_QUOTATION\":\"CAIGOU_MSG_SUPPLIER_QUOTATION\",\"CAIGOU_MSG_BUYER_MARK_QUOTATION\":\"CAIGOU_MSG_SUPPLIER_QUOTATION\",\"CAIGOU_MSG_BUYER_UNMARK_QUOTATION\":\"CAIGOU_MSG_SUPPLIER_QUOTATION\",\"CAIGOU_MSG_BUYER_MODIFY_BUYOFFER\":\"CAIGOU_MSG_BUYER_MODIFY_BUYOFFER\",\"CAIGOU_MSG_BUYER_ORDERED\":\"CAIGOU_MSG_BUYER_ORDERED\",\"CAIGOU_MSG_CREATE_COOPERATEION\":\"CAIGOU_MSG_CREATE_COOPERATEION\",\"CAIGOU_MSG_TRADE_SUCCEED\":\"CAIGOU_MSG_TRADE_SUCCEED\",\"CAIGOU_MSG_CLOSE_ORDER\":\"CAIGOU_MSG_TRADE_SUCCEED\",\"CAIGOU_MSG_SUPPLIER_APPLY\":\"CAIGOU_MSG_CREATE_COOPERATEION\",\"CAIGOU_MSG_BUYER_PAYED_SUCCEED\":\"CAIGOU_MSG_BUYER_PAYED_SUCCEED\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT\":\"CAIGOU_MSG_CREATE_COOPERATEION\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT\":\"CAIGOU_MSG_CREATE_COOPERATEION\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT_QUOTE\":\"CAIGOU_MSG_CREATE_COOPERATEION\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT\":\"CAIGOU_MSG_CREATE_COOPERATEION\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT_QUOTE\":\"CAIGOU_MSG_CREATE_COOPERATEION\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT_QUOTE\":\"CAIGOU_MSG_CREATE_COOPERATEION\",\"ORDER_BUYER_MAKE\":\"ORDER_BUYER_MAKE\",\"ORDER_PART_PART_SENDGOODS\":\"ORDER_BUYER_MAKE\",\"ORDER_ORDER_PRICE_MODIFY\":\"ORDER_BUYER_MAKE\",\"ORDER_ANNOUNCE_SENDGOODS\":\"ORDER_BUYER_MAKE\",\"ORDER_ORDER_SUCCESS\":\"ORDER_BUYER_MAKE\",\"ORDER_PAY\":\"ORDER_BUYER_MAKE\",\"ORDER_ORDER_COMFIRM_RECEIVEGOODS\":\"ORDER_BUYER_MAKE\",\"ORDER_ORDER_BUYER_CLOSE\":\"ORDER_BUYER_MAKE\",\"ORDER_ORDER_SELLER_CLOSE\":\"ORDER_BUYER_MAKE\",\"ORDER_ORDER_BOPS_CLOSE\":\"ORDER_BUYER_MAKE\",\"ORDER_ORDER_STEP_PAY\":\"ORDER_BUYER_MAKE\",\"PRODUCT_PRODUCT_EXPIRE\":\"PRODUCT_PRODUCT_EXPIRE\",\"PRODUCT_PRODUCT_NEW_OR_MODIFY\":\"PRODUCT_PRODUCT_EXPIRE\",\"PRODUCT_PRODUCT_DELETE\":\"PRODUCT_PRODUCT_EXPIRE\",\"PRODUCT_PRODUCT_REPOST\":\"PRODUCT_PRODUCT_EXPIRE\",\"PRODUCT_ICBU_PRODUCT_EDIT\":\"PRODUCT_ICBU_PRODUCT_EDIT\",\"PRODUCT_ICBU_PRODUCT_DELETE\":\"PRODUCT_ICBU_PRODUCT_EDIT\",\"PRODUCT_ICBU_PRODUCT_NEW\":\"PRODUCT_ICBU_PRODUCT_EDIT\",\"CAIGOU_MSG_SUPPLIER_SEND_GOODS\":\"CAIGOU_MSG_SUPPLIER_SEND_GOODS\",\"CAIGOU_MSG_PURCHARSE_ORDER\":\"CAIGOU_MSG_PURCHARSE_ORDER\",\"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE\":\"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE\",\"CAIGOU_MSG_MALL_GOODS\":\"CAIGOU_MSG_MALL_GOODS\",\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\":\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\",\"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE\":\"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE\",\"ORDER_ORDER_BUYER_REFUND_IN_SALES\":\"ORDER_ORDER_BUYER_REFUND_IN_SALES\",\"ORDER_ORDER_REFUND_AFTER_SALES\":\"ORDER_ORDER_BUYER_REFUND_IN_SALES\",\"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS\":\"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS\",\"PRODUCT_PRODUCT_CREATE_RESULT\":\"PRODUCT_PRODUCT_CREATE_RESULT\",\"CAIGOU_MSG_PURCHASE_ORDER_CANCEL\":\"CAIGOU_MSG_PURCHASE_ORDER_CANCEL\",\"PRODUCT_PRODUCT_CROSSBOARD_INFORM\":\"PRODUCT_PRODUCT_CROSSBOARD_INFORM\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE\":\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE\":\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE\":\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\",\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\":\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\",\"CROSSBOARD_CROSSBOARD_ADD_SUPPLY\":\"CROSSBOARD_CROSSBOARD_ADD_SUPPLY\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE\":\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE\":\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE\",\"CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE\":\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\",\"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE\":\"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE\",\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\":\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\",\"AUTHORIZATION_CANCEL\":\"AUTHORIZATION_CANCEL\",\"ORDER_BUYER_VIEW_ORDER_PAY\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES\":\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\",\"ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_BUYER_MAKE\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_ORDER_STEP_PAY\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_PART_PART_SENDGOODS\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_ORDER_SUCCESS\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY\":\"PRODUCT_PRODUCT_EXPIRE\",\"PRODUCT_RELATION_VIEW_PRODUCT_DELETE\":\"PRODUCT_PRODUCT_EXPIRE\",\"PRODUCT_RELATION_VIEW_PRODUCT_REPOST\":\"PRODUCT_PRODUCT_EXPIRE\",\"PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE\":\"PRODUCT_PRODUCT_EXPIRE\",\"SERVICEMARKET_ORDER_CREATE\":\"SERVICEMARKET_ORDER_CREATE\",\"SERVICEMARKET_ORDER_CANCEL\":\"SERVICEMARKET_ORDER_CREATE\",\"SERVICEMARKET_ORDER_PAY\":\"SERVICEMARKET_ORDER_CREATE\",\"SERVICEMARKET_ORDER_CLOSE\":\"SERVICEMARKET_ORDER_CREATE\",\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\",\"SERVICEMARKET_ORDER_CREATE_FAIL\":\"SERVICEMARKET_ORDER_CREATE\",\"SERVICEMARKET_ORDER_SERVICE_START\":\"SERVICEMARKET_ORDER_CREATE\",\"SERVICEMARKET_ORDER_SERVICE_END\":\"SERVICEMARKET_ORDER_CREATE\",\"CAIGOU_MSG_REJECT_REQUISITION\":\"CAIGOU_MSG_REJECT_REQUISITION\",\"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION\":\"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION\",\"CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION\":\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\",\"SERVICEMARKET_ORDER_SERVICE_REFUND\":\"SERVICEMARKET_ORDER_CREATE\",\"CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION\":\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\",\"ORDER_MODIFY_MEMO\":\"ORDER_BUYER_MAKE\",\"ORDER_BUYER_VIEW_MODIFY_MEMO\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"CAIGOU_MSG_PRICINGCHART_SUBMITTED\":\"CAIGOU_MSG_PRICINGCHART_SUBMITTED\",\"CAIGOU_MSG_PROCUREMENT_PAY_ACTION\":\"CAIGOU_MSG_PROCUREMENT_PAY_ACTION\",\"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION\":\"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION\",\"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION\":\"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION\",\"ORDER_BATCH_PAY\":\"ORDER_BATCH_PAY\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION\":\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION\",\"PRODUCT_PRODUCT_INVENTORY_CHANGE\":\"PRODUCT_PRODUCT_INVENTORY_CHANGE\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION\":\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION\",\"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER\":\"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER\",\"PRODUCT_RELATION_VIEW_PRODUCT_AUDIT\":\"PRODUCT_PRODUCT_EXPIRE\"}";
+        public string JsonClass { get; set; } = "{\"CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER\":\"CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER\",\"CAIGOU_MSG_BUYER_CANCEL_BUYOFFER\":\"CAIGOU_MSG_BUYER_CANCEL_BUYOFFER\",\"CAIGOU_MSG_SUPPLIER_QUOTATION\":\"CAIGOU_MSG_SUPPLIER_QUOTATION\",\"CAIGOU_MSG_SUPPLIER_CANCEL_QUOTATION\":null,\"CAIGOU_MSG_BUYER_MARK_QUOTATION\":null,\"CAIGOU_MSG_BUYER_UNMARK_QUOTATION\":null,\"CAIGOU_MSG_BUYER_MODIFY_BUYOFFER\":\"CAIGOU_MSG_BUYER_MODIFY_BUYOFFER\",\"CAIGOU_MSG_BUYER_ORDERED\":\"CAIGOU_MSG_BUYER_ORDERED\",\"CAIGOU_MSG_CREATE_COOPERATEION\":\"CAIGOU_MSG_CREATE_COOPERATEION\",\"CAIGOU_MSG_TRADE_SUCCEED\":\"CAIGOU_MSG_TRADE_SUCCEED\",\"CAIGOU_MSG_CLOSE_ORDER\":null,\"CAIGOU_MSG_SUPPLIER_APPLY\":null,\"CAIGOU_MSG_BUYER_PAYED_SUCCEED\":\"CAIGOU_MSG_BUYER_PAYED_SUCCEED\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT\":null,\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT\":null,\"CAIGOU_MSG_BUYER_DELETE_PRODUCT_QUOTE\":null,\"CAIGOU_MSG_BUYER_DELETE_PRODUCT\":null,\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT_QUOTE\":null,\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT_QUOTE\":null,\"ORDER_BUYER_MAKE\":\"ORDER_BUYER_MAKE\",\"ORDER_PART_PART_SENDGOODS\":null,\"ORDER_ORDER_PRICE_MODIFY\":null,\"ORDER_ANNOUNCE_SENDGOODS\":null,\"ORDER_ORDER_SUCCESS\":null,\"ORDER_PAY\":null,\"ORDER_ORDER_COMFIRM_RECEIVEGOODS\":null,\"ORDER_ORDER_BUYER_CLOSE\":null,\"ORDER_ORDER_SELLER_CLOSE\":null,\"ORDER_ORDER_BOPS_CLOSE\":null,\"ORDER_ORDER_STEP_PAY\":null,\"PRODUCT_PRODUCT_EXPIRE\":\"PRODUCT_PRODUCT_EXPIRE\",\"PRODUCT_PRODUCT_NEW_OR_MODIFY\":null,\"PRODUCT_PRODUCT_DELETE\":null,\"PRODUCT_PRODUCT_REPOST\":null,\"PRODUCT_ICBU_PRODUCT_EDIT\":\"PRODUCT_ICBU_PRODUCT_EDIT\",\"PRODUCT_ICBU_PRODUCT_DELETE\":null,\"PRODUCT_ICBU_PRODUCT_NEW\":null,\"CAIGOU_MSG_SUPPLIER_SEND_GOODS\":\"CAIGOU_MSG_SUPPLIER_SEND_GOODS\",\"CAIGOU_MSG_PURCHARSE_ORDER\":\"CAIGOU_MSG_PURCHARSE_ORDER\",\"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE\":\"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE\",\"CAIGOU_MSG_MALL_GOODS\":\"CAIGOU_MSG_MALL_GOODS\",\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\":\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\",\"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE\":\"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE\",\"ORDER_ORDER_BUYER_REFUND_IN_SALES\":\"ORDER_ORDER_BUYER_REFUND_IN_SALES\",\"ORDER_ORDER_REFUND_AFTER_SALES\":null,\"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS\":\"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS\",\"PRODUCT_PRODUCT_CREATE_RESULT\":\"PRODUCT_PRODUCT_CREATE_RESULT\",\"CAIGOU_MSG_PURCHASE_ORDER_CANCEL\":\"CAIGOU_MSG_PURCHASE_ORDER_CANCEL\",\"PRODUCT_PRODUCT_CROSSBOARD_INFORM\":\"PRODUCT_PRODUCT_CROSSBOARD_INFORM\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE\":null,\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE\":null,\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE\":null,\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\":\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\",\"CROSSBOARD_CROSSBOARD_ADD_SUPPLY\":\"CROSSBOARD_CROSSBOARD_ADD_SUPPLY\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE\":\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE\":\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE\",\"CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE\":null,\"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE\":\"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE\",\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\":\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\",\"AUTHORIZATION_CANCEL\":\"AUTHORIZATION_CANCEL\",\"ORDER_BUYER_VIEW_ORDER_PAY\":\"ORDER_BUYER_VIEW_ORDER_PAY\",\"ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES\":null,\"ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE\":null,\"ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE\":null,\"ORDER_BUYER_VIEW_BUYER_MAKE\":null,\"ORDER_BUYER_VIEW_ORDER_STEP_PAY\":null,\"ORDER_BUYER_VIEW_PART_PART_SENDGOODS\":null,\"ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY\":null,\"ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS\":null,\"ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS\":null,\"ORDER_BUYER_VIEW_ORDER_SUCCESS\":null,\"ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE\":null,\"PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY\":null,\"PRODUCT_RELATION_VIEW_PRODUCT_DELETE\":null,\"PRODUCT_RELATION_VIEW_PRODUCT_REPOST\":null,\"PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE\":null,\"SERVICEMARKET_ORDER_CREATE\":\"SERVICEMARKET_ORDER_CREATE\",\"SERVICEMARKET_ORDER_CANCEL\":null,\"SERVICEMARKET_ORDER_PAY\":null,\"SERVICEMARKET_ORDER_CLOSE\":null,\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\",\"SERVICEMARKET_ORDER_CREATE_FAIL\":null,\"SERVICEMARKET_ORDER_SERVICE_START\":null,\"SERVICEMARKET_ORDER_SERVICE_END\":null,\"CAIGOU_MSG_REJECT_REQUISITION\":\"CAIGOU_MSG_REJECT_REQUISITION\",\"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION\":\"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION\",\"CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION\":null,\"SERVICEMARKET_ORDER_SERVICE_REFUND\":null,\"CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION\":null,\"ORDER_MODIFY_MEMO\":null,\"ORDER_BUYER_VIEW_MODIFY_MEMO\":null,\"CAIGOU_MSG_PRICINGCHART_SUBMITTED\":\"CAIGOU_MSG_PRICINGCHART_SUBMITTED\",\"CAIGOU_MSG_PROCUREMENT_PAY_ACTION\":\"CAIGOU_MSG_PROCUREMENT_PAY_ACTION\",\"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION\":\"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION\",\"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION\":\"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION\",\"ORDER_BATCH_PAY\":\"ORDER_BATCH_PAY\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":null,\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION\":\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION\",\"PRODUCT_PRODUCT_INVENTORY_CHANGE\":\"PRODUCT_PRODUCT_INVENTORY_CHANGE\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION\":\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION\",\"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER\":\"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER\",\"PRODUCT_RELATION_VIEW_PRODUCT_AUDIT\":null}";
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static TypeDescriptionJson FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<TypeDescriptionJson>(data);
-        }
     
     }
     
@@ -1994,15 +1952,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string ProductCode { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static Items FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Items>(data);
-        }
     
     }
     
@@ -2025,15 +1974,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("productCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string ProductCode { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static Items2 FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Items2>(data);
-        }
     
     }
     
@@ -2056,15 +1996,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("productCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string ProductCode { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static Items3 FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Items3>(data);
-        }
     
     }
     
@@ -2091,15 +2022,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("productQuoteId", Required = Newtonsoft.Json.Required.Always)]
         public long ProductQuoteId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static Items4 FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Items4>(data);
-        }
     
     }
     
@@ -2126,15 +2048,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("mobile", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Mobile { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static ReceiveUserInfo FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<ReceiveUserInfo>(data);
-        }
     
     }
     
@@ -2176,15 +2089,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("createUserId", Required = Newtonsoft.Json.Required.Always)]
         public long CreateUserId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static OrderList FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<OrderList>(data);
-        }
     
     }
     
@@ -2203,15 +2107,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("taxPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string TaxPrice { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static PriceRangeList FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<PriceRangeList>(data);
-        }
     
     }
     
@@ -2222,15 +2117,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Address { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static SendAddressList FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<SendAddressList>(data);
-        }
     
     }
     
@@ -2249,15 +2135,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("taxPrice", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public long? TaxPrice { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static PriceRangeList2 FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<PriceRangeList2>(data);
-        }
     
     }
     
@@ -2276,15 +2153,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("operatorType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string OperatorType { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static Reason FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Reason>(data);
-        }
     
     }
     
@@ -2311,15 +2179,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("erpReqItemNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string ErpReqItemNo { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static MsgItems FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<MsgItems>(data);
-        }
     
     }
     
@@ -2336,15 +2195,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string Status { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static BatchPay FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<BatchPay>(data);
-        }
     
     }
     
@@ -2376,15 +2226,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public System.DateTimeOffset BizTime { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static OfferInventoryChangeList FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<OfferInventoryChangeList>(data);
-        }
     
     }
     
@@ -2405,15 +2246,6 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string Status { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static Products FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Products>(data);
-        }
     
     }
     
@@ -2461,15 +2293,6 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("entryId", Required = Newtonsoft.Json.Required.Always)]
         public long EntryId { get; set; }
     
-        public string ToJson() 
-        {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this);
-        }
-    
-        public static EntryList FromJson(string data)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<EntryList>(data);
-        }
     
     }
 
