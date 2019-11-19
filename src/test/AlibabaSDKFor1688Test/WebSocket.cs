@@ -72,9 +72,17 @@ namespace AlibabaSDKFor1688Test
         [Fact]
         public void dddd()
         {
-            var dddd = AlibabaWebSocketClient.GetReceivedMessageData("CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER", "{data:{buyOfferId:0,SubUserId:0}}");
+            var dddd = AlibabaWebSocketClient.GetReceivedMessageData("CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER", "{data:{}}");
             dynamic ee = dddd;
             var sss = ee.Data as AlibabaSDK.WebSocketModels.CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER;
+            Assert.NotNull(sss);
+        }
+        [Fact]
+        public void dddd1()
+        {
+            var dddd = AlibabaWebSocketClient.GetReceivedMessageData("PRODUCT_PRODUCT_INVENTORY_CHANGE", "{\"msgId\":5746327830,\"type\":\"PRODUCT_PRODUCT_INVENTORY_CHANGE\",\"userInfo\":\"\",\"data\":{\"OfferInventoryChangeList\":[{\"offerOnSale\":225936008,\"quantity\":-2,\"offerId\":42872301173,\"skuOnSale\":56999118,\"skuId\":3881120556878},{\"offerOnSale\":225936008,\"quantity\":-1,\"offerId\":42872301173,\"skuOnSale\":502732,\"skuId\":78376823121},{\"offerOnSale\":225936008,\"quantity\":-2,\"offerId\":42872301173,\"skuOnSale\":56210321,\"skuId\":78376823124},{\"offerOnSale\":225936008,\"quantity\":-4,\"offerId\":42872301173,\"skuOnSale\":504936,\"skuId\":78376823119},{\"offerOnSale\":225936008,\"quantity\":-1,\"offerId\":42872301173,\"skuOnSale\":5296386,\"skuId\":3881120556880},{\"offerOnSale\":225936008,\"quantity\":-1,\"offerId\":42872301173,\"skuOnSale\":526494,\"skuId\":78376823123}]},\"gmtBorn\":1574055094000}");
+            dynamic ee = dddd;
+            var sss = ee.Data as AlibabaSDK.WebSocketModels.PRODUCT_PRODUCT_INVENTORY_CHANGE;
             Assert.NotNull(sss);
         }
     }

@@ -7,6 +7,9 @@ using System.Net.Http.Headers;
 
 namespace AlibabaSDK
 {
+    /// <summary>
+    /// https://open.1688.com/api/apidoclist.htm?id=624392
+    /// </summary>
     public partial class AlibabaFullApiClient : AlibabaApiClientBase
     {
         public AlibabaFullApiClient(string appKey, string clientSecret) : this(appKey, clientSecret, new HttpClient()) { }

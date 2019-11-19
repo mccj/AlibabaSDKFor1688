@@ -5,6 +5,9 @@ using System;
 
 namespace AlibabaSDK
 {
+    /// <summary>
+    /// https://open.1688.com/doc/msgOverview.htm?id=546051
+    /// </summary>
     public partial class AlibabaWebSocketClient
     {
         private readonly string _appKey;
@@ -310,7 +313,7 @@ namespace AlibabaSDK
             else
                 return null;
         }
-        private static System.Collections.Generic.Dictionary<TypeDescription, string> _getTypeClass;
+        //private static System.Collections.Generic.Dictionary<TypeDescription, string> _getTypeClass;
         public static ReceivedMessageDataBase GetReceivedMessageData(TypeDescription type, string content)
         {
             //if (_getTypeClass == null)

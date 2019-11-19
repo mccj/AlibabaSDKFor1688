@@ -1,4 +1,4 @@
-﻿using ConsoleApp2.sss;
+﻿using ConsoleApp2.Alibaba.Models;
 using NSwag;
 using NSwag.CodeGeneration.CSharp;
 using NSwag.CodeGeneration.TypeScript;
@@ -13,7 +13,8 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-
+            //new Aliexpress.AliexpressApi().GetCatelogConfig().Wait();
+            //new Aliexpress.AliexpressApi().GetDocument(30163, 2).Wait();
 
 
             //var rrr = new OpenApiDocument();
@@ -50,7 +51,7 @@ namespace ConsoleApp2
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             Console.WriteLine("完整版类库");
 
-            var apiDocumentFull = new ApiDocument();
+            var apiDocumentFull = new Alibaba.ApiDocument();
             var documentFull = apiDocumentFull.创建文档(true);
 
             Console.WriteLine("转换成 json 文件并保存");
@@ -69,7 +70,7 @@ namespace ConsoleApp2
 
 
             Console.WriteLine("标准版类库");
-            var apiDocumentStandard = new ApiDocument();
+            var apiDocumentStandard = new Alibaba.ApiDocument();
             var documentStandard = apiDocumentStandard.创建文档(false);
 
             Console.WriteLine("转换成 json 文件并保存");
@@ -89,7 +90,7 @@ namespace ConsoleApp2
 
 
             Console.WriteLine("WebSocket类库");
-            var apiDocumentWebSocketStandard = new WebSocketDocument();
+            var apiDocumentWebSocketStandard = new Alibaba.WebSocketDocument();
             var documentWebSocketStandard = apiDocumentWebSocketStandard.创建文档(true);
 
             Console.WriteLine("转换成 json 文件并保存");
