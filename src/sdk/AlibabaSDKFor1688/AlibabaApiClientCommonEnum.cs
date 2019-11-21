@@ -6,8 +6,24 @@ using System.Net.Http.Headers;
 
 namespace AlibabaSDK
 {
-    public partial class AlibabaApiClientCommonEnum
+    public static partial class AlibabaApiClientCommonEnum
     {
+        public static string ToStatusStr(this StandardModels.AlibabaOpenplatformTradeModelOrderBaseInfo3 status)
+        {
+            return AlibabaOpenplatformTradeModelOrderStatus.ToNotes(status.Status);
+        }
+        public static string ToStatusStr(this StandardModels.AlibabaLogisticsOpenPlatformLogisticsOrder status)
+        {
+            return AlibabaLogisticsOpenPlatformLogisticsOrderStatus.ToNotes(status.Status);
+        }
+        public static string ToStatusStr(this StandardModels.AlibabaProductProductInfo7  alibaba)
+        {
+            var statusStr = alibaba?.Status;
+            if (string.IsNullOrWhiteSpace(statusStr)) return "";
+            var s = "published:上网状态;member expired:会员撤销;auto expired:自然过期;expired:过期(包含手动过期与自动过期);member deleted:会员删除;modified:修改;new:新发;deleted:删除;TBD:to be delete;approved:审批通过;auditing:审核中;untread:审核不通过";
+            var ddd = s.Split(new[] { ";" }, StringSplitOptions.RemoveEmptyEntries).Select(f => f.Split(new[] { ":" }, StringSplitOptions.RemoveEmptyEntries)).ToDictionary(f => f[0], f => f[1]);
+            return ddd.ContainsKey(statusStr) ? ddd[statusStr] : "未知";
+        }
         public static class AlibabaOpenplatformTradeModelOrderStatus
         {
             /// <summary>
@@ -57,6 +73,7 @@ namespace AlibabaSDK
                 var ddd = s.Split(new[] { ";" }, StringSplitOptions.RemoveEmptyEntries).Select(f => f.Split(new[] { ":" }, StringSplitOptions.RemoveEmptyEntries)).ToDictionary(f => f[0], f => f[1]);
                 return ddd.ContainsKey(status) ? ddd[status] : "其他状态";
             }
+
         }
         public static class AlibabaLogisticsOpenPlatformLogisticsOrderStatus
         {
@@ -88,7 +105,7 @@ namespace AlibabaSDK
             /// 签收异常
             /// </summary>
             public static string 签收异常 { get; } = "UNSIGN";
-            
+
             public static string ToNotes(string status)
             {
                 if (string.IsNullOrWhiteSpace(status)) return "";
