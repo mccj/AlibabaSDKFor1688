@@ -21,7 +21,7 @@
     <Version>1.0.0</Version>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+  <PropertyGroup>
     <DocumentationFile>.\AlibabaSDKFor1688.xml</DocumentationFile>
   </PropertyGroup>
 
