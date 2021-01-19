@@ -19,6 +19,90 @@ namespace AlibabaSDK
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.1.5.0 (NJsonSchema v10.0.27.0 (Newtonsoft.Json v10.0.0.0))")]
     public partial interface IAlibabaStandardApiClient
     {
+        /// <summary>获取直播预告列表
+        /// 获取直播预告列表
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.list&amp;v=1</summary>
+        /// <param name="page">分页页码</param>
+        /// <param name="pageSize">每页数量，默认10，最多20</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        LivePreListResult LivePreList(int page, int pageSize);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取直播预告列表
+        /// 获取直播预告列表
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.list&amp;v=1</summary>
+        /// <param name="page">分页页码</param>
+        /// <param name="pageSize">每页数量，默认10，最多20</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<LivePreListResult> LivePreListAsync(int page, int pageSize, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>获取主播基本信息
+        /// 获取主播基本信息
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.streamer.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.streamer.get&amp;v=1</summary>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 400_1	- 客户端错误，入参有问题(详见具体报错，会指出哪个入参有问题)
+        /// 500_1	- 服务端错误，服务端返回错误信息(详见具体报错，会指出是什么错误信息)
+        /// 500_2	- 服务端错误，服务端调用出现异常(详见具体报错，会指出是什么错误信息)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        LiveStreamerGetResult LiveStreamerGet();
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取主播基本信息
+        /// 获取主播基本信息
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.streamer.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.streamer.get&amp;v=1</summary>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 400_1	- 客户端错误，入参有问题(详见具体报错，会指出哪个入参有问题)
+        /// 500_1	- 服务端错误，服务端返回错误信息(详见具体报错，会指出是什么错误信息)
+        /// 500_2	- 服务端错误，服务端调用出现异常(详见具体报错，会指出是什么错误信息)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<LiveStreamerGetResult> LiveStreamerGetAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>删除直播预告
+        /// 删除直播预告（只有商家自己才能删除自己创建的预告）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.delete-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.delete&amp;v=1</summary>
+        /// <param name="preId">预告id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        LivePreDeleteResult LivePreDelete(long preId);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>删除直播预告
+        /// 删除直播预告（只有商家自己才能删除自己创建的预告）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.delete-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.delete&amp;v=1</summary>
+        /// <param name="preId">预告id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<LivePreDeleteResult> LivePreDeleteAsync(long preId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>获取预告详情
+        /// 获取预告详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.detail.get&amp;v=1</summary>
+        /// <param name="preId">预告Id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        LivePreDetailGetResult LivePreDetailGet(long preId);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取预告详情
+        /// 获取预告详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.detail.get&amp;v=1</summary>
+        /// <param name="preId">预告Id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<LivePreDetailGetResult> LivePreDetailGetAsync(long preId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
         /// <summary>模型草稿删除
         /// 模型草稿删除
         /// 
@@ -209,68 +293,30 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task I3dDraftmodelConfirmAsync(string code, string userId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>跨境场景相似款搜索
-        /// 按照已有商品进行线上相似款搜索，erp需要有跨境货源推荐的权限
+        /// <summary>选品-跨境相似款
+        /// 按照已有商品进行线上相似款搜索，erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.similar.product.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.similar.product.search&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
-        /// <param name="endUserId">erp内部的用户身份id</param>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
+        /// <param name="searchKey">搜索参数，如果传了页面会直接展示搜索结果。参数可以是关键词，图片链接或者1688商品链接</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCrossSimilarProductSearchResult AlibabaCrossSimilarProductSearch(string orgId, string endUserId = null);
+        AlibabaCrossSimilarProductSearchResult AlibabaCrossSimilarProductSearch(string orgId, string endUserId = null, string searchKey = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景相似款搜索
-        /// 按照已有商品进行线上相似款搜索，erp需要有跨境货源推荐的权限
+        /// <summary>选品-跨境相似款
+        /// 按照已有商品进行线上相似款搜索，erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.similar.product.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.similar.product.search&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
-        /// <param name="endUserId">erp内部的用户身份id</param>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
+        /// <param name="searchKey">搜索参数，如果传了页面会直接展示搜索结果。参数可以是关键词，图片链接或者1688商品链接</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCrossSimilarProductSearchResult> AlibabaCrossSimilarProductSearchAsync(string orgId, string endUserId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaCrossSimilarProductSearchResult> AlibabaCrossSimilarProductSearchAsync(string orgId, string endUserId = null, string searchKey = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>跨境清仓好货商品列表
-        /// 跨境清仓好货商品列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.crossboard.cleargoodspage-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.crossboard.cleargoodspage&amp;v=1</summary>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        void AlibabaCrossboardCleargoodspage();
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境清仓好货商品列表
-        /// 跨境清仓好货商品列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.crossboard.cleargoodspage-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.crossboard.cleargoodspage&amp;v=1</summary>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task AlibabaCrossboardCleargoodspageAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>支付宝间连-1688产品推荐开放商品商城首页组件
-        /// 支付宝间连ISV获取1688产品推荐开放页面-商城首页
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alipay.main.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alipay.main.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <param name="umidToken">设备码，通过阿里指定js获取</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        void AlipayMainPage(string endOrgId, string endUserId, string umidToken = null);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>支付宝间连-1688产品推荐开放商品商城首页组件
-        /// 支付宝间连ISV获取1688产品推荐开放页面-商城首页
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alipay.main.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alipay.main.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <param name="umidToken">设备码，通过阿里指定js获取</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task AlipayMainPageAsync(string endOrgId, string endUserId, string umidToken = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>通联商城
+        /// <summary>商城-通联商城
         /// 通联支付的商城api
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.allinpay.main.page-1 
@@ -282,7 +328,7 @@ namespace AlibabaSDK
         void AlibabaAllinpayMainPage(string endOrgId, string endUserId, string umidToken = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>通联商城
+        /// <summary>商城-通联商城
         /// 通联支付的商城api
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.allinpay.main.page-1 
@@ -293,7 +339,7 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task AlibabaAllinpayMainPageAsync(string endOrgId, string endUserId, string umidToken = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>终端用户感兴趣类目
+        /// <summary>数据上传-终端用户感兴趣类目
         /// ERP终端用户感兴趣的类目，类目目前接受1688类目传入或自定义类目传入。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.category.put-1 
@@ -308,7 +354,7 @@ namespace AlibabaSDK
         Result EnduserInterestingCategoryPut(string orgId, string endUserId, string categoryIds = null, string categoryNames = null, string udfCategoryNames = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>终端用户感兴趣类目
+        /// <summary>数据上传-终端用户感兴趣类目
         /// ERP终端用户感兴趣的类目，类目目前接受1688类目传入或自定义类目传入。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.category.put-1 
@@ -322,8 +368,8 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<Result> EnduserInterestingCategoryPutAsync(string orgId, string endUserId, string categoryIds = null, string categoryNames = null, string udfCategoryNames = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>ERP用户状态数据同步
-        /// 同步ERP终端用户数据，即生成一份终端用户数据的镜像。对于多次调用，修改已存在的记录。
+        /// <summary>数据上传-终端用户数据
+        /// 同步终端用户数据，即生成一份终端用户数据的镜像。对于多次调用，修改已存在的记录。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.info.put-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.info.put&amp;v=1</summary>
@@ -344,8 +390,8 @@ namespace AlibabaSDK
         EnduserInfoPutResult EnduserInfoPut(string orgid, string orgName, string orgLocation, string orgIndustry, string orgMobile, string endUserId, string endUserName, string endUserMobile, long createTimeStamp, long modifyTimeStamp, string orgEmail = null, string orgBindingAliLoginId = null, string endUserBindingAliLoginId = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>ERP用户状态数据同步
-        /// 同步ERP终端用户数据，即生成一份终端用户数据的镜像。对于多次调用，修改已存在的记录。
+        /// <summary>数据上传-终端用户数据
+        /// 同步终端用户数据，即生成一份终端用户数据的镜像。对于多次调用，修改已存在的记录。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.info.put-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.info.put&amp;v=1</summary>
@@ -365,48 +411,79 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<EnduserInfoPutResult> EnduserInfoPutAsync(string orgid, string orgName, string orgLocation, string orgIndustry, string orgMobile, string endUserId, string endUserName, string endUserMobile, long createTimeStamp, long modifyTimeStamp, string orgEmail = null, string orgBindingAliLoginId = null, string endUserBindingAliLoginId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>支付宝间连-1688产品推荐开放商品扩展区组件
-        /// 支付宝间连ISV获取1688产品推荐开放页面-商品区块部分
+        /// <summary>社交电商相似品搜索
+        /// 社交电商场景根据图片搜索相似品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alipay.inner.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alipay.inner.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cps.similar.offer.search-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cps.similar.offer.search&amp;v=1</summary>
+        /// <param name="picUrl">图片链接</param>
+        /// <param name="page">页号，从1开始</param>
+        /// <param name="priceMin">最低价格（逻辑为大于等于），用于筛选，可支持小数，可空</param>
+        /// <param name="priceMax">最高价格（逻辑为小于等于），用于筛选，可支持小数，可空</param>
+        /// <param name="sortFields">排序字段，格式为price:asc,sale_amount:desc，分别代表价格升序和销量倒序，多个用英文逗号隔开。目前仅支持价格和销量排序</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        void AlipayInnerPage(string endOrgId, string endUserId);
+        AlibabaCpsSimilarOfferSearchResult AlibabaCpsSimilarOfferSearch(string picUrl, int page, string priceMin = null, string priceMax = null, string sortFields = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>支付宝间连-1688产品推荐开放商品扩展区组件
-        /// 支付宝间连ISV获取1688产品推荐开放页面-商品区块部分
+        /// <summary>社交电商相似品搜索
+        /// 社交电商场景根据图片搜索相似品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alipay.inner.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alipay.inner.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cps.similar.offer.search-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cps.similar.offer.search&amp;v=1</summary>
+        /// <param name="picUrl">图片链接</param>
+        /// <param name="page">页号，从1开始</param>
+        /// <param name="priceMin">最低价格（逻辑为大于等于），用于筛选，可支持小数，可空</param>
+        /// <param name="priceMax">最高价格（逻辑为小于等于），用于筛选，可支持小数，可空</param>
+        /// <param name="sortFields">排序字段，格式为price:asc,sale_amount:desc，分别代表价格升序和销量倒序，多个用英文逗号隔开。目前仅支持价格和销量排序</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task AlipayInnerPageAsync(string endOrgId, string endUserId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaCpsSimilarOfferSearchResult> AlibabaCpsSimilarOfferSearchAsync(string picUrl, int page, string priceMin = null, string priceMax = null, string sortFields = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>跨境场景企业维度新品搜索
-        /// 按照企业维度给出新品列表
+        /// <summary>选品-跨境同款
+        /// 按照已有1688商品进行线上同款搜索，erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.same.product.search-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.same.product.search&amp;v=1</summary>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
+        /// <param name="searchKey">搜索参数，如果传了页面会直接展示搜索结果。参数可以是1688商品链接或者1688商品id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCrossSameProductSearchResult AlibabaCrossSameProductSearch(string orgId, string endUserId = null, string searchKey = null);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>选品-跨境同款
+        /// 按照已有1688商品进行线上同款搜索，erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.same.product.search-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.same.product.search&amp;v=1</summary>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
+        /// <param name="searchKey">搜索参数，如果传了页面会直接展示搜索结果。参数可以是1688商品链接或者1688商品id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCrossSameProductSearchResult> AlibabaCrossSameProductSearchAsync(string orgId, string endUserId = null, string searchKey = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>选品-跨境新品搜索
+        /// 按照终端用户维度给出有过线上交易的供应商新品列表。erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.new.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.new.search&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCrossCompanyProductNewSearchResult AlibabaCrossCompanyProductNewSearch(string orgId);
+        AlibabaCrossCompanyProductNewSearchResult AlibabaCrossCompanyProductNewSearch(string orgId, string endUserId = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景企业维度新品搜索
-        /// 按照企业维度给出新品列表
+        /// <summary>选品-跨境新品搜索
+        /// 按照终端用户维度给出有过线上交易的供应商新品列表。erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.new.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.new.search&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCrossCompanyProductNewSearchResult> AlibabaCrossCompanyProductNewSearchAsync(string orgId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaCrossCompanyProductNewSearchResult> AlibabaCrossCompanyProductNewSearchAsync(string orgId, string endUserId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>采购单记录采集同步
-        /// ERP终端用户采购单记录采集同步
+        /// <summary>数据上传-采购单记录
+        /// 终端用户采购单记录采集同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:purchaseorder.record.put-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=purchaseorder.record.put&amp;v=1</summary>
@@ -432,8 +509,8 @@ namespace AlibabaSDK
         ComAlibabaLinkplusCollectResult PurchaseorderRecordPut(string orgid, string endUserId, string orderNo, string orderLineNo, double orderLinePrice, double orderTotalPrice, string productId, string productName, double productPrice, double productPriceWithTax, long productNum, string productModel, long createTimeStamp, long modifyTimeStamp, string productUnit = null, string productBrand = null, string productSpec = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>采购单记录采集同步
-        /// ERP终端用户采购单记录采集同步
+        /// <summary>数据上传-采购单记录
+        /// 终端用户采购单记录采集同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:purchaseorder.record.put-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=purchaseorder.record.put&amp;v=1</summary>
@@ -458,57 +535,32 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<ComAlibabaLinkplusCollectResult> PurchaseorderRecordPutAsync(string orgid, string endUserId, string orderNo, string orderLineNo, double orderLinePrice, double orderTotalPrice, string productId, string productName, double productPrice, double productPriceWithTax, long productNum, string productModel, long createTimeStamp, long modifyTimeStamp, string productUnit = null, string productBrand = null, string productSpec = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>终端用户感兴趣商品
-        /// ERP终端用户感兴趣的类目，类目目前接受1688类目传入，或自定义类目传入。
+        /// <summary>数据上传-终端用户感兴趣供应商
+        /// 上传终端用户感兴趣的供应商
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.category-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.interesting.category&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
-        /// <param name="endUserId">erp内部的用户身份id</param>
-        /// <param name="categoryIds">感兴趣的1688类目id,逗号分隔。任意123级类目均可填写</param>
-        /// <param name="categoryNames">感兴趣的1688类目名称,逗号分隔。任意123级类目均可填写</param>
-        /// <param name="udfCategoryNames">感兴趣的自定义类目名称,逗号分隔</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.supplier.put-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.interesting.supplier.put&amp;v=1</summary>
+        /// <param name="orgId">企业id</param>
+        /// <param name="endUserId">所属企业的用户id</param>
+        /// <param name="supplierLoginIds">感兴趣供应商loginId列表，多个用英文逗号隔开</param>
         /// <returns>返回值</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Result EnduserInterestingCategory(string orgId, string endUserId, string categoryIds = null, string categoryNames = null, string udfCategoryNames = null);
+        ComAlibabaLinkplusEnduserInterestingSupplierPutResult EnduserInterestingSupplierPut(string orgId, string endUserId, string supplierLoginIds);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>终端用户感兴趣商品
-        /// ERP终端用户感兴趣的类目，类目目前接受1688类目传入，或自定义类目传入。
+        /// <summary>数据上传-终端用户感兴趣供应商
+        /// 上传终端用户感兴趣的供应商
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.category-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.interesting.category&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
-        /// <param name="endUserId">erp内部的用户身份id</param>
-        /// <param name="categoryIds">感兴趣的1688类目id,逗号分隔。任意123级类目均可填写</param>
-        /// <param name="categoryNames">感兴趣的1688类目名称,逗号分隔。任意123级类目均可填写</param>
-        /// <param name="udfCategoryNames">感兴趣的自定义类目名称,逗号分隔</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.supplier.put-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.interesting.supplier.put&amp;v=1</summary>
+        /// <param name="orgId">企业id</param>
+        /// <param name="endUserId">所属企业的用户id</param>
+        /// <param name="supplierLoginIds">感兴趣供应商loginId列表，多个用英文逗号隔开</param>
         /// <returns>返回值</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Result> EnduserInterestingCategoryAsync(string orgId, string endUserId, string categoryIds = null, string categoryNames = null, string udfCategoryNames = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ComAlibabaLinkplusEnduserInterestingSupplierPutResult> EnduserInterestingSupplierPutAsync(string orgId, string endUserId, string supplierLoginIds, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>通联支付1688产品推荐开放页面
-        /// 通联支付1688产品推荐开放页面
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:allinpay.product.recommend.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=allinpay.product.recommend.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        void AllinpayProductRecommendPage(string endOrgId, string endUserId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>通联支付1688产品推荐开放页面
-        /// 通联支付1688产品推荐开放页面
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:allinpay.product.recommend.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=allinpay.product.recommend.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task AllinpayProductRecommendPageAsync(string endOrgId, string endUserId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>销售单操作记录同步
+        /// <summary>数据上传-销售记录
         /// 销售单操作记录同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:sellorder.record.put-1 
@@ -535,7 +587,7 @@ namespace AlibabaSDK
         ComAlibabaLinkplusCollectResult SellorderRecordPut(string orgid, string endUserId, string orderNo, string orderLineNo, double orderLinePrice, double orderTotalPrice, string productId, string productName, double productPrice, double productPriceWithTax, string productModel, long productNum, long createTimeStamp, long modifyTimeStamp, string productUnit = null, string productBrand = null, string productSpec = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>销售单操作记录同步
+        /// <summary>数据上传-销售记录
         /// 销售单操作记录同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:sellorder.record.put-1 
@@ -561,7 +613,7 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<ComAlibabaLinkplusCollectResult> SellorderRecordPutAsync(string orgid, string endUserId, string orderNo, string orderLineNo, double orderLinePrice, double orderTotalPrice, string productId, string productName, double productPrice, double productPriceWithTax, string productModel, long productNum, long createTimeStamp, long modifyTimeStamp, string productUnit = null, string productBrand = null, string productSpec = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>机构授权信息推送同步
+        /// <summary>数据上传-机构授权信息
         /// 终端机构授权ERP把自己的数据同步给网站时，需要把机构授权信息同步给网站
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:org.auth.info.put-1 
@@ -574,7 +626,7 @@ namespace AlibabaSDK
         ComAlibabaLinkplusCollectResult OrgAuthInfoPut(string orgid, bool orgIsAuth, long modifyTimeStamp);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>机构授权信息推送同步
+        /// <summary>数据上传-机构授权信息
         /// 终端机构授权ERP把自己的数据同步给网站时，需要把机构授权信息同步给网站
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:org.auth.info.put-1 
@@ -586,26 +638,28 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<ComAlibabaLinkplusCollectResult> OrgAuthInfoPutAsync(string orgid, bool orgIsAuth, long modifyTimeStamp, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>跨境场景企业维度热销品搜索
-        /// 按照企业维度给出热销品列表
+        /// <summary>选品-跨境热销品搜索
+        /// 按照终端用户维度给出有过线上交易的供应商热销品列表。erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.hot.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.hot.search&amp;v=1</summary>
         /// <param name="orgId">erp内部的企业身份id</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCrossCompanyProductHotSearchResult AlibabaCrossCompanyProductHotSearch(string orgId);
+        AlibabaCrossCompanyProductHotSearchResult AlibabaCrossCompanyProductHotSearch(string orgId, string endUserId = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景企业维度热销品搜索
-        /// 按照企业维度给出热销品列表
+        /// <summary>选品-跨境热销品搜索
+        /// 按照终端用户维度给出有过线上交易的供应商热销品列表。erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.hot.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.hot.search&amp;v=1</summary>
         /// <param name="orgId">erp内部的企业身份id</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCrossCompanyProductHotSearchResult> AlibabaCrossCompanyProductHotSearchAsync(string orgId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaCrossCompanyProductHotSearchResult> AlibabaCrossCompanyProductHotSearchAsync(string orgId, string endUserId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>感兴趣关键词采集同步
+        /// <summary>数据上传-感兴趣关键词
         /// 当终端用户发起感兴趣的商品，比如搜索，点击时，ERP发起终端用户感兴趣商品名称或者关键字信息
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:interesting.keyword.record.put-1 
@@ -619,7 +673,7 @@ namespace AlibabaSDK
         ComAlibabaLinkplusCollectResult InterestingKeywordRecordPut(string orgid, string endUserId, string keywords, long operateTimeStamp);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>感兴趣关键词采集同步
+        /// <summary>数据上传-感兴趣关键词
         /// 当终端用户发起感兴趣的商品，比如搜索，点击时，ERP发起终端用户感兴趣商品名称或者关键字信息
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:interesting.keyword.record.put-1 
@@ -632,36 +686,7 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<ComAlibabaLinkplusCollectResult> InterestingKeywordRecordPutAsync(string orgid, string endUserId, string keywords, long operateTimeStamp, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>工业品市场产品精准匹配开放页面接口
-        /// 工业品市场产品精准匹配开放页面接口
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:industrialmarket.product.match.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=industrialmarket.product.match.page&amp;v=1</summary>
-        /// <param name="batchId">业务批次ID</param>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <param name="erpWarehouse">仓库信息</param>
-        /// <param name="erpPrePurchaseOrder">预采购订单列表</param>
-        /// <param name="umidToken">设备码，通过阿里指定js获取</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        void IndustrialmarketProductMatchPage(string batchId, string endOrgId, string endUserId, ErpWarehouse erpWarehouse, System.Collections.Generic.IEnumerable<ErpPrePurchaseOrder> erpPrePurchaseOrder, string umidToken = null);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>工业品市场产品精准匹配开放页面接口
-        /// 工业品市场产品精准匹配开放页面接口
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:industrialmarket.product.match.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=industrialmarket.product.match.page&amp;v=1</summary>
-        /// <param name="batchId">业务批次ID</param>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <param name="erpWarehouse">仓库信息</param>
-        /// <param name="erpPrePurchaseOrder">预采购订单列表</param>
-        /// <param name="umidToken">设备码，通过阿里指定js获取</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task IndustrialmarketProductMatchPageAsync(string batchId, string endOrgId, string endUserId, ErpWarehouse erpWarehouse, System.Collections.Generic.IEnumerable<ErpPrePurchaseOrder> erpPrePurchaseOrder, string umidToken = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>跨境场景企业维度折扣品搜索
+        /// <summary>选品-跨境折扣品搜索
         /// 按照企业维度给出折扣品列表
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.discount.search-1 
@@ -671,7 +696,7 @@ namespace AlibabaSDK
         AlibabaCrossCompanyProductDiscountSearchResult AlibabaCrossCompanyProductDiscountSearch(string orgId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景企业维度折扣品搜索
+        /// <summary>选品-跨境折扣品搜索
         /// 按照企业维度给出折扣品列表
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.discount.search-1 
@@ -680,7 +705,7 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaCrossCompanyProductDiscountSearchResult> AlibabaCrossCompanyProductDiscountSearchAsync(string orgId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>ERP用户登录记录采集同步
+        /// <summary>数据上传-终端用户登录记录
         /// erp终端用户登录数据采集同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.login.record.put-1 
@@ -702,7 +727,7 @@ namespace AlibabaSDK
         ComAlibabaLinkplusCollectResult EnduserLoginRecordPut(string orgid, string endUserId, string realUrl, long loginTimeStamp, string ip = null, string countryName = null, string provinceName = null, string cityName = null, string scr = null, string agent = null, string agentName = null, string platform = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>ERP用户登录记录采集同步
+        /// <summary>数据上传-终端用户登录记录
         /// erp终端用户登录数据采集同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.login.record.put-1 
@@ -723,8 +748,8 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<ComAlibabaLinkplusCollectResult> EnduserLoginRecordPutAsync(string orgid, string endUserId, string realUrl, long loginTimeStamp, string ip = null, string countryName = null, string provinceName = null, string cityName = null, string scr = null, string agent = null, string agentName = null, string platform = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>跨境场景企业维度货源推荐页面转发
-        /// 按照企业维度给出推荐的货源列表，erp需要有跨境货源推荐的权限，并且事先要上传企业数据
+        /// <summary>选品-跨境货源推荐
+        /// 按照终端用户维度给出推荐的跨境货源列表，erp或者超买需要申请对应的解决方案，并且事先要上传终端用户数据
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.recommend-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.recommend&amp;v=1</summary>
@@ -734,8 +759,8 @@ namespace AlibabaSDK
         AlibabaCrossCompanyProductRecommendResult AlibabaCrossCompanyProductRecommend(string orgId, string endUserId = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景企业维度货源推荐页面转发
-        /// 按照企业维度给出推荐的货源列表，erp需要有跨境货源推荐的权限，并且事先要上传企业数据
+        /// <summary>选品-跨境货源推荐
+        /// 按照终端用户维度给出推荐的跨境货源列表，erp或者超买需要申请对应的解决方案，并且事先要上传终端用户数据
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.recommend-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.recommend&amp;v=1</summary>
@@ -744,7 +769,7 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaCrossCompanyProductRecommendResult> AlibabaCrossCompanyProductRecommendAsync(string orgId, string endUserId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>物流信息同步
+        /// <summary>数据上传-物流信息
         /// ERP物流信息同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:logistics.record.put-1 
@@ -762,7 +787,7 @@ namespace AlibabaSDK
         ComAlibabaLinkplusCollectResult LogisticsRecordPut(string orgid, string endUserId, string fromAddress, string toAddress, string logisticsCorp, string logisticsOrderId, string orderIds, long operateTimeStamp);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>物流信息同步
+        /// <summary>数据上传-物流信息
         /// ERP物流信息同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:logistics.record.put-1 
@@ -911,8 +936,8 @@ namespace AlibabaSDK
         /// <param name="productID">商品ID</param>
         /// <param name="webSite">1688或者alibaba</param>
         /// <param name="subject">商品标题，如果不传递或者传递空字符串则不作任何处理</param>
-        /// <param name="description">商品描述，如果不传递或者传递空字符串则不作任何处理.</param>
-        /// <param name="image">商品图片，如果不传递或者传递空字符串则不作任何处理请注意，如果ISV需要修改image字段，那么subject和description必须至少传入其一</param>
+        /// <param name="description">【不推荐使用】：4月16日将逐步去掉该字段的使用，修改详情请调用全量修改接口 com.alibaba.product:alibaba.product.edit</param>
+        /// <param name="image">【不推荐使用】：4月16日将逐步去掉该字段的使用，修改图片请调用全量修改接口 com.alibaba.product:alibaba.product.edit</param>
         /// <param name="supportOnlineTrade">是否允许在线交易</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 404	- 无法找到productID[57576785537]对应的商品。(商品ID错误，检查商品ID)
@@ -931,8 +956,8 @@ namespace AlibabaSDK
         /// <param name="productID">商品ID</param>
         /// <param name="webSite">1688或者alibaba</param>
         /// <param name="subject">商品标题，如果不传递或者传递空字符串则不作任何处理</param>
-        /// <param name="description">商品描述，如果不传递或者传递空字符串则不作任何处理.</param>
-        /// <param name="image">商品图片，如果不传递或者传递空字符串则不作任何处理请注意，如果ISV需要修改image字段，那么subject和description必须至少传入其一</param>
+        /// <param name="description">【不推荐使用】：4月16日将逐步去掉该字段的使用，修改详情请调用全量修改接口 com.alibaba.product:alibaba.product.edit</param>
+        /// <param name="image">【不推荐使用】：4月16日将逐步去掉该字段的使用，修改图片请调用全量修改接口 com.alibaba.product:alibaba.product.edit</param>
         /// <param name="supportOnlineTrade">是否允许在线交易</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 404	- 无法找到productID[57576785537]对应的商品。(商品ID错误，检查商品ID)
@@ -940,29 +965,6 @@ namespace AlibabaSDK
         /// 500001	- 商品修改失败，主图不可为空且总数不得超过五张。(主图不可为空且总数不得超过五张。)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaProductIncrementModifyResult> AlibabaProductIncrementModifyAsync(long productID, string webSite, string subject = null, string description = null, AlibabaProductProductImageInfo image = null, bool? supportOnlineTrade = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>设置是否启用自定义分类
-        /// 设置是否启用自定义分类，启用后在旺铺中将按自定义分类展示商品。此API对国际站无效
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.group.setSwitch-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.product.group.setSwitch&amp;v=1</summary>
-        /// <param name="switchValue">设置状态，true：已开启；false：未开启</param>
-        /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
-        /// <returns>是否设置成功，true设置成功，false设置失败</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response2 AlibabaProductGroupSetSwitch(bool switchValue, string webSite);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>设置是否启用自定义分类
-        /// 设置是否启用自定义分类，启用后在旺铺中将按自定义分类展示商品。此API对国际站无效
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.group.setSwitch-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.product.group.setSwitch&amp;v=1</summary>
-        /// <param name="switchValue">设置状态，true：已开启；false：未开启</param>
-        /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
-        /// <returns>是否设置成功，true设置成功，false设置失败</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response2> AlibabaProductGroupSetSwitchAsync(bool switchValue, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>获取商品
         /// 由商品ID获取商品详细信息，请注意：只能查询自己所有的产品。
@@ -1008,6 +1010,7 @@ namespace AlibabaSDK
         /// <param name="saleInfo">商品销售信息</param>
         /// <param name="shippingInfo">商品物流信息</param>
         /// <param name="internationalTradeInfo">商品国际贸易信息，1688无需处理此字段</param>
+        /// <param name="extendInfos">商品扩展信息</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 系统错误	- 系统错误(attributes中必须包括类目的必传属性。包括必传的产品属性和规格属性，如果没有规格属性又要按照规格报价的话会出“系统错误”)
         /// 无错误Case1	- 发布Offer 之后没有具体的规格信息(attributes的规格属性的值value必须和SKUInfo里面的attribute规格属性值attributeValue一致，否则当按规格报价时会出现offer发布成功，但是没有规格的情况。)
@@ -1015,7 +1018,7 @@ namespace AlibabaSDK
         /// 系统错误	- 自定义属性个数超过最大限制!(自定义属性最多可以添加3个)
         /// 系统错误	- XXX:是必填项！(attributes中必须包括类目的必填属性，请检查入参)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaProductAddResult AlibabaProductAdd(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null);
+        AlibabaProductAddResult AlibabaProductAdd(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Collections.Generic.IEnumerable<AlibabaProductProductExtendInfo> extendInfos = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>发布商品
@@ -1039,6 +1042,7 @@ namespace AlibabaSDK
         /// <param name="saleInfo">商品销售信息</param>
         /// <param name="shippingInfo">商品物流信息</param>
         /// <param name="internationalTradeInfo">商品国际贸易信息，1688无需处理此字段</param>
+        /// <param name="extendInfos">商品扩展信息</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 系统错误	- 系统错误(attributes中必须包括类目的必传属性。包括必传的产品属性和规格属性，如果没有规格属性又要按照规格报价的话会出“系统错误”)
         /// 无错误Case1	- 发布Offer 之后没有具体的规格信息(attributes的规格属性的值value必须和SKUInfo里面的attribute规格属性值attributeValue一致，否则当按规格报价时会出现offer发布成功，但是没有规格的情况。)
@@ -1046,7 +1050,7 @@ namespace AlibabaSDK
         /// 系统错误	- 自定义属性个数超过最大限制!(自定义属性最多可以添加3个)
         /// 系统错误	- XXX:是必填项！(attributes中必须包括类目的必填属性，请检查入参)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaProductAddResult> AlibabaProductAddAsync(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaProductAddResult> AlibabaProductAddAsync(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Collections.Generic.IEnumerable<AlibabaProductProductExtendInfo> extendInfos = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>获取是否启用自定义分类
         /// 获取是否启用自定义分类，启用后在旺铺中将按自定义分类展示商品。此API对国际站无效
@@ -1056,7 +1060,7 @@ namespace AlibabaSDK
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <returns>true：已开启；false：未开启</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response3 AlibabaProductGroupGetSwitch(string webSite);
+        Response2 AlibabaProductGroupGetSwitch(string webSite);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>获取是否启用自定义分类
@@ -1067,7 +1071,7 @@ namespace AlibabaSDK
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <returns>true：已开启；false：未开启</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response3> AlibabaProductGroupGetSwitchAsync(string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response2> AlibabaProductGroupGetSwitchAsync(string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>产品是否可以修改
         /// 产品是否可以修改
@@ -1224,7 +1228,7 @@ namespace AlibabaSDK
         System.Threading.Tasks.Task<AlibabaProductModifyStockResult> AlibabaProductModifyStockAsync(System.Collections.Generic.IEnumerable<AlibabaProductProductStock> productStockChange, string webSite, bool? increaceModify = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>修改商品
-        /// 修改商品详细信息，此API的调用方式建议先用product.get方法，获取productInfo，再用里面的类目ID调用“获取类目属性”接口，结合类目里的属性将productInfo里相应字段修改后，再赋给本API，这样使用起来最方便，也能最大程度的保证准确性；每个商品(Offer)修改的次数每天不能超过30次；注意可能类目里会新增一些信息需要额外填写，或类目有调整时对应的参数也需要做对应的调整。
+        /// 修改商品详细信息，此API的调用方式建议先用product.get方法，获取productInfo，再用里面的类目ID调用“获取类目属性”接口，结合类目里的属性将productInfo里相应字段修改后，再赋给本API，这样使用起来最方便，也能最大程度的保证准确性；每个商品(Offer)修改的次数每天不能超过30次；注意可能类目里会新增一些信息需要额外填写，或类目有调整时对应的参数也需要做对应的调整。     供货方式目前仅支持：现货、现货+订货 两种，即使通过类目规则拿到的供货方式是：现货、现货+订货、订货三种方式，也是仅支持现货、现货+订货这两种方式的。还有这个接口能够修改的属性会比大市场少，所以在大市场手动修改后再通过此接口修改会造成某些属性丢失，比如加工定制相关，包裹体积，库存扣减设置，订货范围等。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.edit-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.product.edit&amp;v=1</summary>
@@ -1232,11 +1236,11 @@ namespace AlibabaSDK
         /// <param name="productInfo">商品详细信息</param>
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaProductEditResult AlibabaProductEdit(long productID, AlibabaProductProductInfo5 productInfo, string webSite);
+        AlibabaProductEditResult AlibabaProductEdit(long productID, AlibabaProductProductInfo3 productInfo, string webSite);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>修改商品
-        /// 修改商品详细信息，此API的调用方式建议先用product.get方法，获取productInfo，再用里面的类目ID调用“获取类目属性”接口，结合类目里的属性将productInfo里相应字段修改后，再赋给本API，这样使用起来最方便，也能最大程度的保证准确性；每个商品(Offer)修改的次数每天不能超过30次；注意可能类目里会新增一些信息需要额外填写，或类目有调整时对应的参数也需要做对应的调整。
+        /// 修改商品详细信息，此API的调用方式建议先用product.get方法，获取productInfo，再用里面的类目ID调用“获取类目属性”接口，结合类目里的属性将productInfo里相应字段修改后，再赋给本API，这样使用起来最方便，也能最大程度的保证准确性；每个商品(Offer)修改的次数每天不能超过30次；注意可能类目里会新增一些信息需要额外填写，或类目有调整时对应的参数也需要做对应的调整。     供货方式目前仅支持：现货、现货+订货 两种，即使通过类目规则拿到的供货方式是：现货、现货+订货、订货三种方式，也是仅支持现货、现货+订货这两种方式的。还有这个接口能够修改的属性会比大市场少，所以在大市场手动修改后再通过此接口修改会造成某些属性丢失，比如加工定制相关，包裹体积，库存扣减设置，订货范围等。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.edit-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.product.edit&amp;v=1</summary>
@@ -1244,7 +1248,7 @@ namespace AlibabaSDK
         /// <param name="productInfo">商品详细信息</param>
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaProductEditResult> AlibabaProductEditAsync(long productID, AlibabaProductProductInfo5 productInfo, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaProductEditResult> AlibabaProductEditAsync(long productID, AlibabaProductProductInfo3 productInfo, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>根据状态查询商品
         /// 根据状态查询商品（开放平台自建API）
@@ -1328,7 +1332,7 @@ namespace AlibabaSDK
         /// <param name="userInfo">用户Id</param>
         /// <returns>推送消息列表</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response4 PushCursorMessageList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? quantity = null, string type = null, string userInfo = null);
+        Response3 PushCursorMessageList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? quantity = null, string type = null, string userInfo = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>游标式获取失败的消息列表
@@ -1343,7 +1347,7 @@ namespace AlibabaSDK
         /// <param name="userInfo">用户Id</param>
         /// <returns>推送消息列表</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response4> PushCursorMessageListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? quantity = null, string type = null, string userInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response3> PushCursorMessageListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? quantity = null, string type = null, string userInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>批量新增/修改erp物料
         /// 批量新增/修改erp物料，不存在则新增，存在则更新
@@ -1371,6 +1375,7 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.removeErpProducts-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.removeErpProducts&amp;v=1</summary>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         CnAlibabaOpenAlibabaCaigouProductRemoveErpProductsAlibabaCaigouProductResultData AlibabaCaigouProductRemoveErpProducts(System.Collections.Generic.IEnumerable<AlibabaCaigouProductErpProductCoopParam> erpProductCoopParamList);
     
@@ -1380,8 +1385,32 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.removeErpProducts-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.removeErpProducts&amp;v=1</summary>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductRemoveErpProductsAlibabaCaigouProductResultData> AlibabaCaigouProductRemoveErpProductsAsync(System.Collections.Generic.IEnumerable<AlibabaCaigouProductErpProductCoopParam> erpProductCoopParamList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>内部商城修改商品物料编码
+        /// 内部商城修改商品物料编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.modifyProductCode-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.modifyProductCode&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="productCode">物料编码</param>
+        /// <returns>结构体</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouMallModifyProductCode(long goodsId, string productCode);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>内部商城修改商品物料编码
+        /// 内部商城修改商品物料编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.modifyProductCode-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.modifyProductCode&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="productCode">物料编码</param>
+        /// <returns>结构体</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouMallModifyProductCodeAsync(long goodsId, string productCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>查询erp物料
         /// 根据系统域编码、物料编码、会员ID查询erp物料
@@ -1390,6 +1419,7 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.getErpProductByErpProductCode&amp;v=1</summary>
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="erpProductCode">erp物料编码</param>
+        /// <returns>返回参数模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         CnAlibabaOpenAlibabaCaigouProductGetErpProductByErpProductCodeAlibabaCaigouProductResultData AlibabaCaigouProductGetErpProductByErpProductCode(string systemDomainCode, string erpProductCode);
     
@@ -1401,6 +1431,7 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.getErpProductByErpProductCode&amp;v=1</summary>
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="erpProductCode">erp物料编码</param>
+        /// <returns>返回参数模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductGetErpProductByErpProductCodeAlibabaCaigouProductResultData> AlibabaCaigouProductGetErpProductByErpProductCodeAsync(string systemDomainCode, string erpProductCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -1423,13 +1454,15 @@ namespace AlibabaSDK
         /// <param name="authCostCenters">授权成本中心，格式：公司编码|成本中心编码   多个成本中心用英文分号分隔</param>
         /// <param name="authAreas">授权区域名称，多个用英文分号分隔</param>
         /// <param name="authCategories">授权类目编码，多个用英文分号分隔</param>
+        /// <param name="securityPhone">安全手机号码</param>
+        /// <param name="passWord">账号登录密码</param>
         /// <returns>创建成功的子帐号ID或者是已经与接入商系统内部employeeId绑定的子帐号ID返回 ErrorCode 的错误信息
         /// ISV.CONFLICT_MEMBER	- 主帐号存在同名帐号，这个是由于alibaba帐号体系合并导致还有很少一部分会员存在用户名冲突问题，新注册的不存在这个问题，如果主帐号冲突的话就不能使用子帐号相关功能，所以当发现这个问题后。(请修改自己的帐号名或者联系采购运营服务同学。)
         /// ISV.INVALID_PARAM	- 接口传入参数不合法(请按接口参数说明检查传入的param参数，确保param对象中的employeeId,buyerMemberId,name,departmend是合法有效的)
         /// ISV.DATA_PRIVILEGE_ILLEGAL	- 您无权调用此api接口，此接口只对与采购平台合作采购商才能提供这个接口服务(请先与采购平台进行合作，可联系采购运营服务同学进行咨询)
         /// ISP.SYSTEM_ERROR	- ISP系统繁忙(请确认主帐号已经登陆过旺旺（至少一次），并且已经领用了子帐号；请稍等片刻，在进行尝试；通知采购运营服务同学告知问题。)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response5 CaigouApiAccountCreateSubAccount(string employeeId, string name, string mobileNo = null, string email = null, string sex = null, string department = null, string role = null, string authCompanies = null, string authFactories = null, string authPurchaseCenters = null, string authCostCenters = null, string authAreas = null, string authCategories = null);
+        Response4 CaigouApiAccountCreateSubAccount(string employeeId, string name, string mobileNo = null, string email = null, string sex = null, string department = null, string role = null, string authCompanies = null, string authFactories = null, string authPurchaseCenters = null, string authCostCenters = null, string authAreas = null, string authCategories = null, string securityPhone = null, string passWord = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>创建子帐号
@@ -1451,13 +1484,42 @@ namespace AlibabaSDK
         /// <param name="authCostCenters">授权成本中心，格式：公司编码|成本中心编码   多个成本中心用英文分号分隔</param>
         /// <param name="authAreas">授权区域名称，多个用英文分号分隔</param>
         /// <param name="authCategories">授权类目编码，多个用英文分号分隔</param>
+        /// <param name="securityPhone">安全手机号码</param>
+        /// <param name="passWord">账号登录密码</param>
         /// <returns>创建成功的子帐号ID或者是已经与接入商系统内部employeeId绑定的子帐号ID返回 ErrorCode 的错误信息
         /// ISV.CONFLICT_MEMBER	- 主帐号存在同名帐号，这个是由于alibaba帐号体系合并导致还有很少一部分会员存在用户名冲突问题，新注册的不存在这个问题，如果主帐号冲突的话就不能使用子帐号相关功能，所以当发现这个问题后。(请修改自己的帐号名或者联系采购运营服务同学。)
         /// ISV.INVALID_PARAM	- 接口传入参数不合法(请按接口参数说明检查传入的param参数，确保param对象中的employeeId,buyerMemberId,name,departmend是合法有效的)
         /// ISV.DATA_PRIVILEGE_ILLEGAL	- 您无权调用此api接口，此接口只对与采购平台合作采购商才能提供这个接口服务(请先与采购平台进行合作，可联系采购运营服务同学进行咨询)
         /// ISP.SYSTEM_ERROR	- ISP系统繁忙(请确认主帐号已经登陆过旺旺（至少一次），并且已经领用了子帐号；请稍等片刻，在进行尝试；通知采购运营服务同学告知问题。)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response5> CaigouApiAccountCreateSubAccountAsync(string employeeId, string name, string mobileNo = null, string email = null, string sex = null, string department = null, string role = null, string authCompanies = null, string authFactories = null, string authPurchaseCenters = null, string authCostCenters = null, string authAreas = null, string authCategories = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response4> CaigouApiAccountCreateSubAccountAsync(string employeeId, string name, string mobileNo = null, string email = null, string sex = null, string department = null, string role = null, string authCompanies = null, string authFactories = null, string authPurchaseCenters = null, string authCostCenters = null, string authAreas = null, string authCategories = null, string securityPhone = null, string passWord = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>邀请供应商多轮报价(支持多轮询价)
+        /// 邀请供应商进行多轮报价，支持多轮询价
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.quotation.inviteSupplierMultiQuote-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.quotation.inviteSupplierMultiQuote&amp;v=1</summary>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// invalid_param	- 参数无效(检查必填参数是否为空)
+        /// invalid_user	- 用户信息错误(检查appkey、秘钥、token是否输入)
+        /// buyoffer_not_exist	- 询价单不存在(检查询价单ID是否输入)
+        /// system_error	- 系统错误(联系管理人员进行解决)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq CaigouApiQuotationInviteSupplierMultiQuote(AlibabaCaigouCoopapiQuotationParamSupplierMultiQuoteParam param);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>邀请供应商多轮报价(支持多轮询价)
+        /// 邀请供应商进行多轮报价，支持多轮询价
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.quotation.inviteSupplierMultiQuote-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.quotation.inviteSupplierMultiQuote&amp;v=1</summary>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// invalid_param	- 参数无效(检查必填参数是否为空)
+        /// invalid_user	- 用户信息错误(检查appkey、秘钥、token是否输入)
+        /// buyoffer_not_exist	- 询价单不存在(检查询价单ID是否输入)
+        /// system_error	- 系统错误(联系管理人员进行解决)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq> CaigouApiQuotationInviteSupplierMultiQuoteAsync(AlibabaCaigouCoopapiQuotationParamSupplierMultiQuoteParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>分页查询采购单列表
         /// 寻源单列表分页查询接口，包括询价单、竞价单、招标单等
@@ -1641,7 +1703,7 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.account.listSubAcccounts&amp;v=1</summary>
         /// <returns>返回列表</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response6 CaigouApiAccountListSubAcccounts();
+        Response5 CaigouApiAccountListSubAcccounts();
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>获取子账号清单
@@ -1652,7 +1714,7 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.account.listSubAcccounts&amp;v=1</summary>
         /// <returns>返回列表</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response6> CaigouApiAccountListSubAcccountsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response5> CaigouApiAccountListSubAcccountsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>关闭询价单
         /// 关闭询价单
@@ -1664,7 +1726,7 @@ namespace AlibabaSDK
         /// <param name="closeDesc">关闭询价单的详细描述【不要超过40个字符】</param>
         /// <returns>是否执行成功</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response7 CaigouApiBuyofferCloseBuyOffer(long buyOfferId, string closeReason, string closeDesc = null);
+        Response6 CaigouApiBuyofferCloseBuyOffer(long buyOfferId, string closeReason, string closeDesc = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>关闭询价单
@@ -1677,7 +1739,7 @@ namespace AlibabaSDK
         /// <param name="closeDesc">关闭询价单的详细描述【不要超过40个字符】</param>
         /// <returns>是否执行成功</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response7> CaigouApiBuyofferCloseBuyOfferAsync(long buyOfferId, string closeReason, string closeDesc = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response6> CaigouApiBuyofferCloseBuyOfferAsync(long buyOfferId, string closeReason, string closeDesc = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>采购执行买家取消付款
         /// 采购执行买家取消付款
@@ -1687,7 +1749,7 @@ namespace AlibabaSDK
         /// <param name="payId">付款单id</param>
         /// <returns>取消结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerPayServiceCancelPayNote(long payId);
+        AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq ComAlibabaProcurementBuyerPayServiceCancelPayNote(long payId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>采购执行买家取消付款
@@ -1698,7 +1760,7 @@ namespace AlibabaSDK
         /// <param name="payId">付款单id</param>
         /// <returns>取消结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerPayServiceCancelPayNoteAsync(long payId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq> ComAlibabaProcurementBuyerPayServiceCancelPayNoteAsync(long payId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>内部商城同步创建交易订单
         /// 内部商城同步创建交易订单
@@ -1725,7 +1787,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.category.queryAllErpCategory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.category.queryAllErpCategory&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response8 AlibabaCaigouCategoryQueryAllErpCategory();
+        Response7 AlibabaCaigouCategoryQueryAllErpCategory();
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>查询所有的erp类目
@@ -1734,7 +1796,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.category.queryAllErpCategory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.category.queryAllErpCategory&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response8> AlibabaCaigouCategoryQueryAllErpCategoryAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response7> AlibabaCaigouCategoryQueryAllErpCategoryAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>供应商信息导入
         /// 供应商信息导入.(供应商memberID、公司名、固话、邮箱、手机至少填写一项)
@@ -1754,7 +1816,7 @@ namespace AlibabaSDK
         /// <returns>返回导入失败的数据.全部成功返回的list长度为0.
         /// 外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response9 CaigouApiSupplierImport(System.Collections.Generic.IEnumerable<string> list);
+        Response8 CaigouApiSupplierImport(System.Collections.Generic.IEnumerable<string> list);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>供应商信息导入
@@ -1775,7 +1837,24 @@ namespace AlibabaSDK
         /// <returns>返回导入失败的数据.全部成功返回的list长度为0.
         /// 外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response9> CaigouApiSupplierImportAsync(System.Collections.Generic.IEnumerable<string> list, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response8> CaigouApiSupplierImportAsync(System.Collections.Generic.IEnumerable<string> list, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>企业采购内部商城下单前置供应商校验【已废弃】
+        /// 企业采购内部商城下单前置供应商校验
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.order.supplier.precheck-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.order.supplier.precheck&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq AlibabaCaigouMallOrderSupplierPrecheck(AlibabaCaigouCoopapiMallOrderParamCoopSubmitOrderParam coopSubmitOrderParam);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>企业采购内部商城下单前置供应商校验【已废弃】
+        /// 企业采购内部商城下单前置供应商校验
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.order.supplier.precheck-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.order.supplier.precheck&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq> AlibabaCaigouMallOrderSupplierPrecheckAsync(AlibabaCaigouCoopapiMallOrderParamCoopSubmitOrderParam coopSubmitOrderParam, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>根据prId查询询价单列表
         /// 根据prId查询询价单列表（限制：返回条数100，否则舍弃）
@@ -1787,7 +1866,7 @@ namespace AlibabaSDK
         /// ISV.DATA_NOT_EXIST	- 数据不存在
         /// ISP.SYSTEM_ERROR	- 系统出错(请联系开发人员排查)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response10 CaigouApiBuyOfferQueryBuyOfferByPrId(string prId);
+        Response9 CaigouApiBuyOfferQueryBuyOfferByPrId(string prId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>根据prId查询询价单列表
@@ -1800,7 +1879,7 @@ namespace AlibabaSDK
         /// ISV.DATA_NOT_EXIST	- 数据不存在
         /// ISP.SYSTEM_ERROR	- 系统出错(请联系开发人员排查)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response10> CaigouApiBuyOfferQueryBuyOfferByPrIdAsync(string prId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response9> CaigouApiBuyOfferQueryBuyOfferByPrIdAsync(string prId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>根据id删除产品
         /// 根据id删除产品
@@ -1810,7 +1889,7 @@ namespace AlibabaSDK
         /// <param name="productId">产品在1688所属id</param>
         /// <returns>删除结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response11 CaigouApiProductDeleteProductById(long productId);
+        Response10 CaigouApiProductDeleteProductById(long productId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>根据id删除产品
@@ -1821,7 +1900,7 @@ namespace AlibabaSDK
         /// <param name="productId">产品在1688所属id</param>
         /// <returns>删除结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response11> CaigouApiProductDeleteProductByIdAsync(long productId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response10> CaigouApiProductDeleteProductByIdAsync(long productId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>更新产品信息
         /// 更新产品信息，根据产品编号更新产品，操作人员编号需要绑定后才能操作
@@ -1845,7 +1924,7 @@ namespace AlibabaSDK
         /// ISV.DATA_NOT_EXIST	- 您要修改的数据不存在(请检查productId是否是1688的主键，再检查该产品是否已被删除)
         /// ISV.NO_PERMISSION	- 无权限修改(请检查该产品归属人是否是您的账号)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response7 CaigouApiProductModifyProduct(long productId, string productCode = null, string title = null, string unit = null, string remark = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, string instruction = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null);
+        Response6 CaigouApiProductModifyProduct(long productId, string productCode = null, string title = null, string unit = null, string remark = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, string instruction = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>更新产品信息
@@ -1870,7 +1949,7 @@ namespace AlibabaSDK
         /// ISV.DATA_NOT_EXIST	- 您要修改的数据不存在(请检查productId是否是1688的主键，再检查该产品是否已被删除)
         /// ISV.NO_PERMISSION	- 无权限修改(请检查该产品归属人是否是您的账号)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response7> CaigouApiProductModifyProductAsync(long productId, string productCode = null, string title = null, string unit = null, string remark = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, string instruction = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response6> CaigouApiProductModifyProductAsync(long productId, string productCode = null, string title = null, string unit = null, string remark = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, string instruction = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>根据请购单ID获取请购单详情
         /// 根据请购单ID获取请购单详情
@@ -1901,7 +1980,7 @@ namespace AlibabaSDK
         /// ISV.INVALID_PARAM	- 参数错误(isv端确认参数是否传输正确)
         /// ISP.SYSTEM_ERROR	- 系统错误(isv联系isp进行问题排查)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response12 CaigouApiQuotationBuyerGetQuotationListByBuyOfferId(long buyofferId);
+        Response11 CaigouApiQuotationBuyerGetQuotationListByBuyOfferId(long buyofferId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>采购商获取报价详情列表
@@ -1914,7 +1993,7 @@ namespace AlibabaSDK
         /// ISV.INVALID_PARAM	- 参数错误(isv端确认参数是否传输正确)
         /// ISP.SYSTEM_ERROR	- 系统错误(isv联系isp进行问题排查)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response12> CaigouApiQuotationBuyerGetQuotationListByBuyOfferIdAsync(long buyofferId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response11> CaigouApiQuotationBuyerGetQuotationListByBuyOfferIdAsync(long buyofferId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>发布询价单
         /// 发布询价单(系统对接)
@@ -1939,7 +2018,7 @@ namespace AlibabaSDK
         /// <param name="regCapital">供应商要求：注册资金。单位万元</param>
         /// <param name="prId">外部系统的采购需求的id （prId）【不要大于64个英文或数字字符】</param>
         /// <param name="attachmentIdList">附件id的列表。附件id来源于上传附件的接口。</param>
-        /// <param name="visibleAfterEndQuote">未到截止日期不可查看报价</param>
+        /// <param name="visibleAfterEndQuote">比价方式。true:密封比价(未到截止日期不可查看报价)；false:非密封比价</param>
         /// <param name="includeTax">需要包含税价</param>
         /// <param name="quoteHasPostFee">报价需要包含运费价</param>
         /// <param name="allowPartOffer">允许对询价单商品部分报价</param>
@@ -1965,7 +2044,7 @@ namespace AlibabaSDK
         /// <param name="gmtReceiveBeginDate">期望收货开始时间</param>
         /// <param name="gmtReceive">期望收货结束日期</param>
         /// <param name="supplierLoginIds">供应商loginIds</param>
-        /// <param name="purchaseNoteType">采购单类型</param>
+        /// <param name="purchaseNoteType">询价类型。1:现货/标准品；2:加工/定制品；3:库存/二手</param>
         /// <param name="deliveryPeriod">交货期</param>
         /// <param name="balanceDateType">账期类型，是否指定结算日</param>
         /// <param name="balanceDateValue">结算日期或结算周期</param>
@@ -1984,7 +2063,7 @@ namespace AlibabaSDK
         /// ISV.USER_IN_BLACK_LIST	- 该会员被举报，加入了黑名单
         /// ISP.SYSTEM_ERROR	- 系统错误(请联系采购平台)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response13 CaigouApiBuyofferPostBuyoffer(string subject, System.Collections.Generic.IEnumerable<string> items, string contact, string phone, System.DateTimeOffset gmtQuotationExpire, long? subUserId = null, string description = null, string receiveAddressProvince = null, string receiveAddressCity = null, string receiveAddressCounty = null, System.Collections.Generic.IEnumerable<string> expectedSupplierAreas = null, string invoiceRequirement = null, bool? supportAlipayGuaranteeTrade = null, System.Collections.Generic.IEnumerable<string> certificateIds = null, System.Collections.Generic.IEnumerable<string> otherCertificateNames = null, long? regCapital = null, string prId = null, System.Collections.Generic.IEnumerable<string> attachmentIdList = null, bool? visibleAfterEndQuote = null, bool? includeTax = null, bool? quoteHasPostFee = null, bool? allowPartOffer = null, bool? open = null, bool? openToPortal = null, string processTemplateCode = null, string transToolType = null, System.Collections.Generic.IEnumerable<string> supplierAreas = null, string needSignAgreement = null, string subBizType = null, string sourceMethodType = null, System.Collections.Generic.IEnumerable<string> supplierMemberIds = null, System.DateTimeOffset? gmtProtocolStart = null, System.DateTimeOffset? gmtProtocolEnd = null, string receiveStreetAddress = null, string onlineShoppingDesc = null, System.Collections.Generic.IEnumerable<string> onlineShoppingAttachList = null, System.DateTimeOffset? gmtReceiveBeginDate = null, System.DateTimeOffset? gmtReceive = null, System.Collections.Generic.IEnumerable<string> supplierLoginIds = null, string purchaseNoteType = null, int? deliveryPeriod = null, string balanceDateType = null, string balanceDateValue = null, bool? allmysupplier = null, bool? selectedmysupplier = null, bool? openContact2All = null, bool? needAudit4OpenContact = null, bool? openContactBeforeQuote = null, string invoiceSubType = null, bool? supplierCanModifyQuantity = null, bool? supplierCantModifyProtocalDate = null);
+        Response12 CaigouApiBuyofferPostBuyoffer(string subject, System.Collections.Generic.IEnumerable<string> items, string contact, string phone, System.DateTimeOffset gmtQuotationExpire, long? subUserId = null, string description = null, string receiveAddressProvince = null, string receiveAddressCity = null, string receiveAddressCounty = null, System.Collections.Generic.IEnumerable<string> expectedSupplierAreas = null, string invoiceRequirement = null, bool? supportAlipayGuaranteeTrade = null, System.Collections.Generic.IEnumerable<string> certificateIds = null, System.Collections.Generic.IEnumerable<string> otherCertificateNames = null, long? regCapital = null, string prId = null, System.Collections.Generic.IEnumerable<string> attachmentIdList = null, bool? visibleAfterEndQuote = null, bool? includeTax = null, bool? quoteHasPostFee = null, bool? allowPartOffer = null, bool? open = null, bool? openToPortal = null, string processTemplateCode = null, string transToolType = null, System.Collections.Generic.IEnumerable<string> supplierAreas = null, string needSignAgreement = null, string subBizType = null, string sourceMethodType = null, System.Collections.Generic.IEnumerable<string> supplierMemberIds = null, System.DateTimeOffset? gmtProtocolStart = null, System.DateTimeOffset? gmtProtocolEnd = null, string receiveStreetAddress = null, string onlineShoppingDesc = null, System.Collections.Generic.IEnumerable<string> onlineShoppingAttachList = null, System.DateTimeOffset? gmtReceiveBeginDate = null, System.DateTimeOffset? gmtReceive = null, System.Collections.Generic.IEnumerable<string> supplierLoginIds = null, string purchaseNoteType = null, int? deliveryPeriod = null, string balanceDateType = null, string balanceDateValue = null, bool? allmysupplier = null, bool? selectedmysupplier = null, bool? openContact2All = null, bool? needAudit4OpenContact = null, bool? openContactBeforeQuote = null, string invoiceSubType = null, bool? supplierCanModifyQuantity = null, bool? supplierCantModifyProtocalDate = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>发布询价单
@@ -2010,7 +2089,7 @@ namespace AlibabaSDK
         /// <param name="regCapital">供应商要求：注册资金。单位万元</param>
         /// <param name="prId">外部系统的采购需求的id （prId）【不要大于64个英文或数字字符】</param>
         /// <param name="attachmentIdList">附件id的列表。附件id来源于上传附件的接口。</param>
-        /// <param name="visibleAfterEndQuote">未到截止日期不可查看报价</param>
+        /// <param name="visibleAfterEndQuote">比价方式。true:密封比价(未到截止日期不可查看报价)；false:非密封比价</param>
         /// <param name="includeTax">需要包含税价</param>
         /// <param name="quoteHasPostFee">报价需要包含运费价</param>
         /// <param name="allowPartOffer">允许对询价单商品部分报价</param>
@@ -2036,7 +2115,7 @@ namespace AlibabaSDK
         /// <param name="gmtReceiveBeginDate">期望收货开始时间</param>
         /// <param name="gmtReceive">期望收货结束日期</param>
         /// <param name="supplierLoginIds">供应商loginIds</param>
-        /// <param name="purchaseNoteType">采购单类型</param>
+        /// <param name="purchaseNoteType">询价类型。1:现货/标准品；2:加工/定制品；3:库存/二手</param>
         /// <param name="deliveryPeriod">交货期</param>
         /// <param name="balanceDateType">账期类型，是否指定结算日</param>
         /// <param name="balanceDateValue">结算日期或结算周期</param>
@@ -2055,7 +2134,7 @@ namespace AlibabaSDK
         /// ISV.USER_IN_BLACK_LIST	- 该会员被举报，加入了黑名单
         /// ISP.SYSTEM_ERROR	- 系统错误(请联系采购平台)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response13> CaigouApiBuyofferPostBuyofferAsync(string subject, System.Collections.Generic.IEnumerable<string> items, string contact, string phone, System.DateTimeOffset gmtQuotationExpire, long? subUserId = null, string description = null, string receiveAddressProvince = null, string receiveAddressCity = null, string receiveAddressCounty = null, System.Collections.Generic.IEnumerable<string> expectedSupplierAreas = null, string invoiceRequirement = null, bool? supportAlipayGuaranteeTrade = null, System.Collections.Generic.IEnumerable<string> certificateIds = null, System.Collections.Generic.IEnumerable<string> otherCertificateNames = null, long? regCapital = null, string prId = null, System.Collections.Generic.IEnumerable<string> attachmentIdList = null, bool? visibleAfterEndQuote = null, bool? includeTax = null, bool? quoteHasPostFee = null, bool? allowPartOffer = null, bool? open = null, bool? openToPortal = null, string processTemplateCode = null, string transToolType = null, System.Collections.Generic.IEnumerable<string> supplierAreas = null, string needSignAgreement = null, string subBizType = null, string sourceMethodType = null, System.Collections.Generic.IEnumerable<string> supplierMemberIds = null, System.DateTimeOffset? gmtProtocolStart = null, System.DateTimeOffset? gmtProtocolEnd = null, string receiveStreetAddress = null, string onlineShoppingDesc = null, System.Collections.Generic.IEnumerable<string> onlineShoppingAttachList = null, System.DateTimeOffset? gmtReceiveBeginDate = null, System.DateTimeOffset? gmtReceive = null, System.Collections.Generic.IEnumerable<string> supplierLoginIds = null, string purchaseNoteType = null, int? deliveryPeriod = null, string balanceDateType = null, string balanceDateValue = null, bool? allmysupplier = null, bool? selectedmysupplier = null, bool? openContact2All = null, bool? needAudit4OpenContact = null, bool? openContactBeforeQuote = null, string invoiceSubType = null, bool? supplierCanModifyQuantity = null, bool? supplierCantModifyProtocalDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response12> CaigouApiBuyofferPostBuyofferAsync(string subject, System.Collections.Generic.IEnumerable<string> items, string contact, string phone, System.DateTimeOffset gmtQuotationExpire, long? subUserId = null, string description = null, string receiveAddressProvince = null, string receiveAddressCity = null, string receiveAddressCounty = null, System.Collections.Generic.IEnumerable<string> expectedSupplierAreas = null, string invoiceRequirement = null, bool? supportAlipayGuaranteeTrade = null, System.Collections.Generic.IEnumerable<string> certificateIds = null, System.Collections.Generic.IEnumerable<string> otherCertificateNames = null, long? regCapital = null, string prId = null, System.Collections.Generic.IEnumerable<string> attachmentIdList = null, bool? visibleAfterEndQuote = null, bool? includeTax = null, bool? quoteHasPostFee = null, bool? allowPartOffer = null, bool? open = null, bool? openToPortal = null, string processTemplateCode = null, string transToolType = null, System.Collections.Generic.IEnumerable<string> supplierAreas = null, string needSignAgreement = null, string subBizType = null, string sourceMethodType = null, System.Collections.Generic.IEnumerable<string> supplierMemberIds = null, System.DateTimeOffset? gmtProtocolStart = null, System.DateTimeOffset? gmtProtocolEnd = null, string receiveStreetAddress = null, string onlineShoppingDesc = null, System.Collections.Generic.IEnumerable<string> onlineShoppingAttachList = null, System.DateTimeOffset? gmtReceiveBeginDate = null, System.DateTimeOffset? gmtReceive = null, System.Collections.Generic.IEnumerable<string> supplierLoginIds = null, string purchaseNoteType = null, int? deliveryPeriod = null, string balanceDateType = null, string balanceDateValue = null, bool? allmysupplier = null, bool? selectedmysupplier = null, bool? openContact2All = null, bool? needAudit4OpenContact = null, bool? openContactBeforeQuote = null, string invoiceSubType = null, bool? supplierCanModifyQuantity = null, bool? supplierCantModifyProtocalDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>上传图片
         /// 上传图片
@@ -2109,6 +2188,29 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<ComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceCreateMallRequisitionResult> ComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceCreateMallRequisitionAsync(AlibabaCaigouBizApiCooperParamOpenCreateRequisitionParam openCreateRequisitionParam = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <summary>框架协议创建接口
+        /// 框架协议创建接口
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.caigoushared.api.cooper.service.OpenFrameworkAgreementService.create-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.caigoushared.api.cooper.service.OpenFrameworkAgreementService.create&amp;v=1</summary>
+        /// <param name="openFrameworkAgreementCreateParam">框架协议创建参数json串</param>
+        /// <returns>创建结果返回值返回 ErrorCode 的错误信息
+        /// invalid_param	- 参数无效(查看接口文档，检查自己的参数：是否填写、是否正确、长度是否过长等)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        CnAlibabaOpenComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreateAlibabaCaigousharedApiCommonModelResultData ComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreate(AlibabaCaigousharedApiFrameworkagreementParamOpenFrameworkAgreementCreateParam openFrameworkAgreementCreateParam);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>框架协议创建接口
+        /// 框架协议创建接口
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.caigoushared.api.cooper.service.OpenFrameworkAgreementService.create-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.caigoushared.api.cooper.service.OpenFrameworkAgreementService.create&amp;v=1</summary>
+        /// <param name="openFrameworkAgreementCreateParam">框架协议创建参数json串</param>
+        /// <returns>创建结果返回值返回 ErrorCode 的错误信息
+        /// invalid_param	- 参数无效(查看接口文档，检查自己的参数：是否填写、是否正确、长度是否过长等)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreateAlibabaCaigousharedApiCommonModelResultData> ComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreateAsync(AlibabaCaigousharedApiFrameworkagreementParamOpenFrameworkAgreementCreateParam openFrameworkAgreementCreateParam, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
         /// <summary>内部商城根据商品ID获取商品详情
         /// 内部商城根据商品ID获取商品详情
         /// 
@@ -2128,6 +2230,42 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaCaigouMallGetMallGoodsResult> AlibabaCaigouMallGetMallGoodsAsync(long goodsId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <summary>企业采购内部商城下单前置供应商校验
+        /// 企业采购内部商城下单前置供应商校验
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.mall.order.supplier.precheck-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.mall.order.supplier.precheck&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        CaigouMallOrderSupplierPrecheckResult CaigouMallOrderSupplierPrecheck(SubmitOrderParam coopSubmitOrderParam);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>企业采购内部商城下单前置供应商校验
+        /// 企业采购内部商城下单前置供应商校验
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.mall.order.supplier.precheck-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.mall.order.supplier.precheck&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<CaigouMallOrderSupplierPrecheckResult> CaigouMallOrderSupplierPrecheckAsync(SubmitOrderParam coopSubmitOrderParam, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>供应商查询请购单详情
+        /// 供应商查询清单详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.procurement.supplierQueryRequisitionDetail-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.procurement.supplierQueryRequisitionDetail&amp;v=1</summary>
+        /// <param name="requisitionId">请购单ID</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCaigouBizApiCommonModelResultData ComAlibabaProcurementSupplierQueryRequisitionDetail(long requisitionId);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>供应商查询请购单详情
+        /// 供应商查询清单详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.procurement.supplierQueryRequisitionDetail-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.procurement.supplierQueryRequisitionDetail&amp;v=1</summary>
+        /// <param name="requisitionId">请购单ID</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCaigouBizApiCommonModelResultData> ComAlibabaProcurementSupplierQueryRequisitionDetailAsync(long requisitionId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
         /// <summary>查询唯一物料工厂
         /// 查询唯一物料工厂
         /// 
@@ -2136,6 +2274,7 @@ namespace AlibabaSDK
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="productCode">物料编码</param>
         /// <param name="factoryCode">工厂编码</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         CnAlibabaOpenAlibabaCaigouProductGetProductFactoryAlibabaCaigouProductResultData AlibabaCaigouProductGetProductFactory(string systemDomainCode, string productCode, string factoryCode);
     
@@ -2148,6 +2287,7 @@ namespace AlibabaSDK
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="productCode">物料编码</param>
         /// <param name="factoryCode">工厂编码</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductGetProductFactoryAlibabaCaigouProductResultData> AlibabaCaigouProductGetProductFactoryAsync(string systemDomainCode, string productCode, string factoryCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -2160,7 +2300,7 @@ namespace AlibabaSDK
         /// <returns>返回模型返回 ErrorCode 的错误信息
         /// 参数错误	- invalidParam(根据对接文档检查参数)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCaigouBizApiCommonModelResultData ComAlibabaCaigouBizApiCooperServiceOpenRequisitionService(CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionParam openCreateRequisitionParam = null);
+        CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCommonModelResultData ComAlibabaCaigouBizApiCooperServiceOpenRequisitionService(CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionParam openCreateRequisitionParam = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>创建请购单
@@ -2172,7 +2312,7 @@ namespace AlibabaSDK
         /// <returns>返回模型返回 ErrorCode 的错误信息
         /// 参数错误	- invalidParam(根据对接文档检查参数)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCaigouBizApiCommonModelResultData> ComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAsync(CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionParam openCreateRequisitionParam = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCommonModelResultData> ComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAsync(CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionParam openCreateRequisitionParam = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>查询所有自定义类目
         /// 查询所有d 自定义类目
@@ -2180,7 +2320,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.category.queryAll-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.category.queryAll&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response8 CaigouApiCategoryQueryAll();
+        Response7 CaigouApiCategoryQueryAll();
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>查询所有自定义类目
@@ -2189,7 +2329,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.category.queryAll-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.category.queryAll&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response8> CaigouApiCategoryQueryAllAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response7> CaigouApiCategoryQueryAllAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>采购-买家查询结算单
         /// 采购-买家查询结算单
@@ -2203,7 +2343,7 @@ namespace AlibabaSDK
         /// no_permission	- 无权限(检查是否有权限操作该单)
         /// system_error	- 系统错误(联系服务提供方)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        CnAlibabaOpenComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerSettlementServiceQuerySettlementNote(long settlementNoteId, bool? needEntryExtendsData = null);
+        AlibabaProcurementApiIntegrationSettlementNoteResultResultData ComAlibabaProcurementBuyerSettlementServiceQuerySettlementNote(long settlementNoteId, bool? needEntryExtendsData = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>采购-买家查询结算单
@@ -2218,7 +2358,7 @@ namespace AlibabaSDK
         /// no_permission	- 无权限(检查是否有权限操作该单)
         /// system_error	- 系统错误(联系服务提供方)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAsync(long settlementNoteId, bool? needEntryExtendsData = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationSettlementNoteResultResultData> ComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAsync(long settlementNoteId, bool? needEntryExtendsData = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>获取采购单详情
         /// 根据ID获取采购单详情
@@ -2228,7 +2368,7 @@ namespace AlibabaSDK
         /// <param name="purchaseOrderId">采购单ID</param>
         /// <returns>返回值</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouGetPurcharseOrder(long purchaseOrderId);
+        CnAlibabaOpenAlibabaCaigouGetPurcharseOrderAlibabaCaigousharedApiCommonModelResultData AlibabaCaigouGetPurcharseOrder(long purchaseOrderId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>获取采购单详情
@@ -2239,7 +2379,7 @@ namespace AlibabaSDK
         /// <param name="purchaseOrderId">采购单ID</param>
         /// <returns>返回值</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouGetPurcharseOrderAsync(long purchaseOrderId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouGetPurcharseOrderAlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouGetPurcharseOrderAsync(long purchaseOrderId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>查询式获取失败的消息列表
         /// 查询式获取发送的消息列表，获取的消息不会自动确认，需要调用方手动调用确认api来确认消费状态。需注意，确认后，会影响分页返回的数据
@@ -2250,9 +2390,11 @@ namespace AlibabaSDK
         /// <param name="createEndTime">消息创建时间查找结束范围</param>
         /// <param name="page">当前数据页，默认为1</param>
         /// <param name="pageSize">每次分页取的数据量，范围20-200，默认20</param>
+        /// <param name="type">消息类型</param>
+        /// <param name="userInfo">用户Id</param>
         /// <returns>分页数据</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response14 PushQueryMessageList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? page = null, int? pageSize = null, string type = null, string userInfo = null);
+        Response13 PushQueryMessageList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? page = null, int? pageSize = null, string type = null, string userInfo = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>查询式获取失败的消息列表
@@ -2264,9 +2406,11 @@ namespace AlibabaSDK
         /// <param name="createEndTime">消息创建时间查找结束范围</param>
         /// <param name="page">当前数据页，默认为1</param>
         /// <param name="pageSize">每次分页取的数据量，范围20-200，默认20</param>
+        /// <param name="type">消息类型</param>
+        /// <param name="userInfo">用户Id</param>
         /// <returns>分页数据</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response14> PushQueryMessageListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? page = null, int? pageSize = null, string type = null, string userInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response13> PushQueryMessageListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? page = null, int? pageSize = null, string type = null, string userInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>根据id获取类目信息
         /// 根据id获取类目信息
@@ -2292,6 +2436,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.batchAddOrUpdateProductFactory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.batchAddOrUpdateProductFactory&amp;v=1</summary>
+        /// <param name="addUpdateProductFactoryParams">批量添加或修改物料工厂参数模型</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         CnAlibabaOpenAlibabaCaigouProductBatchAddOrUpdateProductFactoryAlibabaCaigouProductResultData AlibabaCaigouProductBatchAddOrUpdateProductFactory(System.Collections.Generic.IEnumerable<AlibabaCaigouProductAddUpdateProductFactoryParam> addUpdateProductFactoryParams);
     
@@ -2301,6 +2447,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.batchAddOrUpdateProductFactory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.batchAddOrUpdateProductFactory&amp;v=1</summary>
+        /// <param name="addUpdateProductFactoryParams">批量添加或修改物料工厂参数模型</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductBatchAddOrUpdateProductFactoryAlibabaCaigouProductResultData> AlibabaCaigouProductBatchAddOrUpdateProductFactoryAsync(System.Collections.Generic.IEnumerable<AlibabaCaigouProductAddUpdateProductFactoryParam> addUpdateProductFactoryParams, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -2312,7 +2460,7 @@ namespace AlibabaSDK
         /// <param name="param">param</param>
         /// <returns>result</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        CnAlibabaOpenComAlibabaProcurementBuyerPayServiceCreatePayNoteAlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerPayServiceCreatePayNote(AlibabaProcurementApiSettlementIntegrationParamCreatePayParam param);
+        AlibabaProcurementApiIntegrationResultPayResultData ComAlibabaProcurementBuyerPayServiceCreatePayNote(AlibabaProcurementApiSettlementIntegrationParamCreatePayParam param);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>采购执行买家付款
@@ -2323,7 +2471,7 @@ namespace AlibabaSDK
         /// <param name="param">param</param>
         /// <returns>result</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaProcurementBuyerPayServiceCreatePayNoteAlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerPayServiceCreatePayNoteAsync(AlibabaProcurementApiSettlementIntegrationParamCreatePayParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationResultPayResultData> ComAlibabaProcurementBuyerPayServiceCreatePayNoteAsync(AlibabaProcurementApiSettlementIntegrationParamCreatePayParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>提交电票接口
         /// 提交电票接口
@@ -2333,7 +2481,7 @@ namespace AlibabaSDK
         /// <param name="arg0">入参</param>
         /// <returns>结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerETicketServiceSubmitETicket(AlibabaProcurementApiSettlementIntegrationParamETicketSubmitIntegrationParam arg0);
+        AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq ComAlibabaProcurementBuyerETicketServiceSubmitETicket(AlibabaProcurementApiSettlementIntegrationParamETicketSubmitIntegrationParam arg0);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>提交电票接口
@@ -2344,7 +2492,30 @@ namespace AlibabaSDK
         /// <param name="arg0">入参</param>
         /// <returns>结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerETicketServiceSubmitETicketAsync(AlibabaProcurementApiSettlementIntegrationParamETicketSubmitIntegrationParam arg0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq> ComAlibabaProcurementBuyerETicketServiceSubmitETicketAsync(AlibabaProcurementApiSettlementIntegrationParamETicketSubmitIntegrationParam arg0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>企业采购ERP预算占用服务API--正式
+        /// 企业采购ERP预算占用服务测试API
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.erpBudget.occupy.erp-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.erpBudget.occupy.erp&amp;v=1</summary>
+        /// <param name="receiptNumber">申请单号</param>
+        /// <param name="loginId">申请人ID</param>
+        /// <param name="budgetItems">行信息</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCaigouErpBudgetOccupyErpResult AlibabaCaigouErpBudgetOccupyErp(string receiptNumber, string loginId, System.Collections.Generic.IEnumerable<ApiItem> budgetItems);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>企业采购ERP预算占用服务API--正式
+        /// 企业采购ERP预算占用服务测试API
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.erpBudget.occupy.erp-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.erpBudget.occupy.erp&amp;v=1</summary>
+        /// <param name="receiptNumber">申请单号</param>
+        /// <param name="loginId">申请人ID</param>
+        /// <param name="budgetItems">行信息</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCaigouErpBudgetOccupyErpResult> AlibabaCaigouErpBudgetOccupyErpAsync(string receiptNumber, string loginId, System.Collections.Generic.IEnumerable<ApiItem> budgetItems, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>采购商上架内部商城商品
         /// 采购商上架内部商城商品
@@ -2373,7 +2544,7 @@ namespace AlibabaSDK
         /// <param name="categoryList">Json串，包含字段：categoryName：类目名称，categoryId：类目在外部业务的主键编码，parentId：父节点在外部系统的业务编码。</param>
         /// <returns>返回结果为Map，key为外部系统的类目id，value为1688平台的类目id</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response15 CaigouApiCategoryAddUserCategory(System.Collections.Generic.IEnumerable<string> categoryList);
+        Response14 CaigouApiCategoryAddUserCategory(System.Collections.Generic.IEnumerable<string> categoryList);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>新增自定义类目
@@ -2384,7 +2555,30 @@ namespace AlibabaSDK
         /// <param name="categoryList">Json串，包含字段：categoryName：类目名称，categoryId：类目在外部业务的主键编码，parentId：父节点在外部系统的业务编码。</param>
         /// <returns>返回结果为Map，key为外部系统的类目id，value为1688平台的类目id</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response15> CaigouApiCategoryAddUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response14> CaigouApiCategoryAddUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>获取比价单导出文件下载url
+        /// 获取比价单导出文件下载url
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.caigou.coopapi.pricingchart.service.PricingChartCoopService.getExportDownloadUrlByPricingChartId-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.caigou.coopapi.pricingchart.service.PricingChartCoopService.getExportDownloadUrlByPricingChartId&amp;v=1</summary>
+        /// <param name="pricingChartId">比价单id</param>
+        /// <param name="fileType">要下载的文件类型,比如pdf或者excel</param>
+        /// <returns>返回值</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        ComAlibabaCaigouCoopapiProductModelApiResultData ComAlibabaCaigouCoopapiPricingchartServicePricingChartCoopServiceGetExportDownloadUrlByPricingChartId(long pricingChartId, string fileType);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取比价单导出文件下载url
+        /// 获取比价单导出文件下载url
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.caigou.coopapi.pricingchart.service.PricingChartCoopService.getExportDownloadUrlByPricingChartId-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.caigou.coopapi.pricingchart.service.PricingChartCoopService.getExportDownloadUrlByPricingChartId&amp;v=1</summary>
+        /// <param name="pricingChartId">比价单id</param>
+        /// <param name="fileType">要下载的文件类型,比如pdf或者excel</param>
+        /// <returns>返回值</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<ComAlibabaCaigouCoopapiProductModelApiResultData> ComAlibabaCaigouCoopapiPricingchartServicePricingChartCoopServiceGetExportDownloadUrlByPricingChartIdAsync(long pricingChartId, string fileType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>删除自定义类目
         /// 删除自定义类目，只能删除没有叶子节点的类目，如果有叶子节点，要先把叶子节点删除，再删除该类目
@@ -2396,7 +2590,7 @@ namespace AlibabaSDK
         /// CATEGORY_FAILED_HAS_CHILDREN	- 所删类目中，存在有叶子类目的类目(先删除叶子类目，再删除父类目)
         /// SYSTEM_ERROR	- 系统异常(联系开发同学)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response7 CaigouApiCategoryDeleteUserCategory(System.Collections.Generic.IEnumerable<string> categoryIds);
+        Response6 CaigouApiCategoryDeleteUserCategory(System.Collections.Generic.IEnumerable<string> categoryIds);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>删除自定义类目
@@ -2409,7 +2603,7 @@ namespace AlibabaSDK
         /// CATEGORY_FAILED_HAS_CHILDREN	- 所删类目中，存在有叶子类目的类目(先删除叶子类目，再删除父类目)
         /// SYSTEM_ERROR	- 系统异常(联系开发同学)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response7> CaigouApiCategoryDeleteUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryIds, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response6> CaigouApiCategoryDeleteUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryIds, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>通过产品id获取产品
         /// 通过产品id获取产品详情
@@ -2438,7 +2632,7 @@ namespace AlibabaSDK
         /// <param name="id">退货单ID</param>
         /// <returns>返回结果模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        CnAlibabaOpenComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNote(long id);
+        AlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNote(long id);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>查询退货单接口
@@ -2449,7 +2643,7 @@ namespace AlibabaSDK
         /// <param name="id">退货单ID</param>
         /// <returns>返回结果模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAsync(long id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAsync(long id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>采购商上架商品确认价格协议
         /// 对于上架商品，如果这个时候供应商通过推品工具或者直接上传价格表，需要采购商进行价格协议的确认
@@ -2474,6 +2668,31 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaCaigouApprovalPriceResult> AlibabaCaigouApprovalPriceAsync(long goodsId, bool isPass, string remark = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <summary>内部商城修改商品货号
+        /// 【需求描述】：通过物料主数据导入价格表形成内部商城商品之后，在用户加入购物车提交请购单回到内部ERP，申请内部货号之后，要将货号回写到内部商城商品上，所以需要提供一个根据商品id更新货号接口
+        /// 
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.updateCargoNo-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.updateCargoNo&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="cargoNo">货号</param>
+        /// <returns>返回结果模型</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouMallUpdateCargoNo(long goodsId, string cargoNo);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>内部商城修改商品货号
+        /// 【需求描述】：通过物料主数据导入价格表形成内部商城商品之后，在用户加入购物车提交请购单回到内部ERP，申请内部货号之后，要将货号回写到内部商城商品上，所以需要提供一个根据商品id更新货号接口
+        /// 
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.updateCargoNo-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.updateCargoNo&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="cargoNo">货号</param>
+        /// <returns>返回结果模型</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouMallUpdateCargoNoAsync(long goodsId, string cargoNo, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
         /// <summary>供应商信息获取
         /// 根据供应商memberId获取供应商信息.每次返回一条关于该账号的数据信息
         /// 
@@ -2493,6 +2712,23 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<Supplier> CaigouApiSupplierGetSupplierAsync(string memberId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
+        /// <summary>供应商下架商城商品
+        /// 供应商下架商城商品
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.procurement.supplierUnPublishGoods-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.procurement.supplierUnPublishGoods&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        ComAlibabaProcurementSupplierUnPublishGoodsResult ComAlibabaProcurementSupplierUnPublishGoods(AlibabaCaigouCoopapiMallGoodsParamCoopUnPublishMallGoodsParam param);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>供应商下架商城商品
+        /// 供应商下架商城商品
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.procurement.supplierUnPublishGoods-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.procurement.supplierUnPublishGoods&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<ComAlibabaProcurementSupplierUnPublishGoodsResult> ComAlibabaProcurementSupplierUnPublishGoodsAsync(AlibabaCaigouCoopapiMallGoodsParamCoopUnPublishMallGoodsParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
         /// <summary>修改自定义类目
         /// 修改自定义类目
         /// 
@@ -2503,7 +2739,7 @@ namespace AlibabaSDK
         /// CATEGORY_FAILED	- 同步自定义类目失败(请重新尝试，确保所传类目存在)
         /// SYSTEM_ERROR	- 系统异常(联系开发同学)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response7 CaigouApiCategoryModifyUserCategory(System.Collections.Generic.IEnumerable<string> categoryList);
+        Response6 CaigouApiCategoryModifyUserCategory(System.Collections.Generic.IEnumerable<string> categoryList);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>修改自定义类目
@@ -2516,7 +2752,53 @@ namespace AlibabaSDK
         /// CATEGORY_FAILED	- 同步自定义类目失败(请重新尝试，确保所传类目存在)
         /// SYSTEM_ERROR	- 系统异常(联系开发同学)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response7> CaigouApiCategoryModifyUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response6> CaigouApiCategoryModifyUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>内部商城修改商品合同编码
+        /// 内部商城修改商品合同编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.modifyContractCode-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.modifyContractCode&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="contractCode">合同编码</param>
+        /// <returns>出参模型</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouMallModifyContractCode(long goodsId, string contractCode);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>内部商城修改商品合同编码
+        /// 内部商城修改商品合同编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.modifyContractCode-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.modifyContractCode&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="contractCode">合同编码</param>
+        /// <returns>出参模型</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouMallModifyContractCodeAsync(long goodsId, string contractCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>询价单外部审批结果回调接口
+        /// 询价单对接外部审批，外部审批通过后回调1688的接口，同步审批结果
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:BuyofferWriteCoopService.auditBuyOffer-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=BuyofferWriteCoopService.auditBuyOffer&amp;v=1</summary>
+        /// <param name="purchaseId">询价单id</param>
+        /// <param name="approvAction">审批动作，pass 或者refuse</param>
+        /// <returns>返回结果</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AuditBuyofferResultData BuyofferWriteCoopServiceAuditBuyOffer(long purchaseId, string approvAction);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>询价单外部审批结果回调接口
+        /// 询价单对接外部审批，外部审批通过后回调1688的接口，同步审批结果
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:BuyofferWriteCoopService.auditBuyOffer-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=BuyofferWriteCoopService.auditBuyOffer&amp;v=1</summary>
+        /// <param name="purchaseId">询价单id</param>
+        /// <param name="approvAction">审批动作，pass 或者refuse</param>
+        /// <returns>返回结果</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AuditBuyofferResultData> BuyofferWriteCoopServiceAuditBuyOfferAsync(long purchaseId, string approvAction, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>采购商驳回内部商城商品
         /// 采购商驳回内部商城商品
@@ -2544,6 +2826,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.batchFreezeProductFactory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.batchFreezeProductFactory&amp;v=1</summary>
+        /// <param name="freezeProductFactoryParams">冻结物料工厂参数</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         CnAlibabaOpenAlibabaCaigouProductBatchFreezeProductFactoryAlibabaCaigouProductResultData AlibabaCaigouProductBatchFreezeProductFactory(System.Collections.Generic.IEnumerable<AlibabaCaigouProductFreezeProductFactoryParam> freezeProductFactoryParams);
     
@@ -2553,6 +2837,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.batchFreezeProductFactory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.batchFreezeProductFactory&amp;v=1</summary>
+        /// <param name="freezeProductFactoryParams">冻结物料工厂参数</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductBatchFreezeProductFactoryAlibabaCaigouProductResultData> AlibabaCaigouProductBatchFreezeProductFactoryAsync(System.Collections.Generic.IEnumerable<AlibabaCaigouProductFreezeProductFactoryParam> freezeProductFactoryParams, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -2564,6 +2850,7 @@ namespace AlibabaSDK
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="productCode">物料编码</param>
         /// <param name="factoryCode">工厂编码</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         CnAlibabaOpenAlibabaCaigouProductFreezeProductFactoryAlibabaCaigouProductResultData AlibabaCaigouProductFreezeProductFactory(string systemDomainCode, string productCode, string factoryCode);
     
@@ -2576,6 +2863,7 @@ namespace AlibabaSDK
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="productCode">物料编码</param>
         /// <param name="factoryCode">工厂编码</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductFreezeProductFactoryAlibabaCaigouProductResultData> AlibabaCaigouProductFreezeProductFactoryAsync(string systemDomainCode, string productCode, string factoryCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -2618,6 +2906,27 @@ namespace AlibabaSDK
         /// <param name="paramList">分派参数</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaCaigouRequisitionAssignRequisitionResult> AlibabaCaigouRequisitionAssignRequisitionAsync(System.Collections.Generic.IEnumerable<AlibabaCaigouRequisitionOpenAssignRequisitionParam> paramList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>内部商城买家价格协议转商品并上架
+        /// 内部商城买家价格协议转商品并上架
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.importAndPublish-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.importAndPublish&amp;v=1</summary>
+        /// <param name="priceId">价格协议ID</param>
+        /// <returns>返回结果</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouMallImportAndPublish(long priceId);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>内部商城买家价格协议转商品并上架
+        /// 内部商城买家价格协议转商品并上架
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.importAndPublish-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.importAndPublish&amp;v=1</summary>
+        /// <param name="priceId">价格协议ID</param>
+        /// <returns>返回结果</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouMallImportAndPublishAsync(long priceId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>通过询价单id获取询价单（规范输出参数）
         /// 通过询价单id获取询价单（规范输出参数），含有succes,resultCode,message
@@ -2696,20 +3005,22 @@ namespace AlibabaSDK
         /// <param name="productCode">产品编号，物料编码，代表产品在外部系统的主键</param>
         /// <param name="title">产品名</param>
         /// <param name="unit">单位</param>
+        /// <param name="userCategoryId">用户在1688的自定义类目id</param>
         /// <param name="remark">补充说明，可以为富文本。最多4000个字符</param>
         /// <param name="instruction">产品说明，副标题，最多200个字符</param>
         /// <param name="productAttributes">产品属性列表</param>
         /// <param name="picUrlList">产品图片，最多10张，先调用上传图片接口，获取到图片相对url</param>
         /// <param name="attachmentList">产品附件，最多3个附件，先调用上传附件接口获取到附件id</param>
         /// <param name="referencePrice">产品参考价(单位是分)</param>
-        /// <param name="userCategoryId">用户在1688的自定义类目id</param>
         /// <param name="userId">操作员在1688上的子帐号ID，如果接入商有子账号，则可以通过子账号来发布产品；不传则系统会自动取主账号的userId作为默认值</param>
+        /// <param name="brandName">品牌</param>
+        /// <param name="brandModel">型号</param>
         /// <returns>产品在1688采购平台的主键id，如果发布失败则为空，具体的看错误码返回 ErrorCode 的错误信息
         /// ISV.INVALID_PARAM	- 参数不合法
         /// ISV.SYSTEM_ERROR	- 系统出错
         /// ISV.DUPLICATE_INSERT	- 重复插入</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response13 CaigouApiProductAddProduct(string productCode, string title, string unit, string remark = null, string instruction = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null, long? userId = null);
+        Response12 CaigouApiProductAddProduct(string productCode, string title, string unit, long userCategoryId, string remark = null, string instruction = null, System.Collections.Generic.IEnumerable<ProductAttributeCoopParam> productAttributes = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userId = null, string brandName = null, string brandModel = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>发布产品信息
@@ -2720,20 +3031,22 @@ namespace AlibabaSDK
         /// <param name="productCode">产品编号，物料编码，代表产品在外部系统的主键</param>
         /// <param name="title">产品名</param>
         /// <param name="unit">单位</param>
+        /// <param name="userCategoryId">用户在1688的自定义类目id</param>
         /// <param name="remark">补充说明，可以为富文本。最多4000个字符</param>
         /// <param name="instruction">产品说明，副标题，最多200个字符</param>
         /// <param name="productAttributes">产品属性列表</param>
         /// <param name="picUrlList">产品图片，最多10张，先调用上传图片接口，获取到图片相对url</param>
         /// <param name="attachmentList">产品附件，最多3个附件，先调用上传附件接口获取到附件id</param>
         /// <param name="referencePrice">产品参考价(单位是分)</param>
-        /// <param name="userCategoryId">用户在1688的自定义类目id</param>
         /// <param name="userId">操作员在1688上的子帐号ID，如果接入商有子账号，则可以通过子账号来发布产品；不传则系统会自动取主账号的userId作为默认值</param>
+        /// <param name="brandName">品牌</param>
+        /// <param name="brandModel">型号</param>
         /// <returns>产品在1688采购平台的主键id，如果发布失败则为空，具体的看错误码返回 ErrorCode 的错误信息
         /// ISV.INVALID_PARAM	- 参数不合法
         /// ISV.SYSTEM_ERROR	- 系统出错
         /// ISV.DUPLICATE_INSERT	- 重复插入</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response13> CaigouApiProductAddProductAsync(string productCode, string title, string unit, string remark = null, string instruction = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null, long? userId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response12> CaigouApiProductAddProductAsync(string productCode, string title, string unit, long userCategoryId, string remark = null, string instruction = null, System.Collections.Generic.IEnumerable<ProductAttributeCoopParam> productAttributes = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userId = null, string brandName = null, string brandModel = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>失败消息批量确认
         /// 手动调用确认api，确认消息已经被消费成功。仅当使用查询式获取失败消息的api时，才需要使用
@@ -2743,7 +3056,7 @@ namespace AlibabaSDK
         /// <param name="msgIdList">待确认的消息id列表</param>
         /// <returns>操作是否成功</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response2 PushMessageConfirm(System.Collections.Generic.IEnumerable<string> msgIdList = null);
+        Response15 PushMessageConfirm(System.Collections.Generic.IEnumerable<string> msgIdList = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>失败消息批量确认
@@ -2754,7 +3067,7 @@ namespace AlibabaSDK
         /// <param name="msgIdList">待确认的消息id列表</param>
         /// <returns>操作是否成功</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response2> PushMessageConfirmAsync(System.Collections.Generic.IEnumerable<string> msgIdList = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response15> PushMessageConfirmAsync(System.Collections.Generic.IEnumerable<string> msgIdList = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>【产品】查询SKU的代销价格和库存
         /// 根据渠道商ID和商品ID和SPECID查询指定SKU下商品的折扣后的代销价格和库存
@@ -3562,7 +3875,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.get.sellerView-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.get.sellerView&amp;v=1</summary>
         /// <param name="orderId">交易的订单id</param>
-        /// <param name="includeFields">查询结果中包含的域，GuaranteesTerms：保障条款，NativeLogistics：物流信息，RateDetail：评价详情，OrderInvoice：发票信息。默认返回GuaranteesTerms、NativeLogistics、OrderInvoice。</param>
+        /// <param name="includeFields">查询结果中包含的域，GuaranteesTerms：保障条款，NativeLogistics：物流信息，RateDetail：评价详情，OrderInvoice：发票信息，CanSendCheck：子订单是否可以发货。默认返回GuaranteesTerms、NativeLogistics、OrderInvoice、CanSendCheck。</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         AlibabaTradeGetSellerViewResult AlibabaTradeGetSellerView(long orderId, string includeFields = null);
     
@@ -3573,7 +3886,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.get.sellerView-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.get.sellerView&amp;v=1</summary>
         /// <param name="orderId">交易的订单id</param>
-        /// <param name="includeFields">查询结果中包含的域，GuaranteesTerms：保障条款，NativeLogistics：物流信息，RateDetail：评价详情，OrderInvoice：发票信息。默认返回GuaranteesTerms、NativeLogistics、OrderInvoice。</param>
+        /// <param name="includeFields">查询结果中包含的域，GuaranteesTerms：保障条款，NativeLogistics：物流信息，RateDetail：评价详情，OrderInvoice：发票信息，CanSendCheck：子订单是否可以发货。默认返回GuaranteesTerms、NativeLogistics、OrderInvoice、CanSendCheck。</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaTradeGetSellerViewResult> AlibabaTradeGetSellerViewAsync(long orderId, string includeFields = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -3592,7 +3905,13 @@ namespace AlibabaSDK
         /// <param name="disputeType">1表示售中，2表示售后</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// INVALID_PARAM	- disputeType=* refundId=TQ8359259727492085,cause:null(纠纷类型填写错误，disputeType=1表示售中退款，disputeType=2表示售后退款)
-        /// REFUND_STATUS_ERROR	- REFUND_STATUS_ERROR,errorMsg:null(退款单类型错误，待卖家同意退款单且退货的退款单可以调用本接口)</returns>
+        /// REFUND_STATUS_ERROR	- REFUND_STATUS_ERROR,errorMsg:null(退款单类型错误，待卖家同意退款单且退货的退款单可以调用本接口)
+        /// 500	- REFUND_STATUS_ERROR(退款单类型错误)
+        /// 500	- 没有操作退款单数据的权限(非授权用户退款单)
+        /// 500_001	- 参数错误，收货地址不得为空!(param invalid,without address.)(收货地址不得为空)
+        /// 500_002	- 参数错误，收货地址格式有误!(param invalid,invalid address.)(收货地址格式有误
+        /// 正确：浙江省 杭州市 xxx      浙江省杭州市xxx
+        /// 错误：浙江杭州市xxx )</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         AlibabaTradeRefundOpAgreeReturnGoodsResult AlibabaTradeRefundOpAgreeReturnGoods(string refundId, string address = null, string post = null, string phone = null, string fullName = null, string mobilePhone = null, string discription = null, int? disputeType = null);
     
@@ -3612,12 +3931,18 @@ namespace AlibabaSDK
         /// <param name="disputeType">1表示售中，2表示售后</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// INVALID_PARAM	- disputeType=* refundId=TQ8359259727492085,cause:null(纠纷类型填写错误，disputeType=1表示售中退款，disputeType=2表示售后退款)
-        /// REFUND_STATUS_ERROR	- REFUND_STATUS_ERROR,errorMsg:null(退款单类型错误，待卖家同意退款单且退货的退款单可以调用本接口)</returns>
+        /// REFUND_STATUS_ERROR	- REFUND_STATUS_ERROR,errorMsg:null(退款单类型错误，待卖家同意退款单且退货的退款单可以调用本接口)
+        /// 500	- REFUND_STATUS_ERROR(退款单类型错误)
+        /// 500	- 没有操作退款单数据的权限(非授权用户退款单)
+        /// 500_001	- 参数错误，收货地址不得为空!(param invalid,without address.)(收货地址不得为空)
+        /// 500_002	- 参数错误，收货地址格式有误!(param invalid,invalid address.)(收货地址格式有误
+        /// 正确：浙江省 杭州市 xxx      浙江省杭州市xxx
+        /// 错误：浙江杭州市xxx )</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaTradeRefundOpAgreeReturnGoodsResult> AlibabaTradeRefundOpAgreeReturnGoodsAsync(string refundId, string address = null, string post = null, string phone = null, string fullName = null, string mobilePhone = null, string discription = null, int? disputeType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>查询退款单详情-根据退款单ID
-        /// 查询退款单详情，同时可以查询到退款操作列表。 该API需要像阿里巴巴申请权限才能访问。
+        /// 查询退款单详情，同时可以查询到退款操作列表。 该API需要向阿里巴巴申请权限才能访问。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.OpQueryOrderRefund-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.OpQueryOrderRefund&amp;v=1</summary>
@@ -3633,7 +3958,7 @@ namespace AlibabaSDK
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>查询退款单详情-根据退款单ID
-        /// 查询退款单详情，同时可以查询到退款操作列表。 该API需要像阿里巴巴申请权限才能访问。
+        /// 查询退款单详情，同时可以查询到退款操作列表。 该API需要向阿里巴巴申请权限才能访问。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.OpQueryOrderRefund-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.OpQueryOrderRefund&amp;v=1</summary>
@@ -3665,7 +3990,8 @@ namespace AlibabaSDK
         /// <param name="modifyEndTime">退款修改时间(截止)</param>
         /// <param name="dipsuteType">1:售中退款，2:售后退款；0:所有退款单</param>
         /// <returns>返回 ErrorCode 的错误信息
-        /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:查询数据失败，请检查输入参数后重试。\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;\&amp;quot;}(订单号码输入错误)</returns>
+        /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:查询数据失败，请检查输入参数后重试。\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;\&amp;quot;}(订单号码输入错误)
+        /// APPLY_TIME_ERROR	- 只能查询近730天的退款单，请检查退款申请时间!(请检查退款申请时间!)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         AlibabaTradeRefundQueryOrderRefundListResult AlibabaTradeRefundQueryOrderRefundList(long? orderId = null, System.DateTimeOffset? applyStartTime = null, System.DateTimeOffset? applyEndTime = null, System.Collections.Generic.IEnumerable<string> refundStatusSet = null, string buyerMemberId = null, string buyerLoginId = null, int? currentPageNum = null, int? pageSize = null, string logisticsNo = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? dipsuteType = null);
     
@@ -3688,33 +4014,11 @@ namespace AlibabaSDK
         /// <param name="modifyEndTime">退款修改时间(截止)</param>
         /// <param name="dipsuteType">1:售中退款，2:售后退款；0:所有退款单</param>
         /// <returns>返回 ErrorCode 的错误信息
-        /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:查询数据失败，请检查输入参数后重试。\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;\&amp;quot;}(订单号码输入错误)</returns>
+        /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:查询数据失败，请检查输入参数后重试。\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;\&amp;quot;}(订单号码输入错误)
+        /// APPLY_TIME_ERROR	- 只能查询近730天的退款单，请检查退款申请时间!(请检查退款申请时间!)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaTradeRefundQueryOrderRefundListResult> AlibabaTradeRefundQueryOrderRefundListAsync(long? orderId = null, System.DateTimeOffset? applyStartTime = null, System.DateTimeOffset? applyEndTime = null, System.Collections.Generic.IEnumerable<string> refundStatusSet = null, string buyerMemberId = null, string buyerLoginId = null, int? currentPageNum = null, int? pageSize = null, string logisticsNo = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? dipsuteType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>查询商品支持的交易类型
-        /// 查询商品支持的交易类型
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.queryTradeTypesOfOffer-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.queryTradeTypesOfOffer&amp;v=1</summary>
-        /// <param name="sellerMemberId">卖家memberId</param>
-        /// <param name="productId">商品Id</param>
-        /// <param name="catId">类目id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaTradeQueryTradeTypesOfOfferResult AlibabaTradeQueryTradeTypesOfOffer(string sellerMemberId, long productId, long? catId = null);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>查询商品支持的交易类型
-        /// 查询商品支持的交易类型
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.queryTradeTypesOfOffer-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.queryTradeTypesOfOffer&amp;v=1</summary>
-        /// <param name="sellerMemberId">卖家memberId</param>
-        /// <param name="productId">商品Id</param>
-        /// <param name="catId">类目id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaTradeQueryTradeTypesOfOfferResult> AlibabaTradeQueryTradeTypesOfOfferAsync(string sellerMemberId, long productId, long? catId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
         /// <summary>创建订单前预览数据接口
         /// 订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。
         /// 1、校验商品数据是否允许订购。
@@ -3725,8 +4029,8 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.createOrder.preview&amp;v=1</summary>
         /// <param name="addressParam">收货地址信息</param>
         /// <param name="cargoParamList">商品信息</param>
-        /// <param name="invoiceParam">发票信息</param>
         /// <param name="flow">general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系</param>
+        /// <param name="invoiceParam">发票信息</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 500_007	- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)
         /// 500_005	- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)
@@ -3736,7 +4040,7 @@ namespace AlibabaSDK
         /// 500_003	- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)
         /// 500_001	- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCreateOrderPreviewResult AlibabaCreateOrderPreview(AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, AlibabaTradeFastInvoice invoiceParam, string flow);
+        AlibabaCreateOrderPreviewResult AlibabaCreateOrderPreview(AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, string flow, AlibabaTradeFastInvoice invoiceParam = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>创建订单前预览数据接口
@@ -3749,8 +4053,8 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.createOrder.preview&amp;v=1</summary>
         /// <param name="addressParam">收货地址信息</param>
         /// <param name="cargoParamList">商品信息</param>
-        /// <param name="invoiceParam">发票信息</param>
         /// <param name="flow">general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系</param>
+        /// <param name="invoiceParam">发票信息</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 500_007	- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)
         /// 500_005	- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)
@@ -3760,7 +4064,7 @@ namespace AlibabaSDK
         /// 500_003	- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)
         /// 500_001	- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCreateOrderPreviewResult> AlibabaCreateOrderPreviewAsync(AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, AlibabaTradeFastInvoice invoiceParam, string flow, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaCreateOrderPreviewResult> AlibabaCreateOrderPreviewAsync(AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, string flow, AlibabaTradeFastInvoice invoiceParam = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>查询退款单详情-根据订单ID
         /// 根据订单号实时查询退款单列表，目前只能查询到售中的退款单
@@ -3803,6 +4107,8 @@ namespace AlibabaSDK
         /// <param name="modifyStartTime">退款修改时间(起始)</param>
         /// <param name="modifyEndTime">退款修改时间(截止)</param>
         /// <param name="dipsuteType">1:售中退款，2:售后退款；0:所有退款单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// APPLY_TIME_ERROR	- 只能查询近730天的退款单，请检查退款申请时间!(请检查退款申请时间!)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         AlibabaTradeRefundBuyerQueryOrderRefundListResult AlibabaTradeRefundBuyerQueryOrderRefundList(long? orderId = null, System.DateTimeOffset? applyStartTime = null, System.DateTimeOffset? applyEndTime = null, System.Collections.Generic.IEnumerable<string> refundStatusSet = null, string sellerMemberId = null, int? currentPageNum = null, int? pageSize = null, string logisticsNo = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? dipsuteType = null);
     
@@ -3823,6 +4129,8 @@ namespace AlibabaSDK
         /// <param name="modifyStartTime">退款修改时间(起始)</param>
         /// <param name="modifyEndTime">退款修改时间(截止)</param>
         /// <param name="dipsuteType">1:售中退款，2:售后退款；0:所有退款单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// APPLY_TIME_ERROR	- 只能查询近730天的退款单，请检查退款申请时间!(请检查退款申请时间!)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaTradeRefundBuyerQueryOrderRefundListResult> AlibabaTradeRefundBuyerQueryOrderRefundListAsync(long? orderId = null, System.DateTimeOffset? applyStartTime = null, System.DateTimeOffset? applyEndTime = null, System.Collections.Generic.IEnumerable<string> refundStatusSet = null, string sellerMemberId = null, int? currentPageNum = null, int? pageSize = null, string logisticsNo = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? dipsuteType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -3902,6 +4210,7 @@ namespace AlibabaSDK
         /// <param name="pageSize">查询的每页的数量</param>
         /// <param name="refundStatus">退款状态，支持： &amp;quot;waitselleragree&amp;quot;(等待卖家同意), &amp;quot;refundsuccess&amp;quot;(退款成功), &amp;quot;refundclose&amp;quot;(退款关闭), &amp;quot;waitbuyermodify&amp;quot;(待买家修改), &amp;quot;waitbuyersend&amp;quot;(等待买家退货), &amp;quot;waitsellerreceive&amp;quot;(等待卖家确认收货)</param>
         /// <param name="sellerMemberId">卖家memberId</param>
+        /// <param name="sellerLoginId">卖家loginId</param>
         /// <param name="sellerRateStatus">卖家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
         /// <param name="tradeType">交易类型:
         /// 担保交易(1),
@@ -3921,7 +4230,7 @@ namespace AlibabaSDK
         /// <param name="needBuyerAddressAndPhone">是否需要查询买家的详细地址信息和电话</param>
         /// <param name="needMemoInfo">是否需要查询备注信息</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaTradeGetBuyerOrderListResult AlibabaTradeGetBuyerOrderList(System.Collections.Generic.IEnumerable<string> bizTypes = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? createStartTime = null, bool? isHis = null, System.DateTimeOffset? modifyEndTime = null, System.DateTimeOffset? modifyStartTime = null, string orderStatus = null, int? page = null, int? pageSize = null, string refundStatus = null, string sellerMemberId = null, int? sellerRateStatus = null, string tradeType = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null);
+        AlibabaTradeGetBuyerOrderListResult AlibabaTradeGetBuyerOrderList(System.Collections.Generic.IEnumerable<string> bizTypes = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? createStartTime = null, bool? isHis = null, System.DateTimeOffset? modifyEndTime = null, System.DateTimeOffset? modifyStartTime = null, string orderStatus = null, int? page = null, int? pageSize = null, string refundStatus = null, string sellerMemberId = null, string sellerLoginId = null, int? sellerRateStatus = null, string tradeType = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>订单列表查看(买家视角)
@@ -3940,6 +4249,7 @@ namespace AlibabaSDK
         /// <param name="pageSize">查询的每页的数量</param>
         /// <param name="refundStatus">退款状态，支持： &amp;quot;waitselleragree&amp;quot;(等待卖家同意), &amp;quot;refundsuccess&amp;quot;(退款成功), &amp;quot;refundclose&amp;quot;(退款关闭), &amp;quot;waitbuyermodify&amp;quot;(待买家修改), &amp;quot;waitbuyersend&amp;quot;(等待买家退货), &amp;quot;waitsellerreceive&amp;quot;(等待卖家确认收货)</param>
         /// <param name="sellerMemberId">卖家memberId</param>
+        /// <param name="sellerLoginId">卖家loginId</param>
         /// <param name="sellerRateStatus">卖家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
         /// <param name="tradeType">交易类型:
         /// 担保交易(1),
@@ -3959,7 +4269,7 @@ namespace AlibabaSDK
         /// <param name="needBuyerAddressAndPhone">是否需要查询买家的详细地址信息和电话</param>
         /// <param name="needMemoInfo">是否需要查询备注信息</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaTradeGetBuyerOrderListResult> AlibabaTradeGetBuyerOrderListAsync(System.Collections.Generic.IEnumerable<string> bizTypes = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? createStartTime = null, bool? isHis = null, System.DateTimeOffset? modifyEndTime = null, System.DateTimeOffset? modifyStartTime = null, string orderStatus = null, int? page = null, int? pageSize = null, string refundStatus = null, string sellerMemberId = null, int? sellerRateStatus = null, string tradeType = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaTradeGetBuyerOrderListResult> AlibabaTradeGetBuyerOrderListAsync(System.Collections.Generic.IEnumerable<string> bizTypes = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? createStartTime = null, bool? isHis = null, System.DateTimeOffset? modifyEndTime = null, System.DateTimeOffset? modifyStartTime = null, string orderStatus = null, int? page = null, int? pageSize = null, string refundStatus = null, string sellerMemberId = null, string sellerLoginId = null, int? sellerRateStatus = null, string tradeType = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>批量提交订单评价
         /// 此接口支持多笔订单（暂定最多10笔每次）同时提交评价，并且只支持卖家向买家的评价，目前当某笔订单存在多个商品时,只能为这笔订单的这些商品提交相同的评价内容。
@@ -4130,6 +4440,7 @@ namespace AlibabaSDK
         /// &amp;quot;waitbuyersend&amp;quot;(等待买家退货),
         /// &amp;quot;waitsellerreceive&amp;quot;(等待卖家确认收货)</param>
         /// <param name="buyerMemberId">买家memberId</param>
+        /// <param name="buyerLoginId">买家LoginId</param>
         /// <param name="tradeType">交易类型:
         /// 担保交易(1),
         /// 预存款交易(2),
@@ -4152,8 +4463,9 @@ namespace AlibabaSDK
         /// <param name="tousuStatus">是否查找投诉中的地拟改单</param>
         /// <param name="buyerRateStatus">买家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
         /// <param name="sellerRateStatus">卖家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
+        /// <param name="needCheckSend">是否需要返回发货校验信息，对于打单发货场景必须要填，非常重要</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaTradeGetSellerOrderListResult AlibabaTradeGetSellerOrderList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? page = null, int? pageSize = null, string orderStatus = null, string refundStatus = null, string buyerMemberId = null, string tradeType = null, System.Collections.Generic.IEnumerable<string> bizTypes = null, bool? isHis = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, bool? tousuStatus = null, int? buyerRateStatus = null, int? sellerRateStatus = null);
+        AlibabaTradeGetSellerOrderListResult AlibabaTradeGetSellerOrderList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? page = null, int? pageSize = null, string orderStatus = null, string refundStatus = null, string buyerMemberId = null, string buyerLoginId = null, string tradeType = null, System.Collections.Generic.IEnumerable<string> bizTypes = null, bool? isHis = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, bool? tousuStatus = null, int? buyerRateStatus = null, int? sellerRateStatus = null, bool? needCheckSend = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>订单列表查看(卖家视角)
@@ -4176,6 +4488,7 @@ namespace AlibabaSDK
         /// &amp;quot;waitbuyersend&amp;quot;(等待买家退货),
         /// &amp;quot;waitsellerreceive&amp;quot;(等待卖家确认收货)</param>
         /// <param name="buyerMemberId">买家memberId</param>
+        /// <param name="buyerLoginId">买家LoginId</param>
         /// <param name="tradeType">交易类型:
         /// 担保交易(1),
         /// 预存款交易(2),
@@ -4198,8 +4511,9 @@ namespace AlibabaSDK
         /// <param name="tousuStatus">是否查找投诉中的地拟改单</param>
         /// <param name="buyerRateStatus">买家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
         /// <param name="sellerRateStatus">卖家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
+        /// <param name="needCheckSend">是否需要返回发货校验信息，对于打单发货场景必须要填，非常重要</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaTradeGetSellerOrderListResult> AlibabaTradeGetSellerOrderListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? page = null, int? pageSize = null, string orderStatus = null, string refundStatus = null, string buyerMemberId = null, string tradeType = null, System.Collections.Generic.IEnumerable<string> bizTypes = null, bool? isHis = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, bool? tousuStatus = null, int? buyerRateStatus = null, int? sellerRateStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaTradeGetSellerOrderListResult> AlibabaTradeGetSellerOrderListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? page = null, int? pageSize = null, string orderStatus = null, string refundStatus = null, string buyerMemberId = null, string buyerLoginId = null, string tradeType = null, System.Collections.Generic.IEnumerable<string> bizTypes = null, bool? isHis = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, bool? tousuStatus = null, int? buyerRateStatus = null, int? sellerRateStatus = null, bool? needCheckSend = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>获取订单的发票信息
         /// 获取订单的发票信息, 该接口需要特定的合作伙伴才能申请使用
@@ -4294,6 +4608,7 @@ namespace AlibabaSDK
         /// <param name="message">买家留言</param>
         /// <param name="invoiceParam">发票信息</param>
         /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，如果开通了诚E赊默认是creditBuy（诚E赊），未开通诚E赊默认使用的方式是支付宝担宝交易。</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 400	- 请求参数错误(检查请求参数是否满足要求)
         /// 400	- User authorization is required	(TOKEN失效，需要重新获取)
@@ -4334,7 +4649,7 @@ namespace AlibabaSDK
         /// FAIL_BIZ_TAOBAO_TP_EXCEPTION		- 系统错误，订单创建失败!	
         /// FAIL_BIZ_ORDER_COMMIT_ORDERPARAM_NOT_CONSTRUCTED	- 交时没有成功构造创建订单的参数。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaTradeFastCreateOrderResult AlibabaTradeFastCreateOrder(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, long? subUserId = null, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string shopPromotionId = null);
+        AlibabaTradeFastCreateOrderResult AlibabaTradeFastCreateOrder(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, long? subUserId = null, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string shopPromotionId = null, string tradeType = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>【最新】快速创建1688订单（推荐使用）
@@ -4349,6 +4664,7 @@ namespace AlibabaSDK
         /// <param name="message">买家留言</param>
         /// <param name="invoiceParam">发票信息</param>
         /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，如果开通了诚E赊默认是creditBuy（诚E赊），未开通诚E赊默认使用的方式是支付宝担宝交易。</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 400	- 请求参数错误(检查请求参数是否满足要求)
         /// 400	- User authorization is required	(TOKEN失效，需要重新获取)
@@ -4389,7 +4705,7 @@ namespace AlibabaSDK
         /// FAIL_BIZ_TAOBAO_TP_EXCEPTION		- 系统错误，订单创建失败!	
         /// FAIL_BIZ_ORDER_COMMIT_ORDERPARAM_NOT_CONSTRUCTED	- 交时没有成功构造创建订单的参数。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaTradeFastCreateOrderResult> AlibabaTradeFastCreateOrderAsync(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, long? subUserId = null, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string shopPromotionId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaTradeFastCreateOrderResult> AlibabaTradeFastCreateOrderAsync(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, long? subUserId = null, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string shopPromotionId = null, string tradeType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>修改订单备忘
         /// 授权用户为卖家修改卖家备忘，授权用户为买家修改买家备忘
@@ -4507,7 +4823,7 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaCategorySearchSPUInfoResult> AlibabaCategorySearchSPUInfoAsync(long categoryId, int index, int size, bool? isNeedKeyAttr = null, bool? isOnlyKeyAttr = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取类目属性层级级联信息
+        /// <summary>获取叶子类目属性层级级联信息
         /// 根据类目ID和层级属性表达式获取级联属性信息
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:category.level.attr.get-1 
@@ -4520,7 +4836,7 @@ namespace AlibabaSDK
         CategoryLevelAttrGetResult CategoryLevelAttrGet(long catId, string pathValues);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取类目属性层级级联信息
+        /// <summary>获取叶子类目属性层级级联信息
         /// 根据类目ID和层级属性表达式获取级联属性信息
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:category.level.attr.get-1 
@@ -4532,8 +4848,8 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<CategoryLevelAttrGetResult> CategoryLevelAttrGetAsync(long catId, string pathValues, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取类目属性
-        /// 根据类目ID获取类目属性
+        /// <summary>获取叶子类目属性
+        /// 根据叶子类目ID获取类目属性
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.category.attribute.get-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.category.attribute.get&amp;v=1</summary>
@@ -4545,8 +4861,8 @@ namespace AlibabaSDK
         AlibabaCategoryAttributeGetResult AlibabaCategoryAttributeGet(long categoryID, string webSite);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取类目属性
-        /// 根据类目ID获取类目属性
+        /// <summary>获取叶子类目属性
+        /// 根据叶子类目ID获取类目属性
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.category.attribute.get-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.category.attribute.get&amp;v=1</summary>
@@ -5102,31 +5418,6 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaTradeLstCloseTradeResult> AlibabaTradeLstCloseTradeAsync(long orderId, string closeOperateType, string cancelReason = null, string remark = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>品牌商捡入
-        /// 品牌商捡入
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.list.brandPickedEnterLeads-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.list.brandPickedEnterLeads&amp;v=1</summary>
-        /// <param name="leadsBizId">零售店业务主键</param>
-        /// <param name="operatorNo">品牌商拍档编码</param>
-        /// <param name="spUserId">品牌商的userid</param>
-        /// <param name="leadsType">品牌商的零售店的业务类型</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaLstOpenResult AlibabaListBrandPickedEnterLeads(long leadsBizId, string operatorNo, long spUserId, string leadsType);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>品牌商捡入
-        /// 品牌商捡入
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.list.brandPickedEnterLeads-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.list.brandPickedEnterLeads&amp;v=1</summary>
-        /// <param name="leadsBizId">零售店业务主键</param>
-        /// <param name="operatorNo">品牌商拍档编码</param>
-        /// <param name="spUserId">品牌商的userid</param>
-        /// <param name="leadsType">品牌商的零售店的业务类型</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaLstOpenResult> AlibabaListBrandPickedEnterLeadsAsync(long leadsBizId, string operatorNo, long spUserId, string leadsType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
         /// <summary>业务员权限关闭
         /// 业务员权限关闭
         /// 
@@ -5144,865 +5435,409 @@ namespace AlibabaSDK
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaLstOpenResult> AlibabaLstCancelSalesmanAsync(string loginId, string lsSpBrandName, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取网销宝推广单元列表
-        /// 获取网销宝推广单元列表
+        /// <summary>校验商家符不符合报名该专场的资质
+        /// 校验商家符不符合报名该专场的资质，如果不符合会返回原因
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.list&amp;v=1</summary>
-        /// <param name="adGroupIdList">推广单元id列表</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:member.check.qualification-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=member.check.qualification&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response22 AlibabaCnp4pAdgroupList(System.Collections.Generic.IEnumerable<string> adGroupIdList);
+        MemberCheckQualificationResult MemberCheckQualification(long topicId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝推广单元列表
-        /// 获取网销宝推广单元列表
+        /// <summary>校验商家符不符合报名该专场的资质
+        /// 校验商家符不符合报名该专场的资质，如果不符合会返回原因
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.list&amp;v=1</summary>
-        /// <param name="adGroupIdList">推广单元id列表</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:member.check.qualification-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=member.check.qualification&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response22> AlibabaCnp4pAdgroupListAsync(System.Collections.Generic.IEnumerable<string> adGroupIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberCheckQualificationResult> MemberCheckQualificationAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>更新网销宝推广计划
-        /// 更新网销宝推广计划
+        /// <summary>待优化offer不能报名原因查询
+        /// 查询待优化offer不能报名的原因，如果完全符合报名要求，返回原因会为空。
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="budget">计划预算</param>
-        /// <param name="onlineStatus">计划状态，0为暂停；1为推广中；</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
-        /// <param name="cositeFlag">计划是否支持站外定向推广：0不支持，1支持</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.offer.suggestion.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.offer.suggestion.get&amp;v=1</summary>
+        /// <param name="topicId">要报名的专场</param>
+        /// <param name="batchId">要报名的批次</param>
+        /// <param name="offerId">要报名的商品id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pCampaign AlibabaCnp4pCampaignUpdate(long campaignId, double? budget = null, int? onlineStatus = null, string promoteArea = null, string schedule = null, int? cositeFlag = null);
+        AlibabaOfferSuggestionGetResult AlibabaOfferSuggestionGet(long topicId, long batchId, long offerId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广计划
-        /// 更新网销宝推广计划
+        /// <summary>待优化offer不能报名原因查询
+        /// 查询待优化offer不能报名的原因，如果完全符合报名要求，返回原因会为空。
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="budget">计划预算</param>
-        /// <param name="onlineStatus">计划状态，0为暂停；1为推广中；</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
-        /// <param name="cositeFlag">计划是否支持站外定向推广：0不支持，1支持</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.offer.suggestion.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.offer.suggestion.get&amp;v=1</summary>
+        /// <param name="topicId">要报名的专场</param>
+        /// <param name="batchId">要报名的批次</param>
+        /// <param name="offerId">要报名的商品id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignUpdateAsync(long campaignId, double? budget = null, int? onlineStatus = null, string promoteArea = null, string schedule = null, int? cositeFlag = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaOfferSuggestionGetResult> AlibabaOfferSuggestionGetAsync(long topicId, long batchId, long offerId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>删除计划信息
-        /// 删除计划信息
+        /// <summary>查询商家某专场下商品的报名记录
+        /// 根据专场topicId，查询该商家在该专场下offer的报名记录。（分页查询，注意只有查第一页的时候，数据总数totalRecords才会正确返回，否则总是返回0）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.delete&amp;v=1</summary>
-        /// <param name="campaignIdList">推广计划id</param>
-        /// <returns>通用int型结果返回 ErrorCode 的错误信息
-        /// 110000	- 计划id为空
-        /// 110017	- 计划信息不存在
-        /// 88806	- 包含不允许操作的产品线计划id信息(移除非支持操作的产品线计划id信息)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.enroll.records.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.enroll.records.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="pageNo">分页页码，从1开始。另外只有查第一页的时候，数据总数totalRecords才会正确返回，否则总是返回0</param>
+        /// <param name="pageSize">分页每页数量，默认10，最大不能超过20</param>
+        /// <param name="status">查询的报名offer或商家的状态，只有statusList为空才会使用status字段</param>
+        /// <param name="statusList">查询的报名offer或商家的状态，只有statusList为空才会使用status字段</param>
+        /// <param name="batchId">活动批次batchId，这字段是非必填</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response19 AlibabaCnp4pCampaignDelete(System.Collections.Generic.IEnumerable<string> campaignIdList);
+        AlibabaEnrollRecordsListResult AlibabaEnrollRecordsList(long topicId, int pageNo, int pageSize, string status = null, System.Collections.Generic.IEnumerable<string> statusList = null, long? batchId = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>删除计划信息
-        /// 删除计划信息
+        /// <summary>查询商家某专场下商品的报名记录
+        /// 根据专场topicId，查询该商家在该专场下offer的报名记录。（分页查询，注意只有查第一页的时候，数据总数totalRecords才会正确返回，否则总是返回0）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.delete&amp;v=1</summary>
-        /// <param name="campaignIdList">推广计划id</param>
-        /// <returns>通用int型结果返回 ErrorCode 的错误信息
-        /// 110000	- 计划id为空
-        /// 110017	- 计划信息不存在
-        /// 88806	- 包含不允许操作的产品线计划id信息(移除非支持操作的产品线计划id信息)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.enroll.records.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.enroll.records.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="pageNo">分页页码，从1开始。另外只有查第一页的时候，数据总数totalRecords才会正确返回，否则总是返回0</param>
+        /// <param name="pageSize">分页每页数量，默认10，最大不能超过20</param>
+        /// <param name="status">查询的报名offer或商家的状态，只有statusList为空才会使用status字段</param>
+        /// <param name="statusList">查询的报名offer或商家的状态，只有statusList为空才会使用status字段</param>
+        /// <param name="batchId">活动批次batchId，这字段是非必填</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response19> AlibabaCnp4pCampaignDeleteAsync(System.Collections.Generic.IEnumerable<string> campaignIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaEnrollRecordsListResult> AlibabaEnrollRecordsListAsync(long topicId, int pageNo, int pageSize, string status = null, System.Collections.Generic.IEnumerable<string> statusList = null, long? batchId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取网销宝关键词排名
-        /// 获取网销宝关键词排名
+        /// <summary>获取批次详情
+        /// 根据批次id，查询批次详情，供页面展示使用
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.rank.get-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.rank.get&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
-        /// <param name="keywordId">关键词id</param>
-        /// <param name="areaCode">排名所在区域</param>
-        /// <returns>关键词排名返回 ErrorCode 的错误信息
-        /// 系统错误	- 999999(系统错误)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.detail.get&amp;v=1</summary>
+        /// <param name="batchId">批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pKeywordRank AlibabaCnp4pKeywordRankGet(long adGroupId, long keywordId, string areaCode = null);
+        AlibabaBatchDetailGetResult AlibabaBatchDetailGet(long batchId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝关键词排名
-        /// 获取网销宝关键词排名
+        /// <summary>获取批次详情
+        /// 根据批次id，查询批次详情，供页面展示使用
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.rank.get-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.rank.get&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
-        /// <param name="keywordId">关键词id</param>
-        /// <param name="areaCode">排名所在区域</param>
-        /// <returns>关键词排名返回 ErrorCode 的错误信息
-        /// 系统错误	- 999999(系统错误)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.detail.get&amp;v=1</summary>
+        /// <param name="batchId">批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pKeywordRank> AlibabaCnp4pKeywordRankGetAsync(long adGroupId, long keywordId, string areaCode = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaBatchDetailGetResult> AlibabaBatchDetailGetAsync(long batchId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>根据推广计划获取网销宝推广单元列表
-        /// 根据推广计划获取网销宝推广单元列表
+        /// <summary>给商家推荐最近适合他报名的批次(不推荐继续使用)
+        /// (不推荐继续使用) 给商家推荐最近适合他报名的批次，默认选当前时间两天后最近的一个批次（该接口只适合报名伙拼和天天特卖的特定专场，建议使用轻报名接口获取更多专场的批次信息 alibaba.light.enroll.topic.info.query）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.bycampaignids.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.bycampaignids.list&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.recommend&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaBatchRecommendResult AlibabaBatchRecommend(long topicId);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>给商家推荐最近适合他报名的批次(不推荐继续使用)
+        /// (不推荐继续使用) 给商家推荐最近适合他报名的批次，默认选当前时间两天后最近的一个批次（该接口只适合报名伙拼和天天特卖的特定专场，建议使用轻报名接口获取更多专场的批次信息 alibaba.light.enroll.topic.info.query）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.recommend&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaBatchRecommendResult> AlibabaBatchRecommendAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>白底图上传和校验接口
+        /// 白底图上传和校验接口。上传一张图片，如果是符合要求的白底图，返回图片url，如果不是，返回不符合白底图要求的报错信息。
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.white.image.upload-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.white.image.upload&amp;v=1</summary>
+        /// <param name="data">图片（字节流）</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaWhiteImageUploadResult AlibabaWhiteImageUpload(byte[] data);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>白底图上传和校验接口
+        /// 白底图上传和校验接口。上传一张图片，如果是符合要求的白底图，返回图片url，如果不是，返回不符合白底图要求的报错信息。
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.white.image.upload-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.white.image.upload&amp;v=1</summary>
+        /// <param name="data">图片（字节流）</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaWhiteImageUploadResult> AlibabaWhiteImageUploadAsync(byte[] data, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>查询所有活动专场tag
+        /// 查询所有活动专场tag
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.topic.tag.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.topic.tag.query&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaLightEnrollTopicTagQueryResult AlibabaLightEnrollTopicTagQuery();
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>查询所有活动专场tag
+        /// 查询所有活动专场tag
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.topic.tag.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.topic.tag.query&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaLightEnrollTopicTagQueryResult> AlibabaLightEnrollTopicTagQueryAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>写入报名记录
+        /// 写入报名记录，返回报名成功的offer，一批报名不能超过10个
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.record.batch.insert-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.record.batch.insert&amp;v=1</summary>
+        /// <param name="param">报名参数</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaLightEnrollRecordBatchInsertResult AlibabaLightEnrollRecordBatchInsert(ComAlibabaOceanOpenplatformBizHuopinParamLightEnrollParam param);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>写入报名记录
+        /// 写入报名记录，返回报名成功的offer，一批报名不能超过10个
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.record.batch.insert-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.record.batch.insert&amp;v=1</summary>
+        /// <param name="param">报名参数</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaLightEnrollRecordBatchInsertResult> AlibabaLightEnrollRecordBatchInsertAsync(ComAlibabaOceanOpenplatformBizHuopinParamLightEnrollParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>专场详情查询（不推荐继续使用，仅能查询伙拼、天天特卖专场活动信息）
+        /// (不推荐使用) 根据专场id，查询专场详情，包括专场活动标题、描述等信息，供页面展示使用（仅能查询伙拼、天天特卖等专场活动信息，通用专场信息可以用轻报名专场查询接口alibaba.light.enroll.topic.info.query）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.detail.get&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaTopicDetailGetResult AlibabaTopicDetailGet(long topicId);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>专场详情查询（不推荐继续使用，仅能查询伙拼、天天特卖专场活动信息）
+        /// (不推荐使用) 根据专场id，查询专场详情，包括专场活动标题、描述等信息，供页面展示使用（仅能查询伙拼、天天特卖等专场活动信息，通用专场信息可以用轻报名专场查询接口alibaba.light.enroll.topic.info.query）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.detail.get&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaTopicDetailGetResult> AlibabaTopicDetailGetAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>获取报名商品要填写的字段表单或模板(不推荐继续使用)
+        /// （不推荐使用）获取报商品需要展示和填写的字段（该接口只能获取伙拼和天天特卖3个特定专场35320，35321，35273的报名表单。要获取更多专场报名表单，请使用alibaba.light.enroll.form.item.query）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.items.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.items.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaTopicItemsListResult AlibabaTopicItemsList(long topicId);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取报名商品要填写的字段表单或模板(不推荐继续使用)
+        /// （不推荐使用）获取报商品需要展示和填写的字段（该接口只能获取伙拼和天天特卖3个特定专场35320，35321，35273的报名表单。要获取更多专场报名表单，请使用alibaba.light.enroll.form.item.query）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.items.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.items.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaTopicItemsListResult> AlibabaTopicItemsListAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>待报名商品展示
+        /// 展示该商家在该专场活动下，没有报名的商品List（如果canEnroll为true，查出来的都是有资格报名的。canEnroll为false，都是没有资格报名的）。
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.enroll.waiting.offers.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.enroll.waiting.offers.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
         /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最大200</param>
+        /// <param name="pageSize">分页每页数量，默认10，最大不能超过20</param>
+        /// <param name="canEnroll">true表示查询该商家可以报名但还没报名的商品，false表示查询该商家还有待改进的商品（暂时不具备报名该活动的资格）</param>
+        /// <param name="batchId">活动批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pAdgroupBycampaignidsListResult AlibabaCnp4pAdgroupBycampaignidsList(long campaignId, int pageNo, int pageSize);
+        AlibabaEnrollWaitingOffersListResult AlibabaEnrollWaitingOffersList(long topicId, int pageNo, int pageSize, bool canEnroll, long? batchId = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>根据推广计划获取网销宝推广单元列表
-        /// 根据推广计划获取网销宝推广单元列表
+        /// <summary>待报名商品展示
+        /// 展示该商家在该专场活动下，没有报名的商品List（如果canEnroll为true，查出来的都是有资格报名的。canEnroll为false，都是没有资格报名的）。
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.bycampaignids.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.bycampaignids.list&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.enroll.waiting.offers.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.enroll.waiting.offers.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
         /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最大200</param>
+        /// <param name="pageSize">分页每页数量，默认10，最大不能超过20</param>
+        /// <param name="canEnroll">true表示查询该商家可以报名但还没报名的商品，false表示查询该商家还有待改进的商品（暂时不具备报名该活动的资格）</param>
+        /// <param name="batchId">活动批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pAdgroupBycampaignidsListResult> AlibabaCnp4pAdgroupBycampaignidsListAsync(long campaignId, int pageNo, int pageSize, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaEnrollWaitingOffersListResult> AlibabaEnrollWaitingOffersListAsync(long topicId, int pageNo, int pageSize, bool canEnroll, long? batchId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取网销宝关键词列表
-        /// 获取网销宝关键词列表
+        /// <summary>获取轻报名专场信息
+        /// 获取轻报名专场信息（含专场基本信息、是否支持轻报名、可报名排期信息等）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.topic.info.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.topic.info.query&amp;v=1</summary>
+        /// <param name="topicId">活动专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response23 AlibabaCnp4pKeywordList(long campaignId, System.Collections.Generic.IEnumerable<string> keywordIdList);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝关键词列表
-        /// 获取网销宝关键词列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response23> AlibabaCnp4pKeywordListAsync(long campaignId, System.Collections.Generic.IEnumerable<string> keywordIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>获取网销宝关键词报表详情
-        /// 获取网销宝关键词报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.keywordEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.keywordEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="adGroupId">单元id</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="keywordId">关键词id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pReportKeywordEffectResult AlibabaCnp4pReportKeywordEffect(System.DateTimeOffset startTime, System.DateTimeOffset endTime, long campaignId, long adGroupId, int pageNo, int pageSize, long? keywordId = null);
+        AlibabaLightEnrollTopicInfoQueryResult AlibabaLightEnrollTopicInfoQuery(long topicId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝关键词报表详情
-        /// 获取网销宝关键词报表详情
+        /// <summary>获取轻报名专场信息
+        /// 获取轻报名专场信息（含专场基本信息、是否支持轻报名、可报名排期信息等）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.keywordEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.keywordEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="adGroupId">单元id</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="keywordId">关键词id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.topic.info.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.topic.info.query&amp;v=1</summary>
+        /// <param name="topicId">活动专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pReportKeywordEffectResult> AlibabaCnp4pReportKeywordEffectAsync(System.DateTimeOffset startTime, System.DateTimeOffset endTime, long campaignId, long adGroupId, int pageNo, int pageSize, long? keywordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaLightEnrollTopicInfoQueryResult> AlibabaLightEnrollTopicInfoQueryAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取关键词相关词列表
-        /// 获取关键词相关词列表
+        /// <summary>活动报名（不推荐继续使用）
+        /// (不推荐使用) 活动报名接口。返回报名成功的商品ID。并且只要有一个商品没有报名成功，success都会是false。（该接口只支持伙拼和天天特卖的三个固定专场35320，35321，35273的报名，更多专场报名请使用alibaba.light.enroll.record.batch.insert）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.relativeword-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.relativeword&amp;v=1</summary>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户号为空
-        /// 130003	- 关键词为空</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.offer.enroll-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.offer.enroll&amp;v=1</summary>
+        /// <param name="topicId">要报名的专场id</param>
+        /// <param name="batchId">要报名的批次活动id</param>
+        /// <param name="offerList">报名的商品信息,一次最多报名10个商品</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response24 AlibabaCnp4pKeywordListRelativeword(string keyword);
+        AlibabaBatchOfferEnrollResult AlibabaBatchOfferEnroll(long topicId, long batchId, System.Collections.Generic.IEnumerable<AlibabaOceanOpenplatformBizHuopinModelHpEnrollOfferModel> offerList);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取关键词相关词列表
-        /// 获取关键词相关词列表
+        /// <summary>活动报名（不推荐继续使用）
+        /// (不推荐使用) 活动报名接口。返回报名成功的商品ID。并且只要有一个商品没有报名成功，success都会是false。（该接口只支持伙拼和天天特卖的三个固定专场35320，35321，35273的报名，更多专场报名请使用alibaba.light.enroll.record.batch.insert）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.relativeword-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.relativeword&amp;v=1</summary>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户号为空
-        /// 130003	- 关键词为空</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.offer.enroll-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.offer.enroll&amp;v=1</summary>
+        /// <param name="topicId">要报名的专场id</param>
+        /// <param name="batchId">要报名的批次活动id</param>
+        /// <param name="offerList">报名的商品信息,一次最多报名10个商品</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response24> AlibabaCnp4pKeywordListRelativewordAsync(string keyword, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaBatchOfferEnrollResult> AlibabaBatchOfferEnrollAsync(long topicId, long batchId, System.Collections.Generic.IEnumerable<AlibabaOceanOpenplatformBizHuopinModelHpEnrollOfferModel> offerList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>新增网销宝推广单元
-        /// 新增网销宝推广单元
+        /// <summary>推荐合适的专场给商家（不推荐继续使用）
+        /// （不推荐使用）校验商家是否有基本资质（如果不符合会返回原因），并推荐合适的专场给商家。（只能查伙拼和天天特卖，不建议继续使用。可以改用alibaba.daily.topic.recommend和alibaba.promotion.topic.recommend）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.add&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="onlineState">推广单元上下线状态：0下线；1上线</param>
-        /// <param name="bidPrice">推广单元默认出价，单位元</param>
-        /// <param name="offerId">1688中文站offer产品信息id，具体获取指定用户offer列表可以从这个API获取：https://open.1688.com/doc/api/cn/api.htm?ns=cn.alibaba.open&amp;n=offer.getPublishOfferList&amp;v=1</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.recommend&amp;v=1</summary>
+        /// <param name="businessType">活动ID，其中10001代表天天特卖，10004代表伙拼，其他值都是错误</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pAdgroup AlibabaCnp4pAdgroupAdd(long campaignId, int onlineState, double bidPrice, long offerId);
+        AlibabaTopicRecommendResult AlibabaTopicRecommend(int businessType);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>新增网销宝推广单元
-        /// 新增网销宝推广单元
+        /// <summary>推荐合适的专场给商家（不推荐继续使用）
+        /// （不推荐使用）校验商家是否有基本资质（如果不符合会返回原因），并推荐合适的专场给商家。（只能查伙拼和天天特卖，不建议继续使用。可以改用alibaba.daily.topic.recommend和alibaba.promotion.topic.recommend）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.add&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="onlineState">推广单元上下线状态：0下线；1上线</param>
-        /// <param name="bidPrice">推广单元默认出价，单位元</param>
-        /// <param name="offerId">1688中文站offer产品信息id，具体获取指定用户offer列表可以从这个API获取：https://open.1688.com/doc/api/cn/api.htm?ns=cn.alibaba.open&amp;n=offer.getPublishOfferList&amp;v=1</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.recommend&amp;v=1</summary>
+        /// <param name="businessType">活动ID，其中10001代表天天特卖，10004代表伙拼，其他值都是错误</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pAdgroup> AlibabaCnp4pAdgroupAddAsync(long campaignId, int onlineState, double bidPrice, long offerId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaTopicRecommendResult> AlibabaTopicRecommendAsync(int businessType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取关键词相关性信息
-        /// 获取关键词相关性及诊断建议
+        /// <summary>查询商家可报名的日常活动列表
+        /// 查询商家可报名的日常活动列表
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.mlrscore-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.mlrscore&amp;v=1</summary>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户号为空(未登录授权)
-        /// 120000	- 推广单元id为空(参数传入推广单元id)
-        /// 130000	- 关键词列表id为空(传入关键词id列表)
-        /// 130002	- 关键词id列表size大于上限(传不超过关键词id上限列表)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.daily.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.daily.topic.recommend&amp;v=1</summary>
+        /// <param name="businessType">活动类型，包括0(所有日常活动类型)、131（淘货源）、10（伙拼）、117（进口货源）、118（实力商家）、209（质享家）、235（1688直播）、259（跨境专供）、261（微供市场）、262（直播身份报名）、263（直播日常报名）、264（直播活动报名）、266（小店宝）、267（直播审核预告）、268（直播审核商品）、274（疯狂店促）、275（淘工厂）、276（MRO一站购）、297（modern style）、68（今日团）、249（行业活动）、300（周末惠）、331（好货特卖）、336（产地嘉年华）、337（超级产地日）、338（产地巡演）、345（工业品牌）、350（12月商人节）、356（3月商人节）、258（清仓特卖）、296（档口直播）、299（实体店货源）、302（伙拼分销）、305（拿好货）、322（档口尖货）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response25 AlibabaCnp4pKeywordListMlrscore(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList);
+        AlibabaDailyTopicRecommendResult AlibabaDailyTopicRecommend(int? businessType = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取关键词相关性信息
-        /// 获取关键词相关性及诊断建议
+        /// <summary>查询商家可报名的日常活动列表
+        /// 查询商家可报名的日常活动列表
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.mlrscore-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.mlrscore&amp;v=1</summary>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户号为空(未登录授权)
-        /// 120000	- 推广单元id为空(参数传入推广单元id)
-        /// 130000	- 关键词列表id为空(传入关键词id列表)
-        /// 130002	- 关键词id列表size大于上限(传不超过关键词id上限列表)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.daily.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.daily.topic.recommend&amp;v=1</summary>
+        /// <param name="businessType">活动类型，包括0(所有日常活动类型)、131（淘货源）、10（伙拼）、117（进口货源）、118（实力商家）、209（质享家）、235（1688直播）、259（跨境专供）、261（微供市场）、262（直播身份报名）、263（直播日常报名）、264（直播活动报名）、266（小店宝）、267（直播审核预告）、268（直播审核商品）、274（疯狂店促）、275（淘工厂）、276（MRO一站购）、297（modern style）、68（今日团）、249（行业活动）、300（周末惠）、331（好货特卖）、336（产地嘉年华）、337（超级产地日）、338（产地巡演）、345（工业品牌）、350（12月商人节）、356（3月商人节）、258（清仓特卖）、296（档口直播）、299（实体店货源）、302（伙拼分销）、305（拿好货）、322（档口尖货）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response25> AlibabaCnp4pKeywordListMlrscoreAsync(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaDailyTopicRecommendResult> AlibabaDailyTopicRecommendAsync(int? businessType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取关键词推荐价格
-        /// 获取关键词推荐价格
+        /// <summary>查询商家可报名的大促活动列表
+        /// 查询商家可报名的大促活动列表
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.recommend.price-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.recommend.price&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <param name="areaCode">投放地域码</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户信息为空
-        /// 100001	- 地域码为空
-        /// 120000	- 推广单元为空
-        /// 130000	- 关键词id为空
-        /// 130002	- 关键词id列表size超过上限</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.promotion.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.promotion.topic.recommend&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response26 AlibabaCnp4pKeywordListRecommendPrice(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList, string areaCode);
+        AlibabaPromotionTopicRecommendResult AlibabaPromotionTopicRecommend();
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取关键词推荐价格
-        /// 获取关键词推荐价格
+        /// <summary>查询商家可报名的大促活动列表
+        /// 查询商家可报名的大促活动列表
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.recommend.price-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.recommend.price&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <param name="areaCode">投放地域码</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户信息为空
-        /// 100001	- 地域码为空
-        /// 120000	- 推广单元为空
-        /// 130000	- 关键词id为空
-        /// 130002	- 关键词id列表size超过上限</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.promotion.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.promotion.topic.recommend&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response26> AlibabaCnp4pKeywordListRecommendPriceAsync(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList, string areaCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaPromotionTopicRecommendResult> AlibabaPromotionTopicRecommendAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>删除网销宝推广单元
-        /// 删除网销宝推广单元
+        /// <summary>判断该专场是否支持轻报名
+        /// 判断该专场是否支持轻报名
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.delete&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.support.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.support.query&amp;v=1</summary>
+        /// <param name="topicId">活动专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pAdgroup AlibabaCnp4pAdgroupDelete(long adGroupId);
+        AlibabaLightEnrollSupportQueryResult AlibabaLightEnrollSupportQuery(long topicId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>删除网销宝推广单元
-        /// 删除网销宝推广单元
+        /// <summary>判断该专场是否支持轻报名
+        /// 判断该专场是否支持轻报名
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.delete&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.support.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.support.query&amp;v=1</summary>
+        /// <param name="topicId">活动专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pAdgroup> AlibabaCnp4pAdgroupDeleteAsync(long adGroupId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaLightEnrollSupportQueryResult> AlibabaLightEnrollSupportQueryAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取网销宝计划列表
-        /// 获取网销宝计划列表
+        /// <summary>展示用户当前能报几个offer
+        /// 疲劳度接口，可以展示当前能报几个offer等信息，返回该专场该活动，用户已经报了几个商品，还能报几个商品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.list&amp;v=1</summary>
-        /// <param name="campaignIdList">计划id列表</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.fatigue.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.fatigue.get&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="batchId">活动批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response27 AlibabaCnp4pCampaignList(System.Collections.Generic.IEnumerable<string> campaignIdList = null);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝计划列表
-        /// 获取网销宝计划列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.list&amp;v=1</summary>
-        /// <param name="campaignIdList">计划id列表</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response27> AlibabaCnp4pCampaignListAsync(System.Collections.Generic.IEnumerable<string> campaignIdList = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>更新网销宝推广计划投放时段
-        /// 更新网销宝推广计划投放时段
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.schedule.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.schedule.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pCampaign AlibabaCnp4pCampaignScheduleUpdate(long campaignId, string schedule);
+        AlibabaBatchFatigueGetResult AlibabaBatchFatigueGet(long topicId, long? batchId = null);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广计划投放时段
-        /// 更新网销宝推广计划投放时段
+        /// <summary>展示用户当前能报几个offer
+        /// 疲劳度接口，可以展示当前能报几个offer等信息，返回该专场该活动，用户已经报了几个商品，还能报几个商品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.schedule.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.schedule.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.fatigue.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.fatigue.get&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="batchId">活动批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignScheduleUpdateAsync(long campaignId, string schedule, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaBatchFatigueGetResult> AlibabaBatchFatigueGetAsync(long topicId, long? batchId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取可投放的地域列表
-        /// 获取可投放的地域列表
+        /// <summary>批量判断专场是否支持轻报名
+        /// 批量判断专场是否支持轻报名
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.areaList-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.areaList&amp;v=1</summary>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.batch.support.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.batch.support.query&amp;v=1</summary>
+        /// <param name="topicIds">专场活动id列表.</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response28 AlibabaCnp4pCampaignAreaList();
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取可投放的地域列表
-        /// 获取可投放的地域列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.areaList-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.areaList&amp;v=1</summary>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response28> AlibabaCnp4pCampaignAreaListAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>获取网销宝推广计划报表详情
-        /// 获取网销宝推广计划报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.campaignEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.campaignEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="reportType">报表类型，为空则全部；site_in则为站内，site_out则为站外</param>
-        /// <param name="campaignId">计划id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pReportCampaignEffectResult AlibabaCnp4pReportCampaignEffect(System.DateTimeOffset startTime, System.DateTimeOffset endTime, int pageNo, int pageSize, string reportType = null, long? campaignId = null);
+        AlibabaLightEnrollBatchSupportQueryResult AlibabaLightEnrollBatchSupportQuery(System.Collections.Generic.IEnumerable<long> topicIds);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝推广计划报表详情
-        /// 获取网销宝推广计划报表详情
+        /// <summary>批量判断专场是否支持轻报名
+        /// 批量判断专场是否支持轻报名
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.campaignEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.campaignEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="reportType">报表类型，为空则全部；site_in则为站内，site_out则为站外</param>
-        /// <param name="campaignId">计划id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.batch.support.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.batch.support.query&amp;v=1</summary>
+        /// <param name="topicIds">专场活动id列表.</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pReportCampaignEffectResult> AlibabaCnp4pReportCampaignEffectAsync(System.DateTimeOffset startTime, System.DateTimeOffset endTime, int pageNo, int pageSize, string reportType = null, long? campaignId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaLightEnrollBatchSupportQueryResult> AlibabaLightEnrollBatchSupportQueryAsync(System.Collections.Generic.IEnumerable<long> topicIds, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
-        /// <summary>获取网销宝关键词质量分
-        /// 获取网销宝关键词质量分
+        /// <summary>获取轻报名报品的表单
+        /// 获取轻报名报品的表单及校验逻辑
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.quality.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.quality.list&amp;v=1</summary>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.form.item.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.form.item.query&amp;v=1</summary>
+        /// <param name="topicId">专场活动id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response29 AlibabaCnp4pKeywordQualityList(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList);
+        AlibabaLightEnrollFormItemQueryResult AlibabaLightEnrollFormItemQuery(long topicId);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝关键词质量分
-        /// 获取网销宝关键词质量分
+        /// <summary>获取轻报名报品的表单
+        /// 获取轻报名报品的表单及校验逻辑
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.quality.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.quality.list&amp;v=1</summary>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.form.item.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.form.item.query&amp;v=1</summary>
+        /// <param name="topicId">专场活动id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response29> AlibabaCnp4pKeywordQualityListAsync(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>获取网销宝指定推广单元的推荐词
-        /// 获取网销宝指定推广单元的推荐词
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.recommend.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.recommend.list&amp;v=1</summary>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最多10条</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response30 AlibabaCnp4pKeywordRecommendList(long adGroupId, int pageNo, int pageSize);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝指定推广单元的推荐词
-        /// 获取网销宝指定推广单元的推荐词
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.recommend.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.recommend.list&amp;v=1</summary>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最多10条</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response30> AlibabaCnp4pKeywordRecommendListAsync(long adGroupId, int pageNo, int pageSize, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>根据关键词查询联盟offer列表
-        /// 根据关键词查询联盟offer列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.union.offerbyquery.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.union.offerbyquery.list&amp;v=1</summary>
-        /// <param name="unionPid">联盟推广位ID</param>
-        /// <param name="query">查询关键词</param>
-        /// <param name="requestIp">请求者的IP</param>
-        /// <param name="requestUserAgent">请求者的UA</param>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最大20条</param>
-        /// <param name="requestReferer">请求者的Referer</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 77703	- 该用户不是联盟用户(联系联盟系统管理员，加入联盟平台)
-        /// 88804	- 请求的数据起始页码为1
-        /// 150001	- 联盟pid无效
-        /// 150002	- 请求ip无效
-        /// 150003	- 请求query无效
-        /// 150004	- 请求useragent无效
-        /// 150005	- 请求页面条数超出限制</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response31 AlibabaCnp4pUnionOfferbyqueryList(string unionPid, string query, string requestIp, string requestUserAgent, int pageNo, int pageSize, string requestReferer = null);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>根据关键词查询联盟offer列表
-        /// 根据关键词查询联盟offer列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.union.offerbyquery.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.union.offerbyquery.list&amp;v=1</summary>
-        /// <param name="unionPid">联盟推广位ID</param>
-        /// <param name="query">查询关键词</param>
-        /// <param name="requestIp">请求者的IP</param>
-        /// <param name="requestUserAgent">请求者的UA</param>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最大20条</param>
-        /// <param name="requestReferer">请求者的Referer</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 77703	- 该用户不是联盟用户(联系联盟系统管理员，加入联盟平台)
-        /// 88804	- 请求的数据起始页码为1
-        /// 150001	- 联盟pid无效
-        /// 150002	- 请求ip无效
-        /// 150003	- 请求query无效
-        /// 150004	- 请求useragent无效
-        /// 150005	- 请求页面条数超出限制</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response31> AlibabaCnp4pUnionOfferbyqueryListAsync(string unionPid, string query, string requestIp, string requestUserAgent, int pageNo, int pageSize, string requestReferer = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>获取推广单元审核状态
-        /// 获取推广单元审核状态
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.audit.get.creative.status-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.audit.get.creative.status&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <returns>返回审核状态对象返回 ErrorCode 的错误信息
-        /// 120000	- 推广单元为空(参数中传入推广单元id，eg=100234)</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response32 AlibabaCnp4pAuditGetCreativeStatus(long adGroupId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取推广单元审核状态
-        /// 获取推广单元审核状态
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.audit.get.creative.status-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.audit.get.creative.status&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <returns>返回审核状态对象返回 ErrorCode 的错误信息
-        /// 120000	- 推广单元为空(参数中传入推广单元id，eg=100234)</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response32> AlibabaCnp4pAuditGetCreativeStatusAsync(long adGroupId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>计划、推广单元等实时消耗
-        /// 获取客户计划、推官单元、关键词等粒度实时消耗信息
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.settle.campaignRealTimeCost-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.settle.campaignRealTimeCost&amp;v=1</summary>
-        /// <param name="type">类型(1计划；2推广单元)</param>
-        /// <param name="objectId">类型对象id</param>
-        /// <returns>结算消耗返回 ErrorCode 的错误信息
-        /// 88805	- 不支持的查询消耗类型（1：计划；2：推广单元）
-        /// 88806	- 参数中包含暂未开放的产品线id信息
-        /// 110000	- 查询参数id为空</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response33 AlibabaCnp4pSettleCampaignRealTimeCost(int type, long objectId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>计划、推广单元等实时消耗
-        /// 获取客户计划、推官单元、关键词等粒度实时消耗信息
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.settle.campaignRealTimeCost-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.settle.campaignRealTimeCost&amp;v=1</summary>
-        /// <param name="type">类型(1计划；2推广单元)</param>
-        /// <param name="objectId">类型对象id</param>
-        /// <returns>结算消耗返回 ErrorCode 的错误信息
-        /// 88805	- 不支持的查询消耗类型（1：计划；2：推广单元）
-        /// 88806	- 参数中包含暂未开放的产品线id信息
-        /// 110000	- 查询参数id为空</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response33> AlibabaCnp4pSettleCampaignRealTimeCostAsync(int type, long objectId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>更新网销宝推广单元
-        /// 更新网销宝推广单元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.update&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="onlineState">推广单元上下线状态：0下线；1上线</param>
-        /// <param name="bidPrice">推广单元默认出价，单位元</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pAdgroup AlibabaCnp4pAdgroupUpdate(long campaignId, long adGroupId, int? onlineState = null, double? bidPrice = null);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广单元
-        /// 更新网销宝推广单元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.update&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="onlineState">推广单元上下线状态：0下线；1上线</param>
-        /// <param name="bidPrice">推广单元默认出价，单位元</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pAdgroup> AlibabaCnp4pAdgroupUpdateAsync(long campaignId, long adGroupId, int? onlineState = null, double? bidPrice = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>获取网销宝账户实时消耗，单位：元
-        /// 获取网销宝账户实时消耗，单位：元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.account.realtimeCost-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.account.realtimeCost&amp;v=1</summary>
-        /// <returns>网销宝客户当天实时消耗，单位：元</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response34 AlibabaCnp4pAccountRealtimeCost();
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝账户实时消耗，单位：元
-        /// 获取网销宝账户实时消耗，单位：元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.account.realtimeCost-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.account.realtimeCost&amp;v=1</summary>
-        /// <returns>网销宝客户当天实时消耗，单位：元</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response34> AlibabaCnp4pAccountRealtimeCostAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>添加网销宝关键词
-        /// 添加网销宝关键词
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.add&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="keywords">关键词列表，关键词和出价json字符串，keyword:词，不能有一些特殊字符。bidPrice：出价，以“元”为单位，保留两位小数，不能大于日限额。</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 130001	- 关键词重复
-        /// 130002	- 1个单元下的关键词数量不能超过200个
-        /// 130003	- 关键词不能为空字符
-        /// 130004	- 关键词最长为20个汉字或40个英文字符
-        /// 130005	- 关键词与已有的关键词冲突
-        /// 130006	- 关键词中含有特殊字符
-        /// 130007	- 关键词触犯黑名单规则
-        /// 130008	- 关键词触犯注册商标规则
-        /// 130009	- 关键词含侵犯他人合法权益词汇
-        /// 130010	- 关键词出价必须大于0
-        /// 130011	- 关键词的出价不能超过99.9
-        /// 130012	- 关键词的出价不能超过计划日消耗上限
-        /// 130013	- 关键词对应推广计划id为空
-        /// 130014	- 关键词对应推广计划id无效或者不属于该用户
-        /// 130015	- 关键词对应推广单元id为空
-        /// 130016	- 关键词对应推广单元id无效或者不属于该用户
-        /// 130017	- 关键词质量分过差，不建议添加
-        /// 130018	- 关键词不存在
-        /// 130019	- 关键词查询质量分最大批次为10
-        /// 130020	- 关键词查询推荐词最大批次为10</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pKeywordAddResult AlibabaCnp4pKeywordAdd(long adGroupId, System.Collections.Generic.IEnumerable<string> keywords);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>添加网销宝关键词
-        /// 添加网销宝关键词
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.add&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="keywords">关键词列表，关键词和出价json字符串，keyword:词，不能有一些特殊字符。bidPrice：出价，以“元”为单位，保留两位小数，不能大于日限额。</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 130001	- 关键词重复
-        /// 130002	- 1个单元下的关键词数量不能超过200个
-        /// 130003	- 关键词不能为空字符
-        /// 130004	- 关键词最长为20个汉字或40个英文字符
-        /// 130005	- 关键词与已有的关键词冲突
-        /// 130006	- 关键词中含有特殊字符
-        /// 130007	- 关键词触犯黑名单规则
-        /// 130008	- 关键词触犯注册商标规则
-        /// 130009	- 关键词含侵犯他人合法权益词汇
-        /// 130010	- 关键词出价必须大于0
-        /// 130011	- 关键词的出价不能超过99.9
-        /// 130012	- 关键词的出价不能超过计划日消耗上限
-        /// 130013	- 关键词对应推广计划id为空
-        /// 130014	- 关键词对应推广计划id无效或者不属于该用户
-        /// 130015	- 关键词对应推广单元id为空
-        /// 130016	- 关键词对应推广单元id无效或者不属于该用户
-        /// 130017	- 关键词质量分过差，不建议添加
-        /// 130018	- 关键词不存在
-        /// 130019	- 关键词查询质量分最大批次为10
-        /// 130020	- 关键词查询推荐词最大批次为10</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pKeywordAddResult> AlibabaCnp4pKeywordAddAsync(long adGroupId, System.Collections.Generic.IEnumerable<string> keywords, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>更新网销宝推广计划投放地域
-        /// 更新网销宝推广计划投放地域
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.area.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.area.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pCampaign AlibabaCnp4pCampaignAreaUpdate(long campaignId, string promoteArea);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广计划投放地域
-        /// 更新网销宝推广计划投放地域
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.area.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.area.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignAreaUpdateAsync(long campaignId, string promoteArea, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>获取网销宝推广单元报表详情
-        /// 获取网销宝推广单元报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.adGroupEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.adGroupEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pReportAdGroupEffectResult AlibabaCnp4pReportAdGroupEffect(System.DateTimeOffset startTime, System.DateTimeOffset endTime, long campaignId, int pageNo, int pageSize, long? adGroupId = null);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝推广单元报表详情
-        /// 获取网销宝推广单元报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.adGroupEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.adGroupEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pReportAdGroupEffectResult> AlibabaCnp4pReportAdGroupEffectAsync(System.DateTimeOffset startTime, System.DateTimeOffset endTime, long campaignId, int pageNo, int pageSize, long? adGroupId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>添加网销宝推广计划
-        /// 添加网销宝推广计划
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.add&amp;v=1</summary>
-        /// <param name="title">计划标题</param>
-        /// <param name="budget">计划预算</param>
-        /// <param name="onlineStatus">计划状态，0为暂停；1为推广中；</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
-        /// <param name="cositeFlag">计划是否支持站外定向推广：0不支持，1支持</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pCampaign AlibabaCnp4pCampaignAdd(string title, double budget, int onlineStatus, string promoteArea = null, string schedule = null, int? cositeFlag = null);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>添加网销宝推广计划
-        /// 添加网销宝推广计划
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.add&amp;v=1</summary>
-        /// <param name="title">计划标题</param>
-        /// <param name="budget">计划预算</param>
-        /// <param name="onlineStatus">计划状态，0为暂停；1为推广中；</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
-        /// <param name="cositeFlag">计划是否支持站外定向推广：0不支持，1支持</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignAddAsync(string title, double budget, int onlineStatus, string promoteArea = null, string schedule = null, int? cositeFlag = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>删除网销宝推广关键词
-        /// 删除网销宝推广关键词
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.delete&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response23 AlibabaCnp4pKeywordDelete(long campaignId, System.Collections.Generic.IEnumerable<string> keywordIdList);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>删除网销宝推广关键词
-        /// 删除网销宝推广关键词
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.delete&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response23> AlibabaCnp4pKeywordDeleteAsync(long campaignId, System.Collections.Generic.IEnumerable<string> keywordIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>根据adGroupId获取网销宝关键词列表
-        /// 根据adGroupId获取网销宝关键词列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.byadgroupid.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.byadgroupid.list&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response23 AlibabaCnp4pKeywordByadgroupidList(long adGroupId);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>根据adGroupId获取网销宝关键词列表
-        /// 根据adGroupId获取网销宝关键词列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.byadgroupid.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.byadgroupid.list&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response23> AlibabaCnp4pKeywordByadgroupidListAsync(long adGroupId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>更新网销宝推广关键词价格
-        /// 更新网销宝推广关键词价格
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.price.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.price.update&amp;v=1</summary>
-        /// <param name="keywords">关键词列表，由keywordId、adGroupId、bidPrice组成的json字符串，其中keywordId为关键词id，adGroupId为单元id，bidPrice出价，以“元”为单位，保留一位小数，不能大于日限额。</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response23 AlibabaCnp4pKeywordPriceUpdate(System.Collections.Generic.IEnumerable<string> keywords);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广关键词价格
-        /// 更新网销宝推广关键词价格
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.price.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.price.update&amp;v=1</summary>
-        /// <param name="keywords">关键词列表，由keywordId、adGroupId、bidPrice组成的json字符串，其中keywordId为关键词id，adGroupId为单元id，bidPrice出价，以“元”为单位，保留一位小数，不能大于日限额。</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response23> AlibabaCnp4pKeywordPriceUpdateAsync(System.Collections.Generic.IEnumerable<string> keywords, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>获取网销宝客户账户余额
-        /// 获取网销宝客户账户余额
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.account.balance-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.account.balance&amp;v=1</summary>
-        /// <returns>网销宝账户余额，单位为元</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response35 AlibabaCnp4pAccountBalance();
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝客户账户余额
-        /// 获取网销宝客户账户余额
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.account.balance-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.account.balance&amp;v=1</summary>
-        /// <returns>网销宝账户余额，单位为元</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response35> AlibabaCnp4pAccountBalanceAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>获取资质审核状态
-        /// 获取资质审核状态
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.audit.get.certificate.status-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.audit.get.certificate.status&amp;v=1</summary>
-        /// <returns>返回审核状态对象</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response32 AlibabaCnp4pAuditGetCertificateStatus();
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取资质审核状态
-        /// 获取资质审核状态
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.audit.get.certificate.status-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.audit.get.certificate.status&amp;v=1</summary>
-        /// <returns>返回审核状态对象</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response32> AlibabaCnp4pAuditGetCertificateStatusAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>更新网销宝计划日预算
-        /// 更新网销宝计划日预算
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.budget.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.budget.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="budget">计划预算</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pCampaign AlibabaCnp4pCampaignBudgetUpdate(long campaignId, double budget);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝计划日预算
-        /// 更新网销宝计划日预算
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.budget.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.budget.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="budget">计划预算</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignBudgetUpdateAsync(long campaignId, double budget, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-    
-        /// <summary>获取网销宝客户报表详情
-        /// 获取网销宝客户报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.custEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.custEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="reportType">报表类型，为空则全部；site_in则为站内，site_out则为站外</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        AlibabaCnp4pReportCustEffectResult AlibabaCnp4pReportCustEffect(System.DateTimeOffset startTime, System.DateTimeOffset endTime, int pageNo, int pageSize, string reportType = null);
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝客户报表详情
-        /// 获取网销宝客户报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.custEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.custEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="reportType">报表类型，为空则全部；site_in则为站内，site_out则为站外</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<AlibabaCnp4pReportCustEffectResult> AlibabaCnp4pReportCustEffectAsync(System.DateTimeOffset startTime, System.DateTimeOffset endTime, int pageNo, int pageSize, string reportType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AlibabaLightEnrollFormItemQueryResult> AlibabaLightEnrollFormItemQueryAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>标题属性不一致（Deprecated）
         /// 用来判断，用户标题和属性中填写的信息是否一致，是否存在冲突的关键属性
@@ -6106,7 +5941,7 @@ namespace AlibabaSDK
         /// <param name="userid">卖家id（1688的memberId）,对应为该offer的旺铺userid</param>
         /// <returns>对于检测到类目作弊的，在type字段中，会标示为anti，否则为none。同时系统会推荐一到多个类目id，分别在catid，catname，以及score中标示，解析相关字段就可以得到。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response36 SearchCategoryCheating(string title, string catid, string userid);
+        Response22 SearchCategoryCheating(string title, string catid, string userid);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>类目作弊
@@ -6119,7 +5954,7 @@ namespace AlibabaSDK
         /// <param name="userid">卖家id（1688的memberId）,对应为该offer的旺铺userid</param>
         /// <returns>对于检测到类目作弊的，在type字段中，会标示为anti，否则为none。同时系统会推荐一到多个类目id，分别在catid，catname，以及score中标示，解析相关字段就可以得到。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response36> SearchCategoryCheatingAsync(string title, string catid, string userid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response22> SearchCategoryCheatingAsync(string title, string catid, string userid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>属性滥用
         /// 判断用户填写的属性是否存在滥用，比如属性值多个重复使用，属性值过长，以及属性值无意义等。
@@ -6527,6 +6362,10 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="logisticsId">该订单下的物流编号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。(无法找到相对应的物流单跟踪信息。)
+        /// order.nopermission.buyer	- 你没有权限获取该订单详情(买家端)(不是该授权用户的订单)
+        /// order.createtime.history	- 不支持查询一年前的物流轨迹信息(不支持查询一年前的物流轨迹信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         AlibabaTradeGetLogisticsTraceInfoSellerViewResult AlibabaTradeGetLogisticsTraceInfoSellerView(long orderId, string webSite, string logisticsId = null);
     
@@ -6539,6 +6378,10 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="logisticsId">该订单下的物流编号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。(无法找到相对应的物流单跟踪信息。)
+        /// order.nopermission.buyer	- 你没有权限获取该订单详情(买家端)(不是该授权用户的订单)
+        /// order.createtime.history	- 不支持查询一年前的物流轨迹信息(不支持查询一年前的物流轨迹信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaTradeGetLogisticsTraceInfoSellerViewResult> AlibabaTradeGetLogisticsTraceInfoSellerViewAsync(long orderId, string webSite, string logisticsId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -6639,6 +6482,13 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="logisticsId">该订单下的物流编号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。	(无法找到相对应的物流单跟踪信息。	
+        /// )
+        /// order.nopermission.buyer		- 你没有权限获取该订单详情(买家端)	(不是该授权用户的订单
+        /// )
+        /// order.createtime.history		- 不支持查询一年前的物流轨迹信息	(不支持查询一年前的物流轨迹信息	
+        /// )</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         AlibabaTradeGetLogisticsTraceInfoBuyerViewResult AlibabaTradeGetLogisticsTraceInfoBuyerView(long orderId, string webSite, string logisticsId = null);
     
@@ -6651,6 +6501,13 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="logisticsId">该订单下的物流编号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。	(无法找到相对应的物流单跟踪信息。	
+        /// )
+        /// order.nopermission.buyer		- 你没有权限获取该订单详情(买家端)	(不是该授权用户的订单
+        /// )
+        /// order.createtime.history		- 不支持查询一年前的物流轨迹信息	(不支持查询一年前的物流轨迹信息	
+        /// )</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaTradeGetLogisticsTraceInfoBuyerViewResult> AlibabaTradeGetLogisticsTraceInfoBuyerViewAsync(long orderId, string webSite, string logisticsId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -6662,6 +6519,9 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="fields">需要返回的字段，目前有:company.name,sender,receiver,sendgood。返回的字段要用英文逗号分隔开</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。(无法找到相对应的物流单跟踪信息。)
+        /// order.createtime.history	- 不支持查询一年前的物流轨迹信息(不支持查询一年前的物流轨迹信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         AlibabaTradeGetLogisticsInfosSellerViewResult AlibabaTradeGetLogisticsInfosSellerView(long orderId, string webSite, string fields = null);
     
@@ -6674,6 +6534,9 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="fields">需要返回的字段，目前有:company.name,sender,receiver,sendgood。返回的字段要用英文逗号分隔开</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。(无法找到相对应的物流单跟踪信息。)
+        /// order.createtime.history	- 不支持查询一年前的物流轨迹信息(不支持查询一年前的物流轨迹信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaTradeGetLogisticsInfosSellerViewResult> AlibabaTradeGetLogisticsInfosSellerViewAsync(long orderId, string webSite, string fields = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
@@ -6810,7 +6673,7 @@ namespace AlibabaSDK
         /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
         /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        Response37 AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList);
+        Response23 AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList);
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>跨境场景下将商品加入铺货列表
@@ -6824,7 +6687,7 @@ namespace AlibabaSDK
         /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
         /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<Response37> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Response23> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>同步铺货结果
         /// 同步铺货结果，在源平台(1688)经过ISV把商品铺货到目标平台(比如TAOBAO)时，ISV需要把铺货结果返回。铺货结果的状态描述必须和源平台(1688)定义的一致，同时该接口也支持下架等操作，这些操作都由铺货状态来表述
@@ -6912,7 +6775,7 @@ namespace AlibabaSDK
         /// <param name="cargoParamList">商品信息</param>
         /// <param name="message">买家留言</param>
         /// <param name="invoiceParam">发票信息</param>
-        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，默认使用的方式是支付宝担宝交易。</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，如果开通了诚E赊默认是creditBuy（诚E赊），未开通诚E赊默认使用的方式是支付宝担宝交易。</param>
         /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
         /// <param name="anonymousBuyer">是否匿名下单</param>
         /// <returns>返回 ErrorCode 的错误信息
@@ -6932,7 +6795,7 @@ namespace AlibabaSDK
         /// <param name="cargoParamList">商品信息</param>
         /// <param name="message">买家留言</param>
         /// <param name="invoiceParam">发票信息</param>
-        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，默认使用的方式是支付宝担宝交易。</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，如果开通了诚E赊默认是creditBuy（诚E赊），未开通诚E赊默认使用的方式是支付宝担宝交易。</param>
         /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
         /// <param name="anonymousBuyer">是否匿名下单</param>
         /// <returns>返回 ErrorCode 的错误信息
@@ -7096,6 +6959,190 @@ namespace AlibabaSDK
         /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003002\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:INVOKE_FAIL:OrderRefundService#queryOrderRefundOperationList\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;errorCode:INVALID_PARAM,errorMsg:null,cause:null\&amp;quot;}(退款单不正确)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         System.Threading.Tasks.Task<AlibabaTradeRefundOpQueryOrderRefundOperationListResult2> AlibabaTradeRefundOpQueryOrderRefundOperationListAsync(string refundId, string pageNo, string pageSize, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>创建退款退货申请
+        /// 创建退款退货申请
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createRefund-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.createRefund&amp;v=1</summary>
+        /// <param name="orderId">主订单</param>
+        /// <param name="orderEntryIds">子订单</param>
+        /// <param name="disputeRequest">退款/退款退货。只有已收到货，才可以选择退款退货。</param>
+        /// <param name="applyPayment">退款金额（单位：分）。不大于实际付款金额；等待卖家发货时，必须为商品的实际付款金额。</param>
+        /// <param name="applyCarriage">退运费金额（单位：分）。</param>
+        /// <param name="applyReasonId">退款原因id（从API getRefundReasonList获取）</param>
+        /// <param name="description">退款申请理由，2-150字</param>
+        /// <param name="goodsStatus">货物状态</param>
+        /// <param name="vouchers">凭证图片URLs。1-5张，必须使用API uploadRefundVoucher返回的“图片域名/相对路径”</param>
+        /// <param name="orderEntryCountList">子订单退款数量。仅在售中买家已收货（退款退货）时，可指定退货数量；默认，全部退货。</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 5001	- 订单不存在
+        /// 5002	- 订单买家与用户身份不一致
+        /// 5003	- 货物状态状态不合法(参考goodsStatus示例)
+        /// 5004	- 退款退货原因错误，请确认原因id(使用API alibaba.trade.getRefundReasonListI查找合法的参数)
+        /// 5005	- 需要上传凭证(部分退款原因需要强制上传凭证)
+        /// 5006	- 退运费大于0(部分退款原因不退运费)
+        /// 5010	- 退货状态错误(请确认订单是否支持能够退款，以及输入参数是否合法：
+        /// 1.退款退货（已收到货的情况下，才能退款退货）
+        /// 2.货物状态是否与订单状态一致（是否发货、是否售中）
+        /// 3.检查子订单id、订单状态、是否重复提交等)
+        /// 5011	- 退款金额错误(不大于实际付款金额)
+        /// 5012	- 退款描述长度错误
+        /// 5013	- 子订单退货数量(仅在售中买家已收货退款退货时，可以指定小于全部。在全部退货的情况下，推荐不填写，使用默认值。)
+        /// 5100	- 其他未知错误(请确认订单是否可申请退款，按照示例填写参数)
+        /// 4xxx	- 服务方内部错误</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaOceanOpenplatformCommonOrderRefundCreateResult AlibabaTradeCreateRefund(long orderId, System.Collections.Generic.IEnumerable<long> orderEntryIds, string disputeRequest, long applyPayment, long applyCarriage, long applyReasonId, string description, string goodsStatus, System.Collections.Generic.IEnumerable<string> vouchers = null, System.Collections.Generic.IEnumerable<AlibabaOceanOpenplatformBizTradeCommonModelOrderEntryCountModel> orderEntryCountList = null);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>创建退款退货申请
+        /// 创建退款退货申请
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createRefund-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.createRefund&amp;v=1</summary>
+        /// <param name="orderId">主订单</param>
+        /// <param name="orderEntryIds">子订单</param>
+        /// <param name="disputeRequest">退款/退款退货。只有已收到货，才可以选择退款退货。</param>
+        /// <param name="applyPayment">退款金额（单位：分）。不大于实际付款金额；等待卖家发货时，必须为商品的实际付款金额。</param>
+        /// <param name="applyCarriage">退运费金额（单位：分）。</param>
+        /// <param name="applyReasonId">退款原因id（从API getRefundReasonList获取）</param>
+        /// <param name="description">退款申请理由，2-150字</param>
+        /// <param name="goodsStatus">货物状态</param>
+        /// <param name="vouchers">凭证图片URLs。1-5张，必须使用API uploadRefundVoucher返回的“图片域名/相对路径”</param>
+        /// <param name="orderEntryCountList">子订单退款数量。仅在售中买家已收货（退款退货）时，可指定退货数量；默认，全部退货。</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 5001	- 订单不存在
+        /// 5002	- 订单买家与用户身份不一致
+        /// 5003	- 货物状态状态不合法(参考goodsStatus示例)
+        /// 5004	- 退款退货原因错误，请确认原因id(使用API alibaba.trade.getRefundReasonListI查找合法的参数)
+        /// 5005	- 需要上传凭证(部分退款原因需要强制上传凭证)
+        /// 5006	- 退运费大于0(部分退款原因不退运费)
+        /// 5010	- 退货状态错误(请确认订单是否支持能够退款，以及输入参数是否合法：
+        /// 1.退款退货（已收到货的情况下，才能退款退货）
+        /// 2.货物状态是否与订单状态一致（是否发货、是否售中）
+        /// 3.检查子订单id、订单状态、是否重复提交等)
+        /// 5011	- 退款金额错误(不大于实际付款金额)
+        /// 5012	- 退款描述长度错误
+        /// 5013	- 子订单退货数量(仅在售中买家已收货退款退货时，可以指定小于全部。在全部退货的情况下，推荐不填写，使用默认值。)
+        /// 5100	- 其他未知错误(请确认订单是否可申请退款，按照示例填写参数)
+        /// 4xxx	- 服务方内部错误</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaOceanOpenplatformCommonOrderRefundCreateResult> AlibabaTradeCreateRefundAsync(long orderId, System.Collections.Generic.IEnumerable<long> orderEntryIds, string disputeRequest, long applyPayment, long applyCarriage, long applyReasonId, string description, string goodsStatus, System.Collections.Generic.IEnumerable<string> vouchers = null, System.Collections.Generic.IEnumerable<AlibabaOceanOpenplatformBizTradeCommonModelOrderEntryCountModel> orderEntryCountList = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>查询退款退货原因（用于创建退款退货）
+        /// 查询退款退货原因（用于创建退款退货）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.getRefundReasonList-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.getRefundReasonList&amp;v=1</summary>
+        /// <param name="orderId">主订单id</param>
+        /// <param name="orderEntryIds">子订单id</param>
+        /// <param name="goodsStatus">货物状态</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 5xxx	- 调用者错误(请确认输入参数是否合法。
+        /// 货物状态参数示例，子订单需要数组输入...)
+        /// 4xxx	- 服务方内部错误</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaOceanOpenplatformCommonOrderRefundReasonListResult AlibabaTradeGetRefundReasonList(long orderId, System.Collections.Generic.IEnumerable<long> orderEntryIds, string goodsStatus);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>查询退款退货原因（用于创建退款退货）
+        /// 查询退款退货原因（用于创建退款退货）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.getRefundReasonList-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.getRefundReasonList&amp;v=1</summary>
+        /// <param name="orderId">主订单id</param>
+        /// <param name="orderEntryIds">子订单id</param>
+        /// <param name="goodsStatus">货物状态</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 5xxx	- 调用者错误(请确认输入参数是否合法。
+        /// 货物状态参数示例，子订单需要数组输入...)
+        /// 4xxx	- 服务方内部错误</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaOceanOpenplatformCommonOrderRefundReasonListResult> AlibabaTradeGetRefundReasonListAsync(long orderId, System.Collections.Generic.IEnumerable<long> orderEntryIds, string goodsStatus, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>上传退款退货凭证
+        /// 上传退款退货凭证，用于退款退货申请，文件流转byte数组推荐使用org.apache.commons.io.IOUtils#toByteArray(java.io.InputStream)
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.uploadRefundVoucher-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.uploadRefundVoucher&amp;v=1</summary>
+        /// <param name="imageData">凭证图片数据。小于1M，jpg格式。</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 4000	- (调用者错误：未正确传入imageData参数；
+        /// 服务方错误：网络延迟、内部服务异常)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaOceanOpenplatformCommonOrderRefundUploadVoucherResult AlibabaTradeUploadRefundVoucher(byte[] imageData);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>上传退款退货凭证
+        /// 上传退款退货凭证，用于退款退货申请，文件流转byte数组推荐使用org.apache.commons.io.IOUtils#toByteArray(java.io.InputStream)
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.uploadRefundVoucher-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.uploadRefundVoucher&amp;v=1</summary>
+        /// <param name="imageData">凭证图片数据。小于1M，jpg格式。</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 4000	- (调用者错误：未正确传入imageData参数；
+        /// 服务方错误：网络延迟、内部服务异常)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaOceanOpenplatformCommonOrderRefundUploadVoucherResult> AlibabaTradeUploadRefundVoucherAsync(byte[] imageData, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+    
+        /// <summary>买家提交退款货信息
+        /// 买家申请退货退款时，卖家同意后，买家提交退款货信息使用，需要先调用alibaba.logistics.OpQueryLogisticCompanyList.offline查询物流公司信息，使用接口返回的物流公司编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.returnGoods-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.returnGoods&amp;v=1</summary>
+        /// <param name="refundId">退款单号，TQ开头</param>
+        /// <param name="logisticsCompanyNo">物流公司编码，调用alibaba.logistics.OpQueryLogisticCompanyList.offline接口查询</param>
+        /// <param name="freightBill">物流公司运单号，请准确填写，否则卖家有权拒绝退款</param>
+        /// <param name="description">发货说明，内容在2-200个字之间</param>
+        /// <param name="vouchers">凭证图片URLs，必须使用API alibaba.trade.uploadRefundVoucher返回的“图片域名/相对路径”，最多可上传 10 张图片 ；单张大小不超过1M；支持jpg、gif、jpeg、png、和bmp格式。 请上传凭证，以便以后续赔所需（不上传将无法理赔）</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 4001	- 需要用户授权(检查token是否过期，重新刷新或获取)
+        /// 4002	- 物流公司编号和运单号必填(物流公司编号和运单号必填)
+        /// 4003	- 上传凭证数量过多(凭证不能超过10张)
+        /// 4003	- 凭证URL校验不通过(凭证格式不符合要求)
+        /// 4004	- 物流公司编号和运单号校验失败(物流公司编号和运单号校验失败，检查并填写正确的运单号)
+        /// 4004	- 物流公司编号和运单号校验不通过(物流公司编号和运单号校验不通过，检查并填写正确的运单号)
+        /// 4004	- 物流公司编号和运单号校验异常(物流公司编号和运单号校验异常，可稍后重试下)
+        /// 4005	- 退款单信息不存在(退款单信息不存在)
+        /// 4006	- 无当前退款单操作权限(无当前退款单操作权限，检查用户账号是否正确，退款单号是否正确)
+        /// 4007	- 当前退款单状态不支持退货(当前退款单状态不支持退货，退款单状态不对)
+        /// 4008	- 退款单号信息有误，请核对后重新提交(退款单号信息有误，请核对后重新提交)
+        /// 5001	- 退款单信息查询异常(退款单信息查询异常)
+        /// 5001	- 退款单信息查询异常(退款单信息查询异常)
+        /// 5002	- 退款退货操作失败(退款退货操作失败)
+        /// 5003	- 退款退货操作异常(退款退货操作异常)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        AlibabaOceanOpenplatformBizTradeResultRefundReturnGoodsResult AlibabaTradeRefundReturnGoods(string refundId, string logisticsCompanyNo, string freightBill, string description = null, System.Collections.Generic.IEnumerable<string> vouchers = null);
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>买家提交退款货信息
+        /// 买家申请退货退款时，卖家同意后，买家提交退款货信息使用，需要先调用alibaba.logistics.OpQueryLogisticCompanyList.offline查询物流公司信息，使用接口返回的物流公司编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.returnGoods-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.returnGoods&amp;v=1</summary>
+        /// <param name="refundId">退款单号，TQ开头</param>
+        /// <param name="logisticsCompanyNo">物流公司编码，调用alibaba.logistics.OpQueryLogisticCompanyList.offline接口查询</param>
+        /// <param name="freightBill">物流公司运单号，请准确填写，否则卖家有权拒绝退款</param>
+        /// <param name="description">发货说明，内容在2-200个字之间</param>
+        /// <param name="vouchers">凭证图片URLs，必须使用API alibaba.trade.uploadRefundVoucher返回的“图片域名/相对路径”，最多可上传 10 张图片 ；单张大小不超过1M；支持jpg、gif、jpeg、png、和bmp格式。 请上传凭证，以便以后续赔所需（不上传将无法理赔）</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 4001	- 需要用户授权(检查token是否过期，重新刷新或获取)
+        /// 4002	- 物流公司编号和运单号必填(物流公司编号和运单号必填)
+        /// 4003	- 上传凭证数量过多(凭证不能超过10张)
+        /// 4003	- 凭证URL校验不通过(凭证格式不符合要求)
+        /// 4004	- 物流公司编号和运单号校验失败(物流公司编号和运单号校验失败，检查并填写正确的运单号)
+        /// 4004	- 物流公司编号和运单号校验不通过(物流公司编号和运单号校验不通过，检查并填写正确的运单号)
+        /// 4004	- 物流公司编号和运单号校验异常(物流公司编号和运单号校验异常，可稍后重试下)
+        /// 4005	- 退款单信息不存在(退款单信息不存在)
+        /// 4006	- 无当前退款单操作权限(无当前退款单操作权限，检查用户账号是否正确，退款单号是否正确)
+        /// 4007	- 当前退款单状态不支持退货(当前退款单状态不支持退货，退款单状态不对)
+        /// 4008	- 退款单号信息有误，请核对后重新提交(退款单号信息有误，请核对后重新提交)
+        /// 5001	- 退款单信息查询异常(退款单信息查询异常)
+        /// 5001	- 退款单信息查询异常(退款单信息查询异常)
+        /// 5002	- 退款退货操作失败(退款退货操作失败)
+        /// 5003	- 退款退货操作异常(退款退货操作异常)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        System.Threading.Tasks.Task<AlibabaOceanOpenplatformBizTradeResultRefundReturnGoodsResult> AlibabaTradeRefundReturnGoodsAsync(string refundId, string logisticsCompanyNo, string freightBill, string description = null, System.Collections.Generic.IEnumerable<string> vouchers = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     
         /// <summary>跨境产品开发工具低价开发接口
         /// 传入分销客推广位PID，获取跨境产品开发工具低价开发页面的 URL。在此页面中推广的商品，买家购买后 ISV 能获得佣金分成。（此接口仅对跨境ERP及数据选品工具开放，ISVID需要向小二申请）
@@ -7360,6 +7407,386 @@ namespace AlibabaSDK
         partial void PrepareRequest(System.Net.Http.HttpClient client, System.Net.Http.HttpRequestMessage request, string url);
         partial void PrepareRequest(System.Net.Http.HttpClient client, System.Net.Http.HttpRequestMessage request, System.Text.StringBuilder urlBuilder);
         partial void ProcessResponse(System.Net.Http.HttpClient client, System.Net.Http.HttpResponseMessage response);
+    
+        /// <summary>获取直播预告列表
+        /// 获取直播预告列表
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.list&amp;v=1</summary>
+        /// <param name="page">分页页码</param>
+        /// <param name="pageSize">每页数量，默认10，最多20</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public LivePreListResult LivePreList(int page, int pageSize)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await LivePreListAsync(page, pageSize, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取直播预告列表
+        /// 获取直播预告列表
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.list&amp;v=1</summary>
+        /// <param name="page">分页页码</param>
+        /// <param name="pageSize">每页数量，默认10，最多20</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<LivePreListResult> LivePreListAsync(int page, int pageSize, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.live/live.pre.list/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (page == null)
+                        throw new System.ArgumentNullException("page");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(page, System.Globalization.CultureInfo.InvariantCulture)), "page");
+                    }
+                    if (pageSize == null)
+                        throw new System.ArgumentNullException("pageSize");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageSize, System.Globalization.CultureInfo.InvariantCulture)), "pageSize");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<LivePreListResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(LivePreListResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>获取主播基本信息
+        /// 获取主播基本信息
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.streamer.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.streamer.get&amp;v=1</summary>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 400_1	- 客户端错误，入参有问题(详见具体报错，会指出哪个入参有问题)
+        /// 500_1	- 服务端错误，服务端返回错误信息(详见具体报错，会指出是什么错误信息)
+        /// 500_2	- 服务端错误，服务端调用出现异常(详见具体报错，会指出是什么错误信息)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public LiveStreamerGetResult LiveStreamerGet()
+        {
+            return System.Threading.Tasks.Task.Run(async () => await LiveStreamerGetAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取主播基本信息
+        /// 获取主播基本信息
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.streamer.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.streamer.get&amp;v=1</summary>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 400_1	- 客户端错误，入参有问题(详见具体报错，会指出哪个入参有问题)
+        /// 500_1	- 服务端错误，服务端返回错误信息(详见具体报错，会指出是什么错误信息)
+        /// 500_2	- 服务端错误，服务端调用出现异常(详见具体报错，会指出是什么错误信息)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<LiveStreamerGetResult> LiveStreamerGetAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.live/live.streamer.get/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    request_.Content = new System.Net.Http.StringContent(string.Empty, System.Text.Encoding.UTF8, "application/json");
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<LiveStreamerGetResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(LiveStreamerGetResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>删除直播预告
+        /// 删除直播预告（只有商家自己才能删除自己创建的预告）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.delete-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.delete&amp;v=1</summary>
+        /// <param name="preId">预告id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public LivePreDeleteResult LivePreDelete(long preId)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await LivePreDeleteAsync(preId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>删除直播预告
+        /// 删除直播预告（只有商家自己才能删除自己创建的预告）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.delete-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.delete&amp;v=1</summary>
+        /// <param name="preId">预告id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<LivePreDeleteResult> LivePreDeleteAsync(long preId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.live/live.pre.delete/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (preId == null)
+                        throw new System.ArgumentNullException("preId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(preId, System.Globalization.CultureInfo.InvariantCulture)), "preId");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<LivePreDeleteResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(LivePreDeleteResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>获取预告详情
+        /// 获取预告详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.detail.get&amp;v=1</summary>
+        /// <param name="preId">预告Id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public LivePreDetailGetResult LivePreDetailGet(long preId)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await LivePreDetailGetAsync(preId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取预告详情
+        /// 获取预告详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.live:live.pre.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.live&amp;n=live.pre.detail.get&amp;v=1</summary>
+        /// <param name="preId">预告Id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<LivePreDetailGetResult> LivePreDetailGetAsync(long preId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.live/live.pre.detail.get/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (preId == null)
+                        throw new System.ArgumentNullException("preId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(preId, System.Globalization.CultureInfo.InvariantCulture)), "preId");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<LivePreDetailGetResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(LivePreDetailGetResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
     
         /// <summary>模型草稿删除
         /// 模型草稿删除
@@ -8217,29 +8644,31 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>跨境场景相似款搜索
-        /// 按照已有商品进行线上相似款搜索，erp需要有跨境货源推荐的权限
+        /// <summary>选品-跨境相似款
+        /// 按照已有商品进行线上相似款搜索，erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.similar.product.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.similar.product.search&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
-        /// <param name="endUserId">erp内部的用户身份id</param>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
+        /// <param name="searchKey">搜索参数，如果传了页面会直接展示搜索结果。参数可以是关键词，图片链接或者1688商品链接</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCrossSimilarProductSearchResult AlibabaCrossSimilarProductSearch(string orgId, string endUserId = null)
+        public AlibabaCrossSimilarProductSearchResult AlibabaCrossSimilarProductSearch(string orgId, string endUserId = null, string searchKey = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossSimilarProductSearchAsync(orgId, endUserId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossSimilarProductSearchAsync(orgId, endUserId, searchKey, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景相似款搜索
-        /// 按照已有商品进行线上相似款搜索，erp需要有跨境货源推荐的权限
+        /// <summary>选品-跨境相似款
+        /// 按照已有商品进行线上相似款搜索，erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.similar.product.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.similar.product.search&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
-        /// <param name="endUserId">erp内部的用户身份id</param>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
+        /// <param name="searchKey">搜索参数，如果传了页面会直接展示搜索结果。参数可以是关键词，图片链接或者1688商品链接</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCrossSimilarProductSearchResult> AlibabaCrossSimilarProductSearchAsync(string orgId, string endUserId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaCrossSimilarProductSearchResult> AlibabaCrossSimilarProductSearchAsync(string orgId, string endUserId = null, string searchKey = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/alibaba.cross.similar.product.search/{AppKey}");
@@ -8262,6 +8691,10 @@ namespace AlibabaSDK
                     if (endUserId != null)
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(endUserId, System.Globalization.CultureInfo.InvariantCulture)), "endUserId");
+                    }
+                    if (searchKey != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(searchKey, System.Globalization.CultureInfo.InvariantCulture)), "searchKey");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -8317,189 +8750,7 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>跨境清仓好货商品列表
-        /// 跨境清仓好货商品列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.crossboard.cleargoodspage-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.crossboard.cleargoodspage&amp;v=1</summary>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public void AlibabaCrossboardCleargoodspage()
-        {
-            System.Threading.Tasks.Task.Run(async () => await AlibabaCrossboardCleargoodspageAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境清仓好货商品列表
-        /// 跨境清仓好货商品列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.crossboard.cleargoodspage-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.crossboard.cleargoodspage&amp;v=1</summary>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task AlibabaCrossboardCleargoodspageAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/alibaba.crossboard.cleargoodspage/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    request_.Content = new System.Net.Http.StringContent(string.Empty, System.Text.Encoding.UTF8, "application/json");
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            return;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>支付宝间连-1688产品推荐开放商品商城首页组件
-        /// 支付宝间连ISV获取1688产品推荐开放页面-商城首页
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alipay.main.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alipay.main.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <param name="umidToken">设备码，通过阿里指定js获取</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public void AlipayMainPage(string endOrgId, string endUserId, string umidToken = null)
-        {
-            System.Threading.Tasks.Task.Run(async () => await AlipayMainPageAsync(endOrgId, endUserId, umidToken, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>支付宝间连-1688产品推荐开放商品商城首页组件
-        /// 支付宝间连ISV获取1688产品推荐开放页面-商城首页
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alipay.main.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alipay.main.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <param name="umidToken">设备码，通过阿里指定js获取</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task AlipayMainPageAsync(string endOrgId, string endUserId, string umidToken = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/alipay.main.page/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (endOrgId == null)
-                        throw new System.ArgumentNullException("endOrgId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endOrgId, System.Globalization.CultureInfo.InvariantCulture)), "endOrgId");
-                    }
-                    if (endUserId == null)
-                        throw new System.ArgumentNullException("endUserId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endUserId, System.Globalization.CultureInfo.InvariantCulture)), "endUserId");
-                    }
-                    if (umidToken != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(umidToken, System.Globalization.CultureInfo.InvariantCulture)), "umidToken");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            return;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>通联商城
+        /// <summary>商城-通联商城
         /// 通联支付的商城api
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.allinpay.main.page-1 
@@ -8514,7 +8765,7 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>通联商城
+        /// <summary>商城-通联商城
         /// 通联支付的商城api
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.allinpay.main.page-1 
@@ -8603,7 +8854,7 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>终端用户感兴趣类目
+        /// <summary>数据上传-终端用户感兴趣类目
         /// ERP终端用户感兴趣的类目，类目目前接受1688类目传入或自定义类目传入。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.category.put-1 
@@ -8621,7 +8872,7 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>终端用户感兴趣类目
+        /// <summary>数据上传-终端用户感兴趣类目
         /// ERP终端用户感兴趣的类目，类目目前接受1688类目传入或自定义类目传入。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.category.put-1 
@@ -8725,8 +8976,8 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>ERP用户状态数据同步
-        /// 同步ERP终端用户数据，即生成一份终端用户数据的镜像。对于多次调用，修改已存在的记录。
+        /// <summary>数据上传-终端用户数据
+        /// 同步终端用户数据，即生成一份终端用户数据的镜像。对于多次调用，修改已存在的记录。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.info.put-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.info.put&amp;v=1</summary>
@@ -8750,8 +9001,8 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>ERP用户状态数据同步
-        /// 同步ERP终端用户数据，即生成一份终端用户数据的镜像。对于多次调用，修改已存在的记录。
+        /// <summary>数据上传-终端用户数据
+        /// 同步终端用户数据，即生成一份终端用户数据的镜像。对于多次调用，修改已存在的记录。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.info.put-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.info.put&amp;v=1</summary>
@@ -8909,32 +9160,38 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>支付宝间连-1688产品推荐开放商品扩展区组件
-        /// 支付宝间连ISV获取1688产品推荐开放页面-商品区块部分
+        /// <summary>社交电商相似品搜索
+        /// 社交电商场景根据图片搜索相似品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alipay.inner.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alipay.inner.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cps.similar.offer.search-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cps.similar.offer.search&amp;v=1</summary>
+        /// <param name="picUrl">图片链接</param>
+        /// <param name="page">页号，从1开始</param>
+        /// <param name="priceMin">最低价格（逻辑为大于等于），用于筛选，可支持小数，可空</param>
+        /// <param name="priceMax">最高价格（逻辑为小于等于），用于筛选，可支持小数，可空</param>
+        /// <param name="sortFields">排序字段，格式为price:asc,sale_amount:desc，分别代表价格升序和销量倒序，多个用英文逗号隔开。目前仅支持价格和销量排序</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public void AlipayInnerPage(string endOrgId, string endUserId)
+        public AlibabaCpsSimilarOfferSearchResult AlibabaCpsSimilarOfferSearch(string picUrl, int page, string priceMin = null, string priceMax = null, string sortFields = null)
         {
-            System.Threading.Tasks.Task.Run(async () => await AlipayInnerPageAsync(endOrgId, endUserId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCpsSimilarOfferSearchAsync(picUrl, page, priceMin, priceMax, sortFields, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>支付宝间连-1688产品推荐开放商品扩展区组件
-        /// 支付宝间连ISV获取1688产品推荐开放页面-商品区块部分
+        /// <summary>社交电商相似品搜索
+        /// 社交电商场景根据图片搜索相似品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alipay.inner.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alipay.inner.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cps.similar.offer.search-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cps.similar.offer.search&amp;v=1</summary>
+        /// <param name="picUrl">图片链接</param>
+        /// <param name="page">页号，从1开始</param>
+        /// <param name="priceMin">最低价格（逻辑为大于等于），用于筛选，可支持小数，可空</param>
+        /// <param name="priceMax">最高价格（逻辑为小于等于），用于筛选，可支持小数，可空</param>
+        /// <param name="sortFields">排序字段，格式为price:asc,sale_amount:desc，分别代表价格升序和销量倒序，多个用英文逗号隔开。目前仅支持价格和销量排序</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task AlipayInnerPageAsync(string endOrgId, string endUserId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaCpsSimilarOfferSearchResult> AlibabaCpsSimilarOfferSearchAsync(string picUrl, int page, string priceMin = null, string priceMax = null, string sortFields = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/alipay.inner.page/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/alibaba.cps.similar.offer.search/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -8945,20 +9202,33 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (endOrgId == null)
-                        throw new System.ArgumentNullException("endOrgId");
+                    if (picUrl == null)
+                        throw new System.ArgumentNullException("picUrl");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endOrgId, System.Globalization.CultureInfo.InvariantCulture)), "endOrgId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(picUrl, System.Globalization.CultureInfo.InvariantCulture)), "picUrl");
                     }
-                    if (endUserId == null)
-                        throw new System.ArgumentNullException("endUserId");
+                    if (page == null)
+                        throw new System.ArgumentNullException("page");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endUserId, System.Globalization.CultureInfo.InvariantCulture)), "endUserId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(page, System.Globalization.CultureInfo.InvariantCulture)), "page");
+                    }
+                    if (priceMin != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(priceMin, System.Globalization.CultureInfo.InvariantCulture)), "priceMin");
+                    }
+                    if (priceMax != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(priceMax, System.Globalization.CultureInfo.InvariantCulture)), "priceMax");
+                    }
+                    if (sortFields != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(sortFields, System.Globalization.CultureInfo.InvariantCulture)), "sortFields");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
     
                     PrepareRequest(client_, request_, urlBuilder_);
                     var url_ = urlBuilder_.ToString();
@@ -8986,7 +9256,8 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            return;
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCpsSimilarOfferSearchResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
                         }
                         else
                         if (status_ != "200" && status_ != "204")
@@ -8994,6 +9265,8 @@ namespace AlibabaSDK
                             var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
+            
+                        return default(AlibabaCpsSimilarOfferSearchResult);
                     }
                     finally
                     {
@@ -9007,27 +9280,135 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>跨境场景企业维度新品搜索
-        /// 按照企业维度给出新品列表
+        /// <summary>选品-跨境同款
+        /// 按照已有1688商品进行线上同款搜索，erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.new.search-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.new.search&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.same.product.search-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.same.product.search&amp;v=1</summary>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
+        /// <param name="searchKey">搜索参数，如果传了页面会直接展示搜索结果。参数可以是1688商品链接或者1688商品id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCrossCompanyProductNewSearchResult AlibabaCrossCompanyProductNewSearch(string orgId)
+        public AlibabaCrossSameProductSearchResult AlibabaCrossSameProductSearch(string orgId, string endUserId = null, string searchKey = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossCompanyProductNewSearchAsync(orgId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossSameProductSearchAsync(orgId, endUserId, searchKey, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景企业维度新品搜索
-        /// 按照企业维度给出新品列表
+        /// <summary>选品-跨境同款
+        /// 按照已有1688商品进行线上同款搜索，erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.same.product.search-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.same.product.search&amp;v=1</summary>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
+        /// <param name="searchKey">搜索参数，如果传了页面会直接展示搜索结果。参数可以是1688商品链接或者1688商品id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCrossSameProductSearchResult> AlibabaCrossSameProductSearchAsync(string orgId, string endUserId = null, string searchKey = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/alibaba.cross.same.product.search/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (orgId == null)
+                        throw new System.ArgumentNullException("orgId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orgId, System.Globalization.CultureInfo.InvariantCulture)), "orgId");
+                    }
+                    if (endUserId != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endUserId, System.Globalization.CultureInfo.InvariantCulture)), "endUserId");
+                    }
+                    if (searchKey != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(searchKey, System.Globalization.CultureInfo.InvariantCulture)), "searchKey");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCrossSameProductSearchResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCrossSameProductSearchResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>选品-跨境新品搜索
+        /// 按照终端用户维度给出有过线上交易的供应商新品列表。erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.new.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.new.search&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCrossCompanyProductNewSearchResult> AlibabaCrossCompanyProductNewSearchAsync(string orgId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public AlibabaCrossCompanyProductNewSearchResult AlibabaCrossCompanyProductNewSearch(string orgId, string endUserId = null)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossCompanyProductNewSearchAsync(orgId, endUserId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>选品-跨境新品搜索
+        /// 按照终端用户维度给出有过线上交易的供应商新品列表。erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.new.search-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.new.search&amp;v=1</summary>
+        /// <param name="orgId">erp内部的企业身份id，对超买而言就是自定义的企业唯一标识</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCrossCompanyProductNewSearchResult> AlibabaCrossCompanyProductNewSearchAsync(string orgId, string endUserId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/alibaba.cross.company.product.new.search/{AppKey}");
@@ -9046,6 +9427,10 @@ namespace AlibabaSDK
                     else
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(orgId, System.Globalization.CultureInfo.InvariantCulture)), "orgId");
+                    }
+                    if (endUserId != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endUserId, System.Globalization.CultureInfo.InvariantCulture)), "endUserId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -9101,8 +9486,8 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>采购单记录采集同步
-        /// ERP终端用户采购单记录采集同步
+        /// <summary>数据上传-采购单记录
+        /// 终端用户采购单记录采集同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:purchaseorder.record.put-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=purchaseorder.record.put&amp;v=1</summary>
@@ -9131,8 +9516,8 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>采购单记录采集同步
-        /// ERP终端用户采购单记录采集同步
+        /// <summary>数据上传-采购单记录
+        /// 终端用户采购单记录采集同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:purchaseorder.record.put-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=purchaseorder.record.put&amp;v=1</summary>
@@ -9319,40 +9704,36 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>终端用户感兴趣商品
-        /// ERP终端用户感兴趣的类目，类目目前接受1688类目传入，或自定义类目传入。
+        /// <summary>数据上传-终端用户感兴趣供应商
+        /// 上传终端用户感兴趣的供应商
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.category-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.interesting.category&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
-        /// <param name="endUserId">erp内部的用户身份id</param>
-        /// <param name="categoryIds">感兴趣的1688类目id,逗号分隔。任意123级类目均可填写</param>
-        /// <param name="categoryNames">感兴趣的1688类目名称,逗号分隔。任意123级类目均可填写</param>
-        /// <param name="udfCategoryNames">感兴趣的自定义类目名称,逗号分隔</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.supplier.put-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.interesting.supplier.put&amp;v=1</summary>
+        /// <param name="orgId">企业id</param>
+        /// <param name="endUserId">所属企业的用户id</param>
+        /// <param name="supplierLoginIds">感兴趣供应商loginId列表，多个用英文逗号隔开</param>
         /// <returns>返回值</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Result EnduserInterestingCategory(string orgId, string endUserId, string categoryIds = null, string categoryNames = null, string udfCategoryNames = null)
+        public ComAlibabaLinkplusEnduserInterestingSupplierPutResult EnduserInterestingSupplierPut(string orgId, string endUserId, string supplierLoginIds)
         {
-            return System.Threading.Tasks.Task.Run(async () => await EnduserInterestingCategoryAsync(orgId, endUserId, categoryIds, categoryNames, udfCategoryNames, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await EnduserInterestingSupplierPutAsync(orgId, endUserId, supplierLoginIds, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>终端用户感兴趣商品
-        /// ERP终端用户感兴趣的类目，类目目前接受1688类目传入，或自定义类目传入。
+        /// <summary>数据上传-终端用户感兴趣供应商
+        /// 上传终端用户感兴趣的供应商
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.category-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.interesting.category&amp;v=1</summary>
-        /// <param name="orgId">erp内部的企业身份id</param>
-        /// <param name="endUserId">erp内部的用户身份id</param>
-        /// <param name="categoryIds">感兴趣的1688类目id,逗号分隔。任意123级类目均可填写</param>
-        /// <param name="categoryNames">感兴趣的1688类目名称,逗号分隔。任意123级类目均可填写</param>
-        /// <param name="udfCategoryNames">感兴趣的自定义类目名称,逗号分隔</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.interesting.supplier.put-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=enduser.interesting.supplier.put&amp;v=1</summary>
+        /// <param name="orgId">企业id</param>
+        /// <param name="endUserId">所属企业的用户id</param>
+        /// <param name="supplierLoginIds">感兴趣供应商loginId列表，多个用英文逗号隔开</param>
         /// <returns>返回值</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Result> EnduserInterestingCategoryAsync(string orgId, string endUserId, string categoryIds = null, string categoryNames = null, string udfCategoryNames = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ComAlibabaLinkplusEnduserInterestingSupplierPutResult> EnduserInterestingSupplierPutAsync(string orgId, string endUserId, string supplierLoginIds, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/enduser.interesting.category/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/enduser.interesting.supplier.put/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -9375,17 +9756,11 @@ namespace AlibabaSDK
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(endUserId, System.Globalization.CultureInfo.InvariantCulture)), "endUserId");
                     }
-                    if (categoryIds != null)
+                    if (supplierLoginIds == null)
+                        throw new System.ArgumentNullException("supplierLoginIds");
+                    else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(categoryIds, System.Globalization.CultureInfo.InvariantCulture)), "categoryIds");
-                    }
-                    if (categoryNames != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(categoryNames, System.Globalization.CultureInfo.InvariantCulture)), "categoryNames");
-                    }
-                    if (udfCategoryNames != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(udfCategoryNames, System.Globalization.CultureInfo.InvariantCulture)), "udfCategoryNames");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(supplierLoginIds, System.Globalization.CultureInfo.InvariantCulture)), "supplierLoginIds");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -9417,7 +9792,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Result>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<ComAlibabaLinkplusEnduserInterestingSupplierPutResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -9427,7 +9802,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Result);
+                        return default(ComAlibabaLinkplusEnduserInterestingSupplierPutResult);
                     }
                     finally
                     {
@@ -9441,105 +9816,7 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>通联支付1688产品推荐开放页面
-        /// 通联支付1688产品推荐开放页面
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:allinpay.product.recommend.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=allinpay.product.recommend.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public void AllinpayProductRecommendPage(string endOrgId, string endUserId)
-        {
-            System.Threading.Tasks.Task.Run(async () => await AllinpayProductRecommendPageAsync(endOrgId, endUserId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>通联支付1688产品推荐开放页面
-        /// 通联支付1688产品推荐开放页面
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:allinpay.product.recommend.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=allinpay.product.recommend.page&amp;v=1</summary>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task AllinpayProductRecommendPageAsync(string endOrgId, string endUserId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/allinpay.product.recommend.page/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (endOrgId == null)
-                        throw new System.ArgumentNullException("endOrgId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endOrgId, System.Globalization.CultureInfo.InvariantCulture)), "endOrgId");
-                    }
-                    if (endUserId == null)
-                        throw new System.ArgumentNullException("endUserId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endUserId, System.Globalization.CultureInfo.InvariantCulture)), "endUserId");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            return;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>销售单操作记录同步
+        /// <summary>数据上传-销售记录
         /// 销售单操作记录同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:sellorder.record.put-1 
@@ -9569,7 +9846,7 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>销售单操作记录同步
+        /// <summary>数据上传-销售记录
         /// 销售单操作记录同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:sellorder.record.put-1 
@@ -9757,7 +10034,7 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>机构授权信息推送同步
+        /// <summary>数据上传-机构授权信息
         /// 终端机构授权ERP把自己的数据同步给网站时，需要把机构授权信息同步给网站
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:org.auth.info.put-1 
@@ -9773,7 +10050,7 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>机构授权信息推送同步
+        /// <summary>数据上传-机构授权信息
         /// 终端机构授权ERP把自己的数据同步给网站时，需要把机构授权信息同步给网站
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:org.auth.info.put-1 
@@ -9869,27 +10146,29 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>跨境场景企业维度热销品搜索
-        /// 按照企业维度给出热销品列表
+        /// <summary>选品-跨境热销品搜索
+        /// 按照终端用户维度给出有过线上交易的供应商热销品列表。erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.hot.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.hot.search&amp;v=1</summary>
         /// <param name="orgId">erp内部的企业身份id</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCrossCompanyProductHotSearchResult AlibabaCrossCompanyProductHotSearch(string orgId)
+        public AlibabaCrossCompanyProductHotSearchResult AlibabaCrossCompanyProductHotSearch(string orgId, string endUserId = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossCompanyProductHotSearchAsync(orgId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossCompanyProductHotSearchAsync(orgId, endUserId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景企业维度热销品搜索
-        /// 按照企业维度给出热销品列表
+        /// <summary>选品-跨境热销品搜索
+        /// 按照终端用户维度给出有过线上交易的供应商热销品列表。erp或者超买需要申请跨境推品解决方案，另外要先调用enduser.info.put接口进行终端用户数据上传。注意此接口要加时间戳
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.hot.search-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.hot.search&amp;v=1</summary>
         /// <param name="orgId">erp内部的企业身份id</param>
+        /// <param name="endUserId">erp内部的用户身份id，对超买而言就是自定义的用户唯一标识</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCrossCompanyProductHotSearchResult> AlibabaCrossCompanyProductHotSearchAsync(string orgId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaCrossCompanyProductHotSearchResult> AlibabaCrossCompanyProductHotSearchAsync(string orgId, string endUserId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/alibaba.cross.company.product.hot.search/{AppKey}");
@@ -9908,6 +10187,10 @@ namespace AlibabaSDK
                     else
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(orgId, System.Globalization.CultureInfo.InvariantCulture)), "orgId");
+                    }
+                    if (endUserId != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endUserId, System.Globalization.CultureInfo.InvariantCulture)), "endUserId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -9963,7 +10246,7 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>感兴趣关键词采集同步
+        /// <summary>数据上传-感兴趣关键词
         /// 当终端用户发起感兴趣的商品，比如搜索，点击时，ERP发起终端用户感兴趣商品名称或者关键字信息
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:interesting.keyword.record.put-1 
@@ -9980,7 +10263,7 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>感兴趣关键词采集同步
+        /// <summary>数据上传-感兴趣关键词
         /// 当终端用户发起感兴趣的商品，比如搜索，点击时，ERP发起终端用户感兴趣商品名称或者关键字信息
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:interesting.keyword.record.put-1 
@@ -10083,135 +10366,7 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>工业品市场产品精准匹配开放页面接口
-        /// 工业品市场产品精准匹配开放页面接口
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:industrialmarket.product.match.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=industrialmarket.product.match.page&amp;v=1</summary>
-        /// <param name="batchId">业务批次ID</param>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <param name="erpWarehouse">仓库信息</param>
-        /// <param name="erpPrePurchaseOrder">预采购订单列表</param>
-        /// <param name="umidToken">设备码，通过阿里指定js获取</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public void IndustrialmarketProductMatchPage(string batchId, string endOrgId, string endUserId, ErpWarehouse erpWarehouse, System.Collections.Generic.IEnumerable<ErpPrePurchaseOrder> erpPrePurchaseOrder, string umidToken = null)
-        {
-            System.Threading.Tasks.Task.Run(async () => await IndustrialmarketProductMatchPageAsync(batchId, endOrgId, endUserId, erpWarehouse, erpPrePurchaseOrder, umidToken, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>工业品市场产品精准匹配开放页面接口
-        /// 工业品市场产品精准匹配开放页面接口
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:industrialmarket.product.match.page-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=industrialmarket.product.match.page&amp;v=1</summary>
-        /// <param name="batchId">业务批次ID</param>
-        /// <param name="endOrgId">ERP终端机构ID</param>
-        /// <param name="endUserId">ERP终端用户ID</param>
-        /// <param name="erpWarehouse">仓库信息</param>
-        /// <param name="erpPrePurchaseOrder">预采购订单列表</param>
-        /// <param name="umidToken">设备码，通过阿里指定js获取</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task IndustrialmarketProductMatchPageAsync(string batchId, string endOrgId, string endUserId, ErpWarehouse erpWarehouse, System.Collections.Generic.IEnumerable<ErpPrePurchaseOrder> erpPrePurchaseOrder, string umidToken = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.linkplus/industrialmarket.product.match.page/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (batchId == null)
-                        throw new System.ArgumentNullException("batchId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(batchId, System.Globalization.CultureInfo.InvariantCulture)), "batchId");
-                    }
-                    if (endOrgId == null)
-                        throw new System.ArgumentNullException("endOrgId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endOrgId, System.Globalization.CultureInfo.InvariantCulture)), "endOrgId");
-                    }
-                    if (endUserId == null)
-                        throw new System.ArgumentNullException("endUserId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endUserId, System.Globalization.CultureInfo.InvariantCulture)), "endUserId");
-                    }
-                    if (erpWarehouse == null)
-                        throw new System.ArgumentNullException("erpWarehouse");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(erpWarehouse, System.Globalization.CultureInfo.InvariantCulture)), "erpWarehouse");
-                    }
-                    if (erpPrePurchaseOrder == null)
-                        throw new System.ArgumentNullException("erpPrePurchaseOrder");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(erpPrePurchaseOrder, System.Globalization.CultureInfo.InvariantCulture)), "erpPrePurchaseOrder");
-                    }
-                    if (umidToken != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(umidToken, System.Globalization.CultureInfo.InvariantCulture)), "umidToken");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            return;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>跨境场景企业维度折扣品搜索
+        /// <summary>选品-跨境折扣品搜索
         /// 按照企业维度给出折扣品列表
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.discount.search-1 
@@ -10224,7 +10379,7 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景企业维度折扣品搜索
+        /// <summary>选品-跨境折扣品搜索
         /// 按照企业维度给出折扣品列表
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.discount.search-1 
@@ -10305,7 +10460,7 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>ERP用户登录记录采集同步
+        /// <summary>数据上传-终端用户登录记录
         /// erp终端用户登录数据采集同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.login.record.put-1 
@@ -10330,7 +10485,7 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>ERP用户登录记录采集同步
+        /// <summary>数据上传-终端用户登录记录
         /// erp终端用户登录数据采集同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:enduser.login.record.put-1 
@@ -10473,8 +10628,8 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>跨境场景企业维度货源推荐页面转发
-        /// 按照企业维度给出推荐的货源列表，erp需要有跨境货源推荐的权限，并且事先要上传企业数据
+        /// <summary>选品-跨境货源推荐
+        /// 按照终端用户维度给出推荐的跨境货源列表，erp或者超买需要申请对应的解决方案，并且事先要上传终端用户数据
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.recommend-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.recommend&amp;v=1</summary>
@@ -10487,8 +10642,8 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>跨境场景企业维度货源推荐页面转发
-        /// 按照企业维度给出推荐的货源列表，erp需要有跨境货源推荐的权限，并且事先要上传企业数据
+        /// <summary>选品-跨境货源推荐
+        /// 按照终端用户维度给出推荐的跨境货源列表，erp或者超买需要申请对应的解决方案，并且事先要上传终端用户数据
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:alibaba.cross.company.product.recommend-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.linkplus&amp;n=alibaba.cross.company.product.recommend&amp;v=1</summary>
@@ -10573,7 +10728,7 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>物流信息同步
+        /// <summary>数据上传-物流信息
         /// ERP物流信息同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:logistics.record.put-1 
@@ -10594,7 +10749,7 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>物流信息同步
+        /// <summary>数据上传-物流信息
         /// ERP物流信息同步
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.linkplus:logistics.record.put-1 
@@ -11240,8 +11395,8 @@ namespace AlibabaSDK
         /// <param name="productID">商品ID</param>
         /// <param name="webSite">1688或者alibaba</param>
         /// <param name="subject">商品标题，如果不传递或者传递空字符串则不作任何处理</param>
-        /// <param name="description">商品描述，如果不传递或者传递空字符串则不作任何处理.</param>
-        /// <param name="image">商品图片，如果不传递或者传递空字符串则不作任何处理请注意，如果ISV需要修改image字段，那么subject和description必须至少传入其一</param>
+        /// <param name="description">【不推荐使用】：4月16日将逐步去掉该字段的使用，修改详情请调用全量修改接口 com.alibaba.product:alibaba.product.edit</param>
+        /// <param name="image">【不推荐使用】：4月16日将逐步去掉该字段的使用，修改图片请调用全量修改接口 com.alibaba.product:alibaba.product.edit</param>
         /// <param name="supportOnlineTrade">是否允许在线交易</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 404	- 无法找到productID[57576785537]对应的商品。(商品ID错误，检查商品ID)
@@ -11263,8 +11418,8 @@ namespace AlibabaSDK
         /// <param name="productID">商品ID</param>
         /// <param name="webSite">1688或者alibaba</param>
         /// <param name="subject">商品标题，如果不传递或者传递空字符串则不作任何处理</param>
-        /// <param name="description">商品描述，如果不传递或者传递空字符串则不作任何处理.</param>
-        /// <param name="image">商品图片，如果不传递或者传递空字符串则不作任何处理请注意，如果ISV需要修改image字段，那么subject和description必须至少传入其一</param>
+        /// <param name="description">【不推荐使用】：4月16日将逐步去掉该字段的使用，修改详情请调用全量修改接口 com.alibaba.product:alibaba.product.edit</param>
+        /// <param name="image">【不推荐使用】：4月16日将逐步去掉该字段的使用，修改图片请调用全量修改接口 com.alibaba.product:alibaba.product.edit</param>
         /// <param name="supportOnlineTrade">是否允许在线交易</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 404	- 无法找到productID[57576785537]对应的商品。(商品ID错误，检查商品ID)
@@ -11354,110 +11509,6 @@ namespace AlibabaSDK
                         }
             
                         return default(AlibabaProductIncrementModifyResult);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>设置是否启用自定义分类
-        /// 设置是否启用自定义分类，启用后在旺铺中将按自定义分类展示商品。此API对国际站无效
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.group.setSwitch-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.product.group.setSwitch&amp;v=1</summary>
-        /// <param name="switchValue">设置状态，true：已开启；false：未开启</param>
-        /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
-        /// <returns>是否设置成功，true设置成功，false设置失败</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response2 AlibabaProductGroupSetSwitch(bool switchValue, string webSite)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaProductGroupSetSwitchAsync(switchValue, webSite, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>设置是否启用自定义分类
-        /// 设置是否启用自定义分类，启用后在旺铺中将按自定义分类展示商品。此API对国际站无效
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.group.setSwitch-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.product.group.setSwitch&amp;v=1</summary>
-        /// <param name="switchValue">设置状态，true：已开启；false：未开启</param>
-        /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
-        /// <returns>是否设置成功，true设置成功，false设置失败</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response2> AlibabaProductGroupSetSwitchAsync(bool switchValue, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product/alibaba.product.group.setSwitch/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (switchValue == null)
-                        throw new System.ArgumentNullException("switchValue");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(switchValue, System.Globalization.CultureInfo.InvariantCulture)), "switchValue");
-                    }
-                    if (webSite == null)
-                        throw new System.ArgumentNullException("webSite");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(webSite, System.Globalization.CultureInfo.InvariantCulture)), "webSite");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response2>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response2);
                     }
                     finally
                     {
@@ -11598,6 +11649,7 @@ namespace AlibabaSDK
         /// <param name="saleInfo">商品销售信息</param>
         /// <param name="shippingInfo">商品物流信息</param>
         /// <param name="internationalTradeInfo">商品国际贸易信息，1688无需处理此字段</param>
+        /// <param name="extendInfos">商品扩展信息</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 系统错误	- 系统错误(attributes中必须包括类目的必传属性。包括必传的产品属性和规格属性，如果没有规格属性又要按照规格报价的话会出“系统错误”)
         /// 无错误Case1	- 发布Offer 之后没有具体的规格信息(attributes的规格属性的值value必须和SKUInfo里面的attribute规格属性值attributeValue一致，否则当按规格报价时会出现offer发布成功，但是没有规格的情况。)
@@ -11605,9 +11657,9 @@ namespace AlibabaSDK
         /// 系统错误	- 自定义属性个数超过最大限制!(自定义属性最多可以添加3个)
         /// 系统错误	- XXX:是必填项！(attributes中必须包括类目的必填属性，请检查入参)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaProductAddResult AlibabaProductAdd(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null)
+        public AlibabaProductAddResult AlibabaProductAdd(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Collections.Generic.IEnumerable<AlibabaProductProductExtendInfo> extendInfos = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaProductAddAsync(productType, categoryID, subject, language, image, webSite, attributes, groupID, description, periodOfValidity, bizType, pictureAuth, skuInfos, saleInfo, shippingInfo, internationalTradeInfo, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaProductAddAsync(productType, categoryID, subject, language, image, webSite, attributes, groupID, description, periodOfValidity, bizType, pictureAuth, skuInfos, saleInfo, shippingInfo, internationalTradeInfo, extendInfos, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -11632,6 +11684,7 @@ namespace AlibabaSDK
         /// <param name="saleInfo">商品销售信息</param>
         /// <param name="shippingInfo">商品物流信息</param>
         /// <param name="internationalTradeInfo">商品国际贸易信息，1688无需处理此字段</param>
+        /// <param name="extendInfos">商品扩展信息</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 系统错误	- 系统错误(attributes中必须包括类目的必传属性。包括必传的产品属性和规格属性，如果没有规格属性又要按照规格报价的话会出“系统错误”)
         /// 无错误Case1	- 发布Offer 之后没有具体的规格信息(attributes的规格属性的值value必须和SKUInfo里面的attribute规格属性值attributeValue一致，否则当按规格报价时会出现offer发布成功，但是没有规格的情况。)
@@ -11639,7 +11692,7 @@ namespace AlibabaSDK
         /// 系统错误	- 自定义属性个数超过最大限制!(自定义属性最多可以添加3个)
         /// 系统错误	- XXX:是必填项！(attributes中必须包括类目的必填属性，请检查入参)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaProductAddResult> AlibabaProductAddAsync(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaProductAddResult> AlibabaProductAddAsync(string productType, long categoryID, string subject, string language, ComAlibabaProductAlibabaProductAddAlibabaProductProductImageInfo image, string webSite, System.Collections.Generic.IEnumerable<AlibabaProductProductAttribute> attributes = null, System.Collections.Generic.IEnumerable<long> groupID = null, string description = null, int? periodOfValidity = null, int? bizType = null, bool? pictureAuth = null, System.Collections.Generic.IEnumerable<AlibabaProductProductSKUInfo2> skuInfos = null, AlibabaProductProductSaleInfo2 saleInfo = null, AlibabaProductProductShippingInfo2 shippingInfo = null, AlibabaProductProductInternationalTradeInfo internationalTradeInfo = null, System.Collections.Generic.IEnumerable<AlibabaProductProductExtendInfo> extendInfos = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product/alibaba.product.add/{AppKey}");
@@ -11729,6 +11782,10 @@ namespace AlibabaSDK
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(internationalTradeInfo, System.Globalization.CultureInfo.InvariantCulture)), "internationalTradeInfo");
                     }
+                    if (extendInfos != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(extendInfos, System.Globalization.CultureInfo.InvariantCulture)), "extendInfos");
+                    }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
                     request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
@@ -11791,7 +11848,7 @@ namespace AlibabaSDK
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <returns>true：已开启；false：未开启</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response3 AlibabaProductGroupGetSwitch(string webSite)
+        public Response2 AlibabaProductGroupGetSwitch(string webSite)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaProductGroupGetSwitchAsync(webSite, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -11805,7 +11862,7 @@ namespace AlibabaSDK
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <returns>true：已开启；false：未开启</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response3> AlibabaProductGroupGetSwitchAsync(string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response2> AlibabaProductGroupGetSwitchAsync(string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product/alibaba.product.group.getSwitch/{AppKey}");
@@ -11855,7 +11912,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response3>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response2>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -11865,7 +11922,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response3);
+                        return default(Response2);
                     }
                     finally
                     {
@@ -12452,7 +12509,7 @@ namespace AlibabaSDK
         }
     
         /// <summary>修改商品
-        /// 修改商品详细信息，此API的调用方式建议先用product.get方法，获取productInfo，再用里面的类目ID调用“获取类目属性”接口，结合类目里的属性将productInfo里相应字段修改后，再赋给本API，这样使用起来最方便，也能最大程度的保证准确性；每个商品(Offer)修改的次数每天不能超过30次；注意可能类目里会新增一些信息需要额外填写，或类目有调整时对应的参数也需要做对应的调整。
+        /// 修改商品详细信息，此API的调用方式建议先用product.get方法，获取productInfo，再用里面的类目ID调用“获取类目属性”接口，结合类目里的属性将productInfo里相应字段修改后，再赋给本API，这样使用起来最方便，也能最大程度的保证准确性；每个商品(Offer)修改的次数每天不能超过30次；注意可能类目里会新增一些信息需要额外填写，或类目有调整时对应的参数也需要做对应的调整。     供货方式目前仅支持：现货、现货+订货 两种，即使通过类目规则拿到的供货方式是：现货、现货+订货、订货三种方式，也是仅支持现货、现货+订货这两种方式的。还有这个接口能够修改的属性会比大市场少，所以在大市场手动修改后再通过此接口修改会造成某些属性丢失，比如加工定制相关，包裹体积，库存扣减设置，订货范围等。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.edit-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.product.edit&amp;v=1</summary>
@@ -12460,14 +12517,14 @@ namespace AlibabaSDK
         /// <param name="productInfo">商品详细信息</param>
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaProductEditResult AlibabaProductEdit(long productID, AlibabaProductProductInfo5 productInfo, string webSite)
+        public AlibabaProductEditResult AlibabaProductEdit(long productID, AlibabaProductProductInfo3 productInfo, string webSite)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaProductEditAsync(productID, productInfo, webSite, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>修改商品
-        /// 修改商品详细信息，此API的调用方式建议先用product.get方法，获取productInfo，再用里面的类目ID调用“获取类目属性”接口，结合类目里的属性将productInfo里相应字段修改后，再赋给本API，这样使用起来最方便，也能最大程度的保证准确性；每个商品(Offer)修改的次数每天不能超过30次；注意可能类目里会新增一些信息需要额外填写，或类目有调整时对应的参数也需要做对应的调整。
+        /// 修改商品详细信息，此API的调用方式建议先用product.get方法，获取productInfo，再用里面的类目ID调用“获取类目属性”接口，结合类目里的属性将productInfo里相应字段修改后，再赋给本API，这样使用起来最方便，也能最大程度的保证准确性；每个商品(Offer)修改的次数每天不能超过30次；注意可能类目里会新增一些信息需要额外填写，或类目有调整时对应的参数也需要做对应的调整。     供货方式目前仅支持：现货、现货+订货 两种，即使通过类目规则拿到的供货方式是：现货、现货+订货、订货三种方式，也是仅支持现货、现货+订货这两种方式的。还有这个接口能够修改的属性会比大市场少，所以在大市场手动修改后再通过此接口修改会造成某些属性丢失，比如加工定制相关，包裹体积，库存扣减设置，订货范围等。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.product.edit-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.product.edit&amp;v=1</summary>
@@ -12475,7 +12532,7 @@ namespace AlibabaSDK
         /// <param name="productInfo">商品详细信息</param>
         /// <param name="webSite">站点信息，指定调用的API是属于国际站（alibaba）还是1688网站（1688）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaProductEditResult> AlibabaProductEditAsync(long productID, AlibabaProductProductInfo5 productInfo, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaProductEditResult> AlibabaProductEditAsync(long productID, AlibabaProductProductInfo3 productInfo, string webSite, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product/alibaba.product.edit/{AppKey}");
@@ -12805,7 +12862,7 @@ namespace AlibabaSDK
         /// <param name="userInfo">用户Id</param>
         /// <returns>推送消息列表</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response4 PushCursorMessageList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? quantity = null, string type = null, string userInfo = null)
+        public Response3 PushCursorMessageList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? quantity = null, string type = null, string userInfo = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await PushCursorMessageListAsync(createStartTime, createEndTime, quantity, type, userInfo, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -12823,7 +12880,7 @@ namespace AlibabaSDK
         /// <param name="userInfo">用户Id</param>
         /// <returns>推送消息列表</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response4> PushCursorMessageListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? quantity = null, string type = null, string userInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response3> PushCursorMessageListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? quantity = null, string type = null, string userInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/push.cursor.messageList/{AppKey}");
@@ -12887,7 +12944,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response4>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response3>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -12897,7 +12954,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response4);
+                        return default(Response3);
                     }
                     finally
                     {
@@ -13012,6 +13069,7 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.removeErpProducts-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.removeErpProducts&amp;v=1</summary>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public CnAlibabaOpenAlibabaCaigouProductRemoveErpProductsAlibabaCaigouProductResultData AlibabaCaigouProductRemoveErpProducts(System.Collections.Generic.IEnumerable<AlibabaCaigouProductErpProductCoopParam> erpProductCoopParamList)
         {
@@ -13024,6 +13082,7 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.removeErpProducts-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.removeErpProducts&amp;v=1</summary>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductRemoveErpProductsAlibabaCaigouProductResultData> AlibabaCaigouProductRemoveErpProductsAsync(System.Collections.Generic.IEnumerable<AlibabaCaigouProductErpProductCoopParam> erpProductCoopParamList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -13099,6 +13158,110 @@ namespace AlibabaSDK
             }
         }
     
+        /// <summary>内部商城修改商品物料编码
+        /// 内部商城修改商品物料编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.modifyProductCode-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.modifyProductCode&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="productCode">物料编码</param>
+        /// <returns>结构体</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouMallModifyProductCode(long goodsId, string productCode)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCaigouMallModifyProductCodeAsync(goodsId, productCode, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>内部商城修改商品物料编码
+        /// 内部商城修改商品物料编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.modifyProductCode-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.modifyProductCode&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="productCode">物料编码</param>
+        /// <returns>结构体</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouMallModifyProductCodeAsync(long goodsId, string productCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/alibaba.caigou.mall.modifyProductCode/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (goodsId == null)
+                        throw new System.ArgumentNullException("goodsId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(goodsId, System.Globalization.CultureInfo.InvariantCulture)), "goodsId");
+                    }
+                    if (productCode == null)
+                        throw new System.ArgumentNullException("productCode");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(productCode, System.Globalization.CultureInfo.InvariantCulture)), "productCode");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigousharedApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCaigousharedApiCommonModelResultData);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
         /// <summary>查询erp物料
         /// 根据系统域编码、物料编码、会员ID查询erp物料
         /// 
@@ -13106,6 +13269,7 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.getErpProductByErpProductCode&amp;v=1</summary>
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="erpProductCode">erp物料编码</param>
+        /// <returns>返回参数模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public CnAlibabaOpenAlibabaCaigouProductGetErpProductByErpProductCodeAlibabaCaigouProductResultData AlibabaCaigouProductGetErpProductByErpProductCode(string systemDomainCode, string erpProductCode)
         {
@@ -13120,6 +13284,7 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.getErpProductByErpProductCode&amp;v=1</summary>
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="erpProductCode">erp物料编码</param>
+        /// <returns>返回参数模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductGetErpProductByErpProductCodeAlibabaCaigouProductResultData> AlibabaCaigouProductGetErpProductByErpProductCodeAsync(string systemDomainCode, string erpProductCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -13220,15 +13385,17 @@ namespace AlibabaSDK
         /// <param name="authCostCenters">授权成本中心，格式：公司编码|成本中心编码   多个成本中心用英文分号分隔</param>
         /// <param name="authAreas">授权区域名称，多个用英文分号分隔</param>
         /// <param name="authCategories">授权类目编码，多个用英文分号分隔</param>
+        /// <param name="securityPhone">安全手机号码</param>
+        /// <param name="passWord">账号登录密码</param>
         /// <returns>创建成功的子帐号ID或者是已经与接入商系统内部employeeId绑定的子帐号ID返回 ErrorCode 的错误信息
         /// ISV.CONFLICT_MEMBER	- 主帐号存在同名帐号，这个是由于alibaba帐号体系合并导致还有很少一部分会员存在用户名冲突问题，新注册的不存在这个问题，如果主帐号冲突的话就不能使用子帐号相关功能，所以当发现这个问题后。(请修改自己的帐号名或者联系采购运营服务同学。)
         /// ISV.INVALID_PARAM	- 接口传入参数不合法(请按接口参数说明检查传入的param参数，确保param对象中的employeeId,buyerMemberId,name,departmend是合法有效的)
         /// ISV.DATA_PRIVILEGE_ILLEGAL	- 您无权调用此api接口，此接口只对与采购平台合作采购商才能提供这个接口服务(请先与采购平台进行合作，可联系采购运营服务同学进行咨询)
         /// ISP.SYSTEM_ERROR	- ISP系统繁忙(请确认主帐号已经登陆过旺旺（至少一次），并且已经领用了子帐号；请稍等片刻，在进行尝试；通知采购运营服务同学告知问题。)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response5 CaigouApiAccountCreateSubAccount(string employeeId, string name, string mobileNo = null, string email = null, string sex = null, string department = null, string role = null, string authCompanies = null, string authFactories = null, string authPurchaseCenters = null, string authCostCenters = null, string authAreas = null, string authCategories = null)
+        public Response4 CaigouApiAccountCreateSubAccount(string employeeId, string name, string mobileNo = null, string email = null, string sex = null, string department = null, string role = null, string authCompanies = null, string authFactories = null, string authPurchaseCenters = null, string authCostCenters = null, string authAreas = null, string authCategories = null, string securityPhone = null, string passWord = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await CaigouApiAccountCreateSubAccountAsync(employeeId, name, mobileNo, email, sex, department, role, authCompanies, authFactories, authPurchaseCenters, authCostCenters, authAreas, authCategories, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await CaigouApiAccountCreateSubAccountAsync(employeeId, name, mobileNo, email, sex, department, role, authCompanies, authFactories, authPurchaseCenters, authCostCenters, authAreas, authCategories, securityPhone, passWord, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -13251,13 +13418,15 @@ namespace AlibabaSDK
         /// <param name="authCostCenters">授权成本中心，格式：公司编码|成本中心编码   多个成本中心用英文分号分隔</param>
         /// <param name="authAreas">授权区域名称，多个用英文分号分隔</param>
         /// <param name="authCategories">授权类目编码，多个用英文分号分隔</param>
+        /// <param name="securityPhone">安全手机号码</param>
+        /// <param name="passWord">账号登录密码</param>
         /// <returns>创建成功的子帐号ID或者是已经与接入商系统内部employeeId绑定的子帐号ID返回 ErrorCode 的错误信息
         /// ISV.CONFLICT_MEMBER	- 主帐号存在同名帐号，这个是由于alibaba帐号体系合并导致还有很少一部分会员存在用户名冲突问题，新注册的不存在这个问题，如果主帐号冲突的话就不能使用子帐号相关功能，所以当发现这个问题后。(请修改自己的帐号名或者联系采购运营服务同学。)
         /// ISV.INVALID_PARAM	- 接口传入参数不合法(请按接口参数说明检查传入的param参数，确保param对象中的employeeId,buyerMemberId,name,departmend是合法有效的)
         /// ISV.DATA_PRIVILEGE_ILLEGAL	- 您无权调用此api接口，此接口只对与采购平台合作采购商才能提供这个接口服务(请先与采购平台进行合作，可联系采购运营服务同学进行咨询)
         /// ISP.SYSTEM_ERROR	- ISP系统繁忙(请确认主帐号已经登陆过旺旺（至少一次），并且已经领用了子帐号；请稍等片刻，在进行尝试；通知采购运营服务同学告知问题。)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response5> CaigouApiAccountCreateSubAccountAsync(string employeeId, string name, string mobileNo = null, string email = null, string sex = null, string department = null, string role = null, string authCompanies = null, string authFactories = null, string authPurchaseCenters = null, string authCostCenters = null, string authAreas = null, string authCategories = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response4> CaigouApiAccountCreateSubAccountAsync(string employeeId, string name, string mobileNo = null, string email = null, string sex = null, string department = null, string role = null, string authCompanies = null, string authFactories = null, string authPurchaseCenters = null, string authCostCenters = null, string authAreas = null, string authCategories = null, string securityPhone = null, string passWord = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.account.createSubAccount/{AppKey}");
@@ -13327,6 +13496,14 @@ namespace AlibabaSDK
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(authCategories, System.Globalization.CultureInfo.InvariantCulture)), "authCategories");
                     }
+                    if (securityPhone != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(securityPhone, System.Globalization.CultureInfo.InvariantCulture)), "securityPhone");
+                    }
+                    if (passWord != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(passWord, System.Globalization.CultureInfo.InvariantCulture)), "passWord");
+                    }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
                     request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
@@ -13357,7 +13534,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response5>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response4>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -13367,7 +13544,109 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response5);
+                        return default(Response4);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>邀请供应商多轮报价(支持多轮询价)
+        /// 邀请供应商进行多轮报价，支持多轮询价
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.quotation.inviteSupplierMultiQuote-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.quotation.inviteSupplierMultiQuote&amp;v=1</summary>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// invalid_param	- 参数无效(检查必填参数是否为空)
+        /// invalid_user	- 用户信息错误(检查appkey、秘钥、token是否输入)
+        /// buyoffer_not_exist	- 询价单不存在(检查询价单ID是否输入)
+        /// system_error	- 系统错误(联系管理人员进行解决)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq CaigouApiQuotationInviteSupplierMultiQuote(AlibabaCaigouCoopapiQuotationParamSupplierMultiQuoteParam param)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await CaigouApiQuotationInviteSupplierMultiQuoteAsync(param, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>邀请供应商多轮报价(支持多轮询价)
+        /// 邀请供应商进行多轮报价，支持多轮询价
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.quotation.inviteSupplierMultiQuote-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.quotation.inviteSupplierMultiQuote&amp;v=1</summary>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// invalid_param	- 参数无效(检查必填参数是否为空)
+        /// invalid_user	- 用户信息错误(检查appkey、秘钥、token是否输入)
+        /// buyoffer_not_exist	- 询价单不存在(检查询价单ID是否输入)
+        /// system_error	- 系统错误(联系管理人员进行解决)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq> CaigouApiQuotationInviteSupplierMultiQuoteAsync(AlibabaCaigouCoopapiQuotationParamSupplierMultiQuoteParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.quotation.inviteSupplierMultiQuote/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (param == null)
+                        throw new System.ArgumentNullException("param");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(param, System.Globalization.CultureInfo.InvariantCulture)), "param");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq);
                     }
                     finally
                     {
@@ -14107,7 +14386,7 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.account.listSubAcccounts&amp;v=1</summary>
         /// <returns>返回列表</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response6 CaigouApiAccountListSubAcccounts()
+        public Response5 CaigouApiAccountListSubAcccounts()
         {
             return System.Threading.Tasks.Task.Run(async () => await CaigouApiAccountListSubAcccountsAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -14121,7 +14400,7 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.account.listSubAcccounts&amp;v=1</summary>
         /// <returns>返回列表</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response6> CaigouApiAccountListSubAcccountsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response5> CaigouApiAccountListSubAcccountsAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.account.listSubAcccounts/{AppKey}");
@@ -14161,7 +14440,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response6>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response5>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -14171,7 +14450,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response6);
+                        return default(Response5);
                     }
                     finally
                     {
@@ -14195,7 +14474,7 @@ namespace AlibabaSDK
         /// <param name="closeDesc">关闭询价单的详细描述【不要超过40个字符】</param>
         /// <returns>是否执行成功</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response7 CaigouApiBuyofferCloseBuyOffer(long buyOfferId, string closeReason, string closeDesc = null)
+        public Response6 CaigouApiBuyofferCloseBuyOffer(long buyOfferId, string closeReason, string closeDesc = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await CaigouApiBuyofferCloseBuyOfferAsync(buyOfferId, closeReason, closeDesc, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -14211,7 +14490,7 @@ namespace AlibabaSDK
         /// <param name="closeDesc">关闭询价单的详细描述【不要超过40个字符】</param>
         /// <returns>是否执行成功</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response7> CaigouApiBuyofferCloseBuyOfferAsync(long buyOfferId, string closeReason, string closeDesc = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response6> CaigouApiBuyofferCloseBuyOfferAsync(long buyOfferId, string closeReason, string closeDesc = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.buyoffer.closeBuyOffer/{AppKey}");
@@ -14271,7 +14550,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response7>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response6>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -14281,7 +14560,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response7);
+                        return default(Response6);
                     }
                     finally
                     {
@@ -14303,7 +14582,7 @@ namespace AlibabaSDK
         /// <param name="payId">付款单id</param>
         /// <returns>取消结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerPayServiceCancelPayNote(long payId)
+        public AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq ComAlibabaProcurementBuyerPayServiceCancelPayNote(long payId)
         {
             return System.Threading.Tasks.Task.Run(async () => await ComAlibabaProcurementBuyerPayServiceCancelPayNoteAsync(payId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -14317,7 +14596,7 @@ namespace AlibabaSDK
         /// <param name="payId">付款单id</param>
         /// <returns>取消结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerPayServiceCancelPayNoteAsync(long payId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq> ComAlibabaProcurementBuyerPayServiceCancelPayNoteAsync(long payId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.procurement.BuyerPayService.cancelPayNote/{AppKey}");
@@ -14367,7 +14646,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaProcurementApiIntegrationResultResultData>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -14377,7 +14656,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaProcurementApiIntegrationResultResultData);
+                        return default(AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq);
                     }
                     finally
                     {
@@ -14491,7 +14770,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.category.queryAllErpCategory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.category.queryAllErpCategory&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response8 AlibabaCaigouCategoryQueryAllErpCategory()
+        public Response7 AlibabaCaigouCategoryQueryAllErpCategory()
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaCaigouCategoryQueryAllErpCategoryAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -14503,7 +14782,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.category.queryAllErpCategory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.category.queryAllErpCategory&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response8> AlibabaCaigouCategoryQueryAllErpCategoryAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response7> AlibabaCaigouCategoryQueryAllErpCategoryAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/alibaba.caigou.category.queryAllErpCategory/{AppKey}");
@@ -14514,6 +14793,122 @@ namespace AlibabaSDK
                 using (var request_ = new System.Net.Http.HttpRequestMessage())
                 {
                     request_.Content = new System.Net.Http.StringContent(string.Empty, System.Text.Encoding.UTF8, "application/json");
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<Response7>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(Response7);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>供应商信息导入
+        /// 供应商信息导入.(供应商memberID、公司名、固话、邮箱、手机至少填写一项)
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.supplier.import-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.supplier.import&amp;v=1</summary>
+        /// <param name="list">参数类型是json类型的list字符串.包含字段:
+        /// &amp;quot;buyerMemberId&amp;quot; 采购商memberId
+        /// &amp;quot;supplierCompanyName&amp;quot; 供应商公司名
+        /// &amp;quot;supplierEmail&amp;quot; 供应商电子邮箱
+        /// &amp;quot;supplierMemberId&amp;quot; 供应商memberId
+        /// &amp;quot;supplierMobile&amp;quot; 供应商手机
+        /// &amp;quot;supplierPhone&amp;quot; 供应商电话
+        /// &amp;quot;externalId&amp;quot; (必填)
+        /// 
+        /// 其中供应商memberID、公司名、固话、邮箱、手机至少填写一项</param>
+        /// <returns>返回导入失败的数据.全部成功返回的list长度为0.
+        /// 外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public Response8 CaigouApiSupplierImport(System.Collections.Generic.IEnumerable<string> list)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await CaigouApiSupplierImportAsync(list, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>供应商信息导入
+        /// 供应商信息导入.(供应商memberID、公司名、固话、邮箱、手机至少填写一项)
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.supplier.import-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.supplier.import&amp;v=1</summary>
+        /// <param name="list">参数类型是json类型的list字符串.包含字段:
+        /// &amp;quot;buyerMemberId&amp;quot; 采购商memberId
+        /// &amp;quot;supplierCompanyName&amp;quot; 供应商公司名
+        /// &amp;quot;supplierEmail&amp;quot; 供应商电子邮箱
+        /// &amp;quot;supplierMemberId&amp;quot; 供应商memberId
+        /// &amp;quot;supplierMobile&amp;quot; 供应商手机
+        /// &amp;quot;supplierPhone&amp;quot; 供应商电话
+        /// &amp;quot;externalId&amp;quot; (必填)
+        /// 
+        /// 其中供应商memberID、公司名、固话、邮箱、手机至少填写一项</param>
+        /// <returns>返回导入失败的数据.全部成功返回的list长度为0.
+        /// 外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<Response8> CaigouApiSupplierImportAsync(System.Collections.Generic.IEnumerable<string> list, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.supplier.import/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (list == null)
+                        throw new System.ArgumentNullException("list");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(list, System.Globalization.CultureInfo.InvariantCulture)), "list");
+                    }
+                    request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
                     request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
     
@@ -14567,52 +14962,28 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>供应商信息导入
-        /// 供应商信息导入.(供应商memberID、公司名、固话、邮箱、手机至少填写一项)
+        /// <summary>企业采购内部商城下单前置供应商校验【已废弃】
+        /// 企业采购内部商城下单前置供应商校验
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.supplier.import-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.supplier.import&amp;v=1</summary>
-        /// <param name="list">参数类型是json类型的list字符串.包含字段:
-        /// &amp;quot;buyerMemberId&amp;quot; 采购商memberId
-        /// &amp;quot;supplierCompanyName&amp;quot; 供应商公司名
-        /// &amp;quot;supplierEmail&amp;quot; 供应商电子邮箱
-        /// &amp;quot;supplierMemberId&amp;quot; 供应商memberId
-        /// &amp;quot;supplierMobile&amp;quot; 供应商手机
-        /// &amp;quot;supplierPhone&amp;quot; 供应商电话
-        /// &amp;quot;externalId&amp;quot; (必填)
-        /// 
-        /// 其中供应商memberID、公司名、固话、邮箱、手机至少填写一项</param>
-        /// <returns>返回导入失败的数据.全部成功返回的list长度为0.
-        /// 外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.order.supplier.precheck-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.order.supplier.precheck&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response9 CaigouApiSupplierImport(System.Collections.Generic.IEnumerable<string> list)
+        public AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq AlibabaCaigouMallOrderSupplierPrecheck(AlibabaCaigouCoopapiMallOrderParamCoopSubmitOrderParam coopSubmitOrderParam)
         {
-            return System.Threading.Tasks.Task.Run(async () => await CaigouApiSupplierImportAsync(list, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCaigouMallOrderSupplierPrecheckAsync(coopSubmitOrderParam, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>供应商信息导入
-        /// 供应商信息导入.(供应商memberID、公司名、固话、邮箱、手机至少填写一项)
+        /// <summary>企业采购内部商城下单前置供应商校验【已废弃】
+        /// 企业采购内部商城下单前置供应商校验
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.supplier.import-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.supplier.import&amp;v=1</summary>
-        /// <param name="list">参数类型是json类型的list字符串.包含字段:
-        /// &amp;quot;buyerMemberId&amp;quot; 采购商memberId
-        /// &amp;quot;supplierCompanyName&amp;quot; 供应商公司名
-        /// &amp;quot;supplierEmail&amp;quot; 供应商电子邮箱
-        /// &amp;quot;supplierMemberId&amp;quot; 供应商memberId
-        /// &amp;quot;supplierMobile&amp;quot; 供应商手机
-        /// &amp;quot;supplierPhone&amp;quot; 供应商电话
-        /// &amp;quot;externalId&amp;quot; (必填)
-        /// 
-        /// 其中供应商memberID、公司名、固话、邮箱、手机至少填写一项</param>
-        /// <returns>返回导入失败的数据.全部成功返回的list长度为0.
-        /// 外部系统对应当前supplierMember的唯一id. 比如:采购商A.导入一条供应商B的数据.externalId表示供应商B在采购商A所属的外部系统中定义的唯一Id.</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.order.supplier.precheck-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.order.supplier.precheck&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response9> CaigouApiSupplierImportAsync(System.Collections.Generic.IEnumerable<string> list, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq> AlibabaCaigouMallOrderSupplierPrecheckAsync(AlibabaCaigouCoopapiMallOrderParamCoopSubmitOrderParam coopSubmitOrderParam, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.supplier.import/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/alibaba.caigou.mall.order.supplier.precheck/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -14623,11 +14994,111 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (list == null)
-                        throw new System.ArgumentNullException("list");
+                    if (coopSubmitOrderParam == null)
+                        throw new System.ArgumentNullException("coopSubmitOrderParam");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(list, System.Globalization.CultureInfo.InvariantCulture)), "list");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(coopSubmitOrderParam, System.Globalization.CultureInfo.InvariantCulture)), "coopSubmitOrderParam");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>根据prId查询询价单列表
+        /// 根据prId查询询价单列表（限制：返回条数100，否则舍弃）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.buyOffer.queryBuyOfferByPrId-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.buyOffer.queryBuyOfferByPrId&amp;v=1</summary>
+        /// <param name="prId">外部系统prId</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// ISV.DATA_NOT_EXIST	- 数据不存在
+        /// ISP.SYSTEM_ERROR	- 系统出错(请联系开发人员排查)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public Response9 CaigouApiBuyOfferQueryBuyOfferByPrId(string prId)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await CaigouApiBuyOfferQueryBuyOfferByPrIdAsync(prId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>根据prId查询询价单列表
+        /// 根据prId查询询价单列表（限制：返回条数100，否则舍弃）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.buyOffer.queryBuyOfferByPrId-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.buyOffer.queryBuyOfferByPrId&amp;v=1</summary>
+        /// <param name="prId">外部系统prId</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// ISV.DATA_NOT_EXIST	- 数据不存在
+        /// ISP.SYSTEM_ERROR	- 系统出错(请联系开发人员排查)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<Response9> CaigouApiBuyOfferQueryBuyOfferByPrIdAsync(string prId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.buyOffer.queryBuyOfferByPrId/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (prId == null)
+                        throw new System.ArgumentNullException("prId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(prId, System.Globalization.CultureInfo.InvariantCulture)), "prId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -14683,36 +15154,32 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>根据prId查询询价单列表
-        /// 根据prId查询询价单列表（限制：返回条数100，否则舍弃）
+        /// <summary>根据id删除产品
+        /// 根据id删除产品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.buyOffer.queryBuyOfferByPrId-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.buyOffer.queryBuyOfferByPrId&amp;v=1</summary>
-        /// <param name="prId">外部系统prId</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// ISV.DATA_NOT_EXIST	- 数据不存在
-        /// ISP.SYSTEM_ERROR	- 系统出错(请联系开发人员排查)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.product.deleteProductById-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.product.deleteProductById&amp;v=1</summary>
+        /// <param name="productId">产品在1688所属id</param>
+        /// <returns>删除结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response10 CaigouApiBuyOfferQueryBuyOfferByPrId(string prId)
+        public Response10 CaigouApiProductDeleteProductById(long productId)
         {
-            return System.Threading.Tasks.Task.Run(async () => await CaigouApiBuyOfferQueryBuyOfferByPrIdAsync(prId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await CaigouApiProductDeleteProductByIdAsync(productId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>根据prId查询询价单列表
-        /// 根据prId查询询价单列表（限制：返回条数100，否则舍弃）
+        /// <summary>根据id删除产品
+        /// 根据id删除产品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.buyOffer.queryBuyOfferByPrId-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.buyOffer.queryBuyOfferByPrId&amp;v=1</summary>
-        /// <param name="prId">外部系统prId</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// ISV.DATA_NOT_EXIST	- 数据不存在
-        /// ISP.SYSTEM_ERROR	- 系统出错(请联系开发人员排查)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.product.deleteProductById-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.product.deleteProductById&amp;v=1</summary>
+        /// <param name="productId">产品在1688所属id</param>
+        /// <returns>删除结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response10> CaigouApiBuyOfferQueryBuyOfferByPrIdAsync(string prId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response10> CaigouApiProductDeleteProductByIdAsync(long productId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.buyOffer.queryBuyOfferByPrId/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.product.deleteProductById/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -14723,11 +15190,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (prId == null)
-                        throw new System.ArgumentNullException("prId");
+                    if (productId == null)
+                        throw new System.ArgumentNullException("productId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(prId, System.Globalization.CultureInfo.InvariantCulture)), "prId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(productId, System.Globalization.CultureInfo.InvariantCulture)), "productId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -14783,102 +15250,6 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>根据id删除产品
-        /// 根据id删除产品
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.product.deleteProductById-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.product.deleteProductById&amp;v=1</summary>
-        /// <param name="productId">产品在1688所属id</param>
-        /// <returns>删除结果</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response11 CaigouApiProductDeleteProductById(long productId)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await CaigouApiProductDeleteProductByIdAsync(productId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>根据id删除产品
-        /// 根据id删除产品
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.product.deleteProductById-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.product.deleteProductById&amp;v=1</summary>
-        /// <param name="productId">产品在1688所属id</param>
-        /// <returns>删除结果</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response11> CaigouApiProductDeleteProductByIdAsync(long productId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.product.deleteProductById/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (productId == null)
-                        throw new System.ArgumentNullException("productId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(productId, System.Globalization.CultureInfo.InvariantCulture)), "productId");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response11>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response11);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
         /// <summary>更新产品信息
         /// 更新产品信息，根据产品编号更新产品，操作人员编号需要绑定后才能操作
         /// 
@@ -14901,7 +15272,7 @@ namespace AlibabaSDK
         /// ISV.DATA_NOT_EXIST	- 您要修改的数据不存在(请检查productId是否是1688的主键，再检查该产品是否已被删除)
         /// ISV.NO_PERMISSION	- 无权限修改(请检查该产品归属人是否是您的账号)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response7 CaigouApiProductModifyProduct(long productId, string productCode = null, string title = null, string unit = null, string remark = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, string instruction = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null)
+        public Response6 CaigouApiProductModifyProduct(long productId, string productCode = null, string title = null, string unit = null, string remark = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, string instruction = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await CaigouApiProductModifyProductAsync(productId, productCode, title, unit, remark, productAttributes, instruction, picUrlList, attachmentList, referencePrice, userCategoryId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -14929,7 +15300,7 @@ namespace AlibabaSDK
         /// ISV.DATA_NOT_EXIST	- 您要修改的数据不存在(请检查productId是否是1688的主键，再检查该产品是否已被删除)
         /// ISV.NO_PERMISSION	- 无权限修改(请检查该产品归属人是否是您的账号)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response7> CaigouApiProductModifyProductAsync(long productId, string productCode = null, string title = null, string unit = null, string remark = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, string instruction = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response6> CaigouApiProductModifyProductAsync(long productId, string productCode = null, string title = null, string unit = null, string remark = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, string instruction = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.product.modifyProduct/{AppKey}");
@@ -15019,7 +15390,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response7>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response6>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -15029,7 +15400,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response7);
+                        return default(Response6);
                     }
                     finally
                     {
@@ -15147,7 +15518,7 @@ namespace AlibabaSDK
         /// ISV.INVALID_PARAM	- 参数错误(isv端确认参数是否传输正确)
         /// ISP.SYSTEM_ERROR	- 系统错误(isv联系isp进行问题排查)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response12 CaigouApiQuotationBuyerGetQuotationListByBuyOfferId(long buyofferId)
+        public Response11 CaigouApiQuotationBuyerGetQuotationListByBuyOfferId(long buyofferId)
         {
             return System.Threading.Tasks.Task.Run(async () => await CaigouApiQuotationBuyerGetQuotationListByBuyOfferIdAsync(buyofferId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -15163,7 +15534,7 @@ namespace AlibabaSDK
         /// ISV.INVALID_PARAM	- 参数错误(isv端确认参数是否传输正确)
         /// ISP.SYSTEM_ERROR	- 系统错误(isv联系isp进行问题排查)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response12> CaigouApiQuotationBuyerGetQuotationListByBuyOfferIdAsync(long buyofferId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response11> CaigouApiQuotationBuyerGetQuotationListByBuyOfferIdAsync(long buyofferId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.quotation.buyerGetQuotationListByBuyOfferId/{AppKey}");
@@ -15213,7 +15584,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response12>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response11>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -15223,7 +15594,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response12);
+                        return default(Response11);
                     }
                     finally
                     {
@@ -15260,7 +15631,7 @@ namespace AlibabaSDK
         /// <param name="regCapital">供应商要求：注册资金。单位万元</param>
         /// <param name="prId">外部系统的采购需求的id （prId）【不要大于64个英文或数字字符】</param>
         /// <param name="attachmentIdList">附件id的列表。附件id来源于上传附件的接口。</param>
-        /// <param name="visibleAfterEndQuote">未到截止日期不可查看报价</param>
+        /// <param name="visibleAfterEndQuote">比价方式。true:密封比价(未到截止日期不可查看报价)；false:非密封比价</param>
         /// <param name="includeTax">需要包含税价</param>
         /// <param name="quoteHasPostFee">报价需要包含运费价</param>
         /// <param name="allowPartOffer">允许对询价单商品部分报价</param>
@@ -15286,7 +15657,7 @@ namespace AlibabaSDK
         /// <param name="gmtReceiveBeginDate">期望收货开始时间</param>
         /// <param name="gmtReceive">期望收货结束日期</param>
         /// <param name="supplierLoginIds">供应商loginIds</param>
-        /// <param name="purchaseNoteType">采购单类型</param>
+        /// <param name="purchaseNoteType">询价类型。1:现货/标准品；2:加工/定制品；3:库存/二手</param>
         /// <param name="deliveryPeriod">交货期</param>
         /// <param name="balanceDateType">账期类型，是否指定结算日</param>
         /// <param name="balanceDateValue">结算日期或结算周期</param>
@@ -15305,7 +15676,7 @@ namespace AlibabaSDK
         /// ISV.USER_IN_BLACK_LIST	- 该会员被举报，加入了黑名单
         /// ISP.SYSTEM_ERROR	- 系统错误(请联系采购平台)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response13 CaigouApiBuyofferPostBuyoffer(string subject, System.Collections.Generic.IEnumerable<string> items, string contact, string phone, System.DateTimeOffset gmtQuotationExpire, long? subUserId = null, string description = null, string receiveAddressProvince = null, string receiveAddressCity = null, string receiveAddressCounty = null, System.Collections.Generic.IEnumerable<string> expectedSupplierAreas = null, string invoiceRequirement = null, bool? supportAlipayGuaranteeTrade = null, System.Collections.Generic.IEnumerable<string> certificateIds = null, System.Collections.Generic.IEnumerable<string> otherCertificateNames = null, long? regCapital = null, string prId = null, System.Collections.Generic.IEnumerable<string> attachmentIdList = null, bool? visibleAfterEndQuote = null, bool? includeTax = null, bool? quoteHasPostFee = null, bool? allowPartOffer = null, bool? open = null, bool? openToPortal = null, string processTemplateCode = null, string transToolType = null, System.Collections.Generic.IEnumerable<string> supplierAreas = null, string needSignAgreement = null, string subBizType = null, string sourceMethodType = null, System.Collections.Generic.IEnumerable<string> supplierMemberIds = null, System.DateTimeOffset? gmtProtocolStart = null, System.DateTimeOffset? gmtProtocolEnd = null, string receiveStreetAddress = null, string onlineShoppingDesc = null, System.Collections.Generic.IEnumerable<string> onlineShoppingAttachList = null, System.DateTimeOffset? gmtReceiveBeginDate = null, System.DateTimeOffset? gmtReceive = null, System.Collections.Generic.IEnumerable<string> supplierLoginIds = null, string purchaseNoteType = null, int? deliveryPeriod = null, string balanceDateType = null, string balanceDateValue = null, bool? allmysupplier = null, bool? selectedmysupplier = null, bool? openContact2All = null, bool? needAudit4OpenContact = null, bool? openContactBeforeQuote = null, string invoiceSubType = null, bool? supplierCanModifyQuantity = null, bool? supplierCantModifyProtocalDate = null)
+        public Response12 CaigouApiBuyofferPostBuyoffer(string subject, System.Collections.Generic.IEnumerable<string> items, string contact, string phone, System.DateTimeOffset gmtQuotationExpire, long? subUserId = null, string description = null, string receiveAddressProvince = null, string receiveAddressCity = null, string receiveAddressCounty = null, System.Collections.Generic.IEnumerable<string> expectedSupplierAreas = null, string invoiceRequirement = null, bool? supportAlipayGuaranteeTrade = null, System.Collections.Generic.IEnumerable<string> certificateIds = null, System.Collections.Generic.IEnumerable<string> otherCertificateNames = null, long? regCapital = null, string prId = null, System.Collections.Generic.IEnumerable<string> attachmentIdList = null, bool? visibleAfterEndQuote = null, bool? includeTax = null, bool? quoteHasPostFee = null, bool? allowPartOffer = null, bool? open = null, bool? openToPortal = null, string processTemplateCode = null, string transToolType = null, System.Collections.Generic.IEnumerable<string> supplierAreas = null, string needSignAgreement = null, string subBizType = null, string sourceMethodType = null, System.Collections.Generic.IEnumerable<string> supplierMemberIds = null, System.DateTimeOffset? gmtProtocolStart = null, System.DateTimeOffset? gmtProtocolEnd = null, string receiveStreetAddress = null, string onlineShoppingDesc = null, System.Collections.Generic.IEnumerable<string> onlineShoppingAttachList = null, System.DateTimeOffset? gmtReceiveBeginDate = null, System.DateTimeOffset? gmtReceive = null, System.Collections.Generic.IEnumerable<string> supplierLoginIds = null, string purchaseNoteType = null, int? deliveryPeriod = null, string balanceDateType = null, string balanceDateValue = null, bool? allmysupplier = null, bool? selectedmysupplier = null, bool? openContact2All = null, bool? needAudit4OpenContact = null, bool? openContactBeforeQuote = null, string invoiceSubType = null, bool? supplierCanModifyQuantity = null, bool? supplierCantModifyProtocalDate = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await CaigouApiBuyofferPostBuyofferAsync(subject, items, contact, phone, gmtQuotationExpire, subUserId, description, receiveAddressProvince, receiveAddressCity, receiveAddressCounty, expectedSupplierAreas, invoiceRequirement, supportAlipayGuaranteeTrade, certificateIds, otherCertificateNames, regCapital, prId, attachmentIdList, visibleAfterEndQuote, includeTax, quoteHasPostFee, allowPartOffer, open, openToPortal, processTemplateCode, transToolType, supplierAreas, needSignAgreement, subBizType, sourceMethodType, supplierMemberIds, gmtProtocolStart, gmtProtocolEnd, receiveStreetAddress, onlineShoppingDesc, onlineShoppingAttachList, gmtReceiveBeginDate, gmtReceive, supplierLoginIds, purchaseNoteType, deliveryPeriod, balanceDateType, balanceDateValue, allmysupplier, selectedmysupplier, openContact2All, needAudit4OpenContact, openContactBeforeQuote, invoiceSubType, supplierCanModifyQuantity, supplierCantModifyProtocalDate, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -15334,7 +15705,7 @@ namespace AlibabaSDK
         /// <param name="regCapital">供应商要求：注册资金。单位万元</param>
         /// <param name="prId">外部系统的采购需求的id （prId）【不要大于64个英文或数字字符】</param>
         /// <param name="attachmentIdList">附件id的列表。附件id来源于上传附件的接口。</param>
-        /// <param name="visibleAfterEndQuote">未到截止日期不可查看报价</param>
+        /// <param name="visibleAfterEndQuote">比价方式。true:密封比价(未到截止日期不可查看报价)；false:非密封比价</param>
         /// <param name="includeTax">需要包含税价</param>
         /// <param name="quoteHasPostFee">报价需要包含运费价</param>
         /// <param name="allowPartOffer">允许对询价单商品部分报价</param>
@@ -15360,7 +15731,7 @@ namespace AlibabaSDK
         /// <param name="gmtReceiveBeginDate">期望收货开始时间</param>
         /// <param name="gmtReceive">期望收货结束日期</param>
         /// <param name="supplierLoginIds">供应商loginIds</param>
-        /// <param name="purchaseNoteType">采购单类型</param>
+        /// <param name="purchaseNoteType">询价类型。1:现货/标准品；2:加工/定制品；3:库存/二手</param>
         /// <param name="deliveryPeriod">交货期</param>
         /// <param name="balanceDateType">账期类型，是否指定结算日</param>
         /// <param name="balanceDateValue">结算日期或结算周期</param>
@@ -15379,7 +15750,7 @@ namespace AlibabaSDK
         /// ISV.USER_IN_BLACK_LIST	- 该会员被举报，加入了黑名单
         /// ISP.SYSTEM_ERROR	- 系统错误(请联系采购平台)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response13> CaigouApiBuyofferPostBuyofferAsync(string subject, System.Collections.Generic.IEnumerable<string> items, string contact, string phone, System.DateTimeOffset gmtQuotationExpire, long? subUserId = null, string description = null, string receiveAddressProvince = null, string receiveAddressCity = null, string receiveAddressCounty = null, System.Collections.Generic.IEnumerable<string> expectedSupplierAreas = null, string invoiceRequirement = null, bool? supportAlipayGuaranteeTrade = null, System.Collections.Generic.IEnumerable<string> certificateIds = null, System.Collections.Generic.IEnumerable<string> otherCertificateNames = null, long? regCapital = null, string prId = null, System.Collections.Generic.IEnumerable<string> attachmentIdList = null, bool? visibleAfterEndQuote = null, bool? includeTax = null, bool? quoteHasPostFee = null, bool? allowPartOffer = null, bool? open = null, bool? openToPortal = null, string processTemplateCode = null, string transToolType = null, System.Collections.Generic.IEnumerable<string> supplierAreas = null, string needSignAgreement = null, string subBizType = null, string sourceMethodType = null, System.Collections.Generic.IEnumerable<string> supplierMemberIds = null, System.DateTimeOffset? gmtProtocolStart = null, System.DateTimeOffset? gmtProtocolEnd = null, string receiveStreetAddress = null, string onlineShoppingDesc = null, System.Collections.Generic.IEnumerable<string> onlineShoppingAttachList = null, System.DateTimeOffset? gmtReceiveBeginDate = null, System.DateTimeOffset? gmtReceive = null, System.Collections.Generic.IEnumerable<string> supplierLoginIds = null, string purchaseNoteType = null, int? deliveryPeriod = null, string balanceDateType = null, string balanceDateValue = null, bool? allmysupplier = null, bool? selectedmysupplier = null, bool? openContact2All = null, bool? needAudit4OpenContact = null, bool? openContactBeforeQuote = null, string invoiceSubType = null, bool? supplierCanModifyQuantity = null, bool? supplierCantModifyProtocalDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response12> CaigouApiBuyofferPostBuyofferAsync(string subject, System.Collections.Generic.IEnumerable<string> items, string contact, string phone, System.DateTimeOffset gmtQuotationExpire, long? subUserId = null, string description = null, string receiveAddressProvince = null, string receiveAddressCity = null, string receiveAddressCounty = null, System.Collections.Generic.IEnumerable<string> expectedSupplierAreas = null, string invoiceRequirement = null, bool? supportAlipayGuaranteeTrade = null, System.Collections.Generic.IEnumerable<string> certificateIds = null, System.Collections.Generic.IEnumerable<string> otherCertificateNames = null, long? regCapital = null, string prId = null, System.Collections.Generic.IEnumerable<string> attachmentIdList = null, bool? visibleAfterEndQuote = null, bool? includeTax = null, bool? quoteHasPostFee = null, bool? allowPartOffer = null, bool? open = null, bool? openToPortal = null, string processTemplateCode = null, string transToolType = null, System.Collections.Generic.IEnumerable<string> supplierAreas = null, string needSignAgreement = null, string subBizType = null, string sourceMethodType = null, System.Collections.Generic.IEnumerable<string> supplierMemberIds = null, System.DateTimeOffset? gmtProtocolStart = null, System.DateTimeOffset? gmtProtocolEnd = null, string receiveStreetAddress = null, string onlineShoppingDesc = null, System.Collections.Generic.IEnumerable<string> onlineShoppingAttachList = null, System.DateTimeOffset? gmtReceiveBeginDate = null, System.DateTimeOffset? gmtReceive = null, System.Collections.Generic.IEnumerable<string> supplierLoginIds = null, string purchaseNoteType = null, int? deliveryPeriod = null, string balanceDateType = null, string balanceDateValue = null, bool? allmysupplier = null, bool? selectedmysupplier = null, bool? openContact2All = null, bool? needAudit4OpenContact = null, bool? openContactBeforeQuote = null, string invoiceSubType = null, bool? supplierCanModifyQuantity = null, bool? supplierCantModifyProtocalDate = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.buyoffer.postBuyoffer/{AppKey}");
@@ -15637,7 +16008,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response13>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response12>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -15647,7 +16018,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response13);
+                        return default(Response12);
                     }
                     finally
                     {
@@ -15871,6 +16242,104 @@ namespace AlibabaSDK
             }
         }
     
+        /// <summary>框架协议创建接口
+        /// 框架协议创建接口
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.caigoushared.api.cooper.service.OpenFrameworkAgreementService.create-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.caigoushared.api.cooper.service.OpenFrameworkAgreementService.create&amp;v=1</summary>
+        /// <param name="openFrameworkAgreementCreateParam">框架协议创建参数json串</param>
+        /// <returns>创建结果返回值返回 ErrorCode 的错误信息
+        /// invalid_param	- 参数无效(查看接口文档，检查自己的参数：是否填写、是否正确、长度是否过长等)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public CnAlibabaOpenComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreateAlibabaCaigousharedApiCommonModelResultData ComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreate(AlibabaCaigousharedApiFrameworkagreementParamOpenFrameworkAgreementCreateParam openFrameworkAgreementCreateParam)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await ComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreateAsync(openFrameworkAgreementCreateParam, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>框架协议创建接口
+        /// 框架协议创建接口
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.caigoushared.api.cooper.service.OpenFrameworkAgreementService.create-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.caigoushared.api.cooper.service.OpenFrameworkAgreementService.create&amp;v=1</summary>
+        /// <param name="openFrameworkAgreementCreateParam">框架协议创建参数json串</param>
+        /// <returns>创建结果返回值返回 ErrorCode 的错误信息
+        /// invalid_param	- 参数无效(查看接口文档，检查自己的参数：是否填写、是否正确、长度是否过长等)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreateAlibabaCaigousharedApiCommonModelResultData> ComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreateAsync(AlibabaCaigousharedApiFrameworkagreementParamOpenFrameworkAgreementCreateParam openFrameworkAgreementCreateParam, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.caigoushared.api.cooper.service.OpenFrameworkAgreementService.create/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (openFrameworkAgreementCreateParam == null)
+                        throw new System.ArgumentNullException("openFrameworkAgreementCreateParam");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(openFrameworkAgreementCreateParam, System.Globalization.CultureInfo.InvariantCulture)), "openFrameworkAgreementCreateParam");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<CnAlibabaOpenComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreateAlibabaCaigousharedApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(CnAlibabaOpenComAlibabaCaigousharedApiCooperServiceOpenFrameworkAgreementServiceCreateAlibabaCaigousharedApiCommonModelResultData);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
         /// <summary>内部商城根据商品ID获取商品详情
         /// 内部商城根据商品ID获取商品详情
         /// 
@@ -15965,6 +16434,192 @@ namespace AlibabaSDK
             }
         }
     
+        /// <summary>企业采购内部商城下单前置供应商校验
+        /// 企业采购内部商城下单前置供应商校验
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.mall.order.supplier.precheck-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.mall.order.supplier.precheck&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public CaigouMallOrderSupplierPrecheckResult CaigouMallOrderSupplierPrecheck(SubmitOrderParam coopSubmitOrderParam)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await CaigouMallOrderSupplierPrecheckAsync(coopSubmitOrderParam, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>企业采购内部商城下单前置供应商校验
+        /// 企业采购内部商城下单前置供应商校验
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.mall.order.supplier.precheck-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.mall.order.supplier.precheck&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<CaigouMallOrderSupplierPrecheckResult> CaigouMallOrderSupplierPrecheckAsync(SubmitOrderParam coopSubmitOrderParam, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.mall.order.supplier.precheck/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (coopSubmitOrderParam == null)
+                        throw new System.ArgumentNullException("coopSubmitOrderParam");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(coopSubmitOrderParam, System.Globalization.CultureInfo.InvariantCulture)), "coopSubmitOrderParam");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<CaigouMallOrderSupplierPrecheckResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(CaigouMallOrderSupplierPrecheckResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>供应商查询请购单详情
+        /// 供应商查询清单详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.procurement.supplierQueryRequisitionDetail-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.procurement.supplierQueryRequisitionDetail&amp;v=1</summary>
+        /// <param name="requisitionId">请购单ID</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCaigouBizApiCommonModelResultData ComAlibabaProcurementSupplierQueryRequisitionDetail(long requisitionId)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await ComAlibabaProcurementSupplierQueryRequisitionDetailAsync(requisitionId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>供应商查询请购单详情
+        /// 供应商查询清单详情
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.procurement.supplierQueryRequisitionDetail-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.procurement.supplierQueryRequisitionDetail&amp;v=1</summary>
+        /// <param name="requisitionId">请购单ID</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCaigouBizApiCommonModelResultData> ComAlibabaProcurementSupplierQueryRequisitionDetailAsync(long requisitionId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.procurement.supplierQueryRequisitionDetail/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (requisitionId == null)
+                        throw new System.ArgumentNullException("requisitionId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(requisitionId, System.Globalization.CultureInfo.InvariantCulture)), "requisitionId");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigouBizApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCaigouBizApiCommonModelResultData);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
         /// <summary>查询唯一物料工厂
         /// 查询唯一物料工厂
         /// 
@@ -15973,6 +16628,7 @@ namespace AlibabaSDK
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="productCode">物料编码</param>
         /// <param name="factoryCode">工厂编码</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public CnAlibabaOpenAlibabaCaigouProductGetProductFactoryAlibabaCaigouProductResultData AlibabaCaigouProductGetProductFactory(string systemDomainCode, string productCode, string factoryCode)
         {
@@ -15988,6 +16644,7 @@ namespace AlibabaSDK
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="productCode">物料编码</param>
         /// <param name="factoryCode">工厂编码</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductGetProductFactoryAlibabaCaigouProductResultData> AlibabaCaigouProductGetProductFactoryAsync(string systemDomainCode, string productCode, string factoryCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -16084,7 +16741,7 @@ namespace AlibabaSDK
         /// <returns>返回模型返回 ErrorCode 的错误信息
         /// 参数错误	- invalidParam(根据对接文档检查参数)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCaigouBizApiCommonModelResultData ComAlibabaCaigouBizApiCooperServiceOpenRequisitionService(CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionParam openCreateRequisitionParam = null)
+        public CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCommonModelResultData ComAlibabaCaigouBizApiCooperServiceOpenRequisitionService(CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionParam openCreateRequisitionParam = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await ComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAsync(openCreateRequisitionParam, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -16099,7 +16756,7 @@ namespace AlibabaSDK
         /// <returns>返回模型返回 ErrorCode 的错误信息
         /// 参数错误	- invalidParam(根据对接文档检查参数)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCaigouBizApiCommonModelResultData> ComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAsync(CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionParam openCreateRequisitionParam = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCommonModelResultData> ComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAsync(CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCooperParamOpenCreateRequisitionParam openCreateRequisitionParam = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.caigou.biz.api.cooper.service.OpenRequisitionService/{AppKey}");
@@ -16147,7 +16804,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigouBizApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -16157,7 +16814,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaCaigouBizApiCommonModelResultData);
+                        return default(CnAlibabaOpenComAlibabaCaigouBizApiCooperServiceOpenRequisitionServiceAlibabaCaigouBizApiCommonModelResultData);
                     }
                     finally
                     {
@@ -16177,7 +16834,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.category.queryAll-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.category.queryAll&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response8 CaigouApiCategoryQueryAll()
+        public Response7 CaigouApiCategoryQueryAll()
         {
             return System.Threading.Tasks.Task.Run(async () => await CaigouApiCategoryQueryAllAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -16189,7 +16846,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:caigou.api.category.queryAll-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=caigou.api.category.queryAll&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response8> CaigouApiCategoryQueryAllAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response7> CaigouApiCategoryQueryAllAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.category.queryAll/{AppKey}");
@@ -16229,7 +16886,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response8>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response7>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -16239,7 +16896,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response8);
+                        return default(Response7);
                     }
                     finally
                     {
@@ -16265,7 +16922,7 @@ namespace AlibabaSDK
         /// no_permission	- 无权限(检查是否有权限操作该单)
         /// system_error	- 系统错误(联系服务提供方)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public CnAlibabaOpenComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerSettlementServiceQuerySettlementNote(long settlementNoteId, bool? needEntryExtendsData = null)
+        public AlibabaProcurementApiIntegrationSettlementNoteResultResultData ComAlibabaProcurementBuyerSettlementServiceQuerySettlementNote(long settlementNoteId, bool? needEntryExtendsData = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await ComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAsync(settlementNoteId, needEntryExtendsData, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -16283,7 +16940,7 @@ namespace AlibabaSDK
         /// no_permission	- 无权限(检查是否有权限操作该单)
         /// system_error	- 系统错误(联系服务提供方)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAsync(long settlementNoteId, bool? needEntryExtendsData = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationSettlementNoteResultResultData> ComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAsync(long settlementNoteId, bool? needEntryExtendsData = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.procurement.BuyerSettlementService.querySettlementNote/{AppKey}");
@@ -16337,7 +16994,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<CnAlibabaOpenComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAlibabaProcurementApiIntegrationResultResultData>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaProcurementApiIntegrationSettlementNoteResultResultData>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -16347,7 +17004,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(CnAlibabaOpenComAlibabaProcurementBuyerSettlementServiceQuerySettlementNoteAlibabaProcurementApiIntegrationResultResultData);
+                        return default(AlibabaProcurementApiIntegrationSettlementNoteResultResultData);
                     }
                     finally
                     {
@@ -16369,7 +17026,7 @@ namespace AlibabaSDK
         /// <param name="purchaseOrderId">采购单ID</param>
         /// <returns>返回值</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouGetPurcharseOrder(long purchaseOrderId)
+        public CnAlibabaOpenAlibabaCaigouGetPurcharseOrderAlibabaCaigousharedApiCommonModelResultData AlibabaCaigouGetPurcharseOrder(long purchaseOrderId)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaCaigouGetPurcharseOrderAsync(purchaseOrderId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -16383,7 +17040,7 @@ namespace AlibabaSDK
         /// <param name="purchaseOrderId">采购单ID</param>
         /// <returns>返回值</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouGetPurcharseOrderAsync(long purchaseOrderId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouGetPurcharseOrderAlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouGetPurcharseOrderAsync(long purchaseOrderId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/alibaba.caigou.getPurcharseOrder/{AppKey}");
@@ -16433,7 +17090,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigousharedApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<CnAlibabaOpenAlibabaCaigouGetPurcharseOrderAlibabaCaigousharedApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -16443,7 +17100,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaCaigousharedApiCommonModelResultData);
+                        return default(CnAlibabaOpenAlibabaCaigouGetPurcharseOrderAlibabaCaigousharedApiCommonModelResultData);
                     }
                     finally
                     {
@@ -16466,9 +17123,11 @@ namespace AlibabaSDK
         /// <param name="createEndTime">消息创建时间查找结束范围</param>
         /// <param name="page">当前数据页，默认为1</param>
         /// <param name="pageSize">每次分页取的数据量，范围20-200，默认20</param>
+        /// <param name="type">消息类型</param>
+        /// <param name="userInfo">用户Id</param>
         /// <returns>分页数据</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response14 PushQueryMessageList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? page = null, int? pageSize = null, string type = null, string userInfo = null)
+        public Response13 PushQueryMessageList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? page = null, int? pageSize = null, string type = null, string userInfo = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await PushQueryMessageListAsync(createStartTime, createEndTime, page, pageSize, type, userInfo, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -16483,9 +17142,11 @@ namespace AlibabaSDK
         /// <param name="createEndTime">消息创建时间查找结束范围</param>
         /// <param name="page">当前数据页，默认为1</param>
         /// <param name="pageSize">每次分页取的数据量，范围20-200，默认20</param>
+        /// <param name="type">消息类型</param>
+        /// <param name="userInfo">用户Id</param>
         /// <returns>分页数据</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response14> PushQueryMessageListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? page = null, int? pageSize = null, string type = null, string userInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response13> PushQueryMessageListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, int? page = null, int? pageSize = null, string type = null, string userInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/push.query.messageList/{AppKey}");
@@ -16553,7 +17214,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response14>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response13>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -16563,7 +17224,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response14);
+                        return default(Response13);
                     }
                     finally
                     {
@@ -16676,6 +17337,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.batchAddOrUpdateProductFactory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.batchAddOrUpdateProductFactory&amp;v=1</summary>
+        /// <param name="addUpdateProductFactoryParams">批量添加或修改物料工厂参数模型</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public CnAlibabaOpenAlibabaCaigouProductBatchAddOrUpdateProductFactoryAlibabaCaigouProductResultData AlibabaCaigouProductBatchAddOrUpdateProductFactory(System.Collections.Generic.IEnumerable<AlibabaCaigouProductAddUpdateProductFactoryParam> addUpdateProductFactoryParams)
         {
@@ -16688,6 +17351,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.batchAddOrUpdateProductFactory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.batchAddOrUpdateProductFactory&amp;v=1</summary>
+        /// <param name="addUpdateProductFactoryParams">批量添加或修改物料工厂参数模型</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductBatchAddOrUpdateProductFactoryAlibabaCaigouProductResultData> AlibabaCaigouProductBatchAddOrUpdateProductFactoryAsync(System.Collections.Generic.IEnumerable<AlibabaCaigouProductAddUpdateProductFactoryParam> addUpdateProductFactoryParams, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -16771,7 +17436,7 @@ namespace AlibabaSDK
         /// <param name="param">param</param>
         /// <returns>result</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public CnAlibabaOpenComAlibabaProcurementBuyerPayServiceCreatePayNoteAlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerPayServiceCreatePayNote(AlibabaProcurementApiSettlementIntegrationParamCreatePayParam param)
+        public AlibabaProcurementApiIntegrationResultPayResultData ComAlibabaProcurementBuyerPayServiceCreatePayNote(AlibabaProcurementApiSettlementIntegrationParamCreatePayParam param)
         {
             return System.Threading.Tasks.Task.Run(async () => await ComAlibabaProcurementBuyerPayServiceCreatePayNoteAsync(param, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -16785,7 +17450,7 @@ namespace AlibabaSDK
         /// <param name="param">param</param>
         /// <returns>result</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaProcurementBuyerPayServiceCreatePayNoteAlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerPayServiceCreatePayNoteAsync(AlibabaProcurementApiSettlementIntegrationParamCreatePayParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationResultPayResultData> ComAlibabaProcurementBuyerPayServiceCreatePayNoteAsync(AlibabaProcurementApiSettlementIntegrationParamCreatePayParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.procurement.BuyerPayService.createPayNote/{AppKey}");
@@ -16835,7 +17500,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<CnAlibabaOpenComAlibabaProcurementBuyerPayServiceCreatePayNoteAlibabaProcurementApiIntegrationResultResultData>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaProcurementApiIntegrationResultPayResultData>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -16845,7 +17510,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(CnAlibabaOpenComAlibabaProcurementBuyerPayServiceCreatePayNoteAlibabaProcurementApiIntegrationResultResultData);
+                        return default(AlibabaProcurementApiIntegrationResultPayResultData);
                     }
                     finally
                     {
@@ -16867,7 +17532,7 @@ namespace AlibabaSDK
         /// <param name="arg0">入参</param>
         /// <returns>结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerETicketServiceSubmitETicket(AlibabaProcurementApiSettlementIntegrationParamETicketSubmitIntegrationParam arg0)
+        public AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq ComAlibabaProcurementBuyerETicketServiceSubmitETicket(AlibabaProcurementApiSettlementIntegrationParamETicketSubmitIntegrationParam arg0)
         {
             return System.Threading.Tasks.Task.Run(async () => await ComAlibabaProcurementBuyerETicketServiceSubmitETicketAsync(arg0, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -16881,7 +17546,7 @@ namespace AlibabaSDK
         /// <param name="arg0">入参</param>
         /// <returns>结果</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerETicketServiceSubmitETicketAsync(AlibabaProcurementApiSettlementIntegrationParamETicketSubmitIntegrationParam arg0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq> ComAlibabaProcurementBuyerETicketServiceSubmitETicketAsync(AlibabaProcurementApiSettlementIntegrationParamETicketSubmitIntegrationParam arg0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.procurement.BuyerETicketService.submitETicket/{AppKey}");
@@ -16931,7 +17596,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaProcurementApiIntegrationResultResultData>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -16941,7 +17606,117 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaProcurementApiIntegrationResultResultData);
+                        return default(AlibabaCaigouCoopapiProductModelResultDataGTlwkuoq);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>企业采购ERP预算占用服务API--正式
+        /// 企业采购ERP预算占用服务测试API
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.erpBudget.occupy.erp-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.erpBudget.occupy.erp&amp;v=1</summary>
+        /// <param name="receiptNumber">申请单号</param>
+        /// <param name="loginId">申请人ID</param>
+        /// <param name="budgetItems">行信息</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCaigouErpBudgetOccupyErpResult AlibabaCaigouErpBudgetOccupyErp(string receiptNumber, string loginId, System.Collections.Generic.IEnumerable<ApiItem> budgetItems)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCaigouErpBudgetOccupyErpAsync(receiptNumber, loginId, budgetItems, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>企业采购ERP预算占用服务API--正式
+        /// 企业采购ERP预算占用服务测试API
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.erpBudget.occupy.erp-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.erpBudget.occupy.erp&amp;v=1</summary>
+        /// <param name="receiptNumber">申请单号</param>
+        /// <param name="loginId">申请人ID</param>
+        /// <param name="budgetItems">行信息</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCaigouErpBudgetOccupyErpResult> AlibabaCaigouErpBudgetOccupyErpAsync(string receiptNumber, string loginId, System.Collections.Generic.IEnumerable<ApiItem> budgetItems, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/alibaba.caigou.erpBudget.occupy.erp/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (receiptNumber == null)
+                        throw new System.ArgumentNullException("receiptNumber");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(receiptNumber, System.Globalization.CultureInfo.InvariantCulture)), "receiptNumber");
+                    }
+                    if (loginId == null)
+                        throw new System.ArgumentNullException("loginId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(loginId, System.Globalization.CultureInfo.InvariantCulture)), "loginId");
+                    }
+                    if (budgetItems == null)
+                        throw new System.ArgumentNullException("budgetItems");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(budgetItems, System.Globalization.CultureInfo.InvariantCulture)), "budgetItems");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigouErpBudgetOccupyErpResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCaigouErpBudgetOccupyErpResult);
                     }
                     finally
                     {
@@ -17057,7 +17832,7 @@ namespace AlibabaSDK
         /// <param name="categoryList">Json串，包含字段：categoryName：类目名称，categoryId：类目在外部业务的主键编码，parentId：父节点在外部系统的业务编码。</param>
         /// <returns>返回结果为Map，key为外部系统的类目id，value为1688平台的类目id</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response15 CaigouApiCategoryAddUserCategory(System.Collections.Generic.IEnumerable<string> categoryList)
+        public Response14 CaigouApiCategoryAddUserCategory(System.Collections.Generic.IEnumerable<string> categoryList)
         {
             return System.Threading.Tasks.Task.Run(async () => await CaigouApiCategoryAddUserCategoryAsync(categoryList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -17071,7 +17846,7 @@ namespace AlibabaSDK
         /// <param name="categoryList">Json串，包含字段：categoryName：类目名称，categoryId：类目在外部业务的主键编码，parentId：父节点在外部系统的业务编码。</param>
         /// <returns>返回结果为Map，key为外部系统的类目id，value为1688平台的类目id</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response15> CaigouApiCategoryAddUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response14> CaigouApiCategoryAddUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.category.addUserCategory/{AppKey}");
@@ -17121,7 +17896,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response15>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response14>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -17131,7 +17906,111 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response15);
+                        return default(Response14);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>获取比价单导出文件下载url
+        /// 获取比价单导出文件下载url
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.caigou.coopapi.pricingchart.service.PricingChartCoopService.getExportDownloadUrlByPricingChartId-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.caigou.coopapi.pricingchart.service.PricingChartCoopService.getExportDownloadUrlByPricingChartId&amp;v=1</summary>
+        /// <param name="pricingChartId">比价单id</param>
+        /// <param name="fileType">要下载的文件类型,比如pdf或者excel</param>
+        /// <returns>返回值</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public ComAlibabaCaigouCoopapiProductModelApiResultData ComAlibabaCaigouCoopapiPricingchartServicePricingChartCoopServiceGetExportDownloadUrlByPricingChartId(long pricingChartId, string fileType)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await ComAlibabaCaigouCoopapiPricingchartServicePricingChartCoopServiceGetExportDownloadUrlByPricingChartIdAsync(pricingChartId, fileType, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取比价单导出文件下载url
+        /// 获取比价单导出文件下载url
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.caigou.coopapi.pricingchart.service.PricingChartCoopService.getExportDownloadUrlByPricingChartId-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.caigou.coopapi.pricingchart.service.PricingChartCoopService.getExportDownloadUrlByPricingChartId&amp;v=1</summary>
+        /// <param name="pricingChartId">比价单id</param>
+        /// <param name="fileType">要下载的文件类型,比如pdf或者excel</param>
+        /// <returns>返回值</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<ComAlibabaCaigouCoopapiProductModelApiResultData> ComAlibabaCaigouCoopapiPricingchartServicePricingChartCoopServiceGetExportDownloadUrlByPricingChartIdAsync(long pricingChartId, string fileType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.caigou.coopapi.pricingchart.service.PricingChartCoopService.getExportDownloadUrlByPricingChartId/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (pricingChartId == null)
+                        throw new System.ArgumentNullException("pricingChartId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pricingChartId, System.Globalization.CultureInfo.InvariantCulture)), "pricingChartId");
+                    }
+                    if (fileType == null)
+                        throw new System.ArgumentNullException("fileType");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(fileType, System.Globalization.CultureInfo.InvariantCulture)), "fileType");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ComAlibabaCaigouCoopapiProductModelApiResultData>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(ComAlibabaCaigouCoopapiProductModelApiResultData);
                     }
                     finally
                     {
@@ -17155,7 +18034,7 @@ namespace AlibabaSDK
         /// CATEGORY_FAILED_HAS_CHILDREN	- 所删类目中，存在有叶子类目的类目(先删除叶子类目，再删除父类目)
         /// SYSTEM_ERROR	- 系统异常(联系开发同学)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response7 CaigouApiCategoryDeleteUserCategory(System.Collections.Generic.IEnumerable<string> categoryIds)
+        public Response6 CaigouApiCategoryDeleteUserCategory(System.Collections.Generic.IEnumerable<string> categoryIds)
         {
             return System.Threading.Tasks.Task.Run(async () => await CaigouApiCategoryDeleteUserCategoryAsync(categoryIds, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -17171,7 +18050,7 @@ namespace AlibabaSDK
         /// CATEGORY_FAILED_HAS_CHILDREN	- 所删类目中，存在有叶子类目的类目(先删除叶子类目，再删除父类目)
         /// SYSTEM_ERROR	- 系统异常(联系开发同学)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response7> CaigouApiCategoryDeleteUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryIds, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response6> CaigouApiCategoryDeleteUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryIds, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.category.deleteUserCategory/{AppKey}");
@@ -17221,7 +18100,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response7>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response6>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -17231,7 +18110,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response7);
+                        return default(Response6);
                     }
                     finally
                     {
@@ -17347,7 +18226,7 @@ namespace AlibabaSDK
         /// <param name="id">退货单ID</param>
         /// <returns>返回结果模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public CnAlibabaOpenComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNote(long id)
+        public AlibabaProcurementApiIntegrationResultResultData ComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNote(long id)
         {
             return System.Threading.Tasks.Task.Run(async () => await ComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAsync(id, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -17361,7 +18240,7 @@ namespace AlibabaSDK
         /// <param name="id">退货单ID</param>
         /// <returns>返回结果模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<CnAlibabaOpenComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAsync(long id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaProcurementApiIntegrationResultResultData> ComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAsync(long id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.procurement.BuyerReturnGoodsService.queryReturnGoodsNote/{AppKey}");
@@ -17411,7 +18290,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<CnAlibabaOpenComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAlibabaProcurementApiIntegrationResultResultData>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaProcurementApiIntegrationResultResultData>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -17421,7 +18300,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(CnAlibabaOpenComAlibabaProcurementBuyerReturnGoodsServiceQueryReturnGoodsNoteAlibabaProcurementApiIntegrationResultResultData);
+                        return default(AlibabaProcurementApiIntegrationResultResultData);
                     }
                     finally
                     {
@@ -17543,6 +18422,112 @@ namespace AlibabaSDK
             }
         }
     
+        /// <summary>内部商城修改商品货号
+        /// 【需求描述】：通过物料主数据导入价格表形成内部商城商品之后，在用户加入购物车提交请购单回到内部ERP，申请内部货号之后，要将货号回写到内部商城商品上，所以需要提供一个根据商品id更新货号接口
+        /// 
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.updateCargoNo-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.updateCargoNo&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="cargoNo">货号</param>
+        /// <returns>返回结果模型</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouMallUpdateCargoNo(long goodsId, string cargoNo)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCaigouMallUpdateCargoNoAsync(goodsId, cargoNo, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>内部商城修改商品货号
+        /// 【需求描述】：通过物料主数据导入价格表形成内部商城商品之后，在用户加入购物车提交请购单回到内部ERP，申请内部货号之后，要将货号回写到内部商城商品上，所以需要提供一个根据商品id更新货号接口
+        /// 
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.updateCargoNo-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.updateCargoNo&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="cargoNo">货号</param>
+        /// <returns>返回结果模型</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouMallUpdateCargoNoAsync(long goodsId, string cargoNo, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/alibaba.caigou.mall.updateCargoNo/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (goodsId == null)
+                        throw new System.ArgumentNullException("goodsId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(goodsId, System.Globalization.CultureInfo.InvariantCulture)), "goodsId");
+                    }
+                    if (cargoNo == null)
+                        throw new System.ArgumentNullException("cargoNo");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(cargoNo, System.Globalization.CultureInfo.InvariantCulture)), "cargoNo");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigousharedApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCaigousharedApiCommonModelResultData);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
         /// <summary>供应商信息获取
         /// 根据供应商memberId获取供应商信息.每次返回一条关于该账号的数据信息
         /// 
@@ -17637,6 +18622,98 @@ namespace AlibabaSDK
             }
         }
     
+        /// <summary>供应商下架商城商品
+        /// 供应商下架商城商品
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.procurement.supplierUnPublishGoods-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.procurement.supplierUnPublishGoods&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public ComAlibabaProcurementSupplierUnPublishGoodsResult ComAlibabaProcurementSupplierUnPublishGoods(AlibabaCaigouCoopapiMallGoodsParamCoopUnPublishMallGoodsParam param)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await ComAlibabaProcurementSupplierUnPublishGoodsAsync(param, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>供应商下架商城商品
+        /// 供应商下架商城商品
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:com.alibaba.procurement.supplierUnPublishGoods-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=com.alibaba.procurement.supplierUnPublishGoods&amp;v=1</summary>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<ComAlibabaProcurementSupplierUnPublishGoodsResult> ComAlibabaProcurementSupplierUnPublishGoodsAsync(AlibabaCaigouCoopapiMallGoodsParamCoopUnPublishMallGoodsParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/com.alibaba.procurement.supplierUnPublishGoods/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (param == null)
+                        throw new System.ArgumentNullException("param");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(param, System.Globalization.CultureInfo.InvariantCulture)), "param");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ComAlibabaProcurementSupplierUnPublishGoodsResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(ComAlibabaProcurementSupplierUnPublishGoodsResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
         /// <summary>修改自定义类目
         /// 修改自定义类目
         /// 
@@ -17647,7 +18724,7 @@ namespace AlibabaSDK
         /// CATEGORY_FAILED	- 同步自定义类目失败(请重新尝试，确保所传类目存在)
         /// SYSTEM_ERROR	- 系统异常(联系开发同学)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response7 CaigouApiCategoryModifyUserCategory(System.Collections.Generic.IEnumerable<string> categoryList)
+        public Response6 CaigouApiCategoryModifyUserCategory(System.Collections.Generic.IEnumerable<string> categoryList)
         {
             return System.Threading.Tasks.Task.Run(async () => await CaigouApiCategoryModifyUserCategoryAsync(categoryList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -17663,7 +18740,7 @@ namespace AlibabaSDK
         /// CATEGORY_FAILED	- 同步自定义类目失败(请重新尝试，确保所传类目存在)
         /// SYSTEM_ERROR	- 系统异常(联系开发同学)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response7> CaigouApiCategoryModifyUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response6> CaigouApiCategoryModifyUserCategoryAsync(System.Collections.Generic.IEnumerable<string> categoryList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.category.modifyUserCategory/{AppKey}");
@@ -17713,7 +18790,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response7>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response6>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -17723,7 +18800,215 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response7);
+                        return default(Response6);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>内部商城修改商品合同编码
+        /// 内部商城修改商品合同编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.modifyContractCode-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.modifyContractCode&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="contractCode">合同编码</param>
+        /// <returns>出参模型</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouMallModifyContractCode(long goodsId, string contractCode)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCaigouMallModifyContractCodeAsync(goodsId, contractCode, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>内部商城修改商品合同编码
+        /// 内部商城修改商品合同编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.modifyContractCode-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.modifyContractCode&amp;v=1</summary>
+        /// <param name="goodsId">商品ID</param>
+        /// <param name="contractCode">合同编码</param>
+        /// <returns>出参模型</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouMallModifyContractCodeAsync(long goodsId, string contractCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/alibaba.caigou.mall.modifyContractCode/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (goodsId == null)
+                        throw new System.ArgumentNullException("goodsId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(goodsId, System.Globalization.CultureInfo.InvariantCulture)), "goodsId");
+                    }
+                    if (contractCode == null)
+                        throw new System.ArgumentNullException("contractCode");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(contractCode, System.Globalization.CultureInfo.InvariantCulture)), "contractCode");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigousharedApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCaigousharedApiCommonModelResultData);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>询价单外部审批结果回调接口
+        /// 询价单对接外部审批，外部审批通过后回调1688的接口，同步审批结果
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:BuyofferWriteCoopService.auditBuyOffer-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=BuyofferWriteCoopService.auditBuyOffer&amp;v=1</summary>
+        /// <param name="purchaseId">询价单id</param>
+        /// <param name="approvAction">审批动作，pass 或者refuse</param>
+        /// <returns>返回结果</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AuditBuyofferResultData BuyofferWriteCoopServiceAuditBuyOffer(long purchaseId, string approvAction)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await BuyofferWriteCoopServiceAuditBuyOfferAsync(purchaseId, approvAction, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>询价单外部审批结果回调接口
+        /// 询价单对接外部审批，外部审批通过后回调1688的接口，同步审批结果
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:BuyofferWriteCoopService.auditBuyOffer-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=BuyofferWriteCoopService.auditBuyOffer&amp;v=1</summary>
+        /// <param name="purchaseId">询价单id</param>
+        /// <param name="approvAction">审批动作，pass 或者refuse</param>
+        /// <returns>返回结果</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AuditBuyofferResultData> BuyofferWriteCoopServiceAuditBuyOfferAsync(long purchaseId, string approvAction, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/BuyofferWriteCoopService.auditBuyOffer/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (purchaseId == null)
+                        throw new System.ArgumentNullException("purchaseId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(purchaseId, System.Globalization.CultureInfo.InvariantCulture)), "purchaseId");
+                    }
+                    if (approvAction == null)
+                        throw new System.ArgumentNullException("approvAction");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(approvAction, System.Globalization.CultureInfo.InvariantCulture)), "approvAction");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AuditBuyofferResultData>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AuditBuyofferResultData);
                     }
                     finally
                     {
@@ -17842,6 +19127,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.batchFreezeProductFactory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.batchFreezeProductFactory&amp;v=1</summary>
+        /// <param name="freezeProductFactoryParams">冻结物料工厂参数</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public CnAlibabaOpenAlibabaCaigouProductBatchFreezeProductFactoryAlibabaCaigouProductResultData AlibabaCaigouProductBatchFreezeProductFactory(System.Collections.Generic.IEnumerable<AlibabaCaigouProductFreezeProductFactoryParam> freezeProductFactoryParams)
         {
@@ -17854,6 +19141,8 @@ namespace AlibabaSDK
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.product.batchFreezeProductFactory-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.product.batchFreezeProductFactory&amp;v=1</summary>
+        /// <param name="freezeProductFactoryParams">冻结物料工厂参数</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductBatchFreezeProductFactoryAlibabaCaigouProductResultData> AlibabaCaigouProductBatchFreezeProductFactoryAsync(System.Collections.Generic.IEnumerable<AlibabaCaigouProductFreezeProductFactoryParam> freezeProductFactoryParams, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -17937,6 +19226,7 @@ namespace AlibabaSDK
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="productCode">物料编码</param>
         /// <param name="factoryCode">工厂编码</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public CnAlibabaOpenAlibabaCaigouProductFreezeProductFactoryAlibabaCaigouProductResultData AlibabaCaigouProductFreezeProductFactory(string systemDomainCode, string productCode, string factoryCode)
         {
@@ -17952,6 +19242,7 @@ namespace AlibabaSDK
         /// <param name="systemDomainCode">系统域编码</param>
         /// <param name="productCode">物料编码</param>
         /// <param name="factoryCode">工厂编码</param>
+        /// <returns>返回值模型</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<CnAlibabaOpenAlibabaCaigouProductFreezeProductFactoryAlibabaCaigouProductResultData> AlibabaCaigouProductFreezeProductFactoryAsync(string systemDomainCode, string productCode, string factoryCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -18220,6 +19511,102 @@ namespace AlibabaSDK
                         }
             
                         return default(AlibabaCaigouRequisitionAssignRequisitionResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>内部商城买家价格协议转商品并上架
+        /// 内部商城买家价格协议转商品并上架
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.importAndPublish-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.importAndPublish&amp;v=1</summary>
+        /// <param name="priceId">价格协议ID</param>
+        /// <returns>返回结果</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaCaigousharedApiCommonModelResultData AlibabaCaigouMallImportAndPublish(long priceId)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCaigouMallImportAndPublishAsync(priceId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>内部商城买家价格协议转商品并上架
+        /// 内部商城买家价格协议转商品并上架
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.caigou.mall.importAndPublish-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.caigou.mall.importAndPublish&amp;v=1</summary>
+        /// <param name="priceId">价格协议ID</param>
+        /// <returns>返回结果</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaCaigousharedApiCommonModelResultData> AlibabaCaigouMallImportAndPublishAsync(long priceId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/alibaba.caigou.mall.importAndPublish/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (priceId == null)
+                        throw new System.ArgumentNullException("priceId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(priceId, System.Globalization.CultureInfo.InvariantCulture)), "priceId");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCaigousharedApiCommonModelResultData>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaCaigousharedApiCommonModelResultData);
                     }
                     finally
                     {
@@ -18537,22 +19924,24 @@ namespace AlibabaSDK
         /// <param name="productCode">产品编号，物料编码，代表产品在外部系统的主键</param>
         /// <param name="title">产品名</param>
         /// <param name="unit">单位</param>
+        /// <param name="userCategoryId">用户在1688的自定义类目id</param>
         /// <param name="remark">补充说明，可以为富文本。最多4000个字符</param>
         /// <param name="instruction">产品说明，副标题，最多200个字符</param>
         /// <param name="productAttributes">产品属性列表</param>
         /// <param name="picUrlList">产品图片，最多10张，先调用上传图片接口，获取到图片相对url</param>
         /// <param name="attachmentList">产品附件，最多3个附件，先调用上传附件接口获取到附件id</param>
         /// <param name="referencePrice">产品参考价(单位是分)</param>
-        /// <param name="userCategoryId">用户在1688的自定义类目id</param>
         /// <param name="userId">操作员在1688上的子帐号ID，如果接入商有子账号，则可以通过子账号来发布产品；不传则系统会自动取主账号的userId作为默认值</param>
+        /// <param name="brandName">品牌</param>
+        /// <param name="brandModel">型号</param>
         /// <returns>产品在1688采购平台的主键id，如果发布失败则为空，具体的看错误码返回 ErrorCode 的错误信息
         /// ISV.INVALID_PARAM	- 参数不合法
         /// ISV.SYSTEM_ERROR	- 系统出错
         /// ISV.DUPLICATE_INSERT	- 重复插入</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response13 CaigouApiProductAddProduct(string productCode, string title, string unit, string remark = null, string instruction = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null, long? userId = null)
+        public Response12 CaigouApiProductAddProduct(string productCode, string title, string unit, long userCategoryId, string remark = null, string instruction = null, System.Collections.Generic.IEnumerable<ProductAttributeCoopParam> productAttributes = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userId = null, string brandName = null, string brandModel = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await CaigouApiProductAddProductAsync(productCode, title, unit, remark, instruction, productAttributes, picUrlList, attachmentList, referencePrice, userCategoryId, userId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await CaigouApiProductAddProductAsync(productCode, title, unit, userCategoryId, remark, instruction, productAttributes, picUrlList, attachmentList, referencePrice, userId, brandName, brandModel, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -18564,20 +19953,22 @@ namespace AlibabaSDK
         /// <param name="productCode">产品编号，物料编码，代表产品在外部系统的主键</param>
         /// <param name="title">产品名</param>
         /// <param name="unit">单位</param>
+        /// <param name="userCategoryId">用户在1688的自定义类目id</param>
         /// <param name="remark">补充说明，可以为富文本。最多4000个字符</param>
         /// <param name="instruction">产品说明，副标题，最多200个字符</param>
         /// <param name="productAttributes">产品属性列表</param>
         /// <param name="picUrlList">产品图片，最多10张，先调用上传图片接口，获取到图片相对url</param>
         /// <param name="attachmentList">产品附件，最多3个附件，先调用上传附件接口获取到附件id</param>
         /// <param name="referencePrice">产品参考价(单位是分)</param>
-        /// <param name="userCategoryId">用户在1688的自定义类目id</param>
         /// <param name="userId">操作员在1688上的子帐号ID，如果接入商有子账号，则可以通过子账号来发布产品；不传则系统会自动取主账号的userId作为默认值</param>
+        /// <param name="brandName">品牌</param>
+        /// <param name="brandModel">型号</param>
         /// <returns>产品在1688采购平台的主键id，如果发布失败则为空，具体的看错误码返回 ErrorCode 的错误信息
         /// ISV.INVALID_PARAM	- 参数不合法
         /// ISV.SYSTEM_ERROR	- 系统出错
         /// ISV.DUPLICATE_INSERT	- 重复插入</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response13> CaigouApiProductAddProductAsync(string productCode, string title, string unit, string remark = null, string instruction = null, System.Collections.Generic.IEnumerable<string> productAttributes = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userCategoryId = null, long? userId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response12> CaigouApiProductAddProductAsync(string productCode, string title, string unit, long userCategoryId, string remark = null, string instruction = null, System.Collections.Generic.IEnumerable<ProductAttributeCoopParam> productAttributes = null, System.Collections.Generic.IEnumerable<string> picUrlList = null, System.Collections.Generic.IEnumerable<string> attachmentList = null, long? referencePrice = null, long? userId = null, string brandName = null, string brandModel = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/caigou.api.product.addProduct/{AppKey}");
@@ -18609,6 +20000,12 @@ namespace AlibabaSDK
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(unit, System.Globalization.CultureInfo.InvariantCulture)), "unit");
                     }
+                    if (userCategoryId == null)
+                        throw new System.ArgumentNullException("userCategoryId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(userCategoryId, System.Globalization.CultureInfo.InvariantCulture)), "userCategoryId");
+                    }
                     if (remark != null)
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(remark, System.Globalization.CultureInfo.InvariantCulture)), "remark");
@@ -18633,13 +20030,17 @@ namespace AlibabaSDK
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(referencePrice, System.Globalization.CultureInfo.InvariantCulture)), "referencePrice");
                     }
-                    if (userCategoryId != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(userCategoryId, System.Globalization.CultureInfo.InvariantCulture)), "userCategoryId");
-                    }
                     if (userId != null)
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(userId, System.Globalization.CultureInfo.InvariantCulture)), "userId");
+                    }
+                    if (brandName != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(brandName, System.Globalization.CultureInfo.InvariantCulture)), "brandName");
+                    }
+                    if (brandModel != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(brandModel, System.Globalization.CultureInfo.InvariantCulture)), "brandModel");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -18671,7 +20072,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response13>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response12>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -18681,7 +20082,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response13);
+                        return default(Response12);
                     }
                     finally
                     {
@@ -18703,7 +20104,7 @@ namespace AlibabaSDK
         /// <param name="msgIdList">待确认的消息id列表</param>
         /// <returns>操作是否成功</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response2 PushMessageConfirm(System.Collections.Generic.IEnumerable<string> msgIdList = null)
+        public Response15 PushMessageConfirm(System.Collections.Generic.IEnumerable<string> msgIdList = null)
         {
             return System.Threading.Tasks.Task.Run(async () => await PushMessageConfirmAsync(msgIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -18717,7 +20118,7 @@ namespace AlibabaSDK
         /// <param name="msgIdList">待确认的消息id列表</param>
         /// <returns>操作是否成功</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response2> PushMessageConfirmAsync(System.Collections.Generic.IEnumerable<string> msgIdList = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response15> PushMessageConfirmAsync(System.Collections.Generic.IEnumerable<string> msgIdList = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/push.message.confirm/{AppKey}");
@@ -18765,7 +20166,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response2>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response15>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -18775,7 +20176,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response2);
+                        return default(Response15);
                     }
                     finally
                     {
@@ -22411,7 +23812,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.get.sellerView-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.get.sellerView&amp;v=1</summary>
         /// <param name="orderId">交易的订单id</param>
-        /// <param name="includeFields">查询结果中包含的域，GuaranteesTerms：保障条款，NativeLogistics：物流信息，RateDetail：评价详情，OrderInvoice：发票信息。默认返回GuaranteesTerms、NativeLogistics、OrderInvoice。</param>
+        /// <param name="includeFields">查询结果中包含的域，GuaranteesTerms：保障条款，NativeLogistics：物流信息，RateDetail：评价详情，OrderInvoice：发票信息，CanSendCheck：子订单是否可以发货。默认返回GuaranteesTerms、NativeLogistics、OrderInvoice、CanSendCheck。</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public AlibabaTradeGetSellerViewResult AlibabaTradeGetSellerView(long orderId, string includeFields = null)
         {
@@ -22425,7 +23826,7 @@ namespace AlibabaSDK
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.get.sellerView-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.get.sellerView&amp;v=1</summary>
         /// <param name="orderId">交易的订单id</param>
-        /// <param name="includeFields">查询结果中包含的域，GuaranteesTerms：保障条款，NativeLogistics：物流信息，RateDetail：评价详情，OrderInvoice：发票信息。默认返回GuaranteesTerms、NativeLogistics、OrderInvoice。</param>
+        /// <param name="includeFields">查询结果中包含的域，GuaranteesTerms：保障条款，NativeLogistics：物流信息，RateDetail：评价详情，OrderInvoice：发票信息，CanSendCheck：子订单是否可以发货。默认返回GuaranteesTerms、NativeLogistics、OrderInvoice、CanSendCheck。</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<AlibabaTradeGetSellerViewResult> AlibabaTradeGetSellerViewAsync(long orderId, string includeFields = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -22520,7 +23921,13 @@ namespace AlibabaSDK
         /// <param name="disputeType">1表示售中，2表示售后</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// INVALID_PARAM	- disputeType=* refundId=TQ8359259727492085,cause:null(纠纷类型填写错误，disputeType=1表示售中退款，disputeType=2表示售后退款)
-        /// REFUND_STATUS_ERROR	- REFUND_STATUS_ERROR,errorMsg:null(退款单类型错误，待卖家同意退款单且退货的退款单可以调用本接口)</returns>
+        /// REFUND_STATUS_ERROR	- REFUND_STATUS_ERROR,errorMsg:null(退款单类型错误，待卖家同意退款单且退货的退款单可以调用本接口)
+        /// 500	- REFUND_STATUS_ERROR(退款单类型错误)
+        /// 500	- 没有操作退款单数据的权限(非授权用户退款单)
+        /// 500_001	- 参数错误，收货地址不得为空!(param invalid,without address.)(收货地址不得为空)
+        /// 500_002	- 参数错误，收货地址格式有误!(param invalid,invalid address.)(收货地址格式有误
+        /// 正确：浙江省 杭州市 xxx      浙江省杭州市xxx
+        /// 错误：浙江杭州市xxx )</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public AlibabaTradeRefundOpAgreeReturnGoodsResult AlibabaTradeRefundOpAgreeReturnGoods(string refundId, string address = null, string post = null, string phone = null, string fullName = null, string mobilePhone = null, string discription = null, int? disputeType = null)
         {
@@ -22543,7 +23950,13 @@ namespace AlibabaSDK
         /// <param name="disputeType">1表示售中，2表示售后</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// INVALID_PARAM	- disputeType=* refundId=TQ8359259727492085,cause:null(纠纷类型填写错误，disputeType=1表示售中退款，disputeType=2表示售后退款)
-        /// REFUND_STATUS_ERROR	- REFUND_STATUS_ERROR,errorMsg:null(退款单类型错误，待卖家同意退款单且退货的退款单可以调用本接口)</returns>
+        /// REFUND_STATUS_ERROR	- REFUND_STATUS_ERROR,errorMsg:null(退款单类型错误，待卖家同意退款单且退货的退款单可以调用本接口)
+        /// 500	- REFUND_STATUS_ERROR(退款单类型错误)
+        /// 500	- 没有操作退款单数据的权限(非授权用户退款单)
+        /// 500_001	- 参数错误，收货地址不得为空!(param invalid,without address.)(收货地址不得为空)
+        /// 500_002	- 参数错误，收货地址格式有误!(param invalid,invalid address.)(收货地址格式有误
+        /// 正确：浙江省 杭州市 xxx      浙江省杭州市xxx
+        /// 错误：浙江杭州市xxx )</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<AlibabaTradeRefundOpAgreeReturnGoodsResult> AlibabaTradeRefundOpAgreeReturnGoodsAsync(string refundId, string address = null, string post = null, string phone = null, string fullName = null, string mobilePhone = null, string discription = null, int? disputeType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -22648,7 +24061,7 @@ namespace AlibabaSDK
         }
     
         /// <summary>查询退款单详情-根据退款单ID
-        /// 查询退款单详情，同时可以查询到退款操作列表。 该API需要像阿里巴巴申请权限才能访问。
+        /// 查询退款单详情，同时可以查询到退款操作列表。 该API需要向阿里巴巴申请权限才能访问。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.OpQueryOrderRefund-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.OpQueryOrderRefund&amp;v=1</summary>
@@ -22667,7 +24080,7 @@ namespace AlibabaSDK
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <summary>查询退款单详情-根据退款单ID
-        /// 查询退款单详情，同时可以查询到退款操作列表。 该API需要像阿里巴巴申请权限才能访问。
+        /// 查询退款单详情，同时可以查询到退款操作列表。 该API需要向阿里巴巴申请权限才能访问。
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.OpQueryOrderRefund-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.OpQueryOrderRefund&amp;v=1</summary>
@@ -22779,7 +24192,8 @@ namespace AlibabaSDK
         /// <param name="modifyEndTime">退款修改时间(截止)</param>
         /// <param name="dipsuteType">1:售中退款，2:售后退款；0:所有退款单</param>
         /// <returns>返回 ErrorCode 的错误信息
-        /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:查询数据失败，请检查输入参数后重试。\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;\&amp;quot;}(订单号码输入错误)</returns>
+        /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:查询数据失败，请检查输入参数后重试。\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;\&amp;quot;}(订单号码输入错误)
+        /// APPLY_TIME_ERROR	- 只能查询近730天的退款单，请检查退款申请时间!(请检查退款申请时间!)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public AlibabaTradeRefundQueryOrderRefundListResult AlibabaTradeRefundQueryOrderRefundList(long? orderId = null, System.DateTimeOffset? applyStartTime = null, System.DateTimeOffset? applyEndTime = null, System.Collections.Generic.IEnumerable<string> refundStatusSet = null, string buyerMemberId = null, string buyerLoginId = null, int? currentPageNum = null, int? pageSize = null, string logisticsNo = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? dipsuteType = null)
         {
@@ -22805,7 +24219,8 @@ namespace AlibabaSDK
         /// <param name="modifyEndTime">退款修改时间(截止)</param>
         /// <param name="dipsuteType">1:售中退款，2:售后退款；0:所有退款单</param>
         /// <returns>返回 ErrorCode 的错误信息
-        /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:查询数据失败，请检查输入参数后重试。\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;\&amp;quot;}(订单号码输入错误)</returns>
+        /// 500	- {\&amp;quot;errorCode\&amp;quot;:\&amp;quot;003\&amp;quot;,\&amp;quot;errorMessage\&amp;quot;:\&amp;quot;SERVICE:查询数据失败，请检查输入参数后重试。\&amp;quot;,\&amp;quot;cause\&amp;quot;:\&amp;quot;\&amp;quot;}(订单号码输入错误)
+        /// APPLY_TIME_ERROR	- 只能查询近730天的退款单，请检查退款申请时间!(请检查退款申请时间!)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<AlibabaTradeRefundQueryOrderRefundListResult> AlibabaTradeRefundQueryOrderRefundListAsync(long? orderId = null, System.DateTimeOffset? applyStartTime = null, System.DateTimeOffset? applyEndTime = null, System.Collections.Generic.IEnumerable<string> refundStatusSet = null, string buyerMemberId = null, string buyerLoginId = null, int? currentPageNum = null, int? pageSize = null, string logisticsNo = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? dipsuteType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -22923,114 +24338,6 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>查询商品支持的交易类型
-        /// 查询商品支持的交易类型
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.queryTradeTypesOfOffer-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.queryTradeTypesOfOffer&amp;v=1</summary>
-        /// <param name="sellerMemberId">卖家memberId</param>
-        /// <param name="productId">商品Id</param>
-        /// <param name="catId">类目id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaTradeQueryTradeTypesOfOfferResult AlibabaTradeQueryTradeTypesOfOffer(string sellerMemberId, long productId, long? catId = null)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeQueryTradeTypesOfOfferAsync(sellerMemberId, productId, catId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>查询商品支持的交易类型
-        /// 查询商品支持的交易类型
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.queryTradeTypesOfOffer-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.queryTradeTypesOfOffer&amp;v=1</summary>
-        /// <param name="sellerMemberId">卖家memberId</param>
-        /// <param name="productId">商品Id</param>
-        /// <param name="catId">类目id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaTradeQueryTradeTypesOfOfferResult> AlibabaTradeQueryTradeTypesOfOfferAsync(string sellerMemberId, long productId, long? catId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.queryTradeTypesOfOffer/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (sellerMemberId == null)
-                        throw new System.ArgumentNullException("sellerMemberId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(sellerMemberId, System.Globalization.CultureInfo.InvariantCulture)), "sellerMemberId");
-                    }
-                    if (productId == null)
-                        throw new System.ArgumentNullException("productId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(productId, System.Globalization.CultureInfo.InvariantCulture)), "productId");
-                    }
-                    if (catId != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(catId, System.Globalization.CultureInfo.InvariantCulture)), "catId");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaTradeQueryTradeTypesOfOfferResult>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaTradeQueryTradeTypesOfOfferResult);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
         /// <summary>创建订单前预览数据接口
         /// 订单创建只允许购买同一个供应商的商品。本接口返回创建订单相关的优惠等信息。
         /// 1、校验商品数据是否允许订购。
@@ -23041,8 +24348,8 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.createOrder.preview&amp;v=1</summary>
         /// <param name="addressParam">收货地址信息</param>
         /// <param name="cargoParamList">商品信息</param>
-        /// <param name="invoiceParam">发票信息</param>
         /// <param name="flow">general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系</param>
+        /// <param name="invoiceParam">发票信息</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 500_007	- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)
         /// 500_005	- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)
@@ -23052,9 +24359,9 @@ namespace AlibabaSDK
         /// 500_003	- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)
         /// 500_001	- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCreateOrderPreviewResult AlibabaCreateOrderPreview(AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, AlibabaTradeFastInvoice invoiceParam, string flow)
+        public AlibabaCreateOrderPreviewResult AlibabaCreateOrderPreview(AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, string flow, AlibabaTradeFastInvoice invoiceParam = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCreateOrderPreviewAsync(addressParam, cargoParamList, invoiceParam, flow, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaCreateOrderPreviewAsync(addressParam, cargoParamList, flow, invoiceParam, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -23068,8 +24375,8 @@ namespace AlibabaSDK
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.createOrder.preview&amp;v=1</summary>
         /// <param name="addressParam">收货地址信息</param>
         /// <param name="cargoParamList">商品信息</param>
-        /// <param name="invoiceParam">发票信息</param>
         /// <param name="flow">general（创建大市场订单），saleproxy（创建分销订单）。saleproxy流程将校验分销关系</param>
+        /// <param name="invoiceParam">发票信息</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 500_007	- 与供应商的代销关系不存在,不能使用saleproxy通道下单。(flow不能使用slproxy)
         /// 500_005	- 商品[offerId]的购买数量不满足起批量限制。(商品的购买数量小于起批量)
@@ -23079,7 +24386,7 @@ namespace AlibabaSDK
         /// 500_003	- 商品[offerId ]不属于同一卖家或者规格[specId] 不属于商品[offerId](存在多个卖家的商品或者商品不存在specId的规格)
         /// 500_001	- 商品[offerId]不支持在线交易，无法下单。(商品不支持在线交易，目前不能购买)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCreateOrderPreviewResult> AlibabaCreateOrderPreviewAsync(AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, AlibabaTradeFastInvoice invoiceParam, string flow, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaCreateOrderPreviewResult> AlibabaCreateOrderPreviewAsync(AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, string flow, AlibabaTradeFastInvoice invoiceParam = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.createOrder.preview/{AppKey}");
@@ -23105,17 +24412,15 @@ namespace AlibabaSDK
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(cargoParamList, System.Globalization.CultureInfo.InvariantCulture)), "cargoParamList");
                     }
-                    if (invoiceParam == null)
-                        throw new System.ArgumentNullException("invoiceParam");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(invoiceParam, System.Globalization.CultureInfo.InvariantCulture)), "invoiceParam");
-                    }
                     if (flow == null)
                         throw new System.ArgumentNullException("flow");
                     else
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(flow, System.Globalization.CultureInfo.InvariantCulture)), "flow");
+                    }
+                    if (invoiceParam != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(invoiceParam, System.Globalization.CultureInfo.InvariantCulture)), "invoiceParam");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -23293,6 +24598,8 @@ namespace AlibabaSDK
         /// <param name="modifyStartTime">退款修改时间(起始)</param>
         /// <param name="modifyEndTime">退款修改时间(截止)</param>
         /// <param name="dipsuteType">1:售中退款，2:售后退款；0:所有退款单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// APPLY_TIME_ERROR	- 只能查询近730天的退款单，请检查退款申请时间!(请检查退款申请时间!)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public AlibabaTradeRefundBuyerQueryOrderRefundListResult AlibabaTradeRefundBuyerQueryOrderRefundList(long? orderId = null, System.DateTimeOffset? applyStartTime = null, System.DateTimeOffset? applyEndTime = null, System.Collections.Generic.IEnumerable<string> refundStatusSet = null, string sellerMemberId = null, int? currentPageNum = null, int? pageSize = null, string logisticsNo = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? dipsuteType = null)
         {
@@ -23316,6 +24623,8 @@ namespace AlibabaSDK
         /// <param name="modifyStartTime">退款修改时间(起始)</param>
         /// <param name="modifyEndTime">退款修改时间(截止)</param>
         /// <param name="dipsuteType">1:售中退款，2:售后退款；0:所有退款单</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// APPLY_TIME_ERROR	- 只能查询近730天的退款单，请检查退款申请时间!(请检查退款申请时间!)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<AlibabaTradeRefundBuyerQueryOrderRefundListResult> AlibabaTradeRefundBuyerQueryOrderRefundListAsync(long? orderId = null, System.DateTimeOffset? applyStartTime = null, System.DateTimeOffset? applyEndTime = null, System.Collections.Generic.IEnumerable<string> refundStatusSet = null, string sellerMemberId = null, int? currentPageNum = null, int? pageSize = null, string logisticsNo = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? dipsuteType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -23657,6 +24966,7 @@ namespace AlibabaSDK
         /// <param name="pageSize">查询的每页的数量</param>
         /// <param name="refundStatus">退款状态，支持： &amp;quot;waitselleragree&amp;quot;(等待卖家同意), &amp;quot;refundsuccess&amp;quot;(退款成功), &amp;quot;refundclose&amp;quot;(退款关闭), &amp;quot;waitbuyermodify&amp;quot;(待买家修改), &amp;quot;waitbuyersend&amp;quot;(等待买家退货), &amp;quot;waitsellerreceive&amp;quot;(等待卖家确认收货)</param>
         /// <param name="sellerMemberId">卖家memberId</param>
+        /// <param name="sellerLoginId">卖家loginId</param>
         /// <param name="sellerRateStatus">卖家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
         /// <param name="tradeType">交易类型:
         /// 担保交易(1),
@@ -23676,9 +24986,9 @@ namespace AlibabaSDK
         /// <param name="needBuyerAddressAndPhone">是否需要查询买家的详细地址信息和电话</param>
         /// <param name="needMemoInfo">是否需要查询备注信息</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaTradeGetBuyerOrderListResult AlibabaTradeGetBuyerOrderList(System.Collections.Generic.IEnumerable<string> bizTypes = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? createStartTime = null, bool? isHis = null, System.DateTimeOffset? modifyEndTime = null, System.DateTimeOffset? modifyStartTime = null, string orderStatus = null, int? page = null, int? pageSize = null, string refundStatus = null, string sellerMemberId = null, int? sellerRateStatus = null, string tradeType = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null)
+        public AlibabaTradeGetBuyerOrderListResult AlibabaTradeGetBuyerOrderList(System.Collections.Generic.IEnumerable<string> bizTypes = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? createStartTime = null, bool? isHis = null, System.DateTimeOffset? modifyEndTime = null, System.DateTimeOffset? modifyStartTime = null, string orderStatus = null, int? page = null, int? pageSize = null, string refundStatus = null, string sellerMemberId = null, string sellerLoginId = null, int? sellerRateStatus = null, string tradeType = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeGetBuyerOrderListAsync(bizTypes, createEndTime, createStartTime, isHis, modifyEndTime, modifyStartTime, orderStatus, page, pageSize, refundStatus, sellerMemberId, sellerRateStatus, tradeType, productName, needBuyerAddressAndPhone, needMemoInfo, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeGetBuyerOrderListAsync(bizTypes, createEndTime, createStartTime, isHis, modifyEndTime, modifyStartTime, orderStatus, page, pageSize, refundStatus, sellerMemberId, sellerLoginId, sellerRateStatus, tradeType, productName, needBuyerAddressAndPhone, needMemoInfo, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -23698,6 +25008,7 @@ namespace AlibabaSDK
         /// <param name="pageSize">查询的每页的数量</param>
         /// <param name="refundStatus">退款状态，支持： &amp;quot;waitselleragree&amp;quot;(等待卖家同意), &amp;quot;refundsuccess&amp;quot;(退款成功), &amp;quot;refundclose&amp;quot;(退款关闭), &amp;quot;waitbuyermodify&amp;quot;(待买家修改), &amp;quot;waitbuyersend&amp;quot;(等待买家退货), &amp;quot;waitsellerreceive&amp;quot;(等待卖家确认收货)</param>
         /// <param name="sellerMemberId">卖家memberId</param>
+        /// <param name="sellerLoginId">卖家loginId</param>
         /// <param name="sellerRateStatus">卖家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
         /// <param name="tradeType">交易类型:
         /// 担保交易(1),
@@ -23717,7 +25028,7 @@ namespace AlibabaSDK
         /// <param name="needBuyerAddressAndPhone">是否需要查询买家的详细地址信息和电话</param>
         /// <param name="needMemoInfo">是否需要查询备注信息</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaTradeGetBuyerOrderListResult> AlibabaTradeGetBuyerOrderListAsync(System.Collections.Generic.IEnumerable<string> bizTypes = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? createStartTime = null, bool? isHis = null, System.DateTimeOffset? modifyEndTime = null, System.DateTimeOffset? modifyStartTime = null, string orderStatus = null, int? page = null, int? pageSize = null, string refundStatus = null, string sellerMemberId = null, int? sellerRateStatus = null, string tradeType = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaTradeGetBuyerOrderListResult> AlibabaTradeGetBuyerOrderListAsync(System.Collections.Generic.IEnumerable<string> bizTypes = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? createStartTime = null, bool? isHis = null, System.DateTimeOffset? modifyEndTime = null, System.DateTimeOffset? modifyStartTime = null, string orderStatus = null, int? page = null, int? pageSize = null, string refundStatus = null, string sellerMemberId = null, string sellerLoginId = null, int? sellerRateStatus = null, string tradeType = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.getBuyerOrderList/{AppKey}");
@@ -23774,6 +25085,10 @@ namespace AlibabaSDK
                     if (sellerMemberId != null)
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(sellerMemberId, System.Globalization.CultureInfo.InvariantCulture)), "sellerMemberId");
+                    }
+                    if (sellerLoginId != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(sellerLoginId, System.Globalization.CultureInfo.InvariantCulture)), "sellerLoginId");
                     }
                     if (sellerRateStatus != null)
                     {
@@ -24399,6 +25714,7 @@ namespace AlibabaSDK
         /// &amp;quot;waitbuyersend&amp;quot;(等待买家退货),
         /// &amp;quot;waitsellerreceive&amp;quot;(等待卖家确认收货)</param>
         /// <param name="buyerMemberId">买家memberId</param>
+        /// <param name="buyerLoginId">买家LoginId</param>
         /// <param name="tradeType">交易类型:
         /// 担保交易(1),
         /// 预存款交易(2),
@@ -24421,10 +25737,11 @@ namespace AlibabaSDK
         /// <param name="tousuStatus">是否查找投诉中的地拟改单</param>
         /// <param name="buyerRateStatus">买家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
         /// <param name="sellerRateStatus">卖家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
+        /// <param name="needCheckSend">是否需要返回发货校验信息，对于打单发货场景必须要填，非常重要</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaTradeGetSellerOrderListResult AlibabaTradeGetSellerOrderList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? page = null, int? pageSize = null, string orderStatus = null, string refundStatus = null, string buyerMemberId = null, string tradeType = null, System.Collections.Generic.IEnumerable<string> bizTypes = null, bool? isHis = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, bool? tousuStatus = null, int? buyerRateStatus = null, int? sellerRateStatus = null)
+        public AlibabaTradeGetSellerOrderListResult AlibabaTradeGetSellerOrderList(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? page = null, int? pageSize = null, string orderStatus = null, string refundStatus = null, string buyerMemberId = null, string buyerLoginId = null, string tradeType = null, System.Collections.Generic.IEnumerable<string> bizTypes = null, bool? isHis = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, bool? tousuStatus = null, int? buyerRateStatus = null, int? sellerRateStatus = null, bool? needCheckSend = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeGetSellerOrderListAsync(createStartTime, createEndTime, modifyStartTime, modifyEndTime, page, pageSize, orderStatus, refundStatus, buyerMemberId, tradeType, bizTypes, isHis, productName, needBuyerAddressAndPhone, needMemoInfo, tousuStatus, buyerRateStatus, sellerRateStatus, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeGetSellerOrderListAsync(createStartTime, createEndTime, modifyStartTime, modifyEndTime, page, pageSize, orderStatus, refundStatus, buyerMemberId, buyerLoginId, tradeType, bizTypes, isHis, productName, needBuyerAddressAndPhone, needMemoInfo, tousuStatus, buyerRateStatus, sellerRateStatus, needCheckSend, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -24448,6 +25765,7 @@ namespace AlibabaSDK
         /// &amp;quot;waitbuyersend&amp;quot;(等待买家退货),
         /// &amp;quot;waitsellerreceive&amp;quot;(等待卖家确认收货)</param>
         /// <param name="buyerMemberId">买家memberId</param>
+        /// <param name="buyerLoginId">买家LoginId</param>
         /// <param name="tradeType">交易类型:
         /// 担保交易(1),
         /// 预存款交易(2),
@@ -24470,8 +25788,9 @@ namespace AlibabaSDK
         /// <param name="tousuStatus">是否查找投诉中的地拟改单</param>
         /// <param name="buyerRateStatus">买家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
         /// <param name="sellerRateStatus">卖家评价状态 (4:已评价,5:未评价,6;不需要评价)</param>
+        /// <param name="needCheckSend">是否需要返回发货校验信息，对于打单发货场景必须要填，非常重要</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaTradeGetSellerOrderListResult> AlibabaTradeGetSellerOrderListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? page = null, int? pageSize = null, string orderStatus = null, string refundStatus = null, string buyerMemberId = null, string tradeType = null, System.Collections.Generic.IEnumerable<string> bizTypes = null, bool? isHis = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, bool? tousuStatus = null, int? buyerRateStatus = null, int? sellerRateStatus = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaTradeGetSellerOrderListResult> AlibabaTradeGetSellerOrderListAsync(System.DateTimeOffset? createStartTime = null, System.DateTimeOffset? createEndTime = null, System.DateTimeOffset? modifyStartTime = null, System.DateTimeOffset? modifyEndTime = null, int? page = null, int? pageSize = null, string orderStatus = null, string refundStatus = null, string buyerMemberId = null, string buyerLoginId = null, string tradeType = null, System.Collections.Generic.IEnumerable<string> bizTypes = null, bool? isHis = null, string productName = null, bool? needBuyerAddressAndPhone = null, bool? needMemoInfo = null, bool? tousuStatus = null, int? buyerRateStatus = null, int? sellerRateStatus = null, bool? needCheckSend = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.getSellerOrderList/{AppKey}");
@@ -24521,6 +25840,10 @@ namespace AlibabaSDK
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(buyerMemberId, System.Globalization.CultureInfo.InvariantCulture)), "buyerMemberId");
                     }
+                    if (buyerLoginId != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(buyerLoginId, System.Globalization.CultureInfo.InvariantCulture)), "buyerLoginId");
+                    }
                     if (tradeType != null)
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(tradeType, System.Globalization.CultureInfo.InvariantCulture)), "tradeType");
@@ -24556,6 +25879,10 @@ namespace AlibabaSDK
                     if (sellerRateStatus != null)
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(sellerRateStatus, System.Globalization.CultureInfo.InvariantCulture)), "sellerRateStatus");
+                    }
+                    if (needCheckSend != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(needCheckSend, System.Globalization.CultureInfo.InvariantCulture)), "needCheckSend");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -24949,6 +26276,7 @@ namespace AlibabaSDK
         /// <param name="message">买家留言</param>
         /// <param name="invoiceParam">发票信息</param>
         /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，如果开通了诚E赊默认是creditBuy（诚E赊），未开通诚E赊默认使用的方式是支付宝担宝交易。</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 400	- 请求参数错误(检查请求参数是否满足要求)
         /// 400	- User authorization is required	(TOKEN失效，需要重新获取)
@@ -24989,9 +26317,9 @@ namespace AlibabaSDK
         /// FAIL_BIZ_TAOBAO_TP_EXCEPTION		- 系统错误，订单创建失败!	
         /// FAIL_BIZ_ORDER_COMMIT_ORDERPARAM_NOT_CONSTRUCTED	- 交时没有成功构造创建订单的参数。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaTradeFastCreateOrderResult AlibabaTradeFastCreateOrder(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, long? subUserId = null, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string shopPromotionId = null)
+        public AlibabaTradeFastCreateOrderResult AlibabaTradeFastCreateOrder(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, long? subUserId = null, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string shopPromotionId = null, string tradeType = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeFastCreateOrderAsync(flow, addressParam, cargoParamList, subUserId, message, invoiceParam, shopPromotionId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeFastCreateOrderAsync(flow, addressParam, cargoParamList, subUserId, message, invoiceParam, shopPromotionId, tradeType, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
@@ -25007,6 +26335,7 @@ namespace AlibabaSDK
         /// <param name="message">买家留言</param>
         /// <param name="invoiceParam">发票信息</param>
         /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，如果开通了诚E赊默认是creditBuy（诚E赊），未开通诚E赊默认使用的方式是支付宝担宝交易。</param>
         /// <returns>返回 ErrorCode 的错误信息
         /// 400	- 请求参数错误(检查请求参数是否满足要求)
         /// 400	- User authorization is required	(TOKEN失效，需要重新获取)
@@ -25047,7 +26376,7 @@ namespace AlibabaSDK
         /// FAIL_BIZ_TAOBAO_TP_EXCEPTION		- 系统错误，订单创建失败!	
         /// FAIL_BIZ_ORDER_COMMIT_ORDERPARAM_NOT_CONSTRUCTED	- 交时没有成功构造创建订单的参数。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaTradeFastCreateOrderResult> AlibabaTradeFastCreateOrderAsync(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, long? subUserId = null, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string shopPromotionId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaTradeFastCreateOrderResult> AlibabaTradeFastCreateOrderAsync(string flow, AlibabaTradeFastAddress addressParam, System.Collections.Generic.IEnumerable<AlibabaTradeFastCargo> cargoParamList, long? subUserId = null, string message = null, AlibabaTradeFastInvoice invoiceParam = null, string shopPromotionId = null, string tradeType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.fastCreateOrder/{AppKey}");
@@ -25094,6 +26423,10 @@ namespace AlibabaSDK
                     if (shopPromotionId != null)
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(shopPromotionId, System.Globalization.CultureInfo.InvariantCulture)), "shopPromotionId");
+                    }
+                    if (tradeType != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(tradeType, System.Globalization.CultureInfo.InvariantCulture)), "tradeType");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -25609,7 +26942,7 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取类目属性层级级联信息
+        /// <summary>获取叶子类目属性层级级联信息
         /// 根据类目ID和层级属性表达式获取级联属性信息
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:category.level.attr.get-1 
@@ -25625,7 +26958,7 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取类目属性层级级联信息
+        /// <summary>获取叶子类目属性层级级联信息
         /// 根据类目ID和层级属性表达式获取级联属性信息
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:category.level.attr.get-1 
@@ -25715,8 +27048,8 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取类目属性
-        /// 根据类目ID获取类目属性
+        /// <summary>获取叶子类目属性
+        /// 根据叶子类目ID获取类目属性
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.category.attribute.get-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.category.attribute.get&amp;v=1</summary>
@@ -25731,8 +27064,8 @@ namespace AlibabaSDK
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取类目属性
-        /// 根据类目ID获取类目属性
+        /// <summary>获取叶子类目属性
+        /// 根据叶子类目ID获取类目属性
         /// 
         /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.product:alibaba.category.attribute.get-1 
         /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.product&amp;n=alibaba.category.attribute.get&amp;v=1</summary>
@@ -28017,124 +29350,6 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>品牌商捡入
-        /// 品牌商捡入
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.list.brandPickedEnterLeads-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.list.brandPickedEnterLeads&amp;v=1</summary>
-        /// <param name="leadsBizId">零售店业务主键</param>
-        /// <param name="operatorNo">品牌商拍档编码</param>
-        /// <param name="spUserId">品牌商的userid</param>
-        /// <param name="leadsType">品牌商的零售店的业务类型</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaLstOpenResult AlibabaListBrandPickedEnterLeads(long leadsBizId, string operatorNo, long spUserId, string leadsType)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaListBrandPickedEnterLeadsAsync(leadsBizId, operatorNo, spUserId, leadsType, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>品牌商捡入
-        /// 品牌商捡入
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=cn.alibaba.open:alibaba.list.brandPickedEnterLeads-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=cn.alibaba.open&amp;n=alibaba.list.brandPickedEnterLeads&amp;v=1</summary>
-        /// <param name="leadsBizId">零售店业务主键</param>
-        /// <param name="operatorNo">品牌商拍档编码</param>
-        /// <param name="spUserId">品牌商的userid</param>
-        /// <param name="leadsType">品牌商的零售店的业务类型</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaLstOpenResult> AlibabaListBrandPickedEnterLeadsAsync(long leadsBizId, string operatorNo, long spUserId, string leadsType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/alibaba.list.brandPickedEnterLeads/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (leadsBizId == null)
-                        throw new System.ArgumentNullException("leadsBizId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(leadsBizId, System.Globalization.CultureInfo.InvariantCulture)), "leadsBizId");
-                    }
-                    if (operatorNo == null)
-                        throw new System.ArgumentNullException("operatorNo");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(operatorNo, System.Globalization.CultureInfo.InvariantCulture)), "operatorNo");
-                    }
-                    if (spUserId == null)
-                        throw new System.ArgumentNullException("spUserId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(spUserId, System.Globalization.CultureInfo.InvariantCulture)), "spUserId");
-                    }
-                    if (leadsType == null)
-                        throw new System.ArgumentNullException("leadsType");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(leadsType, System.Globalization.CultureInfo.InvariantCulture)), "leadsType");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaLstOpenResult>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaLstOpenResult);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
         /// <summary>业务员权限关闭
         /// 业务员权限关闭
         /// 
@@ -28233,30 +29448,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取网销宝推广单元列表
-        /// 获取网销宝推广单元列表
+        /// <summary>校验商家符不符合报名该专场的资质
+        /// 校验商家符不符合报名该专场的资质，如果不符合会返回原因
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.list&amp;v=1</summary>
-        /// <param name="adGroupIdList">推广单元id列表</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:member.check.qualification-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=member.check.qualification&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response22 AlibabaCnp4pAdgroupList(System.Collections.Generic.IEnumerable<string> adGroupIdList)
+        public MemberCheckQualificationResult MemberCheckQualification(long topicId)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pAdgroupListAsync(adGroupIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await MemberCheckQualificationAsync(topicId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝推广单元列表
-        /// 获取网销宝推广单元列表
+        /// <summary>校验商家符不符合报名该专场的资质
+        /// 校验商家符不符合报名该专场的资质，如果不符合会返回原因
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.list&amp;v=1</summary>
-        /// <param name="adGroupIdList">推广单元id列表</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:member.check.qualification-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=member.check.qualification&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response22> AlibabaCnp4pAdgroupListAsync(System.Collections.Generic.IEnumerable<string> adGroupIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MemberCheckQualificationResult> MemberCheckQualificationAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.adgroup.list/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/member.check.qualification/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -28267,11 +29482,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupIdList == null)
-                        throw new System.ArgumentNullException("adGroupIdList");
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupIdList, System.Globalization.CultureInfo.InvariantCulture)), "adGroupIdList");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -28303,7 +29518,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response22>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<MemberCheckQualificationResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -28313,7 +29528,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response22);
+                        return default(MemberCheckQualificationResult);
                     }
                     finally
                     {
@@ -28327,40 +29542,34 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>更新网销宝推广计划
-        /// 更新网销宝推广计划
+        /// <summary>待优化offer不能报名原因查询
+        /// 查询待优化offer不能报名的原因，如果完全符合报名要求，返回原因会为空。
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="budget">计划预算</param>
-        /// <param name="onlineStatus">计划状态，0为暂停；1为推广中；</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
-        /// <param name="cositeFlag">计划是否支持站外定向推广：0不支持，1支持</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.offer.suggestion.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.offer.suggestion.get&amp;v=1</summary>
+        /// <param name="topicId">要报名的专场</param>
+        /// <param name="batchId">要报名的批次</param>
+        /// <param name="offerId">要报名的商品id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pCampaign AlibabaCnp4pCampaignUpdate(long campaignId, double? budget = null, int? onlineStatus = null, string promoteArea = null, string schedule = null, int? cositeFlag = null)
+        public AlibabaOfferSuggestionGetResult AlibabaOfferSuggestionGet(long topicId, long batchId, long offerId)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pCampaignUpdateAsync(campaignId, budget, onlineStatus, promoteArea, schedule, cositeFlag, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaOfferSuggestionGetAsync(topicId, batchId, offerId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广计划
-        /// 更新网销宝推广计划
+        /// <summary>待优化offer不能报名原因查询
+        /// 查询待优化offer不能报名的原因，如果完全符合报名要求，返回原因会为空。
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="budget">计划预算</param>
-        /// <param name="onlineStatus">计划状态，0为暂停；1为推广中；</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
-        /// <param name="cositeFlag">计划是否支持站外定向推广：0不支持，1支持</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.offer.suggestion.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.offer.suggestion.get&amp;v=1</summary>
+        /// <param name="topicId">要报名的专场</param>
+        /// <param name="batchId">要报名的批次</param>
+        /// <param name="offerId">要报名的商品id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignUpdateAsync(long campaignId, double? budget = null, int? onlineStatus = null, string promoteArea = null, string schedule = null, int? cositeFlag = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaOfferSuggestionGetResult> AlibabaOfferSuggestionGetAsync(long topicId, long batchId, long offerId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.campaign.update/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.offer.suggestion.get/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -28371,807 +29580,17 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
-                    if (budget != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(budget, System.Globalization.CultureInfo.InvariantCulture)), "budget");
-                    }
-                    if (onlineStatus != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(onlineStatus, System.Globalization.CultureInfo.InvariantCulture)), "onlineStatus");
-                    }
-                    if (promoteArea != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(promoteArea, System.Globalization.CultureInfo.InvariantCulture)), "promoteArea");
-                    }
-                    if (schedule != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(schedule, System.Globalization.CultureInfo.InvariantCulture)), "schedule");
-                    }
-                    if (cositeFlag != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(cositeFlag, System.Globalization.CultureInfo.InvariantCulture)), "cositeFlag");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pCampaign>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaCnp4pCampaign);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>删除计划信息
-        /// 删除计划信息
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.delete&amp;v=1</summary>
-        /// <param name="campaignIdList">推广计划id</param>
-        /// <returns>通用int型结果返回 ErrorCode 的错误信息
-        /// 110000	- 计划id为空
-        /// 110017	- 计划信息不存在
-        /// 88806	- 包含不允许操作的产品线计划id信息(移除非支持操作的产品线计划id信息)</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response19 AlibabaCnp4pCampaignDelete(System.Collections.Generic.IEnumerable<string> campaignIdList)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pCampaignDeleteAsync(campaignIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>删除计划信息
-        /// 删除计划信息
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.delete&amp;v=1</summary>
-        /// <param name="campaignIdList">推广计划id</param>
-        /// <returns>通用int型结果返回 ErrorCode 的错误信息
-        /// 110000	- 计划id为空
-        /// 110017	- 计划信息不存在
-        /// 88806	- 包含不允许操作的产品线计划id信息(移除非支持操作的产品线计划id信息)</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response19> AlibabaCnp4pCampaignDeleteAsync(System.Collections.Generic.IEnumerable<string> campaignIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.campaign.delete/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignIdList == null)
-                        throw new System.ArgumentNullException("campaignIdList");
+                    if (batchId == null)
+                        throw new System.ArgumentNullException("batchId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignIdList, System.Globalization.CultureInfo.InvariantCulture)), "campaignIdList");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response19>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response19);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>获取网销宝关键词排名
-        /// 获取网销宝关键词排名
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.rank.get-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.rank.get&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
-        /// <param name="keywordId">关键词id</param>
-        /// <param name="areaCode">排名所在区域</param>
-        /// <returns>关键词排名返回 ErrorCode 的错误信息
-        /// 系统错误	- 999999(系统错误)</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pKeywordRank AlibabaCnp4pKeywordRankGet(long adGroupId, long keywordId, string areaCode = null)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordRankGetAsync(adGroupId, keywordId, areaCode, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝关键词排名
-        /// 获取网销宝关键词排名
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.rank.get-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.rank.get&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
-        /// <param name="keywordId">关键词id</param>
-        /// <param name="areaCode">排名所在区域</param>
-        /// <returns>关键词排名返回 ErrorCode 的错误信息
-        /// 系统错误	- 999999(系统错误)</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pKeywordRank> AlibabaCnp4pKeywordRankGetAsync(long adGroupId, long keywordId, string areaCode = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.rank.get/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
-                    }
-                    if (keywordId == null)
-                        throw new System.ArgumentNullException("keywordId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keywordId, System.Globalization.CultureInfo.InvariantCulture)), "keywordId");
-                    }
-                    if (areaCode != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(areaCode, System.Globalization.CultureInfo.InvariantCulture)), "areaCode");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pKeywordRank>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaCnp4pKeywordRank);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>根据推广计划获取网销宝推广单元列表
-        /// 根据推广计划获取网销宝推广单元列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.bycampaignids.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.bycampaignids.list&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最大200</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pAdgroupBycampaignidsListResult AlibabaCnp4pAdgroupBycampaignidsList(long campaignId, int pageNo, int pageSize)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pAdgroupBycampaignidsListAsync(campaignId, pageNo, pageSize, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>根据推广计划获取网销宝推广单元列表
-        /// 根据推广计划获取网销宝推广单元列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.bycampaignids.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.bycampaignids.list&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最大200</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pAdgroupBycampaignidsListResult> AlibabaCnp4pAdgroupBycampaignidsListAsync(long campaignId, int pageNo, int pageSize, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.adgroup.bycampaignids.list/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
-                    }
-                    if (pageNo == null)
-                        throw new System.ArgumentNullException("pageNo");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageNo, System.Globalization.CultureInfo.InvariantCulture)), "pageNo");
-                    }
-                    if (pageSize == null)
-                        throw new System.ArgumentNullException("pageSize");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageSize, System.Globalization.CultureInfo.InvariantCulture)), "pageSize");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pAdgroupBycampaignidsListResult>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaCnp4pAdgroupBycampaignidsListResult);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>获取网销宝关键词列表
-        /// 获取网销宝关键词列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response23 AlibabaCnp4pKeywordList(long campaignId, System.Collections.Generic.IEnumerable<string> keywordIdList)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordListAsync(campaignId, keywordIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝关键词列表
-        /// 获取网销宝关键词列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response23> AlibabaCnp4pKeywordListAsync(long campaignId, System.Collections.Generic.IEnumerable<string> keywordIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.list/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
-                    }
-                    if (keywordIdList == null)
-                        throw new System.ArgumentNullException("keywordIdList");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keywordIdList, System.Globalization.CultureInfo.InvariantCulture)), "keywordIdList");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response23>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response23);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>获取网销宝关键词报表详情
-        /// 获取网销宝关键词报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.keywordEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.keywordEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="adGroupId">单元id</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="keywordId">关键词id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pReportKeywordEffectResult AlibabaCnp4pReportKeywordEffect(System.DateTimeOffset startTime, System.DateTimeOffset endTime, long campaignId, long adGroupId, int pageNo, int pageSize, long? keywordId = null)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pReportKeywordEffectAsync(startTime, endTime, campaignId, adGroupId, pageNo, pageSize, keywordId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝关键词报表详情
-        /// 获取网销宝关键词报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.keywordEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.keywordEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="adGroupId">单元id</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="keywordId">关键词id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pReportKeywordEffectResult> AlibabaCnp4pReportKeywordEffectAsync(System.DateTimeOffset startTime, System.DateTimeOffset endTime, long campaignId, long adGroupId, int pageNo, int pageSize, long? keywordId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.report.keywordEffect/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (startTime == null)
-                        throw new System.ArgumentNullException("startTime");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(startTime, System.Globalization.CultureInfo.InvariantCulture)), "startTime");
-                    }
-                    if (endTime == null)
-                        throw new System.ArgumentNullException("endTime");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endTime, System.Globalization.CultureInfo.InvariantCulture)), "endTime");
-                    }
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
-                    }
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
-                    }
-                    if (pageNo == null)
-                        throw new System.ArgumentNullException("pageNo");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageNo, System.Globalization.CultureInfo.InvariantCulture)), "pageNo");
-                    }
-                    if (pageSize == null)
-                        throw new System.ArgumentNullException("pageSize");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageSize, System.Globalization.CultureInfo.InvariantCulture)), "pageSize");
-                    }
-                    if (keywordId != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keywordId, System.Globalization.CultureInfo.InvariantCulture)), "keywordId");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pReportKeywordEffectResult>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaCnp4pReportKeywordEffectResult);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>获取关键词相关词列表
-        /// 获取关键词相关词列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.relativeword-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.relativeword&amp;v=1</summary>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户号为空
-        /// 130003	- 关键词为空</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response24 AlibabaCnp4pKeywordListRelativeword(string keyword)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordListRelativewordAsync(keyword, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取关键词相关词列表
-        /// 获取关键词相关词列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.relativeword-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.relativeword&amp;v=1</summary>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户号为空
-        /// 130003	- 关键词为空</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response24> AlibabaCnp4pKeywordListRelativewordAsync(string keyword, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.list.relativeword/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (keyword == null)
-                        throw new System.ArgumentNullException("keyword");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keyword, System.Globalization.CultureInfo.InvariantCulture)), "keyword");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response24>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response24);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>新增网销宝推广单元
-        /// 新增网销宝推广单元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.add&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="onlineState">推广单元上下线状态：0下线；1上线</param>
-        /// <param name="bidPrice">推广单元默认出价，单位元</param>
-        /// <param name="offerId">1688中文站offer产品信息id，具体获取指定用户offer列表可以从这个API获取：https://open.1688.com/doc/api/cn/api.htm?ns=cn.alibaba.open&amp;n=offer.getPublishOfferList&amp;v=1</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pAdgroup AlibabaCnp4pAdgroupAdd(long campaignId, int onlineState, double bidPrice, long offerId)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pAdgroupAddAsync(campaignId, onlineState, bidPrice, offerId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>新增网销宝推广单元
-        /// 新增网销宝推广单元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.add&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="onlineState">推广单元上下线状态：0下线；1上线</param>
-        /// <param name="bidPrice">推广单元默认出价，单位元</param>
-        /// <param name="offerId">1688中文站offer产品信息id，具体获取指定用户offer列表可以从这个API获取：https://open.1688.com/doc/api/cn/api.htm?ns=cn.alibaba.open&amp;n=offer.getPublishOfferList&amp;v=1</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pAdgroup> AlibabaCnp4pAdgroupAddAsync(long campaignId, int onlineState, double bidPrice, long offerId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.adgroup.add/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
-                    }
-                    if (onlineState == null)
-                        throw new System.ArgumentNullException("onlineState");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(onlineState, System.Globalization.CultureInfo.InvariantCulture)), "onlineState");
-                    }
-                    if (bidPrice == null)
-                        throw new System.ArgumentNullException("bidPrice");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(bidPrice, System.Globalization.CultureInfo.InvariantCulture)), "bidPrice");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(batchId, System.Globalization.CultureInfo.InvariantCulture)), "batchId");
                     }
                     if (offerId == null)
                         throw new System.ArgumentNullException("offerId");
@@ -29209,7 +29628,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pAdgroup>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaOfferSuggestionGetResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -29219,7 +29638,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaCnp4pAdgroup);
+                        return default(AlibabaOfferSuggestionGetResult);
                     }
                     finally
                     {
@@ -29233,38 +29652,40 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取关键词相关性信息
-        /// 获取关键词相关性及诊断建议
+        /// <summary>查询商家某专场下商品的报名记录
+        /// 根据专场topicId，查询该商家在该专场下offer的报名记录。（分页查询，注意只有查第一页的时候，数据总数totalRecords才会正确返回，否则总是返回0）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.mlrscore-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.mlrscore&amp;v=1</summary>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户号为空(未登录授权)
-        /// 120000	- 推广单元id为空(参数传入推广单元id)
-        /// 130000	- 关键词列表id为空(传入关键词id列表)
-        /// 130002	- 关键词id列表size大于上限(传不超过关键词id上限列表)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.enroll.records.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.enroll.records.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="pageNo">分页页码，从1开始。另外只有查第一页的时候，数据总数totalRecords才会正确返回，否则总是返回0</param>
+        /// <param name="pageSize">分页每页数量，默认10，最大不能超过20</param>
+        /// <param name="status">查询的报名offer或商家的状态，只有statusList为空才会使用status字段</param>
+        /// <param name="statusList">查询的报名offer或商家的状态，只有statusList为空才会使用status字段</param>
+        /// <param name="batchId">活动批次batchId，这字段是非必填</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response25 AlibabaCnp4pKeywordListMlrscore(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList)
+        public AlibabaEnrollRecordsListResult AlibabaEnrollRecordsList(long topicId, int pageNo, int pageSize, string status = null, System.Collections.Generic.IEnumerable<string> statusList = null, long? batchId = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordListMlrscoreAsync(adGroupId, keywordIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaEnrollRecordsListAsync(topicId, pageNo, pageSize, status, statusList, batchId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取关键词相关性信息
-        /// 获取关键词相关性及诊断建议
+        /// <summary>查询商家某专场下商品的报名记录
+        /// 根据专场topicId，查询该商家在该专场下offer的报名记录。（分页查询，注意只有查第一页的时候，数据总数totalRecords才会正确返回，否则总是返回0）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.mlrscore-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.mlrscore&amp;v=1</summary>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户号为空(未登录授权)
-        /// 120000	- 推广单元id为空(参数传入推广单元id)
-        /// 130000	- 关键词列表id为空(传入关键词id列表)
-        /// 130002	- 关键词id列表size大于上限(传不超过关键词id上限列表)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.enroll.records.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.enroll.records.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="pageNo">分页页码，从1开始。另外只有查第一页的时候，数据总数totalRecords才会正确返回，否则总是返回0</param>
+        /// <param name="pageSize">分页每页数量，默认10，最大不能超过20</param>
+        /// <param name="status">查询的报名offer或商家的状态，只有statusList为空才会使用status字段</param>
+        /// <param name="statusList">查询的报名offer或商家的状态，只有statusList为空才会使用status字段</param>
+        /// <param name="batchId">活动批次batchId，这字段是非必填</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response25> AlibabaCnp4pKeywordListMlrscoreAsync(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaEnrollRecordsListResult> AlibabaEnrollRecordsListAsync(long topicId, int pageNo, int pageSize, string status = null, System.Collections.Generic.IEnumerable<string> statusList = null, long? batchId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.list.mlrscore/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.enroll.records.list/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -29275,17 +29696,35 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
-                    if (keywordIdList == null)
-                        throw new System.ArgumentNullException("keywordIdList");
+                    if (pageNo == null)
+                        throw new System.ArgumentNullException("pageNo");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keywordIdList, System.Globalization.CultureInfo.InvariantCulture)), "keywordIdList");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageNo, System.Globalization.CultureInfo.InvariantCulture)), "pageNo");
+                    }
+                    if (pageSize == null)
+                        throw new System.ArgumentNullException("pageSize");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageSize, System.Globalization.CultureInfo.InvariantCulture)), "pageSize");
+                    }
+                    if (status != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(status, System.Globalization.CultureInfo.InvariantCulture)), "status");
+                    }
+                    if (statusList != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(statusList, System.Globalization.CultureInfo.InvariantCulture)), "statusList");
+                    }
+                    if (batchId != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(batchId, System.Globalization.CultureInfo.InvariantCulture)), "batchId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -29317,7 +29756,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response25>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaEnrollRecordsListResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -29327,7 +29766,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response25);
+                        return default(AlibabaEnrollRecordsListResult);
                     }
                     finally
                     {
@@ -29341,46 +29780,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取关键词推荐价格
-        /// 获取关键词推荐价格
+        /// <summary>获取批次详情
+        /// 根据批次id，查询批次详情，供页面展示使用
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.recommend.price-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.recommend.price&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <param name="areaCode">投放地域码</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户信息为空
-        /// 100001	- 地域码为空
-        /// 120000	- 推广单元为空
-        /// 130000	- 关键词id为空
-        /// 130002	- 关键词id列表size超过上限</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.detail.get&amp;v=1</summary>
+        /// <param name="batchId">批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response26 AlibabaCnp4pKeywordListRecommendPrice(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList, string areaCode)
+        public AlibabaBatchDetailGetResult AlibabaBatchDetailGet(long batchId)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordListRecommendPriceAsync(adGroupId, keywordIdList, areaCode, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaBatchDetailGetAsync(batchId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取关键词推荐价格
-        /// 获取关键词推荐价格
+        /// <summary>获取批次详情
+        /// 根据批次id，查询批次详情，供页面展示使用
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.list.recommend.price-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.list.recommend.price&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <param name="areaCode">投放地域码</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 100000	- 客户信息为空
-        /// 100001	- 地域码为空
-        /// 120000	- 推广单元为空
-        /// 130000	- 关键词id为空
-        /// 130002	- 关键词id列表size超过上限</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.detail.get&amp;v=1</summary>
+        /// <param name="batchId">批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response26> AlibabaCnp4pKeywordListRecommendPriceAsync(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList, string areaCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaBatchDetailGetResult> AlibabaBatchDetailGetAsync(long batchId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.list.recommend.price/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.batch.detail.get/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -29391,23 +29814,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
+                    if (batchId == null)
+                        throw new System.ArgumentNullException("batchId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
-                    }
-                    if (keywordIdList == null)
-                        throw new System.ArgumentNullException("keywordIdList");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keywordIdList, System.Globalization.CultureInfo.InvariantCulture)), "keywordIdList");
-                    }
-                    if (areaCode == null)
-                        throw new System.ArgumentNullException("areaCode");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(areaCode, System.Globalization.CultureInfo.InvariantCulture)), "areaCode");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(batchId, System.Globalization.CultureInfo.InvariantCulture)), "batchId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -29439,7 +29850,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response26>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaBatchDetailGetResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -29449,7 +29860,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response26);
+                        return default(AlibabaBatchDetailGetResult);
                     }
                     finally
                     {
@@ -29463,30 +29874,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>删除网销宝推广单元
-        /// 删除网销宝推广单元
+        /// <summary>给商家推荐最近适合他报名的批次(不推荐继续使用)
+        /// (不推荐继续使用) 给商家推荐最近适合他报名的批次，默认选当前时间两天后最近的一个批次（该接口只适合报名伙拼和天天特卖的特定专场，建议使用轻报名接口获取更多专场的批次信息 alibaba.light.enroll.topic.info.query）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.delete&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.recommend&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pAdgroup AlibabaCnp4pAdgroupDelete(long adGroupId)
+        public AlibabaBatchRecommendResult AlibabaBatchRecommend(long topicId)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pAdgroupDeleteAsync(adGroupId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaBatchRecommendAsync(topicId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>删除网销宝推广单元
-        /// 删除网销宝推广单元
+        /// <summary>给商家推荐最近适合他报名的批次(不推荐继续使用)
+        /// (不推荐继续使用) 给商家推荐最近适合他报名的批次，默认选当前时间两天后最近的一个批次（该接口只适合报名伙拼和天天特卖的特定专场，建议使用轻报名接口获取更多专场的批次信息 alibaba.light.enroll.topic.info.query）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.delete&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.recommend&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pAdgroup> AlibabaCnp4pAdgroupDeleteAsync(long adGroupId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaBatchRecommendResult> AlibabaBatchRecommendAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.adgroup.delete/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.batch.recommend/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -29497,11 +29908,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -29533,7 +29944,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pAdgroup>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaBatchRecommendResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -29543,7 +29954,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaCnp4pAdgroup);
+                        return default(AlibabaBatchRecommendResult);
                     }
                     finally
                     {
@@ -29557,30 +29968,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取网销宝计划列表
-        /// 获取网销宝计划列表
+        /// <summary>白底图上传和校验接口
+        /// 白底图上传和校验接口。上传一张图片，如果是符合要求的白底图，返回图片url，如果不是，返回不符合白底图要求的报错信息。
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.list&amp;v=1</summary>
-        /// <param name="campaignIdList">计划id列表</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.white.image.upload-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.white.image.upload&amp;v=1</summary>
+        /// <param name="data">图片（字节流）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response27 AlibabaCnp4pCampaignList(System.Collections.Generic.IEnumerable<string> campaignIdList = null)
+        public AlibabaWhiteImageUploadResult AlibabaWhiteImageUpload(byte[] data)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pCampaignListAsync(campaignIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaWhiteImageUploadAsync(data, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝计划列表
-        /// 获取网销宝计划列表
+        /// <summary>白底图上传和校验接口
+        /// 白底图上传和校验接口。上传一张图片，如果是符合要求的白底图，返回图片url，如果不是，返回不符合白底图要求的报错信息。
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.list&amp;v=1</summary>
-        /// <param name="campaignIdList">计划id列表</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.white.image.upload-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.white.image.upload&amp;v=1</summary>
+        /// <param name="data">图片（字节流）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response27> AlibabaCnp4pCampaignListAsync(System.Collections.Generic.IEnumerable<string> campaignIdList = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaWhiteImageUploadResult> AlibabaWhiteImageUploadAsync(byte[] data, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.campaign.list/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.white.image.upload/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -29591,9 +30002,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignIdList != null)
+                    if (data == null)
+                        throw new System.ArgumentNullException("data");
+                    else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignIdList, System.Globalization.CultureInfo.InvariantCulture)), "campaignIdList");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(data, System.Globalization.CultureInfo.InvariantCulture)), "data");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -29625,7 +30038,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response27>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaWhiteImageUploadResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -29635,7 +30048,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response27);
+                        return default(AlibabaWhiteImageUploadResult);
                     }
                     finally
                     {
@@ -29649,130 +30062,28 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>更新网销宝推广计划投放时段
-        /// 更新网销宝推广计划投放时段
+        /// <summary>查询所有活动专场tag
+        /// 查询所有活动专场tag
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.schedule.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.schedule.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.topic.tag.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.topic.tag.query&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pCampaign AlibabaCnp4pCampaignScheduleUpdate(long campaignId, string schedule)
+        public AlibabaLightEnrollTopicTagQueryResult AlibabaLightEnrollTopicTagQuery()
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pCampaignScheduleUpdateAsync(campaignId, schedule, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaLightEnrollTopicTagQueryAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广计划投放时段
-        /// 更新网销宝推广计划投放时段
+        /// <summary>查询所有活动专场tag
+        /// 查询所有活动专场tag
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.schedule.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.schedule.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.topic.tag.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.topic.tag.query&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignScheduleUpdateAsync(long campaignId, string schedule, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaLightEnrollTopicTagQueryResult> AlibabaLightEnrollTopicTagQueryAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.campaign.schedule.update/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
-                    }
-                    if (schedule == null)
-                        throw new System.ArgumentNullException("schedule");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(schedule, System.Globalization.CultureInfo.InvariantCulture)), "schedule");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pCampaign>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaCnp4pCampaign);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>获取可投放的地域列表
-        /// 获取可投放的地域列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.areaList-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.areaList&amp;v=1</summary>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response28 AlibabaCnp4pCampaignAreaList()
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pCampaignAreaListAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取可投放的地域列表
-        /// 获取可投放的地域列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.areaList-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.areaList&amp;v=1</summary>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response28> AlibabaCnp4pCampaignAreaListAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.campaign.areaList/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.light.enroll.topic.tag.query/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -29809,7 +30120,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response28>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaLightEnrollTopicTagQueryResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -29819,7 +30130,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response28);
+                        return default(AlibabaLightEnrollTopicTagQueryResult);
                     }
                     finally
                     {
@@ -29833,40 +30144,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取网销宝推广计划报表详情
-        /// 获取网销宝推广计划报表详情
+        /// <summary>写入报名记录
+        /// 写入报名记录，返回报名成功的offer，一批报名不能超过10个
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.campaignEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.campaignEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="reportType">报表类型，为空则全部；site_in则为站内，site_out则为站外</param>
-        /// <param name="campaignId">计划id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.record.batch.insert-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.record.batch.insert&amp;v=1</summary>
+        /// <param name="param">报名参数</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pReportCampaignEffectResult AlibabaCnp4pReportCampaignEffect(System.DateTimeOffset startTime, System.DateTimeOffset endTime, int pageNo, int pageSize, string reportType = null, long? campaignId = null)
+        public AlibabaLightEnrollRecordBatchInsertResult AlibabaLightEnrollRecordBatchInsert(ComAlibabaOceanOpenplatformBizHuopinParamLightEnrollParam param)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pReportCampaignEffectAsync(startTime, endTime, pageNo, pageSize, reportType, campaignId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaLightEnrollRecordBatchInsertAsync(param, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝推广计划报表详情
-        /// 获取网销宝推广计划报表详情
+        /// <summary>写入报名记录
+        /// 写入报名记录，返回报名成功的offer，一批报名不能超过10个
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.campaignEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.campaignEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="reportType">报表类型，为空则全部；site_in则为站内，site_out则为站外</param>
-        /// <param name="campaignId">计划id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.record.batch.insert-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.record.batch.insert&amp;v=1</summary>
+        /// <param name="param">报名参数</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pReportCampaignEffectResult> AlibabaCnp4pReportCampaignEffectAsync(System.DateTimeOffset startTime, System.DateTimeOffset endTime, int pageNo, int pageSize, string reportType = null, long? campaignId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaLightEnrollRecordBatchInsertResult> AlibabaLightEnrollRecordBatchInsertAsync(ComAlibabaOceanOpenplatformBizHuopinParamLightEnrollParam param, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.report.campaignEffect/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.light.enroll.record.batch.insert/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -29877,17 +30178,301 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (startTime == null)
-                        throw new System.ArgumentNullException("startTime");
+                    if (param == null)
+                        throw new System.ArgumentNullException("param");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(startTime, System.Globalization.CultureInfo.InvariantCulture)), "startTime");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(param, System.Globalization.CultureInfo.InvariantCulture)), "param");
                     }
-                    if (endTime == null)
-                        throw new System.ArgumentNullException("endTime");
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaLightEnrollRecordBatchInsertResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaLightEnrollRecordBatchInsertResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>专场详情查询（不推荐继续使用，仅能查询伙拼、天天特卖专场活动信息）
+        /// (不推荐使用) 根据专场id，查询专场详情，包括专场活动标题、描述等信息，供页面展示使用（仅能查询伙拼、天天特卖等专场活动信息，通用专场信息可以用轻报名专场查询接口alibaba.light.enroll.topic.info.query）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.detail.get&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaTopicDetailGetResult AlibabaTopicDetailGet(long topicId)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTopicDetailGetAsync(topicId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>专场详情查询（不推荐继续使用，仅能查询伙拼、天天特卖专场活动信息）
+        /// (不推荐使用) 根据专场id，查询专场详情，包括专场活动标题、描述等信息，供页面展示使用（仅能查询伙拼、天天特卖等专场活动信息，通用专场信息可以用轻报名专场查询接口alibaba.light.enroll.topic.info.query）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.detail.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.detail.get&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaTopicDetailGetResult> AlibabaTopicDetailGetAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.topic.detail.get/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endTime, System.Globalization.CultureInfo.InvariantCulture)), "endTime");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaTopicDetailGetResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaTopicDetailGetResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>获取报名商品要填写的字段表单或模板(不推荐继续使用)
+        /// （不推荐使用）获取报商品需要展示和填写的字段（该接口只能获取伙拼和天天特卖3个特定专场35320，35321，35273的报名表单。要获取更多专场报名表单，请使用alibaba.light.enroll.form.item.query）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.items.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.items.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaTopicItemsListResult AlibabaTopicItemsList(long topicId)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTopicItemsListAsync(topicId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>获取报名商品要填写的字段表单或模板(不推荐继续使用)
+        /// （不推荐使用）获取报商品需要展示和填写的字段（该接口只能获取伙拼和天天特卖3个特定专场35320，35321，35273的报名表单。要获取更多专场报名表单，请使用alibaba.light.enroll.form.item.query）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.items.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.items.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaTopicItemsListResult> AlibabaTopicItemsListAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.topic.items.list/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaTopicItemsListResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaTopicItemsListResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>待报名商品展示
+        /// 展示该商家在该专场活动下，没有报名的商品List（如果canEnroll为true，查出来的都是有资格报名的。canEnroll为false，都是没有资格报名的）。
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.enroll.waiting.offers.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.enroll.waiting.offers.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="pageNo">分页页码，从1开始</param>
+        /// <param name="pageSize">分页每页数量，默认10，最大不能超过20</param>
+        /// <param name="canEnroll">true表示查询该商家可以报名但还没报名的商品，false表示查询该商家还有待改进的商品（暂时不具备报名该活动的资格）</param>
+        /// <param name="batchId">活动批次id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaEnrollWaitingOffersListResult AlibabaEnrollWaitingOffersList(long topicId, int pageNo, int pageSize, bool canEnroll, long? batchId = null)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaEnrollWaitingOffersListAsync(topicId, pageNo, pageSize, canEnroll, batchId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>待报名商品展示
+        /// 展示该商家在该专场活动下，没有报名的商品List（如果canEnroll为true，查出来的都是有资格报名的。canEnroll为false，都是没有资格报名的）。
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.enroll.waiting.offers.list-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.enroll.waiting.offers.list&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="pageNo">分页页码，从1开始</param>
+        /// <param name="pageSize">分页每页数量，默认10，最大不能超过20</param>
+        /// <param name="canEnroll">true表示查询该商家可以报名但还没报名的商品，false表示查询该商家还有待改进的商品（暂时不具备报名该活动的资格）</param>
+        /// <param name="batchId">活动批次id</param>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaEnrollWaitingOffersListResult> AlibabaEnrollWaitingOffersListAsync(long topicId, int pageNo, int pageSize, bool canEnroll, long? batchId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.enroll.waiting.offers.list/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
                     if (pageNo == null)
                         throw new System.ArgumentNullException("pageNo");
@@ -29901,13 +30486,15 @@ namespace AlibabaSDK
                     {
                         content_.Add(new System.Net.Http.StringContent(ConvertToString(pageSize, System.Globalization.CultureInfo.InvariantCulture)), "pageSize");
                     }
-                    if (reportType != null)
+                    if (canEnroll == null)
+                        throw new System.ArgumentNullException("canEnroll");
+                    else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(reportType, System.Globalization.CultureInfo.InvariantCulture)), "reportType");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(canEnroll, System.Globalization.CultureInfo.InvariantCulture)), "canEnroll");
                     }
-                    if (campaignId != null)
+                    if (batchId != null)
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(batchId, System.Globalization.CultureInfo.InvariantCulture)), "batchId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -29939,7 +30526,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pReportCampaignEffectResult>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaEnrollWaitingOffersListResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -29949,7 +30536,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaCnp4pReportCampaignEffectResult);
+                        return default(AlibabaEnrollWaitingOffersListResult);
                     }
                     finally
                     {
@@ -29963,28 +30550,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取网销宝关键词质量分
-        /// 获取网销宝关键词质量分
+        /// <summary>获取轻报名专场信息
+        /// 获取轻报名专场信息（含专场基本信息、是否支持轻报名、可报名排期信息等）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.quality.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.quality.list&amp;v=1</summary>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.topic.info.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.topic.info.query&amp;v=1</summary>
+        /// <param name="topicId">活动专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response29 AlibabaCnp4pKeywordQualityList(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList)
+        public AlibabaLightEnrollTopicInfoQueryResult AlibabaLightEnrollTopicInfoQuery(long topicId)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordQualityListAsync(adGroupId, keywordIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaLightEnrollTopicInfoQueryAsync(topicId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝关键词质量分
-        /// 获取网销宝关键词质量分
+        /// <summary>获取轻报名专场信息
+        /// 获取轻报名专场信息（含专场基本信息、是否支持轻报名、可报名排期信息等）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.quality.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.quality.list&amp;v=1</summary>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.topic.info.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.topic.info.query&amp;v=1</summary>
+        /// <param name="topicId">活动专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response29> AlibabaCnp4pKeywordQualityListAsync(long adGroupId, System.Collections.Generic.IEnumerable<string> keywordIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaLightEnrollTopicInfoQueryResult> AlibabaLightEnrollTopicInfoQueryAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.quality.list/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.light.enroll.topic.info.query/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -29995,17 +30584,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
-                    }
-                    if (keywordIdList == null)
-                        throw new System.ArgumentNullException("keywordIdList");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keywordIdList, System.Globalization.CultureInfo.InvariantCulture)), "keywordIdList");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -30037,7 +30620,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response29>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaLightEnrollTopicInfoQueryResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -30047,7 +30630,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response29);
+                        return default(AlibabaLightEnrollTopicInfoQueryResult);
                     }
                     finally
                     {
@@ -30061,32 +30644,34 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取网销宝指定推广单元的推荐词
-        /// 获取网销宝指定推广单元的推荐词
+        /// <summary>活动报名（不推荐继续使用）
+        /// (不推荐使用) 活动报名接口。返回报名成功的商品ID。并且只要有一个商品没有报名成功，success都会是false。（该接口只支持伙拼和天天特卖的三个固定专场35320，35321，35273的报名，更多专场报名请使用alibaba.light.enroll.record.batch.insert）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.recommend.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.recommend.list&amp;v=1</summary>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最多10条</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.offer.enroll-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.offer.enroll&amp;v=1</summary>
+        /// <param name="topicId">要报名的专场id</param>
+        /// <param name="batchId">要报名的批次活动id</param>
+        /// <param name="offerList">报名的商品信息,一次最多报名10个商品</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response30 AlibabaCnp4pKeywordRecommendList(long adGroupId, int pageNo, int pageSize)
+        public AlibabaBatchOfferEnrollResult AlibabaBatchOfferEnroll(long topicId, long batchId, System.Collections.Generic.IEnumerable<AlibabaOceanOpenplatformBizHuopinModelHpEnrollOfferModel> offerList)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordRecommendListAsync(adGroupId, pageNo, pageSize, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaBatchOfferEnrollAsync(topicId, batchId, offerList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝指定推广单元的推荐词
-        /// 获取网销宝指定推广单元的推荐词
+        /// <summary>活动报名（不推荐继续使用）
+        /// (不推荐使用) 活动报名接口。返回报名成功的商品ID。并且只要有一个商品没有报名成功，success都会是false。（该接口只支持伙拼和天天特卖的三个固定专场35320，35321，35273的报名，更多专场报名请使用alibaba.light.enroll.record.batch.insert）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.recommend.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.recommend.list&amp;v=1</summary>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最多10条</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.offer.enroll-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.offer.enroll&amp;v=1</summary>
+        /// <param name="topicId">要报名的专场id</param>
+        /// <param name="batchId">要报名的批次活动id</param>
+        /// <param name="offerList">报名的商品信息,一次最多报名10个商品</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response30> AlibabaCnp4pKeywordRecommendListAsync(long adGroupId, int pageNo, int pageSize, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaBatchOfferEnrollResult> AlibabaBatchOfferEnrollAsync(long topicId, long batchId, System.Collections.Generic.IEnumerable<AlibabaOceanOpenplatformBizHuopinModelHpEnrollOfferModel> offerList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.recommend.list/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.batch.offer.enroll/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -30097,23 +30682,23 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
-                    if (pageNo == null)
-                        throw new System.ArgumentNullException("pageNo");
+                    if (batchId == null)
+                        throw new System.ArgumentNullException("batchId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageNo, System.Globalization.CultureInfo.InvariantCulture)), "pageNo");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(batchId, System.Globalization.CultureInfo.InvariantCulture)), "batchId");
                     }
-                    if (pageSize == null)
-                        throw new System.ArgumentNullException("pageSize");
+                    if (offerList == null)
+                        throw new System.ArgumentNullException("offerList");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageSize, System.Globalization.CultureInfo.InvariantCulture)), "pageSize");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(offerList, System.Globalization.CultureInfo.InvariantCulture)), "offerList");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -30145,7 +30730,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response30>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaBatchOfferEnrollResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -30155,7 +30740,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response30);
+                        return default(AlibabaBatchOfferEnrollResult);
                     }
                     finally
                     {
@@ -30169,58 +30754,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>根据关键词查询联盟offer列表
-        /// 根据关键词查询联盟offer列表
+        /// <summary>推荐合适的专场给商家（不推荐继续使用）
+        /// （不推荐使用）校验商家是否有基本资质（如果不符合会返回原因），并推荐合适的专场给商家。（只能查伙拼和天天特卖，不建议继续使用。可以改用alibaba.daily.topic.recommend和alibaba.promotion.topic.recommend）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.union.offerbyquery.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.union.offerbyquery.list&amp;v=1</summary>
-        /// <param name="unionPid">联盟推广位ID</param>
-        /// <param name="query">查询关键词</param>
-        /// <param name="requestIp">请求者的IP</param>
-        /// <param name="requestUserAgent">请求者的UA</param>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最大20条</param>
-        /// <param name="requestReferer">请求者的Referer</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 77703	- 该用户不是联盟用户(联系联盟系统管理员，加入联盟平台)
-        /// 88804	- 请求的数据起始页码为1
-        /// 150001	- 联盟pid无效
-        /// 150002	- 请求ip无效
-        /// 150003	- 请求query无效
-        /// 150004	- 请求useragent无效
-        /// 150005	- 请求页面条数超出限制</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.recommend&amp;v=1</summary>
+        /// <param name="businessType">活动ID，其中10001代表天天特卖，10004代表伙拼，其他值都是错误</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response31 AlibabaCnp4pUnionOfferbyqueryList(string unionPid, string query, string requestIp, string requestUserAgent, int pageNo, int pageSize, string requestReferer = null)
+        public AlibabaTopicRecommendResult AlibabaTopicRecommend(int businessType)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pUnionOfferbyqueryListAsync(unionPid, query, requestIp, requestUserAgent, pageNo, pageSize, requestReferer, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTopicRecommendAsync(businessType, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>根据关键词查询联盟offer列表
-        /// 根据关键词查询联盟offer列表
+        /// <summary>推荐合适的专场给商家（不推荐继续使用）
+        /// （不推荐使用）校验商家是否有基本资质（如果不符合会返回原因），并推荐合适的专场给商家。（只能查伙拼和天天特卖，不建议继续使用。可以改用alibaba.daily.topic.recommend和alibaba.promotion.topic.recommend）
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.union.offerbyquery.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.union.offerbyquery.list&amp;v=1</summary>
-        /// <param name="unionPid">联盟推广位ID</param>
-        /// <param name="query">查询关键词</param>
-        /// <param name="requestIp">请求者的IP</param>
-        /// <param name="requestUserAgent">请求者的UA</param>
-        /// <param name="pageNo">分页页码，从1开始</param>
-        /// <param name="pageSize">分页页条数，最大20条</param>
-        /// <param name="requestReferer">请求者的Referer</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 77703	- 该用户不是联盟用户(联系联盟系统管理员，加入联盟平台)
-        /// 88804	- 请求的数据起始页码为1
-        /// 150001	- 联盟pid无效
-        /// 150002	- 请求ip无效
-        /// 150003	- 请求query无效
-        /// 150004	- 请求useragent无效
-        /// 150005	- 请求页面条数超出限制</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.topic.recommend&amp;v=1</summary>
+        /// <param name="businessType">活动ID，其中10001代表天天特卖，10004代表伙拼，其他值都是错误</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response31> AlibabaCnp4pUnionOfferbyqueryListAsync(string unionPid, string query, string requestIp, string requestUserAgent, int pageNo, int pageSize, string requestReferer = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaTopicRecommendResult> AlibabaTopicRecommendAsync(int businessType, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.union.offerbyquery.list/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.topic.recommend/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -30231,45 +30788,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (unionPid == null)
-                        throw new System.ArgumentNullException("unionPid");
+                    if (businessType == null)
+                        throw new System.ArgumentNullException("businessType");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(unionPid, System.Globalization.CultureInfo.InvariantCulture)), "unionPid");
-                    }
-                    if (query == null)
-                        throw new System.ArgumentNullException("query");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(query, System.Globalization.CultureInfo.InvariantCulture)), "query");
-                    }
-                    if (requestIp == null)
-                        throw new System.ArgumentNullException("requestIp");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(requestIp, System.Globalization.CultureInfo.InvariantCulture)), "requestIp");
-                    }
-                    if (requestUserAgent == null)
-                        throw new System.ArgumentNullException("requestUserAgent");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(requestUserAgent, System.Globalization.CultureInfo.InvariantCulture)), "requestUserAgent");
-                    }
-                    if (pageNo == null)
-                        throw new System.ArgumentNullException("pageNo");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageNo, System.Globalization.CultureInfo.InvariantCulture)), "pageNo");
-                    }
-                    if (pageSize == null)
-                        throw new System.ArgumentNullException("pageSize");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageSize, System.Globalization.CultureInfo.InvariantCulture)), "pageSize");
-                    }
-                    if (requestReferer != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(requestReferer, System.Globalization.CultureInfo.InvariantCulture)), "requestReferer");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(businessType, System.Globalization.CultureInfo.InvariantCulture)), "businessType");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -30301,7 +30824,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response31>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaTopicRecommendResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -30311,7 +30834,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response31);
+                        return default(AlibabaTopicRecommendResult);
                     }
                     finally
                     {
@@ -30325,34 +30848,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取推广单元审核状态
-        /// 获取推广单元审核状态
+        /// <summary>查询商家可报名的日常活动列表
+        /// 查询商家可报名的日常活动列表
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.audit.get.creative.status-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.audit.get.creative.status&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <returns>返回审核状态对象返回 ErrorCode 的错误信息
-        /// 120000	- 推广单元为空(参数中传入推广单元id，eg=100234)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.daily.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.daily.topic.recommend&amp;v=1</summary>
+        /// <param name="businessType">活动类型，包括0(所有日常活动类型)、131（淘货源）、10（伙拼）、117（进口货源）、118（实力商家）、209（质享家）、235（1688直播）、259（跨境专供）、261（微供市场）、262（直播身份报名）、263（直播日常报名）、264（直播活动报名）、266（小店宝）、267（直播审核预告）、268（直播审核商品）、274（疯狂店促）、275（淘工厂）、276（MRO一站购）、297（modern style）、68（今日团）、249（行业活动）、300（周末惠）、331（好货特卖）、336（产地嘉年华）、337（超级产地日）、338（产地巡演）、345（工业品牌）、350（12月商人节）、356（3月商人节）、258（清仓特卖）、296（档口直播）、299（实体店货源）、302（伙拼分销）、305（拿好货）、322（档口尖货）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response32 AlibabaCnp4pAuditGetCreativeStatus(long adGroupId)
+        public AlibabaDailyTopicRecommendResult AlibabaDailyTopicRecommend(int? businessType = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pAuditGetCreativeStatusAsync(adGroupId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaDailyTopicRecommendAsync(businessType, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取推广单元审核状态
-        /// 获取推广单元审核状态
+        /// <summary>查询商家可报名的日常活动列表
+        /// 查询商家可报名的日常活动列表
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.audit.get.creative.status-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.audit.get.creative.status&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <returns>返回审核状态对象返回 ErrorCode 的错误信息
-        /// 120000	- 推广单元为空(参数中传入推广单元id，eg=100234)</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.daily.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.daily.topic.recommend&amp;v=1</summary>
+        /// <param name="businessType">活动类型，包括0(所有日常活动类型)、131（淘货源）、10（伙拼）、117（进口货源）、118（实力商家）、209（质享家）、235（1688直播）、259（跨境专供）、261（微供市场）、262（直播身份报名）、263（直播日常报名）、264（直播活动报名）、266（小店宝）、267（直播审核预告）、268（直播审核商品）、274（疯狂店促）、275（淘工厂）、276（MRO一站购）、297（modern style）、68（今日团）、249（行业活动）、300（周末惠）、331（好货特卖）、336（产地嘉年华）、337（超级产地日）、338（产地巡演）、345（工业品牌）、350（12月商人节）、356（3月商人节）、258（清仓特卖）、296（档口直播）、299（实体店货源）、302（伙拼分销）、305（拿好货）、322（档口尖货）</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response32> AlibabaCnp4pAuditGetCreativeStatusAsync(long adGroupId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaDailyTopicRecommendResult> AlibabaDailyTopicRecommendAsync(int? businessType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.audit.get.creative.status/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.daily.topic.recommend/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -30363,11 +30882,9 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
-                    else
+                    if (businessType != null)
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(businessType, System.Globalization.CultureInfo.InvariantCulture)), "businessType");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -30399,7 +30916,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response32>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaDailyTopicRecommendResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -30409,7 +30926,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response32);
+                        return default(AlibabaDailyTopicRecommendResult);
                     }
                     finally
                     {
@@ -30423,254 +30940,28 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>计划、推广单元等实时消耗
-        /// 获取客户计划、推官单元、关键词等粒度实时消耗信息
+        /// <summary>查询商家可报名的大促活动列表
+        /// 查询商家可报名的大促活动列表
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.settle.campaignRealTimeCost-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.settle.campaignRealTimeCost&amp;v=1</summary>
-        /// <param name="type">类型(1计划；2推广单元)</param>
-        /// <param name="objectId">类型对象id</param>
-        /// <returns>结算消耗返回 ErrorCode 的错误信息
-        /// 88805	- 不支持的查询消耗类型（1：计划；2：推广单元）
-        /// 88806	- 参数中包含暂未开放的产品线id信息
-        /// 110000	- 查询参数id为空</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.promotion.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.promotion.topic.recommend&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response33 AlibabaCnp4pSettleCampaignRealTimeCost(int type, long objectId)
+        public AlibabaPromotionTopicRecommendResult AlibabaPromotionTopicRecommend()
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pSettleCampaignRealTimeCostAsync(type, objectId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaPromotionTopicRecommendAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>计划、推广单元等实时消耗
-        /// 获取客户计划、推官单元、关键词等粒度实时消耗信息
+        /// <summary>查询商家可报名的大促活动列表
+        /// 查询商家可报名的大促活动列表
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.settle.campaignRealTimeCost-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.settle.campaignRealTimeCost&amp;v=1</summary>
-        /// <param name="type">类型(1计划；2推广单元)</param>
-        /// <param name="objectId">类型对象id</param>
-        /// <returns>结算消耗返回 ErrorCode 的错误信息
-        /// 88805	- 不支持的查询消耗类型（1：计划；2：推广单元）
-        /// 88806	- 参数中包含暂未开放的产品线id信息
-        /// 110000	- 查询参数id为空</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.promotion.topic.recommend-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.promotion.topic.recommend&amp;v=1</summary>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response33> AlibabaCnp4pSettleCampaignRealTimeCostAsync(int type, long objectId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaPromotionTopicRecommendResult> AlibabaPromotionTopicRecommendAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.settle.campaignRealTimeCost/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (type == null)
-                        throw new System.ArgumentNullException("type");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(type, System.Globalization.CultureInfo.InvariantCulture)), "type");
-                    }
-                    if (objectId == null)
-                        throw new System.ArgumentNullException("objectId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(objectId, System.Globalization.CultureInfo.InvariantCulture)), "objectId");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response33>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response33);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>更新网销宝推广单元
-        /// 更新网销宝推广单元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.update&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="onlineState">推广单元上下线状态：0下线；1上线</param>
-        /// <param name="bidPrice">推广单元默认出价，单位元</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pAdgroup AlibabaCnp4pAdgroupUpdate(long campaignId, long adGroupId, int? onlineState = null, double? bidPrice = null)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pAdgroupUpdateAsync(campaignId, adGroupId, onlineState, bidPrice, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广单元
-        /// 更新网销宝推广单元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.adgroup.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.adgroup.update&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="onlineState">推广单元上下线状态：0下线；1上线</param>
-        /// <param name="bidPrice">推广单元默认出价，单位元</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pAdgroup> AlibabaCnp4pAdgroupUpdateAsync(long campaignId, long adGroupId, int? onlineState = null, double? bidPrice = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.adgroup.update/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
-                    }
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
-                    }
-                    if (onlineState != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(onlineState, System.Globalization.CultureInfo.InvariantCulture)), "onlineState");
-                    }
-                    if (bidPrice != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(bidPrice, System.Globalization.CultureInfo.InvariantCulture)), "bidPrice");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pAdgroup>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaCnp4pAdgroup);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>获取网销宝账户实时消耗，单位：元
-        /// 获取网销宝账户实时消耗，单位：元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.account.realtimeCost-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.account.realtimeCost&amp;v=1</summary>
-        /// <returns>网销宝客户当天实时消耗，单位：元</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response34 AlibabaCnp4pAccountRealtimeCost()
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pAccountRealtimeCostAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝账户实时消耗，单位：元
-        /// 获取网销宝账户实时消耗，单位：元
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.account.realtimeCost-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.account.realtimeCost&amp;v=1</summary>
-        /// <returns>网销宝客户当天实时消耗，单位：元</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response34> AlibabaCnp4pAccountRealtimeCostAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.account.realtimeCost/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.promotion.topic.recommend/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -30707,7 +30998,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response34>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaPromotionTopicRecommendResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -30717,7 +31008,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response34);
+                        return default(AlibabaPromotionTopicRecommendResult);
                     }
                     finally
                     {
@@ -30731,74 +31022,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>添加网销宝关键词
-        /// 添加网销宝关键词
+        /// <summary>判断该专场是否支持轻报名
+        /// 判断该专场是否支持轻报名
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.add&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="keywords">关键词列表，关键词和出价json字符串，keyword:词，不能有一些特殊字符。bidPrice：出价，以“元”为单位，保留两位小数，不能大于日限额。</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 130001	- 关键词重复
-        /// 130002	- 1个单元下的关键词数量不能超过200个
-        /// 130003	- 关键词不能为空字符
-        /// 130004	- 关键词最长为20个汉字或40个英文字符
-        /// 130005	- 关键词与已有的关键词冲突
-        /// 130006	- 关键词中含有特殊字符
-        /// 130007	- 关键词触犯黑名单规则
-        /// 130008	- 关键词触犯注册商标规则
-        /// 130009	- 关键词含侵犯他人合法权益词汇
-        /// 130010	- 关键词出价必须大于0
-        /// 130011	- 关键词的出价不能超过99.9
-        /// 130012	- 关键词的出价不能超过计划日消耗上限
-        /// 130013	- 关键词对应推广计划id为空
-        /// 130014	- 关键词对应推广计划id无效或者不属于该用户
-        /// 130015	- 关键词对应推广单元id为空
-        /// 130016	- 关键词对应推广单元id无效或者不属于该用户
-        /// 130017	- 关键词质量分过差，不建议添加
-        /// 130018	- 关键词不存在
-        /// 130019	- 关键词查询质量分最大批次为10
-        /// 130020	- 关键词查询推荐词最大批次为10</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.support.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.support.query&amp;v=1</summary>
+        /// <param name="topicId">活动专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pKeywordAddResult AlibabaCnp4pKeywordAdd(long adGroupId, System.Collections.Generic.IEnumerable<string> keywords)
+        public AlibabaLightEnrollSupportQueryResult AlibabaLightEnrollSupportQuery(long topicId)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordAddAsync(adGroupId, keywords, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaLightEnrollSupportQueryAsync(topicId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>添加网销宝关键词
-        /// 添加网销宝关键词
+        /// <summary>判断该专场是否支持轻报名
+        /// 判断该专场是否支持轻报名
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.add&amp;v=1</summary>
-        /// <param name="adGroupId">推广单元id</param>
-        /// <param name="keywords">关键词列表，关键词和出价json字符串，keyword:词，不能有一些特殊字符。bidPrice：出价，以“元”为单位，保留两位小数，不能大于日限额。</param>
-        /// <returns>返回 ErrorCode 的错误信息
-        /// 130001	- 关键词重复
-        /// 130002	- 1个单元下的关键词数量不能超过200个
-        /// 130003	- 关键词不能为空字符
-        /// 130004	- 关键词最长为20个汉字或40个英文字符
-        /// 130005	- 关键词与已有的关键词冲突
-        /// 130006	- 关键词中含有特殊字符
-        /// 130007	- 关键词触犯黑名单规则
-        /// 130008	- 关键词触犯注册商标规则
-        /// 130009	- 关键词含侵犯他人合法权益词汇
-        /// 130010	- 关键词出价必须大于0
-        /// 130011	- 关键词的出价不能超过99.9
-        /// 130012	- 关键词的出价不能超过计划日消耗上限
-        /// 130013	- 关键词对应推广计划id为空
-        /// 130014	- 关键词对应推广计划id无效或者不属于该用户
-        /// 130015	- 关键词对应推广单元id为空
-        /// 130016	- 关键词对应推广单元id无效或者不属于该用户
-        /// 130017	- 关键词质量分过差，不建议添加
-        /// 130018	- 关键词不存在
-        /// 130019	- 关键词查询质量分最大批次为10
-        /// 130020	- 关键词查询推荐词最大批次为10</returns>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.support.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.support.query&amp;v=1</summary>
+        /// <param name="topicId">活动专场id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pKeywordAddResult> AlibabaCnp4pKeywordAddAsync(long adGroupId, System.Collections.Generic.IEnumerable<string> keywords, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaLightEnrollSupportQueryResult> AlibabaLightEnrollSupportQueryAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.add/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.light.enroll.support.query/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -30809,17 +31056,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
-                    }
-                    if (keywords == null)
-                        throw new System.ArgumentNullException("keywords");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keywords, System.Globalization.CultureInfo.InvariantCulture)), "keywords");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -30851,7 +31092,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pKeywordAddResult>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaLightEnrollSupportQueryResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -30861,7 +31102,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaCnp4pKeywordAddResult);
+                        return default(AlibabaLightEnrollSupportQueryResult);
                     }
                     finally
                     {
@@ -30875,32 +31116,32 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>更新网销宝推广计划投放地域
-        /// 更新网销宝推广计划投放地域
+        /// <summary>展示用户当前能报几个offer
+        /// 疲劳度接口，可以展示当前能报几个offer等信息，返回该专场该活动，用户已经报了几个商品，还能报几个商品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.area.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.area.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.fatigue.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.fatigue.get&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="batchId">活动批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pCampaign AlibabaCnp4pCampaignAreaUpdate(long campaignId, string promoteArea)
+        public AlibabaBatchFatigueGetResult AlibabaBatchFatigueGet(long topicId, long? batchId = null)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pCampaignAreaUpdateAsync(campaignId, promoteArea, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaBatchFatigueGetAsync(topicId, batchId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广计划投放地域
-        /// 更新网销宝推广计划投放地域
+        /// <summary>展示用户当前能报几个offer
+        /// 疲劳度接口，可以展示当前能报几个offer等信息，返回该专场该活动，用户已经报了几个商品，还能报几个商品
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.area.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.area.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.batch.fatigue.get-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.batch.fatigue.get&amp;v=1</summary>
+        /// <param name="topicId">专场id</param>
+        /// <param name="batchId">活动批次id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignAreaUpdateAsync(long campaignId, string promoteArea, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaBatchFatigueGetResult> AlibabaBatchFatigueGetAsync(long topicId, long? batchId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.campaign.area.update/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.batch.fatigue.get/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -30911,17 +31152,15 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
-                    if (promoteArea == null)
-                        throw new System.ArgumentNullException("promoteArea");
-                    else
+                    if (batchId != null)
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(promoteArea, System.Globalization.CultureInfo.InvariantCulture)), "promoteArea");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(batchId, System.Globalization.CultureInfo.InvariantCulture)), "batchId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -30953,7 +31192,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pCampaign>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaBatchFatigueGetResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -30963,7 +31202,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaCnp4pCampaign);
+                        return default(AlibabaBatchFatigueGetResult);
                     }
                     finally
                     {
@@ -30977,40 +31216,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>获取网销宝推广单元报表详情
-        /// 获取网销宝推广单元报表详情
+        /// <summary>批量判断专场是否支持轻报名
+        /// 批量判断专场是否支持轻报名
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.adGroupEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.adGroupEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="adGroupId">推广单元id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.batch.support.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.batch.support.query&amp;v=1</summary>
+        /// <param name="topicIds">专场活动id列表.</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pReportAdGroupEffectResult AlibabaCnp4pReportAdGroupEffect(System.DateTimeOffset startTime, System.DateTimeOffset endTime, long campaignId, int pageNo, int pageSize, long? adGroupId = null)
+        public AlibabaLightEnrollBatchSupportQueryResult AlibabaLightEnrollBatchSupportQuery(System.Collections.Generic.IEnumerable<long> topicIds)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pReportAdGroupEffectAsync(startTime, endTime, campaignId, pageNo, pageSize, adGroupId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaLightEnrollBatchSupportQueryAsync(topicIds, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝推广单元报表详情
-        /// 获取网销宝推广单元报表详情
+        /// <summary>批量判断专场是否支持轻报名
+        /// 批量判断专场是否支持轻报名
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.adGroupEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.adGroupEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="adGroupId">推广单元id</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.batch.support.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.batch.support.query&amp;v=1</summary>
+        /// <param name="topicIds">专场活动id列表.</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pReportAdGroupEffectResult> AlibabaCnp4pReportAdGroupEffectAsync(System.DateTimeOffset startTime, System.DateTimeOffset endTime, long campaignId, int pageNo, int pageSize, long? adGroupId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaLightEnrollBatchSupportQueryResult> AlibabaLightEnrollBatchSupportQueryAsync(System.Collections.Generic.IEnumerable<long> topicIds, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.report.adGroupEffect/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.light.enroll.batch.support.query/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -31021,39 +31250,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (startTime == null)
-                        throw new System.ArgumentNullException("startTime");
+                    if (topicIds == null)
+                        throw new System.ArgumentNullException("topicIds");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(startTime, System.Globalization.CultureInfo.InvariantCulture)), "startTime");
-                    }
-                    if (endTime == null)
-                        throw new System.ArgumentNullException("endTime");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endTime, System.Globalization.CultureInfo.InvariantCulture)), "endTime");
-                    }
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
-                    }
-                    if (pageNo == null)
-                        throw new System.ArgumentNullException("pageNo");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageNo, System.Globalization.CultureInfo.InvariantCulture)), "pageNo");
-                    }
-                    if (pageSize == null)
-                        throw new System.ArgumentNullException("pageSize");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageSize, System.Globalization.CultureInfo.InvariantCulture)), "pageSize");
-                    }
-                    if (adGroupId != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicIds, System.Globalization.CultureInfo.InvariantCulture)), "topicIds");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -31085,7 +31286,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pReportAdGroupEffectResult>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaLightEnrollBatchSupportQueryResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -31095,7 +31296,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaCnp4pReportAdGroupEffectResult);
+                        return default(AlibabaLightEnrollBatchSupportQueryResult);
                     }
                     finally
                     {
@@ -31109,40 +31310,30 @@ namespace AlibabaSDK
             }
         }
     
-        /// <summary>添加网销宝推广计划
-        /// 添加网销宝推广计划
+        /// <summary>获取轻报名报品的表单
+        /// 获取轻报名报品的表单及校验逻辑
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.add&amp;v=1</summary>
-        /// <param name="title">计划标题</param>
-        /// <param name="budget">计划预算</param>
-        /// <param name="onlineStatus">计划状态，0为暂停；1为推广中；</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
-        /// <param name="cositeFlag">计划是否支持站外定向推广：0不支持，1支持</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.form.item.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.form.item.query&amp;v=1</summary>
+        /// <param name="topicId">专场活动id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pCampaign AlibabaCnp4pCampaignAdd(string title, double budget, int onlineStatus, string promoteArea = null, string schedule = null, int? cositeFlag = null)
+        public AlibabaLightEnrollFormItemQueryResult AlibabaLightEnrollFormItemQuery(long topicId)
         {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pCampaignAddAsync(title, budget, onlineStatus, promoteArea, schedule, cositeFlag, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaLightEnrollFormItemQueryAsync(topicId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
     
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>添加网销宝推广计划
-        /// 添加网销宝推广计划
+        /// <summary>获取轻报名报品的表单
+        /// 获取轻报名报品的表单及校验逻辑
         /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.add-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.add&amp;v=1</summary>
-        /// <param name="title">计划标题</param>
-        /// <param name="budget">计划预算</param>
-        /// <param name="onlineStatus">计划状态，0为暂停；1为推广中；</param>
-        /// <param name="promoteArea">计划投放地域，全部则为“0”，多个以英文逗号&amp;quot;,分隔&amp;quot;</param>
-        /// <param name="schedule">计划投放时段，7*24小时分别用0、1代表暂停和投放。</param>
-        /// <param name="cositeFlag">计划是否支持站外定向推广：0不支持，1支持</param>
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.enroll:alibaba.light.enroll.form.item.query-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.enroll&amp;n=alibaba.light.enroll.form.item.query&amp;v=1</summary>
+        /// <param name="topicId">专场活动id</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignAddAsync(string title, double budget, int onlineStatus, string promoteArea = null, string schedule = null, int? cositeFlag = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AlibabaLightEnrollFormItemQueryResult> AlibabaLightEnrollFormItemQueryAsync(long topicId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.campaign.add/{AppKey}");
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.enroll/alibaba.light.enroll.form.item.query/{AppKey}");
     
             var client_ = _httpClient;
             try
@@ -31153,35 +31344,11 @@ namespace AlibabaSDK
                     var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
                     content_.Headers.Remove("Content-Type");
                     content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (title == null)
-                        throw new System.ArgumentNullException("title");
+                    if (topicId == null)
+                        throw new System.ArgumentNullException("topicId");
                     else
                     {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(title, System.Globalization.CultureInfo.InvariantCulture)), "title");
-                    }
-                    if (budget == null)
-                        throw new System.ArgumentNullException("budget");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(budget, System.Globalization.CultureInfo.InvariantCulture)), "budget");
-                    }
-                    if (onlineStatus == null)
-                        throw new System.ArgumentNullException("onlineStatus");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(onlineStatus, System.Globalization.CultureInfo.InvariantCulture)), "onlineStatus");
-                    }
-                    if (promoteArea != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(promoteArea, System.Globalization.CultureInfo.InvariantCulture)), "promoteArea");
-                    }
-                    if (schedule != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(schedule, System.Globalization.CultureInfo.InvariantCulture)), "schedule");
-                    }
-                    if (cositeFlag != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(cositeFlag, System.Globalization.CultureInfo.InvariantCulture)), "cositeFlag");
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(topicId, System.Globalization.CultureInfo.InvariantCulture)), "topicId");
                     }
                     request_.Content = content_;
                     request_.Method = new System.Net.Http.HttpMethod("POST");
@@ -31213,7 +31380,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pCampaign>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaLightEnrollFormItemQueryResult>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -31223,691 +31390,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(AlibabaCnp4pCampaign);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>删除网销宝推广关键词
-        /// 删除网销宝推广关键词
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.delete&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response23 AlibabaCnp4pKeywordDelete(long campaignId, System.Collections.Generic.IEnumerable<string> keywordIdList)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordDeleteAsync(campaignId, keywordIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>删除网销宝推广关键词
-        /// 删除网销宝推广关键词
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.delete-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.delete&amp;v=1</summary>
-        /// <param name="campaignId">推广计划id</param>
-        /// <param name="keywordIdList">关键词id列表</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response23> AlibabaCnp4pKeywordDeleteAsync(long campaignId, System.Collections.Generic.IEnumerable<string> keywordIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.delete/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
-                    }
-                    if (keywordIdList == null)
-                        throw new System.ArgumentNullException("keywordIdList");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keywordIdList, System.Globalization.CultureInfo.InvariantCulture)), "keywordIdList");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response23>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response23);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>根据adGroupId获取网销宝关键词列表
-        /// 根据adGroupId获取网销宝关键词列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.byadgroupid.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.byadgroupid.list&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response23 AlibabaCnp4pKeywordByadgroupidList(long adGroupId)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordByadgroupidListAsync(adGroupId, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>根据adGroupId获取网销宝关键词列表
-        /// 根据adGroupId获取网销宝关键词列表
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.byadgroupid.list-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.byadgroupid.list&amp;v=1</summary>
-        /// <param name="adGroupId">单元id</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response23> AlibabaCnp4pKeywordByadgroupidListAsync(long adGroupId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.byadgroupid.list/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (adGroupId == null)
-                        throw new System.ArgumentNullException("adGroupId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(adGroupId, System.Globalization.CultureInfo.InvariantCulture)), "adGroupId");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response23>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response23);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>更新网销宝推广关键词价格
-        /// 更新网销宝推广关键词价格
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.price.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.price.update&amp;v=1</summary>
-        /// <param name="keywords">关键词列表，由keywordId、adGroupId、bidPrice组成的json字符串，其中keywordId为关键词id，adGroupId为单元id，bidPrice出价，以“元”为单位，保留一位小数，不能大于日限额。</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response23 AlibabaCnp4pKeywordPriceUpdate(System.Collections.Generic.IEnumerable<string> keywords)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pKeywordPriceUpdateAsync(keywords, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝推广关键词价格
-        /// 更新网销宝推广关键词价格
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.keyword.price.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.keyword.price.update&amp;v=1</summary>
-        /// <param name="keywords">关键词列表，由keywordId、adGroupId、bidPrice组成的json字符串，其中keywordId为关键词id，adGroupId为单元id，bidPrice出价，以“元”为单位，保留一位小数，不能大于日限额。</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response23> AlibabaCnp4pKeywordPriceUpdateAsync(System.Collections.Generic.IEnumerable<string> keywords, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.keyword.price.update/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (keywords == null)
-                        throw new System.ArgumentNullException("keywords");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(keywords, System.Globalization.CultureInfo.InvariantCulture)), "keywords");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response23>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response23);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>获取网销宝客户账户余额
-        /// 获取网销宝客户账户余额
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.account.balance-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.account.balance&amp;v=1</summary>
-        /// <returns>网销宝账户余额，单位为元</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response35 AlibabaCnp4pAccountBalance()
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pAccountBalanceAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝客户账户余额
-        /// 获取网销宝客户账户余额
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.account.balance-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.account.balance&amp;v=1</summary>
-        /// <returns>网销宝账户余额，单位为元</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response35> AlibabaCnp4pAccountBalanceAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.account.balance/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    request_.Content = new System.Net.Http.StringContent(string.Empty, System.Text.Encoding.UTF8, "application/json");
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response35>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response35);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>获取资质审核状态
-        /// 获取资质审核状态
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.audit.get.certificate.status-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.audit.get.certificate.status&amp;v=1</summary>
-        /// <returns>返回审核状态对象</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response32 AlibabaCnp4pAuditGetCertificateStatus()
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pAuditGetCertificateStatusAsync(System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取资质审核状态
-        /// 获取资质审核状态
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.audit.get.certificate.status-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.audit.get.certificate.status&amp;v=1</summary>
-        /// <returns>返回审核状态对象</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response32> AlibabaCnp4pAuditGetCertificateStatusAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.audit.get.certificate.status/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    request_.Content = new System.Net.Http.StringContent(string.Empty, System.Text.Encoding.UTF8, "application/json");
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response32>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(Response32);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>更新网销宝计划日预算
-        /// 更新网销宝计划日预算
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.budget.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.budget.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="budget">计划预算</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pCampaign AlibabaCnp4pCampaignBudgetUpdate(long campaignId, double budget)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pCampaignBudgetUpdateAsync(campaignId, budget, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>更新网销宝计划日预算
-        /// 更新网销宝计划日预算
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.campaign.budget.update-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.campaign.budget.update&amp;v=1</summary>
-        /// <param name="campaignId">计划id</param>
-        /// <param name="budget">计划预算</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pCampaign> AlibabaCnp4pCampaignBudgetUpdateAsync(long campaignId, double budget, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.campaign.budget.update/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (campaignId == null)
-                        throw new System.ArgumentNullException("campaignId");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(campaignId, System.Globalization.CultureInfo.InvariantCulture)), "campaignId");
-                    }
-                    if (budget == null)
-                        throw new System.ArgumentNullException("budget");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(budget, System.Globalization.CultureInfo.InvariantCulture)), "budget");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pCampaign>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaCnp4pCampaign);
-                    }
-                    finally
-                    {
-                        if (response_ != null)
-                            response_.Dispose();
-                    }
-                }
-            }
-            finally
-            {
-            }
-        }
-    
-        /// <summary>获取网销宝客户报表详情
-        /// 获取网销宝客户报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.custEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.custEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="reportType">报表类型，为空则全部；site_in则为站内，site_out则为站外</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public AlibabaCnp4pReportCustEffectResult AlibabaCnp4pReportCustEffect(System.DateTimeOffset startTime, System.DateTimeOffset endTime, int pageNo, int pageSize, string reportType = null)
-        {
-            return System.Threading.Tasks.Task.Run(async () => await AlibabaCnp4pReportCustEffectAsync(startTime, endTime, pageNo, pageSize, reportType, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
-        }
-    
-        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        /// <summary>获取网销宝客户报表详情
-        /// 获取网销宝客户报表详情
-        /// 
-        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.p4p:alibaba.cnp4p.report.custEffect-1 
-        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.p4p&amp;n=alibaba.cnp4p.report.custEffect&amp;v=1</summary>
-        /// <param name="startTime">报表起始日期</param>
-        /// <param name="endTime">报表截止日期</param>
-        /// <param name="pageNo">分页起始页码，默认为1开始</param>
-        /// <param name="pageSize">分页一页页数，最大一页200条</param>
-        /// <param name="reportType">报表类型，为空则全部；site_in则为站内，site_out则为站外</param>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<AlibabaCnp4pReportCustEffectResult> AlibabaCnp4pReportCustEffectAsync(System.DateTimeOffset startTime, System.DateTimeOffset endTime, int pageNo, int pageSize, string reportType = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.p4p/alibaba.cnp4p.report.custEffect/{AppKey}");
-    
-            var client_ = _httpClient;
-            try
-            {
-                using (var request_ = new System.Net.Http.HttpRequestMessage())
-                {
-                    var boundary_ = System.Guid.NewGuid().ToString();
-                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
-                    content_.Headers.Remove("Content-Type");
-                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
-                    if (startTime == null)
-                        throw new System.ArgumentNullException("startTime");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(startTime, System.Globalization.CultureInfo.InvariantCulture)), "startTime");
-                    }
-                    if (endTime == null)
-                        throw new System.ArgumentNullException("endTime");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(endTime, System.Globalization.CultureInfo.InvariantCulture)), "endTime");
-                    }
-                    if (pageNo == null)
-                        throw new System.ArgumentNullException("pageNo");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageNo, System.Globalization.CultureInfo.InvariantCulture)), "pageNo");
-                    }
-                    if (pageSize == null)
-                        throw new System.ArgumentNullException("pageSize");
-                    else
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(pageSize, System.Globalization.CultureInfo.InvariantCulture)), "pageSize");
-                    }
-                    if (reportType != null)
-                    {
-                        content_.Add(new System.Net.Http.StringContent(ConvertToString(reportType, System.Globalization.CultureInfo.InvariantCulture)), "reportType");
-                    }
-                    request_.Content = content_;
-                    request_.Method = new System.Net.Http.HttpMethod("POST");
-                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
-    
-                    PrepareRequest(client_, request_, urlBuilder_);
-                    var url_ = urlBuilder_.ToString();
-                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
-                    PrepareRequest(client_, request_, url_);
-    
-                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
-                    try
-                    {
-                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
-                        if (response_.Content != null && response_.Content.Headers != null)
-                        {
-                            foreach (var item_ in response_.Content.Headers)
-                                headers_[item_.Key] = item_.Value;
-                        }
-    
-                        ProcessResponse(client_, response_);
-    
-                        var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "400") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
-                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
-                        }
-                        else
-                        if (status_ == "200") 
-                        {
-                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaCnp4pReportCustEffectResult>(response_, headers_).ConfigureAwait(false);
-                            return objectResponse_.Object;
-                        }
-                        else
-                        if (status_ != "200" && status_ != "204")
-                        {
-                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
-                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
-                        }
-            
-                        return default(AlibabaCnp4pReportCustEffectResult);
+                        return default(AlibabaLightEnrollFormItemQueryResult);
                     }
                     finally
                     {
@@ -32347,7 +31830,7 @@ namespace AlibabaSDK
         /// <param name="userid">卖家id（1688的memberId）,对应为该offer的旺铺userid</param>
         /// <returns>对于检测到类目作弊的，在type字段中，会标示为anti，否则为none。同时系统会推荐一到多个类目id，分别在catid，catname，以及score中标示，解析相关字段就可以得到。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response36 SearchCategoryCheating(string title, string catid, string userid)
+        public Response22 SearchCategoryCheating(string title, string catid, string userid)
         {
             return System.Threading.Tasks.Task.Run(async () => await SearchCategoryCheatingAsync(title, catid, userid, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -32363,7 +31846,7 @@ namespace AlibabaSDK
         /// <param name="userid">卖家id（1688的memberId）,对应为该offer的旺铺userid</param>
         /// <returns>对于检测到类目作弊的，在type字段中，会标示为anti，否则为none。同时系统会推荐一到多个类目id，分别在catid，catname，以及score中标示，解析相关字段就可以得到。</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response36> SearchCategoryCheatingAsync(string title, string catid, string userid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response22> SearchCategoryCheatingAsync(string title, string catid, string userid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/cn.alibaba.open/search.category.cheating/{AppKey}");
@@ -32425,7 +31908,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response36>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response22>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -32435,7 +31918,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response36);
+                        return default(Response22);
                     }
                     finally
                     {
@@ -34193,6 +33676,10 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="logisticsId">该订单下的物流编号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。(无法找到相对应的物流单跟踪信息。)
+        /// order.nopermission.buyer	- 你没有权限获取该订单详情(买家端)(不是该授权用户的订单)
+        /// order.createtime.history	- 不支持查询一年前的物流轨迹信息(不支持查询一年前的物流轨迹信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public AlibabaTradeGetLogisticsTraceInfoSellerViewResult AlibabaTradeGetLogisticsTraceInfoSellerView(long orderId, string webSite, string logisticsId = null)
         {
@@ -34208,6 +33695,10 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="logisticsId">该订单下的物流编号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。(无法找到相对应的物流单跟踪信息。)
+        /// order.nopermission.buyer	- 你没有权限获取该订单详情(买家端)(不是该授权用户的订单)
+        /// order.createtime.history	- 不支持查询一年前的物流轨迹信息(不支持查询一年前的物流轨迹信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<AlibabaTradeGetLogisticsTraceInfoSellerViewResult> AlibabaTradeGetLogisticsTraceInfoSellerViewAsync(long orderId, string webSite, string logisticsId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -34649,6 +34140,13 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="logisticsId">该订单下的物流编号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。	(无法找到相对应的物流单跟踪信息。	
+        /// )
+        /// order.nopermission.buyer		- 你没有权限获取该订单详情(买家端)	(不是该授权用户的订单
+        /// )
+        /// order.createtime.history		- 不支持查询一年前的物流轨迹信息	(不支持查询一年前的物流轨迹信息	
+        /// )</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public AlibabaTradeGetLogisticsTraceInfoBuyerViewResult AlibabaTradeGetLogisticsTraceInfoBuyerView(long orderId, string webSite, string logisticsId = null)
         {
@@ -34664,6 +34162,13 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="logisticsId">该订单下的物流编号</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。	(无法找到相对应的物流单跟踪信息。	
+        /// )
+        /// order.nopermission.buyer		- 你没有权限获取该订单详情(买家端)	(不是该授权用户的订单
+        /// )
+        /// order.createtime.history		- 不支持查询一年前的物流轨迹信息	(不支持查询一年前的物流轨迹信息	
+        /// )</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<AlibabaTradeGetLogisticsTraceInfoBuyerViewResult> AlibabaTradeGetLogisticsTraceInfoBuyerViewAsync(long orderId, string webSite, string logisticsId = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -34757,6 +34262,9 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="fields">需要返回的字段，目前有:company.name,sender,receiver,sendgood。返回的字段要用英文逗号分隔开</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。(无法找到相对应的物流单跟踪信息。)
+        /// order.createtime.history	- 不支持查询一年前的物流轨迹信息(不支持查询一年前的物流轨迹信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public AlibabaTradeGetLogisticsInfosSellerViewResult AlibabaTradeGetLogisticsInfosSellerView(long orderId, string webSite, string fields = null)
         {
@@ -34772,6 +34280,9 @@ namespace AlibabaSDK
         /// <param name="orderId">订单号</param>
         /// <param name="webSite">是1688业务还是icbu业务</param>
         /// <param name="fields">需要返回的字段，目前有:company.name,sender,receiver,sendgood。返回的字段要用英文逗号分隔开</param>
+        /// <returns>返回 ErrorCode 的错误信息
+        /// 404	- 无法找到相对应的物流单跟踪信息。(无法找到相对应的物流单跟踪信息。)
+        /// order.createtime.history	- 不支持查询一年前的物流轨迹信息(不支持查询一年前的物流轨迹信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
         public async System.Threading.Tasks.Task<AlibabaTradeGetLogisticsInfosSellerViewResult> AlibabaTradeGetLogisticsInfosSellerViewAsync(long orderId, string webSite, string fields = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
@@ -35420,7 +34931,7 @@ namespace AlibabaSDK
         /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
         /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public Response37 AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList)
+        public Response23 AlibabaCrossSyncProductListPushed(System.Collections.Generic.IEnumerable<long> productIdList)
         {
             return System.Threading.Tasks.Task.Run(async () => await AlibabaCrossSyncProductListPushedAsync(productIdList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
         }
@@ -35437,7 +34948,7 @@ namespace AlibabaSDK
         /// APPKEY_ISV_CONFIG_IS_NOT_EXIST	- 平台appkey配置不存在(联系运营在平台添加配置)
         /// ISVUSERS_IS_NULL	- ISV端用户帐号列表为空(同步Isv账户信息)</returns>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public async System.Threading.Tasks.Task<Response37> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Response23> AlibabaCrossSyncProductListPushedAsync(System.Collections.Generic.IEnumerable<long> productIdList, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.product.push/alibaba.cross.syncProductListPushed/{AppKey}");
@@ -35487,7 +34998,7 @@ namespace AlibabaSDK
                         else
                         if (status_ == "200") 
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<Response37>(response_, headers_).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<Response23>(response_, headers_).ConfigureAwait(false);
                             return objectResponse_.Object;
                         }
                         else
@@ -35497,7 +35008,7 @@ namespace AlibabaSDK
                             throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(Response37);
+                        return default(Response23);
                     }
                     finally
                     {
@@ -35832,7 +35343,7 @@ namespace AlibabaSDK
         /// <param name="cargoParamList">商品信息</param>
         /// <param name="message">买家留言</param>
         /// <param name="invoiceParam">发票信息</param>
-        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，默认使用的方式是支付宝担宝交易。</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，如果开通了诚E赊默认是creditBuy（诚E赊），未开通诚E赊默认使用的方式是支付宝担宝交易。</param>
         /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
         /// <param name="anonymousBuyer">是否匿名下单</param>
         /// <returns>返回 ErrorCode 的错误信息
@@ -35855,7 +35366,7 @@ namespace AlibabaSDK
         /// <param name="cargoParamList">商品信息</param>
         /// <param name="message">买家留言</param>
         /// <param name="invoiceParam">发票信息</param>
-        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，默认使用的方式是支付宝担宝交易。</param>
+        /// <param name="tradeType">由于不同的商品支持的交易方式不同，没有一种交易方式是全局通用的，所以当前下单可使用的交易方式必须通过下单预览接口的tradeModeNameList获取。交易方式类型说明：fxassure（交易4.0通用担保交易），alipay（大市场通用的支付宝担保交易（目前在做切流，后续会下掉）），period（普通账期交易）, assure（大买家企业采购询报价下单时需要使用的担保交易流程）, creditBuy（诚E赊），bank（银行转账），631staged（631分阶段付款），37staged（37分阶段）；此字段不传则系统默认会选取一个可用的交易方式下单，如果开通了诚E赊默认是creditBuy（诚E赊），未开通诚E赊默认使用的方式是支付宝担宝交易。</param>
         /// <param name="shopPromotionId">店铺优惠ID，通过“创建订单前预览数据接口”获得。为空默认使用默认优惠</param>
         /// <param name="anonymousBuyer">是否匿名下单</param>
         /// <returns>返回 ErrorCode 的错误信息
@@ -36640,6 +36151,572 @@ namespace AlibabaSDK
                         }
             
                         return default(AlibabaTradeRefundOpQueryOrderRefundOperationListResult2);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>创建退款退货申请
+        /// 创建退款退货申请
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createRefund-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.createRefund&amp;v=1</summary>
+        /// <param name="orderId">主订单</param>
+        /// <param name="orderEntryIds">子订单</param>
+        /// <param name="disputeRequest">退款/退款退货。只有已收到货，才可以选择退款退货。</param>
+        /// <param name="applyPayment">退款金额（单位：分）。不大于实际付款金额；等待卖家发货时，必须为商品的实际付款金额。</param>
+        /// <param name="applyCarriage">退运费金额（单位：分）。</param>
+        /// <param name="applyReasonId">退款原因id（从API getRefundReasonList获取）</param>
+        /// <param name="description">退款申请理由，2-150字</param>
+        /// <param name="goodsStatus">货物状态</param>
+        /// <param name="vouchers">凭证图片URLs。1-5张，必须使用API uploadRefundVoucher返回的“图片域名/相对路径”</param>
+        /// <param name="orderEntryCountList">子订单退款数量。仅在售中买家已收货（退款退货）时，可指定退货数量；默认，全部退货。</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 5001	- 订单不存在
+        /// 5002	- 订单买家与用户身份不一致
+        /// 5003	- 货物状态状态不合法(参考goodsStatus示例)
+        /// 5004	- 退款退货原因错误，请确认原因id(使用API alibaba.trade.getRefundReasonListI查找合法的参数)
+        /// 5005	- 需要上传凭证(部分退款原因需要强制上传凭证)
+        /// 5006	- 退运费大于0(部分退款原因不退运费)
+        /// 5010	- 退货状态错误(请确认订单是否支持能够退款，以及输入参数是否合法：
+        /// 1.退款退货（已收到货的情况下，才能退款退货）
+        /// 2.货物状态是否与订单状态一致（是否发货、是否售中）
+        /// 3.检查子订单id、订单状态、是否重复提交等)
+        /// 5011	- 退款金额错误(不大于实际付款金额)
+        /// 5012	- 退款描述长度错误
+        /// 5013	- 子订单退货数量(仅在售中买家已收货退款退货时，可以指定小于全部。在全部退货的情况下，推荐不填写，使用默认值。)
+        /// 5100	- 其他未知错误(请确认订单是否可申请退款，按照示例填写参数)
+        /// 4xxx	- 服务方内部错误</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaOceanOpenplatformCommonOrderRefundCreateResult AlibabaTradeCreateRefund(long orderId, System.Collections.Generic.IEnumerable<long> orderEntryIds, string disputeRequest, long applyPayment, long applyCarriage, long applyReasonId, string description, string goodsStatus, System.Collections.Generic.IEnumerable<string> vouchers = null, System.Collections.Generic.IEnumerable<AlibabaOceanOpenplatformBizTradeCommonModelOrderEntryCountModel> orderEntryCountList = null)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeCreateRefundAsync(orderId, orderEntryIds, disputeRequest, applyPayment, applyCarriage, applyReasonId, description, goodsStatus, vouchers, orderEntryCountList, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>创建退款退货申请
+        /// 创建退款退货申请
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.createRefund-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.createRefund&amp;v=1</summary>
+        /// <param name="orderId">主订单</param>
+        /// <param name="orderEntryIds">子订单</param>
+        /// <param name="disputeRequest">退款/退款退货。只有已收到货，才可以选择退款退货。</param>
+        /// <param name="applyPayment">退款金额（单位：分）。不大于实际付款金额；等待卖家发货时，必须为商品的实际付款金额。</param>
+        /// <param name="applyCarriage">退运费金额（单位：分）。</param>
+        /// <param name="applyReasonId">退款原因id（从API getRefundReasonList获取）</param>
+        /// <param name="description">退款申请理由，2-150字</param>
+        /// <param name="goodsStatus">货物状态</param>
+        /// <param name="vouchers">凭证图片URLs。1-5张，必须使用API uploadRefundVoucher返回的“图片域名/相对路径”</param>
+        /// <param name="orderEntryCountList">子订单退款数量。仅在售中买家已收货（退款退货）时，可指定退货数量；默认，全部退货。</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 5001	- 订单不存在
+        /// 5002	- 订单买家与用户身份不一致
+        /// 5003	- 货物状态状态不合法(参考goodsStatus示例)
+        /// 5004	- 退款退货原因错误，请确认原因id(使用API alibaba.trade.getRefundReasonListI查找合法的参数)
+        /// 5005	- 需要上传凭证(部分退款原因需要强制上传凭证)
+        /// 5006	- 退运费大于0(部分退款原因不退运费)
+        /// 5010	- 退货状态错误(请确认订单是否支持能够退款，以及输入参数是否合法：
+        /// 1.退款退货（已收到货的情况下，才能退款退货）
+        /// 2.货物状态是否与订单状态一致（是否发货、是否售中）
+        /// 3.检查子订单id、订单状态、是否重复提交等)
+        /// 5011	- 退款金额错误(不大于实际付款金额)
+        /// 5012	- 退款描述长度错误
+        /// 5013	- 子订单退货数量(仅在售中买家已收货退款退货时，可以指定小于全部。在全部退货的情况下，推荐不填写，使用默认值。)
+        /// 5100	- 其他未知错误(请确认订单是否可申请退款，按照示例填写参数)
+        /// 4xxx	- 服务方内部错误</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaOceanOpenplatformCommonOrderRefundCreateResult> AlibabaTradeCreateRefundAsync(long orderId, System.Collections.Generic.IEnumerable<long> orderEntryIds, string disputeRequest, long applyPayment, long applyCarriage, long applyReasonId, string description, string goodsStatus, System.Collections.Generic.IEnumerable<string> vouchers = null, System.Collections.Generic.IEnumerable<AlibabaOceanOpenplatformBizTradeCommonModelOrderEntryCountModel> orderEntryCountList = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.createRefund/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (orderId == null)
+                        throw new System.ArgumentNullException("orderId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orderId, System.Globalization.CultureInfo.InvariantCulture)), "orderId");
+                    }
+                    if (orderEntryIds == null)
+                        throw new System.ArgumentNullException("orderEntryIds");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orderEntryIds, System.Globalization.CultureInfo.InvariantCulture)), "orderEntryIds");
+                    }
+                    if (disputeRequest == null)
+                        throw new System.ArgumentNullException("disputeRequest");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(disputeRequest, System.Globalization.CultureInfo.InvariantCulture)), "disputeRequest");
+                    }
+                    if (applyPayment == null)
+                        throw new System.ArgumentNullException("applyPayment");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(applyPayment, System.Globalization.CultureInfo.InvariantCulture)), "applyPayment");
+                    }
+                    if (applyCarriage == null)
+                        throw new System.ArgumentNullException("applyCarriage");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(applyCarriage, System.Globalization.CultureInfo.InvariantCulture)), "applyCarriage");
+                    }
+                    if (applyReasonId == null)
+                        throw new System.ArgumentNullException("applyReasonId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(applyReasonId, System.Globalization.CultureInfo.InvariantCulture)), "applyReasonId");
+                    }
+                    if (description == null)
+                        throw new System.ArgumentNullException("description");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(description, System.Globalization.CultureInfo.InvariantCulture)), "description");
+                    }
+                    if (goodsStatus == null)
+                        throw new System.ArgumentNullException("goodsStatus");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(goodsStatus, System.Globalization.CultureInfo.InvariantCulture)), "goodsStatus");
+                    }
+                    if (vouchers != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(vouchers, System.Globalization.CultureInfo.InvariantCulture)), "vouchers");
+                    }
+                    if (orderEntryCountList != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orderEntryCountList, System.Globalization.CultureInfo.InvariantCulture)), "orderEntryCountList");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaOceanOpenplatformCommonOrderRefundCreateResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaOceanOpenplatformCommonOrderRefundCreateResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>查询退款退货原因（用于创建退款退货）
+        /// 查询退款退货原因（用于创建退款退货）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.getRefundReasonList-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.getRefundReasonList&amp;v=1</summary>
+        /// <param name="orderId">主订单id</param>
+        /// <param name="orderEntryIds">子订单id</param>
+        /// <param name="goodsStatus">货物状态</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 5xxx	- 调用者错误(请确认输入参数是否合法。
+        /// 货物状态参数示例，子订单需要数组输入...)
+        /// 4xxx	- 服务方内部错误</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaOceanOpenplatformCommonOrderRefundReasonListResult AlibabaTradeGetRefundReasonList(long orderId, System.Collections.Generic.IEnumerable<long> orderEntryIds, string goodsStatus)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeGetRefundReasonListAsync(orderId, orderEntryIds, goodsStatus, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>查询退款退货原因（用于创建退款退货）
+        /// 查询退款退货原因（用于创建退款退货）
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.getRefundReasonList-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.getRefundReasonList&amp;v=1</summary>
+        /// <param name="orderId">主订单id</param>
+        /// <param name="orderEntryIds">子订单id</param>
+        /// <param name="goodsStatus">货物状态</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 5xxx	- 调用者错误(请确认输入参数是否合法。
+        /// 货物状态参数示例，子订单需要数组输入...)
+        /// 4xxx	- 服务方内部错误</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaOceanOpenplatformCommonOrderRefundReasonListResult> AlibabaTradeGetRefundReasonListAsync(long orderId, System.Collections.Generic.IEnumerable<long> orderEntryIds, string goodsStatus, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.getRefundReasonList/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (orderId == null)
+                        throw new System.ArgumentNullException("orderId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orderId, System.Globalization.CultureInfo.InvariantCulture)), "orderId");
+                    }
+                    if (orderEntryIds == null)
+                        throw new System.ArgumentNullException("orderEntryIds");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(orderEntryIds, System.Globalization.CultureInfo.InvariantCulture)), "orderEntryIds");
+                    }
+                    if (goodsStatus == null)
+                        throw new System.ArgumentNullException("goodsStatus");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(goodsStatus, System.Globalization.CultureInfo.InvariantCulture)), "goodsStatus");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaOceanOpenplatformCommonOrderRefundReasonListResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaOceanOpenplatformCommonOrderRefundReasonListResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>上传退款退货凭证
+        /// 上传退款退货凭证，用于退款退货申请，文件流转byte数组推荐使用org.apache.commons.io.IOUtils#toByteArray(java.io.InputStream)
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.uploadRefundVoucher-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.uploadRefundVoucher&amp;v=1</summary>
+        /// <param name="imageData">凭证图片数据。小于1M，jpg格式。</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 4000	- (调用者错误：未正确传入imageData参数；
+        /// 服务方错误：网络延迟、内部服务异常)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaOceanOpenplatformCommonOrderRefundUploadVoucherResult AlibabaTradeUploadRefundVoucher(byte[] imageData)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeUploadRefundVoucherAsync(imageData, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>上传退款退货凭证
+        /// 上传退款退货凭证，用于退款退货申请，文件流转byte数组推荐使用org.apache.commons.io.IOUtils#toByteArray(java.io.InputStream)
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.uploadRefundVoucher-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.uploadRefundVoucher&amp;v=1</summary>
+        /// <param name="imageData">凭证图片数据。小于1M，jpg格式。</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 4000	- (调用者错误：未正确传入imageData参数；
+        /// 服务方错误：网络延迟、内部服务异常)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaOceanOpenplatformCommonOrderRefundUploadVoucherResult> AlibabaTradeUploadRefundVoucherAsync(byte[] imageData, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.uploadRefundVoucher/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (imageData == null)
+                        throw new System.ArgumentNullException("imageData");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(imageData, System.Globalization.CultureInfo.InvariantCulture)), "imageData");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaOceanOpenplatformCommonOrderRefundUploadVoucherResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaOceanOpenplatformCommonOrderRefundUploadVoucherResult);
+                    }
+                    finally
+                    {
+                        if (response_ != null)
+                            response_.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+            }
+        }
+    
+        /// <summary>买家提交退款货信息
+        /// 买家申请退货退款时，卖家同意后，买家提交退款货信息使用，需要先调用alibaba.logistics.OpQueryLogisticCompanyList.offline查询物流公司信息，使用接口返回的物流公司编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.returnGoods-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.returnGoods&amp;v=1</summary>
+        /// <param name="refundId">退款单号，TQ开头</param>
+        /// <param name="logisticsCompanyNo">物流公司编码，调用alibaba.logistics.OpQueryLogisticCompanyList.offline接口查询</param>
+        /// <param name="freightBill">物流公司运单号，请准确填写，否则卖家有权拒绝退款</param>
+        /// <param name="description">发货说明，内容在2-200个字之间</param>
+        /// <param name="vouchers">凭证图片URLs，必须使用API alibaba.trade.uploadRefundVoucher返回的“图片域名/相对路径”，最多可上传 10 张图片 ；单张大小不超过1M；支持jpg、gif、jpeg、png、和bmp格式。 请上传凭证，以便以后续赔所需（不上传将无法理赔）</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 4001	- 需要用户授权(检查token是否过期，重新刷新或获取)
+        /// 4002	- 物流公司编号和运单号必填(物流公司编号和运单号必填)
+        /// 4003	- 上传凭证数量过多(凭证不能超过10张)
+        /// 4003	- 凭证URL校验不通过(凭证格式不符合要求)
+        /// 4004	- 物流公司编号和运单号校验失败(物流公司编号和运单号校验失败，检查并填写正确的运单号)
+        /// 4004	- 物流公司编号和运单号校验不通过(物流公司编号和运单号校验不通过，检查并填写正确的运单号)
+        /// 4004	- 物流公司编号和运单号校验异常(物流公司编号和运单号校验异常，可稍后重试下)
+        /// 4005	- 退款单信息不存在(退款单信息不存在)
+        /// 4006	- 无当前退款单操作权限(无当前退款单操作权限，检查用户账号是否正确，退款单号是否正确)
+        /// 4007	- 当前退款单状态不支持退货(当前退款单状态不支持退货，退款单状态不对)
+        /// 4008	- 退款单号信息有误，请核对后重新提交(退款单号信息有误，请核对后重新提交)
+        /// 5001	- 退款单信息查询异常(退款单信息查询异常)
+        /// 5001	- 退款单信息查询异常(退款单信息查询异常)
+        /// 5002	- 退款退货操作失败(退款退货操作失败)
+        /// 5003	- 退款退货操作异常(退款退货操作异常)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public AlibabaOceanOpenplatformBizTradeResultRefundReturnGoodsResult AlibabaTradeRefundReturnGoods(string refundId, string logisticsCompanyNo, string freightBill, string description = null, System.Collections.Generic.IEnumerable<string> vouchers = null)
+        {
+            return System.Threading.Tasks.Task.Run(async () => await AlibabaTradeRefundReturnGoodsAsync(refundId, logisticsCompanyNo, freightBill, description, vouchers, System.Threading.CancellationToken.None)).GetAwaiter().GetResult();
+        }
+    
+        /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+        /// <summary>买家提交退款货信息
+        /// 买家申请退货退款时，卖家同意后，买家提交退款货信息使用，需要先调用alibaba.logistics.OpQueryLogisticCompanyList.offline查询物流公司信息，使用接口返回的物流公司编码
+        /// 
+        /// 文档: https://open.1688.com/api/apidocdetail.htm?id=com.alibaba.trade:alibaba.trade.refund.returnGoods-1 
+        /// 调试:https://open.1688.com/api/apiTool.htm?ns=com.alibaba.trade&amp;n=alibaba.trade.refund.returnGoods&amp;v=1</summary>
+        /// <param name="refundId">退款单号，TQ开头</param>
+        /// <param name="logisticsCompanyNo">物流公司编码，调用alibaba.logistics.OpQueryLogisticCompanyList.offline接口查询</param>
+        /// <param name="freightBill">物流公司运单号，请准确填写，否则卖家有权拒绝退款</param>
+        /// <param name="description">发货说明，内容在2-200个字之间</param>
+        /// <param name="vouchers">凭证图片URLs，必须使用API alibaba.trade.uploadRefundVoucher返回的“图片域名/相对路径”，最多可上传 10 张图片 ；单张大小不超过1M；支持jpg、gif、jpeg、png、和bmp格式。 请上传凭证，以便以后续赔所需（不上传将无法理赔）</param>
+        /// <returns>返回结果返回 ErrorCode 的错误信息
+        /// 4001	- 需要用户授权(检查token是否过期，重新刷新或获取)
+        /// 4002	- 物流公司编号和运单号必填(物流公司编号和运单号必填)
+        /// 4003	- 上传凭证数量过多(凭证不能超过10张)
+        /// 4003	- 凭证URL校验不通过(凭证格式不符合要求)
+        /// 4004	- 物流公司编号和运单号校验失败(物流公司编号和运单号校验失败，检查并填写正确的运单号)
+        /// 4004	- 物流公司编号和运单号校验不通过(物流公司编号和运单号校验不通过，检查并填写正确的运单号)
+        /// 4004	- 物流公司编号和运单号校验异常(物流公司编号和运单号校验异常，可稍后重试下)
+        /// 4005	- 退款单信息不存在(退款单信息不存在)
+        /// 4006	- 无当前退款单操作权限(无当前退款单操作权限，检查用户账号是否正确，退款单号是否正确)
+        /// 4007	- 当前退款单状态不支持退货(当前退款单状态不支持退货，退款单状态不对)
+        /// 4008	- 退款单号信息有误，请核对后重新提交(退款单号信息有误，请核对后重新提交)
+        /// 5001	- 退款单信息查询异常(退款单信息查询异常)
+        /// 5001	- 退款单信息查询异常(退款单信息查询异常)
+        /// 5002	- 退款退货操作失败(退款退货操作失败)
+        /// 5003	- 退款退货操作异常(退款退货操作异常)</returns>
+        /// <exception cref="ApiException">A server side error occurred.</exception>
+        public async System.Threading.Tasks.Task<AlibabaOceanOpenplatformBizTradeResultRefundReturnGoodsResult> AlibabaTradeRefundReturnGoodsAsync(string refundId, string logisticsCompanyNo, string freightBill, string description = null, System.Collections.Generic.IEnumerable<string> vouchers = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            var urlBuilder_ = new System.Text.StringBuilder();
+            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/openapi/param2/1/com.alibaba.trade/alibaba.trade.refund.returnGoods/{AppKey}");
+    
+            var client_ = _httpClient;
+            try
+            {
+                using (var request_ = new System.Net.Http.HttpRequestMessage())
+                {
+                    var boundary_ = System.Guid.NewGuid().ToString();
+                    var content_ = new System.Net.Http.MultipartFormDataContent(boundary_);
+                    content_.Headers.Remove("Content-Type");
+                    content_.Headers.TryAddWithoutValidation("Content-Type", "multipart/form-data; boundary=" + boundary_);
+                    if (refundId == null)
+                        throw new System.ArgumentNullException("refundId");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(refundId, System.Globalization.CultureInfo.InvariantCulture)), "refundId");
+                    }
+                    if (logisticsCompanyNo == null)
+                        throw new System.ArgumentNullException("logisticsCompanyNo");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(logisticsCompanyNo, System.Globalization.CultureInfo.InvariantCulture)), "logisticsCompanyNo");
+                    }
+                    if (freightBill == null)
+                        throw new System.ArgumentNullException("freightBill");
+                    else
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(freightBill, System.Globalization.CultureInfo.InvariantCulture)), "freightBill");
+                    }
+                    if (description != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(description, System.Globalization.CultureInfo.InvariantCulture)), "description");
+                    }
+                    if (vouchers != null)
+                    {
+                        content_.Add(new System.Net.Http.StringContent(ConvertToString(vouchers, System.Globalization.CultureInfo.InvariantCulture)), "vouchers");
+                    }
+                    request_.Content = content_;
+                    request_.Method = new System.Net.Http.HttpMethod("POST");
+                    request_.Headers.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+    
+                    PrepareRequest(client_, request_, urlBuilder_);
+                    var url_ = urlBuilder_.ToString();
+                    request_.RequestUri = new System.Uri(url_, System.UriKind.RelativeOrAbsolute);
+                    PrepareRequest(client_, request_, url_);
+    
+                    var response_ = await client_.SendAsync(request_, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cancellationToken).ConfigureAwait(false);
+                    try
+                    {
+                        var headers_ = System.Linq.Enumerable.ToDictionary(response_.Headers, h_ => h_.Key, h_ => h_.Value);
+                        if (response_.Content != null && response_.Content.Headers != null)
+                        {
+                            foreach (var item_ in response_.Content.Headers)
+                                headers_[item_.Key] = item_.Value;
+                        }
+    
+                        ProcessResponse(client_, response_);
+    
+                        var status_ = ((int)response_.StatusCode).ToString();
+                        if (status_ == "400") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<ErrorResponse>(response_, headers_).ConfigureAwait(false);
+                            throw new ApiException<ErrorResponse>("A server side error occurred.", (int)response_.StatusCode, objectResponse_.Text, headers_, objectResponse_.Object, null);
+                        }
+                        else
+                        if (status_ == "200") 
+                        {
+                            var objectResponse_ = await ReadObjectResponseAsync<AlibabaOceanOpenplatformBizTradeResultRefundReturnGoodsResult>(response_, headers_).ConfigureAwait(false);
+                            return objectResponse_.Object;
+                        }
+                        else
+                        if (status_ != "200" && status_ != "204")
+                        {
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            throw new ApiException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
+                        }
+            
+                        return default(AlibabaOceanOpenplatformBizTradeResultRefundReturnGoodsResult);
                     }
                     finally
                     {

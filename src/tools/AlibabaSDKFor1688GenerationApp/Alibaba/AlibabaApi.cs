@@ -6,7 +6,10 @@ using System.Linq;
 
 namespace ConsoleApp2.Alibaba
 {
-
+    /// <summary>
+    /// https://open.1688.com/api/apiTool.htm
+    /// 通过api测试页面生成
+    /// </summary>
     public class AlibabaApi
     {
         private System.Net.Http.HttpClient _httpClient;
@@ -85,10 +88,16 @@ namespace ConsoleApp2.Alibaba
             return result;
         }
 
-
+        /// <summary>
+        /// https://open.1688.com/solution/solutionDetail.htm?spm=0.$!pageSpm.0.0.589355edXjTGA8&solutionKey=1513248184893&category=SupplyCore#apiAndMessageList
+        /// </summary>
+        /// <returns></returns>
         public async Task<Datum[]> GetSolutionApiAndMessageListDetail()
         {
-            var response = await _httpClient.GetAsync($"https://open.1688.com/solution/data/getSolutionDetail.jsonp?solutionKey=1513248184893&callback=jsonp");
+            //var response = await _httpClient.GetAsync($"https://open.1688.com/solution/data/getSolutionDetail.jsonp?solutionKey=1513248184893&callback=jsonp");
+            var message = new HttpRequestMessage(HttpMethod.Get, $"https://open.1688.com/solution/data/getSolutionDetail.jsonp?solutionKey=1513248184893&callback=jsonp");
+            message.Headers.Referrer = new System.Uri("https://open.1688.com/solution/solutionDetail.htm?solutionKey=1513248184893");
+                var response = await _httpClient.SendAsync(message);
             var result1 = await response.Content.ReadAsStringAsync();
             var ss = Newtonsoft.Json.JsonConvert.DeserializeObject<Newtonsoft.Json.Linq.JObject>(result1.Remove(0, 5).Trim('(', ')'));
             var ddjson = ss.SelectToken("$.result.solutionDescList[?(@subCategory=='apiAndMessageList')].content").ToObject<string>();

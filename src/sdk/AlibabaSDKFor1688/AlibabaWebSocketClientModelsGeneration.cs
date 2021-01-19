@@ -422,45 +422,6 @@ namespace AlibabaSDK.WebSocketModels
     
     }
     
-    /// <summary>商品消息-ICBU商品编辑
-    /// https://open.1688.com/doc/topicDetail.htm?id=PRODUCT_ICBU_PRODUCT_EDIT&amp;topicGroup=PRODUCT</summary>
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class PRODUCT_ICBU_PRODUCT_EDIT 
-    {
-        /// <summary>商品ID集合，至少有一个，用逗号分割</summary>
-        [Newtonsoft.Json.JsonProperty("productIds", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        public string ProductIds { get; set; }
-    
-        /// <summary>ICBU登录ID</summary>
-        [Newtonsoft.Json.JsonProperty("loginId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        public string LoginId { get; set; }
-    
-        /// <summary>商品状态，具体可为New(新建)、Tbd(审核不通过) 、Approved(审核通过)、Modified(被修改)、User-delete(用户删除)、Sketch(草稿)</summary>
-        [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        public string Status { get; set; }
-    
-        /// <summary>发送时间</summary>
-        [Newtonsoft.Json.JsonProperty("msgSendTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string MsgSendTime { get; set; }
-    
-    
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class PRODUCT_ICBU_PRODUCT_DELETE : PRODUCT_ICBU_PRODUCT_EDIT
-    {
-    
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class PRODUCT_ICBU_PRODUCT_NEW : PRODUCT_ICBU_PRODUCT_EDIT
-    {
-    
-    }
-    
     /// <summary>采购消息-供应商发货
     /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_SUPPLIER_SEND_GOODS&amp;topicGroup=CAIGOU</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
@@ -735,13 +696,18 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string BuyerMemberId { get; set; }
     
-        /// <summary>退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND(系统超时同意退款协议)、SYSTEM_RECEIVE_GOODS(系统超时确认收货)、SYSTEM_SEND_GOODS(系统超时退货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)</summary>
+        /// <summary>退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_CANCEL_REFUND_CLOSE(买家撤销退款申请关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND_PROTOCOL(系统超时同意退款协议)、SYSTEM_AGREE_REFUND(系统超时同意退款，即退款成功)、SYSTEM_SEND_GOODS(系统超时退货，主交易流程的退货)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)、SYSTEM_NOTIFY_APPLY_SUPPORT(系统通知申请客服介入)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、 SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、 CRM_APPLY_TIMEOUT_CLOSE(申请客服介入、超时关闭、目前仅售后业务在用)、CRM_APPLY_SUPPORT(CRM申请介入)、 CRM_INTERVENE_TASK(CRM介入处理)、 CRM_DISMISS_TASK(CRM撤销工单)、 CRM_FINISH_TASK(CRM完结工单)、BUYER_STEP_PAY_ORDER_CLOSE(买家支付，退款关闭，分阶段订单情况)、BUYER_STEP_CONFIRM_CLOSE(买家确认，退款关闭，分阶段订单情况)、BUYER_CLOSE_TRADE_CLOSE(买家终止交易，退款关闭，分阶段订单情况)、SELLER_CONFIRM_ORDER_CLOSE(卖家确认，退款关闭，分阶段订单情况)、SELLER_STEP_PUSH_CLOSE(卖家推进，退款关闭，分阶段订单情况)</summary>
         [Newtonsoft.Json.JsonProperty("refundAction", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string RefundAction { get; set; }
     
         /// <summary>操作的发起人，buyer(买家)，seller(卖家)，system(系统)</summary>
         [Newtonsoft.Json.JsonProperty("operator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Operator { get; set; }
+    
+        /// <summary>退款单ID</summary>
+        [Newtonsoft.Json.JsonProperty("refundId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string RefundId { get; set; }
     
     
     }
@@ -1012,7 +978,7 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string BuyerMemberId { get; set; }
     
-        /// <summary>退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND(系统超时同意退款协议)、SYSTEM_RECEIVE_GOODS(系统超时确认收货)、SYSTEM_SEND_GOODS(系统超时退货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)</summary>
+        /// <summary>退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_CANCEL_REFUND_CLOSE(买家撤销退款申请关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND_PROTOCOL(系统超时同意退款协议)、SYSTEM_AGREE_REFUND(系统超时同意退款，即退款成功)、SYSTEM_SEND_GOODS(系统超时退货，主交易流程的退货)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)、SYSTEM_NOTIFY_APPLY_SUPPORT(系统通知申请客服介入)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、 SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、 CRM_APPLY_TIMEOUT_CLOSE(申请客服介入、超时关闭、目前仅售后业务在用)、CRM_APPLY_SUPPORT(CRM申请介入)、 CRM_INTERVENE_TASK(CRM介入处理)、 CRM_DISMISS_TASK(CRM撤销工单)、 CRM_FINISH_TASK(CRM完结工单)、BUYER_STEP_PAY_ORDER_CLOSE(买家支付，退款关闭，分阶段订单情况)、BUYER_STEP_CONFIRM_CLOSE(买家确认，退款关闭，分阶段订单情况)、BUYER_CLOSE_TRADE_CLOSE(买家终止交易，退款关闭，分阶段订单情况)、SELLER_CONFIRM_ORDER_CLOSE(卖家确认，退款关闭，分阶段订单情况)、SELLER_STEP_PUSH_CLOSE(卖家推进，退款关闭，分阶段订单情况)</summary>
         [Newtonsoft.Json.JsonProperty("refundAction", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string RefundAction { get; set; }
     
@@ -1024,6 +990,11 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("sellerMemberId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string SellerMemberId { get; set; }
+    
+        /// <summary>退款单ID</summary>
+        [Newtonsoft.Json.JsonProperty("refundId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string RefundId { get; set; }
     
     
     }
@@ -1302,6 +1273,18 @@ namespace AlibabaSDK.WebSocketModels
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         public string SellerAliid { get; set; }
     
+        /// <summary>仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id</summary>
+        [Newtonsoft.Json.JsonProperty("attachedAppKey", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string AttachedAppKey { get; set; }
+    
+        /// <summary>版本名</summary>
+        [Newtonsoft.Json.JsonProperty("skuName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string SkuName { get; set; }
+    
+        /// <summary>版本号</summary>
+        [Newtonsoft.Json.JsonProperty("skuVersion", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string SkuVersion { get; set; }
+    
     
     }
     
@@ -1311,14 +1294,119 @@ namespace AlibabaSDK.WebSocketModels
     
     }
     
+    /// <summary>服务市场消息-服务市场订单支付
+    /// https://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_PAY&amp;topicGroup=SERVICEMARKET</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class SERVICEMARKET_ORDER_PAY : SERVICEMARKET_ORDER_CREATE
+    public partial class SERVICEMARKET_ORDER_PAY 
     {
+        /// <summary>订单创建时间</summary>
+        [Newtonsoft.Json.JsonProperty("gmtCreate", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long GmtCreate { get; set; }
+    
+        /// <summary>订单号</summary>
+        [Newtonsoft.Json.JsonProperty("orderNo", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string OrderNo { get; set; }
+    
+        /// <summary>订单行号</summary>
+        [Newtonsoft.Json.JsonProperty("itemNo", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string ItemNo { get; set; }
+    
+        /// <summary>产品线</summary>
+        [Newtonsoft.Json.JsonProperty("productLine", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string ProductLine { get; set; }
+    
+        /// <summary>appKey</summary>
+        [Newtonsoft.Json.JsonProperty("appKey", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string AppKey { get; set; }
+    
+        /// <summary>原价</summary>
+        [Newtonsoft.Json.JsonProperty("basePrice", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long BasePrice { get; set; }
+    
+        /// <summary>最终价</summary>
+        [Newtonsoft.Json.JsonProperty("ultimatePrice", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long UltimatePrice { get; set; }
+    
+        /// <summary>执行价格</summary>
+        [Newtonsoft.Json.JsonProperty("executePrice", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long ExecutePrice { get; set; }
+    
+        /// <summary>已支付价格</summary>
+        [Newtonsoft.Json.JsonProperty("paymentAmount", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long PaymentAmount { get; set; }
+    
+        /// <summary>未付款（payment_none）、已付款（payment_success）</summary>
+        [Newtonsoft.Json.JsonProperty("paymentStatus", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string PaymentStatus { get; set; }
+    
+        /// <summary>服务前（B）、服务中（S）、已结束（E）、已取消（C）</summary>
+        [Newtonsoft.Json.JsonProperty("bizStatus", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string BizStatus { get; set; }
+    
+        /// <summary>支付人uerId</summary>
+        [Newtonsoft.Json.JsonProperty("payCustomerId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long PayCustomerId { get; set; }
+    
+        /// <summary>受益人userId</summary>
+        [Newtonsoft.Json.JsonProperty("benifitCustomerId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long BenifitCustomerId { get; set; }
+    
+        /// <summary>签约人userId（订购人）</summary>
+        [Newtonsoft.Json.JsonProperty("signCustomerId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long SignCustomerId { get; set; }
+    
+        /// <summary>数量</summary>
+        [Newtonsoft.Json.JsonProperty("quantity", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long Quantity { get; set; }
+    
+        /// <summary>单位：D天, M月, Y年, P份</summary>
+        [Newtonsoft.Json.JsonProperty("unit", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string Unit { get; set; }
+    
+        /// <summary>服务开始时间</summary>
+        [Newtonsoft.Json.JsonProperty("gmtServiceBegin", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? GmtServiceBegin { get; set; }
+    
+        /// <summary>服务结束时间</summary>
+        [Newtonsoft.Json.JsonProperty("gmtServiceEnd", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? GmtServiceEnd { get; set; }
+    
+        /// <summary>支付人memberId</summary>
+        [Newtonsoft.Json.JsonProperty("payMemberId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string PayMemberId { get; set; }
+    
+        /// <summary>受益人memberId</summary>
+        [Newtonsoft.Json.JsonProperty("benifitMemberId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string BenifitMemberId { get; set; }
+    
+        /// <summary>签约人memberId（订购人）</summary>
+        [Newtonsoft.Json.JsonProperty("signMemberId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string SignMemberId { get; set; }
+    
+        /// <summary>卖家userId</summary>
+        [Newtonsoft.Json.JsonProperty("sellerAliid", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string SellerAliid { get; set; }
+    
+        /// <summary>仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id</summary>
+        [Newtonsoft.Json.JsonProperty("attachedAppKey", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string AttachedAppKey { get; set; }
+    
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class SERVICEMARKET_ORDER_CLOSE : SERVICEMARKET_ORDER_CREATE
+    public partial class SERVICEMARKET_ORDER_CLOSE : SERVICEMARKET_ORDER_PAY
     {
     
     }
@@ -1341,19 +1429,19 @@ namespace AlibabaSDK.WebSocketModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class SERVICEMARKET_ORDER_CREATE_FAIL : SERVICEMARKET_ORDER_CREATE
+    public partial class SERVICEMARKET_ORDER_CREATE_FAIL : SERVICEMARKET_ORDER_PAY
     {
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class SERVICEMARKET_ORDER_SERVICE_START : SERVICEMARKET_ORDER_CREATE
+    public partial class SERVICEMARKET_ORDER_SERVICE_START : SERVICEMARKET_ORDER_PAY
     {
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class SERVICEMARKET_ORDER_SERVICE_END : SERVICEMARKET_ORDER_CREATE
+    public partial class SERVICEMARKET_ORDER_SERVICE_END : SERVICEMARKET_ORDER_PAY
     {
     
     }
@@ -1395,7 +1483,7 @@ namespace AlibabaSDK.WebSocketModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
-    public partial class SERVICEMARKET_ORDER_SERVICE_REFUND : SERVICEMARKET_ORDER_CREATE
+    public partial class SERVICEMARKET_ORDER_SERVICE_REFUND : SERVICEMARKET_ORDER_PAY
     {
     
     }
@@ -1564,7 +1652,7 @@ namespace AlibabaSDK.WebSocketModels
         [Newtonsoft.Json.JsonProperty("orderCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string OrderCode { get; set; }
     
-        /// <summary>状态</summary>
+        /// <summary>状态，wait_supplier_confirm：待供应商确认，approved：已生效</summary>
         [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Status { get; set; }
     
@@ -1605,6 +1693,466 @@ namespace AlibabaSDK.WebSocketModels
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class PRODUCT_RELATION_VIEW_PRODUCT_AUDIT : PRODUCT_PRODUCT_EXPIRE
     {
+    
+    }
+    
+    /// <summary>订单消息-社交拼团和C2M大店发货消息
+    /// https://open.1688.com/doc/topicDetail.htm?id=ORDER_GROUPON_ORDER_SUCCESS&amp;topicGroup=ORDER</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ORDER_GROUPON_ORDER_SUCCESS 
+    {
+        /// <summary>订单id</summary>
+        [Newtonsoft.Json.JsonProperty("orderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? OrderId { get; set; }
+    
+        /// <summary>团模板id</summary>
+        [Newtonsoft.Json.JsonProperty("templateId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? TemplateId { get; set; }
+    
+        /// <summary>团id</summary>
+        [Newtonsoft.Json.JsonProperty("grouponId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? GrouponId { get; set; }
+    
+    
+    }
+    
+    /// <summary>供应链消息-订单售中退款关闭（可以发货）
+    /// https://open.1688.com/doc/topicDetail.htm?id=ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES&amp;topicGroup=ASCP</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES 
+    {
+        /// <summary>供应商ID</summary>
+        [Newtonsoft.Json.JsonProperty("supplierId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string SupplierId { get; set; }
+    
+        /// <summary>交易主订单ID列表</summary>
+        [Newtonsoft.Json.JsonProperty("bizOrderId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required]
+        public System.Collections.Generic.ICollection<string> BizOrderId { get; set; } = new System.Collections.ObjectModel.Collection<string>();
+    
+    
+    }
+    
+    /// <summary>物流消息-物流单状态变更（买家视角）
+    /// https://open.1688.com/doc/topicDetail.htm?id=LOGISTICS_BUYER_VIEW_TRACE&amp;topicGroup=LOGISTICS</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class LOGISTICS_BUYER_VIEW_TRACE 
+    {
+        [Newtonsoft.Json.JsonProperty("OrderLogisticsTracingModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public OrderLogisticsTracingModel OrderLogisticsTracingModel { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class LOGISTICS_SELLER_VIEW_TRACE : LOGISTICS_BUYER_VIEW_TRACE
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ASCP_ASCP_ORDER_PAY : ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ASCP_ASCP_ORDER_ANNOUNCE_SENDGOODS : ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ASCP_ASCP_ORDER_BUYER_REFUND_APPLY_IN_SALES : ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES
+    {
+    
+    }
+    
+    /// <summary>物流消息-物流单号修改消息
+    /// https://open.1688.com/doc/topicDetail.htm?id=LOGISTICS_MAIL_NO_CHANGE&amp;topicGroup=LOGISTICS</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class LOGISTICS_MAIL_NO_CHANGE 
+    {
+        [Newtonsoft.Json.JsonProperty("MailNoChangeModel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public MailNoChangeModel MailNoChangeModel { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ASCP_ASCP_ORDER_BUYER_REFUND_SUCCESS : ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ASCP_ASCP_ORDER_SUCCESS : ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES
+    {
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class ASCP_ASCP_ORDER_COMFIRM_RECEIVEGOODS : ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES
+    {
+    
+    }
+    
+    /// <summary>采购消息-终止交易结果消息
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT 
+    {
+        /// <summary>终止交易结果数据</summary>
+        [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public Data Data { get; set; }
+    
+        /// <summary>终止交易结果布尔值</summary>
+        [Newtonsoft.Json.JsonProperty("success", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public bool? Success { get; set; }
+    
+        /// <summary>异常情况下，错误信息</summary>
+        [Newtonsoft.Json.JsonProperty("message", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Message { get; set; }
+    
+        /// <summary>异常情况下，错误代码</summary>
+        [Newtonsoft.Json.JsonProperty("resultCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ResultCode { get; set; }
+    
+    
+    }
+    
+    /// <summary>采购消息-采购买家供应商准入
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE 
+    {
+        /// <summary>供应商memberId</summary>
+        [Newtonsoft.Json.JsonProperty("supplierMemberId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string SupplierMemberId { get; set; }
+    
+        /// <summary>准入申请单id</summary>
+        [Newtonsoft.Json.JsonProperty("admitId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long AdmitId { get; set; }
+    
+        /// <summary>供应商loginId</summary>
+        [Newtonsoft.Json.JsonProperty("supplierLoginId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string SupplierLoginId { get; set; }
+    
+        /// <summary>供应商公司名称</summary>
+        [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string CompanyName { get; set; }
+    
+        /// <summary>供应商记录id</summary>
+        [Newtonsoft.Json.JsonProperty("supplierBuyerId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? SupplierBuyerId { get; set; }
+    
+        /// <summary>供应商准入记录操作</summary>
+        [Newtonsoft.Json.JsonProperty("action", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string Action { get; set; }
+    
+        /// <summary>供应商准入申请审批单id</summary>
+        [Newtonsoft.Json.JsonProperty("auditApplyId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? AuditApplyId { get; set; }
+    
+        /// <summary>供应商准入申请单当前状态</summary>
+        [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long Status { get; set; }
+    
+    
+    }
+    
+    /// <summary>采购消息-企业采购审批结果消息
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_WORKFLOW_PROCESS_RESULT&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_WORKFLOW_PROCESS_RESULT 
+    {
+        /// <summary>审批对应的业务流程，枚举值：requisition（请购审批）、buyoffer（询价审批）、decision（决标审批）、formalbidding（招标审批）、awardBidding（定标审批）、pricingchart（比价审批）</summary>
+        [Newtonsoft.Json.JsonProperty("bizType", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string BizType { get; set; }
+    
+        /// <summary>审批结果，枚举值：pass（通过）、reject（拒绝）</summary>
+        [Newtonsoft.Json.JsonProperty("approvalResult", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string ApprovalResult { get; set; }
+    
+        /// <summary>审批对应的业务单据的阿里系统主键</summary>
+        [Newtonsoft.Json.JsonProperty("bizId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string BizId { get; set; }
+    
+    
+    }
+    
+    /// <summary>采购消息-发布审批中状态的询价单消息
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT 
+    {
+        /// <summary>业务类型，询价单</summary>
+        [Newtonsoft.Json.JsonProperty("bizType", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string BizType { get; set; }
+    
+        /// <summary>询价单id</summary>
+        [Newtonsoft.Json.JsonProperty("bizId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string BizId { get; set; }
+    
+        /// <summary>外部询价单id</summary>
+        [Newtonsoft.Json.JsonProperty("prId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string PrId { get; set; }
+    
+        /// <summary>询价单当前的状态，例如审批中</summary>
+        [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string Status { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_SETTLEMENT_ACTION : CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION
+    {
+    
+    }
+    
+    /// <summary>采购消息-内部商城商品状态变化消息（卖家视角）
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE 
+    {
+        /// <summary>商品ID</summary>
+        [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long Id { get; set; }
+    
+        /// <summary>供应商名称</summary>
+        [Newtonsoft.Json.JsonProperty("supplierName", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string SupplierName { get; set; }
+    
+        /// <summary>商品状态，new-未上架，published-已上架，deleted-已删除</summary>
+        [Newtonsoft.Json.JsonProperty("goodsStatus", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string GoodsStatus { get; set; }
+    
+        /// <summary>商品标题</summary>
+        [Newtonsoft.Json.JsonProperty("subject", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string Subject { get; set; }
+    
+    
+    }
+    
+    /// <summary>采购消息-买家修改供应商消息
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE 
+    {
+        /// <summary>操作时间</summary>
+        [Newtonsoft.Json.JsonProperty("operateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long OperateTime { get; set; }
+    
+        /// <summary>供应商memberId</summary>
+        [Newtonsoft.Json.JsonProperty("supplierMemberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string SupplierMemberId { get; set; }
+    
+        /// <summary>供应商登陆id</summary>
+        [Newtonsoft.Json.JsonProperty("supplierLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string SupplierLoginId { get; set; }
+    
+        /// <summary>供应商公司名</summary>
+        [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string CompanyName { get; set; }
+    
+        /// <summary>供应商工商注册号</summary>
+        [Newtonsoft.Json.JsonProperty("companyRegNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string CompanyRegNo { get; set; }
+    
+        /// <summary>供应商社会信用代码</summary>
+        [Newtonsoft.Json.JsonProperty("companyCreditCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string CompanyCreditCode { get; set; }
+    
+        /// <summary>主键id</summary>
+        [Newtonsoft.Json.JsonProperty("supplierBuyerId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long SupplierBuyerId { get; set; }
+    
+        /// <summary>操作</summary>
+        [Newtonsoft.Json.JsonProperty("action", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string Action { get; set; }
+    
+        /// <summary>操作人登陆di</summary>
+        [Newtonsoft.Json.JsonProperty("operatorLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OperatorLoginId { get; set; }
+    
+        /// <summary>操作人名称</summary>
+        [Newtonsoft.Json.JsonProperty("operatorName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OperatorName { get; set; }
+    
+    
+    }
+    
+    /// <summary>采购消息-采购商请购单创建成功消息（卖家视角）
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS 
+    {
+        /// <summary>请购单标题</summary>
+        [Newtonsoft.Json.JsonProperty("title", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string Title { get; set; }
+    
+        /// <summary>请购单号</summary>
+        [Newtonsoft.Json.JsonProperty("requisitionNo", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string RequisitionNo { get; set; }
+    
+        /// <summary>请购单Id</summary>
+        [Newtonsoft.Json.JsonProperty("requisitionId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long RequisitionId { get; set; }
+    
+    
+    }
+    
+    /// <summary>采购消息-买家添加供应商消息
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD 
+    {
+        /// <summary>操作时间</summary>
+        [Newtonsoft.Json.JsonProperty("operateTime", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long OperateTime { get; set; }
+    
+        /// <summary>供应商memberId</summary>
+        [Newtonsoft.Json.JsonProperty("supplierMemberId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string SupplierMemberId { get; set; }
+    
+        /// <summary>供应商登陆id</summary>
+        [Newtonsoft.Json.JsonProperty("supplierLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string SupplierLoginId { get; set; }
+    
+        /// <summary>供应商公司名</summary>
+        [Newtonsoft.Json.JsonProperty("companyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string CompanyName { get; set; }
+    
+        /// <summary>供应商工商注册号</summary>
+        [Newtonsoft.Json.JsonProperty("companyRegNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string CompanyRegNo { get; set; }
+    
+        /// <summary>供应商社会信用代码</summary>
+        [Newtonsoft.Json.JsonProperty("companyCreditCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string CompanyCreditCode { get; set; }
+    
+        /// <summary>记录主键id</summary>
+        [Newtonsoft.Json.JsonProperty("supplierBuyerId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long SupplierBuyerId { get; set; }
+    
+        /// <summary>操作</summary>
+        [Newtonsoft.Json.JsonProperty("action", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
+        public string Action { get; set; }
+    
+        /// <summary>供应商等级</summary>
+        [Newtonsoft.Json.JsonProperty("classify", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long Classify { get; set; }
+    
+        /// <summary>供应商等级名称</summary>
+        [Newtonsoft.Json.JsonProperty("classifyName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ClassifyName { get; set; }
+    
+        /// <summary>操作人登陆id</summary>
+        [Newtonsoft.Json.JsonProperty("operatorLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OperatorLoginId { get; set; }
+    
+        /// <summary>操作人名称</summary>
+        [Newtonsoft.Json.JsonProperty("operatorName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OperatorName { get; set; }
+    
+    
+    }
+    
+    /// <summary>采购消息-请购单审批全部驳回消息（卖家视角）
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT 
+    {
+        /// <summary>请购单ID</summary>
+        [Newtonsoft.Json.JsonProperty("requisitionId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? RequisitionId { get; set; }
+    
+    
+    }
+    
+    /// <summary>旺旺消息-买家询盘消息
+    /// https://open.1688.com/doc/topicDetail.htm?id=WANG_BUYER_INQUIRY&amp;topicGroup=WANG</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class WANG_BUYER_INQUIRY 
+    {
+        /// <summary>旺旺消息id</summary>
+        [Newtonsoft.Json.JsonProperty("wwMsgId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string WwMsgId { get; set; }
+    
+        /// <summary>旺旺消息标签列表，枚举值如下：价格相关，功能询问，加工定制，发货相关，售后问题，商品细节询问，实物真实性，广告，材质相关，正品确认，物流相关，现货相关，要联系方式，规格相关，质量相关，其他费用问题，商品链接，订单链接，其他</summary>
+        [Newtonsoft.Json.JsonProperty("wwMsgTags", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<string> WwMsgTags { get; set; }
+    
+        /// <summary>消息发送者loginId</summary>
+        [Newtonsoft.Json.JsonProperty("senderLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string SenderLoginId { get; set; }
+    
+        /// <summary>买家等级（脱敏），B1（初级），B2（中级），B3（高级）</summary>
+        [Newtonsoft.Json.JsonProperty("userLevel", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string UserLevel { get; set; }
+    
+        /// <summary>消息时间</summary>
+        [Newtonsoft.Json.JsonProperty("msgTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string MsgTime { get; set; }
+    
+        /// <summary>消息接收者loginId</summary>
+        [Newtonsoft.Json.JsonProperty("receiverLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ReceiverLoginId { get; set; }
+    
+        /// <summary>消息接收者对应主账号loginId</summary>
+        [Newtonsoft.Json.JsonProperty("receiverAdminLoginId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string ReceiverAdminLoginId { get; set; }
+    
+        /// <summary>旺旺消息对应的业务场景</summary>
+        [Newtonsoft.Json.JsonProperty("scenario", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Scenario { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_MSG_SLC_BUYER_SUPPLIER_DELETE : CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE
+    {
+    
+    }
+    
+    /// <summary>采购消息-采购子订单取消消息
+    /// https://open.1688.com/doc/topicDetail.htm?id=CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY&amp;topicGroup=CAIGOU</summary>
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY 
+    {
+        /// <summary>采购订单id</summary>
+        [Newtonsoft.Json.JsonProperty("procurementOrderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? ProcurementOrderId { get; set; }
+    
+        /// <summary>子订单id集合</summary>
+        [Newtonsoft.Json.JsonProperty("procurementOrderEntryIds", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? ProcurementOrderEntryIds { get; set; }
+    
+        /// <summary>采购订单编号</summary>
+        [Newtonsoft.Json.JsonProperty("orderCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OrderCode { get; set; }
+    
     
     }
     
@@ -1714,209 +2262,272 @@ namespace AlibabaSDK.WebSocketModels
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_PRODUCT_REPOST")]
         PRODUCT_PRODUCT_REPOST = 33,
     
-        [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_ICBU_PRODUCT_EDIT")]
-        PRODUCT_ICBU_PRODUCT_EDIT = 34,
-    
-        [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_ICBU_PRODUCT_DELETE")]
-        PRODUCT_ICBU_PRODUCT_DELETE = 35,
-    
-        [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_ICBU_PRODUCT_NEW")]
-        PRODUCT_ICBU_PRODUCT_NEW = 36,
-    
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_SUPPLIER_SEND_GOODS")]
-        CAIGOU_MSG_SUPPLIER_SEND_GOODS = 37,
+        CAIGOU_MSG_SUPPLIER_SEND_GOODS = 34,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PURCHARSE_ORDER")]
-        CAIGOU_MSG_PURCHARSE_ORDER = 38,
+        CAIGOU_MSG_PURCHARSE_ORDER = 35,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE")]
-        CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE = 39,
+        CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE = 36,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_MALL_GOODS")]
-        CAIGOU_MSG_MALL_GOODS = 40,
+        CAIGOU_MSG_MALL_GOODS = 37,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE")]
-        CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE = 41,
+        CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE = 38,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE")]
-        CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE = 42,
+        CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE = 39,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_ORDER_BUYER_REFUND_IN_SALES")]
-        ORDER_ORDER_BUYER_REFUND_IN_SALES = 43,
+        ORDER_ORDER_BUYER_REFUND_IN_SALES = 40,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_ORDER_REFUND_AFTER_SALES")]
-        ORDER_ORDER_REFUND_AFTER_SALES = 44,
+        ORDER_ORDER_REFUND_AFTER_SALES = 41,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS")]
-        CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS = 45,
+        CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS = 42,
     
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_PRODUCT_CREATE_RESULT")]
-        PRODUCT_PRODUCT_CREATE_RESULT = 46,
+        PRODUCT_PRODUCT_CREATE_RESULT = 43,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PURCHASE_ORDER_CANCEL")]
-        CAIGOU_MSG_PURCHASE_ORDER_CANCEL = 47,
+        CAIGOU_MSG_PURCHASE_ORDER_CANCEL = 44,
     
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_PRODUCT_CROSSBOARD_INFORM")]
-        PRODUCT_PRODUCT_CROSSBOARD_INFORM = 48,
+        PRODUCT_PRODUCT_CROSSBOARD_INFORM = 45,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE")]
-        CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE = 49,
+        CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE = 46,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE")]
-        CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE = 50,
+        CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE = 47,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE")]
-        CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE = 51,
+        CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE = 48,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED")]
-        CAIGOU_MSG_PROCUREMENT_ORDER_CREATED = 52,
+        CAIGOU_MSG_PROCUREMENT_ORDER_CREATED = 49,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CROSSBOARD_CROSSBOARD_ADD_SUPPLY")]
-        CROSSBOARD_CROSSBOARD_ADD_SUPPLY = 53,
+        CROSSBOARD_CROSSBOARD_ADD_SUPPLY = 50,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE")]
-        CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE = 54,
+        CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE = 51,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE")]
-        CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE = 55,
+        CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE = 52,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE")]
-        CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE = 56,
+        CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE = 53,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE")]
-        CAIGOU_MSG_SETTLEMENT_ORDER_CREATE = 57,
+        CAIGOU_MSG_SETTLEMENT_ORDER_CREATE = 54,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES")]
-        ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES = 58,
+        ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES = 55,
     
         [System.Runtime.Serialization.EnumMember(Value = @"AUTHORIZATION_CANCEL")]
-        AUTHORIZATION_CANCEL = 59,
+        AUTHORIZATION_CANCEL = 56,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_PAY")]
-        ORDER_BUYER_VIEW_ORDER_PAY = 60,
+        ORDER_BUYER_VIEW_ORDER_PAY = 57,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES")]
-        ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES = 61,
+        ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES = 58,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE")]
-        ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE = 62,
+        ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE = 59,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE")]
-        ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE = 63,
+        ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE = 60,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_BUYER_MAKE")]
-        ORDER_BUYER_VIEW_BUYER_MAKE = 64,
+        ORDER_BUYER_VIEW_BUYER_MAKE = 61,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_STEP_PAY")]
-        ORDER_BUYER_VIEW_ORDER_STEP_PAY = 65,
+        ORDER_BUYER_VIEW_ORDER_STEP_PAY = 62,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_PART_PART_SENDGOODS")]
-        ORDER_BUYER_VIEW_PART_PART_SENDGOODS = 66,
+        ORDER_BUYER_VIEW_PART_PART_SENDGOODS = 63,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY")]
-        ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY = 67,
+        ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY = 64,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS")]
-        ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS = 68,
+        ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS = 65,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS")]
-        ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS = 69,
+        ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS = 66,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_SUCCESS")]
-        ORDER_BUYER_VIEW_ORDER_SUCCESS = 70,
+        ORDER_BUYER_VIEW_ORDER_SUCCESS = 67,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE")]
-        ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE = 71,
+        ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE = 68,
     
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY")]
-        PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY = 72,
+        PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY = 69,
     
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_RELATION_VIEW_PRODUCT_DELETE")]
-        PRODUCT_RELATION_VIEW_PRODUCT_DELETE = 73,
+        PRODUCT_RELATION_VIEW_PRODUCT_DELETE = 70,
     
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_RELATION_VIEW_PRODUCT_REPOST")]
-        PRODUCT_RELATION_VIEW_PRODUCT_REPOST = 74,
+        PRODUCT_RELATION_VIEW_PRODUCT_REPOST = 71,
     
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE")]
-        PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE = 75,
+        PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE = 72,
     
         [System.Runtime.Serialization.EnumMember(Value = @"SERVICEMARKET_ORDER_CREATE")]
-        SERVICEMARKET_ORDER_CREATE = 76,
+        SERVICEMARKET_ORDER_CREATE = 73,
     
         [System.Runtime.Serialization.EnumMember(Value = @"SERVICEMARKET_ORDER_CANCEL")]
-        SERVICEMARKET_ORDER_CANCEL = 77,
+        SERVICEMARKET_ORDER_CANCEL = 74,
     
         [System.Runtime.Serialization.EnumMember(Value = @"SERVICEMARKET_ORDER_PAY")]
-        SERVICEMARKET_ORDER_PAY = 78,
+        SERVICEMARKET_ORDER_PAY = 75,
     
         [System.Runtime.Serialization.EnumMember(Value = @"SERVICEMARKET_ORDER_CLOSE")]
-        SERVICEMARKET_ORDER_CLOSE = 79,
+        SERVICEMARKET_ORDER_CLOSE = 76,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION")]
-        CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION = 80,
+        CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION = 77,
     
         [System.Runtime.Serialization.EnumMember(Value = @"SERVICEMARKET_ORDER_CREATE_FAIL")]
-        SERVICEMARKET_ORDER_CREATE_FAIL = 81,
+        SERVICEMARKET_ORDER_CREATE_FAIL = 78,
     
         [System.Runtime.Serialization.EnumMember(Value = @"SERVICEMARKET_ORDER_SERVICE_START")]
-        SERVICEMARKET_ORDER_SERVICE_START = 82,
+        SERVICEMARKET_ORDER_SERVICE_START = 79,
     
         [System.Runtime.Serialization.EnumMember(Value = @"SERVICEMARKET_ORDER_SERVICE_END")]
-        SERVICEMARKET_ORDER_SERVICE_END = 83,
+        SERVICEMARKET_ORDER_SERVICE_END = 80,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_REJECT_REQUISITION")]
-        CAIGOU_MSG_REJECT_REQUISITION = 84,
+        CAIGOU_MSG_REJECT_REQUISITION = 81,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION")]
-        CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION = 85,
+        CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION = 82,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION")]
-        CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION = 86,
+        CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION = 83,
     
         [System.Runtime.Serialization.EnumMember(Value = @"SERVICEMARKET_ORDER_SERVICE_REFUND")]
-        SERVICEMARKET_ORDER_SERVICE_REFUND = 87,
+        SERVICEMARKET_ORDER_SERVICE_REFUND = 84,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION")]
-        CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION = 88,
+        CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION = 85,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_MODIFY_MEMO")]
-        ORDER_MODIFY_MEMO = 89,
+        ORDER_MODIFY_MEMO = 86,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BUYER_VIEW_MODIFY_MEMO")]
-        ORDER_BUYER_VIEW_MODIFY_MEMO = 90,
+        ORDER_BUYER_VIEW_MODIFY_MEMO = 87,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PRICINGCHART_SUBMITTED")]
-        CAIGOU_MSG_PRICINGCHART_SUBMITTED = 91,
+        CAIGOU_MSG_PRICINGCHART_SUBMITTED = 88,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_PAY_ACTION")]
-        CAIGOU_MSG_PROCUREMENT_PAY_ACTION = 92,
+        CAIGOU_MSG_PROCUREMENT_PAY_ACTION = 89,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION")]
-        CAIGOU_MSG_PROCUREMENT_ORDER_ACTION = 93,
+        CAIGOU_MSG_PROCUREMENT_ORDER_ACTION = 90,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION")]
-        CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION = 94,
+        CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION = 91,
     
         [System.Runtime.Serialization.EnumMember(Value = @"ORDER_BATCH_PAY")]
-        ORDER_BATCH_PAY = 95,
+        ORDER_BATCH_PAY = 92,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION")]
-        CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION = 96,
+        CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION = 93,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION")]
-        CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION = 97,
+        CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION = 94,
     
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_PRODUCT_INVENTORY_CHANGE")]
-        PRODUCT_PRODUCT_INVENTORY_CHANGE = 98,
+        PRODUCT_PRODUCT_INVENTORY_CHANGE = 95,
     
         [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION")]
-        CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION = 99,
+        CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION = 96,
     
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER")]
-        PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER = 100,
+        PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER = 97,
     
         [System.Runtime.Serialization.EnumMember(Value = @"PRODUCT_RELATION_VIEW_PRODUCT_AUDIT")]
-        PRODUCT_RELATION_VIEW_PRODUCT_AUDIT = 101,
+        PRODUCT_RELATION_VIEW_PRODUCT_AUDIT = 98,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"ORDER_GROUPON_ORDER_SUCCESS")]
+        ORDER_GROUPON_ORDER_SUCCESS = 99,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES")]
+        ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES = 100,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"LOGISTICS_BUYER_VIEW_TRACE")]
+        LOGISTICS_BUYER_VIEW_TRACE = 101,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"LOGISTICS_SELLER_VIEW_TRACE")]
+        LOGISTICS_SELLER_VIEW_TRACE = 102,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"ASCP_ASCP_ORDER_PAY")]
+        ASCP_ASCP_ORDER_PAY = 103,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"ASCP_ASCP_ORDER_ANNOUNCE_SENDGOODS")]
+        ASCP_ASCP_ORDER_ANNOUNCE_SENDGOODS = 104,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"ASCP_ASCP_ORDER_BUYER_REFUND_APPLY_IN_SALES")]
+        ASCP_ASCP_ORDER_BUYER_REFUND_APPLY_IN_SALES = 105,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"LOGISTICS_MAIL_NO_CHANGE")]
+        LOGISTICS_MAIL_NO_CHANGE = 106,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"ASCP_ASCP_ORDER_BUYER_REFUND_SUCCESS")]
+        ASCP_ASCP_ORDER_BUYER_REFUND_SUCCESS = 107,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"ASCP_ASCP_ORDER_SUCCESS")]
+        ASCP_ASCP_ORDER_SUCCESS = 108,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"ASCP_ASCP_ORDER_COMFIRM_RECEIVEGOODS")]
+        ASCP_ASCP_ORDER_COMFIRM_RECEIVEGOODS = 109,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT")]
+        CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT = 110,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE")]
+        CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE = 111,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_WORKFLOW_PROCESS_RESULT")]
+        CAIGOU_MSG_WORKFLOW_PROCESS_RESULT = 112,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT")]
+        CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT = 113,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_SETTLEMENT_ACTION")]
+        CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_SETTLEMENT_ACTION = 114,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE")]
+        CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE = 115,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE")]
+        CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE = 116,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS")]
+        CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS = 117,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD")]
+        CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD = 118,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT")]
+        CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT = 119,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"WANG_BUYER_INQUIRY")]
+        WANG_BUYER_INQUIRY = 120,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_MSG_SLC_BUYER_SUPPLIER_DELETE")]
+        CAIGOU_MSG_SLC_BUYER_SUPPLIER_DELETE = 121,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY")]
+        CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY = 122,
     
     }
     
@@ -1924,7 +2535,7 @@ namespace AlibabaSDK.WebSocketModels
     public partial class TypeDescriptionJson 
     {
         [Newtonsoft.Json.JsonProperty("JsonDescription", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public string JsonDescription { get; set; } = "{\"CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d1\u5e03\u8be2\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_CANCEL_BUYOFFER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d6\u6d88\u8be2\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_SUPPLIER_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u53d1\u5e03\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_SUPPLIER_CANCEL_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u53d6\u6d88\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MARK_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u9009\u62e9\u5907\u9009\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_UNMARK_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u64a4\u9500\u5907\u9009\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MODIFY_BUYOFFER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4fee\u6539\u8be2\u4ef7\u5355\u6d88\u606f\",\"CAIGOU_MSG_BUYER_ORDERED\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4e0b\u5355\u6d88\u606f\",\"CAIGOU_MSG_CREATE_COOPERATEION\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4e0e\u4f9b\u5e94\u5546\u5efa\u7acb\u5408\u4f5c\u5173\u7cfb\u6d88\u606f\",\"CAIGOU_MSG_TRADE_SUCCEED\":\"\u91c7\u8d2d\u6d88\u606f-\u4ea4\u6613\u6210\u529f\uff08\u8d26\u671f\u3001\u786e\u8ba4\u6536\u8d27\uff09\u6d88\u606f\",\"CAIGOU_MSG_CLOSE_ORDER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u5173\u95ed\u4e0b\u5355\u6d88\u606f\",\"CAIGOU_MSG_SUPPLIER_APPLY\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u7533\u8bf7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_PAYED_SUCCEED\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4ed8\u6b3e\u6210\u529f\u6d88\u606f\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d1\u5e03\u7269\u6599\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4fee\u6539\u7269\u6599\u4fe1\u606f\u6d88\u606f\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT_QUOTE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u5220\u9664\u7269\u6599\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u5220\u9664\u7269\u6599\u6d88\u606f\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT_QUOTE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d1\u5e03\u7269\u6599\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT_QUOTE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4fee\u6539\u7269\u6599\u62a5\u4ef7\u6d88\u606f\",\"ORDER_BUYER_MAKE\":\"\u8ba2\u5355\u6d88\u606f-1688\u521b\u5efa\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_PART_PART_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u90e8\u5206\u53d1\u8d27\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_PRICE_MODIFY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4fee\u6539\u8ba2\u5355\u4ef7\u683c\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ANNOUNCE_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u53d1\u8d27\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_SUCCESS\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u6210\u529f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u4ed8\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_COMFIRM_RECEIVEGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u786e\u8ba4\u6536\u8d27\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_BUYER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u4e70\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_SELLER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u5356\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_BOPS_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u8fd0\u8425\u540e\u53f0\u5173\u95ed\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_STEP_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u9636\u6bb5\u4ed8\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"PRODUCT_PRODUCT_EXPIRE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0b\u67b6/merchandise off the shelf\",\"PRODUCT_PRODUCT_NEW_OR_MODIFY\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u65b0\u589e\u6216\u4fee\u6539/merchandise adding or modification\",\"PRODUCT_PRODUCT_DELETE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u5220\u9664/merchandise removal\",\"PRODUCT_PRODUCT_REPOST\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0a\u67b6/new product listing\",\"PRODUCT_ICBU_PRODUCT_EDIT\":\"\u5546\u54c1\u6d88\u606f-ICBU\u5546\u54c1\u7f16\u8f91\",\"PRODUCT_ICBU_PRODUCT_DELETE\":\"\u5546\u54c1\u6d88\u606f-ICBU\u5546\u54c1\u5220\u9664\",\"PRODUCT_ICBU_PRODUCT_NEW\":\"\u5546\u54c1\u6d88\u606f-ICBU\u5546\u54c1\u53d1\u5e03\",\"CAIGOU_MSG_SUPPLIER_SEND_GOODS\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u53d1\u8d27\",\"CAIGOU_MSG_PURCHARSE_ORDER\":\"\u91c7\u8d2d\u6d88\u606f-\u4f01\u4e1a\u91c7\u8d2d\u5355\",\"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u54c1\u72b6\u6001\u53d8\u5316\",\"CAIGOU_MSG_MALL_GOODS\":\"\u91c7\u8d2d\u6d88\u606f-\u5546\u54c1\u53d8\u5316\u6d88\u606f\",\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5355\u521b\u5efa\u6210\u529f\",\"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u54c1\u4ef7\u683c\u53d8\u5316\",\"ORDER_ORDER_BUYER_REFUND_IN_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u4e2d\u9000\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_REFUND_AFTER_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u540e\u9000\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u8bf7\u8d2d\u5355\u521b\u5efa\u6210\u529f\u6d88\u606f\",\"PRODUCT_PRODUCT_CREATE_RESULT\":\"\u5546\u54c1\u6d88\u606f-\u5546\u54c1\u53d1\u5e03\u7ed3\u679c\u6d88\u606f\u540c\u6b65\",\"CAIGOU_MSG_PURCHASE_ORDER_CANCEL\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5355\u53d6\u6d88\",\"PRODUCT_PRODUCT_CROSSBOARD_INFORM\":\"\u5546\u54c1\u6d88\u606f-\u4e00\u952e\u94fa\u8d27\u6d88\u606f\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6536\u8d27\u5355\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE\":\"\u91c7\u8d2d\u6d88\u606f-\u62d2\u7edd\u6536\u8d27\u5355\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE\":\"\u91c7\u8d2d\u6d88\u606f-\u540c\u610f\u6536\u8d27\u5355\",\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u91c7\u8d2d\u8ba2\u5355\",\"CROSSBOARD_CROSSBOARD_ADD_SUPPLY\":\"\u8de8\u5883\u6d88\u606f-\u8de8\u5883\u8bbe\u4e3a\u8d27\u6e90\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE\":\"\u91c7\u8d2d\u6d88\u606f-\u66f4\u65b0\u6846\u67b6\u534f\u8bae\u72b6\u6001\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6846\u67b6\u534f\u8bae\",\"CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u8ba2\u5355\u72b6\u6001\u66f4\u65b0\",\"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u7ed3\u7b97\u5355\",\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u4e2d\u9000\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"AUTHORIZATION_CANCEL\":\"\u6388\u6743\u6d88\u606f-\u6388\u6743\u53d6\u6d88\u6d88\u606f\",\"ORDER_BUYER_VIEW_ORDER_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u4ed8\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/1688 transaction payment (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u540e\u9000\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u4e70\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/buyer closing order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u8fd0\u8425\u540e\u53f0\u5173\u95ed\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_BUYER_MAKE\":\"\u8ba2\u5355\u6d88\u606f-1688\u521b\u5efa\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order created (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_STEP_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u9636\u6bb5\u4ed8\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_PART_PART_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u90e8\u5206\u53d1\u8d27\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/Partial delivery of 1688 order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4fee\u6539\u8ba2\u5355\u4ef7\u683c\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order price modification (buyer view)\",\"ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u53d1\u8d27\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/1688 order delivery (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u786e\u8ba4\u6536\u8d27\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order receipt confirmation (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_SUCCESS\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u6210\u529f\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u5356\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/seller closing order (buyer view)\",\"PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u65b0\u589e\u6216\u4fee\u6539\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_DELETE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u5220\u9664\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_REPOST\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0a\u67b6\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0b\u67b6\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"SERVICEMARKET_ORDER_CREATE\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u521b\u5efa\",\"SERVICEMARKET_ORDER_CANCEL\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u53d6\u6d88\",\"SERVICEMARKET_ORDER_PAY\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u652f\u4ed8\",\"SERVICEMARKET_ORDER_CLOSE\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u5173\u95ed\",\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6536\u8d27\u5355\u6210\u529f\u6d88\u606f\",\"SERVICEMARKET_ORDER_CREATE_FAIL\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u521b\u5efa\u5931\u8d25\",\"SERVICEMARKET_ORDER_SERVICE_START\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u670d\u52a1\u5f00\u59cb\",\"SERVICEMARKET_ORDER_SERVICE_END\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u670d\u52a1\u7ed3\u675f\",\"CAIGOU_MSG_REJECT_REQUISITION\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u8bf7\u8d2d\u5355\u9a73\u56de\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u7ed3\u7b97\u5355\u52a8\u4f5c\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u6267\u884c\u53d1\u8d27\u6d88\u606f\",\"SERVICEMARKET_ORDER_SERVICE_REFUND\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u9000\u6b3e\",\"CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u9000\u8d27\u5355\u52a8\u4f5c\u6d88\u606f\",\"ORDER_MODIFY_MEMO\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u5907\u6ce8\u4fee\u6539\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_MODIFY_MEMO\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u5907\u6ce8\u4fee\u6539\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order remarks modification (buyer view)\",\"CAIGOU_MSG_PRICINGCHART_SUBMITTED\":\"\u91c7\u8d2d\u6d88\u606f-\u63d0\u4ea4\u6bd4\u4ef7\u5355\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_PAY_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u4ed8\u6b3e\u5355\u52a8\u4f5c\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u8ba2\u5355\u6267\u884c\u4e2d\u6d88\u606f \",\"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u8fd0\u8f93\u9700\u6c42\u5355\u52a8\u4f5c\u6d88\u606f\",\"ORDER_BATCH_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u6279\u91cf\u652f\u4ed8\u72b6\u6001\u540c\u6b65\u6d88\u606f\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6536\u8d27\u5355\u6210\u529f\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u5173\u95ed\u91c7\u8d2d\u8ba2\u5355\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"PRODUCT_PRODUCT_INVENTORY_CHANGE\":\"\u5546\u54c1\u6d88\u606f-1688\u5546\u54c1\u5e93\u5b58\u53d8\u66f4\u6d88\u606f\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u91c7\u8d2d\u8ba2\u5355\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER\":\"\u5546\u54c1\u6d88\u606f-\u5546\u54c1\u6c60&\u8d85\u4e70\u4ef7\u53d8\u66f4\u6d88\u606f\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_AUDIT\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u5ba1\u6838\u4e0b\u67b6\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\"}";
+        public string JsonDescription { get; set; } = "{\"CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d1\u5e03\u8be2\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_CANCEL_BUYOFFER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d6\u6d88\u8be2\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_SUPPLIER_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u53d1\u5e03\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_SUPPLIER_CANCEL_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u53d6\u6d88\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MARK_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u9009\u62e9\u5907\u9009\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_UNMARK_QUOTATION\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u64a4\u9500\u5907\u9009\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MODIFY_BUYOFFER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4fee\u6539\u8be2\u4ef7\u5355\u6d88\u606f\",\"CAIGOU_MSG_BUYER_ORDERED\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4e0b\u5355\u6d88\u606f\",\"CAIGOU_MSG_CREATE_COOPERATEION\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4e0e\u4f9b\u5e94\u5546\u5efa\u7acb\u5408\u4f5c\u5173\u7cfb\u6d88\u606f\",\"CAIGOU_MSG_TRADE_SUCCEED\":\"\u91c7\u8d2d\u6d88\u606f-\u4ea4\u6613\u6210\u529f\uff08\u8d26\u671f\u3001\u786e\u8ba4\u6536\u8d27\uff09\u6d88\u606f\",\"CAIGOU_MSG_CLOSE_ORDER\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u5173\u95ed\u4e0b\u5355\u6d88\u606f\",\"CAIGOU_MSG_SUPPLIER_APPLY\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u7533\u8bf7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_PAYED_SUCCEED\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4ed8\u6b3e\u6210\u529f\u6d88\u606f\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d1\u5e03\u7269\u6599\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4fee\u6539\u7269\u6599\u4fe1\u606f\u6d88\u606f\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT_QUOTE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u5220\u9664\u7269\u6599\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u5220\u9664\u7269\u6599\u6d88\u606f\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT_QUOTE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u53d1\u5e03\u7269\u6599\u62a5\u4ef7\u6d88\u606f\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT_QUOTE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u4fee\u6539\u7269\u6599\u62a5\u4ef7\u6d88\u606f\",\"ORDER_BUYER_MAKE\":\"\u8ba2\u5355\u6d88\u606f-1688\u521b\u5efa\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_PART_PART_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u90e8\u5206\u53d1\u8d27\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_PRICE_MODIFY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4fee\u6539\u8ba2\u5355\u4ef7\u683c\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ANNOUNCE_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u53d1\u8d27\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_SUCCESS\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u6210\u529f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u4ed8\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_COMFIRM_RECEIVEGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u786e\u8ba4\u6536\u8d27\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_BUYER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u4e70\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_SELLER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u5356\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_BOPS_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u8fd0\u8425\u540e\u53f0\u5173\u95ed\u8ba2\u5355\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_STEP_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u9636\u6bb5\u4ed8\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"PRODUCT_PRODUCT_EXPIRE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0b\u67b6/merchandise off the shelf\",\"PRODUCT_PRODUCT_NEW_OR_MODIFY\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u65b0\u589e\u6216\u4fee\u6539/merchandise adding or modification\",\"PRODUCT_PRODUCT_DELETE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u5220\u9664/merchandise removal\",\"PRODUCT_PRODUCT_REPOST\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0a\u67b6/new product listing\",\"CAIGOU_MSG_SUPPLIER_SEND_GOODS\":\"\u91c7\u8d2d\u6d88\u606f-\u4f9b\u5e94\u5546\u53d1\u8d27\",\"CAIGOU_MSG_PURCHARSE_ORDER\":\"\u91c7\u8d2d\u6d88\u606f-\u4f01\u4e1a\u91c7\u8d2d\u5355\",\"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u54c1\u72b6\u6001\u53d8\u5316\",\"CAIGOU_MSG_MALL_GOODS\":\"\u91c7\u8d2d\u6d88\u606f-\u5546\u54c1\u53d8\u5316\u6d88\u606f\",\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5355\u521b\u5efa\u6210\u529f\",\"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u54c1\u4ef7\u683c\u53d8\u5316\",\"ORDER_ORDER_BUYER_REFUND_IN_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u4e2d\u9000\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_ORDER_REFUND_AFTER_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u540e\u9000\u6b3e\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u8bf7\u8d2d\u5355\u521b\u5efa\u6210\u529f\u6d88\u606f\",\"PRODUCT_PRODUCT_CREATE_RESULT\":\"\u5546\u54c1\u6d88\u606f-\u5546\u54c1\u53d1\u5e03\u7ed3\u679c\u6d88\u606f\u540c\u6b65\",\"CAIGOU_MSG_PURCHASE_ORDER_CANCEL\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5355\u53d6\u6d88\",\"PRODUCT_PRODUCT_CROSSBOARD_INFORM\":\"\u5546\u54c1\u6d88\u606f-\u4e00\u952e\u94fa\u8d27\u6d88\u606f\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6536\u8d27\u5355\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE\":\"\u91c7\u8d2d\u6d88\u606f-\u62d2\u7edd\u6536\u8d27\u5355\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE\":\"\u91c7\u8d2d\u6d88\u606f-\u540c\u610f\u6536\u8d27\u5355\",\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u91c7\u8d2d\u8ba2\u5355\",\"CROSSBOARD_CROSSBOARD_ADD_SUPPLY\":\"\u8de8\u5883\u6d88\u606f-\u8de8\u5883\u8bbe\u4e3a\u8d27\u6e90\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE\":\"\u91c7\u8d2d\u6d88\u606f-\u66f4\u65b0\u6846\u67b6\u534f\u8bae\u72b6\u6001\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6846\u67b6\u534f\u8bae\",\"CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u8ba2\u5355\u72b6\u6001\u66f4\u65b0\",\"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u7ed3\u7b97\u5355\",\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u4e2d\u9000\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"AUTHORIZATION_CANCEL\":\"\u6388\u6743\u6d88\u606f-\u6388\u6743\u53d6\u6d88\u6d88\u606f\",\"ORDER_BUYER_VIEW_ORDER_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u4ed8\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/1688 transaction payment (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u552e\u540e\u9000\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u4e70\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/buyer closing order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u8fd0\u8425\u540e\u53f0\u5173\u95ed\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_BUYER_MAKE\":\"\u8ba2\u5355\u6d88\u606f-1688\u521b\u5efa\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order created (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_STEP_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u9636\u6bb5\u4ed8\u6b3e\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_PART_PART_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u90e8\u5206\u53d1\u8d27\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/Partial delivery of 1688 order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY\":\"\u8ba2\u5355\u6d88\u606f-1688\u4fee\u6539\u8ba2\u5355\u4ef7\u683c\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order price modification (buyer view)\",\"ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u53d1\u8d27\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/1688 order delivery (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u786e\u8ba4\u6536\u8d27\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order receipt confirmation (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_SUCCESS\":\"\u8ba2\u5355\u6d88\u606f-1688\u4ea4\u6613\u6210\u529f\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE\":\"\u8ba2\u5355\u6d88\u606f-1688\u5356\u5bb6\u5173\u95ed\u8ba2\u5355\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/seller closing order (buyer view)\",\"PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u65b0\u589e\u6216\u4fee\u6539\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_DELETE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u5220\u9664\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_REPOST\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0a\u67b6\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u4e0b\u67b6\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"SERVICEMARKET_ORDER_CREATE\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u521b\u5efa\",\"SERVICEMARKET_ORDER_CANCEL\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u53d6\u6d88\",\"SERVICEMARKET_ORDER_PAY\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u652f\u4ed8\",\"SERVICEMARKET_ORDER_CLOSE\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u5173\u95ed\",\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6536\u8d27\u5355\u6210\u529f\u6d88\u606f\",\"SERVICEMARKET_ORDER_CREATE_FAIL\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u521b\u5efa\u5931\u8d25\",\"SERVICEMARKET_ORDER_SERVICE_START\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u670d\u52a1\u5f00\u59cb\",\"SERVICEMARKET_ORDER_SERVICE_END\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u670d\u52a1\u7ed3\u675f\",\"CAIGOU_MSG_REJECT_REQUISITION\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u8bf7\u8d2d\u5355\u9a73\u56de\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u7ed3\u7b97\u5355\u52a8\u4f5c\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u6267\u884c\u53d1\u8d27\u6d88\u606f\",\"SERVICEMARKET_ORDER_SERVICE_REFUND\":\"\u670d\u52a1\u5e02\u573a\u6d88\u606f-\u670d\u52a1\u5e02\u573a\u8ba2\u5355\u9000\u6b3e\",\"CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u9000\u8d27\u5355\u52a8\u4f5c\u6d88\u606f\",\"ORDER_MODIFY_MEMO\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u5907\u6ce8\u4fee\u6539\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ORDER_BUYER_VIEW_MODIFY_MEMO\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u5907\u6ce8\u4fee\u6539\uff08\u4e70\u5bb6\u89c6\u89d2\uff09/order remarks modification (buyer view)\",\"CAIGOU_MSG_PRICINGCHART_SUBMITTED\":\"\u91c7\u8d2d\u6d88\u606f-\u63d0\u4ea4\u6bd4\u4ef7\u5355\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_PAY_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u4ed8\u6b3e\u5355\u52a8\u4f5c\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u8ba2\u5355\u6267\u884c\u4e2d\u6d88\u606f \",\"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u8fd0\u8f93\u9700\u6c42\u5355\u52a8\u4f5c\u6d88\u606f\",\"ORDER_BATCH_PAY\":\"\u8ba2\u5355\u6d88\u606f-1688\u8ba2\u5355\u6279\u91cf\u652f\u4ed8\u72b6\u6001\u540c\u6b65\u6d88\u606f\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u6536\u8d27\u5355\u6210\u529f\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u5173\u95ed\u91c7\u8d2d\u8ba2\u5355\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"PRODUCT_PRODUCT_INVENTORY_CHANGE\":\"\u5546\u54c1\u6d88\u606f-1688\u5546\u54c1\u5e93\u5b58\u53d8\u66f4\u6d88\u606f\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u521b\u5efa\u91c7\u8d2d\u8ba2\u5355\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER\":\"\u5546\u54c1\u6d88\u606f-\u5546\u54c1\u6c60&\u8d85\u4e70\u4ef7\u53d8\u66f4\u6d88\u606f\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"PRODUCT_RELATION_VIEW_PRODUCT_AUDIT\":\"\u5546\u54c1\u6d88\u606f-1688\u4ea7\u54c1\u5ba1\u6838\u4e0b\u67b6\uff08\u5173\u7cfb\u7528\u6237\u89c6\u89d2\uff09\",\"ORDER_GROUPON_ORDER_SUCCESS\":\"\u8ba2\u5355\u6d88\u606f-\u793e\u4ea4\u62fc\u56e2\u548cC2M\u5927\u5e97\u53d1\u8d27\u6d88\u606f\",\"ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES\":\"\u4f9b\u5e94\u94fe\u6d88\u606f-\u8ba2\u5355\u552e\u4e2d\u9000\u6b3e\u5173\u95ed\uff08\u53ef\u4ee5\u53d1\u8d27\uff09\",\"LOGISTICS_BUYER_VIEW_TRACE\":\"\u7269\u6d41\u6d88\u606f-\u7269\u6d41\u5355\u72b6\u6001\u53d8\u66f4\uff08\u4e70\u5bb6\u89c6\u89d2\uff09\",\"LOGISTICS_SELLER_VIEW_TRACE\":\"\u7269\u6d41\u6d88\u606f-\u7269\u6d41\u5355\u72b6\u6001\u53d8\u66f4\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"ASCP_ASCP_ORDER_PAY\":\"\u4f9b\u5e94\u94fe\u6d88\u606f-\u4ea4\u6613\u4ed8\u6b3e\uff08\u5f85\u53d1\u8d27\uff09\",\"ASCP_ASCP_ORDER_ANNOUNCE_SENDGOODS\":\"\u4f9b\u5e94\u94fe\u6d88\u606f-\u8ba2\u5355\u53d1\u8d27\uff08\u5305\u62ec\u90e8\u5206\u53d1\u8d27\uff09\",\"ASCP_ASCP_ORDER_BUYER_REFUND_APPLY_IN_SALES\":\"\u4f9b\u5e94\u94fe\u6d88\u606f-\u8ba2\u5355\u552e\u4e2d\u9000\u6b3e\u7533\u8bf7\uff08\u53d6\u6d88\u53d1\u8d27\uff09\",\"LOGISTICS_MAIL_NO_CHANGE\":\"\u7269\u6d41\u6d88\u606f-\u7269\u6d41\u5355\u53f7\u4fee\u6539\u6d88\u606f\",\"ASCP_ASCP_ORDER_BUYER_REFUND_SUCCESS\":\"\u4f9b\u5e94\u94fe\u6d88\u606f-\u8ba2\u5355\u552e\u4e2d\u9000\u6b3e\u5b8c\u6210\uff08\u53d6\u6d88\u6210\u529f\uff09\",\"ASCP_ASCP_ORDER_SUCCESS\":\"\u4f9b\u5e94\u94fe\u6d88\u606f-\u4ea4\u6613\u6210\u529f\u6d88\u606f\",\"ASCP_ASCP_ORDER_COMFIRM_RECEIVEGOODS\":\"\u4f9b\u5e94\u94fe\u6d88\u606f-\u8ba2\u5355\u786e\u8ba4\u6536\u8d27\",\"CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT\":\"\u91c7\u8d2d\u6d88\u606f-\u7ec8\u6b62\u4ea4\u6613\u7ed3\u679c\u6d88\u606f\",\"CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u4e70\u5bb6\u4f9b\u5e94\u5546\u51c6\u5165\",\"CAIGOU_MSG_WORKFLOW_PROCESS_RESULT\":\"\u91c7\u8d2d\u6d88\u606f-\u4f01\u4e1a\u91c7\u8d2d\u5ba1\u6279\u7ed3\u679c\u6d88\u606f\",\"CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT\":\"\u91c7\u8d2d\u6d88\u606f-\u53d1\u5e03\u5ba1\u6279\u4e2d\u72b6\u6001\u7684\u8be2\u4ef7\u5355\u6d88\u606f\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_SETTLEMENT_ACTION\":\"\u91c7\u8d2d\u6d88\u606f-\u7ed3\u7b97\u5355\u52a8\u4f5c\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE\":\"\u91c7\u8d2d\u6d88\u606f-\u5185\u90e8\u5546\u57ce\u5546\u54c1\u72b6\u6001\u53d8\u5316\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE\":\"\u91c7\u8d2d\u6d88\u606f-\u4e70\u5bb6\u4fee\u6539\u4f9b\u5e94\u5546\u6d88\u606f\",\"CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5546\u8bf7\u8d2d\u5355\u521b\u5efa\u6210\u529f\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD\":\"\u91c7\u8d2d\u6d88\u606f-\u4e70\u5bb6\u6dfb\u52a0\u4f9b\u5e94\u5546\u6d88\u606f\",\"CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT\":\"\u91c7\u8d2d\u6d88\u606f-\u8bf7\u8d2d\u5355\u5ba1\u6279\u5168\u90e8\u9a73\u56de\u6d88\u606f\uff08\u5356\u5bb6\u89c6\u89d2\uff09\",\"WANG_BUYER_INQUIRY\":\"\u65fa\u65fa\u6d88\u606f-\u4e70\u5bb6\u8be2\u76d8\u6d88\u606f\",\"CAIGOU_MSG_SLC_BUYER_SUPPLIER_DELETE\":\"\u91c7\u8d2d\u6d88\u606f-\u4e70\u5bb6\u5220\u9664\u4f9b\u5e94\u5546\u6d88\u606f\",\"CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY\":\"\u91c7\u8d2d\u6d88\u606f-\u91c7\u8d2d\u5b50\u8ba2\u5355\u53d6\u6d88\u6d88\u606f\"}";
     
     
     }
@@ -2247,6 +2858,96 @@ namespace AlibabaSDK.WebSocketModels
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class OrderLogisticsTracingModel 
+    {
+        /// <summary>物流编号</summary>
+        [Newtonsoft.Json.JsonProperty("logisticsId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string LogisticsId { get; set; }
+    
+        /// <summary>cp code</summary>
+        [Newtonsoft.Json.JsonProperty("cpCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string CpCode { get; set; }
+    
+        /// <summary>运单号</summary>
+        [Newtonsoft.Json.JsonProperty("mailNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string MailNo { get; set; }
+    
+        /// <summary>物流单发生变化的状态，包括发货（CONSIGN）、揽收（ACCEPT）、运输（TRANSPORT）、派送（DELIVERING）、签收（SIGN）</summary>
+        [Newtonsoft.Json.JsonProperty("statusChanged", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string StatusChanged { get; set; }
+    
+        /// <summary>发生变化的时间</summary>
+        [Newtonsoft.Json.JsonProperty("changeTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.DateTimeOffset? ChangeTime { get; set; }
+    
+        /// <summary>该物流单关联的订单信息</summary>
+        [Newtonsoft.Json.JsonProperty("orderLogsItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<OrderLogsItems> OrderLogsItems { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class MailNoChangeModel 
+    {
+        /// <summary>物流单号</summary>
+        [Newtonsoft.Json.JsonProperty("logisticsId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string LogisticsId { get; set; }
+    
+        /// <summary>更改前的cp code</summary>
+        [Newtonsoft.Json.JsonProperty("oldCpCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OldCpCode { get; set; }
+    
+        /// <summary>更改后的cp code</summary>
+        [Newtonsoft.Json.JsonProperty("newCpCode", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string NewCpCode { get; set; }
+    
+        /// <summary>更改前的运单号</summary>
+        [Newtonsoft.Json.JsonProperty("oldMailNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string OldMailNo { get; set; }
+    
+        /// <summary>更改后的运单号</summary>
+        [Newtonsoft.Json.JsonProperty("newMailNo", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string NewMailNo { get; set; }
+    
+        /// <summary>发生时间</summary>
+        [Newtonsoft.Json.JsonProperty("eventTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.DateTimeOffset? EventTime { get; set; }
+    
+        /// <summary>该物流单关联的订单信息</summary>
+        [Newtonsoft.Json.JsonProperty("orderLogsItems", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public object OrderLogsItems { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class Data 
+    {
+        /// <summary>pass error</summary>
+        [Newtonsoft.Json.JsonProperty("result", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Result { get; set; }
+    
+        /// <summary>终止交易单id</summary>
+        [Newtonsoft.Json.JsonProperty("terminateTradeId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? TerminateTradeId { get; set; }
+    
+        /// <summary>订单id</summary>
+        [Newtonsoft.Json.JsonProperty("orderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? OrderId { get; set; }
+    
+        /// <summary>终止交易单状态</summary>
+        [Newtonsoft.Json.JsonProperty("terminateTradeStatus", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string TerminateTradeStatus { get; set; }
+    
+        /// <summary>终止交易单错误信息</summary>
+        [Newtonsoft.Json.JsonProperty("checkErrorInfos", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public System.Collections.Generic.ICollection<CheckErrorInfos> CheckErrorInfos { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
     public partial class EntryList 
     {
         /// <summary>单位</summary>
@@ -2289,6 +2990,46 @@ namespace AlibabaSDK.WebSocketModels
         /// <summary>子订单id</summary>
         [Newtonsoft.Json.JsonProperty("entryId", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public long EntryId { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class OrderLogsItems 
+    {
+        /// <summary>交易主单id</summary>
+        [Newtonsoft.Json.JsonProperty("orderId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? OrderId { get; set; }
+    
+        /// <summary>交易子单id</summary>
+        [Newtonsoft.Json.JsonProperty("orderEntryId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? OrderEntryId { get; set; }
+    
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.0.27.0 (Newtonsoft.Json v10.0.0.0)")]
+    public partial class CheckErrorInfos 
+    {
+        /// <summary>单据ID</summary>
+        [Newtonsoft.Json.JsonProperty("id", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? Id { get; set; }
+    
+        /// <summary>单据编码</summary>
+        [Newtonsoft.Json.JsonProperty("code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Code { get; set; }
+    
+        /// <summary>单据状态</summary>
+        [Newtonsoft.Json.JsonProperty("status", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Status { get; set; }
+    
+        /// <summary>单据类型</summary>
+        [Newtonsoft.Json.JsonProperty("type", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public string Type { get; set; }
+    
+        /// <summary>单据行号</summary>
+        [Newtonsoft.Json.JsonProperty("rowNum", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public long? RowNum { get; set; }
     
     
     }

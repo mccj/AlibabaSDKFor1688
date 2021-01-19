@@ -1276,110 +1276,6 @@
         }
       ]
     },
-    "PRODUCT_ICBU_PRODUCT_EDIT": {
-      "id": "PRODUCT_ICBU_PRODUCT_EDIT",
-      "type": "object",
-      "description": "商品消息-ICBU商品编辑\r\nhttps://open.1688.com/doc/topicDetail.htm?id=PRODUCT_ICBU_PRODUCT_EDIT&topicGroup=PRODUCT",
-      "required": [
-        "productIds",
-        "loginId",
-        "status"
-      ],
-      "properties": {
-        "productIds": {
-          "title": "String",
-          "type": "string",
-          "description": "商品ID集合，至少有一个，用逗号分割"
-        },
-        "loginId": {
-          "title": "String",
-          "type": "string",
-          "description": "ICBU登录ID"
-        },
-        "status": {
-          "title": "String",
-          "type": "string",
-          "description": "商品状态，具体可为New(新建)、Tbd(审核不通过) 、Approved(审核通过)、Modified(被修改)、User-delete(用户删除)、Sketch(草稿)"
-        },
-        "msgSendTime": {
-          "title": "String",
-          "type": "string",
-          "description": "发送时间"
-        }
-      }
-    },
-    "PRODUCT_ICBU_PRODUCT_DELETE": {
-      "allOf": [
-        {
-          "id": "PRODUCT_ICBU_PRODUCT_EDIT",
-          "type": "object",
-          "description": "商品消息-ICBU商品编辑\r\nhttps://open.1688.com/doc/topicDetail.htm?id=PRODUCT_ICBU_PRODUCT_EDIT&topicGroup=PRODUCT",
-          "required": [
-            "productIds",
-            "loginId",
-            "status"
-          ],
-          "properties": {
-            "productIds": {
-              "title": "String",
-              "type": "string",
-              "description": "商品ID集合，至少有一个，用逗号分割"
-            },
-            "loginId": {
-              "title": "String",
-              "type": "string",
-              "description": "ICBU登录ID"
-            },
-            "status": {
-              "title": "String",
-              "type": "string",
-              "description": "商品状态，具体可为New(新建)、Tbd(审核不通过) 、Approved(审核通过)、Modified(被修改)、User-delete(用户删除)、Sketch(草稿)"
-            },
-            "msgSendTime": {
-              "title": "String",
-              "type": "string",
-              "description": "发送时间"
-            }
-          }
-        }
-      ]
-    },
-    "PRODUCT_ICBU_PRODUCT_NEW": {
-      "allOf": [
-        {
-          "id": "PRODUCT_ICBU_PRODUCT_EDIT",
-          "type": "object",
-          "description": "商品消息-ICBU商品编辑\r\nhttps://open.1688.com/doc/topicDetail.htm?id=PRODUCT_ICBU_PRODUCT_EDIT&topicGroup=PRODUCT",
-          "required": [
-            "productIds",
-            "loginId",
-            "status"
-          ],
-          "properties": {
-            "productIds": {
-              "title": "String",
-              "type": "string",
-              "description": "商品ID集合，至少有一个，用逗号分割"
-            },
-            "loginId": {
-              "title": "String",
-              "type": "string",
-              "description": "ICBU登录ID"
-            },
-            "status": {
-              "title": "String",
-              "type": "string",
-              "description": "商品状态，具体可为New(新建)、Tbd(审核不通过) 、Approved(审核通过)、Modified(被修改)、User-delete(用户删除)、Sketch(草稿)"
-            },
-            "msgSendTime": {
-              "title": "String",
-              "type": "string",
-              "description": "发送时间"
-            }
-          }
-        }
-      ]
-    },
     "CAIGOU_MSG_SUPPLIER_SEND_GOODS": {
       "id": "CAIGOU_MSG_SUPPLIER_SEND_GOODS",
       "type": "object",
@@ -1949,7 +1845,8 @@
         "orderId",
         "currentStatus",
         "msgSendTime",
-        "buyerMemberId"
+        "buyerMemberId",
+        "refundId"
       ],
       "properties": {
         "orderId": {
@@ -1976,12 +1873,17 @@
         "refundAction": {
           "title": "String",
           "type": "string",
-          "description": "退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND(系统超时同意退款协议)、SYSTEM_RECEIVE_GOODS(系统超时确认收货)、SYSTEM_SEND_GOODS(系统超时退货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)"
+          "description": "退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_CANCEL_REFUND_CLOSE(买家撤销退款申请关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND_PROTOCOL(系统超时同意退款协议)、SYSTEM_AGREE_REFUND(系统超时同意退款，即退款成功)、SYSTEM_SEND_GOODS(系统超时退货，主交易流程的退货)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)、SYSTEM_NOTIFY_APPLY_SUPPORT(系统通知申请客服介入)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、 SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、 CRM_APPLY_TIMEOUT_CLOSE(申请客服介入、超时关闭、目前仅售后业务在用)、CRM_APPLY_SUPPORT(CRM申请介入)、 CRM_INTERVENE_TASK(CRM介入处理)、 CRM_DISMISS_TASK(CRM撤销工单)、 CRM_FINISH_TASK(CRM完结工单)、BUYER_STEP_PAY_ORDER_CLOSE(买家支付，退款关闭，分阶段订单情况)、BUYER_STEP_CONFIRM_CLOSE(买家确认，退款关闭，分阶段订单情况)、BUYER_CLOSE_TRADE_CLOSE(买家终止交易，退款关闭，分阶段订单情况)、SELLER_CONFIRM_ORDER_CLOSE(卖家确认，退款关闭，分阶段订单情况)、SELLER_STEP_PUSH_CLOSE(卖家推进，退款关闭，分阶段订单情况)"
         },
         "operator": {
           "title": "String",
           "type": "string",
           "description": "操作的发起人，buyer(买家)，seller(卖家)，system(系统)"
+        },
+        "refundId": {
+          "title": "String",
+          "type": "string",
+          "description": "退款单ID"
         }
       }
     },
@@ -1995,7 +1897,8 @@
             "orderId",
             "currentStatus",
             "msgSendTime",
-            "buyerMemberId"
+            "buyerMemberId",
+            "refundId"
           ],
           "properties": {
             "orderId": {
@@ -2022,12 +1925,17 @@
             "refundAction": {
               "title": "String",
               "type": "string",
-              "description": "退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND(系统超时同意退款协议)、SYSTEM_RECEIVE_GOODS(系统超时确认收货)、SYSTEM_SEND_GOODS(系统超时退货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)"
+              "description": "退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_CANCEL_REFUND_CLOSE(买家撤销退款申请关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND_PROTOCOL(系统超时同意退款协议)、SYSTEM_AGREE_REFUND(系统超时同意退款，即退款成功)、SYSTEM_SEND_GOODS(系统超时退货，主交易流程的退货)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)、SYSTEM_NOTIFY_APPLY_SUPPORT(系统通知申请客服介入)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、 SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、 CRM_APPLY_TIMEOUT_CLOSE(申请客服介入、超时关闭、目前仅售后业务在用)、CRM_APPLY_SUPPORT(CRM申请介入)、 CRM_INTERVENE_TASK(CRM介入处理)、 CRM_DISMISS_TASK(CRM撤销工单)、 CRM_FINISH_TASK(CRM完结工单)、BUYER_STEP_PAY_ORDER_CLOSE(买家支付，退款关闭，分阶段订单情况)、BUYER_STEP_CONFIRM_CLOSE(买家确认，退款关闭，分阶段订单情况)、BUYER_CLOSE_TRADE_CLOSE(买家终止交易，退款关闭，分阶段订单情况)、SELLER_CONFIRM_ORDER_CLOSE(卖家确认，退款关闭，分阶段订单情况)、SELLER_STEP_PUSH_CLOSE(卖家推进，退款关闭，分阶段订单情况)"
             },
             "operator": {
               "title": "String",
               "type": "string",
               "description": "操作的发起人，buyer(买家)，seller(卖家)，system(系统)"
+            },
+            "refundId": {
+              "title": "String",
+              "type": "string",
+              "description": "退款单ID"
             }
           }
         }
@@ -2365,7 +2273,8 @@
         "currentStatus",
         "msgSendTime",
         "buyerMemberId",
-        "sellerMemberId"
+        "sellerMemberId",
+        "refundId"
       ],
       "properties": {
         "orderId": {
@@ -2392,7 +2301,7 @@
         "refundAction": {
           "title": "String",
           "type": "string",
-          "description": "退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND(系统超时同意退款协议)、SYSTEM_RECEIVE_GOODS(系统超时确认收货)、SYSTEM_SEND_GOODS(系统超时退货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)"
+          "description": "退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_CANCEL_REFUND_CLOSE(买家撤销退款申请关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND_PROTOCOL(系统超时同意退款协议)、SYSTEM_AGREE_REFUND(系统超时同意退款，即退款成功)、SYSTEM_SEND_GOODS(系统超时退货，主交易流程的退货)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)、SYSTEM_NOTIFY_APPLY_SUPPORT(系统通知申请客服介入)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、 SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、 CRM_APPLY_TIMEOUT_CLOSE(申请客服介入、超时关闭、目前仅售后业务在用)、CRM_APPLY_SUPPORT(CRM申请介入)、 CRM_INTERVENE_TASK(CRM介入处理)、 CRM_DISMISS_TASK(CRM撤销工单)、 CRM_FINISH_TASK(CRM完结工单)、BUYER_STEP_PAY_ORDER_CLOSE(买家支付，退款关闭，分阶段订单情况)、BUYER_STEP_CONFIRM_CLOSE(买家确认，退款关闭，分阶段订单情况)、BUYER_CLOSE_TRADE_CLOSE(买家终止交易，退款关闭，分阶段订单情况)、SELLER_CONFIRM_ORDER_CLOSE(卖家确认，退款关闭，分阶段订单情况)、SELLER_STEP_PUSH_CLOSE(卖家推进，退款关闭，分阶段订单情况)"
         },
         "operator": {
           "title": "String",
@@ -2403,6 +2312,11 @@
           "title": "String",
           "type": "string",
           "description": "卖家中文站会员ID"
+        },
+        "refundId": {
+          "title": "String",
+          "type": "string",
+          "description": "退款单ID"
         }
       }
     },
@@ -2539,7 +2453,8 @@
             "currentStatus",
             "msgSendTime",
             "buyerMemberId",
-            "sellerMemberId"
+            "sellerMemberId",
+            "refundId"
           ],
           "properties": {
             "orderId": {
@@ -2566,7 +2481,7 @@
             "refundAction": {
               "title": "String",
               "type": "string",
-              "description": "退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND(系统超时同意退款协议)、SYSTEM_RECEIVE_GOODS(系统超时确认收货)、SYSTEM_SEND_GOODS(系统超时退货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)"
+              "description": "退款操作，具体状态为：BUYER_APPLY_REFUND(买家申请退款)、BUYER_RECEIVE_CLOSE(买家确认收货关闭)、SELLER_SEND_GOODS_CLOSE(卖家发货关闭)、BUYER_CANCEL_REFUND_CLOSE(买家撤销退款申请关闭)、BUYER_UPLOAD_BILL(买家上传凭证)、SELLER_UPLOAD_BILL(卖家上传凭证)、SELLER_REJECT_REFUND(卖家拒绝退款)、SELLER_AGREE_REFUND(卖家同意退款)、SELLER_RECEIVE_GOODS(卖家确认收货)、BUYER_SEND_GOODS(买家声明发货)、BUYER_MODIFY_REFUND_PROTOCOL(买家修改退款协议)、BUYER_APPLY_SUPPORT(买家申请客服介入)、SELLER_APPLY_SUPPORT(卖家申请客服介入)、SYSTEM_AGREE_REFUND_PROTOCOL(系统超时同意退款协议)、SYSTEM_AGREE_REFUND(系统超时同意退款，即退款成功)、SYSTEM_SEND_GOODS(系统超时退货，主交易流程的退货)、SYSTEM_MODIFY_REFUND_PROTOCOL(系统超时修改协议)、SYSTEM_NOTIFY_APPLY_SUPPORT(系统通知申请客服介入)、SELLER_AGREE_REFUND_PROCOTOL(卖家同意退款协议)、 SELLER_REJECT_REFUND_PROCOTOL(卖家拒绝退款协议)、 CRM_APPLY_TIMEOUT_CLOSE(申请客服介入、超时关闭、目前仅售后业务在用)、CRM_APPLY_SUPPORT(CRM申请介入)、 CRM_INTERVENE_TASK(CRM介入处理)、 CRM_DISMISS_TASK(CRM撤销工单)、 CRM_FINISH_TASK(CRM完结工单)、BUYER_STEP_PAY_ORDER_CLOSE(买家支付，退款关闭，分阶段订单情况)、BUYER_STEP_CONFIRM_CLOSE(买家确认，退款关闭，分阶段订单情况)、BUYER_CLOSE_TRADE_CLOSE(买家终止交易，退款关闭，分阶段订单情况)、SELLER_CONFIRM_ORDER_CLOSE(卖家确认，退款关闭，分阶段订单情况)、SELLER_STEP_PUSH_CLOSE(卖家推进，退款关闭，分阶段订单情况)"
             },
             "operator": {
               "title": "String",
@@ -2577,6 +2492,11 @@
               "title": "String",
               "type": "string",
               "description": "卖家中文站会员ID"
+            },
+            "refundId": {
+              "title": "String",
+              "type": "string",
+              "description": "退款单ID"
             }
           }
         }
@@ -3317,6 +3237,21 @@
           "title": "String",
           "type": "string",
           "description": "卖家userId"
+        },
+        "attachedAppKey": {
+          "title": "String",
+          "type": "string",
+          "description": "仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id"
+        },
+        "skuName": {
+          "title": "String",
+          "type": "string",
+          "description": "版本名"
+        },
+        "skuVersion": {
+          "title": "String",
+          "type": "string",
+          "description": "版本号"
         }
       }
     },
@@ -3469,171 +3404,187 @@
               "title": "String",
               "type": "string",
               "description": "卖家userId"
+            },
+            "attachedAppKey": {
+              "title": "String",
+              "type": "string",
+              "description": "仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id"
+            },
+            "skuName": {
+              "title": "String",
+              "type": "string",
+              "description": "版本名"
+            },
+            "skuVersion": {
+              "title": "String",
+              "type": "string",
+              "description": "版本号"
             }
           }
         }
       ]
     },
     "SERVICEMARKET_ORDER_PAY": {
-      "allOf": [
-        {
-          "id": "SERVICEMARKET_ORDER_CREATE",
-          "type": "object",
-          "description": "服务市场消息-服务市场订单创建\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_CREATE&topicGroup=SERVICEMARKET",
-          "required": [
-            "gmtCreate",
-            "orderNo",
-            "itemNo",
-            "productLine",
-            "appKey",
-            "basePrice",
-            "ultimatePrice",
-            "executePrice",
-            "paymentAmount",
-            "paymentStatus",
-            "bizStatus",
-            "payCustomerId",
-            "benifitCustomerId",
-            "signCustomerId",
-            "quantity",
-            "unit",
-            "payMemberId",
-            "benifitMemberId",
-            "signMemberId",
-            "sellerAliid"
-          ],
-          "properties": {
-            "gmtCreate": {
-              "title": "Long",
-              "type": "integer",
-              "description": "订单创建时间",
-              "format": "int64"
-            },
-            "orderNo": {
-              "title": "String",
-              "type": "string",
-              "description": "订单号"
-            },
-            "itemNo": {
-              "title": "String",
-              "type": "string",
-              "description": "订单行号"
-            },
-            "productLine": {
-              "title": "String",
-              "type": "string",
-              "description": "产品线"
-            },
-            "appKey": {
-              "title": "String",
-              "type": "string",
-              "description": "appKey"
-            },
-            "basePrice": {
-              "title": "Long",
-              "type": "integer",
-              "description": "原价",
-              "format": "int64"
-            },
-            "ultimatePrice": {
-              "title": "Long",
-              "type": "integer",
-              "description": "最终价",
-              "format": "int64"
-            },
-            "executePrice": {
-              "title": "Long",
-              "type": "integer",
-              "description": "执行价格",
-              "format": "int64"
-            },
-            "paymentAmount": {
-              "title": "Long",
-              "type": "integer",
-              "description": "已支付价格",
-              "format": "int64"
-            },
-            "paymentStatus": {
-              "title": "String",
-              "type": "string",
-              "description": "未付款（payment_none）、已付款（payment_success）"
-            },
-            "bizStatus": {
-              "title": "String",
-              "type": "string",
-              "description": "服务前（B）、服务中（S）、已结束（E）、已取消（C）"
-            },
-            "payCustomerId": {
-              "title": "Long",
-              "type": "integer",
-              "description": "支付人uerId",
-              "format": "int64"
-            },
-            "benifitCustomerId": {
-              "title": "Long",
-              "type": "integer",
-              "description": "受益人userId",
-              "format": "int64"
-            },
-            "signCustomerId": {
-              "title": "Long",
-              "type": "integer",
-              "description": "签约人userId（订购人）",
-              "format": "int64"
-            },
-            "quantity": {
-              "title": "Long",
-              "type": "integer",
-              "description": "数量",
-              "format": "int64"
-            },
-            "unit": {
-              "title": "String",
-              "type": "string",
-              "description": "单位：D天, M月, Y年, P份"
-            },
-            "gmtServiceBegin": {
-              "title": "Long",
-              "type": "integer",
-              "description": "服务开始时间",
-              "format": "int64"
-            },
-            "gmtServiceEnd": {
-              "title": "Long",
-              "type": "integer",
-              "description": "服务结束时间",
-              "format": "int64"
-            },
-            "payMemberId": {
-              "title": "String",
-              "type": "string",
-              "description": "支付人memberId"
-            },
-            "benifitMemberId": {
-              "title": "String",
-              "type": "string",
-              "description": "受益人memberId"
-            },
-            "signMemberId": {
-              "title": "String",
-              "type": "string",
-              "description": "签约人memberId（订购人）"
-            },
-            "sellerAliid": {
-              "title": "String",
-              "type": "string",
-              "description": "卖家userId"
-            }
-          }
+      "id": "SERVICEMARKET_ORDER_PAY",
+      "type": "object",
+      "description": "服务市场消息-服务市场订单支付\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_PAY&topicGroup=SERVICEMARKET",
+      "required": [
+        "gmtCreate",
+        "orderNo",
+        "itemNo",
+        "productLine",
+        "appKey",
+        "basePrice",
+        "ultimatePrice",
+        "executePrice",
+        "paymentAmount",
+        "paymentStatus",
+        "bizStatus",
+        "payCustomerId",
+        "benifitCustomerId",
+        "signCustomerId",
+        "quantity",
+        "unit",
+        "payMemberId",
+        "benifitMemberId",
+        "signMemberId",
+        "sellerAliid"
+      ],
+      "properties": {
+        "gmtCreate": {
+          "title": "Long",
+          "type": "integer",
+          "description": "订单创建时间",
+          "format": "int64"
+        },
+        "orderNo": {
+          "title": "String",
+          "type": "string",
+          "description": "订单号"
+        },
+        "itemNo": {
+          "title": "String",
+          "type": "string",
+          "description": "订单行号"
+        },
+        "productLine": {
+          "title": "String",
+          "type": "string",
+          "description": "产品线"
+        },
+        "appKey": {
+          "title": "String",
+          "type": "string",
+          "description": "appKey"
+        },
+        "basePrice": {
+          "title": "Long",
+          "type": "integer",
+          "description": "原价",
+          "format": "int64"
+        },
+        "ultimatePrice": {
+          "title": "Long",
+          "type": "integer",
+          "description": "最终价",
+          "format": "int64"
+        },
+        "executePrice": {
+          "title": "Long",
+          "type": "integer",
+          "description": "执行价格",
+          "format": "int64"
+        },
+        "paymentAmount": {
+          "title": "Long",
+          "type": "integer",
+          "description": "已支付价格",
+          "format": "int64"
+        },
+        "paymentStatus": {
+          "title": "String",
+          "type": "string",
+          "description": "未付款（payment_none）、已付款（payment_success）"
+        },
+        "bizStatus": {
+          "title": "String",
+          "type": "string",
+          "description": "服务前（B）、服务中（S）、已结束（E）、已取消（C）"
+        },
+        "payCustomerId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "支付人uerId",
+          "format": "int64"
+        },
+        "benifitCustomerId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "受益人userId",
+          "format": "int64"
+        },
+        "signCustomerId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "签约人userId（订购人）",
+          "format": "int64"
+        },
+        "quantity": {
+          "title": "Long",
+          "type": "integer",
+          "description": "数量",
+          "format": "int64"
+        },
+        "unit": {
+          "title": "String",
+          "type": "string",
+          "description": "单位：D天, M月, Y年, P份"
+        },
+        "gmtServiceBegin": {
+          "title": "Long",
+          "type": "integer",
+          "description": "服务开始时间",
+          "format": "int64"
+        },
+        "gmtServiceEnd": {
+          "title": "Long",
+          "type": "integer",
+          "description": "服务结束时间",
+          "format": "int64"
+        },
+        "payMemberId": {
+          "title": "String",
+          "type": "string",
+          "description": "支付人memberId"
+        },
+        "benifitMemberId": {
+          "title": "String",
+          "type": "string",
+          "description": "受益人memberId"
+        },
+        "signMemberId": {
+          "title": "String",
+          "type": "string",
+          "description": "签约人memberId（订购人）"
+        },
+        "sellerAliid": {
+          "title": "String",
+          "type": "string",
+          "description": "卖家userId"
+        },
+        "attachedAppKey": {
+          "title": "String",
+          "type": "string",
+          "description": "仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id"
         }
-      ]
+      }
     },
     "SERVICEMARKET_ORDER_CLOSE": {
       "allOf": [
         {
-          "id": "SERVICEMARKET_ORDER_CREATE",
+          "id": "SERVICEMARKET_ORDER_PAY",
           "type": "object",
-          "description": "服务市场消息-服务市场订单创建\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_CREATE&topicGroup=SERVICEMARKET",
+          "description": "服务市场消息-服务市场订单支付\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_PAY&topicGroup=SERVICEMARKET",
           "required": [
             "gmtCreate",
             "orderNo",
@@ -3777,6 +3728,11 @@
               "title": "String",
               "type": "string",
               "description": "卖家userId"
+            },
+            "attachedAppKey": {
+              "title": "String",
+              "type": "string",
+              "description": "仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id"
             }
           }
         }
@@ -3807,9 +3763,9 @@
     "SERVICEMARKET_ORDER_CREATE_FAIL": {
       "allOf": [
         {
-          "id": "SERVICEMARKET_ORDER_CREATE",
+          "id": "SERVICEMARKET_ORDER_PAY",
           "type": "object",
-          "description": "服务市场消息-服务市场订单创建\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_CREATE&topicGroup=SERVICEMARKET",
+          "description": "服务市场消息-服务市场订单支付\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_PAY&topicGroup=SERVICEMARKET",
           "required": [
             "gmtCreate",
             "orderNo",
@@ -3953,6 +3909,11 @@
               "title": "String",
               "type": "string",
               "description": "卖家userId"
+            },
+            "attachedAppKey": {
+              "title": "String",
+              "type": "string",
+              "description": "仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id"
             }
           }
         }
@@ -3961,9 +3922,9 @@
     "SERVICEMARKET_ORDER_SERVICE_START": {
       "allOf": [
         {
-          "id": "SERVICEMARKET_ORDER_CREATE",
+          "id": "SERVICEMARKET_ORDER_PAY",
           "type": "object",
-          "description": "服务市场消息-服务市场订单创建\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_CREATE&topicGroup=SERVICEMARKET",
+          "description": "服务市场消息-服务市场订单支付\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_PAY&topicGroup=SERVICEMARKET",
           "required": [
             "gmtCreate",
             "orderNo",
@@ -4107,6 +4068,11 @@
               "title": "String",
               "type": "string",
               "description": "卖家userId"
+            },
+            "attachedAppKey": {
+              "title": "String",
+              "type": "string",
+              "description": "仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id"
             }
           }
         }
@@ -4115,9 +4081,9 @@
     "SERVICEMARKET_ORDER_SERVICE_END": {
       "allOf": [
         {
-          "id": "SERVICEMARKET_ORDER_CREATE",
+          "id": "SERVICEMARKET_ORDER_PAY",
           "type": "object",
-          "description": "服务市场消息-服务市场订单创建\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_CREATE&topicGroup=SERVICEMARKET",
+          "description": "服务市场消息-服务市场订单支付\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_PAY&topicGroup=SERVICEMARKET",
           "required": [
             "gmtCreate",
             "orderNo",
@@ -4261,6 +4227,11 @@
               "title": "String",
               "type": "string",
               "description": "卖家userId"
+            },
+            "attachedAppKey": {
+              "title": "String",
+              "type": "string",
+              "description": "仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id"
             }
           }
         }
@@ -4360,9 +4331,9 @@
     "SERVICEMARKET_ORDER_SERVICE_REFUND": {
       "allOf": [
         {
-          "id": "SERVICEMARKET_ORDER_CREATE",
+          "id": "SERVICEMARKET_ORDER_PAY",
           "type": "object",
-          "description": "服务市场消息-服务市场订单创建\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_CREATE&topicGroup=SERVICEMARKET",
+          "description": "服务市场消息-服务市场订单支付\r\nhttps://open.1688.com/doc/topicDetail.htm?id=SERVICEMARKET_ORDER_PAY&topicGroup=SERVICEMARKET",
           "required": [
             "gmtCreate",
             "orderNo",
@@ -4506,6 +4477,11 @@
               "title": "String",
               "type": "string",
               "description": "卖家userId"
+            },
+            "attachedAppKey": {
+              "title": "String",
+              "type": "string",
+              "description": "仅针对非APP类品消息有效，对于代运营和综合市场来说就是对应品的Id，对于商品详情来说就是对应模板的Id"
             }
           }
         }
@@ -4885,7 +4861,7 @@
         "status": {
           "title": "String",
           "type": "string",
-          "description": "状态"
+          "description": "状态，wait_supplier_confirm：待供应商确认，approved：已生效"
         },
         "sourceType": {
           "title": "String",
@@ -4988,6 +4964,982 @@
         }
       ]
     },
+    "ORDER_GROUPON_ORDER_SUCCESS": {
+      "id": "ORDER_GROUPON_ORDER_SUCCESS",
+      "type": "object",
+      "description": "订单消息-社交拼团和C2M大店发货消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=ORDER_GROUPON_ORDER_SUCCESS&topicGroup=ORDER",
+      "properties": {
+        "orderId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "订单id",
+          "format": "int64"
+        },
+        "templateId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "团模板id",
+          "format": "int64"
+        },
+        "grouponId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "团id",
+          "format": "int64"
+        }
+      }
+    },
+    "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES": {
+      "id": "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES",
+      "type": "object",
+      "description": "供应链消息-订单售中退款关闭（可以发货）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES&topicGroup=ASCP",
+      "required": [
+        "supplierId",
+        "bizOrderId"
+      ],
+      "properties": {
+        "supplierId": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商ID"
+        },
+        "bizOrderId": {
+          "title": "String[]",
+          "type": "array",
+          "description": "交易主订单ID列表",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "LOGISTICS_BUYER_VIEW_TRACE": {
+      "id": "LOGISTICS_BUYER_VIEW_TRACE",
+      "type": "object",
+      "description": "物流消息-物流单状态变更（买家视角）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=LOGISTICS_BUYER_VIEW_TRACE&topicGroup=LOGISTICS",
+      "properties": {
+        "OrderLogisticsTracingModel": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "logisticsId": {
+              "title": "String",
+              "type": "string",
+              "description": "物流编号"
+            },
+            "cpCode": {
+              "title": "String",
+              "type": "string",
+              "description": "cp code"
+            },
+            "mailNo": {
+              "title": "String",
+              "type": "string",
+              "description": "运单号"
+            },
+            "statusChanged": {
+              "title": "String",
+              "type": "string",
+              "description": "物流单发生变化的状态，包括发货（CONSIGN）、揽收（ACCEPT）、运输（TRANSPORT）、派送（DELIVERING）、签收（SIGN）"
+            },
+            "changeTime": {
+              "title": "DateTime",
+              "type": "string",
+              "description": "发生变化的时间",
+              "format": "date-time"
+            },
+            "orderLogsItems": {
+              "type": "array",
+              "description": "该物流单关联的订单信息",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "orderId": {
+                    "title": "Long",
+                    "type": "integer",
+                    "description": "交易主单id",
+                    "format": "int64"
+                  },
+                  "orderEntryId": {
+                    "title": "Long",
+                    "type": "integer",
+                    "description": "交易子单id",
+                    "format": "int64"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "LOGISTICS_SELLER_VIEW_TRACE": {
+      "allOf": [
+        {
+          "id": "LOGISTICS_BUYER_VIEW_TRACE",
+          "type": "object",
+          "description": "物流消息-物流单状态变更（买家视角）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=LOGISTICS_BUYER_VIEW_TRACE&topicGroup=LOGISTICS",
+          "properties": {
+            "OrderLogisticsTracingModel": {
+              "type": "object",
+              "description": "",
+              "properties": {
+                "logisticsId": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "物流编号"
+                },
+                "cpCode": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "cp code"
+                },
+                "mailNo": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "运单号"
+                },
+                "statusChanged": {
+                  "title": "String",
+                  "type": "string",
+                  "description": "物流单发生变化的状态，包括发货（CONSIGN）、揽收（ACCEPT）、运输（TRANSPORT）、派送（DELIVERING）、签收（SIGN）"
+                },
+                "changeTime": {
+                  "title": "DateTime",
+                  "type": "string",
+                  "description": "发生变化的时间",
+                  "format": "date-time"
+                },
+                "orderLogsItems": {
+                  "type": "array",
+                  "description": "该物流单关联的订单信息",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "orderId": {
+                        "title": "Long",
+                        "type": "integer",
+                        "description": "交易主单id",
+                        "format": "int64"
+                      },
+                      "orderEntryId": {
+                        "title": "Long",
+                        "type": "integer",
+                        "description": "交易子单id",
+                        "format": "int64"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ASCP_ASCP_ORDER_PAY": {
+      "allOf": [
+        {
+          "id": "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES",
+          "type": "object",
+          "description": "供应链消息-订单售中退款关闭（可以发货）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES&topicGroup=ASCP",
+          "required": [
+            "supplierId",
+            "bizOrderId"
+          ],
+          "properties": {
+            "supplierId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商ID"
+            },
+            "bizOrderId": {
+              "title": "String[]",
+              "type": "array",
+              "description": "交易主订单ID列表",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ASCP_ASCP_ORDER_ANNOUNCE_SENDGOODS": {
+      "allOf": [
+        {
+          "id": "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES",
+          "type": "object",
+          "description": "供应链消息-订单售中退款关闭（可以发货）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES&topicGroup=ASCP",
+          "required": [
+            "supplierId",
+            "bizOrderId"
+          ],
+          "properties": {
+            "supplierId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商ID"
+            },
+            "bizOrderId": {
+              "title": "String[]",
+              "type": "array",
+              "description": "交易主订单ID列表",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ASCP_ASCP_ORDER_BUYER_REFUND_APPLY_IN_SALES": {
+      "allOf": [
+        {
+          "id": "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES",
+          "type": "object",
+          "description": "供应链消息-订单售中退款关闭（可以发货）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES&topicGroup=ASCP",
+          "required": [
+            "supplierId",
+            "bizOrderId"
+          ],
+          "properties": {
+            "supplierId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商ID"
+            },
+            "bizOrderId": {
+              "title": "String[]",
+              "type": "array",
+              "description": "交易主订单ID列表",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "LOGISTICS_MAIL_NO_CHANGE": {
+      "id": "LOGISTICS_MAIL_NO_CHANGE",
+      "type": "object",
+      "description": "物流消息-物流单号修改消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=LOGISTICS_MAIL_NO_CHANGE&topicGroup=LOGISTICS",
+      "properties": {
+        "MailNoChangeModel": {
+          "type": "object",
+          "description": "",
+          "properties": {
+            "logisticsId": {
+              "title": "String",
+              "type": "string",
+              "description": "物流单号"
+            },
+            "oldCpCode": {
+              "title": "String",
+              "type": "string",
+              "description": "更改前的cp code"
+            },
+            "newCpCode": {
+              "title": "String",
+              "type": "string",
+              "description": "更改后的cp code"
+            },
+            "oldMailNo": {
+              "title": "String",
+              "type": "string",
+              "description": "更改前的运单号"
+            },
+            "newMailNo": {
+              "title": "String",
+              "type": "string",
+              "description": "更改后的运单号"
+            },
+            "eventTime": {
+              "title": "DateTime",
+              "type": "string",
+              "description": "发生时间",
+              "format": "date-time"
+            },
+            "orderLogsItems": {
+              "description": "该物流单关联的订单信息"
+            }
+          }
+        }
+      }
+    },
+    "ASCP_ASCP_ORDER_BUYER_REFUND_SUCCESS": {
+      "allOf": [
+        {
+          "id": "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES",
+          "type": "object",
+          "description": "供应链消息-订单售中退款关闭（可以发货）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES&topicGroup=ASCP",
+          "required": [
+            "supplierId",
+            "bizOrderId"
+          ],
+          "properties": {
+            "supplierId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商ID"
+            },
+            "bizOrderId": {
+              "title": "String[]",
+              "type": "array",
+              "description": "交易主订单ID列表",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ASCP_ASCP_ORDER_SUCCESS": {
+      "allOf": [
+        {
+          "id": "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES",
+          "type": "object",
+          "description": "供应链消息-订单售中退款关闭（可以发货）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES&topicGroup=ASCP",
+          "required": [
+            "supplierId",
+            "bizOrderId"
+          ],
+          "properties": {
+            "supplierId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商ID"
+            },
+            "bizOrderId": {
+              "title": "String[]",
+              "type": "array",
+              "description": "交易主订单ID列表",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ASCP_ASCP_ORDER_COMFIRM_RECEIVEGOODS": {
+      "allOf": [
+        {
+          "id": "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES",
+          "type": "object",
+          "description": "供应链消息-订单售中退款关闭（可以发货）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES&topicGroup=ASCP",
+          "required": [
+            "supplierId",
+            "bizOrderId"
+          ],
+          "properties": {
+            "supplierId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商ID"
+            },
+            "bizOrderId": {
+              "title": "String[]",
+              "type": "array",
+              "description": "交易主订单ID列表",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT": {
+      "id": "CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT",
+      "type": "object",
+      "description": "采购消息-终止交易结果消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT&topicGroup=CAIGOU",
+      "properties": {
+        "data": {
+          "type": "object",
+          "description": "终止交易结果数据",
+          "properties": {
+            "result": {
+              "title": "String",
+              "type": "string",
+              "description": "pass error"
+            },
+            "terminateTradeId": {
+              "title": "Long",
+              "type": "integer",
+              "description": "终止交易单id",
+              "format": "int64"
+            },
+            "orderId": {
+              "title": "Long",
+              "type": "integer",
+              "description": "订单id",
+              "format": "int64"
+            },
+            "terminateTradeStatus": {
+              "title": "String",
+              "type": "string",
+              "description": "终止交易单状态"
+            },
+            "checkErrorInfos": {
+              "type": "array",
+              "description": "终止交易单错误信息",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "title": "Long",
+                    "type": "integer",
+                    "description": "单据ID",
+                    "format": "int64"
+                  },
+                  "code": {
+                    "title": "String",
+                    "type": "string",
+                    "description": "单据编码"
+                  },
+                  "status": {
+                    "title": "String",
+                    "type": "string",
+                    "description": "单据状态"
+                  },
+                  "type": {
+                    "title": "String",
+                    "type": "string",
+                    "description": "单据类型"
+                  },
+                  "rowNum": {
+                    "title": "Long",
+                    "type": "integer",
+                    "description": "单据行号",
+                    "format": "int64"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "success": {
+          "title": "Boolean",
+          "type": "boolean",
+          "description": "终止交易结果布尔值"
+        },
+        "message": {
+          "title": "String",
+          "type": "string",
+          "description": "异常情况下，错误信息"
+        },
+        "resultCode": {
+          "title": "String",
+          "type": "string",
+          "description": "异常情况下，错误代码"
+        }
+      }
+    },
+    "CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE": {
+      "id": "CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE",
+      "type": "object",
+      "description": "采购消息-采购买家供应商准入\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE&topicGroup=CAIGOU",
+      "required": [
+        "supplierMemberId",
+        "admitId",
+        "supplierLoginId",
+        "companyName",
+        "action",
+        "status"
+      ],
+      "properties": {
+        "supplierMemberId": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商memberId"
+        },
+        "admitId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "准入申请单id",
+          "format": "int64"
+        },
+        "supplierLoginId": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商loginId"
+        },
+        "companyName": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商公司名称"
+        },
+        "supplierBuyerId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "供应商记录id",
+          "format": "int64"
+        },
+        "action": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商准入记录操作"
+        },
+        "auditApplyId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "供应商准入申请审批单id",
+          "format": "int64"
+        },
+        "status": {
+          "title": "Long",
+          "type": "integer",
+          "description": "供应商准入申请单当前状态",
+          "format": "int64"
+        }
+      }
+    },
+    "CAIGOU_MSG_WORKFLOW_PROCESS_RESULT": {
+      "id": "CAIGOU_MSG_WORKFLOW_PROCESS_RESULT",
+      "type": "object",
+      "description": "采购消息-企业采购审批结果消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_WORKFLOW_PROCESS_RESULT&topicGroup=CAIGOU",
+      "required": [
+        "bizType",
+        "approvalResult",
+        "bizId"
+      ],
+      "properties": {
+        "bizType": {
+          "title": "String",
+          "type": "string",
+          "description": "审批对应的业务流程，枚举值：requisition（请购审批）、buyoffer（询价审批）、decision（决标审批）、formalbidding（招标审批）、awardBidding（定标审批）、pricingchart（比价审批）"
+        },
+        "approvalResult": {
+          "title": "String",
+          "type": "string",
+          "description": "审批结果，枚举值：pass（通过）、reject（拒绝）"
+        },
+        "bizId": {
+          "title": "String",
+          "type": "string",
+          "description": "审批对应的业务单据的阿里系统主键"
+        }
+      }
+    },
+    "CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT": {
+      "id": "CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT",
+      "type": "object",
+      "description": "采购消息-发布审批中状态的询价单消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT&topicGroup=CAIGOU",
+      "required": [
+        "bizType",
+        "bizId",
+        "prId",
+        "status"
+      ],
+      "properties": {
+        "bizType": {
+          "title": "String",
+          "type": "string",
+          "description": "业务类型，询价单"
+        },
+        "bizId": {
+          "title": "String",
+          "type": "string",
+          "description": "询价单id"
+        },
+        "prId": {
+          "title": "String",
+          "type": "string",
+          "description": "外部询价单id"
+        },
+        "status": {
+          "title": "String",
+          "type": "string",
+          "description": "询价单当前的状态，例如审批中"
+        }
+      }
+    },
+    "CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_SETTLEMENT_ACTION": {
+      "allOf": [
+        {
+          "id": "CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION",
+          "type": "object",
+          "description": "采购消息-结算单动作消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION&topicGroup=CAIGOU",
+          "required": [
+            "action",
+            "settlementNoteId"
+          ],
+          "properties": {
+            "action": {
+              "title": "String",
+              "type": "string",
+              "description": "当前结算单的动作，值：CREATE:创建；CANCEL:取消；EDIT:编辑；REJECT:拒绝（退回）；CONFIRM:确认；"
+            },
+            "settlementNoteId": {
+              "title": "Long",
+              "type": "integer",
+              "description": "结算单ID",
+              "format": "int64"
+            }
+          }
+        }
+      ]
+    },
+    "CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE": {
+      "id": "CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE",
+      "type": "object",
+      "description": "采购消息-内部商城商品状态变化消息（卖家视角）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE&topicGroup=CAIGOU",
+      "required": [
+        "id",
+        "supplierName",
+        "goodsStatus",
+        "subject"
+      ],
+      "properties": {
+        "id": {
+          "title": "Long",
+          "type": "integer",
+          "description": "商品ID",
+          "format": "int64"
+        },
+        "supplierName": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商名称"
+        },
+        "goodsStatus": {
+          "title": "String",
+          "type": "string",
+          "description": "商品状态，new-未上架，published-已上架，deleted-已删除"
+        },
+        "subject": {
+          "title": "String",
+          "type": "string",
+          "description": "商品标题"
+        }
+      }
+    },
+    "CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE": {
+      "id": "CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE",
+      "type": "object",
+      "description": "采购消息-买家修改供应商消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE&topicGroup=CAIGOU",
+      "required": [
+        "operateTime",
+        "supplierBuyerId",
+        "action"
+      ],
+      "properties": {
+        "operateTime": {
+          "title": "Long",
+          "type": "integer",
+          "description": "操作时间",
+          "format": "int64"
+        },
+        "supplierMemberId": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商memberId"
+        },
+        "supplierLoginId": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商登陆id"
+        },
+        "companyName": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商公司名"
+        },
+        "companyRegNo": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商工商注册号"
+        },
+        "companyCreditCode": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商社会信用代码"
+        },
+        "supplierBuyerId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "主键id",
+          "format": "int64"
+        },
+        "action": {
+          "title": "String",
+          "type": "string",
+          "description": "操作"
+        },
+        "operatorLoginId": {
+          "title": "String",
+          "type": "string",
+          "description": "操作人登陆di"
+        },
+        "operatorName": {
+          "title": "String",
+          "type": "string",
+          "description": "操作人名称"
+        }
+      }
+    },
+    "CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS": {
+      "id": "CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS",
+      "type": "object",
+      "description": "采购消息-采购商请购单创建成功消息（卖家视角）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS&topicGroup=CAIGOU",
+      "required": [
+        "title",
+        "requisitionNo",
+        "requisitionId"
+      ],
+      "properties": {
+        "title": {
+          "title": "String",
+          "type": "string",
+          "description": "请购单标题"
+        },
+        "requisitionNo": {
+          "title": "String",
+          "type": "string",
+          "description": "请购单号"
+        },
+        "requisitionId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "请购单Id",
+          "format": "int64"
+        }
+      }
+    },
+    "CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD": {
+      "id": "CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD",
+      "type": "object",
+      "description": "采购消息-买家添加供应商消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD&topicGroup=CAIGOU",
+      "required": [
+        "operateTime",
+        "supplierBuyerId",
+        "action",
+        "classify"
+      ],
+      "properties": {
+        "operateTime": {
+          "title": "Long",
+          "type": "integer",
+          "description": "操作时间",
+          "format": "int64"
+        },
+        "supplierMemberId": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商memberId"
+        },
+        "supplierLoginId": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商登陆id"
+        },
+        "companyName": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商公司名"
+        },
+        "companyRegNo": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商工商注册号"
+        },
+        "companyCreditCode": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商社会信用代码"
+        },
+        "supplierBuyerId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "记录主键id",
+          "format": "int64"
+        },
+        "action": {
+          "title": "String",
+          "type": "string",
+          "description": "操作"
+        },
+        "classify": {
+          "title": "Long",
+          "type": "integer",
+          "description": "供应商等级",
+          "format": "int64"
+        },
+        "classifyName": {
+          "title": "String",
+          "type": "string",
+          "description": "供应商等级名称"
+        },
+        "operatorLoginId": {
+          "title": "String",
+          "type": "string",
+          "description": "操作人登陆id"
+        },
+        "operatorName": {
+          "title": "String",
+          "type": "string",
+          "description": "操作人名称"
+        }
+      }
+    },
+    "CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT": {
+      "id": "CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT",
+      "type": "object",
+      "description": "采购消息-请购单审批全部驳回消息（卖家视角）\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT&topicGroup=CAIGOU",
+      "properties": {
+        "requisitionId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "请购单ID",
+          "format": "int64"
+        }
+      }
+    },
+    "WANG_BUYER_INQUIRY": {
+      "id": "WANG_BUYER_INQUIRY",
+      "type": "object",
+      "description": "旺旺消息-买家询盘消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=WANG_BUYER_INQUIRY&topicGroup=WANG",
+      "properties": {
+        "wwMsgId": {
+          "title": "String",
+          "type": "string",
+          "description": "旺旺消息id"
+        },
+        "wwMsgTags": {
+          "title": "String[]",
+          "type": "array",
+          "description": "旺旺消息标签列表，枚举值如下：价格相关，功能询问，加工定制，发货相关，售后问题，商品细节询问，实物真实性，广告，材质相关，正品确认，物流相关，现货相关，要联系方式，规格相关，质量相关，其他费用问题，商品链接，订单链接，其他",
+          "items": {
+            "type": "string"
+          }
+        },
+        "senderLoginId": {
+          "title": "String",
+          "type": "string",
+          "description": "消息发送者loginId"
+        },
+        "userLevel": {
+          "title": "String",
+          "type": "string",
+          "description": "买家等级（脱敏），B1（初级），B2（中级），B3（高级）"
+        },
+        "msgTime": {
+          "title": "String",
+          "type": "string",
+          "description": "消息时间"
+        },
+        "receiverLoginId": {
+          "title": "String",
+          "type": "string",
+          "description": "消息接收者loginId"
+        },
+        "receiverAdminLoginId": {
+          "title": "String",
+          "type": "string",
+          "description": "消息接收者对应主账号loginId"
+        },
+        "scenario": {
+          "title": "String",
+          "type": "string",
+          "description": "旺旺消息对应的业务场景"
+        }
+      }
+    },
+    "CAIGOU_MSG_SLC_BUYER_SUPPLIER_DELETE": {
+      "allOf": [
+        {
+          "id": "CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE",
+          "type": "object",
+          "description": "采购消息-买家修改供应商消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE&topicGroup=CAIGOU",
+          "required": [
+            "operateTime",
+            "supplierBuyerId",
+            "action"
+          ],
+          "properties": {
+            "operateTime": {
+              "title": "Long",
+              "type": "integer",
+              "description": "操作时间",
+              "format": "int64"
+            },
+            "supplierMemberId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商memberId"
+            },
+            "supplierLoginId": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商登陆id"
+            },
+            "companyName": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商公司名"
+            },
+            "companyRegNo": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商工商注册号"
+            },
+            "companyCreditCode": {
+              "title": "String",
+              "type": "string",
+              "description": "供应商社会信用代码"
+            },
+            "supplierBuyerId": {
+              "title": "Long",
+              "type": "integer",
+              "description": "主键id",
+              "format": "int64"
+            },
+            "action": {
+              "title": "String",
+              "type": "string",
+              "description": "操作"
+            },
+            "operatorLoginId": {
+              "title": "String",
+              "type": "string",
+              "description": "操作人登陆di"
+            },
+            "operatorName": {
+              "title": "String",
+              "type": "string",
+              "description": "操作人名称"
+            }
+          }
+        }
+      ]
+    },
+    "CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY": {
+      "id": "CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY",
+      "type": "object",
+      "description": "采购消息-采购子订单取消消息\r\nhttps://open.1688.com/doc/topicDetail.htm?id=CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY&topicGroup=CAIGOU",
+      "properties": {
+        "procurementOrderId": {
+          "title": "Long",
+          "type": "integer",
+          "description": "采购订单id",
+          "format": "int64"
+        },
+        "procurementOrderEntryIds": {
+          "title": "Long",
+          "type": "integer",
+          "description": "子订单id集合",
+          "format": "int64"
+        },
+        "orderCode": {
+          "title": "String",
+          "type": "string",
+          "description": "采购订单编号"
+        }
+      }
+    },
     "TypeDescription": {
       "type": "string",
       "description": "消息类型",
@@ -5026,9 +5978,6 @@
         "PRODUCT_PRODUCT_NEW_OR_MODIFY",
         "PRODUCT_PRODUCT_DELETE",
         "PRODUCT_PRODUCT_REPOST",
-        "PRODUCT_ICBU_PRODUCT_EDIT",
-        "PRODUCT_ICBU_PRODUCT_DELETE",
-        "PRODUCT_ICBU_PRODUCT_NEW",
         "CAIGOU_MSG_SUPPLIER_SEND_GOODS",
         "CAIGOU_MSG_PURCHARSE_ORDER",
         "CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE",
@@ -5093,7 +6042,31 @@
         "PRODUCT_PRODUCT_INVENTORY_CHANGE",
         "CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION",
         "PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER",
-        "PRODUCT_RELATION_VIEW_PRODUCT_AUDIT"
+        "PRODUCT_RELATION_VIEW_PRODUCT_AUDIT",
+        "ORDER_GROUPON_ORDER_SUCCESS",
+        "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES",
+        "LOGISTICS_BUYER_VIEW_TRACE",
+        "LOGISTICS_SELLER_VIEW_TRACE",
+        "ASCP_ASCP_ORDER_PAY",
+        "ASCP_ASCP_ORDER_ANNOUNCE_SENDGOODS",
+        "ASCP_ASCP_ORDER_BUYER_REFUND_APPLY_IN_SALES",
+        "LOGISTICS_MAIL_NO_CHANGE",
+        "ASCP_ASCP_ORDER_BUYER_REFUND_SUCCESS",
+        "ASCP_ASCP_ORDER_SUCCESS",
+        "ASCP_ASCP_ORDER_COMFIRM_RECEIVEGOODS",
+        "CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT",
+        "CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE",
+        "CAIGOU_MSG_WORKFLOW_PROCESS_RESULT",
+        "CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT",
+        "CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_SETTLEMENT_ACTION",
+        "CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE",
+        "CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE",
+        "CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS",
+        "CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD",
+        "CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT",
+        "WANG_BUYER_INQUIRY",
+        "CAIGOU_MSG_SLC_BUYER_SUPPLIER_DELETE",
+        "CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY"
       ],
       "enum": [
         "CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER",
@@ -5130,9 +6103,6 @@
         "PRODUCT_PRODUCT_NEW_OR_MODIFY",
         "PRODUCT_PRODUCT_DELETE",
         "PRODUCT_PRODUCT_REPOST",
-        "PRODUCT_ICBU_PRODUCT_EDIT",
-        "PRODUCT_ICBU_PRODUCT_DELETE",
-        "PRODUCT_ICBU_PRODUCT_NEW",
         "CAIGOU_MSG_SUPPLIER_SEND_GOODS",
         "CAIGOU_MSG_PURCHARSE_ORDER",
         "CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE",
@@ -5197,7 +6167,31 @@
         "PRODUCT_PRODUCT_INVENTORY_CHANGE",
         "CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION",
         "PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER",
-        "PRODUCT_RELATION_VIEW_PRODUCT_AUDIT"
+        "PRODUCT_RELATION_VIEW_PRODUCT_AUDIT",
+        "ORDER_GROUPON_ORDER_SUCCESS",
+        "ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES",
+        "LOGISTICS_BUYER_VIEW_TRACE",
+        "LOGISTICS_SELLER_VIEW_TRACE",
+        "ASCP_ASCP_ORDER_PAY",
+        "ASCP_ASCP_ORDER_ANNOUNCE_SENDGOODS",
+        "ASCP_ASCP_ORDER_BUYER_REFUND_APPLY_IN_SALES",
+        "LOGISTICS_MAIL_NO_CHANGE",
+        "ASCP_ASCP_ORDER_BUYER_REFUND_SUCCESS",
+        "ASCP_ASCP_ORDER_SUCCESS",
+        "ASCP_ASCP_ORDER_COMFIRM_RECEIVEGOODS",
+        "CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT",
+        "CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE",
+        "CAIGOU_MSG_WORKFLOW_PROCESS_RESULT",
+        "CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT",
+        "CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_SETTLEMENT_ACTION",
+        "CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE",
+        "CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE",
+        "CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS",
+        "CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD",
+        "CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT",
+        "WANG_BUYER_INQUIRY",
+        "CAIGOU_MSG_SLC_BUYER_SUPPLIER_DELETE",
+        "CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY"
       ]
     },
     "TypeDescriptionJson": {
@@ -5207,7 +6201,7 @@
           "title": "TypeDescription的json",
           "type": "string",
           "readOnly": true,
-          "default": "{\"CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER\":\"采购消息-采购商发布询价消息\",\"CAIGOU_MSG_BUYER_CANCEL_BUYOFFER\":\"采购消息-采购商取消询价消息\",\"CAIGOU_MSG_SUPPLIER_QUOTATION\":\"采购消息-供应商发布报价消息\",\"CAIGOU_MSG_SUPPLIER_CANCEL_QUOTATION\":\"采购消息-供应商取消报价消息\",\"CAIGOU_MSG_BUYER_MARK_QUOTATION\":\"采购消息-供应商选择备选报价消息\",\"CAIGOU_MSG_BUYER_UNMARK_QUOTATION\":\"采购消息-供应商撤销备选报价消息\",\"CAIGOU_MSG_BUYER_MODIFY_BUYOFFER\":\"采购消息-采购商修改询价单消息\",\"CAIGOU_MSG_BUYER_ORDERED\":\"采购消息-采购商下单消息\",\"CAIGOU_MSG_CREATE_COOPERATEION\":\"采购消息-采购商与供应商建立合作关系消息\",\"CAIGOU_MSG_TRADE_SUCCEED\":\"采购消息-交易成功（账期、确认收货）消息\",\"CAIGOU_MSG_CLOSE_ORDER\":\"采购消息-采购商关闭下单消息\",\"CAIGOU_MSG_SUPPLIER_APPLY\":\"采购消息-供应商申请消息\",\"CAIGOU_MSG_BUYER_PAYED_SUCCEED\":\"采购消息-采购商付款成功消息\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT\":\"采购消息-采购商发布物料消息\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT\":\"采购消息-采购商修改物料信息消息\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT_QUOTE\":\"采购消息-采购商删除物料报价消息\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT\":\"采购消息-采购商删除物料消息\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT_QUOTE\":\"采购消息-采购商发布物料报价消息\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT_QUOTE\":\"采购消息-采购商修改物料报价消息\",\"ORDER_BUYER_MAKE\":\"订单消息-1688创建订单（卖家视角）\",\"ORDER_PART_PART_SENDGOODS\":\"订单消息-1688订单部分发货（卖家视角）\",\"ORDER_ORDER_PRICE_MODIFY\":\"订单消息-1688修改订单价格（卖家视角）\",\"ORDER_ANNOUNCE_SENDGOODS\":\"订单消息-1688订单发货（卖家视角）\",\"ORDER_ORDER_SUCCESS\":\"订单消息-1688交易成功（卖家视角）\",\"ORDER_PAY\":\"订单消息-1688交易付款（卖家视角）\",\"ORDER_ORDER_COMFIRM_RECEIVEGOODS\":\"订单消息-1688订单确认收货（卖家视角）\",\"ORDER_ORDER_BUYER_CLOSE\":\"订单消息-1688买家关闭订单（卖家视角）\",\"ORDER_ORDER_SELLER_CLOSE\":\"订单消息-1688卖家关闭订单（卖家视角）\",\"ORDER_ORDER_BOPS_CLOSE\":\"订单消息-1688运营后台关闭订单（卖家视角）\",\"ORDER_ORDER_STEP_PAY\":\"订单消息-1688订单阶段付款（卖家视角）\",\"PRODUCT_PRODUCT_EXPIRE\":\"商品消息-1688产品下架/merchandise off the shelf\",\"PRODUCT_PRODUCT_NEW_OR_MODIFY\":\"商品消息-1688产品新增或修改/merchandise adding or modification\",\"PRODUCT_PRODUCT_DELETE\":\"商品消息-1688产品删除/merchandise removal\",\"PRODUCT_PRODUCT_REPOST\":\"商品消息-1688产品上架/new product listing\",\"PRODUCT_ICBU_PRODUCT_EDIT\":\"商品消息-ICBU商品编辑\",\"PRODUCT_ICBU_PRODUCT_DELETE\":\"商品消息-ICBU商品删除\",\"PRODUCT_ICBU_PRODUCT_NEW\":\"商品消息-ICBU商品发布\",\"CAIGOU_MSG_SUPPLIER_SEND_GOODS\":\"采购消息-供应商发货\",\"CAIGOU_MSG_PURCHARSE_ORDER\":\"采购消息-企业采购单\",\"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE\":\"采购消息-采购商品状态变化\",\"CAIGOU_MSG_MALL_GOODS\":\"采购消息-商品变化消息\",\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\":\"采购消息-采购单创建成功\",\"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE\":\"采购消息-采购商品价格变化\",\"ORDER_ORDER_BUYER_REFUND_IN_SALES\":\"订单消息-1688订单售中退款（卖家视角）\",\"ORDER_ORDER_REFUND_AFTER_SALES\":\"订单消息-1688订单售后退款（卖家视角）\",\"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS\":\"采购消息-采购商请购单创建成功消息\",\"PRODUCT_PRODUCT_CREATE_RESULT\":\"商品消息-商品发布结果消息同步\",\"CAIGOU_MSG_PURCHASE_ORDER_CANCEL\":\"采购消息-采购单取消\",\"PRODUCT_PRODUCT_CROSSBOARD_INFORM\":\"商品消息-一键铺货消息\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE\":\"采购消息-创建收货单\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE\":\"采购消息-拒绝收货单\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE\":\"采购消息-同意收货单\",\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\":\"采购消息-创建采购订单\",\"CROSSBOARD_CROSSBOARD_ADD_SUPPLY\":\"跨境消息-跨境设为货源\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE\":\"采购消息-更新框架协议状态\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE\":\"采购消息-创建框架协议\",\"CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE\":\"采购消息-采购订单状态更新\",\"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE\":\"采购消息-创建结算单\",\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\":\"订单消息-1688订单售中退款（买家视角）\",\"AUTHORIZATION_CANCEL\":\"授权消息-授权取消消息\",\"ORDER_BUYER_VIEW_ORDER_PAY\":\"订单消息-1688交易付款（买家视角）/1688 transaction payment (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES\":\"订单消息-1688订单售后退款（买家视角）\",\"ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE\":\"订单消息-1688买家关闭订单（买家视角）/buyer closing order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE\":\"订单消息-1688运营后台关闭订单（买家视角）\",\"ORDER_BUYER_VIEW_BUYER_MAKE\":\"订单消息-1688创建订单（买家视角）/order created (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_STEP_PAY\":\"订单消息-1688订单阶段付款（买家视角）\",\"ORDER_BUYER_VIEW_PART_PART_SENDGOODS\":\"订单消息-1688订单部分发货（买家视角）/Partial delivery of 1688 order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY\":\"订单消息-1688修改订单价格（买家视角）/order price modification (buyer view)\",\"ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS\":\"订单消息-1688订单发货（买家视角）/1688 order delivery (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS\":\"订单消息-1688订单确认收货（买家视角）/order receipt confirmation (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_SUCCESS\":\"订单消息-1688交易成功（买家视角）\",\"ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE\":\"订单消息-1688卖家关闭订单（买家视角）/seller closing order (buyer view)\",\"PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY\":\"商品消息-1688产品新增或修改（关系用户视角）\",\"PRODUCT_RELATION_VIEW_PRODUCT_DELETE\":\"商品消息-1688产品删除（关系用户视角）\",\"PRODUCT_RELATION_VIEW_PRODUCT_REPOST\":\"商品消息-1688产品上架（关系用户视角）\",\"PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE\":\"商品消息-1688产品下架（关系用户视角）\",\"SERVICEMARKET_ORDER_CREATE\":\"服务市场消息-服务市场订单创建\",\"SERVICEMARKET_ORDER_CANCEL\":\"服务市场消息-服务市场订单取消\",\"SERVICEMARKET_ORDER_PAY\":\"服务市场消息-服务市场订单支付\",\"SERVICEMARKET_ORDER_CLOSE\":\"服务市场消息-服务市场订单关闭\",\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"采购消息-创建收货单成功消息\",\"SERVICEMARKET_ORDER_CREATE_FAIL\":\"服务市场消息-服务市场订单创建失败\",\"SERVICEMARKET_ORDER_SERVICE_START\":\"服务市场消息-服务市场订单服务开始\",\"SERVICEMARKET_ORDER_SERVICE_END\":\"服务市场消息-服务市场订单服务结束\",\"CAIGOU_MSG_REJECT_REQUISITION\":\"采购消息-采购商请购单驳回消息\",\"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION\":\"采购消息-结算单动作消息\",\"CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION\":\"采购消息-采购执行发货消息\",\"SERVICEMARKET_ORDER_SERVICE_REFUND\":\"服务市场消息-服务市场订单退款\",\"CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION\":\"采购消息-退货单动作消息\",\"ORDER_MODIFY_MEMO\":\"订单消息-1688订单备注修改（卖家视角）\",\"ORDER_BUYER_VIEW_MODIFY_MEMO\":\"订单消息-1688订单备注修改（买家视角）/order remarks modification (buyer view)\",\"CAIGOU_MSG_PRICINGCHART_SUBMITTED\":\"采购消息-提交比价单消息\",\"CAIGOU_MSG_PROCUREMENT_PAY_ACTION\":\"采购消息-付款单动作消息\",\"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION\":\"采购消息-订单执行中消息 \",\"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION\":\"采购消息-运输需求单动作消息\",\"ORDER_BATCH_PAY\":\"订单消息-1688订单批量支付状态同步消息\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"采购消息-创建收货单成功消息（卖家视角）\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION\":\"采购消息-关闭采购订单消息（卖家视角）\",\"PRODUCT_PRODUCT_INVENTORY_CHANGE\":\"商品消息-1688商品库存变更消息（关系用户视角）\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION\":\"采购消息-创建采购订单消息（卖家视角）\",\"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER\":\"商品消息-商品池&超买价变更消息（关系用户视角）\",\"PRODUCT_RELATION_VIEW_PRODUCT_AUDIT\":\"商品消息-1688产品审核下架（关系用户视角）\"}"
+          "default": "{\"CAIGOU_MSG_BUYER_PUBLISH_BUYOFFER\":\"采购消息-采购商发布询价消息\",\"CAIGOU_MSG_BUYER_CANCEL_BUYOFFER\":\"采购消息-采购商取消询价消息\",\"CAIGOU_MSG_SUPPLIER_QUOTATION\":\"采购消息-供应商发布报价消息\",\"CAIGOU_MSG_SUPPLIER_CANCEL_QUOTATION\":\"采购消息-供应商取消报价消息\",\"CAIGOU_MSG_BUYER_MARK_QUOTATION\":\"采购消息-供应商选择备选报价消息\",\"CAIGOU_MSG_BUYER_UNMARK_QUOTATION\":\"采购消息-供应商撤销备选报价消息\",\"CAIGOU_MSG_BUYER_MODIFY_BUYOFFER\":\"采购消息-采购商修改询价单消息\",\"CAIGOU_MSG_BUYER_ORDERED\":\"采购消息-采购商下单消息\",\"CAIGOU_MSG_CREATE_COOPERATEION\":\"采购消息-采购商与供应商建立合作关系消息\",\"CAIGOU_MSG_TRADE_SUCCEED\":\"采购消息-交易成功（账期、确认收货）消息\",\"CAIGOU_MSG_CLOSE_ORDER\":\"采购消息-采购商关闭下单消息\",\"CAIGOU_MSG_SUPPLIER_APPLY\":\"采购消息-供应商申请消息\",\"CAIGOU_MSG_BUYER_PAYED_SUCCEED\":\"采购消息-采购商付款成功消息\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT\":\"采购消息-采购商发布物料消息\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT\":\"采购消息-采购商修改物料信息消息\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT_QUOTE\":\"采购消息-采购商删除物料报价消息\",\"CAIGOU_MSG_BUYER_DELETE_PRODUCT\":\"采购消息-采购商删除物料消息\",\"CAIGOU_MSG_BUYER_PUBLISH_PRODUCT_QUOTE\":\"采购消息-采购商发布物料报价消息\",\"CAIGOU_MSG_BUYER_MODIFIED_PRODUCT_QUOTE\":\"采购消息-采购商修改物料报价消息\",\"ORDER_BUYER_MAKE\":\"订单消息-1688创建订单（卖家视角）\",\"ORDER_PART_PART_SENDGOODS\":\"订单消息-1688订单部分发货（卖家视角）\",\"ORDER_ORDER_PRICE_MODIFY\":\"订单消息-1688修改订单价格（卖家视角）\",\"ORDER_ANNOUNCE_SENDGOODS\":\"订单消息-1688订单发货（卖家视角）\",\"ORDER_ORDER_SUCCESS\":\"订单消息-1688交易成功（卖家视角）\",\"ORDER_PAY\":\"订单消息-1688交易付款（卖家视角）\",\"ORDER_ORDER_COMFIRM_RECEIVEGOODS\":\"订单消息-1688订单确认收货（卖家视角）\",\"ORDER_ORDER_BUYER_CLOSE\":\"订单消息-1688买家关闭订单（卖家视角）\",\"ORDER_ORDER_SELLER_CLOSE\":\"订单消息-1688卖家关闭订单（卖家视角）\",\"ORDER_ORDER_BOPS_CLOSE\":\"订单消息-1688运营后台关闭订单（卖家视角）\",\"ORDER_ORDER_STEP_PAY\":\"订单消息-1688订单阶段付款（卖家视角）\",\"PRODUCT_PRODUCT_EXPIRE\":\"商品消息-1688产品下架/merchandise off the shelf\",\"PRODUCT_PRODUCT_NEW_OR_MODIFY\":\"商品消息-1688产品新增或修改/merchandise adding or modification\",\"PRODUCT_PRODUCT_DELETE\":\"商品消息-1688产品删除/merchandise removal\",\"PRODUCT_PRODUCT_REPOST\":\"商品消息-1688产品上架/new product listing\",\"CAIGOU_MSG_SUPPLIER_SEND_GOODS\":\"采购消息-供应商发货\",\"CAIGOU_MSG_PURCHARSE_ORDER\":\"采购消息-企业采购单\",\"CAIGOU_MSG_MALL_GOODS_STATUS_CHANGE\":\"采购消息-采购商品状态变化\",\"CAIGOU_MSG_MALL_GOODS\":\"采购消息-商品变化消息\",\"CAIGOU_MSG_PURCHARSE_ORDER_CREATE_DONE\":\"采购消息-采购单创建成功\",\"CAIGOU_MSG_MALL_GOODS_PRICE_CHANGE\":\"采购消息-采购商品价格变化\",\"ORDER_ORDER_BUYER_REFUND_IN_SALES\":\"订单消息-1688订单售中退款（卖家视角）\",\"ORDER_ORDER_REFUND_AFTER_SALES\":\"订单消息-1688订单售后退款（卖家视角）\",\"CAIGOU_MSG_BUYER_REQUISITION_CREATE_SUCCESS\":\"采购消息-采购商请购单创建成功消息\",\"PRODUCT_PRODUCT_CREATE_RESULT\":\"商品消息-商品发布结果消息同步\",\"CAIGOU_MSG_PURCHASE_ORDER_CANCEL\":\"采购消息-采购单取消\",\"PRODUCT_PRODUCT_CROSSBOARD_INFORM\":\"商品消息-一键铺货消息\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CREATE\":\"采购消息-创建收货单\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_CLOSE\":\"采购消息-拒绝收货单\",\"CAIGOU_MSG_TRADE_RECEIVE_NOTE_AGREE\":\"采购消息-同意收货单\",\"CAIGOU_MSG_PROCUREMENT_ORDER_CREATED\":\"采购消息-创建采购订单\",\"CROSSBOARD_CROSSBOARD_ADD_SUPPLY\":\"跨境消息-跨境设为货源\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_STATUS_UPDATE\":\"采购消息-更新框架协议状态\",\"CAIGOU_MSG_FRAMEWORK_AGREEMENT_CREATE\":\"采购消息-创建框架协议\",\"CAIGOU_MSG_PROCUREMENT_ORDER_STATUS_UPDATE\":\"采购消息-采购订单状态更新\",\"CAIGOU_MSG_SETTLEMENT_ORDER_CREATE\":\"采购消息-创建结算单\",\"ORDER_BUYER_VIEW_ORDER_BUYER_REFUND_IN_SALES\":\"订单消息-1688订单售中退款（买家视角）\",\"AUTHORIZATION_CANCEL\":\"授权消息-授权取消消息\",\"ORDER_BUYER_VIEW_ORDER_PAY\":\"订单消息-1688交易付款（买家视角）/1688 transaction payment (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_REFUND_AFTER_SALES\":\"订单消息-1688订单售后退款（买家视角）\",\"ORDER_BUYER_VIEW_ORDER_BUYER_CLOSE\":\"订单消息-1688买家关闭订单（买家视角）/buyer closing order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_BOPS_CLOSE\":\"订单消息-1688运营后台关闭订单（买家视角）\",\"ORDER_BUYER_VIEW_BUYER_MAKE\":\"订单消息-1688创建订单（买家视角）/order created (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_STEP_PAY\":\"订单消息-1688订单阶段付款（买家视角）\",\"ORDER_BUYER_VIEW_PART_PART_SENDGOODS\":\"订单消息-1688订单部分发货（买家视角）/Partial delivery of 1688 order (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_PRICE_MODIFY\":\"订单消息-1688修改订单价格（买家视角）/order price modification (buyer view)\",\"ORDER_BUYER_VIEW_ANNOUNCE_SENDGOODS\":\"订单消息-1688订单发货（买家视角）/1688 order delivery (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_COMFIRM_RECEIVEGOODS\":\"订单消息-1688订单确认收货（买家视角）/order receipt confirmation (buyer view)\",\"ORDER_BUYER_VIEW_ORDER_SUCCESS\":\"订单消息-1688交易成功（买家视角）\",\"ORDER_BUYER_VIEW_ORDER_SELLER_CLOSE\":\"订单消息-1688卖家关闭订单（买家视角）/seller closing order (buyer view)\",\"PRODUCT_RELATION_VIEW_PRODUCT_NEW_OR_MODIFY\":\"商品消息-1688产品新增或修改（关系用户视角）\",\"PRODUCT_RELATION_VIEW_PRODUCT_DELETE\":\"商品消息-1688产品删除（关系用户视角）\",\"PRODUCT_RELATION_VIEW_PRODUCT_REPOST\":\"商品消息-1688产品上架（关系用户视角）\",\"PRODUCT_RELATION_VIEW_PRODUCT_EXPIRE\":\"商品消息-1688产品下架（关系用户视角）\",\"SERVICEMARKET_ORDER_CREATE\":\"服务市场消息-服务市场订单创建\",\"SERVICEMARKET_ORDER_CANCEL\":\"服务市场消息-服务市场订单取消\",\"SERVICEMARKET_ORDER_PAY\":\"服务市场消息-服务市场订单支付\",\"SERVICEMARKET_ORDER_CLOSE\":\"服务市场消息-服务市场订单关闭\",\"CAIGOU_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"采购消息-创建收货单成功消息\",\"SERVICEMARKET_ORDER_CREATE_FAIL\":\"服务市场消息-服务市场订单创建失败\",\"SERVICEMARKET_ORDER_SERVICE_START\":\"服务市场消息-服务市场订单服务开始\",\"SERVICEMARKET_ORDER_SERVICE_END\":\"服务市场消息-服务市场订单服务结束\",\"CAIGOU_MSG_REJECT_REQUISITION\":\"采购消息-采购商请购单驳回消息\",\"CAIGOU_MSG_PROCUREMENT_SETTLEMENT_ACTION\":\"采购消息-结算单动作消息\",\"CAIGOU_MSG_PROCUREMENT_SEND_GOODS_ACTION\":\"采购消息-采购执行发货消息\",\"SERVICEMARKET_ORDER_SERVICE_REFUND\":\"服务市场消息-服务市场订单退款\",\"CAIGOU_MSG_PROCUREMENT_RETURN_GOODS_ACTION\":\"采购消息-退货单动作消息\",\"ORDER_MODIFY_MEMO\":\"订单消息-1688订单备注修改（卖家视角）\",\"ORDER_BUYER_VIEW_MODIFY_MEMO\":\"订单消息-1688订单备注修改（买家视角）/order remarks modification (buyer view)\",\"CAIGOU_MSG_PRICINGCHART_SUBMITTED\":\"采购消息-提交比价单消息\",\"CAIGOU_MSG_PROCUREMENT_PAY_ACTION\":\"采购消息-付款单动作消息\",\"CAIGOU_MSG_PROCUREMENT_ORDER_ACTION\":\"采购消息-订单执行中消息 \",\"CAIGOU_MSG_PROCUREMENT_TRANSPORTDEMAND_ACTION\":\"采购消息-运输需求单动作消息\",\"ORDER_BATCH_PAY\":\"订单消息-1688订单批量支付状态同步消息\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_RECEIVEGOODS_ACTION\":\"采购消息-创建收货单成功消息（卖家视角）\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CLOSE_ORDER_ACTION\":\"采购消息-关闭采购订单消息（卖家视角）\",\"PRODUCT_PRODUCT_INVENTORY_CHANGE\":\"商品消息-1688商品库存变更消息（关系用户视角）\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_CREATE_ORDER_ACTION\":\"采购消息-创建采购订单消息（卖家视角）\",\"PRODUCT_RELATION_VIEW_EXIT_SUPERBUYER\":\"商品消息-商品池&超买价变更消息（关系用户视角）\",\"PRODUCT_RELATION_VIEW_PRODUCT_AUDIT\":\"商品消息-1688产品审核下架（关系用户视角）\",\"ORDER_GROUPON_ORDER_SUCCESS\":\"订单消息-社交拼团和C2M大店发货消息\",\"ASCP_ASCP_ORDER_BUYER_REFUND_CLOSED_IN_SALES\":\"供应链消息-订单售中退款关闭（可以发货）\",\"LOGISTICS_BUYER_VIEW_TRACE\":\"物流消息-物流单状态变更（买家视角）\",\"LOGISTICS_SELLER_VIEW_TRACE\":\"物流消息-物流单状态变更（卖家视角）\",\"ASCP_ASCP_ORDER_PAY\":\"供应链消息-交易付款（待发货）\",\"ASCP_ASCP_ORDER_ANNOUNCE_SENDGOODS\":\"供应链消息-订单发货（包括部分发货）\",\"ASCP_ASCP_ORDER_BUYER_REFUND_APPLY_IN_SALES\":\"供应链消息-订单售中退款申请（取消发货）\",\"LOGISTICS_MAIL_NO_CHANGE\":\"物流消息-物流单号修改消息\",\"ASCP_ASCP_ORDER_BUYER_REFUND_SUCCESS\":\"供应链消息-订单售中退款完成（取消成功）\",\"ASCP_ASCP_ORDER_SUCCESS\":\"供应链消息-交易成功消息\",\"ASCP_ASCP_ORDER_COMFIRM_RECEIVEGOODS\":\"供应链消息-订单确认收货\",\"CAIGOU_MSG_PROCUREMENT_TERMINATE_ORDER_RESULT\":\"采购消息-终止交易结果消息\",\"CAIGOU_MSG_PROCUREMENT_SLC_ADMIT_STATUS_UPDATE\":\"采购消息-采购买家供应商准入\",\"CAIGOU_MSG_WORKFLOW_PROCESS_RESULT\":\"采购消息-企业采购审批结果消息\",\"CAIGOU_MSG_BUYOFFER_PUBLISH_AUDIT\":\"采购消息-发布审批中状态的询价单消息\",\"CAIGOU_SELLER_VIEW_MSG_PROCUREMENT_SETTLEMENT_ACTION\":\"采购消息-结算单动作消息（卖家视角）\",\"CAIGOU_SELLER_VIEW_MSG_MALL_GOODS_STATUS_CHANGE\":\"采购消息-内部商城商品状态变化消息（卖家视角）\",\"CAIGOU_MSG_SLC_BUYER_SUPPLIER_UPDATE\":\"采购消息-买家修改供应商消息\",\"CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_CREATE_SUCCESS\":\"采购消息-采购商请购单创建成功消息（卖家视角）\",\"CAIGOU_MSG_SLC_BUYER_SUPPLIER_ADD\":\"采购消息-买家添加供应商消息\",\"CAIGOU_SELLER_VIEW_MSG_BUYER_REQUISITION_APPROVAL_REJECT\":\"采购消息-请购单审批全部驳回消息（卖家视角）\",\"WANG_BUYER_INQUIRY\":\"旺旺消息-买家询盘消息\",\"CAIGOU_MSG_SLC_BUYER_SUPPLIER_DELETE\":\"采购消息-买家删除供应商消息\",\"CAIGOU_BUYER_VIEW_MSG_CANCEL_PROCUREMENT_ENTRY\":\"采购消息-采购子订单取消消息\"}"
         }
       }
     }
